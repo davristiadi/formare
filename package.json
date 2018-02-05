@@ -1,0 +1,16 @@
+{
+  "name": "formare",
+  "version": "0.1.0",
+  "description": "Formare is a modern, component-based CSS framework that helps you build web interfaces hassle-free.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Kurnia Kristiadi <davidkurniakristiadi@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "path": "^0.12.7",
+    "react": "^16.2.0",
+    "webpack": "^3.10.0"
+  }
+}
