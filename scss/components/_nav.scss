@@ -1,0 +1,81 @@
+/*	-----------------------------------------------------------------------------
+	
+	NAVIGATION
+
+-----------------------------------------------------------------------------  */
+
+/*	-----------------------
+	Variables
+-----------------------  */
+$nav-themes					: $theme-colors;
+$nav-item-padding-y			: 0;
+$nav-item-padding-x			: spacing(large);
+$nav-item-padding			: $nav-item-padding-y $nav-item-padding-x;
+$nav-item-weight			: font-weight(semibold);
+$nav-item-opacity-active	: 1;
+$nav-item-opacity-inactive	: 0.3;
+
+
+/*	-----------------------
+	Style Rules
+-----------------------  */
+.nav {
+	position: relative;
+
+	.nav__list {
+		@include flexbox;
+		@include flex-direction(row);
+		transition: all 100ms ease-out;
+
+		&--is-active {
+			.nav__item:not(.nav__item--is-active) {
+				opacity: $nav-item-opacity-inactive;
+			}
+		}
+
+		&--is-horizontal {
+			@include flex-direction(column);
+		}
+
+		&:hover {
+			.nav__item {
+				opacity: $nav-item-opacity-inactive;
+			}
+		}
+
+		.nav__item {
+			@include flex(1 0 auto);
+			transition: all 100ms ease-out;
+			text-align: center;
+
+			&--is-active {
+				opacity: $nav-item-opacity-active;
+			}
+
+			&--has-logo {
+				.icon {
+					font-size: 48px;
+				}
+			}
+
+			&:hover {
+				opacity: $nav-item-opacity-active;
+			}
+		}
+
+		.nav__link {
+			@include flexbox;
+			@include flex-direction(column);
+			font-weight: $nav-item-weight;
+			padding: $nav-item-padding;
+			text-decoration: none;
+			color: inherit;
+		}
+
+		&--is-active {
+		}
+	}
+}
+
+//
+//-----------------------------------------------------------------------------

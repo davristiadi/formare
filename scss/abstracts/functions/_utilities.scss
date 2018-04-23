@@ -1,0 +1,43 @@
+//-----------------------------------------------------------------------------
+//  N E S T E D   M A P   G E T T E R
+//
+//	An advanced map getter function used to fetch specific values from a
+//	nested map variable.
+//
+//	Usage: `#{property}: nested-map-get(#{map}, #{type})`
+//
+
+@function nested-map-get($map, $keys...) {
+	@each $key in $keys {
+		$map: map-get($map, $key);
+	}
+
+	@return $map;
+}
+
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+//  C A L C U L A T E   R E M 
+//
+
+@function calculateRem($font-size) {
+	$rem: $font-size / 16px;
+	@return $rem * 1rem;
+}
+
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+//  S T R I P   U N I T
+//
+//	A function for converting a number into unitless (without px, em, etc.)
+//
+
+@function strip-unit($number) {
+	@if type-of($number) == 'number' and not unitless($number) {
+		@return $number / ($number * 0 + 1);
+	}
+
+	@return $number;
+}
+
+//-----------------------------------------------------------------------------

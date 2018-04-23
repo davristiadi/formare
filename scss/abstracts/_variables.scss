@@ -1,0 +1,46 @@
+/*	----------------------------------------------------------------------------
+	
+	V A R I A B L E S
+
+	Variables are the very essense of any programming language, including Sass.
+	They allow us to reuse any value without having to copy them over and over
+	again. Most importantly, they make updating a value really easy and make
+	it maintainable throughout the project.
+	
+	Variables should follow this format for a better and consistent naming
+	throughout the project (e.g: `$component-state-property`).
+	
+	@author: David Kurnia Kristiadi
+	@source: https://sass.guidelin.es/#variables
+
+----------------------------------------------------------------------------  */
+
+/*	----------------------------
+	UTILITIES
+----------------------------  */
+
+@import "variables/border";
+@import "variables/transition";
+
+/*	----------------------------
+	BASE
+----------------------------  */
+
+@import "variables/color";
+@import "variables/font";
+@import "variables/text";
+
+/*	----------------------------
+	LAYOUTS
+----------------------------  */
+
+@import "variables/grid";
+@import "variables/spacing";
+@import "variables/form";
+
+/*	----------------------------
+	COMPONENTS
+----------------------------  */
+
+@import 'variables/button';
+@import 'variables/menu';

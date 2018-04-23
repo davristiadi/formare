@@ -1,0 +1,91 @@
+/*	----------------------------------------------------------------------------
+
+	T Y P O G R A P H Y
+
+	All CSS properties that allow you to define the color, size,
+	spacing and shape of text.
+
+	@author	: David Kurnia Kristiadi
+	@source	: https://cssreference.io/typography/
+
+----------------------------------------------------------------------------  */
+
+
+/*	----------------------------
+	FONT SIZE
+----------------------------  */
+@each $name, $size in $font-sizes {
+	.font-size-#{$name} {
+		font-size: $size; 
+	} 
+} 
+
+/*	----------------------------
+	FONT WEIGHT
+----------------------------  */
+@each $name, $weight in $font-weights {
+    .font-weight-#{$name} {
+        font-weight: $weight;
+    }
+}
+
+
+/*	----------------------------
+	HEADINGS
+----------------------------  */
+@each $heading, $size in $headings {
+    $index: index($headings, ($heading $size));
+    
+    #{$heading},
+    .heading-#{$index} {
+        font-size: $size;
+    }
+}
+
+.heading {
+	
+	//	Generates different themes for heading
+	@each $theme, $color in $theme-colors {
+		&--#{$theme} {
+			color: $color;
+		}
+	}
+}
+
+.title 		{ font-weight: font-weight(bold); 	}
+.subtitle	{ font-weight: font-weight(regular); 	}
+
+/*	----------------------------
+	LINKS
+----------------------------  */
+a {
+	transition: $transition;
+	color: primary-color(600);
+	text-decoration: none;
+
+	&:hover {
+		color: primary-color(300);
+	}
+}
+
+/*	----------------------------
+	ARTICLE
+----------------------------  */
+.article {
+	.heading {
+		margin-bottom: spacing(base);
+	}
+	
+	p {
+		margin-bottom: spacing(large);
+	}
+}
+
+/*	----------------------------
+	ALIGNMENTS
+----------------------------  */
+@each $align in $text-aligns {
+	.align-#{$align} {
+		text-align: $align;
+	}
+}

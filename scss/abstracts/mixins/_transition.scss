@@ -1,0 +1,19 @@
+@mixin transition($value...) {
+    @include vendorize((transition: $value), webkit moz o); 
+}
+
+@mixin transition-property($value...) {
+    @include vendorize((transition-property: $value), $value, webkit moz o);
+}
+
+@mixin transition-duration($value...) {
+    @include vendorize((transition-duration: $value), $value, webkit moz o);
+}
+
+@mixin transition-timing-function($value...) {
+    @include vendorize((transition-timing-function: $value), wekbit moz o);
+}
+
+@mixin transition-delay($value...) {
+    @include vendorize((transition-delay: $value), wekbit moz o);
+}

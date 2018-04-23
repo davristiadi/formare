@@ -1,0 +1,59 @@
+/*	------------------------------
+	FONT FACE
+------------------------------  */
+$font-face-path: "../assets/fonts/hk-grotesk";
+
+@font-face {
+	font-family: "HKGrotesk";
+	font-style: normal;
+	font-weight: normal;
+	src: url("#{$font-face-path}/HKGrotesk-Regular.woff2") format("woff2"),
+		 url("#{$font-face-path}/HKGrotesk-Regular.woff") format("woff"),
+		 url("#{$font-face-path}/HKGrotesk-Regular.ttf") format("ttf"),
+		 url("#{$font-face-path}/HKGrotesk-Regular.svg") format("svg"),
+		 url("#{$font-face-path}/HKGrotesk-Regular.eot") format("embedded-opentype");
+}
+
+@font-face {
+	font-family: "HKGrotesk";
+	font-style: normal;
+	font-weight: light;
+	src: url("#{$font-face-path}/HKGrotesk-Light.woff2") format("woff2"),
+		 url("#{$font-face-path}/HKGrotesk-Light.woff") format("woff2"),
+		 url("#{$font-face-path}/HKGrotesk-Light.ttf") format("ttf"),
+		 url("#{$font-face-path}/HKGrotesk-Light.svg") format("svg"),
+		 url("#{$font-face-path}/HKGrotesk-Light.eot") format("embedded-opentype");
+}
+
+@font-face {
+	font-family: "HKGrotesk";
+	font-style: normal;
+	font-weight: semibold;
+	src: url("#{$font-face-path}/HKGrotesk-SemiBold.woff2") format("woff2"),
+		 url("#{$font-face-path}/HKGrotesk-SemiBold.woff") format("woff2"),
+		 url("#{$font-face-path}/HKGrotesk-SemiBold.ttf") format("ttf"),
+		 url("#{$font-face-path}/HKGrotesk-SemiBold.svg") format("svg"),
+		 url("#{$font-face-path}/HKGrotesk-SemiBold.eot") format("embedded-opentype");
+}
+
+@font-face {
+	font-family: "HKGrotesk";
+	font-style: normal;
+	font-weight: medium;
+	src: url("#{$font-face-path}/HKGrotesk-Medium.woff2") format("woff2"),
+		 url("#{$font-face-path}/HKGrotesk-Medium.woff") format("woff2"),
+		 url("#{$font-face-path}/HKGrotesk-Medium.ttf") format("ttf"),
+		 url("#{$font-face-path}/HKGrotesk-Medium.svg") format("svg"),
+		 url("#{$font-face-path}/HKGrotesk-Medium.eot") format("embedded-opentype");
+}
+
+@font-face {
+	font-family: "HKGrotesk";
+	font-style: normal;
+	font-weight: bold;
+	src: url("#{$font-face-path}/HKGrotesk-Bold.woff2") format("woff2"),
+		 url("#{$font-face-path}/HKGrotesk-Bold.woff") format("woff2"),
+		 url("#{$font-face-path}/HKGrotesk-Bold.ttf") format("ttf"),
+		 url("#{$font-face-path}/HKGrotesk-Bold.svg") format("svg"),
+		 url("#{$font-face-path}/HKGrotesk-Bold.eot") format("embedded-opentype");
+}

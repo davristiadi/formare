@@ -1,0 +1,98 @@
+$card-themes			: $theme-colors;
+$card-padding			: spacing(base);
+$card-background		: gray(0);
+$card-border-radius		: border-radius(x-large);
+
+.card {
+	@include flexbox;
+	@include flex-direction(column);
+	position: relative;
+	background-color: $card-background;
+	border-radius: $card-border-radius;
+	word-wrap: break-word;
+	overflow: hidden;
+
+	.card__image {
+		position: relative;
+		height: 175px;
+		border-radius: $card-border-radius;
+		overflow: hidden;
+
+		> img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+
+	//	Generate theme modifier classes for a card component.
+	@each $theme, $color in $card-themes {
+		&--#{$theme} {
+			@include transition($transition);
+			background-color: $color;
+			color: color-yiq($color);
+			overflow: hidden;
+
+			&:not(.card--has-overlay) {
+				border: solid 1px darken($color, 10%);
+			}
+
+			.card__header,
+			.card__body,
+			.card__footer {
+				padding: $card-padding;
+			}
+		}
+	}
+
+	&--has-overlay {
+		@include flexbox;
+		@include flex-direction(column);
+		@include justify-content(flex-end);
+		min-height: 15em;
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background-color: $color;
+			color: color-yiq($color);
+			opacity: 0.7;
+			z-index: 10;
+		}
+
+		.card__image {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			z-index: 5;
+		}
+
+		.card__header,
+		.card__body,
+		.card__footer {
+			padding: $card-padding;
+			z-index: 15;
+		}
+	}
+
+	&--is-rounded {
+		border-radius: border-radius(rounded);
+	}
+}
+
+.card-list {
+	@extend .row;
+	// @include flex-wrap(nowrap);
+	// overflow: hidden;
+
+	.card {
+		margin-bottom: spacing(large);
+	}
+}

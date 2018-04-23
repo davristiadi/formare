@@ -1,0 +1,9 @@
+$menu-item-color        : gray(700);
+$menu-item-hover-color  : gray(1500);
+$menu-item-active-color : theme-color(primary);
+
+$menu-item-transition   : all 250ms ease-in-out;
+
+$menu-item-y-padding    : spacing(base);
+$menu-item-x-padding    : 0;
+$menu-item-padding      : $menu-item-y-padding $menu-item-x-padding;

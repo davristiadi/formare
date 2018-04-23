@@ -1,0 +1,58 @@
+//-----------------------------------------------------------------------------
+//	T E X T   A L I G N
+//
+
+$text-aligns: (
+    left 
+    right 
+    center 
+    justify 
+    justify-all 
+    start
+    end 
+    match-parent
+) !default;
+
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+//	T E X T   T R A N S F O R M
+//
+
+$text-transforms: (
+    capitalize 
+    uppercase 
+    lowercase 
+    full-width
+) !default;
+
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+//	W H I T E   S P A C E
+//
+
+$white-spaces: (
+    normal 
+    nowrap 
+    pre
+    pre-wrap 
+    pre-line
+) !default;
+
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+//	L E T T E R   S P A C I N G
+//
+//  Usage: `letter-spacing(tight)` or `map-get($letter-spacings, tight)`
+//
+
+$letter-spacing-base    : 0px;
+$letter-spacings        : (
+    extra-tight         : ($letter-spacing-base - 1.5),
+    tight               : ($letter-spacing-base - 0.5),
+    base                : $letter-spacing-base,
+    loose               : ($letter-spacing-base + 2),
+    extra-loose         : ($letter-spacing-base + 4.5),
+) !default;
+
+//  
+//-----------------------------------------------------------------------------

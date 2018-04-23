@@ -1,0 +1,45 @@
+$hero-themes		: $theme-colors;
+$hero-height		: 35em;
+$hero-heights		: (
+	x-tall			: ($hero-height * 0.5),		
+	tall			: ($hero-height * 0.75),
+	base			: ($hero-height * 1),
+	short			: ($hero-height * 2),
+	x-short			: ($hero-height * 2.5)
+) !default;
+
+.hero {
+	position: relative;
+	height: $hero-height;
+	min-height: $hero-height;
+	
+	@each $theme, $color in $hero-themes {
+		&--is-#{$theme} {
+			background-color: $color;
+			color: color-yiq($color);
+		}
+	}
+
+	@each $size, $height in $hero-heights {
+		&--is-#{$size} {
+			height: $height;
+			min-height: $height;
+		}
+	}
+
+	&--has-overlay {
+		background-size: cover;
+		background-position: center;
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background-color: $color;
+			opacity: 0.5;
+		}
+	}
+}

@@ -1,0 +1,19 @@
+//-----------------------------------------------------------------------------
+//	V E N D O R I Z E
+//
+
+@mixin vendorize($declarations, $prefixes: (), $non-prefix: true) {
+	@each $property, $value in $declarations {
+		@each $prefix in $prefixes {
+			-#{$prefix}-#{$property}: $value;
+		}
+
+		//	Outputs the standard non-prefixed declaration if set to true.
+		@if $non-prefix == true {
+			#{$property}: $value;
+		}
+	}
+}
+
+//
+//-----------------------------------------------------------------------------

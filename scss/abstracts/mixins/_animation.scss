@@ -1,0 +1,41 @@
+@mixin animation($value...) {
+    @include vendorize((animation: $value), webkit moz o);
+}
+
+@mixin animation-delay($value...) {
+    @include vendorize((animation-delay: $value), webkit moz o);
+}
+
+@mixin animation-direction($value...) {
+    @include vendorize((animation-direction: $value), webkit moz o);
+}
+
+@mixin animation-duration($value...) {
+    @include vendorize((animation-duration: $value), webkit moz o);
+}
+
+@mixin animation-fill-mode($value...) {
+    @include vendorize((animation-fill-mode: $value), webkit moz o);
+}
+
+@mixin animation-iteration-count($value...) {
+    @include vendorize((animation-iteration-count: $value), webkit moz o);
+}
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}

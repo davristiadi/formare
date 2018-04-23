@@ -1,0 +1,61 @@
+/*	-----------------------------------------------------------------------------
+
+	M A I N   S T Y L E S H E E T
+
+	The bridging file to all other stylesheets used in the app. Only
+	reference other stylesheet files via @import here. 
+	
+	Refrain from putting any direct style rules, mixins, functions, 
+	or anything else that outputs direct result in this file.
+
+-----------------------------------------------------------------------------  */
+
+/*	-----------------------------------------------------------------------------
+	ABSTRACTS
+-----------------------------------------------------------------------------  */
+@import "abstracts/functions";
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+
+/*	-----------------------------------------------------------------------------
+	BASE
+-----------------------------------------------------------------------------  */
+@import "base/reset";
+@import "base/global";
+@import "base/colors";
+@import "base/fonts";
+@import "base/typography";
+@import "base/iconography";
+
+
+/*	-----------------------------------------------------------------------------
+	LAYOUT
+-----------------------------------------------------------------------------  */
+@import "layout/grid";
+@import "layout/section";
+@import "layout/hero";
+@import "layout/flex";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/form";
+
+
+/*	-----------------------------------------------------------------------------
+	COMPONENTS
+-----------------------------------------------------------------------------  */
+@import "components/nav";
+@import "components/navbar";
+@import "components/input";
+@import "components/button";
+@import "components/menu";
+@import "components/card";
+
+
+/*	-----------------------------------------------------------------------------
+	UTILITIES
+-----------------------------------------------------------------------------  */
+@import "utilities/aligns";
+@import "utilities/spacing";
+
+//-----------------------------------------------------------------------------

@@ -1,0 +1,70 @@
+//-----------------------------------------------------------------------------
+//  T I N T E R   S H A D E R
+//
+//	Set of functions to mix light/black color with the color of your choice 
+//	to get a different set of color combinations.
+//
+
+@function tint($color, $percentage) {
+	@return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+	@return mix(black, $color, $percentage);
+}
+
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// 	S H A D E   G E T T E R S
+//
+//	A set of function specifically for getting color shades from the 
+//	predefined map.
+//
+
+@function color-shade($type, $key, $map: $color-shades) {
+	@return nested-map-get($map, $type, $key);
+}
+
+@function primary-color($key: 600, $map: primary) {
+	@return color-shade($map, $key);
+}
+
+@function secondary-color($key: 600, $map: secondary) {
+	@return color-shade($map, $key);
+}
+
+@function tertiary-color($key: 600, $map: tertiary) {
+	@return color-shade($map, $key);
+}
+
+@function gray($key: 600, $map: grays) {
+	@return color-shade($map, $key);
+}
+
+@function theme-color($key: 600) {
+	@return map-get($theme-colors, $key);
+}
+
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// 	C O L O R   Y I Q
+//
+//	This function helps finding the correct foreground color for the passed
+//	background color.
+//
+
+@function color-yiq($color) {
+	$r: red($color);
+	$g: green($color);
+	$b: blue($color);
+  
+	$yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+  
+	@if ($yiq >= $yiq-contrasted-threshold) {
+		@return $yiq-text-dark;
+	} @else {
+		@return $yiq-text-light;
+	}
+}
+
+//-----------------------------------------------------------------------------
