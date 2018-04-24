@@ -1,3 +1,6 @@
+/*  ------------------------------------------------------
+	Transition
+------------------------------------------------------  */
 @mixin transition($value...) {
     @include vendorize((transition: $value), webkit moz o); 
 }

@@ -1,21 +1,10 @@
-/*  -------------------------------------------------------------------------------
+/*  ------------------------------------------------------
 
-	COLOR PALLETES
+	COLOR SYSTEM
 	
-	You can customize this section with your own set of variables.
-
-	To help with the naming of your own preferred set of colors, it is 
-	recommended to use http://chir.ag/projects/name-that-color/. It is
-	an online tool that is able to generate a vast range of unique
-	names for your color choices.
-	
--------------------------------------------------------------------------------  */
-
-$eastern-blue			: #158DBC !default;
-$energy-yellow			: #F5DB4E !default;
-$river-bed				: #49595C !default;
-$green-haze				: #02A54F !default;
-
+------------------------------------------------------  */
+$cornflower-blue		: #8EB8E5 !default;
+$valencia				: #D3492C !default;
 $malachite				: #48A900 !default;
 $corn					: #EBC500 !default;
 $tango					: #E85915 !default;
@@ -24,18 +13,16 @@ $cello					: #1C415B !default;
 $deep-cerulean			: #007EA7 !default;
 $pelorous				: #45A1BF !default;
 
-$primary-color			: $eastern-blue;
-$secondary-color		: $green-haze;
-$tertiary-color			: $energy-yellow;
+$primary-color			: $cornflower-blue;
+$secondary-color		: $valencia;
 $success-color			: $malachite;
 $warning-color			: $corn;
 $danger-color			: $tango;
-$gray					: $river-bed;
+$gray-color				: $river-bed;
 
-/*	-------------------------------------------------------------------------------
-	COLOR SHADES
--------------------------------------------------------------------------------  */
-
+/*  ------------------------------------------------------
+	Shades
+------------------------------------------------------  */
 $color-shades: (
 	primary: (
 		100: tint($primary-color, 40%),
@@ -62,19 +49,6 @@ $color-shades: (
 		900: shade($tertiary-color, 24%),
 		1000: shade($tertiary-color, 32%),
 		1100: shade($tertiary-color, 40%)
-	),
-	tertiary: (
-		100: tint($secondary-color, 40%),
-		200: tint($secondary-color, 32%),
-		300: tint($secondary-color, 24%),
-		400: tint($secondary-color, 16%),
-		500: tint($secondary-color, 8%),
-		600: $secondary-color,
-		700: shade($secondary-color, 8%),
-		800: shade($secondary-color, 16%),
-		900: shade($secondary-color, 24%),
-		1000: shade($secondary-color, 32%),
-		1100: shade($secondary-color, 40%)
 	),
 	success: (
 		100: tint($success-color, 40%),
@@ -141,22 +115,23 @@ $color-shades: (
 ) !default;
 
 
-/*	-------------------------------------------------------------------------------
-	GENERIC
--------------------------------------------------------------------------------  */
-$white				: gray(0);
-$lighter			: gray(100);
+/*  ------------------------------------------------------
+	Generic
+------------------------------------------------------  */
+$white				: #FFFFFF;
+$black				: #000000;
+$gray				: gray(1000);
 $light				: gray(200);
-$dark				: gray(1400);
+$lighter			: gray(100);
+$dark				: gray(1600);
 $darker				: gray(1800);
-$black				: gray(2000);
 
-$color				: $dark;
+$text-color			: $dark;
 $background-color	: $white;
 
-/*	-------------------------------------------------------------------------------
-	THEME COLORS
--------------------------------------------------------------------------------  */
+/*  ------------------------------------------------------
+	Theme Colors
+------------------------------------------------------  */
 $theme-colors: (
 	primary		: $primary-color,
 	secondary	: $secondary-color,
@@ -166,21 +141,21 @@ $theme-colors: (
 	danger		: $danger-color,
 	white 		: $white,
 	black 		: $black,
-	light 		: gray(200),
-	lighter		: gray(100),
-	dark		: gray(1600),
-	darker		: gray(1800)
+	gray		: $gray,
+	light 		: $light,
+	lighter		: $lighter,
+	dark		: $dark,
+	darker		: $darker
 ) !default;
 
 
-/*	-------------------------------------------------------------------------------
-	COLOR YIQ
--------------------------------------------------------------------------------  */
-
+/*  ------------------------------------------------------
+	Color Contrast
+------------------------------------------------------  */
 // The yiq lightness value that determines when the lightness of color changes from "dark" to "light". 
 // Acceptable values are between 0 and 255.
 $yiq-contrasted-threshold: 150 !default;
 
 // Customize the light and dark text colors for use in our YIQ color contrast function.
-$yiq-text-dark: gray(1400) !default;
+$yiq-text-dark: gray(1600) !default;
 $yiq-text-light: gray(100) !default;

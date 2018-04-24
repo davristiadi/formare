@@ -1,8 +1,6 @@
-//-----------------------------------------------------------------------------
-//	#	M E D I A
-//
-//	Generates media queries based on breakpoints declared in variables.
-//
+/*  ------------------------------------------------------
+	Media
+------------------------------------------------------  */
 @mixin media($breakpoint, $type: min) {
 	@if map-has-key($breakpoints, $breakpoint) {
 		$width: map-get($breakpoints, $breakpoint);
@@ -20,7 +18,4 @@
 		@error 'Device breakpoint is not found in variables!';
 	}
 }
-
-//
-//-----------------------------------------------------------------------------
 

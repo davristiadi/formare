@@ -1,0 +1,11 @@
+@function font-size($size, $map: $font-sizes) {
+    @return map-get($map, $size);
+}
+
+@function font-weight($weight) {
+    @return map-get($font-weights, $weight);
+}
+
+@function line-height($size) {
+    @return map-get($line-heights, $size);
+} 

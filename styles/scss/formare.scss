@@ -1,17 +1,11 @@
 /*	-----------------------------------------------------------------------------
 
-	M A I N   S T Y L E S H E E T
-
-	The bridging file to all other stylesheets used in the app. Only
-	reference other stylesheet files via @import here. 
-	
-	Refrain from putting any direct style rules, mixins, functions, 
-	or anything else that outputs direct result in this file.
+	formare.io v0.1.0 | MIT License | github.com/davidkurnia94/formare
 
 -----------------------------------------------------------------------------  */
 
 /*	-----------------------------------------------------------------------------
-	ABSTRACTS
+	Abstracts
 -----------------------------------------------------------------------------  */
 @import "abstracts/functions";
 @import "abstracts/variables";
@@ -19,7 +13,7 @@
 
 
 /*	-----------------------------------------------------------------------------
-	BASE
+	Base
 -----------------------------------------------------------------------------  */
 @import "base/reset";
 @import "base/global";
@@ -30,7 +24,7 @@
 
 
 /*	-----------------------------------------------------------------------------
-	LAYOUT
+	Layouts
 -----------------------------------------------------------------------------  */
 @import "layout/grid";
 @import "layout/section";
@@ -42,7 +36,7 @@
 
 
 /*	-----------------------------------------------------------------------------
-	COMPONENTS
+	Components
 -----------------------------------------------------------------------------  */
 @import "components/nav";
 @import "components/navbar";
@@ -53,9 +47,7 @@
 
 
 /*	-----------------------------------------------------------------------------
-	UTILITIES
+	Utilities
 -----------------------------------------------------------------------------  */
 @import "utilities/aligns";
 @import "utilities/spacing";
-
-//-----------------------------------------------------------------------------

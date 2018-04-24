@@ -1,14 +1,15 @@
-/*	---------------------------------------------------------------------------
-	CONTAINER
+/*  ------------------------------------------------------
 
-	The container element sets up the outer most wrapper that mostly 
-	controls how an element looks in different screen dimensions which 
-	is an integral class to be added in most cases.
----------------------------------------------------------------------------  */
+    GRID SYSTEM
+	
+------------------------------------------------------  */
 
+/*  ------------------------------------------------------
+    Container
+------------------------------------------------------  */
 .container {
 	margin: 0 auto;
-	padding: 0 ($grid-gutter-width / 2);
+	padding: 0 ($grid-gap-width / 2);
 	
 	@each $breakpoint, $width in $container-max-widths {
 		@include media($breakpoint) {
@@ -18,23 +19,22 @@
 	}
 
 	&--is-block {
-		margin: 0 ($grid-gutter-width);
+		margin: 0 ($grid-gap-width);
 		width: auto;
 		max-width: none;
 	}
 }
 
 
-/*	---------------------------------------------------------------------------
-	ROW	
----------------------------------------------------------------------------  */
-
+/*  ------------------------------------------------------
+	Row	
+------------------------------------------------------  */
 .row {
 	@include flexbox();
 	@include flex-wrap(wrap);
-	margin: 0 ($grid-gutter-width / -2);
+	margin: 0 ($grid-gap-width / -2);
 
-	&--is-gutterless {
+	&--is-gapless {
 		padding: 0;
 
 		.tnk-column,
@@ -44,21 +44,15 @@
 	}
 }
 
-/*	---------------------------------------------------------------------------
-	COLUMNS
-
-	The column class is the deepest level of the grid system that controls
-	the width in which an element must show on different screens or 
-	resolutions. Using row class on top of column classes is enforced 
-	but not required.
----------------------------------------------------------------------------  */
-
+/*  ------------------------------------------------------
+	Columns
+------------------------------------------------------  */
 .column {
 	@include flex-grow(1);
 	@include flex-shrink(0);
 	@include flex-basis(auto);
 	max-width: 100%;
-	padding: 0 ($grid-gutter-width / 2);
+	padding: 0 ($grid-gap-width / 2);
 
 	@for $index from 1 through $grid-columns {
 		$width: $index / $grid-columns;

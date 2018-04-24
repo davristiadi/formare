@@ -1,0 +1,120 @@
+/*  ------------------------------------------------------
+
+	TYPOGRAPHY
+	
+------------------------------------------------------  */
+
+/*  ------------------------------------------------------
+	Font Family
+------------------------------------------------------  */
+$font-family-sans-serif		: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-serif          : Georgia, "Times New Roman", serif;
+$font-family-monospace      : SFMono-Regular, Menlo, Monaco, Consolas, "Roboto Mono", "Liberation Mono", "Courier New", monospace; 
+
+$font-family				: $font-family-sans-serif !default;
+
+
+/*  ------------------------------------------------------
+	Font Size
+------------------------------------------------------  */
+$font-size      : 1rem !default;
+$font-sizes     : (
+	x-small     : ($font-size * 0.7),
+	small       : ($font-size * 0.85),
+	base        : $font-size,
+	large       : ($font-size * 1.25),
+	x-large     : ($font-size * 1.5),
+	xx-large	: ($font-size * 2)
+) !default;     
+
+
+/*  ------------------------------------------------------
+	Headings
+------------------------------------------------------  */
+$headings	: (
+	h1		: ($font-size * 3),
+	h2		: ($font-size * 2.5),
+	h3		: ($font-size * 2),
+	h4		: ($font-size * 1.5),
+	h5		: ($font-size * 1.25),
+	h6		: ($font-size * 1)
+) !default;
+
+
+/*  ------------------------------------------------------
+	Font Weights
+------------------------------------------------------  */
+$font-weight	: 400;
+$font-weights	: (
+	thin: 100,
+	extra-light: 200,
+	ultra-light: 200,
+	light: 300,
+	normal: 400,
+	book: 400,
+	regular: 400,
+	medium: 500,
+	semi-bold: 600,
+	semibold: 600,
+	demi-bold: 600,
+	bold: 700,
+	extra-bold: 800,
+	ultra-bold: 900,
+	heavy: 900,
+	black: 900,
+	ultra: 900,
+	ultra-black: 900,
+	extra-ultra: 900
+) !default;
+
+
+/*  ------------------------------------------------------
+	Line Heights
+------------------------------------------------------  */
+$line-height		: 1.5;
+$line-heights		: (
+	x-tight			: ($line-height * .5),
+	tight			: ($line-height * .75),
+	base			: $line-height,
+	loose			: ($line-height * 1.25),
+	x-loose			: ($line-height * 1.5)
+) !default;
+
+
+/*  ------------------------------------------------------
+	Alignments
+------------------------------------------------------  */
+$text-aligns: (
+    left 
+    right 
+    center 
+    justify 
+    justify-all 
+    start
+    end 
+    match-parent
+) !default;
+
+
+/*  ------------------------------------------------------
+	Text Transforms
+------------------------------------------------------  */
+$text-transforms: (
+    capitalize 
+    uppercase 
+    lowercase 
+    full-width
+) !default;
+
+
+/*  ------------------------------------------------------
+	Letter Spacings
+------------------------------------------------------  */
+$letter-spacing		: 0px;
+$letter-spacings	: (
+    x-tight			: ($letter-spacing - 1.5),
+    tight			: ($letter-spacing - 0.5),
+    base 			: $letter-spacing,
+    loose			: ($letter-spacing + 2),
+    x-loose			: ($letter-spacing + 4.5),
+) !default;

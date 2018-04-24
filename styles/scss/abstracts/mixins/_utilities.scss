@@ -1,0 +1,16 @@
+/*  ------------------------------------------------------
+	Vendorize
+------------------------------------------------------  */
+@mixin vendorize($declarations, $prefixes: (), $non-prefix: true) {
+	@each $property, $value in $declarations {
+		@each $prefix in $prefixes {
+			-#{$prefix}-#{$property}: $value;
+		}
+
+		//	Outputs the all the prefixed properties without the non-prefixed
+		//	properties if `$non-prefix` is set to true.
+		@if $non-prefix == true {
+			#{$property}: $value;
+		}
+	}
+}

@@ -1,3 +1,0 @@
-@function input-padding($size, $map: $input-paddings) {
-    @return map-get($map, $size);
-}
