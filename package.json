@@ -1,16 +1,18 @@
 {
 	"name": "formare",
 	"version": "0.1.0",
+	"author": "David Kurnia Kristiadi <davidkurniakristiadi@gmail.com>",
 	"description": "Formare is a modern, component-based CSS framework that helps you build web interfaces hassle-free.",
-	"main": "index.js",
+	"main": "scss/formare.scss",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "npm run build:sass",
-		"build:sass": "node-sass --output-style expanded --source-map true scss/formare.scss css/formare.css"
+		"build:sass": "node-sass --output-style expanded --source-map true scss/formare.scss css/formare.css",
+		"start": "npm run build:sass --watch"
 	},
-	"author": "David Kurnia Kristiadi <davidkurniakristiadi@gmail.com>",
 	"license": "ISC",
 	"dependencies": {
+		"node-sass": "^4.8.3",
 		"path": "^0.12.7",
 		"react": "^16.2.0",
 		"webpack": "^3.10.0"

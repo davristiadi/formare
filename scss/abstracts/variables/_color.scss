@@ -5,6 +5,7 @@
 ------------------------------------------------------  */
 $cornflower-blue		: #8EB8E5 !default;
 $valencia				: #D3492C !default;
+$river-bed				: #49595C !default;
 $malachite				: #48A900 !default;
 $corn					: #EBC500 !default;
 $tango					: #E85915 !default;
@@ -38,17 +39,17 @@ $color-shades: (
 		1100: shade($primary-color, 40%)
 	),
 	secondary: (
-		100: tint($tertiary-color, 40%),
-		200: tint($tertiary-color, 32%),
-		300: tint($tertiary-color, 24%),
-		400: tint($tertiary-color, 16%),
-		500: tint($tertiary-color, 8%),
-		600: $tertiary-color,
-		700: shade($tertiary-color, 8%),
-		800: shade($tertiary-color, 16%),
-		900: shade($tertiary-color, 24%),
-		1000: shade($tertiary-color, 32%),
-		1100: shade($tertiary-color, 40%)
+		100: tint($secondary-color, 40%),
+		200: tint($secondary-color, 32%),
+		300: tint($secondary-color, 24%),
+		400: tint($secondary-color, 16%),
+		500: tint($secondary-color, 8%),
+		600: $secondary-color,
+		700: shade($secondary-color, 8%),
+		800: shade($secondary-color, 16%),
+		900: shade($secondary-color, 24%),
+		1000: shade($secondary-color, 32%),
+		1100: shade($secondary-color, 40%)
 	),
 	success: (
 		100: tint($success-color, 40%),
@@ -90,27 +91,27 @@ $color-shades: (
 		1100: shade($danger-color, 40%)
 	),
 	grays: (
-		0: tint($gray, 100%),
-		100: tint($gray, 95%),
-		200: tint($gray, 80%),
-		300: tint($gray, 70%),
-		400: tint($gray, 60%),
-		500: tint($gray, 50%),
-		600: tint($gray, 40%),
-		700: tint($gray, 30%),
-		800: tint($gray, 20%),
-		900: tint($gray, 10%),
-		1000: $gray,
-		1100: shade($gray, 10%),
-		1200: shade($gray, 20%),
-		1300: shade($gray, 30%),
-		1400: shade($gray, 40%),
-		1500: shade($gray, 50%),
-		1600: shade($gray, 60%),
-		1700: shade($gray, 70%),
-		1800: shade($gray, 80%),
-		1900: shade($gray, 90%),
-		2000: shade($gray, 100%),
+		0: tint($gray-color, 100%),
+		100: tint($gray-color, 95%),
+		200: tint($gray-color, 80%),
+		300: tint($gray-color, 70%),
+		400: tint($gray-color, 60%),
+		500: tint($gray-color, 50%),
+		600: tint($gray-color, 40%),
+		700: tint($gray-color, 30%),
+		800: tint($gray-color, 20%),
+		900: tint($gray-color, 10%),
+		1000: $gray-color,
+		1100: shade($gray-color, 10%),
+		1200: shade($gray-color, 20%),
+		1300: shade($gray-color, 30%),
+		1400: shade($gray-color, 40%),
+		1500: shade($gray-color, 50%),
+		1600: shade($gray-color, 60%),
+		1700: shade($gray-color, 70%),
+		1800: shade($gray-color, 80%),
+		1900: shade($gray-color, 90%),
+		2000: shade($gray-color, 100%),
 	)
 ) !default;
 
@@ -135,7 +136,6 @@ $background-color	: $white;
 $theme-colors: (
 	primary		: $primary-color,
 	secondary	: $secondary-color,
-	tertiary	: $tertiary-color,
 	success		: $success-color,
 	warning		: $warning-color,
 	danger		: $danger-color,

@@ -17,6 +17,22 @@ $hero-heights		: (
 		&--is-#{$theme} {
 			background-color: $color;
 			color: color-yiq($color);
+
+			&.hero--has-overlay {
+				background-size: cover;
+				background-position: center;
+		
+				&:after {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 100%;
+					width: 100%;
+					background-color: $color;
+					opacity: 0.5;
+				}
+			}
 		}
 	}
 
@@ -24,22 +40,6 @@ $hero-heights		: (
 		&--is-#{$size} {
 			height: $height;
 			min-height: $height;
-		}
-	}
-
-	&--has-overlay {
-		background-size: cover;
-		background-position: center;
-
-		&:after {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			height: 100%;
-			width: 100%;
-			background-color: $color;
-			opacity: 0.5;
 		}
 	}
 }
