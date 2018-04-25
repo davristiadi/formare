@@ -4,28 +4,15 @@
 
 -----------------------------------------------------------------------------  */
 
-/*	-----------------------------------------------------------------------------
-	Abstracts
------------------------------------------------------------------------------  */
 @import "abstracts/functions";
 @import "abstracts/variables";
 @import "abstracts/mixins";
-
-
-/*	-----------------------------------------------------------------------------
-	Base
------------------------------------------------------------------------------  */
 @import "base/reset";
 @import "base/global";
 @import "base/colors";
 @import "base/fonts";
 @import "base/typography";
 @import "base/iconography";
-
-
-/*	-----------------------------------------------------------------------------
-	Layouts
------------------------------------------------------------------------------  */
 @import "layout/grid";
 @import "layout/section";
 @import "layout/hero";
@@ -33,21 +20,11 @@
 @import "layout/header";
 @import "layout/footer";
 @import "layout/form";
-
-
-/*	-----------------------------------------------------------------------------
-	Components
------------------------------------------------------------------------------  */
 @import "components/nav";
 @import "components/navbar";
 @import "components/input";
 @import "components/button";
 @import "components/menu";
 @import "components/card";
-
-
-/*	-----------------------------------------------------------------------------
-	Utilities
------------------------------------------------------------------------------  */
-@import "utilities/aligns";
+@import "utilities/alignment";
 @import "utilities/spacing";

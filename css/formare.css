@@ -3,9 +3,6 @@
 	formare.io v0.1.0 | MIT License | github.com/davidkurnia94/formare
 
 -----------------------------------------------------------------------------  */
-/*	-----------------------------------------------------------------------------
-	Abstracts
------------------------------------------------------------------------------  */
 /*  ------------------------------------------------------
 	Nested Map Getter
 	
@@ -124,9 +121,6 @@
 /*  ------------------------------------------------------
 	Animation
 ------------------------------------------------------  */
-/*	-----------------------------------------------------------------------------
-	Base
------------------------------------------------------------------------------  */
 /** This project uses sanitize.css as its style resetter. */
 /*! sanitize.css v5.0.0 | CC0 License | github.com/jonathantneal/sanitize.css */
 /* Document (https://html.spec.whatwg.org/multipage/semantics.html#semantics)
@@ -1142,9 +1136,6 @@ a:hover {
   content: "\e904";
 }
 
-/*	-----------------------------------------------------------------------------
-	Layouts
------------------------------------------------------------------------------  */
 /*  ------------------------------------------------------
 
     GRID SYSTEM
@@ -2956,9 +2947,6 @@ a:hover {
 }
 
 /*	-----------------------------------------------------------------------------
-	Components
------------------------------------------------------------------------------  */
-/*	-----------------------------------------------------------------------------
 	
 	NAVIGATION
 
@@ -3445,27 +3433,11 @@ a:hover {
 }
 
 /*	----------------------------------------------------------------------------
-	
-	B U T T O N
-
-	Button component defines a clickable component. 
-
-	@author: David Kurnia Kristiadi
-	@source: N/A
-
+	BUTTON
 ----------------------------------------------------------------------------  */
-/*	----------------------------
-	VARIABLES
-----------------------------  */
-/*	----------------------------
-	RULES
-----------------------------  */
 .button {
-  -webkit-transition: all 250ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
-  -moz-transition: all 250ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
-  -o-transition: all 250ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
-  transition: all 250ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
   position: relative;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: 600;
   text-align: center;
   white-space: nowrap;
@@ -3475,19 +3447,8 @@ a:hover {
   border-radius: 4px;
   color: #f6f7f7;
   padding: 0.75rem 1.25rem;
+  transition: all 250ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
   cursor: pointer;
-  /*	Generates color modifier classes for Button component */
-  /*	
-	**	Generates size modifier classes for Button component calculated
-	**	by padding size. 
-	*/
-  /*
-	**	Generates shape modifier classes for Button component based on
-	**	border radius size.
-	*/
-  /*
-	**	Make a Button component spans over the width of its parent.
-	*/
 }
 
 .button--primary {
@@ -4652,9 +4613,6 @@ a:hover {
   margin-bottom: 1.5rem;
 }
 
-/*	-----------------------------------------------------------------------------
-	Utilities
------------------------------------------------------------------------------  */
 .align--left {
   text-align: left;
 }
