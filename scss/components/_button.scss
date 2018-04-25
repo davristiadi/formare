@@ -1,14 +1,17 @@
 /*	----------------------------------------------------------------------------
 	BUTTON
 ----------------------------------------------------------------------------  */
-$button-font-family				: $font-family;
-$button-font-weight				: font-weight(medium);
 $button-themes					: $theme-colors;
-$button-border					: solid 1px gray(200);
-$button-color					: gray(100);
-$button-border-radius			: $border-radius;
-$button-border-radius-is-pill	: $border-radius-is-pill;
-$button-border-radiuses			: $border-radiuses;
+$button-font-weight				: font-weight(medium);
+$button-background-color		: $white;
+
+$button-border-style			: solid;
+$button-border-width			: 1px;
+$button-border-color			: gray(200);
+$button-border-color-hover		: gray(300);
+$button-border-color-focus		: gray(300);
+$button-border-color-active		: gray(600);
+
 $button-padding-y				: 0.75rem;
 $button-padding-x				: 1.25rem;
 $button-padding					: $button-padding-y $button-padding-x;
@@ -22,44 +25,80 @@ $button-paddings				: (
 
 .button {
 	position: relative;
-	font-family: $button-font-family;
 	font-weight: $button-font-weight;
 	text-align: center;
 	white-space: nowrap;
 	vertical-align: middle;
-	background: transparent;
-	border: $button-border;
-	border-radius: $button-border-radius;
-	color: $button-color;
+	background-color: $button-background-color;
+	border-style: $button-border-style;
+	border-width: $button-border-width;
+	border-color: $button-border-color;
+	border-radius: $border-radius;
 	padding: $button-padding;
 	transition: $transition;
 	cursor: pointer;
+
+	//	Pseudo states	
+	&:hover,
+	&--is-hovered {
+		border-color: $button-border-color-hover;
+	}
 	
+	&:focus,
+	&--is-focused {
+		border-color: $button-border-color-focus;
+		outline: none;
+	}
+	
+	&:active,
+	&--is-active {
+		border-color: $button-border-color-active;
+		outline: none;
+	}
+
+	//	Theme modifier classes
 	@each $theme, $color in $button-themes {
 		&--is-#{$theme} {	
 			background-color: $color;
 			color: color-yiq($color);
-			border: solid 1px $color;
+			border-color: $color;
+			border-bottom-color: shade($color, 10%);
+			border-bottom-width: 3px;
 
 			&.button--is-outlined {
-				border: solid 1px $color;
 				color: $color;
-				background: none;
+				background-color: transparent;
 
 				&:hover {
-					background: $color;
+					background-color: $color;
 					color: color-yiq($color);
-					border: solid 1px $color;
 				}
 			}
 			
-			&:hover {
-				transform: translateY(-2px);
-				background-color: tint($color, 16%);
+			&:hover,
+			&--is-hovered {
+				background-color: tint($color, 20%);
+				border-color: tint($color, 20%);
+				border-bottom-color: shade($color, 10%);
+			}
+
+			&:focus,
+			&--is-focused {
+				border-color: $color;
+				border-bottom-color: shade($color, 10%);
+			}
+
+			&:active,
+			&--is-active {
+				border-color: $color;
+				animation: bottomOut 300ms;
+				border-bottom-color: shade($color, 10%);
+				outline: none;
 			}
 		}
 	}
 
+	//	Size modifier classes
 	@each $size, $padding in $button-paddings {
 		&--is-#{$size} {
 			font-size: font-size($size);
@@ -67,8 +106,9 @@ $button-paddings				: (
 		}
 	}
 
+	//	Other modifiers
 	&--is-pill {
-		border-radius: $button-border-radius-is-pill;
+		border-radius: $border-radius-is-pill;
 	}
 
 	&--is-full-width {

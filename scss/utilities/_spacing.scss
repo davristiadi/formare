@@ -2,25 +2,22 @@
     SPACINGS
 --------------------------------------------  */
 @each $size, $value in $spacings {
-	.margin 			{ margin: $spacing; } 
-	.margin-is-#{$size}	{ margin: spacing($size); }
-	.padding 			{ padding: $spacing; }
+	.margin 				{ margin: $spacing; } 
+	.margin-is-#{$size}		{ margin: spacing($size); }
+	.padding 				{ padding: $spacing; }
 	.padding-is-#{$size}	{ padding: spacing($size) }	
+}
 
+$spacing-directions: top left bottom right;
+@each $direction in $spacing-directions {
 
-	$spacing-directions: top left bottom right;
-	@each $direction in $spacing-directions {
-
-		/*	
-		**	Generates basic spacing classes (padding and margin) with standard spacing size 
-		*/
-		.padding-#{$direction} { padding-#{$direction}: $spacing; }	
-		.margin-#{$direction} 	{ margin-#{$direction}: $spacing; }
-		
-		/*
-		**	Generates standard spacing classes with base spacing size.
-		*/
-		.padding-#{$direction}-is-#{$size} { padding-#{$direction}: spacing($size); }
+	//	Generates basic spacing classes (padding and margin) with standard spacing size 
+	.padding-#{$direction} 	{ padding-#{$direction}: $spacing; }	
+	.margin-#{$direction}	{ margin-#{$direction}: $spacing; }
+	
+	@each $size, $value in $spacings {
+		//	Generates standard spacing classes with base spacing size.
+		.padding-#{$direction}-is-#{$size} 	{ padding-#{$direction}: spacing($size); }
 		.margin-#{$direction}-is-#{$size} 	{ margin-#{$direction}: spacing($size); }
 	}
 }

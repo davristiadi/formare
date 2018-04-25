@@ -1,7 +1,6 @@
 /*  ------------------------------------------------------
 	Transitions
 ------------------------------------------------------  */
-$transition-duration		: 250ms;
+$transition-duration		: 150ms;
 $transition-timing			: cubic-bezier(.78,.23,.33,.83);
-
 $transition					: all $transition-duration $transition-timing;
