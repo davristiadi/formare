@@ -6,12 +6,16 @@
 	"main": "scss/formare.scss",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "npm run build:sass",
+		"build": "npm run build:clean && npm run build:sass",
 		"build:sass": "node-sass --output-style expanded --source-map true scss/formare.scss css/formare.css",
+		"build:clean": "cleancss -o css/formare.min.css css/formare.css",
 		"start": "npm run build:sass --watch"
 	},
 	"license": "ISC",
 	"dependencies": {
+		"autoprefixer": "^8.3.0",
+		"clean-css": "^4.1.11",
+		"clean-css-cli": "^4.1.11",
 		"node-sass": "^4.8.3",
 		"path": "^0.12.7",
 		"react": "^16.2.0",
