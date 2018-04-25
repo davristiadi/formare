@@ -11,7 +11,7 @@ $nav-themes					: $theme-colors;
 $nav-item-padding-y			: 0;
 $nav-item-padding-x			: spacing(large);
 $nav-item-padding			: $nav-item-padding-y $nav-item-padding-x;
-$nav-item-weight			: font-weight(semibold);
+$nav-item-weight			: font-weight(medium);
 $nav-item-opacity-active	: 1;
 $nav-item-opacity-inactive	: 0.3;
 
@@ -70,12 +70,7 @@ $nav-item-opacity-inactive	: 0.3;
 			padding: $nav-item-padding;
 			text-decoration: none;
 			color: inherit;
-		}
-
-		&--is-active {
+			cursor: pointer;
 		}
 	}
 }
-
-//
-//-----------------------------------------------------------------------------

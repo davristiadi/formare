@@ -29,7 +29,7 @@ $navbar-directions: flex-start center flex-end;
 	
 	// Generate different themes for a Navbar component.
 	@each $theme, $color in $navbar-themes {
-		&--#{$theme} {
+		&--is-#{$theme} {
 			background-color: $color;
 			color: color-yiq($color);
 		}
@@ -37,7 +37,7 @@ $navbar-directions: flex-start center flex-end;
 	
 	// Generate different sizes for a Navbar component.
 	@each $size, $height in $navbar-heights {
-		&--#{$size} {
+		&--is-#{$size} {
 			height: $height;
 			min-height: $height;
 		}

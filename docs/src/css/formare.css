@@ -2923,10 +2923,11 @@ a:hover {
   -moz-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  font-weight: 600;
+  font-weight: 500;
   padding: 0 1.5rem;
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
 /*	-----------------------------------------------------------------------------
@@ -2950,87 +2951,87 @@ a:hover {
   height: 4em;
 }
 
-.navbar--primary {
+.navbar--is-primary {
   background-color: #4381C1;
   color: #f6f7f7;
 }
 
-.navbar--secondary {
+.navbar--is-secondary {
   background-color: #D3492C;
   color: #f6f7f7;
 }
 
-.navbar--success {
+.navbar--is-success {
   background-color: #48A900;
   color: #f6f7f7;
 }
 
-.navbar--warning {
+.navbar--is-warning {
   background-color: #EBC500;
   color: #1d2425;
 }
 
-.navbar--danger {
+.navbar--is-danger {
   background-color: #E85915;
   color: #f6f7f7;
 }
 
-.navbar--white {
+.navbar--is-white {
   background-color: #FFFFFF;
   color: #1d2425;
 }
 
-.navbar--black {
+.navbar--is-black {
   background-color: #000000;
   color: #f6f7f7;
 }
 
-.navbar--gray {
+.navbar--is-gray {
   background-color: #49595C;
   color: #f6f7f7;
 }
 
-.navbar--light {
+.navbar--is-light {
   background-color: #dbdede;
   color: #1d2425;
 }
 
-.navbar--lighter {
+.navbar--is-lighter {
   background-color: #f6f7f7;
   color: #1d2425;
 }
 
-.navbar--dark {
+.navbar--is-dark {
   background-color: #1d2425;
   color: #f6f7f7;
 }
 
-.navbar--darker {
+.navbar--is-darker {
   background-color: #0f1212;
   color: #f6f7f7;
 }
 
-.navbar--x-small {
+.navbar--is-x-small {
   height: 2em;
   min-height: 2em;
 }
 
-.navbar--small {
+.navbar--is-small {
   height: 3em;
   min-height: 3em;
 }
 
-.navbar--base {
+.navbar--is-base {
   height: 4em;
   min-height: 4em;
 }
 
-.navbar--large {
+.navbar--is-large {
   height: 6em;
   min-height: 6em;
 }
 
-.navbar--x-large {
+.navbar--is-x-large {
   height: 8em;
   min-height: 8em;
 }
