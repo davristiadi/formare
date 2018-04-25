@@ -2,7 +2,7 @@
 	BUTTON
 ----------------------------------------------------------------------------  */
 $button-font-family				: $font-family;
-$button-font-weight				: font-weight(semibold);
+$button-font-weight				: font-weight(medium);
 $button-themes					: $theme-colors;
 $button-border					: solid 1px gray(200);
 $button-color					: gray(100);
@@ -52,8 +52,9 @@ $button-paddings				: (
 					border: solid 1px $color;
 				}
 			}
-
+			
 			&:hover {
+				transform: translateY(-2px);
 				background-color: tint($color, 16%);
 			}
 		}

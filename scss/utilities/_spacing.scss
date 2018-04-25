@@ -3,9 +3,9 @@
 --------------------------------------------  */
 @each $size, $value in $spacings {
 	.margin 			{ margin: $spacing; } 
-	.margin-#{$size}	{ margin: spacing($size); }
+	.margin-is-#{$size}	{ margin: spacing($size); }
 	.padding 			{ padding: $spacing; }
-	.padding-#{$size}	{ padding: spacing($size) }	
+	.padding-is-#{$size}	{ padding: spacing($size) }	
 
 
 	$spacing-directions: top left bottom right;
@@ -20,7 +20,7 @@
 		/*
 		**	Generates standard spacing classes with base spacing size.
 		*/
-		.padding-#{$direction}-#{$size} { padding-#{$direction}: spacing($size); }
-		.margin-#{$direction}-#{$size} 	{ margin-#{$direction}: spacing($size); }
+		.padding-#{$direction}-is-#{$size} { padding-#{$direction}: spacing($size); }
+		.margin-#{$direction}-is-#{$size} 	{ margin-#{$direction}: spacing($size); }
 	}
 }

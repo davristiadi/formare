@@ -1,7 +1,7 @@
 $card-themes			: $theme-colors;
 $card-padding			: spacing(base);
 $card-background		: gray(0);
-$card-border-radius		: border-radius(x-large);
+$card-border-radius		: border-radius(base);
 
 .card {
 	@include flexbox;
@@ -28,7 +28,7 @@ $card-border-radius		: border-radius(x-large);
 
 	//	Generate theme modifier classes for a card component.
 	@each $theme, $color in $card-themes {
-		&--#{$theme} {
+		&--is-#{$theme} {
 			@include transition($transition);
 			background-color: $color;
 			color: color-yiq($color);

@@ -1,8 +1,7 @@
 /*  ------------------------------------------------------
-
-    GRID SYSTEM
-	
+    Grid Systems
 ------------------------------------------------------  */
+//  Breakpoints
 $breakpoints: (
     xs: 0,
     sm: 576px,
@@ -11,9 +10,11 @@ $breakpoints: (
     xl: 1200px,
 ) !default;
 
+//  Grid Options
 $grid-columns       : 12 !default;
 $grid-gap-width     : 30px !default;
 
+//  Container Widths
 $container-max-widths: (
     sm: 540px,
     md: 720px,

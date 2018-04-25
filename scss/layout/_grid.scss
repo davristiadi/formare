@@ -30,15 +30,15 @@
 	Row	
 ------------------------------------------------------  */
 .row {
-	@include flexbox();
+	@include flexbox;
 	@include flex-wrap(wrap);
 	margin: 0 ($grid-gap-width / -2);
 
 	&--is-gapless {
 		padding: 0;
 
-		.tnk-column,
-		[class*='tnk-column-'] {
+		.column,
+		[class*='column-'] {
 			padding: 0;
 		}
 	}
@@ -50,7 +50,7 @@
 .column {
 	@include flex-grow(1);
 	@include flex-shrink(0);
-	@include flex-basis(auto);
+	@include flex-basis(0);
 	max-width: 100%;
 	padding: 0 ($grid-gap-width / 2);
 

@@ -15,18 +15,15 @@
 	FONT SIZE
 ----------------------------  */
 @each $name, $size in $font-sizes {
-	.font-size-#{$name} {
+	.font-is-#{$name} {
 		font-size: $size; 
 	} 
-} 
+}
 
-/*	----------------------------
-	FONT WEIGHT
-----------------------------  */
 @each $name, $weight in $font-weights {
-    .font-weight-#{$name} {
-        font-weight: $weight;
-    }
+	&.font-is-#{$name} {
+		font-weight: $weight;
+	}
 }
 
 
