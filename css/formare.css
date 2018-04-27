@@ -818,19 +818,8 @@ textarea,
 }
 
 /*	----------------------------------------------------------------------------
-
-	T Y P O G R A P H Y
-
-	All CSS properties that allow you to define the color, size,
-	spacing and shape of text.
-
-	@author	: David Kurnia Kristiadi
-	@source	: https://cssreference.io/typography/
-
+	TYPOGRAPHY
 ----------------------------------------------------------------------------  */
-/*	----------------------------
-	FONT SIZE
-----------------------------  */
 .font {
   font-size: 1rem;
 }
@@ -935,9 +924,6 @@ textarea,
   font-weight: 900;
 }
 
-/*	----------------------------
-	HEADINGS
-----------------------------  */
 h1,
 .heading-1 {
   font-size: 3rem;
@@ -968,54 +954,6 @@ h6,
   font-size: 1rem;
 }
 
-.heading--primary {
-  color: #4381C1;
-}
-
-.heading--secondary {
-  color: #D3492C;
-}
-
-.heading--success {
-  color: #48A900;
-}
-
-.heading--warning {
-  color: #EBC500;
-}
-
-.heading--danger {
-  color: #E85915;
-}
-
-.heading--white {
-  color: #FFFFFF;
-}
-
-.heading--black {
-  color: #000000;
-}
-
-.heading--gray {
-  color: #49595C;
-}
-
-.heading--light {
-  color: #dbdede;
-}
-
-.heading--lighter {
-  color: #f6f7f7;
-}
-
-.heading--dark {
-  color: #1d2425;
-}
-
-.heading--darker {
-  color: #0f1212;
-}
-
 .title {
   font-weight: 700;
 }
@@ -1024,33 +962,6 @@ h6,
   font-weight: 400;
 }
 
-/*	----------------------------
-	LINKS
-----------------------------  */
-a {
-  transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
-  color: #4381C1;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #709fd0;
-}
-
-/*	----------------------------
-	ARTICLE
-----------------------------  */
-.article .heading {
-  margin-bottom: 1rem;
-}
-
-.article p {
-  margin-bottom: 1.5rem;
-}
-
-/*	----------------------------
-	ALIGNMENTS
-----------------------------  */
 .align-left {
   text-align: left;
 }
@@ -1081,6 +992,24 @@ a:hover {
 
 .align-match-parent {
   text-align: match-parent;
+}
+
+a {
+  transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
+  color: #4381C1;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #709fd0;
+}
+
+.article .heading {
+  margin-bottom: 1rem;
+}
+
+.article p {
+  margin-bottom: 1.5rem;
 }
 
 /*  ------------------------------------------------------
@@ -2136,17 +2065,8 @@ a:hover {
   transition: all 100ms ease-out;
 }
 
-.nav .nav__list--is-active .nav__item:not(.nav__item--is-active) {
+.nav .nav__list--active .nav__item:not(.nav__item--active) {
   opacity: 0.3;
-}
-
-.nav .nav__list--is-horizontal {
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
 }
 
 .nav .nav__list:hover .nav__item {
@@ -2164,7 +2084,7 @@ a:hover {
   text-align: center;
 }
 
-.nav .nav__list .nav__item--is-active {
+.nav .nav__list .nav__item--active {
   opacity: 1;
 }
 
@@ -2593,16 +2513,16 @@ a:hover {
   cursor: pointer;
 }
 
-.button:hover, .button--is-hovered {
+.button:hover, .button--hovered {
   border-color: #c8cdce;
 }
 
-.button:focus, .button--is-focused {
+.button:focus, .button--focused {
   border-color: #c8cdce;
   outline: none;
 }
 
-.button:active, .button--is-active {
+.button:active, .button--active {
   border-color: #929b9d;
   outline: none;
 }
