@@ -8,12 +8,12 @@ class App extends Component {
 	render() {
 		return (
 			<div id="home">
-				<div className="navbar navbar--is-lighter">
+				<header className="navbar navbar--lighter">
 					<div className="navbar__container">
-						<div className="navbar__block navbar__block--flex-start">
-							<h5 className="font-is-bold">Formare</h5>
+						<div className="navbar__block navbar__block--start">
+							<h5 className="font font--bold font--x-large">Formare</h5>
 						</div>
-						<div className="navbar__block navbar__block--flex-end">
+						<div className="navbar__block navbar__block--end">
 							<nav className="nav">
 								<ul className="nav__list">
 									<li className="nav__item">
@@ -29,100 +29,136 @@ class App extends Component {
 							</nav>
 						</div>
 					</div>
-				</div>
-				<section id="hero" className="hero hero--is-primary">
-				</section>
-				<div className="padding-top-is-x-large padding-bottom-is-x-large">
-				
-					<section id="heading">
-						<div className="container">
-							<article className="article">
-								<div className="heading">
-									<h3 className="title">Heading</h3>
-									<p className="subtitle">Quis amet deserunt qui culpa velit ut culpa et voluptate in consequat ullamco et laboris.</p>
-								</div>
-								<h1>Heading 1</h1>
-								<h2>Heading 2</h2>
-								<h3>Heading 3</h3>
-								<h4>Heading 4</h4>
-								<h5>Heading 5</h5>
-								<h6>Heading 6</h6>
-							</article>
+				</header>
+				<div className="container container--full-width">
+					<div className="row">
+						<div className="column column-3">
+							
 						</div>
-					</section>
-					<section id="buttons" className="padding-top-is-x-large">
-						<div className="container">
-							<article className="article">
-								<div className="heading">
-									<h3 className="title">Buttons</h3>
-									<p className="subtitle">Aliqua velit anim consequat nostrud mollit est duis irure et ex.</p>
-								</div>
-								<div className="margin-bottom">
-									<button className="button margin-right">Button</button>
-									<button className="button button--is-primary margin-right">Primary</button>
-									<button className="button button--is-secondary margin-right">Secondary</button>
-									<button className="button button--is-success margin-right">Success</button>
-									<button className="button button--is-danger margin-right">Danger</button>
-									<button className="button button--is-warning margin-right">Warning</button>
-									<button className="button button--is-dark margin-right">Dark</button>
-									<button className="button button--is-light">Light</button>
-								</div>
-								<div>
-									<button className="button button--is-small margin-right">Small</button>
-									<button className="button margin-right">Base</button>
-									<button className="button button--is-large">Large</button>
+						<div className="column">
+							<div className="padding-top-is-x-large padding-bottom-is-x-large">
+								<section id="heading">
+									<article className="article">
+										<div className="heading">
+											<h3 className="title">Heading</h3>
+											<p className="subtitle">Quis amet deserunt qui culpa velit ut culpa et voluptate in consequat ullamco et laboris.</p>
+										</div>
+										<h1>Heading 1</h1>
+										<h2>Heading 2</h2>
+										<h3>Heading 3</h3>
+										<h4>Heading 4</h4>
+										<h5>Heading 5</h5>
+										<h6>Heading 6</h6>
+									</article>
+								</section>
+								<section id="buttons" className="padding-top-is-x-large">
+									<article className="article">
+										<div className="heading">
+											<h3 className="title">Buttons</h3>
+											<p className="subtitle">Aliqua velit anim consequat nostrud mollit est duis irure et ex.</p>
+										</div>
+										<div className="margin-bottom">
+											<button className="button margin-right">Button</button>
+											<button className="button button--primary margin-right">Primary</button>
+											<button className="button button--secondary margin-right">Secondary</button>
+											<button className="button button--success margin-right">Success</button>
+											<button className="button button--danger margin-right">Danger</button>
+											<button className="button button--warning margin-right">Warning</button>
+											<button className="button button--dark margin-right">Dark</button>
+											<button className="button button--light">Light</button>
+										</div>
+										<div>
+											<button className="button button--small margin-right">Small</button>
+											<button className="button margin-right">Base</button>
+											<button className="button button--large">Large</button>
 
-								</div>
-							</article>
-						</div>
-					</section>
-					<section id="card" className="padding-top-is-x-large">
-						<div className="container">
-							<article className="article">
-								<div className="heading">
-									<h3 className="title">Card</h3>
-									<p className="subtitle">Culpa culpa deserunt magna nostrud sunt adipisicing cillum commodo dolore cupidatat nostrud veniam. Commodo id nulla consectetur aliqua aute. Fugiat irure consectetur cillum pariatur laboris est.</p>
-								</div>
-								<div className="row">
-									<div className="column">
-										<div className="card card--is-lighter">
-											<div className="card__header">
-												<span className="font-is-x-large font-is-bold">This is a card</span>
+										</div>
+									</article>
+								</section>
+								<section id="card" className="padding-top-is-x-large">
+									<article className="article">
+										<div className="heading">
+											<h3 className="title">Card</h3>
+											<p className="subtitle">Culpa culpa deserunt magna nostrud sunt adipisicing cillum commodo dolore cupidatat nostrud veniam. Commodo id nulla consectetur aliqua aute. Fugiat irure consectetur cillum pariatur laboris est.</p>
+										</div>
+										<div className="row">
+											<div className="column column-6">
+												<div className="card card--lighter">
+													<div className="card__header">
+														<span className="font font--large font--bold">This is a card</span>
+													</div>
+													<div className="card__body">
+														<article className="article">
+															<h5 className="font--medium">This is an example card content</h5>
+															<p>Proident et quis sunt enim adipisicing consequat nulla do quis. Ipsum esse fugiat elit est cillum id laboris ullamco sint qui. Eu tempor sint sit esse mollit ea aliquip elit non. Sint ut esse ea deserunt velit incididunt sint laborum dolor duis occaecat minim. Et eu consequat proident incididunt minim nostrud eiusmod reprehenderit mollit do deserunt ad nisi. Nisi ea dolor proident consequat mollit est aliqua ullamco sit exercitation elit do deserunt Lorem.</p>
+														</article>
+													</div>
+													<div className="card__footer flex justify-content--end">
+														<button className="button button--danger margin-right">Cancel</button>
+														<button className="button button--primary">Submit</button>
+													</div>
+												</div>
 											</div>
-											<div className="card__body">
-												<article className="article">
-													<h5 className="font-is-medium">This is an example card content</h5>
-													<p>Proident et quis sunt enim adipisicing consequat nulla do quis. Ipsum esse fugiat elit est cillum id laboris ullamco sint qui. Eu tempor sint sit esse mollit ea aliquip elit non. Sint ut esse ea deserunt velit incididunt sint laborum dolor duis occaecat minim. Et eu consequat proident incididunt minim nostrud eiusmod reprehenderit mollit do deserunt ad nisi. Nisi ea dolor proident consequat mollit est aliqua ullamco sit exercitation elit do deserunt Lorem.</p>
-												</article>
+											<div className="column column-6">
+												<div className="card card--lighter">
+													<div className="card__header">
+														<span className="font font--large font--bold">This is a card</span>
+													</div>
+													<div className="card__body">
+														<article className="article">
+															<h5 className="font--medium">This is an example card content</h5>
+															<p>Proident et quis sunt enim adipisicing consequat nulla do quis. Ipsum esse fugiat elit est cillum id laboris ullamco sint qui. Eu tempor sint sit esse mollit ea aliquip elit non. Sint ut esse ea deserunt velit incididunt sint laborum dolor duis occaecat minim. Et eu consequat proident incididunt minim nostrud eiusmod reprehenderit mollit do deserunt ad nisi. Nisi ea dolor proident consequat mollit est aliqua ullamco sit exercitation elit do deserunt Lorem.</p>
+														</article>
+													</div>
+													<div className="card__footer flex justify-content--end">
+														<button className="button button--danger margin-right">Cancel</button>
+														<button className="button button--primary">Submit</button>
+													</div>
+												</div>
 											</div>
-											<div className="card__footer flex justify-content--end">
-												<button className="button button--is-danger margin-right">Cancel</button>
-												<button className="button button--is-primary">Submit</button>
+											<div className="column column-6">
+												<div className="card card--dark">
+													<div className="card__header">
+														<span className="font font--large font--bold">This is a card</span>
+													</div>
+													<div className="card__body">
+														<article className="article">
+															<h5 className="font--medium">This is an example card content</h5>
+															<p>Proident et quis sunt enim adipisicing consequat nulla do quis. Ipsum esse fugiat elit est cillum id laboris ullamco sint qui. Eu tempor sint sit esse mollit ea aliquip elit non. Sint ut esse ea deserunt velit incididunt sint laborum dolor duis occaecat minim. Et eu consequat proident incididunt minim nostrud eiusmod reprehenderit mollit do deserunt ad nisi. Nisi ea dolor proident consequat mollit est aliqua ullamco sit exercitation elit do deserunt Lorem.</p>
+														</article>
+													</div>
+													<div className="card__footer flex justify-content--end">
+														<button className="button button--danger margin-right">Cancel</button>
+														<button className="button button--primary">Submit</button>
+													</div>
+												</div>
+											</div>
+											<div className="column column-6">
+												<div className="card card--darker">
+													<div className="card__header">
+														<span className="font font--large font--bold">This is a card</span>
+													</div>
+													<div className="card__body">
+														<article className="article">
+															<h5 className="font--medium">This is an example card content</h5>
+															<p>Proident et quis sunt enim adipisicing consequat nulla do quis. Ipsum esse fugiat elit est cillum id laboris ullamco sint qui. Eu tempor sint sit esse mollit ea aliquip elit non. Sint ut esse ea deserunt velit incididunt sint laborum dolor duis occaecat minim. Et eu consequat proident incididunt minim nostrud eiusmod reprehenderit mollit do deserunt ad nisi. Nisi ea dolor proident consequat mollit est aliqua ullamco sit exercitation elit do deserunt Lorem.</p>
+														</article>
+													</div>
+													<div className="card__footer flex justify-content--end">
+														<button className="button button--danger margin-right">Cancel</button>
+														<button className="button button--primary">Submit</button>
+													</div>
+												</div>
 											</div>
 										</div>
-									</div>
-									<div className="column">
-										<div className="card card--is-lighter">
-											<div className="card__header">
-												<span className="font-is-x-large font-is-bold">This is a card</span>
-											</div>
-											<div className="card__body">
-												<article className="article">
-													<h5 className="font-is-medium">This is an example card content</h5>
-													<p>Aliquip elit proident excepteur esse in do sunt fugiat velit cillum voluptate. Lorem ad ullamco ad officia ea laboris veniam nulla nisi ullamco esse mollit excepteur ex. Eiusmod Lorem voluptate cillum anim amet laboris est do do exercitation eu incididunt commodo. Magna deserunt eu enim reprehenderit officia aute occaecat elit adipisicing et laboris.</p>
-												</article>
-											</div>
-											<div className="card__footer flex justify-content--end">
-												<button className="button button--is-danger button--is-outlined margin-right">Cancel</button>
-												<button className="button button--is-primary button--is-outlined">Submit</button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</article>
+									</article>
+								</section>
+							</div>
+							
 						</div>
-					</section>
+					</div>
 				</div>
+				
 			</div>
 		);
 	}

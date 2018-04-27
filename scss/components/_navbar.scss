@@ -4,9 +4,6 @@
 
 -----------------------------------------------------------------------------  */
 
-/*	-----------------------
-	Variables
------------------------  */
 $navbar-themes		: $theme-colors;
 $navbar-height		: 4em;
 $navbar-heights		: (
@@ -16,38 +13,37 @@ $navbar-heights		: (
 	large			: ($navbar-height * 1.5),
 	x-large			: ($navbar-height * 2)
 ) !default;
-$navbar-directions: flex-start center flex-end;
+$navbar-directions: (
+	flex-start: start,
+	center: center,
+	flex-end: end
+) !default;
 
-/*	-----------------------
-	Style Rules
------------------------  */
 .navbar {
 	@include transition($transition);
 	position: relative;
 	min-height: 4em;
 	height: 4em;
 	
-	// Generate different themes for a Navbar component.
 	@each $theme, $color in $navbar-themes {
-		&--is-#{$theme} {
+		&--#{$theme} {
 			background-color: $color;
 			color: color-yiq($color);
 		}
 	}
 	
-	// Generate different sizes for a Navbar component.
-	@each $size, $height in $navbar-heights {
-		&--is-#{$size} {
-			height: $height;
-			min-height: $height;
+	@each $size, $value in $navbar-heights {
+		&--#{$size} {
+			height: $value;
+			min-height: $value;
 		}
 	}
-	
+
 	.navbar__container {
 		@extend .container;
-		@include flexbox;
-		@include flex-direction(row);
-		@include justify-content(space-between);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
 		height: 100%;
 	}
 
@@ -57,9 +53,9 @@ $navbar-directions: flex-start center flex-end;
 		@include flex(1 1 auto);
 		position: relative;
 		min-height: 4em;
-
-		@each $direction in $navbar-directions {
-			&--#{$direction} { 
+		
+		@each $direction, $abbr in $navbar-directions {
+			&--#{$abbr} { 
 				@include justify-content($direction) 
 			}
 		}

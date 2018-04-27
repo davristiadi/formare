@@ -27,14 +27,10 @@ $nav-item-opacity-inactive	: 0.3;
 		@include flex-direction(row);
 		transition: all 100ms ease-out;
 
-		&--is-active {
-			.nav__item:not(.nav__item--is-active) {
+		&--active {
+			.nav__item:not(.nav__item--active) {
 				opacity: $nav-item-opacity-inactive;
 			}
-		}
-
-		&--is-horizontal {
-			@include flex-direction(column);
 		}
 
 		&:hover {
@@ -48,7 +44,7 @@ $nav-item-opacity-inactive	: 0.3;
 			transition: all 100ms ease-out;
 			text-align: center;
 
-			&--is-active {
+			&--active {
 				opacity: $nav-item-opacity-active;
 			}
 

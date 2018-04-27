@@ -1,35 +1,25 @@
 /*	----------------------------------------------------------------------------
-
-	T Y P O G R A P H Y
-
-	All CSS properties that allow you to define the color, size,
-	spacing and shape of text.
-
-	@author	: David Kurnia Kristiadi
-	@source	: https://cssreference.io/typography/
-
+	TYPOGRAPHY
 ----------------------------------------------------------------------------  */
+//	Font
+.font {
+	font-size: $font-size;
 
-
-/*	----------------------------
-	FONT SIZE
-----------------------------  */
-@each $name, $size in $font-sizes {
-	.font-is-#{$name} {
-		font-size: $size; 
-	} 
-}
-
-@each $name, $weight in $font-weights {
-	&.font-is-#{$name} {
-		font-weight: $weight;
+	@each $size, $value in $font-sizes {
+		&--#{$size} {
+			font-size: $value; 
+		} 
+	}
+	
+	@each $weight, $value in $font-weights {
+		&--#{$weight} {
+			font-weight: $value;
+		}
 	}
 }
 
 
-/*	----------------------------
-	HEADINGS
-----------------------------  */
+//	Headings
 @each $heading, $size in $headings {
     $index: index($headings, ($heading $size));
     
@@ -39,22 +29,17 @@
     }
 }
 
-.heading {
-	
-	//	Generates different themes for heading
-	@each $theme, $color in $theme-colors {
-		&--#{$theme} {
-			color: $color;
-		}
-	}
-}
-
 .title 		{ font-weight: font-weight(bold); 	}
 .subtitle	{ font-weight: font-weight(regular); 	}
 
-/*	----------------------------
-	LINKS
-----------------------------  */
+//	Alignments
+@each $align in $text-aligns {
+	.align-#{$align} {
+		text-align: $align;
+	}
+}
+
+//	Links
 a {
 	transition: $transition;
 	color: primary-color(600);
@@ -65,9 +50,7 @@ a {
 	}
 }
 
-/*	----------------------------
-	ARTICLE
-----------------------------  */
+//	Article
 .article {
 	.heading {
 		margin-bottom: spacing(base);
@@ -75,14 +58,5 @@ a {
 	
 	p {
 		margin-bottom: spacing(large);
-	}
-}
-
-/*	----------------------------
-	ALIGNMENTS
-----------------------------  */
-@each $align in $text-aligns {
-	.align-#{$align} {
-		text-align: $align;
 	}
 }

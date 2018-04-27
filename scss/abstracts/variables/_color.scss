@@ -1,5 +1,5 @@
 /*  ------------------------------------------------------
-	COLOR SYSTEM	
+	Color System	
 ------------------------------------------------------  */
 $azure					: #4381C1 !default;
 $valencia				: #D3492C !default;
@@ -12,16 +12,14 @@ $cello					: #1C415B !default;
 $deep-cerulean			: #007EA7 !default;
 $pelorous				: #45A1BF !default;
 
-$primary-color			: $azure;
-$secondary-color		: $valencia;
-$success-color			: $malachite;
-$warning-color			: $corn;
-$danger-color			: $tango;
-$gray-color				: $river-bed;
+$primary-color			: $azure !default;
+$secondary-color		: $valencia !default;
+$success-color			: $malachite !default;
+$warning-color			: $corn !default;
+$danger-color			: $tango !default;
+$gray-color				: $river-bed !default;
 
-/*  ------------------------------------------------------
-	Shades
-------------------------------------------------------  */
+//  Shades
 $color-shades: (
 	primary: (
 		100: tint($primary-color, 40%),
@@ -114,9 +112,7 @@ $color-shades: (
 ) !default;
 
 
-/*  ------------------------------------------------------
-	Generic
-------------------------------------------------------  */
+//  Generic Colors
 $white				: #FFFFFF;
 $black				: #000000;
 $gray				: gray(1000);
@@ -128,9 +124,8 @@ $darker				: gray(1800);
 $text-color			: $dark;
 $background-color	: $white;
 
-/*  ------------------------------------------------------
-	Theme Colors
-------------------------------------------------------  */
+
+//  Theme Colors
 $theme-colors: (
 	primary		: $primary-color,
 	secondary	: $secondary-color,
@@ -147,13 +142,11 @@ $theme-colors: (
 ) !default;
 
 
-/*  ------------------------------------------------------
-	Color Contrast
-------------------------------------------------------  */
-// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". 
-// Acceptable values are between 0 and 255.
+//	Color Contrast
+//  The yiq lightness value that determines when the lightness of color changes from "dark" to "light". 
+//  Acceptable values are between 0 and 255.
 $yiq-contrasted-threshold: 150 !default;
 
-// Customize the light and dark text colors for use in our YIQ color contrast function.
+//  Customize the light and dark text colors for use in our YIQ color contrast function.
 $yiq-text-dark: gray(1600) !default;
 $yiq-text-light: gray(100) !default;

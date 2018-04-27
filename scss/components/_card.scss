@@ -28,7 +28,7 @@ $card-border-radius		: border-radius(base);
 
 	//	Generate theme modifier classes for a card component.
 	@each $theme, $color in $card-themes {
-		&--is-#{$theme} {
+		&--#{$theme} {
 			@include transition($transition);
 			background-color: $color;
 			color: color-yiq($color);
@@ -82,8 +82,8 @@ $card-border-radius		: border-radius(base);
 		}
 	}
 
-	&--is-rounded {
-		border-radius: border-radius(rounded);
+	&--pill {
+		border-radius: border-radius(pill);
 	}
 }
 

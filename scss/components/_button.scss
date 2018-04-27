@@ -40,32 +40,32 @@ $button-paddings				: (
 
 	//	Pseudo states	
 	&:hover,
-	&--is-hovered {
+	&--hovered {
 		border-color: $button-border-color-hover;
 	}
 	
 	&:focus,
-	&--is-focused {
+	&--focused {
 		border-color: $button-border-color-focus;
 		outline: none;
 	}
 	
 	&:active,
-	&--is-active {
+	&--active {
 		border-color: $button-border-color-active;
 		outline: none;
 	}
 
 	//	Theme modifier classes
 	@each $theme, $color in $button-themes {
-		&--is-#{$theme} {	
+		&--#{$theme} {	
 			background-color: $color;
 			color: color-yiq($color);
 			border-color: $color;
 			border-bottom-color: shade($color, 10%);
 			border-bottom-width: 3px;
 
-			&.button--is-outlined {
+			&.button--outlined {
 				color: $color;
 				background-color: transparent;
 
@@ -76,22 +76,23 @@ $button-paddings				: (
 			}
 			
 			&:hover,
-			&--is-hovered {
+			&--hovered {
 				background-color: tint($color, 20%);
 				border-color: tint($color, 20%);
 				border-bottom-color: shade($color, 10%);
 			}
 
 			&:focus,
-			&--is-focused {
-				border-color: $color;
+			&--focused {
+				border-color: tint($color, 10%);
 				border-bottom-color: shade($color, 10%);
 			}
 
 			&:active,
-			&--is-active {
+			&--active {
 				border-color: $color;
 				animation: bottomOut 300ms;
+				border-color: tint($color, 20%);
 				border-bottom-color: shade($color, 10%);
 				outline: none;
 			}
@@ -100,18 +101,18 @@ $button-paddings				: (
 
 	//	Size modifier classes
 	@each $size, $padding in $button-paddings {
-		&--is-#{$size} {
+		&--#{$size} {
 			font-size: font-size($size);
 			padding: $padding;
 		}
 	}
 
 	//	Other modifiers
-	&--is-pill {
+	&--pill {
 		border-radius: $border-radius-is-pill;
 	}
 
-	&--is-full-width {
+	&--full-width {
 		width: 100%;
 	}
 }
