@@ -1,23 +1,21 @@
 /*	----------------------------------------------------------------------------
 	TYPOGRAPHY
 ----------------------------------------------------------------------------  */
-//	Font
-.font {
-	font-size: $font-size;
-
-	@each $size, $value in $font-sizes {
-		&--#{$size} {
-			font-size: $value; 
-		} 
-	}
-	
-	@each $weight, $value in $font-weights {
-		&--#{$weight} {
-			font-weight: $value;
-		}
-	}
+//	Font Size
+@each $size, $value in $font-sizes {
+	.fs-#{$size},
+	.font-size-#{$size} {
+		font-size: $value; 
+	} 
 }
 
+//	Font Weight
+@each $weight, $value in $font-weights {
+	.fw-#{$weight},
+	.font-weight-#{$weight} {
+		font-weight: $value;
+	}
+}
 
 //	Headings
 @each $heading, $size in $headings {

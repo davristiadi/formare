@@ -818,126 +818,133 @@ textarea,
 }
 
 /*	----------------------------------------------------------------------------
-
-	T Y P O G R A P H Y
-
-	All CSS properties that allow you to define the color, size,
-	spacing and shape of text.
-
-	@author	: David Kurnia Kristiadi
-	@source	: https://cssreference.io/typography/
-
+	TYPOGRAPHY
 ----------------------------------------------------------------------------  */
-/*	----------------------------
-	FONT SIZE
-----------------------------  */
-.font {
-  font-size: 1rem;
-}
-
-.font--x-small {
+.fs-x-small,
+.font-size-x-small {
   font-size: 0.7rem;
 }
 
-.font--small {
+.fs-small,
+.font-size-small {
   font-size: 0.85rem;
 }
 
-.font--base {
+.fs-base,
+.font-size-base {
   font-size: 1rem;
 }
 
-.font--large {
+.fs-large,
+.font-size-large {
   font-size: 1.25rem;
 }
 
-.font--x-large {
+.fs-x-large,
+.font-size-x-large {
   font-size: 1.5rem;
 }
 
-.font--xx-large {
+.fs-xx-large,
+.font-size-xx-large {
   font-size: 2rem;
 }
 
-.font--thin {
+.fw-thin,
+.font-weight-thin {
   font-weight: 100;
 }
 
-.font--extra-light {
+.fw-extra-light,
+.font-weight-extra-light {
   font-weight: 200;
 }
 
-.font--ultra-light {
+.fw-ultra-light,
+.font-weight-ultra-light {
   font-weight: 200;
 }
 
-.font--light {
+.fw-light,
+.font-weight-light {
   font-weight: 300;
 }
 
-.font--normal {
+.fw-normal,
+.font-weight-normal {
   font-weight: 400;
 }
 
-.font--book {
+.fw-book,
+.font-weight-book {
   font-weight: 400;
 }
 
-.font--regular {
+.fw-regular,
+.font-weight-regular {
   font-weight: 400;
 }
 
-.font--medium {
+.fw-medium,
+.font-weight-medium {
   font-weight: 500;
 }
 
-.font--semi-bold {
+.fw-semi-bold,
+.font-weight-semi-bold {
   font-weight: 600;
 }
 
-.font--semibold {
+.fw-semibold,
+.font-weight-semibold {
   font-weight: 600;
 }
 
-.font--demi-bold {
+.fw-demi-bold,
+.font-weight-demi-bold {
   font-weight: 600;
 }
 
-.font--bold {
+.fw-bold,
+.font-weight-bold {
   font-weight: 700;
 }
 
-.font--extra-bold {
+.fw-extra-bold,
+.font-weight-extra-bold {
   font-weight: 800;
 }
 
-.font--ultra-bold {
+.fw-ultra-bold,
+.font-weight-ultra-bold {
   font-weight: 900;
 }
 
-.font--heavy {
+.fw-heavy,
+.font-weight-heavy {
   font-weight: 900;
 }
 
-.font--black {
+.fw-black,
+.font-weight-black {
   font-weight: 900;
 }
 
-.font--ultra {
+.fw-ultra,
+.font-weight-ultra {
   font-weight: 900;
 }
 
-.font--ultra-black {
+.fw-ultra-black,
+.font-weight-ultra-black {
   font-weight: 900;
 }
 
-.font--extra-ultra {
+.fw-extra-ultra,
+.font-weight-extra-ultra {
   font-weight: 900;
 }
 
-/*	----------------------------
-	HEADINGS
-----------------------------  */
 h1,
 .heading-1 {
   font-size: 3rem;
@@ -968,54 +975,6 @@ h6,
   font-size: 1rem;
 }
 
-.heading--primary {
-  color: #4381C1;
-}
-
-.heading--secondary {
-  color: #D3492C;
-}
-
-.heading--success {
-  color: #48A900;
-}
-
-.heading--warning {
-  color: #EBC500;
-}
-
-.heading--danger {
-  color: #E85915;
-}
-
-.heading--white {
-  color: #FFFFFF;
-}
-
-.heading--black {
-  color: #000000;
-}
-
-.heading--gray {
-  color: #49595C;
-}
-
-.heading--light {
-  color: #dbdede;
-}
-
-.heading--lighter {
-  color: #f6f7f7;
-}
-
-.heading--dark {
-  color: #1d2425;
-}
-
-.heading--darker {
-  color: #0f1212;
-}
-
 .title {
   font-weight: 700;
 }
@@ -1024,33 +983,6 @@ h6,
   font-weight: 400;
 }
 
-/*	----------------------------
-	LINKS
-----------------------------  */
-a {
-  transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
-  color: #4381C1;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #709fd0;
-}
-
-/*	----------------------------
-	ARTICLE
-----------------------------  */
-.article .heading {
-  margin-bottom: 1rem;
-}
-
-.article p {
-  margin-bottom: 1.5rem;
-}
-
-/*	----------------------------
-	ALIGNMENTS
-----------------------------  */
 .align-left {
   text-align: left;
 }
@@ -1081,6 +1013,24 @@ a:hover {
 
 .align-match-parent {
   text-align: match-parent;
+}
+
+a {
+  transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
+  color: #4381C1;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #709fd0;
+}
+
+.article .heading {
+  margin-bottom: 1rem;
+}
+
+.article p {
+  margin-bottom: 1.5rem;
 }
 
 /*  ------------------------------------------------------
@@ -2136,17 +2086,8 @@ a:hover {
   transition: all 100ms ease-out;
 }
 
-.nav .nav__list--is-active .nav__item:not(.nav__item--is-active) {
+.nav .nav__list--active .nav__item:not(.nav__item--active) {
   opacity: 0.3;
-}
-
-.nav .nav__list--is-horizontal {
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
 }
 
 .nav .nav__list:hover .nav__item {
@@ -2164,7 +2105,7 @@ a:hover {
   text-align: center;
 }
 
-.nav .nav__list .nav__item--is-active {
+.nav .nav__list .nav__item--active {
   opacity: 1;
 }
 
@@ -2372,7 +2313,7 @@ a:hover {
   width: 100%;
   background-color: white;
   border: solid 1px #dbdede;
-  border-radius: 4px;
+  border-radius: 6px;
   padding: 0.75rem 1rem;
   outline: none;
   color: #0f1212;
@@ -2497,7 +2438,7 @@ a:hover {
   background-color: white;
   position: relative;
   border: solid 1px #dbdede;
-  border-radius: 4px;
+  border-radius: 6px;
   width: 100%;
 }
 
@@ -2587,22 +2528,22 @@ a:hover {
   border-style: solid;
   border-width: 1px;
   border-color: #dbdede;
-  border-radius: 4px;
+  border-radius: 6px;
   padding: 0.75rem 1.25rem;
   transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
   cursor: pointer;
 }
 
-.button:hover, .button--is-hovered {
+.button:hover, .button--hovered {
   border-color: #c8cdce;
 }
 
-.button:focus, .button--is-focused {
+.button:focus, .button--focused {
   border-color: #c8cdce;
   outline: none;
 }
 
-.button:active, .button--is-active {
+.button:active, .button--active {
   border-color: #929b9d;
   outline: none;
 }
@@ -3098,7 +3039,7 @@ a:hover {
   flex-direction: column;
   position: relative;
   background-color: white;
-  border-radius: 4px;
+  border-radius: 6px;
   word-wrap: break-word;
   overflow: hidden;
 }
@@ -3106,7 +3047,7 @@ a:hover {
 .card .card__image {
   position: relative;
   height: 175px;
-  border-radius: 4px;
+  border-radius: 6px;
   overflow: hidden;
 }
 
@@ -3984,274 +3925,342 @@ a:hover {
 /*  --------------------------------------------
     SPACINGS
 --------------------------------------------  */
-.margin {
+.margin,
+.mg {
   margin: 1rem;
 }
 
-.margin-is-x-small {
+.padding,
+.pd {
+  padding: 1rem;
+}
+
+.margin-x-small,
+.mg-x-small {
   margin: 0.5rem;
 }
 
-.padding {
-  padding: 1rem;
-}
-
-.padding-is-x-small {
+.padding-x-small,
+.pd-x-small {
   padding: 0.5rem;
 }
 
-.margin {
+.margin,
+.mg {
   margin: 1rem;
 }
 
-.margin-is-small {
+.padding,
+.pd {
+  padding: 1rem;
+}
+
+.margin-small,
+.mg-small {
   margin: 0.75rem;
 }
 
-.padding {
-  padding: 1rem;
-}
-
-.padding-is-small {
+.padding-small,
+.pd-small {
   padding: 0.75rem;
 }
 
-.margin {
+.margin,
+.mg {
   margin: 1rem;
 }
 
-.margin-is-base {
-  margin: 1rem;
-}
-
-.padding {
+.padding,
+.pd {
   padding: 1rem;
 }
 
-.padding-is-base {
-  padding: 1rem;
-}
-
-.margin {
+.margin-base,
+.mg-base {
   margin: 1rem;
 }
 
-.margin-is-large {
+.padding-base,
+.pd-base {
+  padding: 1rem;
+}
+
+.margin,
+.mg {
+  margin: 1rem;
+}
+
+.padding,
+.pd {
+  padding: 1rem;
+}
+
+.margin-large,
+.mg-large {
   margin: 1.5rem;
 }
 
-.padding {
-  padding: 1rem;
-}
-
-.padding-is-large {
+.padding-large,
+.pd-large {
   padding: 1.5rem;
 }
 
-.margin {
+.margin,
+.mg {
   margin: 1rem;
 }
 
-.margin-is-x-large {
-  margin: 2rem;
-}
-
-.padding {
+.padding,
+.pd {
   padding: 1rem;
 }
 
-.padding-is-x-large {
+.margin-x-large,
+.mg-x-large {
+  margin: 2rem;
+}
+
+.padding-x-large,
+.pd-x-large {
   padding: 2rem;
 }
 
+.pd-top,
 .padding-top {
   padding-top: 1rem;
 }
 
+.mg-top,
 .margin-top {
   margin-top: 1rem;
 }
 
-.padding-top-is-x-small {
-  padding-top: 0.5rem;
-}
-
-.margin-top-is-x-small {
+.mg-top-x-small,
+.margin-top-x-small {
   margin-top: 0.5rem;
 }
 
-.padding-top-is-small {
-  padding-top: 0.75rem;
+.pd-top-x-small,
+.padding-top-x-small {
+  padding-top: 0.5rem;
 }
 
-.margin-top-is-small {
+.mg-top-small,
+.margin-top-small {
   margin-top: 0.75rem;
 }
 
-.padding-top-is-base {
-  padding-top: 1rem;
+.pd-top-small,
+.padding-top-small {
+  padding-top: 0.75rem;
 }
 
-.margin-top-is-base {
+.mg-top-base,
+.margin-top-base {
   margin-top: 1rem;
 }
 
-.padding-top-is-large {
-  padding-top: 1.5rem;
+.pd-top-base,
+.padding-top-base {
+  padding-top: 1rem;
 }
 
-.margin-top-is-large {
+.mg-top-large,
+.margin-top-large {
   margin-top: 1.5rem;
 }
 
-.padding-top-is-x-large {
-  padding-top: 2rem;
+.pd-top-large,
+.padding-top-large {
+  padding-top: 1.5rem;
 }
 
-.margin-top-is-x-large {
+.mg-top-x-large,
+.margin-top-x-large {
   margin-top: 2rem;
 }
 
+.pd-top-x-large,
+.padding-top-x-large {
+  padding-top: 2rem;
+}
+
+.pd-left,
 .padding-left {
   padding-left: 1rem;
 }
 
+.mg-left,
 .margin-left {
   margin-left: 1rem;
 }
 
-.padding-left-is-x-small {
-  padding-left: 0.5rem;
-}
-
-.margin-left-is-x-small {
+.mg-left-x-small,
+.margin-left-x-small {
   margin-left: 0.5rem;
 }
 
-.padding-left-is-small {
-  padding-left: 0.75rem;
+.pd-left-x-small,
+.padding-left-x-small {
+  padding-left: 0.5rem;
 }
 
-.margin-left-is-small {
+.mg-left-small,
+.margin-left-small {
   margin-left: 0.75rem;
 }
 
-.padding-left-is-base {
-  padding-left: 1rem;
+.pd-left-small,
+.padding-left-small {
+  padding-left: 0.75rem;
 }
 
-.margin-left-is-base {
+.mg-left-base,
+.margin-left-base {
   margin-left: 1rem;
 }
 
-.padding-left-is-large {
-  padding-left: 1.5rem;
+.pd-left-base,
+.padding-left-base {
+  padding-left: 1rem;
 }
 
-.margin-left-is-large {
+.mg-left-large,
+.margin-left-large {
   margin-left: 1.5rem;
 }
 
-.padding-left-is-x-large {
-  padding-left: 2rem;
+.pd-left-large,
+.padding-left-large {
+  padding-left: 1.5rem;
 }
 
-.margin-left-is-x-large {
+.mg-left-x-large,
+.margin-left-x-large {
   margin-left: 2rem;
 }
 
+.pd-left-x-large,
+.padding-left-x-large {
+  padding-left: 2rem;
+}
+
+.pd-bottom,
 .padding-bottom {
   padding-bottom: 1rem;
 }
 
+.mg-bottom,
 .margin-bottom {
   margin-bottom: 1rem;
 }
 
-.padding-bottom-is-x-small {
-  padding-bottom: 0.5rem;
-}
-
-.margin-bottom-is-x-small {
+.mg-bottom-x-small,
+.margin-bottom-x-small {
   margin-bottom: 0.5rem;
 }
 
-.padding-bottom-is-small {
-  padding-bottom: 0.75rem;
+.pd-bottom-x-small,
+.padding-bottom-x-small {
+  padding-bottom: 0.5rem;
 }
 
-.margin-bottom-is-small {
+.mg-bottom-small,
+.margin-bottom-small {
   margin-bottom: 0.75rem;
 }
 
-.padding-bottom-is-base {
-  padding-bottom: 1rem;
+.pd-bottom-small,
+.padding-bottom-small {
+  padding-bottom: 0.75rem;
 }
 
-.margin-bottom-is-base {
+.mg-bottom-base,
+.margin-bottom-base {
   margin-bottom: 1rem;
 }
 
-.padding-bottom-is-large {
-  padding-bottom: 1.5rem;
+.pd-bottom-base,
+.padding-bottom-base {
+  padding-bottom: 1rem;
 }
 
-.margin-bottom-is-large {
+.mg-bottom-large,
+.margin-bottom-large {
   margin-bottom: 1.5rem;
 }
 
-.padding-bottom-is-x-large {
-  padding-bottom: 2rem;
+.pd-bottom-large,
+.padding-bottom-large {
+  padding-bottom: 1.5rem;
 }
 
-.margin-bottom-is-x-large {
+.mg-bottom-x-large,
+.margin-bottom-x-large {
   margin-bottom: 2rem;
 }
 
+.pd-bottom-x-large,
+.padding-bottom-x-large {
+  padding-bottom: 2rem;
+}
+
+.pd-right,
 .padding-right {
   padding-right: 1rem;
 }
 
+.mg-right,
 .margin-right {
   margin-right: 1rem;
 }
 
-.padding-right-is-x-small {
-  padding-right: 0.5rem;
-}
-
-.margin-right-is-x-small {
+.mg-right-x-small,
+.margin-right-x-small {
   margin-right: 0.5rem;
 }
 
-.padding-right-is-small {
-  padding-right: 0.75rem;
+.pd-right-x-small,
+.padding-right-x-small {
+  padding-right: 0.5rem;
 }
 
-.margin-right-is-small {
+.mg-right-small,
+.margin-right-small {
   margin-right: 0.75rem;
 }
 
-.padding-right-is-base {
-  padding-right: 1rem;
+.pd-right-small,
+.padding-right-small {
+  padding-right: 0.75rem;
 }
 
-.margin-right-is-base {
+.mg-right-base,
+.margin-right-base {
   margin-right: 1rem;
 }
 
-.padding-right-is-large {
-  padding-right: 1.5rem;
+.pd-right-base,
+.padding-right-base {
+  padding-right: 1rem;
 }
 
-.margin-right-is-large {
+.mg-right-large,
+.margin-right-large {
   margin-right: 1.5rem;
 }
 
-.padding-right-is-x-large {
-  padding-right: 2rem;
+.pd-right-large,
+.padding-right-large {
+  padding-right: 1.5rem;
 }
 
-.margin-right-is-x-large {
+.mg-right-x-large,
+.margin-right-x-large {
   margin-right: 2rem;
+}
+
+.pd-right-x-large,
+.padding-right-x-large {
+  padding-right: 2rem;
 }
