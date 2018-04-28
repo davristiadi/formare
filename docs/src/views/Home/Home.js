@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const Home = props => {
 	return (
@@ -25,8 +25,8 @@ const Home = props => {
 					</div>
 				</div>
 			</header>
-			<main id="main-content" className="container">
-				<section id="heading">
+			<main id="main-content" className="container mg-top-x-large mg-bottom-x-large">
+				<section id="heading" className="mg-bottom-x-large">
 					<article className="article">
 						<div className="heading">
 							<h3 className="title">Heading</h3>
@@ -40,13 +40,16 @@ const Home = props => {
 						<h6>Heading 6</h6>
 					</article>
 				</section>
-				<section id="buttons">
+				<section id="buttons" className="mg-bottom-large">
 					<article className="article">
 						<div className="heading">
 							<h3 className="title">Buttons</h3>
 							<p className="subtitle">Aliqua velit anim consequat nostrud mollit est duis irure et ex.</p>
 						</div>
-						<div className="margin-bottom">
+						<div className="mg-bottom-large">
+							<div className="heading">
+								<h5 className="title">Button States</h5>
+							</div>
 							<button className="button margin-right">Button</button>
 							<button className="button button--primary margin-right">Primary</button>
 							<button className="button button--secondary margin-right">Secondary</button>
@@ -56,15 +59,51 @@ const Home = props => {
 							<button className="button button--dark margin-right">Dark</button>
 							<button className="button button--light">Light</button>
 						</div>
+						<div className="mg-bottom-large">
+							<div className="heading">
+								<h5 className="title">Outlined</h5>
+							</div>
+							<button className="button button--outlined margin-right">Button</button>
+							<button className="button button--outlined button--primary margin-right">Primary</button>
+							<button className="button button--outlined button--secondary margin-right">Secondary</button>
+							<button className="button button--outlined button--success margin-right">Success</button>
+							<button className="button button--outlined button--danger margin-right">Danger</button>
+							<button className="button button--outlined button--warning margin-right">Warning</button>
+							<button className="button button--outlined button--dark margin-right">Dark</button>
+							<button className="button button--outlined button--light">Light</button>
+						</div>
+						<div className="mg-bottom-large">
+							<div className="heading">
+								<h5 className="title">Raised</h5>
+							</div>
+							<button className="button button--raised margin-right">Button</button>
+							<button className="button button--raised button--primary margin-right">Primary</button>
+							<button className="button button--raised button--secondary margin-right">Secondary</button>
+							<button className="button button--raised button--success margin-right">Success</button>
+							<button className="button button--raised button--danger margin-right">Danger</button>
+							<button className="button button--raised button--warning margin-right">Warning</button>
+							<button className="button button--raised button--dark margin-right">Dark</button>
+							<button className="button button--raised button--light">Light</button>
+						</div>
+						<div className="mg-bottom-large">
+							<div className="heading">
+								<h5 className="title">Rounded</h5>
+							</div>
+							<button className="button button--pill button--primary mg-right">Rounded Button</button>
+							<button className="button button--pill button--secondary mg-right">Rounded Button</button>
+							<button className="button button--pill button--success mg-right">Rounded Button</button>
+						</div>
 						<div>
+							<div className="heading">
+								<h5 className="title">Sizes</h5>
+							</div>
 							<button className="button button--small margin-right">Small</button>
 							<button className="button margin-right">Base</button>
 							<button className="button button--large">Large</button>
-
 						</div>
 					</article>
 				</section>
-				<section id="card">
+				<section id="card" className="mg-bottom-large">
 					<article className="article">
 						<div className="heading">
 							<h3 className="title">Card</h3>
@@ -91,12 +130,13 @@ const Home = props => {
 						</div>
 					</article>
 				</section>
-				<section id="form">
+				<section id="form" className="mg-bottom-large">
 					<article className="article">
 						<div className="heading">
 							<h3 className="title">Forms</h3>
 							<p>Dolor labore irure non irure in consequat est sunt fugiat aliquip ullamco.</p>
 						</div>
+						<input className="input" type="text" placeholder="This in an example input" />
 					</article>
 				</section>
 			</main>

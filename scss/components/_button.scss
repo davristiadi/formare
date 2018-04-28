@@ -1,58 +1,67 @@
-/*	----------------------------------------------------------------------------
-	BUTTON
-----------------------------------------------------------------------------  */
-$button-themes					: $theme-colors;
-$button-font-weight				: font-weight(medium);
-$button-background-color		: $white;
+$button-themes: $theme-colors;
+$button-font-weight: font-weight(medium);
+$button-color: inherit;
+$button-background-color: $white;
+$button-border-style: solid;
+$button-border-width: 1px;
+$button-border-color: gray(300);
+$button-transition: $transition;
 
-$button-border-style			: solid;
-$button-border-width			: 1px;
-$button-border-color			: gray(200);
-$button-border-color-hover		: gray(300);
-$button-border-color-focus		: gray(300);
-$button-border-color-active		: gray(600);
+$button-hovered-color: primary-color(600);
+$button-hovered-border-color: primary-color(400);
 
-$button-padding-y				: 0.75rem;
-$button-padding-x				: 1.25rem;
-$button-padding					: $button-padding-y $button-padding-x;
-$button-paddings				: (
-	x-small						: ($button-padding-y * .5) ($button-padding-x * .5),
-	small						: ($button-padding-y * .75) ($button-padding-x * .75),
-	base						: ($button-padding-y * 1) ($button-padding-x * 1),
-	large						: ($button-padding-y * 1.5) ($button-padding-x * 1.5),
-	x-large						: ($button-padding-y * 2) ($button-padding-x * 2)
+$button-focused-color: color-yiq(theme-color(primary));
+$button-focused-border-color: primary-color(600);
+
+$button-active-color: primary-color(600);
+$button-active-border-color: primary-color(1000);
+
+$button-padding-y: 0.75rem;
+$button-padding-x: 1.25rem;
+$button-padding: $button-padding-y $button-padding-x;
+$button-paddings: (
+	x-small: ($button-padding-y * .5) ($button-padding-x * .5),
+	small: ($button-padding-y * .75) ($button-padding-x * .75),
+	base: ($button-padding-y * 1) ($button-padding-x * 1),
+	large: ($button-padding-y * 1.5) ($button-padding-x * 1.25),
+	x-large: ($button-padding-y * 2) ($button-padding-x * 2)
 ) !default;
 
 .button {
 	position: relative;
 	font-weight: $button-font-weight;
-	text-align: center;
-	white-space: nowrap;
-	vertical-align: middle;
+	padding: $button-padding;
 	background-color: $button-background-color;
 	border-style: $button-border-style;
 	border-width: $button-border-width;
 	border-color: $button-border-color;
 	border-radius: $border-radius;
-	padding: $button-padding;
-	transition: $transition;
+	transition: $button-transition;
+	color: $button-color;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
 	cursor: pointer;
 
 	//	Pseudo states	
 	&:hover,
 	&--hovered {
-		border-color: $button-border-color-hover;
+		color: $button-hovered-color;
+		border-color: $button-hovered-border-color;
+		outline: none;
 	}
 	
 	&:focus,
 	&--focused {
-		border-color: $button-border-color-focus;
+		color: $button-focused-color;
+		border-color: $button-focused-border-color;
 		outline: none;
 	}
 	
 	&:active,
 	&--active {
-		border-color: $button-border-color-active;
+		color: $button-active-color;
+		border-color: $button-active-border-color;
 		outline: none;
 	}
 
@@ -62,39 +71,65 @@ $button-paddings				: (
 			background-color: $color;
 			color: color-yiq($color);
 			border-color: $color;
-			border-bottom-color: shade($color, 10%);
-			border-bottom-width: 3px;
+
+			&.button--raised {
+				&:hover,
+				&.button--hovered {
+					border-bottom-width: 3px;
+					border-bottom-color: shade($color, 10%);
+					margin-top: -2px;
+				}
+
+				&:active,
+				&.button--active {
+					border-bottom-width: 1px;
+					border-bottom-color: $color;
+					margin-top: 0;
+				}
+			}
+
+			&:hover,
+			&.button--hovered {
+				color: color-yiq($color);
+				background-color: tint($color, 10%);
+				border-color: tint($color, 10%);
+			}
+
+			&:focus,
+			&.button--focused {
+				color: color-yiq($color);
+				background-color: shade($color, 10%);
+			}
+
+			&:active,
+			&.button--active {
+				color: color-yiq($color);
+				background-color: shade($color, 20%);
+			}
 
 			&.button--outlined {
 				color: $color;
 				background-color: transparent;
 
-				&:hover {
+				&:hover,
+				&.button--hovered {
 					background-color: $color;
 					color: color-yiq($color);
 				}
-			}
-			
-			&:hover,
-			&--hovered {
-				background-color: tint($color, 20%);
-				border-color: tint($color, 20%);
-				border-bottom-color: shade($color, 10%);
-			}
 
-			&:focus,
-			&--focused {
-				border-color: tint($color, 10%);
-				border-bottom-color: shade($color, 10%);
-			}
+				&:focus,
+				&.button--focused {
+					color: color-yiq($color);
+					background-color: shade($color, 10%);
+					outline: none;
+				}
 
-			&:active,
-			&--active {
-				border-color: $color;
-				animation: bottomOut 300ms;
-				border-color: tint($color, 20%);
-				border-bottom-color: shade($color, 10%);
-				outline: none;
+				&:active,
+				&.button--active {
+					color: color-yiq($color);
+					background-color: shade($color, 20%);
+					outline: none;
+				}
 			}
 		}
 	}
@@ -109,7 +144,7 @@ $button-paddings				: (
 
 	//	Other modifiers
 	&--pill {
-		border-radius: $border-radius-is-pill;
+		border-radius: $border-radius-pill;
 	}
 
 	&--full-width {

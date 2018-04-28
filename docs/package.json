@@ -11,12 +11,12 @@
     "react-scripts": "1.1.4"
   },
   "scripts": {
-    "start:js": "react-scripts start",
-    "build:js": "react-scripts build",
-    "build:css": "node-sass --output-style expanded ./src/formare.scss ./src/css/formare.css",
-    "watch:css": "npm run build:css -- --watch",
-    "start": "npm run watch:css | npm run start:js",
-    "build": "npm run build:js && npm run build:css",
+    "css:watch": "npm run css:build -- --watch",
+    "css:build": "node-sass --output-style expanded ./src/formare-docs.scss ./src/css/formare-docs.css",
+    "js:watch": "react-scripts start",
+    "js:build": "react-scripts build",
+    "start": "npm run css:watch | npm run js:watch",
+    "build": "npm run js:build && npm run css:build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
