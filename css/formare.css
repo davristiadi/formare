@@ -1,6 +1,6 @@
 /*	-----------------------------------------------------------------------------
 
-	formare.io v0.1.0 | MIT License | github.com/davidkurnia94/formare
+	formare.io v0.1.0 | MIT License | github.com/dkk94/formare
 
 -----------------------------------------------------------------------------  */
 /*  ------------------------------------------------------
@@ -2550,13 +2550,13 @@ a:hover {
   border-color: #4381C1;
 }
 
-.button--primary--raised:hover, .button--primary--raised.button--hovered {
+.button--primary.button--raised:hover, .button--primary.button--raised.button--hovered {
   border-bottom-width: 3px;
   border-bottom-color: #3c74ae;
   margin-top: -2px;
 }
 
-.button--primary--raised:focus, .button--primary--raised.button--focused {
+.button--primary.button--raised:active, .button--primary.button--raised.button--active {
   border-bottom-width: 1px;
   border-bottom-color: #4381C1;
   margin-top: 0;
@@ -2606,13 +2606,13 @@ a:hover {
   border-color: #D3492C;
 }
 
-.button--secondary--raised:hover, .button--secondary--raised.button--hovered {
+.button--secondary.button--raised:hover, .button--secondary.button--raised.button--hovered {
   border-bottom-width: 3px;
   border-bottom-color: #be4228;
   margin-top: -2px;
 }
 
-.button--secondary--raised:focus, .button--secondary--raised.button--focused {
+.button--secondary.button--raised:active, .button--secondary.button--raised.button--active {
   border-bottom-width: 1px;
   border-bottom-color: #D3492C;
   margin-top: 0;
@@ -2662,13 +2662,13 @@ a:hover {
   border-color: #48A900;
 }
 
-.button--success--raised:hover, .button--success--raised.button--hovered {
+.button--success.button--raised:hover, .button--success.button--raised.button--hovered {
   border-bottom-width: 3px;
   border-bottom-color: #419800;
   margin-top: -2px;
 }
 
-.button--success--raised:focus, .button--success--raised.button--focused {
+.button--success.button--raised:active, .button--success.button--raised.button--active {
   border-bottom-width: 1px;
   border-bottom-color: #48A900;
   margin-top: 0;
@@ -2718,13 +2718,13 @@ a:hover {
   border-color: #EBC500;
 }
 
-.button--warning--raised:hover, .button--warning--raised.button--hovered {
+.button--warning.button--raised:hover, .button--warning.button--raised.button--hovered {
   border-bottom-width: 3px;
   border-bottom-color: #d4b100;
   margin-top: -2px;
 }
 
-.button--warning--raised:focus, .button--warning--raised.button--focused {
+.button--warning.button--raised:active, .button--warning.button--raised.button--active {
   border-bottom-width: 1px;
   border-bottom-color: #EBC500;
   margin-top: 0;
@@ -2774,13 +2774,13 @@ a:hover {
   border-color: #E85915;
 }
 
-.button--danger--raised:hover, .button--danger--raised.button--hovered {
+.button--danger.button--raised:hover, .button--danger.button--raised.button--hovered {
   border-bottom-width: 3px;
   border-bottom-color: #d15013;
   margin-top: -2px;
 }
 
-.button--danger--raised:focus, .button--danger--raised.button--focused {
+.button--danger.button--raised:active, .button--danger.button--raised.button--active {
   border-bottom-width: 1px;
   border-bottom-color: #E85915;
   margin-top: 0;
@@ -2830,13 +2830,13 @@ a:hover {
   border-color: #FFFFFF;
 }
 
-.button--white--raised:hover, .button--white--raised.button--hovered {
+.button--white.button--raised:hover, .button--white.button--raised.button--hovered {
   border-bottom-width: 3px;
   border-bottom-color: #e6e6e6;
   margin-top: -2px;
 }
 
-.button--white--raised:focus, .button--white--raised.button--focused {
+.button--white.button--raised:active, .button--white.button--raised.button--active {
   border-bottom-width: 1px;
   border-bottom-color: #FFFFFF;
   margin-top: 0;
@@ -2886,13 +2886,13 @@ a:hover {
   border-color: #000000;
 }
 
-.button--black--raised:hover, .button--black--raised.button--hovered {
+.button--black.button--raised:hover, .button--black.button--raised.button--hovered {
   border-bottom-width: 3px;
   border-bottom-color: black;
   margin-top: -2px;
 }
 
-.button--black--raised:focus, .button--black--raised.button--focused {
+.button--black.button--raised:active, .button--black.button--raised.button--active {
   border-bottom-width: 1px;
   border-bottom-color: #000000;
   margin-top: 0;
@@ -2942,13 +2942,13 @@ a:hover {
   border-color: #49595C;
 }
 
-.button--gray--raised:hover, .button--gray--raised.button--hovered {
+.button--gray.button--raised:hover, .button--gray.button--raised.button--hovered {
   border-bottom-width: 3px;
   border-bottom-color: #425053;
   margin-top: -2px;
 }
 
-.button--gray--raised:focus, .button--gray--raised.button--focused {
+.button--gray.button--raised:active, .button--gray.button--raised.button--active {
   border-bottom-width: 1px;
   border-bottom-color: #49595C;
   margin-top: 0;
@@ -2998,13 +2998,13 @@ a:hover {
   border-color: #dbdede;
 }
 
-.button--light--raised:hover, .button--light--raised.button--hovered {
+.button--light.button--raised:hover, .button--light.button--raised.button--hovered {
   border-bottom-width: 3px;
   border-bottom-color: #c5c8c8;
   margin-top: -2px;
 }
 
-.button--light--raised:focus, .button--light--raised.button--focused {
+.button--light.button--raised:active, .button--light.button--raised.button--active {
   border-bottom-width: 1px;
   border-bottom-color: #dbdede;
   margin-top: 0;
@@ -3054,13 +3054,13 @@ a:hover {
   border-color: #f6f7f7;
 }
 
-.button--lighter--raised:hover, .button--lighter--raised.button--hovered {
+.button--lighter.button--raised:hover, .button--lighter.button--raised.button--hovered {
   border-bottom-width: 3px;
   border-bottom-color: #dddede;
   margin-top: -2px;
 }
 
-.button--lighter--raised:focus, .button--lighter--raised.button--focused {
+.button--lighter.button--raised:active, .button--lighter.button--raised.button--active {
   border-bottom-width: 1px;
   border-bottom-color: #f6f7f7;
   margin-top: 0;
@@ -3110,13 +3110,13 @@ a:hover {
   border-color: #1d2425;
 }
 
-.button--dark--raised:hover, .button--dark--raised.button--hovered {
+.button--dark.button--raised:hover, .button--dark.button--raised.button--hovered {
   border-bottom-width: 3px;
   border-bottom-color: #1a2021;
   margin-top: -2px;
 }
 
-.button--dark--raised:focus, .button--dark--raised.button--focused {
+.button--dark.button--raised:active, .button--dark.button--raised.button--active {
   border-bottom-width: 1px;
   border-bottom-color: #1d2425;
   margin-top: 0;
@@ -3166,13 +3166,13 @@ a:hover {
   border-color: #0f1212;
 }
 
-.button--darker--raised:hover, .button--darker--raised.button--hovered {
+.button--darker.button--raised:hover, .button--darker.button--raised.button--hovered {
   border-bottom-width: 3px;
   border-bottom-color: #0e1010;
   margin-top: -2px;
 }
 
-.button--darker--raised:focus, .button--darker--raised.button--focused {
+.button--darker.button--raised:active, .button--darker.button--raised.button--active {
   border-bottom-width: 1px;
   border-bottom-color: #0f1212;
   margin-top: 0;
