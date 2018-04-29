@@ -1,6 +1,7 @@
 /*  ------------------------------------------------------
-	Color System	
+	COLOR SYSTEM
 ------------------------------------------------------  */
+//	Color Palletes
 $azure					: #4381C1 !default;
 $valencia				: #D3492C !default;
 $river-bed				: #49595C !default;
@@ -12,6 +13,7 @@ $cello					: #1C415B !default;
 $deep-cerulean			: #007EA7 !default;
 $pelorous				: #45A1BF !default;
 
+//	Color Patterns & States
 $primary-color			: $azure !default;
 $secondary-color		: $valencia !default;
 $success-color			: $malachite !default;
@@ -19,7 +21,7 @@ $warning-color			: $corn !default;
 $danger-color			: $tango !default;
 $gray-color				: $river-bed !default;
 
-//  Shades
+//	Generate color shades
 $color-shades: (
 	primary: (
 		100: tint($primary-color, 40%),
@@ -111,8 +113,7 @@ $color-shades: (
 	)
 ) !default;
 
-
-//  Generic Colors
+//	Generic/Global colors
 $white				: #FFFFFF;
 $black				: #000000;
 $gray				: gray(1000);
@@ -125,7 +126,7 @@ $text-color			: $dark;
 $background-color	: $white;
 
 
-//  Theme Colors
+//  Theme colors
 $theme-colors: (
 	primary		: $primary-color,
 	secondary	: $secondary-color,
@@ -142,7 +143,7 @@ $theme-colors: (
 ) !default;
 
 
-//	Color Contrast
+//	Color Contrastor
 //  The yiq lightness value that determines when the lightness of color changes from "dark" to "light". 
 //  Acceptable values are between 0 and 255.
 $yiq-contrasted-threshold: 150 !default;
