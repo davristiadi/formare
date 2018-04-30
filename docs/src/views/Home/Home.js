@@ -109,16 +109,48 @@ const Home = props => {
 							<h3 className="title">Card</h3>
 							<p className="subtitle">Culpa culpa deserunt magna nostrud sunt adipisicing cillum commodo dolore cupidatat nostrud veniam. Commodo id nulla consectetur aliqua aute. Fugiat irure consectetur cillum pariatur laboris est.</p>
 						</div>
-						<div className="card card--primary">
-							<div className="card__header">
-								<span className="fs-large fw-bold">Card Title</span>
+						<div className="grids">
+							<div className="grid grid-6 mg-bottom">
+								<div className="card">
+									<div className="card__header">
+										<span className="fs-large fw-bold">Card Title</span>
+									</div>
+									<div className="card__body">
+										<span>Id anim officia commodo voluptate magna aliqua. Laborum pariatur ullamco occaecat labore aliqua et quis. Eiusmod reprehenderit pariatur laborum aute Lorem nisi et. Consectetur labore est consectetur officia. Laborum minim officia irure aliquip eu commodo aute. Quis culpa reprehenderit excepteur irure in. Est minim laborum consectetur nisi aliqua in sunt do veniam.</span>
+									</div>
+									<div className="card__footer flex justify-content--end">
+										<button className="button button--danger mg-right">Cancel</button>
+										<button className="button button--success">Submit</button>
+									</div>
+								</div>
 							</div>
-							<div className="card__body">
-								<span>Id anim officia commodo voluptate magna aliqua. Laborum pariatur ullamco occaecat labore aliqua et quis. Eiusmod reprehenderit pariatur laborum aute Lorem nisi et. Consectetur labore est consectetur officia. Laborum minim officia irure aliquip eu commodo aute. Quis culpa reprehenderit excepteur irure in. Est minim laborum consectetur nisi aliqua in sunt do veniam.</span>
+							<div className="grid grid-6 mg-bottom">
+								<div className="card card--primary">
+									<div className="card__header">
+										<span className="fs-large fw-bold">Card Title</span>
+									</div>
+									<div className="card__body">
+										<span>Id anim officia commodo voluptate magna aliqua. Laborum pariatur ullamco occaecat labore aliqua et quis. Eiusmod reprehenderit pariatur laborum aute Lorem nisi et. Consectetur labore est consectetur officia. Laborum minim officia irure aliquip eu commodo aute. Quis culpa reprehenderit excepteur irure in. Est minim laborum consectetur nisi aliqua in sunt do veniam.</span>
+									</div>
+									<div className="card__footer flex justify-content--end">
+										<button className="button button--outlined mg-right">Cancel</button>
+										<button className="button button--outlined">Submit</button>
+									</div>
+								</div>
 							</div>
-							<div className="card__footer flex justify-content--end">
-								<button className="button button--outlined mg-right">Cancel</button>
-								<button className="button button--outlined">Submit</button>
+							<div className="grid">
+								<div className="card card--lightest">
+									<div className="card__header">
+										<span className="fs-large fw-bold">Card Title</span>
+									</div>
+									<div className="card__body">
+										<span>Id anim officia commodo voluptate magna aliqua. Laborum pariatur ullamco occaecat labore aliqua et quis. Eiusmod reprehenderit pariatur laborum aute Lorem nisi et. Consectetur labore est consectetur officia. Laborum minim officia irure aliquip eu commodo aute. Quis culpa reprehenderit excepteur irure in. Est minim laborum consectetur nisi aliqua in sunt do veniam.</span>
+									</div>
+									<div className="card__footer flex justify-content--end">
+										<button className="button button--danger button--raised mg-right">Cancel</button>
+										<button className="button button--success button--raised">Submit</button>
+									</div>
+								</div>
 							</div>
 						</div>
 					</article>
@@ -126,7 +158,7 @@ const Home = props => {
 				<section id="form" className="mg-bottom-large">
 					<article className="article">
 						<div className="heading">
-							<h3 className="title">Inputs</h3>
+							<h3 className="title">Form</h3>
 							<p>Dolor labore irure non irure in consequat est sunt fugiat aliquip ullamco.</p>
 						</div>
 						
@@ -135,7 +167,22 @@ const Home = props => {
 								<form className="form">
 									<div className="form__field">
 										<label className="form__label">Name</label>
-										<input className="input" placeholder="e.g John Doe" />
+										<div className="input-set">
+											<span className="input-set__icon">
+												<i className="fas fa-user"></i>
+											</span>
+											<input className="input" placeholder="e.g John Doe" />
+										</div>
+									</div>
+									<div className="form__field">
+										<label className="form__label">Password</label>
+										<div className="input-set">
+											<span className="input-set__icon">
+												<i className="fas fa-key"></i>
+											</span>
+											<input type="password" className="input" placeholder="Insert your password" />
+										</div>
+										<small className="form__help fw-medium color-danger">Password must have at least 8 characters</small>
 									</div>
 									<div className="form__field">
 										<label className="form__label">Location</label>

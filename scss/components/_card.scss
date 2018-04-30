@@ -1,8 +1,8 @@
 $card-themes			: $theme-colors;
 $card-padding			: spacing(base);
 $card-background		: gray(100);
-$card-border-radius		: border-radius(base);
 $card-border			: solid 1px gray(200);
+$card-border-radius		: border-radius(base);
 $card-inner-spacing		: spacing(base);
 $card-inner-border		: solid 1px gray(200);
 
@@ -51,6 +51,7 @@ $card-inner-border		: solid 1px gray(200);
 			transition: $transition;
 			background-color: $color;
 			color: color-yiq($color);
+			border: solid 1px $color;
 			overflow: hidden;
 
 			.card__header,

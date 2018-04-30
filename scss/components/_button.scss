@@ -16,8 +16,8 @@ $button-focused-border-color: primary-color(600);
 $button-active-color: primary-color(1000);
 $button-active-border-color: primary-color(1000);
 
-$button-padding-y: 0.75rem;
-$button-padding-x: 1.25rem;
+$button-padding-y: spacing(small);
+$button-padding-x: spacing(large);
 $button-padding: $button-padding-y $button-padding-x;
 $button-paddings: (
 	x-small: ($button-padding-y * .5) ($button-padding-x * .5),

@@ -9,8 +9,8 @@ $input-hovered-color		: $dark;
 $input-hovered-border		: solid 1px gray(400);
 $input-focused-color		: primary-color(1000);
 $input-focused-border		: solid 1px primary-color(600);
-$input-padding-y         	: 0.75rem;
-$input-padding-x         	: 1rem;
+$input-padding-y         	: spacing(small);
+$input-padding-x         	: spacing(base);
 $input-padding           	: $input-padding-y $input-padding-x;
 $input-background         	: gray(0);
 $input-transition			: $transition;
@@ -66,6 +66,8 @@ $input-transition			: $transition;
 }
 
 .select {
+	position: relative;
+	
 	> select {
 		-webkit-appearance: none;
 		-moz-appearance: none;
