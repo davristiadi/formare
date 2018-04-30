@@ -50,40 +50,40 @@ const Home = props => {
 							<div className="heading">
 								<h5 className="title">Button States</h5>
 							</div>
-							<button className="button margin-right">Button</button>
-							<button className="button button--primary margin-right">Primary</button>
-							<button className="button button--secondary margin-right">Secondary</button>
-							<button className="button button--success margin-right">Success</button>
-							<button className="button button--danger margin-right">Danger</button>
-							<button className="button button--warning margin-right">Warning</button>
-							<button className="button button--dark margin-right">Dark</button>
-							<button className="button button--light">Light</button>
+							<button className="button mg-right mg-bottom">Button</button>
+							<button className="button button--primary mg-right mg-bottom">Primary</button>
+							<button className="button button--secondary mg-right mg-bottom">Secondary</button>
+							<button className="button button--success mg-right mg-bottom">Success</button>
+							<button className="button button--danger mg-right mg-bottom">Danger</button>
+							<button className="button button--warning mg-right mg-bottom">Warning</button>
+							<button className="button button--dark mg-right mg-bottom">Dark</button>
+							<button className="button button--light mg-bottom">Light</button>
 						</div>
 						<div className="mg-bottom-large">
 							<div className="heading">
 								<h5 className="title">Outlined</h5>
 							</div>
-							<button className="button button--outlined margin-right">Button</button>
-							<button className="button button--outlined button--primary margin-right">Primary</button>
-							<button className="button button--outlined button--secondary margin-right">Secondary</button>
-							<button className="button button--outlined button--success margin-right">Success</button>
-							<button className="button button--outlined button--danger margin-right">Danger</button>
-							<button className="button button--outlined button--warning margin-right">Warning</button>
-							<button className="button button--outlined button--dark margin-right">Dark</button>
-							<button className="button button--outlined button--light">Light</button>
+							<button className="button button--outlined mg-right mg-bottom">Button</button>
+							<button className="button button--outlined button--primary mg-right mg-bottom">Primary</button>
+							<button className="button button--outlined button--secondary mg-right mg-bottom">Secondary</button>
+							<button className="button button--outlined button--success mg-right mg-bottom">Success</button>
+							<button className="button button--outlined button--danger mg-right mg-bottom">Danger</button>
+							<button className="button button--outlined button--warning mg-right mg-bottom">Warning</button>
+							<button className="button button--outlined button--dark mg-right mg-bottom">Dark</button>
+							<button className="button button--outlined button--light mg-bottom">Light</button>
 						</div>
 						<div className="mg-bottom-large">
 							<div className="heading">
 								<h5 className="title">Raised</h5>
 							</div>
-							<button className="button button--raised margin-right">Button</button>
-							<button className="button button--raised button--primary margin-right">Primary</button>
-							<button className="button button--raised button--secondary margin-right">Secondary</button>
-							<button className="button button--raised button--success margin-right">Success</button>
-							<button className="button button--raised button--danger margin-right">Danger</button>
-							<button className="button button--raised button--warning margin-right">Warning</button>
-							<button className="button button--raised button--dark margin-right">Dark</button>
-							<button className="button button--raised button--light">Light</button>
+							<button className="button button--raised mg-right mg-bottom">Button</button>
+							<button className="button button--raised button--primary mg-right mg-bottom">Primary</button>
+							<button className="button button--raised button--secondary mg-right mg-bottom">Secondary</button>
+							<button className="button button--raised button--success mg-right mg-bottom">Success</button>
+							<button className="button button--raised button--danger mg-right mg-bottom">Danger</button>
+							<button className="button button--raised button--warning mg-right mg-bottom">Warning</button>
+							<button className="button button--raised button--dark mg-right mg-bottom">Dark</button>
+							<button className="button button--raised button--light mg-bottom">Light</button>
 						</div>
 						<div className="mg-bottom-large">
 							<div className="heading">
@@ -103,29 +103,14 @@ const Home = props => {
 						</div>
 					</article>
 				</section>
-				<section id="card" className="mg-bottom-large">
+				<section id="cards" className="mg-bottom-large">
 					<article className="article">
 						<div className="heading">
 							<h3 className="title">Card</h3>
 							<p className="subtitle">Culpa culpa deserunt magna nostrud sunt adipisicing cillum commodo dolore cupidatat nostrud veniam. Commodo id nulla consectetur aliqua aute. Fugiat irure consectetur cillum pariatur laboris est.</p>
 						</div>
 						<div className="row">
-							<div className="column column-6">
-								<div className="card card--lighter">
-									<div className="card__header">
-										<span className="fs-x-large fw-bold">This is a card</span>
-									</div>
-									<div className="card__body">
-										<article className="article">
-											<h5 className="fw-medium">This is an example card content</h5>
-											<p>Proident et quis sunt enim adipisicing consequat nulla do quis. Ipsum esse fugiat elit est cillum id laboris ullamco sint qui. Eu tempor sint sit esse mollit ea aliquip elit non. Sint ut esse ea deserunt velit incididunt sint laborum dolor duis occaecat minim. Et eu consequat proident incididunt minim nostrud eiusmod reprehenderit mollit do deserunt ad nisi. Nisi ea dolor proident consequat mollit est aliqua ullamco sit exercitation elit do deserunt Lorem.</p>
-										</article>
-									</div>
-									<div className="card__footer flex justify-content--end">
-										<button className="button button--danger margin-right">Cancel</button>
-										<button className="button button--primary">Submit</button>
-									</div>
-								</div>
+							<div className="card">
 							</div>
 						</div>
 					</article>

@@ -10,10 +10,10 @@ $button-transition: $transition;
 $button-hovered-color: primary-color(600);
 $button-hovered-border-color: primary-color(400);
 
-$button-focused-color: color-yiq(theme-color(primary));
+$button-focused-color: primary-color(600);
 $button-focused-border-color: primary-color(600);
 
-$button-active-color: primary-color(600);
+$button-active-color: primary-color(1000);
 $button-active-border-color: primary-color(1000);
 
 $button-padding-y: 0.75rem;
@@ -72,39 +72,55 @@ $button-paddings: (
 			color: color-yiq($color);
 			border-color: $color;
 
+			&:hover,
+			&.button--hovered {
+				color: color-yiq($color);
+				background-color: tint($color, 20%);
+				border-color: tint($color, 20%);
+			}
+			
+			&:focus,
+			&.button--focused {
+				color: color-yiq($color);
+				background-color: tint($color, 20%);
+				border-color: tint($color, 20%);
+			}
+			
+			&:active,
+			&.button--active {
+				color: color-yiq($color);
+				background-color: shade($color, 20%);
+				border-color: shade($color, 20%);
+			}
+
 			&.button--raised {
 				&:hover,
 				&.button--hovered {
-					border-bottom-width: 3px;
+					border-bottom-width: 5px;
+					border-bottom-color: $color;
+					margin-top: -4px;
+				}
+
+				
+				&:focus,
+				&.button--focus {
+					border-color: tint($color, 10%);
+					border-bottom-width: 5px;
 					border-bottom-color: shade($color, 10%);
-					margin-top: -2px;
+					background-color: tint($color, 10%);
+					margin-top: -4px;
+					outline: none;
 				}
 
 				&:active,
 				&.button--active {
 					border-bottom-width: 1px;
-					border-bottom-color: $color;
+					border-bottom-color: shade($color, 20%);
+					background-color: shade($color, 20%);
 					margin-top: 0;
+					outline: none;
 				}
-			}
 
-			&:hover,
-			&.button--hovered {
-				color: color-yiq($color);
-				background-color: tint($color, 10%);
-				border-color: tint($color, 10%);
-			}
-
-			&:focus,
-			&.button--focused {
-				color: color-yiq($color);
-				background-color: shade($color, 10%);
-			}
-
-			&:active,
-			&.button--active {
-				color: color-yiq($color);
-				background-color: shade($color, 20%);
 			}
 
 			&.button--outlined {
@@ -113,14 +129,17 @@ $button-paddings: (
 
 				&:hover,
 				&.button--hovered {
-					background-color: $color;
 					color: color-yiq($color);
+					background-color: tint($color, 10%);
+					border-color: tint($color, 10%);
 				}
 
+				
 				&:focus,
 				&.button--focused {
 					color: color-yiq($color);
-					background-color: shade($color, 10%);
+					background-color: tint($color, 10%);
+					border-color: tint($color, 10%);
 					outline: none;
 				}
 
@@ -128,7 +147,7 @@ $button-paddings: (
 				&.button--active {
 					color: color-yiq($color);
 					background-color: shade($color, 20%);
-					outline: none;
+					border-color: shade($color, 20%);
 				}
 			}
 		}
