@@ -109,8 +109,16 @@ const Home = props => {
 							<h3 className="title">Card</h3>
 							<p className="subtitle">Culpa culpa deserunt magna nostrud sunt adipisicing cillum commodo dolore cupidatat nostrud veniam. Commodo id nulla consectetur aliqua aute. Fugiat irure consectetur cillum pariatur laboris est.</p>
 						</div>
-						<div className="row">
-							<div className="card">
+						<div className="card card--primary">
+							<div className="card__header">
+								<span className="fs-large fw-bold">Card Title</span>
+							</div>
+							<div className="card__body">
+								<span>Id anim officia commodo voluptate magna aliqua. Laborum pariatur ullamco occaecat labore aliqua et quis. Eiusmod reprehenderit pariatur laborum aute Lorem nisi et. Consectetur labore est consectetur officia. Laborum minim officia irure aliquip eu commodo aute. Quis culpa reprehenderit excepteur irure in. Est minim laborum consectetur nisi aliqua in sunt do veniam.</span>
+							</div>
+							<div className="card__footer flex justify-content--end">
+								<button className="button button--outlined mg-right">Cancel</button>
+								<button className="button button--outlined">Submit</button>
 							</div>
 						</div>
 					</article>
@@ -118,10 +126,52 @@ const Home = props => {
 				<section id="form" className="mg-bottom-large">
 					<article className="article">
 						<div className="heading">
-							<h3 className="title">Forms</h3>
+							<h3 className="title">Inputs</h3>
 							<p>Dolor labore irure non irure in consequat est sunt fugiat aliquip ullamco.</p>
 						</div>
-						<input className="input" type="text" placeholder="This in an example input" />
+						
+						<div className="grids">
+							<div className="grid grid-8">
+								<form className="form">
+									<div className="form__field">
+										<label className="form__label">Name</label>
+										<input className="input" placeholder="e.g John Doe" />
+									</div>
+									<div className="form__field">
+										<label className="form__label">Location</label>
+										<div className="input-set">
+											<span className="input-set__icon">
+												<i className="fas fa-map-marker-alt"></i>
+											</span>
+											<input className="input input--pill" type="text" placeholder="e.g Jakarta" />
+										</div>
+									</div>
+									<div className="form__field form__field--has-extras">
+										<label className="form__label">Input Control</label>
+										<div className="input-group">
+											<div className="input-set">
+												<span className="input-set__icon">
+													<i className="fas fa-search"></i>
+												</span>
+												<input className="input" placeholder="Search anything you want here..." />
+											</div>
+											<button className="button button--primary button--raised">Submit</button>
+										</div>
+									</div>
+									<div className="form__field">
+										<label className="form__label">Favorite Food</label>
+										<div className="select">
+											<select>
+												<option>Nasi Goreng</option>
+												<option>Rawon</option>
+												<option>Gado-gado</option>
+												<option>Soto Ayam</option>
+											</select>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
 					</article>
 				</section>
 			</main>

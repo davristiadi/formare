@@ -2,6 +2,9 @@ $card-themes			: $theme-colors;
 $card-padding			: spacing(base);
 $card-background		: gray(100);
 $card-border-radius		: border-radius(base);
+$card-border			: solid 1px gray(200);
+$card-inner-spacing		: spacing(base);
+$card-inner-border		: solid 1px gray(200);
 
 .card {
 	@include flexbox;
@@ -9,8 +12,24 @@ $card-border-radius		: border-radius(base);
 	position: relative;
 	background-color: $card-background;
 	border-radius: $card-border-radius;
+	border: $card-border;
 	word-wrap: break-word;
 	overflow: hidden;
+
+	.card__header,
+	.card__body,
+	.card__footer {
+		padding: $card-inner-spacing;
+	}
+
+	.card__header {
+		@each $theme, $value in $theme-colors {
+			&--#{$theme} {
+				background-color: $value;
+				color: color-yiq($value);
+			}
+		}
+	}
 
 	.card__image {
 		position: relative;
@@ -29,14 +48,10 @@ $card-border-radius		: border-radius(base);
 	//	Generate theme modifier classes for a card component.
 	@each $theme, $color in $card-themes {
 		&--#{$theme} {
-			@include transition($transition);
+			transition: $transition;
 			background-color: $color;
 			color: color-yiq($color);
 			overflow: hidden;
-
-			&:not(.card--has-overlay) {
-				border: solid 1px darken($color, 10%);
-			}
 
 			.card__header,
 			.card__body,

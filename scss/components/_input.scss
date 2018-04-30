@@ -1,53 +1,55 @@
-/*  ----------------------------------------------------------------------------
-
-	INPUT
-
-----------------------------------------------------------------------------  */
-
-/*  ----------------------------
-	VARIABLES
-----------------------------  */
-
 $input-themes				: $theme-colors;
-
 $input-font-size          	: $font-size;
 $input-font-sizes         	: $font-sizes;
-
+$input-color				: $dark;
+$input-border             	: solid 1px gray(300);
+$input-border-focused    	: solid 1px theme-color(primary);
+$input-border-radius      	: border-radius(base);
+$input-hovered-color		: $dark;
+$input-hovered-border		: solid 1px gray(400);
+$input-focused-color		: primary-color(1000);
+$input-focused-border		: solid 1px primary-color(600);
 $input-padding-y         	: 0.75rem;
 $input-padding-x         	: 1rem;
 $input-padding           	: $input-padding-y $input-padding-x;
-
-$input-color              	: gray(1700);
-$input-border             	: solid 1px gray(200);
-$input-border-focused    	: solid 1px theme-color(primary);
-$input-border-radius      	: border-radius(base);
 $input-background         	: gray(0);
-
-$input-color-hovered 		: inherit;
-$input-color-disabled		: gray(1000);
-
-$input-transition           : all 250ms ease-in-out;
-
-
-/*  ----------------------------
-	STYLE RULES
-----------------------------  */
+$input-transition			: $transition;
 
 .input,
-.select {
-	@include transition($input-transition);
+.select > select {
+	transition: $input-transition;
 	font-size: $input-font-size;
-	width: 100%;
 	background-color: $input-background;
+	color: $input-color;
 	border: $input-border;
 	border-radius: $input-border-radius;
 	padding: $input-padding;
 	outline: none;
-	color: gray(1800);
+	white-space: normal;
+	width: 100%;
+
+	&:hover {
+		color: $input-hovered-color;
+		border: $input-hovered-border;
+	}
+
+	&:focus {
+		color: $input-focused-color;
+		border: $input-focused-border;
+	}
 
 	@each $theme, $color in $input-themes {
 		&--#{$theme} {
-			border: solid 1px $color;
+			border-color: tint($color, 20%);
+
+			&:hover {
+				border-color: tint($color, 10%);
+			}
+
+			&:focus {
+				border: solid 1px $color;
+				color: $color;
+			}
 		}
 	}
 
@@ -57,78 +59,95 @@ $input-transition           : all 250ms ease-in-out;
 			padding: spacing($size);
 		}
 	}
-	
-	&:focus {
-		border: $input-border-focused;
+
+	&--pill {
+		border-radius: $border-radius-pill;
 	}
 }
 
-//  Input Control
-.input-control {
-	@include flexbox;
-	@include flex-direction(row);
-	@include transition($transition);
-	background-color: gray(0);
-	position: relative;
-	border: solid 1px gray(200);
-	border-radius: border-radius(base);
-	width: 100%;
-	
-	.input {
-		border: none;
-
-		&:focus {
-			border: none;
-		}
+.select {
+	> select {
+		-webkit-appearance: none;
+		-moz-appearance: none;
 	}
 
-	.input-control__extra {
-		display: flex;
-		align-items: center;
-		padding: spacing(base) spacing(large);
+	&:after {
+		transition: $input-transition;
+		content: "\f078";
+		font-family: "Font Awesome 5 Free";
+		font-weight: 900;
+		position: absolute;
+		right: spacing(base);
+		top: 50%;
+		transform: translateY(-50%);
+		line-height: 0;
+		color: gray(600);
 	}
 
 	&:focus-within {
-		border: solid 1px theme-color(primary);
-	}
-
-	> *:first-child {
-		border-top-left-radius: 4px;
-		border-bottom-left-radius: 4px;
-	}
-
-	> *:last-child {
-		border-top-right-radius: 4px;
-		border-bottom-right-radius: 4px;
+		&:after {
+			top: 50%;
+			transform: rotate(180deg) translateY(-50%);
+			color: primary-color(600);
+		}
 	}
 }
 
-.input-group {
-	@include flexbox;
-	@include flex-direction(row);
+.input-set {
+	display: flex;
+	transition: $input-transition;
+	border: $input-border;
+	border-radius: $input-border-radius;
+	overflow: hidden;
 	width: 100%;
 
-	> * {
+	&--pill {
+		border-radius: $border-radius-pill;
+	}
+	
+	&:focus-within {
+		border: $input-focused-border;
+
+		.input-set__icon {
+			color: primary-color(600);
+		}
+	}
+
+	&__icon {
+		display: flex;
+		align-items: center;
+		transition: $input-transition;
 		border-radius: 0;
+		color: gray(600);
+
+		&:first-child {
+			padding-left: $input-padding-x;
+		}
+
+		&:last-child {
+			padding-right: $input-padding-x;
+		}
 	}
 
-	> *:first-child {
-		border-top-left-radius: 4px;
-		border-bottom-left-radius: 4px; 
-	}
-
-	> *:last-child {
-		border-top-right-radius: 4px;
-		border-bottom-right-radius: 4px;
-	}
-
-	.input-group__extra {
-		@include flexbox;
-		@include align-items(center);
-		padding: 0 0.75rem;
-		border: solid 1px gray(200);
-		background: gray(200);
+	> .input,
+	> .select {
+		border: 0;
 	}
 }
 
-//---------------------------------------------------------------------------------------
+
+.input-group {
+	display: flex;
+	
+	> *:first-child {
+		border-right: 0;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+	
+	> *:last-child {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		border-left: 0;
+	}
+}

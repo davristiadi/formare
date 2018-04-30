@@ -25,11 +25,8 @@
 	}
 }
 
-
-/*  ------------------------------------------------------
-	Row	
-------------------------------------------------------  */
-.row {
+.row,
+.grids {
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0 ($grid-gap-width / -2);
@@ -44,9 +41,7 @@
 	}
 }
 
-/*  ------------------------------------------------------
-	Columns
-------------------------------------------------------  */
+.grid,
 .column {
 	flex-grow: 1;
 	flex-shrink: 0;
@@ -57,6 +52,7 @@
 	@for $index from 1 through $grid-columns {
 		$width: $index / $grid-columns;
 		
+		&.grid-#{$index},
 		&.column-#{$index} {
 			flex-grow: 1;
 			flex-shrink: 0;
@@ -67,6 +63,7 @@
 
 	@each $breakpoint, $width in $breakpoints {
 		@include media($breakpoint) {
+			&.grid-#{$breakpoint},
 			&.column-#{$breakpoint} {
 				flex-grow: 1;
 				flex-shrink: 0;
@@ -77,6 +74,7 @@
 			@for $index from 1 through $grid-columns {
 				$width: $index / $grid-columns;
 				
+				&.grid-#{$breakpoint}-#{$index},
 				&.column-#{$breakpoint}-#{$index} {
 					flex-grow: 1;
 					flex-shrink: 0;

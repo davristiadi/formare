@@ -1,16 +1,11 @@
 .form {
-    position: relative;
-
     .form__label {
-        font-weight: font-weight(semibold);
+        display: block;
+        font-weight: font-weight(medium);
+        margin-bottom: spacing(x-small);
     }
 
     .form__field {
-        position: relative;
 		margin-bottom: spacing(base);
-	}
-	
-	.form__item {
-		position: relative;
 	}
 }
