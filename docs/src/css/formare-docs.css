@@ -3784,6 +3784,18 @@ a:hover {
   object-position: center;
 }
 
+.card--transparent {
+  border: 0;
+  background: transparent;
+}
+
+.card--transparent .card__header,
+.card--transparent .card__body,
+.card--transparent .card__footer {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .card--primary {
   transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
   background-color: #4381C1;
@@ -3796,6 +3808,14 @@ a:hover {
 .card--primary .card__body,
 .card--primary .card__footer {
   padding: 0.875rem;
+}
+
+.card--primary .card__header {
+  padding-bottom: 0.875rem;
+}
+
+.card--primary .card__footer {
+  padding-top: 0.875rem;
 }
 
 .card--has-overlay {
@@ -3861,6 +3881,14 @@ a:hover {
   padding: 0.875rem;
 }
 
+.card--secondary .card__header {
+  padding-bottom: 0.875rem;
+}
+
+.card--secondary .card__footer {
+  padding-top: 0.875rem;
+}
+
 .card--has-overlay {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3922,6 +3950,14 @@ a:hover {
 .card--success .card__body,
 .card--success .card__footer {
   padding: 0.875rem;
+}
+
+.card--success .card__header {
+  padding-bottom: 0.875rem;
+}
+
+.card--success .card__footer {
+  padding-top: 0.875rem;
 }
 
 .card--has-overlay {
@@ -3987,6 +4023,14 @@ a:hover {
   padding: 0.875rem;
 }
 
+.card--warning .card__header {
+  padding-bottom: 0.875rem;
+}
+
+.card--warning .card__footer {
+  padding-top: 0.875rem;
+}
+
 .card--has-overlay {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4048,6 +4092,14 @@ a:hover {
 .card--danger .card__body,
 .card--danger .card__footer {
   padding: 0.875rem;
+}
+
+.card--danger .card__header {
+  padding-bottom: 0.875rem;
+}
+
+.card--danger .card__footer {
+  padding-top: 0.875rem;
 }
 
 .card--has-overlay {
@@ -4113,6 +4165,14 @@ a:hover {
   padding: 0.875rem;
 }
 
+.card--white .card__header {
+  padding-bottom: 0.875rem;
+}
+
+.card--white .card__footer {
+  padding-top: 0.875rem;
+}
+
 .card--has-overlay {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4174,6 +4234,14 @@ a:hover {
 .card--black .card__body,
 .card--black .card__footer {
   padding: 0.875rem;
+}
+
+.card--black .card__header {
+  padding-bottom: 0.875rem;
+}
+
+.card--black .card__footer {
+  padding-top: 0.875rem;
 }
 
 .card--has-overlay {
@@ -4239,6 +4307,14 @@ a:hover {
   padding: 0.875rem;
 }
 
+.card--gray .card__header {
+  padding-bottom: 0.875rem;
+}
+
+.card--gray .card__footer {
+  padding-top: 0.875rem;
+}
+
 .card--has-overlay {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4300,6 +4376,14 @@ a:hover {
 .card--light .card__body,
 .card--light .card__footer {
   padding: 0.875rem;
+}
+
+.card--light .card__header {
+  padding-bottom: 0.875rem;
+}
+
+.card--light .card__footer {
+  padding-top: 0.875rem;
 }
 
 .card--has-overlay {
@@ -4365,6 +4449,14 @@ a:hover {
   padding: 0.875rem;
 }
 
+.card--lighter .card__header {
+  padding-bottom: 0.875rem;
+}
+
+.card--lighter .card__footer {
+  padding-top: 0.875rem;
+}
+
 .card--has-overlay {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4428,6 +4520,14 @@ a:hover {
   padding: 0.875rem;
 }
 
+.card--dark .card__header {
+  padding-bottom: 0.875rem;
+}
+
+.card--dark .card__footer {
+  padding-top: 0.875rem;
+}
+
 .card--has-overlay {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4489,6 +4589,14 @@ a:hover {
 .card--darker .card__body,
 .card--darker .card__footer {
   padding: 0.875rem;
+}
+
+.card--darker .card__header {
+  padding-bottom: 0.875rem;
+}
+
+.card--darker .card__footer {
+  padding-top: 0.875rem;
 }
 
 .card--has-overlay {

@@ -152,6 +152,20 @@ const Home = props => {
 									</div>
 								</div>
 							</div>
+							<div className="grid">
+								<div className="card card--transparent">
+									<div className="card__header">
+										<span className="fs-large fw-bold">Card Title</span>
+									</div>
+									<div className="card__body">
+										<span>Id anim officia commodo voluptate magna aliqua. Laborum pariatur ullamco occaecat labore aliqua et quis. Eiusmod reprehenderit pariatur laborum aute Lorem nisi et. Consectetur labore est consectetur officia. Laborum minim officia irure aliquip eu commodo aute. Quis culpa reprehenderit excepteur irure in. Est minim laborum consectetur nisi aliqua in sunt do veniam.</span>
+									</div>
+									<div className="card__footer flex justify-content--end">
+										<button className="button button--danger button--raised mg-right">Cancel</button>
+										<button className="button button--success button--raised">Submit</button>
+									</div>
+								</div>
+							</div>
 						</div>
 					</article>
 				</section>

@@ -45,6 +45,18 @@ $card-inner-border		: solid 1px gray(200);
 		}
 	}
 
+	&--transparent {
+		border: 0;
+		background: transparent;
+
+		.card__header,
+		.card__body,
+		.card__footer {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
 	//	Generate theme modifier classes for a card component.
 	@each $theme, $color in $card-themes {
 		&--#{$theme} {
@@ -58,6 +70,14 @@ $card-inner-border		: solid 1px gray(200);
 			.card__body,
 			.card__footer {
 				padding: $card-padding;
+			}
+
+			.card__header {
+				padding-bottom: $card-inner-spacing;
+			}
+
+			.card__footer {
+				padding-top: $card-inner-spacing;
 			}
 		}
 
