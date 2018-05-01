@@ -3344,7 +3344,7 @@ a:hover {
 .select > select {
   transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
   font-size: 1rem;
-  background-color: white;
+  background-color: #FFFFFF;
   color: #1d2425;
   border: solid 1px #c8cdce;
   border-radius: 4px;
@@ -3631,6 +3631,7 @@ a:hover {
   transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
   border: solid 1px #c8cdce;
   border-radius: 4px;
+  background-color: #FFFFFF;
   overflow: hidden;
   width: 100%;
 }
@@ -3643,23 +3644,28 @@ a:hover {
   border: solid 1px #4381C1;
 }
 
-.input-set:focus-within .input-set__icon {
+.input-set:focus-within .input-set__extra--icon {
   color: #4381C1;
 }
 
-.input-set__icon {
+.input-set__extra {
   display: flex;
   align-items: center;
   transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
+  padding-top: 0.65625rem;
+  padding-bottom: 0.65625rem;
   border-radius: 0;
+}
+
+.input-set__extra--icon {
   color: #929b9d;
 }
 
-.input-set__icon:first-child {
+.input-set__extra:first-child {
   padding-left: 0.875rem;
 }
 
-.input-set__icon:last-child {
+.input-set__extra:last-child {
   padding-right: 0.875rem;
 }
 
@@ -3784,6 +3790,18 @@ a:hover {
   object-position: center;
 }
 
+.card--transparent {
+  border: 0;
+  background: transparent;
+}
+
+.card--transparent .card__header,
+.card--transparent .card__body,
+.card--transparent .card__footer {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .card--primary {
   transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
   background-color: #4381C1;
@@ -3796,6 +3814,14 @@ a:hover {
 .card--primary .card__body,
 .card--primary .card__footer {
   padding: 0.875rem;
+}
+
+.card--primary .card__header {
+  padding-bottom: 0.875rem;
+}
+
+.card--primary .card__footer {
+  padding-top: 0.875rem;
 }
 
 .card--has-overlay {
@@ -3861,6 +3887,14 @@ a:hover {
   padding: 0.875rem;
 }
 
+.card--secondary .card__header {
+  padding-bottom: 0.875rem;
+}
+
+.card--secondary .card__footer {
+  padding-top: 0.875rem;
+}
+
 .card--has-overlay {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3922,6 +3956,14 @@ a:hover {
 .card--success .card__body,
 .card--success .card__footer {
   padding: 0.875rem;
+}
+
+.card--success .card__header {
+  padding-bottom: 0.875rem;
+}
+
+.card--success .card__footer {
+  padding-top: 0.875rem;
 }
 
 .card--has-overlay {
@@ -3987,6 +4029,14 @@ a:hover {
   padding: 0.875rem;
 }
 
+.card--warning .card__header {
+  padding-bottom: 0.875rem;
+}
+
+.card--warning .card__footer {
+  padding-top: 0.875rem;
+}
+
 .card--has-overlay {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4048,6 +4098,14 @@ a:hover {
 .card--danger .card__body,
 .card--danger .card__footer {
   padding: 0.875rem;
+}
+
+.card--danger .card__header {
+  padding-bottom: 0.875rem;
+}
+
+.card--danger .card__footer {
+  padding-top: 0.875rem;
 }
 
 .card--has-overlay {
@@ -4113,6 +4171,14 @@ a:hover {
   padding: 0.875rem;
 }
 
+.card--white .card__header {
+  padding-bottom: 0.875rem;
+}
+
+.card--white .card__footer {
+  padding-top: 0.875rem;
+}
+
 .card--has-overlay {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4174,6 +4240,14 @@ a:hover {
 .card--black .card__body,
 .card--black .card__footer {
   padding: 0.875rem;
+}
+
+.card--black .card__header {
+  padding-bottom: 0.875rem;
+}
+
+.card--black .card__footer {
+  padding-top: 0.875rem;
 }
 
 .card--has-overlay {
@@ -4239,6 +4313,14 @@ a:hover {
   padding: 0.875rem;
 }
 
+.card--gray .card__header {
+  padding-bottom: 0.875rem;
+}
+
+.card--gray .card__footer {
+  padding-top: 0.875rem;
+}
+
 .card--has-overlay {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4300,6 +4382,14 @@ a:hover {
 .card--light .card__body,
 .card--light .card__footer {
   padding: 0.875rem;
+}
+
+.card--light .card__header {
+  padding-bottom: 0.875rem;
+}
+
+.card--light .card__footer {
+  padding-top: 0.875rem;
 }
 
 .card--has-overlay {
@@ -4365,6 +4455,14 @@ a:hover {
   padding: 0.875rem;
 }
 
+.card--lighter .card__header {
+  padding-bottom: 0.875rem;
+}
+
+.card--lighter .card__footer {
+  padding-top: 0.875rem;
+}
+
 .card--has-overlay {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4428,6 +4526,14 @@ a:hover {
   padding: 0.875rem;
 }
 
+.card--dark .card__header {
+  padding-bottom: 0.875rem;
+}
+
+.card--dark .card__footer {
+  padding-top: 0.875rem;
+}
+
 .card--has-overlay {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4489,6 +4595,14 @@ a:hover {
 .card--darker .card__body,
 .card--darker .card__footer {
   padding: 0.875rem;
+}
+
+.card--darker .card__header {
+  padding-bottom: 0.875rem;
+}
+
+.card--darker .card__footer {
+  padding-top: 0.875rem;
 }
 
 .card--has-overlay {

@@ -182,7 +182,7 @@ const Home = props => {
 									<div className="form__field">
 										<label className="form__label">Name</label>
 										<div className="input-set">
-											<span className="input-set__icon">
+											<span className="input-set__extra input-set__extra--icon">
 												<i className="fas fa-user"></i>
 											</span>
 											<input className="input" placeholder="e.g John Doe" />
@@ -191,7 +191,7 @@ const Home = props => {
 									<div className="form__field">
 										<label className="form__label">Password</label>
 										<div className="input-set">
-											<span className="input-set__icon">
+											<span className="input-set__extra input-set__extra--icon">
 												<i className="fas fa-key"></i>
 											</span>
 											<input type="password" className="input" placeholder="Insert your password" />
@@ -201,7 +201,7 @@ const Home = props => {
 									<div className="form__field">
 										<label className="form__label">Location</label>
 										<div className="input-set">
-											<span className="input-set__icon">
+											<span className="input-set__extra input-set__extra--icon">
 												<i className="fas fa-map-marker-alt"></i>
 											</span>
 											<input className="input input--pill" type="text" placeholder="e.g Jakarta" />
@@ -211,12 +211,24 @@ const Home = props => {
 										<label className="form__label">Input Control</label>
 										<div className="input-group">
 											<div className="input-set">
-												<span className="input-set__icon">
+												<span className="input-set__extra input-set__extra--icon">
 													<i className="fas fa-search"></i>
 												</span>
 												<input className="input" placeholder="Search anything you want here..." />
 											</div>
 											<button className="button button--primary button--raised">Submit</button>
+										</div>
+									</div>
+									<div className="form__field form__field--has-extras">
+										<label className="form__label">Islanded Button Variant</label>
+										<div className="input-set">
+											<span className="input-set__extra input-set__extra--icon">
+												<i className="fas fa-search"></i>
+											</span>
+											<input className="input" placeholder="Search anything you want here..." />
+											<span className="input-set__extra">
+												<button className="button button--primary button--raised">Submit</button>
+											</span>
 										</div>
 									</div>
 									<div className="form__field">
