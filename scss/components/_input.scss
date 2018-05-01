@@ -12,7 +12,7 @@ $input-focused-border		: solid 1px primary-color(600);
 $input-padding-y         	: spacing(small);
 $input-padding-x         	: spacing(base);
 $input-padding           	: $input-padding-y $input-padding-x;
-$input-background         	: gray(0);
+$input-background         	: $white;
 $input-transition			: $transition;
 
 .input,
@@ -100,6 +100,7 @@ $input-transition			: $transition;
 	transition: $input-transition;
 	border: $input-border;
 	border-radius: $input-border-radius;
+	background-color: $input-background;
 	overflow: hidden;
 	width: 100%;
 
