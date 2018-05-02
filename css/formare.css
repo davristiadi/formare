@@ -2192,10 +2192,6 @@ a:hover {
   border-color: #4381C1;
 }
 
-.form .form__field--primary .input-set .input-set__extra--icon {
-  color: #4381C1;
-}
-
 .form .form__field--primary .input,
 .form .form__field--primary .select {
   border-color: #4381C1;
@@ -2207,10 +2203,6 @@ a:hover {
 
 .form .form__field--secondary .input-set {
   border-color: #D3492C;
-}
-
-.form .form__field--secondary .input-set .input-set__extra--icon {
-  color: #D3492C;
 }
 
 .form .form__field--secondary .input,
@@ -2226,10 +2218,6 @@ a:hover {
   border-color: #48A900;
 }
 
-.form .form__field--success .input-set .input-set__extra--icon {
-  color: #48A900;
-}
-
 .form .form__field--success .input,
 .form .form__field--success .select {
   border-color: #48A900;
@@ -2241,10 +2229,6 @@ a:hover {
 
 .form .form__field--warning .input-set {
   border-color: #EBC500;
-}
-
-.form .form__field--warning .input-set .input-set__extra--icon {
-  color: #EBC500;
 }
 
 .form .form__field--warning .input,
@@ -2260,10 +2244,6 @@ a:hover {
   border-color: #931B13;
 }
 
-.form .form__field--danger .input-set .input-set__extra--icon {
-  color: #931B13;
-}
-
 .form .form__field--danger .input,
 .form .form__field--danger .select {
   border-color: #931B13;
@@ -2275,10 +2255,6 @@ a:hover {
 
 .form .form__field--white .input-set {
   border-color: #FFFFFF;
-}
-
-.form .form__field--white .input-set .input-set__extra--icon {
-  color: #FFFFFF;
 }
 
 .form .form__field--white .input,
@@ -2294,10 +2270,6 @@ a:hover {
   border-color: #000000;
 }
 
-.form .form__field--black .input-set .input-set__extra--icon {
-  color: #000000;
-}
-
 .form .form__field--black .input,
 .form .form__field--black .select {
   border-color: #000000;
@@ -2309,10 +2281,6 @@ a:hover {
 
 .form .form__field--gray .input-set {
   border-color: #49595C;
-}
-
-.form .form__field--gray .input-set .input-set__extra--icon {
-  color: #49595C;
 }
 
 .form .form__field--gray .input,
@@ -2328,10 +2296,6 @@ a:hover {
   border-color: #dbdede;
 }
 
-.form .form__field--light .input-set .input-set__extra--icon {
-  color: #dbdede;
-}
-
 .form .form__field--light .input,
 .form .form__field--light .select {
   border-color: #dbdede;
@@ -2343,10 +2307,6 @@ a:hover {
 
 .form .form__field--lighter .input-set {
   border-color: #f6f7f7;
-}
-
-.form .form__field--lighter .input-set .input-set__extra--icon {
-  color: #f6f7f7;
 }
 
 .form .form__field--lighter .input,
@@ -2362,10 +2322,6 @@ a:hover {
   border-color: #1d2425;
 }
 
-.form .form__field--dark .input-set .input-set__extra--icon {
-  color: #1d2425;
-}
-
 .form .form__field--dark .input,
 .form .form__field--dark .select {
   border-color: #1d2425;
@@ -2377,10 +2333,6 @@ a:hover {
 
 .form .form__field--darker .input-set {
   border-color: #0f1212;
-}
-
-.form .form__field--darker .input-set .input-set__extra--icon {
-  color: #0f1212;
 }
 
 .form .form__field--darker .input,
@@ -3582,7 +3534,6 @@ a:hover {
 .input--primary:focus,
 .select > select--primary:focus {
   border: solid 1px #4381C1;
-  color: #4381C1;
 }
 
 .input--secondary,
@@ -3598,7 +3549,6 @@ a:hover {
 .input--secondary:focus,
 .select > select--secondary:focus {
   border: solid 1px #D3492C;
-  color: #D3492C;
 }
 
 .input--success,
@@ -3614,7 +3564,6 @@ a:hover {
 .input--success:focus,
 .select > select--success:focus {
   border: solid 1px #48A900;
-  color: #48A900;
 }
 
 .input--warning,
@@ -3630,7 +3579,6 @@ a:hover {
 .input--warning:focus,
 .select > select--warning:focus {
   border: solid 1px #EBC500;
-  color: #EBC500;
 }
 
 .input--danger,
@@ -3646,7 +3594,6 @@ a:hover {
 .input--danger:focus,
 .select > select--danger:focus {
   border: solid 1px #931B13;
-  color: #931B13;
 }
 
 .input--white,
@@ -3662,7 +3609,6 @@ a:hover {
 .input--white:focus,
 .select > select--white:focus {
   border: solid 1px #FFFFFF;
-  color: #FFFFFF;
 }
 
 .input--black,
@@ -3678,7 +3624,6 @@ a:hover {
 .input--black:focus,
 .select > select--black:focus {
   border: solid 1px #000000;
-  color: #000000;
 }
 
 .input--gray,
@@ -3694,7 +3639,6 @@ a:hover {
 .input--gray:focus,
 .select > select--gray:focus {
   border: solid 1px #49595C;
-  color: #49595C;
 }
 
 .input--light,
@@ -3710,7 +3654,6 @@ a:hover {
 .input--light:focus,
 .select > select--light:focus {
   border: solid 1px #dbdede;
-  color: #dbdede;
 }
 
 .input--lighter,
@@ -3726,7 +3669,6 @@ a:hover {
 .input--lighter:focus,
 .select > select--lighter:focus {
   border: solid 1px #f6f7f7;
-  color: #f6f7f7;
 }
 
 .input--dark,
@@ -3742,7 +3684,6 @@ a:hover {
 .input--dark:focus,
 .select > select--dark:focus {
   border: solid 1px #1d2425;
-  color: #1d2425;
 }
 
 .input--darker,
@@ -3758,7 +3699,6 @@ a:hover {
 .input--darker:focus,
 .select > select--darker:focus {
   border: solid 1px #0f1212;
-  color: #0f1212;
 }
 
 .input--x-small,
@@ -3893,6 +3833,14 @@ a:hover {
 
 .input-group {
   display: flex;
+}
+
+.input-group__extra {
+  transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
+  padding: 0.65625rem 0.875rem;
+  background-color: #c8cdce;
+  border: solid 1px #c8cdce;
+  border-radius: 4px;
 }
 
 .input-group > *:first-child {
