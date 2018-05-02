@@ -125,7 +125,7 @@ const Home = props => {
 								</div>
 							</div>
 							<div className="grid grid-6 mg-bottom">
-								<div className="card card--primary">
+								<div className="card card--lighter">
 									<div className="card__header">
 										<span className="fs-large fw-bold">Card Title</span>
 									</div>
@@ -133,13 +133,13 @@ const Home = props => {
 										<span>Id anim officia commodo voluptate magna aliqua. Laborum pariatur ullamco occaecat labore aliqua et quis. Eiusmod reprehenderit pariatur laborum aute Lorem nisi et. Consectetur labore est consectetur officia. Laborum minim officia irure aliquip eu commodo aute. Quis culpa reprehenderit excepteur irure in. Est minim laborum consectetur nisi aliqua in sunt do veniam.</span>
 									</div>
 									<div className="card__footer flex justify-content--end">
-										<button className="button button--outlined mg-right">Cancel</button>
-										<button className="button button--outlined">Submit</button>
+										<button className="button button--danger mg-right">Cancel</button>
+										<button className="button button--success">Submit</button>
 									</div>
 								</div>
 							</div>
-							<div className="grid">
-								<div className="card card--lightest">
+							<div className="grid grid-6 mg-bottom">
+								<div className="card card--lighter">
 									<div className="card__header">
 										<span className="fs-large fw-bold">Card Title</span>
 									</div>
@@ -147,13 +147,13 @@ const Home = props => {
 										<span>Id anim officia commodo voluptate magna aliqua. Laborum pariatur ullamco occaecat labore aliqua et quis. Eiusmod reprehenderit pariatur laborum aute Lorem nisi et. Consectetur labore est consectetur officia. Laborum minim officia irure aliquip eu commodo aute. Quis culpa reprehenderit excepteur irure in. Est minim laborum consectetur nisi aliqua in sunt do veniam.</span>
 									</div>
 									<div className="card__footer flex justify-content--end">
-										<button className="button button--danger button--raised mg-right">Cancel</button>
-										<button className="button button--success button--raised">Submit</button>
+										<button className="button button--danger mg-right">Cancel</button>
+										<button className="button button--success">Submit</button>
 									</div>
 								</div>
 							</div>
-							<div className="grid">
-								<div className="card card--transparent">
+							<div className="grid grid-6 mg-bottom">
+								<div className="card card--secondary">
 									<div className="card__header">
 										<span className="fs-large fw-bold">Card Title</span>
 									</div>
@@ -208,15 +208,15 @@ const Home = props => {
 										</div>
 									</div>
 									<div className="form__field form__field--has-extras">
-										<label className="form__label">Input Control</label>
+										<label className="form__label">Location</label>
 										<div className="input-group">
 											<div className="input-set">
 												<span className="input-set__icon">
 													<i className="fas fa-search"></i>
 												</span>
-												<input className="input" placeholder="Search anything you want here..." />
+												<input className="input" placeholder="Search nearby location..." />
 											</div>
-											<button className="button button--primary button--raised">Submit</button>
+											<button className="button button--primary button--raised">Look up</button>
 										</div>
 									</div>
 									<div className="form__field form__field--has-extras">
@@ -246,7 +246,7 @@ const Home = props => {
 										<label className="form__label">Phone Number</label>
 										<div className="input-group">
 											<span className="input-group__extra">+62</span>
-											<input type="text" className="input input--danger" placeholder="test" />
+											<input type="text" className="input input--danger" placeholder="e.g 08123456789" />
 										</div>
 									</div>
 								</form>

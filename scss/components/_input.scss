@@ -1,19 +1,20 @@
-$input-themes				: $theme-colors;
-$input-font-size          	: $font-size;
-$input-font-sizes         	: $font-sizes;
-$input-color				: $dark;
-$input-border             	: solid 1px gray(300);
-$input-border-focused    	: solid 1px theme-color(primary);
-$input-border-radius      	: border-radius(base);
-$input-hovered-color		: $dark;
-$input-hovered-border		: solid 1px gray(400);
-$input-focused-color		: primary-color(1000);
-$input-focused-border		: solid 1px primary-color(600);
-$input-padding-y         	: spacing(small);
-$input-padding-x         	: spacing(base);
-$input-padding           	: $input-padding-y $input-padding-x;
-$input-background         	: $white;
-$input-transition			: $transition;
+$input-themes: $theme-colors;
+$input-font-size: $font-size;
+$input-font-sizes: $font-sizes;
+$input-color: $dark;
+$input-border: solid 1px gray(200);
+$input-border-focused: solid 1px theme-color(primary);
+$input-border-radius: border-radius(base);
+$input-focused-color: primary-color(1000);
+$input-focused-border: solid 1px primary-color(600);
+$input-padding-y: spacing(small);
+$input-padding-x: spacing(base);
+$input-padding: $input-padding-y $input-padding-x;
+$input-background: $white;
+$input-transition: $transition;
+$input-group-extra-background: gray(200);
+$input-group-extra-border: solid 1px gray(200);
+$input-group-extra-border-radius: $border-radius;
 
 .input,
 .select > select {
@@ -28,13 +29,7 @@ $input-transition			: $transition;
 	white-space: normal;
 	width: 100%;
 
-	&:hover {
-		color: $input-hovered-color;
-		border: $input-hovered-border;
-	}
-
 	&:focus {
-		// color: $input-focused-color;
 		border: $input-focused-border;
 	}
 
@@ -106,14 +101,6 @@ $input-transition			: $transition;
 	&--pill {
 		border-radius: $border-radius-pill;
 	}
-	
-	&:focus-within {
-		border: $input-focused-border;
-
-		.input-set__icon {
-			color: primary-color(600);
-		}
-	}
 
 	&__icon {
 		display: flex;
@@ -140,6 +127,14 @@ $input-transition			: $transition;
 		&:last-child { padding-right: $input-padding-x; }
 	}
 
+	&:focus-within {
+		border: $input-focused-border;
+
+		.input-set__icon {
+			color: primary-color(600);
+		}
+	}
+
 	> .input,
 	> .select {
 		border: 0;
@@ -152,9 +147,9 @@ $input-transition			: $transition;
 	&__extra {
 		transition: $input-transition;
 		padding: $input-padding;
-		background-color: gray(300);
-		border: solid 1px gray(300);
-		border-radius: $input-border-radius;
+		background-color: $input-group-extra-background;
+		border: $input-group-extra-border;
+		border-radius: $input-group-extra-border-radius;
 	}
 	
 	> *:first-child {

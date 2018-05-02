@@ -1,6 +1,6 @@
 $card-themes			: $theme-colors;
 $card-padding			: spacing(base);
-$card-background		: gray(100);
+$card-background		: $white;
 $card-border			: solid 1px gray(200);
 $card-border-radius		: border-radius(base);
 $card-inner-spacing		: spacing(base);
@@ -45,25 +45,13 @@ $card-inner-border		: solid 1px gray(200);
 		}
 	}
 
-	&--transparent {
-		border: 0;
-		background: transparent;
-
-		.card__header,
-		.card__body,
-		.card__footer {
-			padding-left: 0;
-			padding-right: 0;
-		}
-	}
-
 	//	Generate theme modifier classes for a card component.
 	@each $theme, $color in $card-themes {
 		&--#{$theme} {
 			transition: $transition;
 			background-color: $color;
 			color: color-yiq($color);
-			border: solid 1px $color;
+			border: solid 1px shade($color, 10%);
 			overflow: hidden;
 
 			.card__header,
@@ -120,6 +108,18 @@ $card-inner-border		: solid 1px gray(200);
 
 	&--pill {
 		border-radius: border-radius(pill);
+	}
+
+	&--transparent {
+		border: 0;
+		background: transparent;
+
+		.card__header,
+		.card__body,
+		.card__footer {
+			padding-left: 0;
+			padding-right: 0;
+		}
 	}
 }
 

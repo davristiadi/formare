@@ -3502,18 +3502,12 @@ a:hover {
   font-size: 1rem;
   background-color: #FFFFFF;
   color: #1d2425;
-  border: solid 1px #c8cdce;
+  border: solid 1px #dbdede;
   border-radius: 4px;
   padding: 0.65625rem 0.875rem;
   outline: none;
   white-space: normal;
   width: 100%;
-}
-
-.input:hover,
-.select > select:hover {
-  color: #1d2425;
-  border: solid 1px #b6bdbe;
 }
 
 .input:focus,
@@ -3772,7 +3766,7 @@ a:hover {
 .input-set {
   display: flex;
   transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
-  border: solid 1px #c8cdce;
+  border: solid 1px #dbdede;
   border-radius: 4px;
   background-color: #FFFFFF;
   overflow: hidden;
@@ -3781,14 +3775,6 @@ a:hover {
 
 .input-set--pill {
   border-radius: 50px;
-}
-
-.input-set:focus-within {
-  border: solid 1px #4381C1;
-}
-
-.input-set:focus-within .input-set__icon {
-  color: #4381C1;
 }
 
 .input-set__icon {
@@ -3826,6 +3812,14 @@ a:hover {
   padding-right: 0.875rem;
 }
 
+.input-set:focus-within {
+  border: solid 1px #4381C1;
+}
+
+.input-set:focus-within .input-set__icon {
+  color: #4381C1;
+}
+
 .input-set > .input,
 .input-set > .select {
   border: 0;
@@ -3838,8 +3832,8 @@ a:hover {
 .input-group__extra {
   transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
   padding: 0.65625rem 0.875rem;
-  background-color: #c8cdce;
-  border: solid 1px #c8cdce;
+  background-color: #dbdede;
+  border: solid 1px #dbdede;
   border-radius: 4px;
 }
 
@@ -3866,7 +3860,7 @@ a:hover {
   -ms-flex-direction: column;
   flex-direction: column;
   position: relative;
-  background-color: #f6f7f7;
+  background-color: #FFFFFF;
   border-radius: 4px;
   border: solid 1px #dbdede;
   word-wrap: break-word;
@@ -3953,23 +3947,11 @@ a:hover {
   object-position: center;
 }
 
-.card--transparent {
-  border: 0;
-  background: transparent;
-}
-
-.card--transparent .card__header,
-.card--transparent .card__body,
-.card--transparent .card__footer {
-  padding-left: 0;
-  padding-right: 0;
-}
-
 .card--primary {
   transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
   background-color: #4381C1;
   color: #f6f7f7;
-  border: solid 1px #4381C1;
+  border: solid 1px #3c74ae;
   overflow: hidden;
 }
 
@@ -4040,7 +4022,7 @@ a:hover {
   transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
   background-color: #D3492C;
   color: #f6f7f7;
-  border: solid 1px #D3492C;
+  border: solid 1px #be4228;
   overflow: hidden;
 }
 
@@ -4111,7 +4093,7 @@ a:hover {
   transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
   background-color: #48A900;
   color: #f6f7f7;
-  border: solid 1px #48A900;
+  border: solid 1px #419800;
   overflow: hidden;
 }
 
@@ -4182,7 +4164,7 @@ a:hover {
   transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
   background-color: #EBC500;
   color: #1d2425;
-  border: solid 1px #EBC500;
+  border: solid 1px #d4b100;
   overflow: hidden;
 }
 
@@ -4253,7 +4235,7 @@ a:hover {
   transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
   background-color: #931B13;
   color: #f6f7f7;
-  border: solid 1px #931B13;
+  border: solid 1px #841811;
   overflow: hidden;
 }
 
@@ -4324,7 +4306,7 @@ a:hover {
   transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
   background-color: #FFFFFF;
   color: #1d2425;
-  border: solid 1px #FFFFFF;
+  border: solid 1px #e6e6e6;
   overflow: hidden;
 }
 
@@ -4395,7 +4377,7 @@ a:hover {
   transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
   background-color: #000000;
   color: #f6f7f7;
-  border: solid 1px #000000;
+  border: solid 1px black;
   overflow: hidden;
 }
 
@@ -4466,7 +4448,7 @@ a:hover {
   transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
   background-color: #49595C;
   color: #f6f7f7;
-  border: solid 1px #49595C;
+  border: solid 1px #425053;
   overflow: hidden;
 }
 
@@ -4537,7 +4519,7 @@ a:hover {
   transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
   background-color: #dbdede;
   color: #1d2425;
-  border: solid 1px #dbdede;
+  border: solid 1px #c5c8c8;
   overflow: hidden;
 }
 
@@ -4608,7 +4590,7 @@ a:hover {
   transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
   background-color: #f6f7f7;
   color: #1d2425;
-  border: solid 1px #f6f7f7;
+  border: solid 1px #dddede;
   overflow: hidden;
 }
 
@@ -4679,7 +4661,7 @@ a:hover {
   transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
   background-color: #1d2425;
   color: #f6f7f7;
-  border: solid 1px #1d2425;
+  border: solid 1px #1a2021;
   overflow: hidden;
 }
 
@@ -4750,7 +4732,7 @@ a:hover {
   transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
   background-color: #0f1212;
   color: #f6f7f7;
-  border: solid 1px #0f1212;
+  border: solid 1px #0e1010;
   overflow: hidden;
 }
 
@@ -4815,6 +4797,18 @@ a:hover {
 .card--has-overlay .card__footer {
   padding: 0.875rem;
   z-index: 15;
+}
+
+.card--transparent {
+  border: 0;
+  background: transparent;
+}
+
+.card--transparent .card__header,
+.card--transparent .card__body,
+.card--transparent .card__footer {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .card-list .card {
