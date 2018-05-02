@@ -181,73 +181,26 @@ const Home = props => {
 								<form className="form">
 									<div className="form__field">
 										<label className="form__label">Name</label>
-										<div className="input-set">
-											<span className="input-set__icon">
-												<i className="fas fa-user"></i>
-											</span>
-											<input className="input" placeholder="e.g John Doe" />
-										</div>
+										<input type="text" className="input" placeholder="e.g John Doe the Great" />
 									</div>
-									<div className="form__field form__field--danger">
+									<div className="form__field">
 										<label className="form__label">Email Address</label>
 										<div className="input-set">
-											<span className="input-set__icon">
-												<i className="fas fa-key"></i>
-											</span>
-											<input type="text" className="input" placeholder="e.g johndoe@gmail.com" />
-										</div>
-										<small className="color-danger fw-medium">Password must have at least 8 characters</small>
-									</div>
-									<div className="form__field">
-										<label className="form__label">Location</label>
-										<div className="input-set">
-											<span className="input-set__icon">
-												<i className="fas fa-map-marker-alt"></i>
-											</span>
-											<input className="input input--pill" type="text" placeholder="e.g Jakarta" />
-										</div>
-									</div>
-									<div className="form__field form__field--has-extras">
-										<label className="form__label">Location</label>
-										<div className="input-group">
-											<div className="input-set">
-												<span className="input-set__icon">
-													<i className="fas fa-search"></i>
-												</span>
-												<input className="input" placeholder="Search nearby location..." />
-											</div>
-											<button className="button button--primary button--raised">Look up</button>
-										</div>
-									</div>
-									<div className="form__field form__field--has-extras">
-										<label className="form__label">Search</label>
-										<div className="input-set">
-											<span className="input-set__icon">
-												<i className="fas fa-search"></i>
-											</span>
-											<input className="input" placeholder="Search anything you want here..." />
 											<span className="input-set__extra">
-												<button className="button button--primary button--raised">Submit</button>
+												<i className="icon fas fa-envelope"></i>
 											</span>
+											<input type="text" className="input" placeholder="e.g johndoe@email.com" />
 										</div>
 									</div>
 									<div className="form__field">
-										<label className="form__label">Favorite Food</label>
-										<div className="select">
-											<select>
-												<option>Nasi Goreng</option>
-												<option>Rawon</option>
-												<option>Gado-gado</option>
-												<option>Soto Ayam</option>
-											</select>
+										<label className="form__label">Password</label>
+										<div className="input-set">
+											<span className="input-set__extra">
+												<i className="icon fas fa-key"></i>
+											</span>
+											<input type="text" className="input" placeholder="Your preferred password" />
 										</div>
-									</div>
-									<div className="form__field">
-										<label className="form__label">Phone Number</label>
-										<div className="input-group">
-											<span className="input-group__extra">+62</span>
-											<input type="text" className="input input--danger" placeholder="e.g 08123456789" />
-										</div>
+										<small>Passwords must have at least 8 characters.</small>
 									</div>
 								</form>
 							</div>

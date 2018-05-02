@@ -98,41 +98,34 @@ $input-group-extra-border-radius: $border-radius;
 	overflow: hidden;
 	width: 100%;
 
-	&--pill {
-		border-radius: $border-radius-pill;
-	}
-
-	&__icon {
-		display: flex;
-		align-items: center;
-		transition: $input-transition;
-		padding-top: $input-padding-x;
-		padding-bottom: $input-padding-x;
-		border-radius: 0;
-		color: gray(600);
-
-		&:first-child { padding-left: $input-padding-x; }
-		&:last-child { padding-right: $input-padding-x; }
-	}
-	
 	&__extra {
 		display: flex;
 		align-items: center;
 		transition: $input-transition;
-		padding-top: $input-padding-x;
-		padding-bottom: $input-padding-x;
-		border-radius: 0;
+		margin-top: $input-padding-x;
+		margin-bottom: $input-padding-x;
 
-		&:first-child { padding-left: $input-padding-x; }
-		&:last-child { padding-right: $input-padding-x; }
+		> .icon {
+			transition: $input-transition;
+			color: gray(600);
+		}
+
+		&:first-child { margin-left: $input-padding-x; }
+		&:last-child { margin-right: $input-padding-x; }
 	}
 
 	&:focus-within {
 		border: $input-focused-border;
 
-		.input-set__icon {
-			color: primary-color(600);
+		.input-set__extra {
+			> .icon {
+				color: primary-color(600);
+			}
 		}
+	}
+
+	&--pill {
+		border-radius: $border-radius-pill;
 	}
 
 	> .input,
