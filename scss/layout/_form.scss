@@ -6,6 +6,23 @@
     }
 
     .form__field {
-		margin-bottom: spacing(base);
+        margin-bottom: spacing(base);
+        
+        @each $theme, $value in $theme-colors {
+            &--#{$theme} {
+                .form__label {
+                    color: $value;
+                }
+
+                .input-set {
+                    border-color: $value;
+                }
+
+                .input,
+                .select {
+                    border-color: $value;
+                }
+            }
+        }
 	}
 }

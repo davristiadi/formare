@@ -182,26 +182,26 @@ const Home = props => {
 									<div className="form__field">
 										<label className="form__label">Name</label>
 										<div className="input-set">
-											<span className="input-set__extra input-set__extra--icon">
+											<span className="input-set__icon">
 												<i className="fas fa-user"></i>
 											</span>
 											<input className="input" placeholder="e.g John Doe" />
 										</div>
 									</div>
-									<div className="form__field">
-										<label className="form__label">Password</label>
+									<div className="form__field form__field--danger">
+										<label className="form__label">Email Address</label>
 										<div className="input-set">
-											<span className="input-set__extra input-set__extra--icon">
+											<span className="input-set__icon">
 												<i className="fas fa-key"></i>
 											</span>
-											<input type="password" className="input" placeholder="Insert your password" />
+											<input type="text" className="input" placeholder="e.g johndoe@gmail.com" />
 										</div>
-										<small className="form__help fw-medium color-danger">Password must have at least 8 characters</small>
+										<small className="color-danger fw-medium">Password must have at least 8 characters</small>
 									</div>
 									<div className="form__field">
 										<label className="form__label">Location</label>
 										<div className="input-set">
-											<span className="input-set__extra input-set__extra--icon">
+											<span className="input-set__icon">
 												<i className="fas fa-map-marker-alt"></i>
 											</span>
 											<input className="input input--pill" type="text" placeholder="e.g Jakarta" />
@@ -211,7 +211,7 @@ const Home = props => {
 										<label className="form__label">Input Control</label>
 										<div className="input-group">
 											<div className="input-set">
-												<span className="input-set__extra input-set__extra--icon">
+												<span className="input-set__icon">
 													<i className="fas fa-search"></i>
 												</span>
 												<input className="input" placeholder="Search anything you want here..." />
@@ -220,9 +220,9 @@ const Home = props => {
 										</div>
 									</div>
 									<div className="form__field form__field--has-extras">
-										<label className="form__label">Islanded Button Variant</label>
+										<label className="form__label">Search</label>
 										<div className="input-set">
-											<span className="input-set__extra input-set__extra--icon">
+											<span className="input-set__icon">
 												<i className="fas fa-search"></i>
 											</span>
 											<input className="input" placeholder="Search anything you want here..." />
@@ -240,6 +240,13 @@ const Home = props => {
 												<option>Gado-gado</option>
 												<option>Soto Ayam</option>
 											</select>
+										</div>
+									</div>
+									<div className="form__field">
+										<label className="form__label">Phone Number</label>
+										<div className="input-group">
+											<span className="input-group__extra">+62</span>
+											<input type="text" className="input input--danger" placeholder="test" />
 										</div>
 									</div>
 								</form>

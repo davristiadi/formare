@@ -34,7 +34,7 @@ $input-transition			: $transition;
 	}
 
 	&:focus {
-		color: $input-focused-color;
+		// color: $input-focused-color;
 		border: $input-focused-border;
 	}
 
@@ -48,7 +48,6 @@ $input-transition			: $transition;
 
 			&:focus {
 				border: solid 1px $color;
-				color: $color;
 			}
 		}
 	}
@@ -111,30 +110,34 @@ $input-transition			: $transition;
 	&:focus-within {
 		border: $input-focused-border;
 
-		.input-set__extra--icon {
+		.input-set__icon {
 			color: primary-color(600);
 		}
 	}
 
+	&__icon {
+		display: flex;
+		align-items: center;
+		transition: $input-transition;
+		padding-top: $input-padding-x;
+		padding-bottom: $input-padding-x;
+		border-radius: 0;
+		color: gray(600);
+
+		&:first-child { padding-left: $input-padding-x; }
+		&:last-child { padding-right: $input-padding-x; }
+	}
+	
 	&__extra {
 		display: flex;
 		align-items: center;
 		transition: $input-transition;
-		padding-top: $input-padding-y;
-		padding-bottom: $input-padding-y;
+		padding-top: $input-padding-x;
+		padding-bottom: $input-padding-x;
 		border-radius: 0;
 
-		&--icon {
-			color: gray(600);
-		}
-
-		&:first-child {
-			padding-left: $input-padding-x;
-		}
-
-		&:last-child {
-			padding-right: $input-padding-x;
-		}
+		&:first-child { padding-left: $input-padding-x; }
+		&:last-child { padding-right: $input-padding-x; }
 	}
 
 	> .input,
@@ -143,12 +146,18 @@ $input-transition			: $transition;
 	}
 }
 
-
 .input-group {
 	display: flex;
+
+	&__extra {
+		transition: $input-transition;
+		padding: $input-padding;
+		background-color: gray(300);
+		border: solid 1px gray(300);
+		border-radius: $input-border-radius;
+	}
 	
 	> *:first-child {
-		border-right: 0;
 		border-top-right-radius: 0;
 		border-bottom-right-radius: 0;
 	}
@@ -156,6 +165,5 @@ $input-transition			: $transition;
 	> *:last-child {
 		border-top-left-radius: 0;
 		border-bottom-left-radius: 0;
-		border-left: 0;
 	}
 }
