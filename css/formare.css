@@ -2176,8 +2176,7 @@ a:hover {
 
 .form .form__label {
   display: block;
-  font-weight: 500;
-  margin-bottom: 0.4375rem;
+  font-weight: 600;
 }
 
 .form .form__field {
@@ -3773,51 +3772,37 @@ a:hover {
   width: 100%;
 }
 
-.input-set--pill {
-  border-radius: 50px;
-}
-
-.input-set__icon {
-  display: flex;
-  align-items: center;
-  transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
-  padding-top: 0.875rem;
-  padding-bottom: 0.875rem;
-  border-radius: 0;
-  color: #929b9d;
-}
-
-.input-set__icon:first-child {
-  padding-left: 0.875rem;
-}
-
-.input-set__icon:last-child {
-  padding-right: 0.875rem;
-}
-
 .input-set__extra {
   display: flex;
   align-items: center;
   transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
-  padding-top: 0.875rem;
-  padding-bottom: 0.875rem;
-  border-radius: 0;
+  margin-top: 0.875rem;
+  margin-bottom: 0.875rem;
+}
+
+.input-set__extra > .icon {
+  transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
+  color: #929b9d;
 }
 
 .input-set__extra:first-child {
-  padding-left: 0.875rem;
+  margin-left: 0.875rem;
 }
 
 .input-set__extra:last-child {
-  padding-right: 0.875rem;
+  margin-right: 0.875rem;
 }
 
 .input-set:focus-within {
   border: solid 1px #4381C1;
 }
 
-.input-set:focus-within .input-set__icon {
+.input-set:focus-within .input-set__extra > .icon {
   color: #4381C1;
+}
+
+.input-set--pill {
+  border-radius: 50px;
 }
 
 .input-set > .input,
