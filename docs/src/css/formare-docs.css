@@ -2022,25 +2022,6 @@ a:hover {
   min-height: 87.5em;
 }
 
-/*  --------------------------------------------------------------------------------------
-
-    F L E X B O X
-
-    The main idea behind the flex layout is to give the container the ability 
-    to alter its items' width/height (and order) to best fill the available space 
-    (mostly to accommodate to all kind of display devices and screen sizes). 
-    A flex container expands items to fill available free space, or shrinks 
-    them to prevent overflow.
-
-    https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-
---------------------------------------------------------------------------------------  */
-/*  --------------------------
-    VARIABLES
---------------------------  */
-/*  --------------------------
-    STYLE RULES
---------------------------  */
 .flex {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2050,115 +2031,69 @@ a:hover {
 }
 
 .flex--inline {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline-flex;
 }
 
 .flex--row {
-  -webkit-box-direction: normal;
-  -webkit-box-orient: horizontal;
-  -webkit-flex-direction: row;
-  -moz-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
 }
 
 .flex--column {
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
 }
 
-.justify-content--start {
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  -moz-justify-content: flex-start;
+.jc-start,
+.justify-content-start {
   justify-content: flex-start;
 }
 
-.justify-content--center {
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
+.jc-center,
+.justify-content-center {
   justify-content: center;
 }
 
-.justify-content--end {
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  -webkit-justify-content: flex-end;
-  -moz-justify-content: flex-end;
+.jc-end,
+.justify-content-end {
   justify-content: flex-end;
 }
 
-.justify-content--between {
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
+.jc-between,
+.justify-content-between {
   justify-content: space-between;
 }
 
-.justify-content--around {
-  -ms-flex-pack: distribute;
-  -webkit-justify-content: space-around;
-  -moz-justify-content: space-around;
+.jc-around,
+.justify-content-around {
   justify-content: space-around;
 }
 
-.justify-content--evenly {
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  -webkit-justify-content: space-evenly;
-  -moz-justify-content: space-evenly;
+.jc-evenly,
+.justify-content-evenly {
   justify-content: space-evenly;
 }
 
-.align-items--start {
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  -webkit-align-items: flex-start;
-  -moz-align-items: flex-start;
+.ai-start,
+.align-items-start {
   align-items: flex-start;
 }
 
-.align-items--center {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
+.ai-center,
+.align-items-center {
   align-items: center;
 }
 
-.align-items--end {
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  -webkit-align-items: flex-end;
-  -moz-align-items: flex-end;
+.ai-end,
+.align-items-end {
   align-items: flex-end;
 }
 
-.align-items--stretch {
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  -webkit-align-items: stretch;
-  -moz-align-items: stretch;
+.ai-stretch,
+.align-items-stretch {
   align-items: stretch;
 }
 
-.align-items--baseline {
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  -webkit-align-items: baseline;
-  -moz-align-items: baseline;
+.ai-baseline,
+.align-items-baseline {
   align-items: baseline;
 }
 
@@ -2339,32 +2274,12 @@ a:hover {
   border-color: #0f1212;
 }
 
-/*	-----------------------------------------------------------------------------
-	
-	NAVIGATION
-
------------------------------------------------------------------------------  */
-/*	-----------------------
-	Variables
------------------------  */
-/*	-----------------------
-	Style Rules
------------------------  */
 .nav {
   position: relative;
 }
 
 .nav .nav__list {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-direction: normal;
-  -webkit-box-orient: horizontal;
-  -webkit-flex-direction: row;
-  -moz-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
   transition: all 100ms ease-out;
 }
@@ -2378,12 +2293,8 @@ a:hover {
 }
 
 .nav .nav__list .nav__item {
-  -webkit-flex: 1 0 auto;
-  -moz-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
+  display: flex;
   flex: 1 0 auto;
-  -false-box-flex: 1;
-  box-flex: 1;
   transition: all 100ms ease-out;
   text-align: center;
 }
@@ -2392,7 +2303,7 @@ a:hover {
   opacity: 1;
 }
 
-.nav .nav__list .nav__item--has-logo .icon {
+.nav .nav__list .nav__item--has-icon .icon {
   font-size: 48px;
 }
 
@@ -2401,37 +2312,20 @@ a:hover {
 }
 
 .nav .nav__list .nav__link {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   font-weight: 500;
-  padding: 0 1.3125rem;
+  padding: 0.875rem 1.3125rem;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
 }
 
-/*	-----------------------------------------------------------------------------
-	
-	NAVBAR
-
------------------------------------------------------------------------------  */
 .navbar {
-  -webkit-transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
-  -moz-transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
-  -o-transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
-  transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
   position: relative;
-  min-height: 4em;
   height: 4em;
+  min-height: 4em;
+  transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
 }
 
 .navbar--primary {
@@ -2527,52 +2421,10 @@ a:hover {
 }
 
 .navbar .navbar__block {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  align-items: center;
-  -webkit-flex: 1 1 auto;
-  -moz-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -false-box-flex: 1;
-  box-flex: 1;
   position: relative;
-  min-height: 4em;
-}
-
-.navbar .navbar__block--start {
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  -moz-justify-content: flex-start;
-  justify-content: flex-start;
-}
-
-.navbar .navbar__block--center {
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  justify-content: center;
-}
-
-.navbar .navbar__block--end {
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  -webkit-justify-content: flex-end;
-  -moz-justify-content: flex-end;
-  justify-content: flex-end;
-}
-
-.navbar--hidden {
-  transform: translateY(-100%);
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
 }
 
 .button {

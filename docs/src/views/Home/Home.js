@@ -5,10 +5,10 @@ const Home = props => {
 		<div id="home">
 			<header className="navbar navbar--primary">
 				<div className="navbar__container">
-					<div className="navbar__block navbar__block--start">
+					<div className="navbar__block flex jc-start">
 						<h5 className="font font--bold font--x-large">Formare</h5>
 					</div>
-					<div className="navbar__block navbar__block--end">
+					<div className="navbar__block flex jc-end">
 						<nav className="nav">
 							<ul className="nav__list">
 								<li className="nav__item">
@@ -198,7 +198,7 @@ const Home = props => {
 											<span className="input-set__extra">
 												<i className="icon fas fa-key"></i>
 											</span>
-											<input type="text" className="input" placeholder="Your preferred password" />
+											<input type="password" className="input" placeholder="Your preferred password" />
 										</div>
 										<small>Passwords must have at least 8 characters.</small>
 									</div>

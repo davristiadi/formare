@@ -1,30 +1,18 @@
-/*	-----------------------------------------------------------------------------
-	
-	NAVIGATION
+$nav-themes: $theme-colors;
+$nav-item-padding-y: spacing(base);
+$nav-item-padding-x: spacing(large);
+$nav-item-padding: $nav-item-padding-y $nav-item-padding-x;
+$nav-item-weight: font-weight(medium);
+$nav-item-opacity-active: 1;
+$nav-item-opacity-inactive: 0.3;
+$nav-item-icon-size: 48px;
 
------------------------------------------------------------------------------  */
-
-/*	-----------------------
-	Variables
------------------------  */
-$nav-themes					: $theme-colors;
-$nav-item-padding-y			: 0;
-$nav-item-padding-x			: spacing(large);
-$nav-item-padding			: $nav-item-padding-y $nav-item-padding-x;
-$nav-item-weight			: font-weight(medium);
-$nav-item-opacity-active	: 1;
-$nav-item-opacity-inactive	: 0.3;
-
-
-/*	-----------------------
-	Style Rules
------------------------  */
 .nav {
 	position: relative;
 
 	.nav__list {
-		@include flexbox;
-		@include flex-direction(row);
+		display: flex;
+		flex-direction: row;
 		transition: all 100ms ease-out;
 
 		&--active {
@@ -38,9 +26,10 @@ $nav-item-opacity-inactive	: 0.3;
 				opacity: $nav-item-opacity-inactive;
 			}
 		}
-
+		
 		.nav__item {
-			@include flex(1 0 auto);
+			display: flex;
+			flex: 1 0 auto;
 			transition: all 100ms ease-out;
 			text-align: center;
 
@@ -48,9 +37,9 @@ $nav-item-opacity-inactive	: 0.3;
 				opacity: $nav-item-opacity-active;
 			}
 
-			&--has-logo {
+			&--has-icon {
 				.icon {
-					font-size: 48px;
+					font-size: $nav-item-icon-size;
 				}
 			}
 
@@ -60,8 +49,8 @@ $nav-item-opacity-inactive	: 0.3;
 		}
 
 		.nav__link {
-			@include flexbox;
-			@include flex-direction(column);
+			display: flex;
+			flex-direction: column;
 			font-weight: $nav-item-weight;
 			padding: $nav-item-padding;
 			text-decoration: none;

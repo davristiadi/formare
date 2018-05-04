@@ -1,56 +1,38 @@
-/*  --------------------------------------------------------------------------------------
-
-    F L E X B O X
-
-    The main idea behind the flex layout is to give the container the ability 
-    to alter its items' width/height (and order) to best fill the available space 
-    (mostly to accommodate to all kind of display devices and screen sizes). 
-    A flex container expands items to fill available free space, or shrinks 
-    them to prevent overflow.
-
-    https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-
---------------------------------------------------------------------------------------  */
-
-/*  --------------------------
-    VARIABLES
---------------------------  */
-$flex__justify-contents : (
-    flex-start          : start,
-    center              : center,
-    flex-end            : end,
-    space-between       : between,
-    space-around        : around,
-    space-evenly        : evenly
+$justify-contents : (
+    flex-start: start,
+    center: center,
+    flex-end: end,
+    space-between: between,
+    space-around: around,
+    space-evenly: evenly
 ) !default;
 
-$flex__align-items      : (
-    flex-start          : start,
-    center              : center,
-    flex-end            : end,
-    stretch             : stretch,
-    baseline            : baseline
+$align-items: (
+    flex-start: start,
+    center: center,
+    flex-end: end,
+    stretch: stretch,
+    baseline: baseline
 ) !default;
 
-/*  --------------------------
-    STYLE RULES
---------------------------  */
 .flex {
     @include flexbox;
 
-    &--inline   { @include flexbox(inline); }
-    &--row      { @include flex-direction(row); }
-    &--column   { @include flex-direction(column); }
+    &--inline   { display: inline-flex; }
+    &--row      { flex-direction: row; }
+    &--column   { flex-direction: column; }
 }
 
-@each $type, $abbr in $flex__justify-contents {
-    .justify-content--#{$abbr} {
-        @include justify-content($type);
+@each $type, $abbr in $justify-contents {
+	.jc-#{$abbr},
+    .justify-content-#{$abbr} {
+    	justify-content: $type;
     }
 }
 
-@each $type, $abbr in $flex__align-items {
-    .align-items--#{$abbr} {
-        @include align-items($type);
-    }
+@each $type, $abbr in $align-items {
+	.ai-#{$abbr},
+	.align-items-#{$abbr} {
+		align-items: $type;
+	}
 }
