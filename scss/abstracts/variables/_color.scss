@@ -22,7 +22,8 @@ $danger-color			: $spartan-crimson !default;
 $gray-color				: $river-bed !default;
 
 //	Generate color shades
-$color-shades: (
+$color-shades: () !default;
+$color-shades: map-merge((
 	primary: (
 		100: tint($primary-color, 40%),
 		200: tint($primary-color, 32%),
@@ -111,7 +112,7 @@ $color-shades: (
 		1900: shade($gray-color, 90%),
 		2000: shade($gray-color, 100%),
 	)
-) !default;
+), $color-shades);
 
 //	Generic/Global colors
 $white				: #FFFFFF;
@@ -127,7 +128,8 @@ $background-color	: $white;
 
 
 //  Theme colors
-$theme-colors: (
+$theme-colors: () !default;
+$theme-colors: map-merge((
 	primary		: $primary-color,
 	secondary	: $secondary-color,
 	success		: $success-color,
@@ -140,7 +142,7 @@ $theme-colors: (
 	lighter		: $lighter,
 	dark		: $dark,
 	darker		: $darker
-) !default;
+), $theme-colors);
 
 
 //	Color Contrastor
