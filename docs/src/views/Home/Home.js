@@ -202,6 +202,15 @@ const Home = props => {
 										</div>
 										<small>Passwords must have at least 8 characters.</small>
 									</div>
+									<div className="form__field">
+										<label className="form__label">Disabled Input</label>
+										<div className="input-set input-set--disabled">
+											<span className="input-set__extra">
+												<i className="icon fas fa-envelope"></i>
+											</span>
+											<input type="text" className="input" placeholder="e.g johndoe@email.com" value="davidkurniakristiadi@gmail.com" disabled />
+										</div>
+									</div>
 								</form>
 							</div>
 						</div>

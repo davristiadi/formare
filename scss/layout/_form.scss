@@ -1,7 +1,8 @@
 .form {
     .form__label {
         display: block;
-        font-weight: font-weight(semibold);
+        font-weight: font-weight(medium);
+        margin-bottom: spacing(x-small);
     }
 
     .form__field {

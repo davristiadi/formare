@@ -2111,7 +2111,8 @@ a:hover {
 
 .form .form__label {
   display: block;
-  font-weight: 600;
+  font-weight: 500;
+  margin-bottom: 0.4375rem;
 }
 
 .form .form__field {
@@ -3366,6 +3367,11 @@ a:hover {
   border: solid 1px #4381C1;
 }
 
+.input:disabled,
+.select > select:disabled {
+  background-color: #dbdede;
+}
+
 .input--primary,
 .select > select--primary {
   border-color: #699acd;
@@ -3624,12 +3630,156 @@ a:hover {
   width: 100%;
 }
 
+.input-set--primary {
+  border-color: #699acd;
+}
+
+.input-set--primary:hover {
+  border-color: #568ec7;
+}
+
+.input-set--primary:focus {
+  border: solid 1px #4381C1;
+}
+
+.input-set--secondary {
+  border-color: #dc6d56;
+}
+
+.input-set--secondary:hover {
+  border-color: #d75b41;
+}
+
+.input-set--secondary:focus {
+  border: solid 1px #D3492C;
+}
+
+.input-set--success {
+  border-color: #6dba33;
+}
+
+.input-set--success:hover {
+  border-color: #5ab21a;
+}
+
+.input-set--success:focus {
+  border: solid 1px #48A900;
+}
+
+.input-set--warning {
+  border-color: #efd133;
+}
+
+.input-set--warning:hover {
+  border-color: #edcb1a;
+}
+
+.input-set--warning:focus {
+  border: solid 1px #EBC500;
+}
+
+.input-set--danger {
+  border-color: #a94942;
+}
+
+.input-set--danger:hover {
+  border-color: #9e322b;
+}
+
+.input-set--danger:focus {
+  border: solid 1px #931B13;
+}
+
+.input-set--white {
+  border-color: white;
+}
+
+.input-set--white:hover {
+  border-color: white;
+}
+
+.input-set--white:focus {
+  border: solid 1px #FFFFFF;
+}
+
+.input-set--black {
+  border-color: #333333;
+}
+
+.input-set--black:hover {
+  border-color: #1a1a1a;
+}
+
+.input-set--black:focus {
+  border: solid 1px #000000;
+}
+
+.input-set--gray {
+  border-color: #6d7a7d;
+}
+
+.input-set--gray:hover {
+  border-color: #5b6a6c;
+}
+
+.input-set--gray:focus {
+  border: solid 1px #49595C;
+}
+
+.input-set--light {
+  border-color: #e2e5e5;
+}
+
+.input-set--light:hover {
+  border-color: #dfe1e1;
+}
+
+.input-set--light:focus {
+  border: solid 1px #dbdede;
+}
+
+.input-set--lighter {
+  border-color: #f8f9f9;
+}
+
+.input-set--lighter:hover {
+  border-color: #f7f8f8;
+}
+
+.input-set--lighter:focus {
+  border: solid 1px #f6f7f7;
+}
+
+.input-set--dark {
+  border-color: #4a5051;
+}
+
+.input-set--dark:hover {
+  border-color: #343a3b;
+}
+
+.input-set--dark:focus {
+  border: solid 1px #1d2425;
+}
+
+.input-set--darker {
+  border-color: #3f4141;
+}
+
+.input-set--darker:hover {
+  border-color: #272a2a;
+}
+
+.input-set--darker:focus {
+  border: solid 1px #0f1212;
+}
+
 .input-set__extra {
   display: flex;
   align-items: center;
   transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
-  margin-top: 0.875rem;
-  margin-bottom: 0.875rem;
+  padding-top: 0.65625rem;
+  padding-bottom: 0.65625rem;
 }
 
 .input-set__extra > .icon {
@@ -3638,11 +3788,11 @@ a:hover {
 }
 
 .input-set__extra:first-child {
-  margin-left: 0.875rem;
+  padding-left: 0.875rem;
 }
 
 .input-set__extra:last-child {
-  margin-right: 0.875rem;
+  padding-right: 0.875rem;
 }
 
 .input-set:focus-within {
@@ -3655,6 +3805,15 @@ a:hover {
 
 .input-set--pill {
   border-radius: 50px;
+}
+
+.input-set--disabled {
+  position: relative;
+  background-color: #dbdede;
+}
+
+.input-set--disabled > * {
+  cursor: not-allowed;
 }
 
 .input-set > .input,
