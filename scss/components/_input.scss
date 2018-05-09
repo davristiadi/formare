@@ -11,7 +11,7 @@ $input-padding-y: spacing(small) !default;
 $input-padding-x: spacing(base) !default;
 $input-padding: $input-padding-y $input-padding-x;
 $input-background: $white;
-$input-disabled-background: gray(200);
+$input-disabled-background: $lighter;
 $input-transition: $transition;
 $input-group-extra-background: gray(200);
 $input-group-extra-border: solid 1px gray(200);
