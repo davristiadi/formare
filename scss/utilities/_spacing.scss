@@ -4,22 +4,22 @@
 @each $size, $value in $spacings {
 	.margin, 
 	.mg { 
-		margin: spacing(base);
+		margin: spacing(base) !important;
 	} 
 
 	.padding,
 	.pd {
-		padding: spacing(base);
+		padding: spacing(base) !important;
 	}
 	
 	.margin-#{$size},
 	.mg-#{$size} {
-		margin: $value;
+		margin: $value !important;
 	}
 
 	.padding-#{$size},
 	.pd-#{$size} {
-		padding: $value;
+		padding: $value !important;
 	}
 }
 
@@ -27,23 +27,23 @@ $spacing-directions: top left bottom right;
 @each $direction in $spacing-directions {
 	.pd-#{$direction},
 	.padding-#{$direction} {
-		padding-#{$direction}: spacing(base);
+		padding-#{$direction}: spacing(base) !important;
 	}
 
 	.mg-#{$direction},
 	.margin-#{$direction} {
-		margin-#{$direction}: spacing(base);
+		margin-#{$direction}: spacing(base) !important;
 	}
 	
 	@each $size, $value in $spacings {
 		.mg-#{$direction}-#{$size},
 		.margin-#{$direction}-#{$size} {
-			margin-#{$direction}: $value;
+			margin-#{$direction}: $value !important;
 		}
 
 		.pd-#{$direction}-#{$size},
 		.padding-#{$direction}-#{$size} {
-			padding-#{$direction}: $value;
+			padding-#{$direction}: $value !important;
 		}
 	}
 }
