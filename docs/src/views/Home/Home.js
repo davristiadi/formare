@@ -50,6 +50,7 @@ const Home = props => {
 							<div className="heading">
 								<h5 className="title">Button States</h5>
 							</div>
+							<button className="button button--primary button--disabled mg-right mg-bottom" disabled>Disabled</button>
 							<button className="button mg-right mg-bottom">Button</button>
 							<button className="button button--primary mg-right mg-bottom">Primary</button>
 							<button className="button button--secondary mg-right mg-bottom">Secondary</button>
@@ -63,6 +64,7 @@ const Home = props => {
 							<div className="heading">
 								<h5 className="title">Outlined</h5>
 							</div>
+							<button className="button button--primary button--outlined button--disabled mg-right mg-bottom" disabled>Disabled</button>
 							<button className="button button--outlined mg-right mg-bottom">Button</button>
 							<button className="button button--outlined button--primary mg-right mg-bottom">Primary</button>
 							<button className="button button--outlined button--secondary mg-right mg-bottom">Secondary</button>
@@ -70,12 +72,13 @@ const Home = props => {
 							<button className="button button--outlined button--danger mg-right mg-bottom">Danger</button>
 							<button className="button button--outlined button--warning mg-right mg-bottom">Warning</button>
 							<button className="button button--outlined button--dark mg-right mg-bottom">Dark</button>
-							<button className="button button--outlined button--light mg-bottom">Light</button>
+							<button className="button button--outlined button--light mg-right mg-bottom">Light</button>
 						</div>
 						<div className="mg-bottom-large">
 							<div className="heading">
 								<h5 className="title">Raised</h5>
 							</div>
+							<button className="button button--raised button--primary button--disabled mg-right mg-bottom" disabled>Disabled</button>
 							<button className="button button--raised mg-right mg-bottom">Button</button>
 							<button className="button button--raised button--primary mg-right mg-bottom">Primary</button>
 							<button className="button button--raised button--secondary mg-right mg-bottom">Secondary</button>
@@ -89,6 +92,7 @@ const Home = props => {
 							<div className="heading">
 								<h5 className="title">Rounded</h5>
 							</div>
+							<button className="button button--pill button--primary button--disabled mg-right" disabled>Disabled</button>
 							<button className="button button--pill button--primary mg-right">Rounded Button</button>
 							<button className="button button--pill button--secondary mg-right">Rounded Button</button>
 							<button className="button button--pill button--success mg-right">Rounded Button</button>

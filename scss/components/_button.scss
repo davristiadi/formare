@@ -6,16 +6,13 @@ $button-border-style: solid;
 $button-border-width: 1px;
 $button-border-color: gray(300);
 $button-transition: $transition;
-
 $button-hovered-color: primary-color(600);
 $button-hovered-border-color: primary-color(400);
-
 $button-focused-color: primary-color(600);
 $button-focused-border-color: primary-color(600);
-
 $button-active-color: primary-color(1000);
 $button-active-border-color: primary-color(1000);
-
+$button-disabled-opacity: 0.5 !default;
 $button-padding-y: spacing(small);
 $button-padding-x: spacing(large);
 $button-padding: $button-padding-y $button-padding-x;
@@ -44,8 +41,8 @@ $button-paddings: (
 	cursor: pointer;
 
 	//	Pseudo states	
-	&:hover,
-	&--hovered {
+	&:hover:not(:disabled),
+	&--hovered:not(:disabled) {
 		color: $button-hovered-color;
 		border-color: $button-hovered-border-color;
 		outline: none;
@@ -65,6 +62,12 @@ $button-paddings: (
 		outline: none;
 	}
 
+	&:disabled,
+	&--disabled {
+		opacity: $button-disabled-opacity;
+		cursor: not-allowed;
+	}
+
 	//	Theme modifier classes
 	@each $theme, $color in $button-themes {
 		&--#{$theme} {	
@@ -72,8 +75,8 @@ $button-paddings: (
 			color: color-yiq($color);
 			border-color: $color;
 
-			&:hover,
-			&.button--hovered {
+			&:hover:not(:disabled),
+			&.button--hovered:not(:disabled) {
 				color: color-yiq($color);
 				background-color: tint($color, 20%);
 				border-color: tint($color, 20%);
@@ -94,8 +97,8 @@ $button-paddings: (
 			}
 
 			&.button--raised {
-				&:hover,
-				&.button--hovered {
+				&:hover:not(:disabled),
+				&.button--hovered:not(:disabled) {
 					border-bottom-width: 5px;
 					border-bottom-color: $color;
 					margin-top: -4px;
@@ -127,15 +130,15 @@ $button-paddings: (
 				color: $color;
 				background-color: transparent;
 
-				&:hover,
-				&.button--hovered {
+				&:hover:not(:disabled),
+				&.button--hovered:not(:disabled) {
 					color: color-yiq($color);
 					background-color: tint($color, 10%);
 					border-color: tint($color, 10%);
 				}
 
 				
-				&:focus,
+				&:focuss,
 				&.button--focused {
 					color: color-yiq($color);
 					background-color: tint($color, 10%);
