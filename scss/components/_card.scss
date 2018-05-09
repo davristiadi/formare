@@ -1,10 +1,9 @@
 $card-themes			: $theme-colors;
-$card-padding			: spacing(base);
+$card-padding			: $spacing;
 $card-background		: $white;
-$card-border			: solid 1px gray(200);
-$card-border-radius		: border-radius(base);
-$card-inner-spacing		: spacing(base);
-$card-inner-border		: solid 1px gray(200);
+$card-border			: solid 1px $lighter;
+$card-border-radius		: $border-radius;
+$card-inner-border		: solid 1px $lighter;
 
 .card {
 	@include flexbox;
@@ -19,7 +18,7 @@ $card-inner-border		: solid 1px gray(200);
 	.card__header,
 	.card__body,
 	.card__footer {
-		padding: $card-inner-spacing;
+		padding: $card-padding;
 	}
 
 	.card__header {
@@ -61,11 +60,11 @@ $card-inner-border		: solid 1px gray(200);
 			}
 
 			.card__header {
-				padding-bottom: $card-inner-spacing;
+				padding-bottom: $card-padding;
 			}
 
 			.card__footer {
-				padding-top: $card-inner-spacing;
+				padding-top: $card-padding;
 			}
 		}
 

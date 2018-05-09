@@ -11,7 +11,6 @@
 @import "abstracts/mixins";
 @import "base/reset";
 @import "base/global";
-@import "base/colors";
 @import "base/typography";
 @import "layout/grid";
 @import "layout/section";
@@ -26,6 +25,7 @@
 @import "components/input";
 @import "components/menu";
 @import "components/card";
-@import "utilities/alignment";
+@import "utilities/text";
+@import "utilities/color";
 @import "utilities/spacing";
 @import "utilities/animation";

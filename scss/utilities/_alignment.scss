@@ -1,5 +1,0 @@
-@each $text-align in $text-aligns {
-    .align--#{$text-align} {
-        text-align: $text-align;
-    }
-}
