@@ -1,2 +1,79 @@
-@import "../../scss/formare.scss";
+@import "../../scss/formare";
 
+//
+hr {
+    background-color: gray(200);
+    display: block;
+    margin: spacing(x-large) 0;
+    height: 2px;
+    border: none;
+}
+
+
+//
+.fr-global-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1500;
+
+}
+
+.header-separator {
+    content: "";
+    display: block;
+    position: relative;
+    padding-bottom: 4em;
+}
+
+
+.fr-main {
+    padding: spacing(small) spacing(x-large);
+    padding-top: 3em;
+}
+
+
+.fr-sidebar {
+    position: sticky;
+    top: 4em;
+    height: calc(100vh - 2em);
+}
+
+.fr-menu {
+    
+    padding-top: 3em;
+    padding-left: spacing(base);
+    padding-right: spacing(base);
+    border-right: solid 1px gray(200);
+    height: 100%;
+
+    .fr-menu__list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .fr-menu__item {
+        padding: spacing(x-small) spacing(base);
+        margin-left: spacing(base) / -1;
+        margin-right: spacing(base) / -1;
+        
+        &--parent {
+            font-weight: font-weight(bold);
+            padding-top: spacing(large);
+        }
+
+        &:first-child {
+            padding-top: spacing(x-small);
+        }
+    }
+}
+//
+.fr-article {
+    .fr-heading {
+        padding-bottom: spacing(large);
+        margin-bottom: 4em;
+        border-bottom: solid 1px gray(200);
+    }
+}

@@ -1,4 +1,7 @@
 $navbar-themes: $theme-colors;
+$navbar-transition: $transition !default;
+$navbar-background: gray(100) !default;
+$navbar-color: color-yiq($navbar-background);
 $navbar-height: 4em;
 $navbar-heights: (
 	x-small: ($navbar-height * .5),
@@ -7,14 +10,14 @@ $navbar-heights: (
 	large: ($navbar-height * 1.5),
 	x-large: ($navbar-height * 2)
 ) !default;
-$navbar-transition: $transition;
 
 .navbar {
 	position: relative;
 	height: $navbar-height;
 	min-height: $navbar-height;
 	transition: $navbar-transition;
-	
+	background: $navbar-background;
+
 	// Generates different themes for Navbar component.
 	@each $theme, $color in $navbar-themes {
 		&--#{$theme} {
@@ -39,10 +42,19 @@ $navbar-transition: $transition;
 		height: 100%;
 	}
 
+	
 	.navbar__block {
 		position: relative;
 		display: flex;
 		flex: 1 1 auto;
 		align-items: center;
+		padding-left: spacing(base);
+		padding-right: spacing(base);
+	}
+	
+	&--full-width {
+		.navbar__container {
+			@extend .container--full-width;
+		}
 	}
 }

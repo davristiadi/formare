@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { Home } from './views/Home';
+import { Global } from './views/Global';
 
 class App extends Component {
 	componentDidMount = () => {
@@ -11,7 +11,7 @@ class App extends Component {
 		return (
 			<BrowserRouter>
 				<Switch>
-					<Route exact path="/" component={Home} />
+					<Route path="/" component={Global} />
 				</Switch>
 			</BrowserRouter>
 		);

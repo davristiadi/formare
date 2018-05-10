@@ -82,15 +82,15 @@ $button-paddings: (
 				border-color: tint($color, 20%);
 			}
 			
-			&:focus,
-			&.button--focused {
+			&:focus:not(:disabled),
+			&.button--focused:not(:disabled) {
 				color: color-yiq($color);
 				background-color: tint($color, 20%);
 				border-color: tint($color, 20%);
 			}
 			
-			&:active,
-			&.button--active {
+			&:active:not(:disabled),
+			&.button--active:not(:disabled) {
 				color: color-yiq($color);
 				background-color: shade($color, 20%);
 				border-color: shade($color, 20%);
@@ -104,9 +104,8 @@ $button-paddings: (
 					margin-top: -4px;
 				}
 
-				
-				&:focus,
-				&.button--focus {
+				&:focus:not(:disabled),
+				&.button--focus:not(:disabled) {
 					border-color: tint($color, 10%);
 					border-bottom-width: 5px;
 					border-bottom-color: shade($color, 10%);
@@ -115,8 +114,8 @@ $button-paddings: (
 					outline: none;
 				}
 
-				&:active,
-				&.button--active {
+				&:active:not(:disabled),
+				&.button--active:not(:disabled) {
 					border-bottom-width: 1px;
 					border-bottom-color: shade($color, 20%);
 					background-color: shade($color, 20%);
@@ -138,16 +137,16 @@ $button-paddings: (
 				}
 
 				
-				&:focuss,
-				&.button--focused {
+				&:focus:not(:disabled),
+				&.button--focused:not(:disabled) {
 					color: color-yiq($color);
 					background-color: tint($color, 10%);
 					border-color: tint($color, 10%);
 					outline: none;
 				}
 
-				&:active,
-				&.button--active {
+				&:active:not(:disabled),
+				&.button--active:not(:disabled) {
 					color: color-yiq($color);
 					background-color: shade($color, 20%);
 					border-color: shade($color, 20%);
