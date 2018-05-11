@@ -322,6 +322,8 @@ pre {
 * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
 */
 a {
+  text-decoration: none;
+  color: inherit;
   background-color: transparent;
   /* 1 */
   -webkit-text-decoration-skip: objects;
@@ -795,11 +797,6 @@ h6,
 
 .subtitle {
   font-weight: 400;
-}
-
-a {
-  text-decoration: underline;
-  color: inherit;
 }
 
 .article .heading {
