@@ -57,6 +57,16 @@ hr {
         padding: spacing(x-small) spacing(base);
         margin-left: spacing(base) / -1;
         margin-right: spacing(base) / -1;
+
+        > a {
+            transition: $transition;
+            color: $gray;
+            
+            &:hover {
+                padding-left: spacing(x-small);
+                color: $dark;
+            }
+        }
         
         &--parent {
             font-weight: font-weight(bold);
