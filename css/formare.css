@@ -3725,7 +3725,6 @@ h6,
   position: relative;
   height: 200px;
   min-height: 200px;
-  border-radius: 4px;
   overflow: hidden;
 }
 
@@ -4418,11 +4417,6 @@ h6,
 .card--transparent .card__footer {
   padding-left: 0;
   padding-right: 0;
-}
-
-.card > *:first-child {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
 }
 
 .card-list .card {
