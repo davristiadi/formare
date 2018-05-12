@@ -52,10 +52,6 @@ const Card = props => {
                                 </div>
                                 <div className="card__body">
                                     <article className="article">
-                                        {/* <div className="heading">
-                                            <h4 className="title">Card Title</h4>
-                                            <h5 className="subtitle color-gray">This is a subtitle.</h5>
-                                        </div> */}
                                         <p>Tempor eiusmod excepteur esse culpa qui elit sint aliqua dolor. Qui mollit esse officia labore deserunt laborum dolore. Adipisicing mollit dolore eiusmod aute pariatur nulla culpa laborum culpa et dolore aute aute. Aute voluptate excepteur velit proident laboris qui.</p>
                                     </article>
                                 </div>
@@ -72,10 +68,6 @@ const Card = props => {
                                 </div>
                                 <div className="card__body">
                                     <article className="article">
-                                        {/* <div className="heading">
-                                            <h4 className="title">Card Title</h4>
-                                            <h5 className="subtitle color-gray">This is a subtitle.</h5>
-                                        </div> */}
                                         <p>Tempor eiusmod excepteur esse culpa qui elit sint aliqua dolor. Qui mollit esse officia labore deserunt laborum dolore. Adipisicing mollit dolore eiusmod aute pariatur nulla culpa laborum culpa et dolore aute aute. Aute voluptate excepteur velit proident laboris qui.</p>
                                     </article>
                                 </div>
