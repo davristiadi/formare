@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Hind+Siliguri:400,600,700");
 /*	-----------------------------------------------------------------------------
 
 	formare.io v0.1.0 | MIT License | github.com/dkk94/formare
@@ -224,7 +223,7 @@ section {
 */
 body {
   margin: 0;
-  font-family: "Hind Siliguri", sans-serif;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;

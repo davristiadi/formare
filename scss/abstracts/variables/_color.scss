@@ -117,14 +117,14 @@ $color-shades: map-merge((
 //	Global Colors
 $white				: #FFFFFF;
 $black				: #000000;
-$gray				: gray(1000);
-$light				: gray(200);
-$lighter			: gray(100);
-$dark				: gray(1600);
-$darker				: gray(1800);
+$gray				: gray(1000) !default;
+$light				: gray(200) !default;
+$lighter			: gray(100) !default;
+$dark				: gray(1600) !default;
+$darker				: gray(1800) !default;
 
-$text-color			: $dark;
-$background-color	: $white;
+$text-color			: $dark !default;
+$background-color	: $white !default;
 
 
 //  Theme colors
@@ -151,5 +151,5 @@ $theme-colors: map-merge((
 $yiq-contrasted-threshold: 150 !default;
 
 //  Customize the light and dark text colors for use in our YIQ color contrast function.
-$yiq-text-dark: gray(1600) !default;
-$yiq-text-light: gray(100) !default;
+$yiq-text-dark: $dark !default;
+$yiq-text-light: $light !default;
