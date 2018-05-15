@@ -12,7 +12,7 @@ const Button = props => {
                 <div className="mg-bottom-large">
                     <div className="heading">
                         <h5 className="title">Default Button</h5>
-                        <h6 className="subtitle">Id dolore aute cillum velit laboris irure laborum elit irure occaecat magna minim.</h6>                        
+                        <h6 className="subtitle color-gray">Id dolore aute cillum velit laboris irure laborum elit irure occaecat magna minim.</h6>                        
                     </div>
                     <button className="button">Button</button>
                 </div>
@@ -20,7 +20,7 @@ const Button = props => {
                 <div className="mg-bottom-large">
                     <div className="heading">
                         <h5 className="title">Button States</h5>
-                        <h6 className="subtitle">Id dolore aute cillum velit laboris irure laborum elit irure occaecat magna minim.</h6>
+                        <h6 className="subtitle color-gray">Id dolore aute cillum velit laboris irure laborum elit irure occaecat magna minim.</h6>
                     </div>
                     <button className="button mg-right mg-bottom">Button</button>
                     <button className="button button--primary mg-right mg-bottom">Primary</button>
@@ -35,7 +35,7 @@ const Button = props => {
                 <div className="mg-bottom-large">
                     <div className="heading">
                         <h5 className="title">Outlined</h5>
-                        <h6 className="subtitle">Id dolore aute cillum velit laboris irure laborum elit irure occaecat magna minim.</h6>
+                        <h6 className="subtitle color-gray">Id dolore aute cillum velit laboris irure laborum elit irure occaecat magna minim.</h6>
                     </div>
                     <button className="button button--outlined mg-right mg-bottom">Button</button>
                     <button className="button button--outlined button--primary mg-right mg-bottom">Primary</button>
@@ -50,7 +50,7 @@ const Button = props => {
                 <div className="mg-bottom-large">
                     <div className="heading">
                         <h5 className="title">Raised</h5>
-                        <h6 className="subtitle">Id dolore aute cillum velit laboris irure laborum elit irure occaecat magna minim.</h6>
+                        <h6 className="subtitle color-gray">Id dolore aute cillum velit laboris irure laborum elit irure occaecat magna minim.</h6>
                     </div>
                     <button className="button button--raised mg-right mg-bottom">Button</button>
                     <button className="button button--raised button--primary mg-right mg-bottom">Primary</button>
@@ -65,7 +65,7 @@ const Button = props => {
                 <div className="mg-bottom-large">
                     <div className="heading">
                         <h5 className="title">Rounded</h5>
-                        <h6 className="subtitle">Id dolore aute cillum velit laboris irure laborum elit irure occaecat magna minim.</h6>
+                        <h6 className="subtitle color-gray">Id dolore aute cillum velit laboris irure laborum elit irure occaecat magna minim.</h6>
                     </div>
                     <button className="button button--pill button--primary mg-right">Rounded Button</button>
                     <button className="button button--pill button--secondary mg-right">Rounded Button</button>
@@ -75,7 +75,7 @@ const Button = props => {
                 <div>
                     <div className="heading">
                         <h5 className="title">Sizes</h5>
-                        <h6 className="subtitle">Id dolore aute cillum velit laboris irure laborum elit irure occaecat magna minim.</h6>
+                        <h6 className="subtitle color-gray">Id dolore aute cillum velit laboris irure laborum elit irure occaecat magna minim.</h6>
                     </div>
                     <button className="button button--small margin-right">Small</button>
                     <button className="button margin-right">Base</button>
