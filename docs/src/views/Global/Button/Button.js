@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 const Button = props => {
     return (
-        <div id="button" className="mg-bottom-large">
-            <article className="article fr-article">
-                <div className="heading fr-heading">
+        <div id="button">
+            <article className="fr-article article">
+                <div className="fr-heading heading">
                     <h3 className="title">Buttons</h3>
                     <h5 className="subtitle color-gray">Consequat est magna et qui magna dolor consequat ex eiusmod velit sunt ullamco enim commodo laborum voluptate aliqua quis quis duis.</h5>
                 </div>

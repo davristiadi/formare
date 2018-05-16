@@ -8,6 +8,7 @@ import {
 import { Home } from './Home';
 import { Button } from './Button';
 import { Card } from './Card';
+import { Form } from './Form';
 
 class Global extends Component {
     render() {
@@ -17,14 +18,15 @@ class Global extends Component {
                 <span className="header-separator"></span>
                 <div className="container">
                     <div className="grids">
-                        <aside className="grid grid-3 fr-sidebar">
+                        <aside className="fr-sidebar grid grid-3">
                             <GlobalMenu />
                         </aside>
-                        <main className="grid fr-main">
+                        <main className="fr-main grid">
                             <Switch>
                                 <Route path="/home" component={Home} />
                                 <Route exact path="/buttons" component={Button} />
                                 <Route exact path="/cards" component={Card} />
+                                <Route exact path="/form" component={Form} />
                             </Switch>
                         </main>
                     </div>

@@ -4,6 +4,10 @@
 	"author": "David Kurnia Kristiadi <davidkurniakristiadi@gmail.com>",
 	"description": "Formare is a modern, component-based CSS framework that helps you build web interfaces hassle-free.",
 	"main": "scss/formare.scss",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/dkk94/formare"
+	  },
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "npm run build:clean && npm run build:sass",
