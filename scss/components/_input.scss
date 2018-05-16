@@ -10,10 +10,10 @@ $input-padding-y: spacing(small) !default;
 $input-padding-x: spacing(base) !default;
 $input-padding: $input-padding-y $input-padding-x;
 $input-background: $white;
-$input-disabled-background: $lighter;
+$input-disabled-background: $lightest;
 $input-transition: $transition;
-$input-group-extra-background: gray(200);
-$input-group-extra-border: solid 1px gray(200);
+$input-group-extra-background: $lighter;
+$input-group-extra-border: solid 1px $lighter;
 $input-group-extra-border-radius: $border-radius;
 
 .input,

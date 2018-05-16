@@ -31,6 +31,20 @@ const Form = props => {
                                     </div>
                                     <small className="color-danger">The inserted email address has an invalid format.</small>
                                 </div>
+                                <div className="form__field">
+                                    <label className="form__label">Phone Number</label>
+                                    <div className="input-group">
+                                        <span className="input-group__extra">+62</span>
+                                        <input type="text" className="input" />
+                                    </div>
+                                </div>
+                                <div className="form__field">
+                                    <label className="form__label">Disabled</label>
+                                    <div className="input-group">
+                                        <span className="input-group__extra">+62</span>
+                                        <input type="text" className="input" disabled />
+                                    </div>
+                                </div>
                             </form>
                         </div>
                     </div>
