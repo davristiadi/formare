@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { default as DummyPhoto } from '../../../../assets/images/dummy-photo.jpeg';
 
 const Card = props => {
     return (
@@ -44,7 +45,7 @@ const Card = props => {
                         <div className="grid grid-6 mg-bottom">
                             <div className="card">
                                 <div className="card__image">
-                                    <img src="https://images.unsplash.com/photo-1519458246479-6acae7536988?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6c0202cc94df51412fc49471d653eee5&auto=format&fit=crop&w=1350&q=80" /> 
+                                    <img src={DummyPhoto} /> 
                                 </div>
                                 <div className="card__header">
                                     <h4 className="title">Card Title</h4>
@@ -60,7 +61,7 @@ const Card = props => {
                         <div className="grid grid-6 mg-bottom">
                             <div className="card">
                                 <div className="card__image">
-                                    <img src="https://images.unsplash.com/photo-1519458246479-6acae7536988?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6c0202cc94df51412fc49471d653eee5&auto=format&fit=crop&w=1350&q=80" /> 
+                                    <img src={DummyPhoto} /> 
                                 </div>
                                 <div className="card__header">
                                     <h4 className="title">Card Title</h4>
@@ -76,7 +77,7 @@ const Card = props => {
                         <div className="grid grid-6 mg-bottom">
                             <div className="card card--dark card--has-overlay">
                                 <div class="card__image">
-                                    <img src="https://images.unsplash.com/photo-1519458246479-6acae7536988?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6c0202cc94df51412fc49471d653eee5&auto=format&fit=crop&w=1350&q=80" />
+                                    <img src={DummyPhoto} />
                                 </div>
                                 <div className="card__body">
                                     <h5 class="title">Lorem ea non cillum.</h5>
@@ -87,7 +88,7 @@ const Card = props => {
                         <div className="grid grid-6 mg-bottom">
                             <div className="card card--dark card--has-overlay">
                                 <div class="card__image">
-                                    <img src="https://images.unsplash.com/photo-1519458246479-6acae7536988?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6c0202cc94df51412fc49471d653eee5&auto=format&fit=crop&w=1350&q=80" />
+                                    <img src={DummyPhoto} />
                                 </div>
                                 <div className="card__body">
                                     <h5 class="title">Lorem ea non cillum.</h5>

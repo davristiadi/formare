@@ -8,13 +8,14 @@ class GlobalMenu extends Component {
                 <ul className="fr-menu__list">
                     <li className="fr-menu__item fr-menu__item--parent">Components</li>
                     <li className="fr-menu__item">
-                        <Link to="/buttons">Buttons</Link>
+                        <Link to="/components/buttons">Buttons</Link>
                     </li>
                     <li className="fr-menu__item">
-                        <Link to="/cards">Cards</Link>
+                        <Link to="/components/cards">Cards</Link>
                     </li>
+                    <li className="fr-menu__item fr-menu__item--parent">Form</li>
                     <li className="fr-menu__item">
-                        <Link to="/form">Form</Link>
+                        <Link to="/form/general">General</Link>
                     </li>
                 </ul>
             </div>

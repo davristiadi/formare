@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
-import Form from './Form';
+import General from './General';
 
-class FormContainer extends Component {
+class GeneralContainer extends Component {
     render () {
         return (
-            <Form
+            <General
                 {...this.state}
                 {...this.props}
             />
-        )
+        );
     }
 }
 
-export default FormContainer
+export default GeneralContainer

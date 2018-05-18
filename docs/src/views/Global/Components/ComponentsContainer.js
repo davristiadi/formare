@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import Form from './Form';
+import Components from './Components';
 
-class FormContainer extends Component {
+class ComponentsContainer extends Component {
     render () {
         return (
-            <Form
+            <Components
                 {...this.state}
                 {...this.props}
             />
@@ -12,4 +12,4 @@ class FormContainer extends Component {
     }
 }
 
-export default FormContainer
+export default ComponentsContainer

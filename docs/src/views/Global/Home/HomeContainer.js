@@ -3,7 +3,12 @@ import Home from './Home';
 
 class HomeContainer extends Component {
 	render() {
-		return <Home {...this.state} {...this.props} />
+		return (
+			<Home
+				{...this.state}
+				{...this.props}
+			/>
+		)
 	}
 } 
 

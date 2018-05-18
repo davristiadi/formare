@@ -41,21 +41,17 @@ hr {
 
 .fr-menu {
     padding-top: 4.5em;
-    padding-left: spacing(base);
-    padding-right: spacing(base);
     border-right: solid 1px gray(200);
     height: 100%;
 
     .fr-menu__list {
         list-style-type: none;
-        margin: 0;
         padding: 0;
+        margin-left: spacing(base) / -1;
     }
 
     .fr-menu__item {
         padding: spacing(x-small) spacing(base);
-        margin-left: spacing(base) / -1;
-        margin-right: spacing(base) / -1;
 
         > a {
             transition: $transition;

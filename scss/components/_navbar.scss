@@ -37,24 +37,31 @@ $navbar-heights: (
 	.navbar__container {
 		@extend .container;
 		display: flex;
-		flex-direction: row;
 		justify-content: space-between;
 		height: 100%;
-	}
 
+		&--full-width {
+			@extend .container--full-width;
+		}
+	}
 	
 	.navbar__block {
 		position: relative;
 		display: flex;
 		flex: 1 1 auto;
 		align-items: center;
-		padding-left: spacing(base);
-		padding-right: spacing(base);
 	}
 	
-	&--full-width {
-		.navbar__container {
-			@extend .container--full-width;
+	.nav {
+		height: 100%;
+
+		.nav__list {
+			height: 100%;
+		}
+
+		.nav__item {
+			display: flex;
+			align-items: center;
 		}
 	}
 }

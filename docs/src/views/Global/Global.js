@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { 
-    GlobalHeader, 
-    GlobalFooter, 
-    GlobalMenu 
-} from '../Global';
+
+import { GlobalHeader, GlobalFooter, GlobalMenu } from '../Global';
 import { Home } from './Home';
-import { Button } from './Button';
-import { Card } from './Card';
+import { Components } from './Components';
 import { Form } from './Form';
 
 class Global extends Component {
@@ -24,9 +20,8 @@ class Global extends Component {
                         <main className="fr-main grid">
                             <Switch>
                                 <Route path="/home" component={Home} />
-                                <Route exact path="/buttons" component={Button} />
-                                <Route exact path="/cards" component={Card} />
-                                <Route exact path="/form" component={Form} />
+                                <Route path="/components" component={Components} />
+                                <Route path="/form" component={Form} />
                             </Switch>
                         </main>
                     </div>
