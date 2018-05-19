@@ -13,31 +13,32 @@
 	@return mix(black, $color, $percentage);
 }
 
-/*  ------------------------------------------------------
-	Color Shade Getter
-	
-	A set of function specifically for getting color 
-	shades from the predefined map.
-------------------------------------------------------  */
-@function color-shade($type, $key, $map: $color-shades) {
-	@return nested-map-get($map, $type, $key);
+//	Color Shade Getter
+
+// .rule {
+// 	color: theme-color(primary, 600);
+// }
+
+@function color-shade($color, $shade-level, $map: $color-shades) {
+	@return nested-map-get($map, $color, $shade-level);
 }
 
-@function primary-color($key: 600, $map: primary) {
-	@return color-shade($map, $key);
+@function theme-color($theme-color: primary, $shade-level: 600) {
+	@return color-shade($theme-color, $shade-level);
 }
 
-@function secondary-color($key: 600, $map: secondary) {
-	@return color-shade($map, $key);
+@function primary-color($shade-level: 600, $color: primary) {
+	@return color-shade($color, $shade-level);
 }
 
-@function gray($key: 600, $map: grays) {
-	@return color-shade($map, $key);
+@function secondary-color($shade-level: 600, $color: secondary) {
+	@return color-shade($color, $shade-level);
 }
 
-@function theme-color($key: 600) {
-	@return map-get($theme-colors, $key);
+@function gray($shade-level: 600, $color: grays) {
+	@return color-shade($color, $shade-level);
 }
+
 
 
 /*  ------------------------------------------------------

@@ -1,21 +1,24 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-class GlobalMenu extends Component {
+class DocsMenu extends Component {
+	getActiveClassname = (path) => {
+	}
+
     render() {
         return (
             <div className="fr-menu">
                 <ul className="fr-menu__list">
                     <li className="fr-menu__item fr-menu__item--parent">Components</li>
                     <li className="fr-menu__item">
-                        <Link to="/components/buttons">Buttons</Link>
+                        <Link to="/docs/components/buttons">Buttons</Link>
                     </li>
                     <li className="fr-menu__item">
-                        <Link to="/components/cards">Cards</Link>
+                        <Link to="/docs/components/cards">Cards</Link>
                     </li>
                     <li className="fr-menu__item fr-menu__item--parent">Form</li>
                     <li className="fr-menu__item">
-                        <Link to="/form/general">General</Link>
+                        <Link to="/docs/form/general">General</Link>
                     </li>
                 </ul>
             </div>
@@ -23,4 +26,4 @@ class GlobalMenu extends Component {
     }
 }
 
-export default GlobalMenu;
+export default DocsMenu;

@@ -30,12 +30,6 @@
 	of color combinations.
 ------------------------------------------------------  */
 /*  ------------------------------------------------------
-	Color Shade Getter
-	
-	A set of function specifically for getting color 
-	shades from the predefined map.
-------------------------------------------------------  */
-/*  ------------------------------------------------------
 	Color YIQ
 	
 	Helps finding the correct contrasting color
@@ -4825,6 +4819,10 @@ h6,
   padding-right: 0;
 }
 
+.card--transparent .card__image {
+  border-radius: 4px;
+}
+
 .card-list .card {
   margin-bottom: 1.3125rem;
 }
@@ -5482,12 +5480,12 @@ hr {
 
 .fr-sidebar {
   position: sticky;
-  top: 1.5em;
+  top: 4em;
   height: calc(100vh - 3em);
 }
 
 .fr-menu {
-  padding-top: 4.5em;
+  padding-top: 0.875rem;
   border-right: solid 1px #e2e4e5;
   height: 100%;
 }
@@ -5507,9 +5505,19 @@ hr {
   color: #6D7A7D;
 }
 
-.fr-menu .fr-menu__item > a:hover {
-  padding-left: 0.4375rem;
-  color: #212526;
+.fr-menu .fr-menu__item:hover > a {
+  color: #4381C1;
+}
+
+.fr-menu .fr-menu__item--active {
+  background-color: #f0f2f2;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-right: solid 5px #4381C1;
+}
+
+.fr-menu .fr-menu__item--active > a {
+  color: #4381C1;
 }
 
 .fr-menu .fr-menu__item--parent {

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class GlobalHeader extends Component {
     render() {
@@ -7,16 +8,18 @@ class GlobalHeader extends Component {
                 <div className="navbar navbar--primary">
                     <div className="navbar__container">
                         <div className="navbar__block flex jc-start">
-                            <h5 className="font font--bold font--x-large">Formare</h5>
+                            <h5 className="font fw-bold fs-x-large">
+                            	<Link to="/" className="nav__link">Formare</Link>
+                            </h5>
                         </div>
                         <div className="navbar__block flex jc-end">
                             <nav className="nav">
                                 <ul className="nav__list">
                                     <li className="nav__item">
-                                        <a className="nav__link">Documentation</a>
+                                        <Link to="/docs" className="nav__link">Documentation</Link>
                                     </li>
                                     <li className="nav__item">
-                                        <a className="nav__link">Help</a>
+                                    	<Link to="/help" className="nav__link">Getting Started</Link>
                                     </li>
                                 </ul>
                             </nav>

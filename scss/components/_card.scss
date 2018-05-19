@@ -105,6 +105,10 @@ $card-inner-border		: solid 1px $lighter;
 			padding-left: 0;
 			padding-right: 0;
 		}
+
+		.card__image {
+			border-radius: $card-border-radius;
+		}
 	}
 }
 

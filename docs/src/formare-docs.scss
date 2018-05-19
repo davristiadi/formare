@@ -35,12 +35,12 @@ hr {
 
 .fr-sidebar {
     position: sticky;
-    top: 1.5em;
+    top: 4em;
     height: calc(100vh - 3em);
 }
 
 .fr-menu {
-    padding-top: 4.5em;
+    padding-top: $spacing;
     border-right: solid 1px gray(200);
     height: 100%;
 
@@ -56,11 +56,23 @@ hr {
         > a {
             transition: $transition;
             color: $gray;
-            
-            &:hover {
-                padding-left: spacing(x-small);
-                color: $dark;
-            }
+        }
+
+        &:hover {
+        	> a {
+        		color: theme-color(primary, 600);
+        	}
+        }
+
+        &--active {
+        	background-color: $lightest;
+        	border-top-left-radius: $border-radius;
+        	border-bottom-left-radius: $border-radius;
+        	border-right: solid 5px theme-color(primary);
+
+        	> a {
+        		color: theme-color(primary, 600);
+        	}
         }
         
         &--parent {

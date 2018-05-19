@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-
-import { GlobalHeader, GlobalFooter, GlobalMenu } from '../Global';
+import { BrowserRouter, Switch } from 'react-router-dom';
+import { PropsRoute } from '../../components/Utilities';
+import { GlobalHeader, GlobalFooter } from '../Global';
 import { Home } from './Home';
-import { Components } from './Components';
-import { Form } from './Form';
+import { Docs } from './Docs';
 
 class Global extends Component {
     render() {
@@ -12,20 +11,10 @@ class Global extends Component {
             <div id="global">
                 <GlobalHeader />
                 <span className="header-separator"></span>
-                <div className="container">
-                    <div className="grids">
-                        <aside className="fr-sidebar grid grid-3">
-                            <GlobalMenu />
-                        </aside>
-                        <main className="fr-main grid">
-                            <Switch>
-                                <Route path="/home" component={Home} />
-                                <Route path="/components" component={Components} />
-                                <Route path="/form" component={Form} />
-                            </Switch>
-                        </main>
-                    </div>
-                </div>
+                <Switch>
+                    <PropsRoute exact path="/" component={Home} {...this.props} />
+                    <PropsRoute path="/docs" component={Docs} {...this.props} />
+                </Switch>
             </div>
         );
     }

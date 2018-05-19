@@ -1,0 +1,1 @@
+export { default as PropsRoute } from './PropsRoute';

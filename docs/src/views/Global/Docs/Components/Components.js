@@ -6,8 +6,8 @@ import { Card } from './Card';
 const Components = props => {    
     return (
         <Switch>
-            <Route path="/components/buttons" component={Button} />
-            <Route path="/components/cards" component={Card} />
+            <Route path="/docs/components/buttons" component={Button} />
+            <Route path="/docs/components/cards" component={Card} />
         </Switch>
     )
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { default as DummyPhoto } from '../../../../assets/images/dummy-photo.jpeg';
+import { default as DummyPhoto } from '../../../../../assets/images/dummy-photo.jpeg';
 
 const Card = props => {
     return (
@@ -76,7 +76,7 @@ const Card = props => {
                         </div>
                         <div className="grid grid-6 mg-bottom">
                             <div className="card card--dark card--has-overlay">
-                                <div class="card__image">
+                                <div className="card__image">
                                     <img src={DummyPhoto} />
                                 </div>
                                 <div className="card__body">
@@ -87,7 +87,7 @@ const Card = props => {
                         </div>
                         <div className="grid grid-6 mg-bottom">
                             <div className="card card--dark card--has-overlay">
-                                <div class="card__image">
+                                <div className="card__image">
                                     <img src={DummyPhoto} />
                                 </div>
                                 <div className="card__body">
@@ -95,6 +95,16 @@ const Card = props => {
                                     <span>Cupidatat duis proident exercitation ullamco sunt labore.</span>
                                 </div>
                             </div>
+                        </div>
+                        <div className="grid grid-6 mg-bottom">
+                        	<div className="card card--transparent">
+                        		<div className="card__image">
+                        			<img src={DummyPhoto} />
+                        		</div>
+                        		<div className="card__body">
+                        			<h5 className="title">Lorem ipsum dolor</h5>
+                        		</div>
+                        	</div>
                         </div>
                     </div>
 
