@@ -14,8 +14,8 @@ const General = props => {
                 </div>
                 <div className="grids">
                     <div className="grid grid-8">
-                        <div className="fr-panel">
-                            <span className="fr-panel__tag">Preview</span>
+                        <div className="fr-preview">
+                            <span className="fr-preview__tag">Preview</span>
                             <form className="form">
                                 <div className="form__field">
                                     <label className="form__label">Full Name</label>

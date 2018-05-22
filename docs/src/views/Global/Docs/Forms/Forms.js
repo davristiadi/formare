@@ -5,7 +5,7 @@ import { General } from './General'
 const Form = props => {
     return (
         <Switch>
-            <Route path="/form/general" component={General} />
+            <Route path="/docs/forms/general" component={General} />
         </Switch>
     )
 }

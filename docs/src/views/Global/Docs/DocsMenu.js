@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 class DocsMenu extends Component {
-	getActiveClassname = (path) => {
-	}
-
     render() {
         return (
             <div className="fr-menu">
@@ -18,7 +15,7 @@ class DocsMenu extends Component {
                     </li>
                     <li className="fr-menu__item fr-menu__item--parent">Form</li>
                     <li className="fr-menu__item">
-                        <Link to="/docs/form/general">General</Link>
+                        <Link to="/docs/forms/general">General</Link>
                     </li>
                 </ul>
             </div>

@@ -5534,22 +5534,22 @@ hr {
   margin-bottom: 2.5em;
 }
 
-.fr-panel {
+.fr-preview {
   position: relative;
-  border: solid 1px #d3d7d8;
+  border: solid 1px #e2e4e5;
   padding: 0.875rem;
-  padding-top: 1.75rem;
+  padding-top: 3em;
   border-radius: 4px;
 }
 
-.fr-panel .fr-panel__tag {
+.fr-preview .fr-preview__tag {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #d3d7d8;
+  background-color: #e2e4e5;
   padding: 2.5px 7.5px;
   border-radius: 4px;
-  margin-top: 5px;
-  margin-right: 5px;
+  margin-top: 7.5px;
+  margin-right: 7.5px;
   font-size: 0.7rem;
 }

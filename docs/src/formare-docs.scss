@@ -95,22 +95,26 @@ hr {
 }
 
 //
-.fr-panel {
+.fr-preview {
     position: relative;
-    border: solid 1px $light;
+    border: solid 1px $lighter;
     padding: $spacing;
-    padding-top: spacing(x-large);
+    padding-top: 3em;
     border-radius: $border-radius;
 
-    .fr-panel__tag {
+    .fr-preview__tag {
         position: absolute;
         top: 0;
         right: 0;
-        background-color: gray(300);
+        background-color: $lighter;
         padding: 2.5px 7.5px;
         border-radius: border-radius(base);
-        margin-top: 5px;
-        margin-right: 5px;
+        margin-top: 7.5px;
+        margin-right: 7.5px;
         font-size: font-size(x-small);
+    }
+
+    .fr-preview__code-block {
+
     }
 }

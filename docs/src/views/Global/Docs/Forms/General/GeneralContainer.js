@@ -3,6 +3,8 @@ import General from './General';
 
 class GeneralContainer extends Component {
     render () {
+    	console.log(123);
+
         return (
             <General
                 {...this.state}
