@@ -10,15 +10,15 @@ $hero-heights		: (
 
 .hero {
 	position: relative;
-	height: $hero-height;
 	min-height: $hero-height;
 	
 	@each $theme, $color in $hero-themes {
-		&--is-#{$theme} {
+		&--#{$theme} {
 			background-color: $color;
 			color: color-yiq($color);
 
 			&.hero--has-overlay {
+				height: $hero-height;
 				background-size: cover;
 				background-position: center;
 		
@@ -37,7 +37,7 @@ $hero-heights		: (
 	}
 
 	@each $size, $height in $hero-heights {
-		&--is-#{$size} {
+		&--#{$size} {
 			height: $height;
 			min-height: $height;
 		}

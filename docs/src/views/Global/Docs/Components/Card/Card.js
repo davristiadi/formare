@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Prism from 'prismjs';
 import { default as DummyPhoto } from '../../../../../assets/images/dummy-photo.jpeg';
 
 const Card = props => {

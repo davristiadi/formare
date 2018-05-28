@@ -1,12 +1,13 @@
 import React from 'react';
-import Prism from 'prismjs';
 import PropTypes from 'prop-types';
 
 const Button = props => {
-	Prism.highlightAll();
-
 	return (
 		<div id="button">
+			<section className="hero hero">
+			
+			</section>
+		
 			<article className="fr-article article">
 				<div className="fr-heading heading">
 					<h3 className="title">Buttons</h3>
