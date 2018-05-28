@@ -1519,21 +1519,21 @@ h6,
 
 .hero {
   position: relative;
-  height: 35em;
   min-height: 35em;
 }
 
-.hero--is-primary {
+.hero--primary {
   background-color: #4381C1;
   color: #f0f2f2;
 }
 
-.hero--is-primary.hero--has-overlay {
+.hero--primary.hero--has-overlay {
+  height: 35em;
   background-size: cover;
   background-position: center;
 }
 
-.hero--is-primary.hero--has-overlay:after {
+.hero--primary.hero--has-overlay:after {
   content: "";
   position: absolute;
   top: 0;
@@ -1544,17 +1544,18 @@ h6,
   opacity: 0.5;
 }
 
-.hero--is-secondary {
+.hero--secondary {
   background-color: #D3492C;
   color: #f0f2f2;
 }
 
-.hero--is-secondary.hero--has-overlay {
+.hero--secondary.hero--has-overlay {
+  height: 35em;
   background-size: cover;
   background-position: center;
 }
 
-.hero--is-secondary.hero--has-overlay:after {
+.hero--secondary.hero--has-overlay:after {
   content: "";
   position: absolute;
   top: 0;
@@ -1565,17 +1566,18 @@ h6,
   opacity: 0.5;
 }
 
-.hero--is-success {
+.hero--success {
   background-color: #48A900;
   color: #f0f2f2;
 }
 
-.hero--is-success.hero--has-overlay {
+.hero--success.hero--has-overlay {
+  height: 35em;
   background-size: cover;
   background-position: center;
 }
 
-.hero--is-success.hero--has-overlay:after {
+.hero--success.hero--has-overlay:after {
   content: "";
   position: absolute;
   top: 0;
@@ -1586,17 +1588,18 @@ h6,
   opacity: 0.5;
 }
 
-.hero--is-warning {
+.hero--warning {
   background-color: #EBC500;
   color: #212526;
 }
 
-.hero--is-warning.hero--has-overlay {
+.hero--warning.hero--has-overlay {
+  height: 35em;
   background-size: cover;
   background-position: center;
 }
 
-.hero--is-warning.hero--has-overlay:after {
+.hero--warning.hero--has-overlay:after {
   content: "";
   position: absolute;
   top: 0;
@@ -1607,17 +1610,18 @@ h6,
   opacity: 0.5;
 }
 
-.hero--is-danger {
+.hero--danger {
   background-color: #931B13;
   color: #f0f2f2;
 }
 
-.hero--is-danger.hero--has-overlay {
+.hero--danger.hero--has-overlay {
+  height: 35em;
   background-size: cover;
   background-position: center;
 }
 
-.hero--is-danger.hero--has-overlay:after {
+.hero--danger.hero--has-overlay:after {
   content: "";
   position: absolute;
   top: 0;
@@ -1628,17 +1632,18 @@ h6,
   opacity: 0.5;
 }
 
-.hero--is-white {
+.hero--white {
   background-color: #FFFFFF;
   color: #212526;
 }
 
-.hero--is-white.hero--has-overlay {
+.hero--white.hero--has-overlay {
+  height: 35em;
   background-size: cover;
   background-position: center;
 }
 
-.hero--is-white.hero--has-overlay:after {
+.hero--white.hero--has-overlay:after {
   content: "";
   position: absolute;
   top: 0;
@@ -1649,17 +1654,18 @@ h6,
   opacity: 0.5;
 }
 
-.hero--is-black {
+.hero--black {
   background-color: #000000;
   color: #f0f2f2;
 }
 
-.hero--is-black.hero--has-overlay {
+.hero--black.hero--has-overlay {
+  height: 35em;
   background-size: cover;
   background-position: center;
 }
 
-.hero--is-black.hero--has-overlay:after {
+.hero--black.hero--has-overlay:after {
   content: "";
   position: absolute;
   top: 0;
@@ -1670,17 +1676,18 @@ h6,
   opacity: 0.5;
 }
 
-.hero--is-gray {
+.hero--gray {
   background-color: #6D7A7D;
   color: #f0f2f2;
 }
 
-.hero--is-gray.hero--has-overlay {
+.hero--gray.hero--has-overlay {
+  height: 35em;
   background-size: cover;
   background-position: center;
 }
 
-.hero--is-gray.hero--has-overlay:after {
+.hero--gray.hero--has-overlay:after {
   content: "";
   position: absolute;
   top: 0;
@@ -1691,17 +1698,18 @@ h6,
   opacity: 0.5;
 }
 
-.hero--is-light {
+.hero--light {
   background-color: #d3d7d8;
   color: #212526;
 }
 
-.hero--is-light.hero--has-overlay {
+.hero--light.hero--has-overlay {
+  height: 35em;
   background-size: cover;
   background-position: center;
 }
 
-.hero--is-light.hero--has-overlay:after {
+.hero--light.hero--has-overlay:after {
   content: "";
   position: absolute;
   top: 0;
@@ -1712,17 +1720,18 @@ h6,
   opacity: 0.5;
 }
 
-.hero--is-lighter {
+.hero--lighter {
   background-color: #e2e4e5;
   color: #212526;
 }
 
-.hero--is-lighter.hero--has-overlay {
+.hero--lighter.hero--has-overlay {
+  height: 35em;
   background-size: cover;
   background-position: center;
 }
 
-.hero--is-lighter.hero--has-overlay:after {
+.hero--lighter.hero--has-overlay:after {
   content: "";
   position: absolute;
   top: 0;
@@ -1733,17 +1742,18 @@ h6,
   opacity: 0.5;
 }
 
-.hero--is-lightest {
+.hero--lightest {
   background-color: #f0f2f2;
   color: #212526;
 }
 
-.hero--is-lightest.hero--has-overlay {
+.hero--lightest.hero--has-overlay {
+  height: 35em;
   background-size: cover;
   background-position: center;
 }
 
-.hero--is-lightest.hero--has-overlay:after {
+.hero--lightest.hero--has-overlay:after {
   content: "";
   position: absolute;
   top: 0;
@@ -1754,17 +1764,18 @@ h6,
   opacity: 0.5;
 }
 
-.hero--is-dark {
+.hero--dark {
   background-color: #212526;
   color: #f0f2f2;
 }
 
-.hero--is-dark.hero--has-overlay {
+.hero--dark.hero--has-overlay {
+  height: 35em;
   background-size: cover;
   background-position: center;
 }
 
-.hero--is-dark.hero--has-overlay:after {
+.hero--dark.hero--has-overlay:after {
   content: "";
   position: absolute;
   top: 0;
@@ -1775,17 +1786,18 @@ h6,
   opacity: 0.5;
 }
 
-.hero--is-darker {
+.hero--darker {
   background-color: #161819;
   color: #f0f2f2;
 }
 
-.hero--is-darker.hero--has-overlay {
+.hero--darker.hero--has-overlay {
+  height: 35em;
   background-size: cover;
   background-position: center;
 }
 
-.hero--is-darker.hero--has-overlay:after {
+.hero--darker.hero--has-overlay:after {
   content: "";
   position: absolute;
   top: 0;
@@ -1796,17 +1808,18 @@ h6,
   opacity: 0.5;
 }
 
-.hero--is-darkest {
+.hero--darkest {
   background-color: #0b0c0d;
   color: #f0f2f2;
 }
 
-.hero--is-darkest.hero--has-overlay {
+.hero--darkest.hero--has-overlay {
+  height: 35em;
   background-size: cover;
   background-position: center;
 }
 
-.hero--is-darkest.hero--has-overlay:after {
+.hero--darkest.hero--has-overlay:after {
   content: "";
   position: absolute;
   top: 0;
@@ -1817,27 +1830,27 @@ h6,
   opacity: 0.5;
 }
 
-.hero--is-x-tall {
+.hero--x-tall {
   height: 17.5em;
   min-height: 17.5em;
 }
 
-.hero--is-tall {
+.hero--tall {
   height: 26.25em;
   min-height: 26.25em;
 }
 
-.hero--is-base {
+.hero--base {
   height: 35em;
   min-height: 35em;
 }
 
-.hero--is-short {
+.hero--short {
   height: 70em;
   min-height: 70em;
 }
 
-.hero--is-x-short {
+.hero--x-short {
   height: 87.5em;
   min-height: 87.5em;
 }
