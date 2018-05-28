@@ -803,7 +803,7 @@ h6,
 
 .container, .navbar .navbar__container {
   margin: 0 auto;
-  padding: 0 7.5px;
+  padding: 0 15px;
 }
 
 @media (min-width: 576px) {
@@ -835,7 +835,7 @@ h6,
 }
 
 .container--full-width, .navbar .navbar__container--full-width {
-  margin: 0 15px;
+  margin: 0 30px;
   width: auto;
   max-width: none;
 }
@@ -844,7 +844,7 @@ h6,
 .grids {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -7.5px;
+  margin: 0 -15px;
 }
 
 .row--is-gapless,
@@ -865,7 +865,7 @@ h6,
   flex-shrink: 0;
   flex-basis: 0;
   max-width: 100%;
-  padding: 0 7.5px;
+  padding: 0 15px;
 }
 
 .grid.grid-1, .grid.column-1,
