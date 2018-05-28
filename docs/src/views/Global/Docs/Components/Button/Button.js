@@ -4,10 +4,6 @@ import PropTypes from 'prop-types';
 const Button = props => {
 	return (
 		<div id="button">
-			<section className="hero hero">
-			
-			</section>
-		
 			<article className="fr-article article">
 				<div className="fr-heading heading">
 					<h3 className="title">Buttons</h3>
