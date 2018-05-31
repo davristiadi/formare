@@ -10,7 +10,7 @@ const Card = props => {
                     <h3 className="title">Card</h3>
                     <h5 className="subtitle color-gray">Culpa culpa deserunt magna nostrud sunt adipisicing cillum commodo dolore cupidatat nostrud veniam. Commodo id nulla consectetur aliqua aute. Fugiat irure consectetur cillum pariatur laboris est.</h5>
                 </div>
-                <section>
+                <section class="section">
                 	<div className="fr-preview">
                 	    <span className="fr-preview__tag">Preview</span>
                 	    <div className="fr-preview__display">

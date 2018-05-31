@@ -100,21 +100,21 @@ hr {
     border: solid 1px $lighter;
     padding: $spacing;
     padding-top: 3em;
+    margin-top: 3em;
     border-radius: $border-radius;
+    border-top-left-radius: 0;
 
     .fr-preview__tag {
         position: absolute;
         top: 0;
-        right: 0;
-        background-color: $lighter;
+        left: -1px;
+        transform: translateY(-100%);
+        background-color: theme-color(secondary);
+        color: color-yiq(theme-color(secondary));
         padding: 2.5px 7.5px;
-        border-radius: border-radius(base);
-        margin-top: 7.5px;
-        margin-right: 7.5px;
         font-size: font-size(x-small);
-    }
-
-    .fr-preview__code-block {
-
+        border-radius: border-radius(base);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
     }
 }

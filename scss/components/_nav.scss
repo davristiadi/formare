@@ -50,12 +50,55 @@ $nav-item-icon-size: 48px;
 
 		.nav__link {
 			display: flex;
+			flex: 1 0 auto;
 			flex-direction: column;
 			font-weight: $nav-item-weight;
 			padding: $nav-item-padding;
 			text-decoration: none;
 			color: inherit;
 			cursor: pointer;
+		}
+	}
+	
+	@each $theme, $value in $theme-colors {
+		&--#{$theme} {
+			&.nav--tabs {
+				.nav__list {
+					.nav__item {
+						&:hover {
+							color: $value;
+							border-bottom: solid 2px $value;
+						}
+						
+						&--active {
+							color: $value;
+							border-bottom: solid 2px $value;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&--tabs {
+		.nav__list {
+			border-bottom: solid 2px $lighter;
+
+			.nav__item {
+				margin-bottom: -2px;
+				border-bottom-style: solid;
+				border-bottom-width: 2px;
+				border-bottom-color: transparent;
+				transition: $transition;
+				
+				&:hover {
+					border-bottom: solid 2px $dark;
+				}
+				
+				&--active {
+					border-bottom: solid 2px $darker;
+				}
+			}
 		}
 	}
 }
