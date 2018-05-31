@@ -1511,10 +1511,78 @@ h6,
   }
 }
 
-/**
-**/
 .section {
   position: relative;
+}
+
+.section--primary {
+  background-color: #4381C1;
+  color: #f0f2f2;
+}
+
+.section--secondary {
+  background-color: #D3492C;
+  color: #f0f2f2;
+}
+
+.section--success {
+  background-color: #48A900;
+  color: #f0f2f2;
+}
+
+.section--warning {
+  background-color: #EBC500;
+  color: #212526;
+}
+
+.section--danger {
+  background-color: #931B13;
+  color: #f0f2f2;
+}
+
+.section--white {
+  background-color: #FFFFFF;
+  color: #212526;
+}
+
+.section--black {
+  background-color: #000000;
+  color: #f0f2f2;
+}
+
+.section--gray {
+  background-color: #6D7A7D;
+  color: #f0f2f2;
+}
+
+.section--light {
+  background-color: #d3d7d8;
+  color: #212526;
+}
+
+.section--lighter {
+  background-color: #e2e4e5;
+  color: #212526;
+}
+
+.section--lightest {
+  background-color: #f0f2f2;
+  color: #212526;
+}
+
+.section--dark {
+  background-color: #212526;
+  color: #f0f2f2;
+}
+
+.section--darker {
+  background-color: #161819;
+  color: #f0f2f2;
+}
+
+.section--darkest {
+  background-color: #0b0c0d;
+  color: #f0f2f2;
 }
 
 .hero {
