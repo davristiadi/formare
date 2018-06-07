@@ -4291,6 +4291,7 @@ h6,
   -moz-justify-content: flex-end;
   justify-content: flex-end;
   min-height: 15em;
+  border: 0;
 }
 
 .card--primary.card--has-overlay:after {
@@ -4347,6 +4348,7 @@ h6,
   -moz-justify-content: flex-end;
   justify-content: flex-end;
   min-height: 15em;
+  border: 0;
 }
 
 .card--secondary.card--has-overlay:after {
@@ -4403,6 +4405,7 @@ h6,
   -moz-justify-content: flex-end;
   justify-content: flex-end;
   min-height: 15em;
+  border: 0;
 }
 
 .card--success.card--has-overlay:after {
@@ -4459,6 +4462,7 @@ h6,
   -moz-justify-content: flex-end;
   justify-content: flex-end;
   min-height: 15em;
+  border: 0;
 }
 
 .card--warning.card--has-overlay:after {
@@ -4515,6 +4519,7 @@ h6,
   -moz-justify-content: flex-end;
   justify-content: flex-end;
   min-height: 15em;
+  border: 0;
 }
 
 .card--danger.card--has-overlay:after {
@@ -4571,6 +4576,7 @@ h6,
   -moz-justify-content: flex-end;
   justify-content: flex-end;
   min-height: 15em;
+  border: 0;
 }
 
 .card--white.card--has-overlay:after {
@@ -4627,6 +4633,7 @@ h6,
   -moz-justify-content: flex-end;
   justify-content: flex-end;
   min-height: 15em;
+  border: 0;
 }
 
 .card--black.card--has-overlay:after {
@@ -4683,6 +4690,7 @@ h6,
   -moz-justify-content: flex-end;
   justify-content: flex-end;
   min-height: 15em;
+  border: 0;
 }
 
 .card--gray.card--has-overlay:after {
@@ -4739,6 +4747,7 @@ h6,
   -moz-justify-content: flex-end;
   justify-content: flex-end;
   min-height: 15em;
+  border: 0;
 }
 
 .card--light.card--has-overlay:after {
@@ -4795,6 +4804,7 @@ h6,
   -moz-justify-content: flex-end;
   justify-content: flex-end;
   min-height: 15em;
+  border: 0;
 }
 
 .card--lighter.card--has-overlay:after {
@@ -4851,6 +4861,7 @@ h6,
   -moz-justify-content: flex-end;
   justify-content: flex-end;
   min-height: 15em;
+  border: 0;
 }
 
 .card--lightest.card--has-overlay:after {
@@ -4907,6 +4918,7 @@ h6,
   -moz-justify-content: flex-end;
   justify-content: flex-end;
   min-height: 15em;
+  border: 0;
 }
 
 .card--dark.card--has-overlay:after {
@@ -4963,6 +4975,7 @@ h6,
   -moz-justify-content: flex-end;
   justify-content: flex-end;
   min-height: 15em;
+  border: 0;
 }
 
 .card--darker.card--has-overlay:after {
@@ -5019,6 +5032,7 @@ h6,
   -moz-justify-content: flex-end;
   justify-content: flex-end;
   min-height: 15em;
+  border: 0;
 }
 
 .card--darkest.card--has-overlay:after {
@@ -5798,4 +5812,8 @@ hr {
   border-radius: 4px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+}
+
+.fr-preview .fr-preview__display {
+  padding: 0.875rem;
 }

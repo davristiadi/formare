@@ -58,6 +58,7 @@ $card-inner-border		: solid 1px $lighter;
 				@include flex-direction(column);
 				@include justify-content(flex-end);
 				min-height: 15em;
+				border: 0;
 		
 				&:after {
 					content: "";
