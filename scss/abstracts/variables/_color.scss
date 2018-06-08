@@ -22,7 +22,8 @@ $danger-color			: $spartan-crimson !default;
 $gray-color				: $sirocco !default;
 
 //	Generate color shades
-$color-shades: (
+$color-shades: () !default;
+$color-shades: map-merge((
 	primary: (
 		100: tint($primary-color, 40%),
 		200: tint($primary-color, 32%),
@@ -111,7 +112,7 @@ $color-shades: (
 		1900: shade($gray-color, 90%),
 		2000: shade($gray-color, 100%),
 	)
-) !default;
+), $color-shades);
 
 //	Global Colors
 $white: #FFFFFF;
@@ -128,7 +129,8 @@ $text-color: $dark !default;
 $background-color: $white !default;
 
 //  Theme colors
-$theme-colors: (
+$theme-colors: () !default;
+$theme-colors: map-merge((
 	primary: $primary-color,
 	secondary: $secondary-color,
 	success: $success-color,
@@ -143,7 +145,7 @@ $theme-colors: (
 	dark: $dark,
 	darker: $darker,
 	darkest: $darkest
-) !default;
+), $theme-colors);
 
 
 //	Color YIQ Contrastor
