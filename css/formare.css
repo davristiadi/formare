@@ -1590,6 +1590,31 @@ h6,
   min-height: 35em;
 }
 
+.hero--x-small {
+  height: 17.5em;
+  min-height: 17.5em;
+}
+
+.hero--small {
+  height: 26.25em;
+  min-height: 26.25em;
+}
+
+.hero--base {
+  height: 35em;
+  min-height: 35em;
+}
+
+.hero--large {
+  height: 70em;
+  min-height: 70em;
+}
+
+.hero--x-large {
+  height: 87.5em;
+  min-height: 87.5em;
+}
+
 .hero--primary {
   background-color: #4381C1;
   color: #f0f2f2;
@@ -1896,31 +1921,6 @@ h6,
   width: 100%;
   background-color: #0b0c0d;
   opacity: 0.5;
-}
-
-.hero--x-tall {
-  height: 17.5em;
-  min-height: 17.5em;
-}
-
-.hero--tall {
-  height: 26.25em;
-  min-height: 26.25em;
-}
-
-.hero--base {
-  height: 35em;
-  min-height: 35em;
-}
-
-.hero--short {
-  height: 70em;
-  min-height: 70em;
-}
-
-.hero--x-short {
-  height: 87.5em;
-  min-height: 87.5em;
 }
 
 .flex {
