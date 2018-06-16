@@ -1,0 +1,36 @@
+$alert-themes: $theme-colors;
+$alert-border-radius: $border-radius;
+
+.alert {
+    position: relative;
+    border-radius: $alert-border-radius;
+
+    @each $theme, $color in $alert-themes {
+        &--#{$theme} {
+            background-color: tint($color, 80%);
+            color: shade($color, 25%);
+        }
+    }
+
+    &__message {
+        padding-left: $spacing;
+        padding-right: $spacing;
+    }
+
+    &--has-extra {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .alert__message { flex: 1 1 auto; }
+        .alert__extra {
+            &:first-child { padding-left: $spacing; }
+            &:last-child { padding-right: $spacing; }
+        }
+    }
+
+    > * {
+        padding-top: $spacing;
+        padding-bottom: $spacing;
+    }
+}
