@@ -1,16 +1,24 @@
-$hero-themes		: $theme-colors;
-$hero-height		: 35em;
-$hero-heights		: (
-	x-tall			: ($hero-height * 0.5),		
-	tall			: ($hero-height * 0.75),
-	base			: ($hero-height * 1),
-	short			: ($hero-height * 2),
-	x-short			: ($hero-height * 2.5)
-) !default;
+$hero-themes: $theme-colors;
+$hero-height: 35em;
+$hero-heights: () !default;
+$hero-heights: map-merge((
+	x-small: ($hero-height * 0.5),
+	small: ($hero-height * 0.75),
+	base: ($hero-height * 1),
+	large: ($hero-height * 2),
+	x-large: ($hero-height * 2.5)
+), $hero-heights);
 
 .hero {
 	position: relative;
 	min-height: $hero-height;
+	
+	@each $size, $height in $hero-heights {
+		&--#{$size} {
+			height: $height;
+			min-height: $height;
+		}
+	}
 	
 	@each $theme, $color in $hero-themes {
 		&--#{$theme} {
@@ -33,13 +41,6 @@ $hero-heights		: (
 					opacity: 0.5;
 				}
 			}
-		}
-	}
-
-	@each $size, $height in $hero-heights {
-		&--#{$size} {
-			height: $height;
-			min-height: $height;
 		}
 	}
 }
