@@ -2202,6 +2202,109 @@ h6,
   border-color: #0b0c0d;
 }
 
+.alert {
+  position: relative;
+  border-radius: 4px;
+}
+
+.alert--primary {
+  background-color: #d9e6f3;
+  color: #326191;
+}
+
+.alert--secondary {
+  background-color: #f6dbd5;
+  color: #9e3721;
+}
+
+.alert--success {
+  background-color: #daeecc;
+  color: #367f00;
+}
+
+.alert--warning {
+  background-color: #fbf3cc;
+  color: #b09400;
+}
+
+.alert--danger {
+  background-color: #e9d1d0;
+  color: #6e140e;
+}
+
+.alert--white {
+  background-color: white;
+  color: #bfbfbf;
+}
+
+.alert--black {
+  background-color: #cccccc;
+  color: black;
+}
+
+.alert--gray {
+  background-color: #e2e4e5;
+  color: #525c5e;
+}
+
+.alert--light {
+  background-color: #f6f7f7;
+  color: #9ea1a2;
+}
+
+.alert--lighter {
+  background-color: #f9fafa;
+  color: #aaabac;
+}
+
+.alert--lightest {
+  background-color: #fcfcfc;
+  color: #b4b6b6;
+}
+
+.alert--dark {
+  background-color: #d3d3d4;
+  color: #191c1d;
+}
+
+.alert--darker {
+  background-color: #d0d1d1;
+  color: #111213;
+}
+
+.alert--darkest {
+  background-color: #cececf;
+  color: #08090a;
+}
+
+.alert__message {
+  padding-left: 0.875rem;
+  padding-right: 0.875rem;
+}
+
+.alert--has-extra {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.alert--has-extra .alert__message {
+  flex: 1 1 auto;
+}
+
+.alert--has-extra .alert__extra:first-child {
+  padding-left: 0.875rem;
+}
+
+.alert--has-extra .alert__extra:last-child {
+  padding-right: 0.875rem;
+}
+
+.alert > * {
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
+}
+
 .nav {
   position: relative;
 }
