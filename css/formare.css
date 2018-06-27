@@ -4248,6 +4248,12 @@ h6,
   border-radius: 4px;
 }
 
+.input-group:focus-within .input-group__extra {
+  background-color: #4381C1;
+  color: #f0f2f2;
+  border: solid 1px #4381C1;
+}
+
 .input-group > *:first-child {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
