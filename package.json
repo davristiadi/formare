@@ -13,6 +13,8 @@
 		"build": "npm run build:clean && npm run build:sass",
 		"build:sass": "node-sass --output-style expanded --source-map true scss/formare.scss css/formare.css",
 		"build:clean": "cleancss -o css/formare.min.css css/formare.css",
+		"publish:beta": "npm publish --tag beta",
+		"publish:next": "npm publish --tag next",
 		"start": "npm run build:sass && npm run build:clean"
 	},
 	"license": "ISC",
