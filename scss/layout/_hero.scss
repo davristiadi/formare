@@ -26,11 +26,15 @@ $hero-heights: map-merge((
 			color: color-yiq($color);
 
 			&.hero--has-overlay {
-				height: $hero-height;
-				background-size: cover;
 				background-position: center;
-		
-				&:after {
+				background-size: cover;
+
+				* {
+					position: relative;
+					z-index: 200;
+				}
+
+				&:before {
 					content: "";
 					position: absolute;
 					top: 0;
@@ -38,9 +42,18 @@ $hero-heights: map-merge((
 					height: 100%;
 					width: 100%;
 					background-color: $color;
-					opacity: 0.5;
+					opacity: 0.7;
+					z-index: 100;
+
 				}
 			}
 		}
 	}
+
+	&--absolute-center {
+		display: flex;
+		text-align: center;
+		justify-content: center;
+	}
+
 }
