@@ -1638,7 +1638,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #4381C1;
-  opacity: 0.7;
+  opacity: 0.5;
   z-index: 100;
 }
 
@@ -1665,7 +1665,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #D3492C;
-  opacity: 0.7;
+  opacity: 0.5;
   z-index: 100;
 }
 
@@ -1692,7 +1692,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #48A900;
-  opacity: 0.7;
+  opacity: 0.5;
   z-index: 100;
 }
 
@@ -1719,7 +1719,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #EBC500;
-  opacity: 0.7;
+  opacity: 0.5;
   z-index: 100;
 }
 
@@ -1746,7 +1746,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #931B13;
-  opacity: 0.7;
+  opacity: 0.5;
   z-index: 100;
 }
 
@@ -1773,7 +1773,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #FFFFFF;
-  opacity: 0.7;
+  opacity: 0.5;
   z-index: 100;
 }
 
@@ -1800,7 +1800,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #000000;
-  opacity: 0.7;
+  opacity: 0.5;
   z-index: 100;
 }
 
@@ -1827,7 +1827,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #6D7A7D;
-  opacity: 0.7;
+  opacity: 0.5;
   z-index: 100;
 }
 
@@ -1854,7 +1854,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #d3d7d8;
-  opacity: 0.7;
+  opacity: 0.5;
   z-index: 100;
 }
 
@@ -1881,7 +1881,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #e2e4e5;
-  opacity: 0.7;
+  opacity: 0.5;
   z-index: 100;
 }
 
@@ -1908,7 +1908,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #f0f2f2;
-  opacity: 0.7;
+  opacity: 0.5;
   z-index: 100;
 }
 
@@ -1935,7 +1935,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #212526;
-  opacity: 0.7;
+  opacity: 0.5;
   z-index: 100;
 }
 
@@ -1962,7 +1962,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #161819;
-  opacity: 0.7;
+  opacity: 0.5;
   z-index: 100;
 }
 
@@ -1989,7 +1989,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #0b0c0d;
-  opacity: 0.7;
+  opacity: 0.5;
   z-index: 100;
 }
 
@@ -2703,6 +2703,7 @@ h6,
   display: flex;
   flex: 1 1 100%;
   align-items: center;
+  height: 100%;
 }
 
 .navbar .nav {
