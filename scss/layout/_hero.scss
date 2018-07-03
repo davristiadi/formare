@@ -42,7 +42,7 @@ $hero-heights: map-merge((
 					height: 100%;
 					width: 100%;
 					background-color: $color;
-					opacity: 0.7;
+					opacity: 0.5;
 					z-index: 100;
 
 				}
@@ -55,5 +55,4 @@ $hero-heights: map-merge((
 		text-align: center;
 		justify-content: center;
 	}
-
 }

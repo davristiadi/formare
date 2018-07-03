@@ -1638,7 +1638,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #4381C1;
-  opacity: 0.7;
+  opacity: 0.5;
   z-index: 100;
 }
 
@@ -1665,7 +1665,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #D3492C;
-  opacity: 0.7;
+  opacity: 0.5;
   z-index: 100;
 }
 
@@ -1692,7 +1692,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #48A900;
-  opacity: 0.7;
+  opacity: 0.5;
   z-index: 100;
 }
 
@@ -1719,7 +1719,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #EBC500;
-  opacity: 0.7;
+  opacity: 0.5;
   z-index: 100;
 }
 
@@ -1746,7 +1746,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #931B13;
-  opacity: 0.7;
+  opacity: 0.5;
   z-index: 100;
 }
 
@@ -1773,7 +1773,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #FFFFFF;
-  opacity: 0.7;
+  opacity: 0.5;
   z-index: 100;
 }
 
@@ -1800,7 +1800,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #000000;
-  opacity: 0.7;
+  opacity: 0.5;
   z-index: 100;
 }
 
@@ -1827,7 +1827,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #6D7A7D;
-  opacity: 0.7;
+  opacity: 0.5;
   z-index: 100;
 }
 
@@ -1854,7 +1854,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #d3d7d8;
-  opacity: 0.7;
+  opacity: 0.5;
   z-index: 100;
 }
 
@@ -1881,7 +1881,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #e2e4e5;
-  opacity: 0.7;
+  opacity: 0.5;
   z-index: 100;
 }
 
@@ -1908,7 +1908,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #f0f2f2;
-  opacity: 0.7;
+  opacity: 0.5;
   z-index: 100;
 }
 
@@ -1935,7 +1935,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #212526;
-  opacity: 0.7;
+  opacity: 0.5;
   z-index: 100;
 }
 
@@ -1962,7 +1962,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #161819;
-  opacity: 0.7;
+  opacity: 0.5;
   z-index: 100;
 }
 
@@ -1989,8 +1989,14 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #0b0c0d;
-  opacity: 0.7;
+  opacity: 0.5;
   z-index: 100;
+}
+
+.hero--absolute-center {
+  display: flex;
+  text-align: center;
+  justify-content: center;
 }
 
 .flex {
@@ -5884,111 +5890,4 @@ h6,
     border-width: 1px 1px 3px 1px;
     transform: translateY(0);
   }
-}
-
-hr {
-  background-color: #e2e4e5;
-  display: block;
-  margin: 1.75rem 0;
-  height: 2px;
-  border: none;
-}
-
-.fr-global-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1500;
-}
-
-.header-separator {
-  content: "";
-  display: block;
-  position: relative;
-  padding-bottom: 4em;
-}
-
-.fr-main {
-  padding: 1.75rem;
-}
-
-.fr-sidebar {
-  position: sticky;
-  top: 4em;
-  height: calc(100vh - 3em);
-}
-
-.fr-menu {
-  padding-top: 0.875rem;
-  border-right: solid 1px #e2e4e5;
-  height: 100%;
-}
-
-.fr-menu .fr-menu__list {
-  list-style-type: none;
-  padding: 0;
-  margin-left: -0.875rem;
-}
-
-.fr-menu .fr-menu__item {
-  padding: 0.4375rem 0.875rem;
-}
-
-.fr-menu .fr-menu__item > a {
-  transition: all 150ms cubic-bezier(0.78, 0.23, 0.33, 0.83);
-  color: #6D7A7D;
-}
-
-.fr-menu .fr-menu__item:hover > a {
-  color: #4381C1;
-}
-
-.fr-menu .fr-menu__item--active {
-  background-color: #f0f2f2;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-  border-right: solid 5px #4381C1;
-}
-
-.fr-menu .fr-menu__item--active > a {
-  color: #4381C1;
-}
-
-.fr-menu .fr-menu__item--parent {
-  font-weight: 700;
-  padding-top: 1.3125rem;
-}
-
-.fr-menu .fr-menu__item:first-child {
-  padding-top: 0.4375rem;
-}
-
-.fr-article .fr-heading {
-  padding-bottom: 1.3125rem;
-  margin-bottom: 2.5em;
-}
-
-.fr-preview {
-  position: relative;
-  border: solid 1px #e2e4e5;
-  padding: 0.875rem;
-  padding-top: 3em;
-  margin-top: 3em;
-  border-radius: 4px;
-  border-top-left-radius: 0;
-}
-
-.fr-preview .fr-preview__tag {
-  position: absolute;
-  top: 0;
-  left: -1px;
-  transform: translateY(-100%);
-  background-color: #D3492C;
-  color: #f0f2f2;
-  padding: 2.5px 7.5px;
-  font-size: 0.7rem;
-  border-radius: 4px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
 }
