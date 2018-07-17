@@ -7,45 +7,47 @@
 /*  ------------------------------------------------------
 	Font Family
 ------------------------------------------------------  */
-$font-family-sans-serif		: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
-$font-family-serif          : Georgia, "Times New Roman", serif;
-$font-family-monospace      : SFMono-Regular, Menlo, Monaco, Consolas, "Roboto Mono", "Liberation Mono", "Courier New", monospace; 
+$font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-serif: Georgia, "Times New Roman", serif !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Roboto Mono", "Liberation Mono", "Courier New", monospace !default;
 
-$font-family				: $font-family-sans-serif !default;
-
+$font-family: $font-family-sans-serif !default;
 
 /*  ------------------------------------------------------
 	Font Size
 ------------------------------------------------------  */
-$font-size      : 1rem !default;
-$font-sizes     : (
-	x-small     : ($font-size * 0.7),
-	small       : ($font-size * 0.85),
-	base        : $font-size,
-	large       : ($font-size * 1.25),
-	x-large     : ($font-size * 1.5),
-	xx-large	: ($font-size * 2)
-) !default;     
+$font-size: 1rem !default;
+$font-sizes: () !default;
+$font-sizes: map-merge((
+	x-small: ($font-size * 0.7),
+	small: ($font-size * 0.85),
+	base: $font-size,
+	large: ($font-size * 1.25),
+	x-large: ($font-size * 1.5),
+	xx-large: ($font-size * 2)
+), $font-sizes);
 
 
 /*  ------------------------------------------------------
 	Headings
 ------------------------------------------------------  */
-$headings	: (
-	h1		: ($font-size * 3),
-	h2		: ($font-size * 2.5),
-	h3		: ($font-size * 2),
-	h4		: ($font-size * 1.5),
-	h5		: ($font-size * 1.25),
-	h6		: ($font-size * 1)
-) !default;
+$headings: () !default;
+$headings: map-merge((
+	h1: ($font-size * 3),
+	h2: ($font-size * 2.5),
+	h3: ($font-size * 2),
+	h4: ($font-size * 1.5),
+	h5: ($font-size * 1.25),
+	h6: ($font-size * 1)
+), $headings);
 
 
 /*  ------------------------------------------------------
 	Font Weights
 ------------------------------------------------------  */
-$font-weight	: 400;
-$font-weights	: (
+$font-weight: 400 !default;
+$font-weights: () !default;
+$font-weights: map-merge((
 	thin: 100,
 	extra-light: 200,
 	ultra-light: 200,
@@ -65,20 +67,21 @@ $font-weights	: (
 	ultra: 900,
 	ultra-black: 900,
 	extra-ultra: 900
-) !default;
+), $font-weights);
 
 
 /*  ------------------------------------------------------
 	Line Heights
 ------------------------------------------------------  */
-$line-height		: 1.5;
-$line-heights		: (
-	x-tight			: ($line-height * .5),
-	tight			: ($line-height * .75),
-	base			: $line-height,
-	loose			: ($line-height * 1.25),
-	x-loose			: ($line-height * 1.5)
-) !default;
+$line-height: 1.4;
+$line-heights: () !default;
+$line-heights: map-merge((
+	x-tight: ($line-height * .5),
+	tight: ($line-height * .75),
+	base: $line-height,
+	loose: ($line-height * 1.25),
+	x-loose: ($line-height * 1.5)
+), $line-heights);
 
 
 /*  ------------------------------------------------------
@@ -110,11 +113,11 @@ $text-transforms: (
 /*  ------------------------------------------------------
 	Letter Spacings
 ------------------------------------------------------  */
-$letter-spacing		: 0px;
-$letter-spacings	: (
-    x-tight			: ($letter-spacing - 1.5),
-    tight			: ($letter-spacing - 0.5),
-    base 			: $letter-spacing,
-    loose			: ($letter-spacing + 2),
-    x-loose			: ($letter-spacing + 4.5),
+$letter-spacing: 0;
+$letter-spacings: (
+    x-tight: ($letter-spacing - 1.5),
+    tight: ($letter-spacing - 0.5),
+    base: $letter-spacing,
+    loose: ($letter-spacing + 2),
+    x-loose: ($letter-spacing + 4.5),
 ) !default;
