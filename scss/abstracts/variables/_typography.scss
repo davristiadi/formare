@@ -73,7 +73,7 @@ $font-weights: map-merge((
 /*  ------------------------------------------------------
 	Line Heights
 ------------------------------------------------------  */
-$line-height: 1.4;
+$line-height: 1.5 !default;
 $line-heights: () !default;
 $line-heights: map-merge((
 	x-tight: ($line-height * .5),
