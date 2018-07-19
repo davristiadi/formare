@@ -3,32 +3,36 @@ import React, { PropTypes } from 'react'
 const Nav = props => {
     return (
         <div id="nav">
-            <article class="fr-article article">
-                <div class="fr-heading heading">
-                    <h3 class="title">Nav</h3>
-                    <h5 class="subtitle color-gray">Do duis dolore duis aliquip voluptate sit non occaecat nulla adipisicing amet.</h5>
+            <article className="fr-article article">
+                <div className="fr-heading heading">
+                    <h3 className="title">Nav</h3>
+                    <h5 className="subtitle color-gray">
+                        Eu ad commodo adipisicing occaecat sunt ex cupidatat amet quis voluptate nulla ex veniam. 
+                        Dolor voluptate do quis in esse exercitation anim sunt fugiat in. Aute amet nisi velit 
+                        quis qui duis Lorem consectetur ullamco labore reprehenderit deserunt eu.
+                    </h5>
                 </div>
-                <section class="section">
-                    <div class="heading">
-                        <h4 class="title">Default Nav</h4>
-                        <h6 class="subtitle color-gray">Dolor mollit officia amet do minim ut adipisicing.</h6>
+                <section className="section">
+                    <div className="heading">
+                        <h4 className="title">Default Nav</h4>
+                        <h6 className="subtitle color-gray">Dolor mollit officia amet do minim ut adipisicing.</h6>
                     </div>
-                    <div class="fr-preview">
-                        <span class="fr-preview__tag">Preview</span>
-                        <div class="fr-preview__display">
-                            <nav class="nav">
-                                <ul class="nav__list">
-                                    <li class="nav__item">
-                                        <a class="nav__link">Home</a>
+                    <div className="fr-preview">
+                        <span className="fr-preview__tag">Preview</span>
+                        <div className="fr-preview__display">
+                            <nav className="nav">
+                                <ul className="nav__list">
+                                    <li className="nav__item">
+                                        <a className="nav__link">Home</a>
                                     </li>
-                                    <li class="nav__item">
-                                        <a class="nav__link">Documentation</a>
+                                    <li className="nav__item">
+                                        <a className="nav__link">Documentation</a>
                                     </li>
-                                    <li class="nav__item">
-                                        <a class="nav__link">FAQ</a>
+                                    <li className="nav__item">
+                                        <a className="nav__link">FAQ</a>
                                     </li>
-                                    <li class="nav__item">
-                                        <a class="nav__link">Contact Us</a>
+                                    <li className="nav__item">
+                                        <a className="nav__link">Contact Us</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -36,46 +40,80 @@ const Nav = props => {
                     </div>
                 </section>
                 <hr />
-                <section class="section">
-                    <div class="heading">
-                        <h4 class="title">Tabbed Nav</h4>
-                        <h6 class="subtitle color-gray">Ullamco aute et id eu elit esse voluptate elit incididunt ad elit.</h6>
+                <section className="section">
+                    <div className="heading">
+                        <h4 className="title">Navigation inside Navbar</h4>
+                        <h6 className="subtitle">Consequat Lorem id labore ad consectetur Lorem voluptate proident.</h6>
                     </div>
-                    <div class="fr-preview">
-                        <span class="fr-preview__tag">Preview</span>
-                        <div class="fr-preview__display">
-                            <div class="mg-bottom">
-                                <nav class="nav nav--tabs">
-                                    <ul class="nav__list">
-                                        <li class="nav__item nav__item--active">
-                                            <a class="nav__link">Home</a>
+                    <div className="fr-preview">
+                        <span className="fr-preview__tag">Preview</span>
+                        <div className="fr-preview__display">
+                            <div className="navbar navbar--primary">
+                                <div className="navbar__container navbar__container--full-width">
+                                    <div className="navbar__block navbar__block--end">
+                                        <nav className="nav">
+                                            <ul className="nav__list">
+                                                <li className="nav__item">
+                                                    <a className="nav__link">Home</a>
+                                                </li>
+                                                <li className="nav__item">
+                                                    <a className="nav__link">Documentation</a>
+                                                </li>
+                                                <li className="nav__item">
+                                                    <a className="nav__link">FAQ</a>
+                                                </li>
+                                                <li className="nav__item">
+                                                    <a className="nav__link">Contact Us</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <hr />
+                <section className="section">
+                    <div className="heading">
+                        <h4 className="title">Tabbed Navigation</h4>
+                        <h6 className="subtitle color-gray">Ullamco aute et id eu elit esse voluptate elit incididunt ad elit.</h6>
+                    </div>
+                    <div className="fr-preview">
+                        <span className="fr-preview__tag">Preview</span>
+                        <div className="fr-preview__display">
+                            <div className="mg-bottom">
+                                <nav className="nav nav--tabs">
+                                    <ul className="nav__list">
+                                        <li className="nav__item nav__item--active">
+                                            <a className="nav__link">Home</a>
                                         </li>
-                                        <li class="nav__item">
-                                            <a class="nav__link">Documentation</a>
+                                        <li className="nav__item">
+                                            <a className="nav__link">Documentation</a>
                                         </li>
-                                        <li class="nav__item">
-                                            <a class="nav__link">FAQ</a>
+                                        <li className="nav__item">
+                                            <a className="nav__link">FAQ</a>
                                         </li>
-                                        <li class="nav__item">
-                                            <a class="nav__link">Contact Us</a>
+                                        <li className="nav__item">
+                                            <a className="nav__link">Contact Us</a>
                                         </li>
                                     </ul>
                                 </nav>
                             </div>
                             <div>
-                                <nav class="nav nav--tabs nav--primary">
-                                    <ul class="nav__list">
-                                        <li class="nav__item nav__item--active">
-                                            <a class="nav__link">Home</a>
+                                <nav className="nav nav--tabs nav--primary">
+                                    <ul className="nav__list nav__list--active">
+                                        <li className="nav__item nav__item--active">
+                                            <a className="nav__link">Home</a>
                                         </li>
-                                        <li class="nav__item">
-                                            <a class="nav__link">Documentation</a>
+                                        <li className="nav__item">
+                                            <a className="nav__link">Documentation</a>
                                         </li>
-                                        <li class="nav__item">
-                                            <a class="nav__link">FAQ</a>
+                                        <li className="nav__item">
+                                            <a className="nav__link">FAQ</a>
                                         </li>
-                                        <li class="nav__item">
-                                            <a class="nav__link">Contact Us</a>
+                                        <li className="nav__item">
+                                            <a className="nav__link">Contact Us</a>
                                         </li>
                                     </ul>
                                 </nav>

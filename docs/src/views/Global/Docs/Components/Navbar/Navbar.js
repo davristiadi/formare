@@ -11,12 +11,12 @@ const Navbar = props => {
                 <div class="fr-preview">
                     <div class="fr-preview__tag">Preview</div>
                     <div class="fr-preview__display">
-                        <div className="navbar">
+                        <div className="navbar mg-bottom">
                         	<div className="navbar__container navbar__container--full-width">
                         		<div className="navbar__block">
                         			<h5>Logo</h5>
                         		</div>
-                        		<div className="navbar__block flex jc-end">
+                        		<div className="navbar__block navbar__block--end">
                         			<nav className="nav">
                         				<ul className="nav__list">
                         					<li className="nav__item"><a className="nav__link">Nav A</a></li>
@@ -27,6 +27,7 @@ const Navbar = props => {
                         		</div>
                         	</div>
                         </div>
+                        
                     </div>
                 </div>
             </article>

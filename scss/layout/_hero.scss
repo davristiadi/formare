@@ -1,17 +1,50 @@
 $hero-themes: $theme-colors;
-$hero-height: 35em;
+$hero-height: 25em;
+
 $hero-heights: () !default;
 $hero-heights: map-merge((
 	x-small: ($hero-height * 0.5),
 	small: ($hero-height * 0.75),
 	base: ($hero-height * 1),
-	large: ($hero-height * 2),
-	x-large: ($hero-height * 2.5)
+	large: ($hero-height * 1.5),
+	x-large: ($hero-height * 2)
 ), $hero-heights);
 
 .hero {
 	position: relative;
+	display: flex;
+	flex-direction: column;
 	min-height: $hero-height;
+
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		z-index: 250;
+		background-position: center;
+		background-size: cover;
+	}
+
+	&__body {
+		flex: 1;
+		height: 100%;
+		padding-top: spacing(base);
+		padding-bottom: spacing(base);
+		
+		&--centerized {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+	
+	> *:not(.hero__bg),
+	&__body {
+		position: relative;
+		z-index: 500;
+	}
 	
 	@each $size, $height in $hero-heights {
 		&--#{$size} {
@@ -25,15 +58,7 @@ $hero-heights: map-merge((
 			background-color: $color;
 			color: color-yiq($color);
 
-			&.hero--has-overlay {
-				background-position: center;
-				background-size: cover;
-
-				* {
-					position: relative;
-					z-index: 200;
-				}
-
+			.hero__bg {
 				&:before {
 					content: "";
 					position: absolute;
@@ -42,17 +67,18 @@ $hero-heights: map-merge((
 					height: 100%;
 					width: 100%;
 					background-color: $color;
-					opacity: 0.5;
-					z-index: 100;
-
+					opacity: 0.7;
 				}
 			}
 		}
 	}
 
-	&--absolute-center {
-		display: flex;
-		text-align: center;
-		justify-content: center;
+	/**
+	 *	A modifier class to make your hero layout spans over your entire viewport
+	 *	vertically.
+	 */
+	&--full-height {
+		height: 100vh;
+		min-height: 100vh;
 	}
 }

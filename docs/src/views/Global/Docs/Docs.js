@@ -15,7 +15,7 @@ const Docs = props => {
 				<main className="fr-main grid">
 					<Switch>
 						<Route exact path="/docs" component={DocsHome} />
-					<Route path="/docs/components" component={Components} />
+						<Route path="/docs/components" component={Components} />
 						<Route path="/docs/forms" component={Forms} />
 					</Switch>
 				</main>
