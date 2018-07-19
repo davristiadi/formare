@@ -803,7 +803,7 @@ h6,
 
 .container, .navbar .navbar__container {
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 22.5px;
 }
 
 @media (min-width: 576px) {
@@ -835,7 +835,6 @@ h6,
 }
 
 .container--full-width, .navbar .navbar__container--full-width {
-  margin: 0 30px;
   width: auto;
   max-width: none;
 }
@@ -844,7 +843,7 @@ h6,
 .grids {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -15px;
+  margin: 0 -22.5px;
 }
 
 .row--is-gapless,
@@ -865,7 +864,7 @@ h6,
   flex-shrink: 0;
   flex-basis: 0;
   max-width: 100%;
-  padding: 0 15px;
+  padding: 0 22.5px;
 }
 
 .grid.grid-1, .grid.column-1,
@@ -1587,32 +1586,67 @@ h6,
 
 .hero {
   position: relative;
-  min-height: 35em;
+  display: flex;
+  flex-direction: column;
+  min-height: 25em;
+  /**
+	 *	A modifier class to make your hero layout spans over your entire viewport
+	 *	vertically.
+	 */
+}
+
+.hero__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 250;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero__body {
+  flex: 1;
+  height: 100%;
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
+}
+
+.hero__body--centerized {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero > *:not(.hero__bg), .hero__body {
+  position: relative;
+  z-index: 500;
 }
 
 .hero--x-small {
-  height: 17.5em;
-  min-height: 17.5em;
+  height: 12.5em;
+  min-height: 12.5em;
 }
 
 .hero--small {
-  height: 26.25em;
-  min-height: 26.25em;
+  height: 18.75em;
+  min-height: 18.75em;
 }
 
 .hero--base {
-  height: 35em;
-  min-height: 35em;
+  height: 25em;
+  min-height: 25em;
 }
 
 .hero--large {
-  height: 70em;
-  min-height: 70em;
+  height: 37.5em;
+  min-height: 37.5em;
 }
 
 .hero--x-large {
-  height: 87.5em;
-  min-height: 87.5em;
+  height: 50em;
+  min-height: 50em;
 }
 
 .hero--primary {
@@ -1620,17 +1654,7 @@ h6,
   color: #f0f2f2;
 }
 
-.hero--primary.hero--has-overlay {
-  background-position: center;
-  background-size: cover;
-}
-
-.hero--primary.hero--has-overlay * {
-  position: relative;
-  z-index: 200;
-}
-
-.hero--primary.hero--has-overlay:before {
+.hero--primary .hero__bg:before {
   content: "";
   position: absolute;
   top: 0;
@@ -1638,8 +1662,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #4381C1;
-  opacity: 0.5;
-  z-index: 100;
+  opacity: 0.7;
 }
 
 .hero--secondary {
@@ -1647,17 +1670,7 @@ h6,
   color: #f0f2f2;
 }
 
-.hero--secondary.hero--has-overlay {
-  background-position: center;
-  background-size: cover;
-}
-
-.hero--secondary.hero--has-overlay * {
-  position: relative;
-  z-index: 200;
-}
-
-.hero--secondary.hero--has-overlay:before {
+.hero--secondary .hero__bg:before {
   content: "";
   position: absolute;
   top: 0;
@@ -1665,8 +1678,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #D3492C;
-  opacity: 0.5;
-  z-index: 100;
+  opacity: 0.7;
 }
 
 .hero--success {
@@ -1674,17 +1686,7 @@ h6,
   color: #f0f2f2;
 }
 
-.hero--success.hero--has-overlay {
-  background-position: center;
-  background-size: cover;
-}
-
-.hero--success.hero--has-overlay * {
-  position: relative;
-  z-index: 200;
-}
-
-.hero--success.hero--has-overlay:before {
+.hero--success .hero__bg:before {
   content: "";
   position: absolute;
   top: 0;
@@ -1692,8 +1694,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #48A900;
-  opacity: 0.5;
-  z-index: 100;
+  opacity: 0.7;
 }
 
 .hero--warning {
@@ -1701,17 +1702,7 @@ h6,
   color: #212526;
 }
 
-.hero--warning.hero--has-overlay {
-  background-position: center;
-  background-size: cover;
-}
-
-.hero--warning.hero--has-overlay * {
-  position: relative;
-  z-index: 200;
-}
-
-.hero--warning.hero--has-overlay:before {
+.hero--warning .hero__bg:before {
   content: "";
   position: absolute;
   top: 0;
@@ -1719,8 +1710,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #EBC500;
-  opacity: 0.5;
-  z-index: 100;
+  opacity: 0.7;
 }
 
 .hero--danger {
@@ -1728,17 +1718,7 @@ h6,
   color: #f0f2f2;
 }
 
-.hero--danger.hero--has-overlay {
-  background-position: center;
-  background-size: cover;
-}
-
-.hero--danger.hero--has-overlay * {
-  position: relative;
-  z-index: 200;
-}
-
-.hero--danger.hero--has-overlay:before {
+.hero--danger .hero__bg:before {
   content: "";
   position: absolute;
   top: 0;
@@ -1746,8 +1726,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #931B13;
-  opacity: 0.5;
-  z-index: 100;
+  opacity: 0.7;
 }
 
 .hero--white {
@@ -1755,17 +1734,7 @@ h6,
   color: #212526;
 }
 
-.hero--white.hero--has-overlay {
-  background-position: center;
-  background-size: cover;
-}
-
-.hero--white.hero--has-overlay * {
-  position: relative;
-  z-index: 200;
-}
-
-.hero--white.hero--has-overlay:before {
+.hero--white .hero__bg:before {
   content: "";
   position: absolute;
   top: 0;
@@ -1773,8 +1742,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #FFFFFF;
-  opacity: 0.5;
-  z-index: 100;
+  opacity: 0.7;
 }
 
 .hero--black {
@@ -1782,17 +1750,7 @@ h6,
   color: #f0f2f2;
 }
 
-.hero--black.hero--has-overlay {
-  background-position: center;
-  background-size: cover;
-}
-
-.hero--black.hero--has-overlay * {
-  position: relative;
-  z-index: 200;
-}
-
-.hero--black.hero--has-overlay:before {
+.hero--black .hero__bg:before {
   content: "";
   position: absolute;
   top: 0;
@@ -1800,8 +1758,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #000000;
-  opacity: 0.5;
-  z-index: 100;
+  opacity: 0.7;
 }
 
 .hero--gray {
@@ -1809,17 +1766,7 @@ h6,
   color: #f0f2f2;
 }
 
-.hero--gray.hero--has-overlay {
-  background-position: center;
-  background-size: cover;
-}
-
-.hero--gray.hero--has-overlay * {
-  position: relative;
-  z-index: 200;
-}
-
-.hero--gray.hero--has-overlay:before {
+.hero--gray .hero__bg:before {
   content: "";
   position: absolute;
   top: 0;
@@ -1827,8 +1774,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #6D7A7D;
-  opacity: 0.5;
-  z-index: 100;
+  opacity: 0.7;
 }
 
 .hero--light {
@@ -1836,17 +1782,7 @@ h6,
   color: #212526;
 }
 
-.hero--light.hero--has-overlay {
-  background-position: center;
-  background-size: cover;
-}
-
-.hero--light.hero--has-overlay * {
-  position: relative;
-  z-index: 200;
-}
-
-.hero--light.hero--has-overlay:before {
+.hero--light .hero__bg:before {
   content: "";
   position: absolute;
   top: 0;
@@ -1854,8 +1790,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #d3d7d8;
-  opacity: 0.5;
-  z-index: 100;
+  opacity: 0.7;
 }
 
 .hero--lighter {
@@ -1863,17 +1798,7 @@ h6,
   color: #212526;
 }
 
-.hero--lighter.hero--has-overlay {
-  background-position: center;
-  background-size: cover;
-}
-
-.hero--lighter.hero--has-overlay * {
-  position: relative;
-  z-index: 200;
-}
-
-.hero--lighter.hero--has-overlay:before {
+.hero--lighter .hero__bg:before {
   content: "";
   position: absolute;
   top: 0;
@@ -1881,8 +1806,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #e2e4e5;
-  opacity: 0.5;
-  z-index: 100;
+  opacity: 0.7;
 }
 
 .hero--lightest {
@@ -1890,17 +1814,7 @@ h6,
   color: #212526;
 }
 
-.hero--lightest.hero--has-overlay {
-  background-position: center;
-  background-size: cover;
-}
-
-.hero--lightest.hero--has-overlay * {
-  position: relative;
-  z-index: 200;
-}
-
-.hero--lightest.hero--has-overlay:before {
+.hero--lightest .hero__bg:before {
   content: "";
   position: absolute;
   top: 0;
@@ -1908,8 +1822,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #f0f2f2;
-  opacity: 0.5;
-  z-index: 100;
+  opacity: 0.7;
 }
 
 .hero--dark {
@@ -1917,17 +1830,7 @@ h6,
   color: #f0f2f2;
 }
 
-.hero--dark.hero--has-overlay {
-  background-position: center;
-  background-size: cover;
-}
-
-.hero--dark.hero--has-overlay * {
-  position: relative;
-  z-index: 200;
-}
-
-.hero--dark.hero--has-overlay:before {
+.hero--dark .hero__bg:before {
   content: "";
   position: absolute;
   top: 0;
@@ -1935,8 +1838,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #212526;
-  opacity: 0.5;
-  z-index: 100;
+  opacity: 0.7;
 }
 
 .hero--darker {
@@ -1944,17 +1846,7 @@ h6,
   color: #f0f2f2;
 }
 
-.hero--darker.hero--has-overlay {
-  background-position: center;
-  background-size: cover;
-}
-
-.hero--darker.hero--has-overlay * {
-  position: relative;
-  z-index: 200;
-}
-
-.hero--darker.hero--has-overlay:before {
+.hero--darker .hero__bg:before {
   content: "";
   position: absolute;
   top: 0;
@@ -1962,8 +1854,7 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #161819;
-  opacity: 0.5;
-  z-index: 100;
+  opacity: 0.7;
 }
 
 .hero--darkest {
@@ -1971,17 +1862,7 @@ h6,
   color: #f0f2f2;
 }
 
-.hero--darkest.hero--has-overlay {
-  background-position: center;
-  background-size: cover;
-}
-
-.hero--darkest.hero--has-overlay * {
-  position: relative;
-  z-index: 200;
-}
-
-.hero--darkest.hero--has-overlay:before {
+.hero--darkest .hero__bg:before {
   content: "";
   position: absolute;
   top: 0;
@@ -1989,14 +1870,12 @@ h6,
   height: 100%;
   width: 100%;
   background-color: #0b0c0d;
-  opacity: 0.5;
-  z-index: 100;
+  opacity: 0.7;
 }
 
-.hero--absolute-center {
-  display: flex;
-  text-align: center;
-  justify-content: center;
+.hero--full-height {
+  height: 100vh;
+  min-height: 100vh;
 }
 
 .flex {
@@ -2706,17 +2585,38 @@ h6,
   height: 100%;
 }
 
+.navbar .navbar__block--start {
+  justify-content: flex-start;
+}
+
+.navbar .navbar__block--center {
+  justify-content: center;
+}
+
+.navbar .navbar__block--end {
+  justify-content: flex-end;
+}
+
 .navbar .nav {
+  display: flex;
+  flex-direction: column;
   height: 100%;
 }
 
 .navbar .nav .nav__list {
-  height: 100%;
+  flex: 1;
 }
 
 .navbar .nav .nav__item {
   display: flex;
+  flex-direction: column;
   align-items: center;
+}
+
+.navbar .nav .nav__link {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .button {
