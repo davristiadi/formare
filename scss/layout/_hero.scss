@@ -30,8 +30,8 @@ $hero-heights: map-merge((
 	&__body {
 		flex: 1;
 		height: 100%;
-		padding-top: spacing(base);
-		padding-bottom: spacing(base);
+		padding-top: spacing(x-large);
+		padding-bottom: spacing(x-large);
 		
 		&--centerized {
 			display: flex;
@@ -48,7 +48,6 @@ $hero-heights: map-merge((
 	
 	@each $size, $height in $hero-heights {
 		&--#{$size} {
-			height: $height;
 			min-height: $height;
 		}
 	}
