@@ -1609,8 +1609,8 @@ h6,
 .hero__body {
   flex: 1;
   height: 100%;
-  padding-top: 0.875rem;
-  padding-bottom: 0.875rem;
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
 }
 
 .hero__body--centerized {
@@ -1625,27 +1625,22 @@ h6,
 }
 
 .hero--x-small {
-  height: 12.5em;
   min-height: 12.5em;
 }
 
 .hero--small {
-  height: 18.75em;
   min-height: 18.75em;
 }
 
 .hero--base {
-  height: 25em;
   min-height: 25em;
 }
 
 .hero--large {
-  height: 37.5em;
   min-height: 37.5em;
 }
 
 .hero--x-large {
-  height: 50em;
   min-height: 50em;
 }
 
@@ -2580,7 +2575,7 @@ h6,
 .navbar .navbar__block {
   position: relative;
   display: flex;
-  flex: 1 1 100%;
+  flex: 1 1 auto;
   align-items: center;
   height: 100%;
 }
