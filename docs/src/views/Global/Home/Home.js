@@ -6,6 +6,41 @@ const Home = props => {
 	} = props;
 	
 	return (
+		<div className="fr-home">
+			<section className="hero hero--large">
+				<div className="hero__body hero__body--centerized">
+					<div className="container">
+						<div className="grids">
+							<div className="grid grid-7">
+								<div className="heading mg-bottom-x-large">
+									<h2 className="title fw-medium mg-bottom"><span className="fw-bold">Formare</span> is lightweight, fast and easy to get started with.</h2>
+									<h4 className="subtitle color-gray">
+										Veniam dolore adipisicing eu excepteur aliqua deserunt
+										laboris dolor dolor commodo nisi occaecat aute pariatur
+										sunt culpa mollit ullamco.
+									</h4>
+								</div>
+								<div>
+									<button className="button button--primary button--large mg-right-large">Getting Started</button>
+									<button className="button button--outlined button--secondary button--large">Documentation</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>	
+			<section className="section section--lightest">
+				<div className="container">
+					<div className="heading">
+						<h3 className="title color-primary">Why Formare?</h3>
+						<h5 className="subtitle color-gray">Nostrud minim ea elit reprehenderit enim officia aliquip ex do veniam et aliquip.</h5>
+					</div>
+				</div>
+			</section>
+		</div>
+	)
+	
+	return (
 		<div id="home">
 			<section className="hero hero--dark">
 				<div className="hero__body hero__body--centerized">

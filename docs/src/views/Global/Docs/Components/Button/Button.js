@@ -28,14 +28,20 @@ const Button = props => {
 					<div class="fr-preview">
 						<span className="fr-preview__tag">Preview</span>
 						<div className="fr-preview__display">
-							<button className="button mg-right mg-bottom">Button</button>
-							<button className="button button--primary mg-right mg-bottom">Primary</button>
-							<button className="button button--secondary mg-right mg-bottom">Secondary</button>
-							<button className="button button--success mg-right mg-bottom">Success</button>
-							<button className="button button--danger mg-right mg-bottom">Danger</button>
-							<button className="button button--warning mg-right mg-bottom">Warning</button>
-							<button className="button button--dark mg-right mg-bottom">Dark</button>
-							<button className="button button--light mg-bottom">Light</button>
+							<div className="mg-bottom">
+								<button className="button mg-right">Button</button>
+							</div>
+							<div className="mg-bottom">
+								<button className="button button--primary mg-right">Primary</button>
+								<button className="button button--secondary mg-right">Secondary</button>
+								<button className="button button--success mg-right">Success</button>
+								<button className="button button--danger mg-right">Danger</button>
+								<button className="button button--warning mg-right">Warning</button>
+							</div>
+							<div>
+								<button className="button button--dark mg-right">Dark</button>
+								<button className="button button--light">Light</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -45,14 +51,25 @@ const Button = props => {
 						<h5 className="title">Outlined</h5>
 						<h6 className="subtitle color-gray">Id dolore aute cillum velit laboris irure laborum elit irure occaecat magna minim.</h6>
 					</div>
-					<button className="button button--outlined mg-right mg-bottom">Button</button>
-					<button className="button button--outlined button--primary mg-right mg-bottom">Primary</button>
-					<button className="button button--outlined button--secondary mg-right mg-bottom">Secondary</button>
-					<button className="button button--outlined button--success mg-right mg-bottom">Success</button>
-					<button className="button button--outlined button--danger mg-right mg-bottom">Danger</button>
-					<button className="button button--outlined button--warning mg-right mg-bottom">Warning</button>
-					<button className="button button--outlined button--dark mg-right mg-bottom">Dark</button>
-					<button className="button button--outlined button--light mg-bottom">Light</button>
+					<div className="fr-preview">
+						<span className="fr-preview__tag">Preview</span>
+						<div className="fr-preview__display">
+							<div className="mg-bottom">
+								<button className="button button--outlined mg-right">Button</button>
+							</div>
+							<div className="mg-bottom">
+								<button className="button button--primary button--outlined mg-right">Primary</button>
+								<button className="button button--secondary button--outlined mg-right">Secondary</button>
+								<button className="button button--success button--outlined mg-right">Success</button>
+								<button className="button button--danger button--outlined mg-right">Danger</button>
+								<button className="button button--warning button--outlined mg-right">Warning</button>
+							</div>
+							<div>
+								<button className="button button--dark button--outlined mg-right">Dark</button>
+								<button className="button button--light button--outlined">Light</button>
+							</div>
+						</div>
+					</div>
 				</div>
 				<hr />
 				<div className="mg-bottom-large">
@@ -60,14 +77,25 @@ const Button = props => {
 						<h5 className="title">Raised</h5>
 						<h6 className="subtitle color-gray">Id dolore aute cillum velit laboris irure laborum elit irure occaecat magna minim.</h6>
 					</div>
-					<button className="button button--raised mg-right mg-bottom">Button</button>
-					<button className="button button--raised button--primary mg-right mg-bottom">Primary</button>
-					<button className="button button--raised button--secondary mg-right mg-bottom">Secondary</button>
-					<button className="button button--raised button--success mg-right mg-bottom">Success</button>
-					<button className="button button--raised button--danger mg-right mg-bottom">Danger</button>
-					<button className="button button--raised button--warning mg-right mg-bottom">Warning</button>
-					<button className="button button--raised button--dark mg-right mg-bottom">Dark</button>
-					<button className="button button--raised button--light mg-bottom">Light</button>
+					<div className="fr-preview">
+						<span className="fr-preview__tag">Preview</span>
+						<div className="fr-preview__display">
+							<div className="mg-bottom">
+								<button className="button button--raised mg-right">Button</button>
+							</div>
+							<div className="mg-bottom">
+								<button className="button button--primary button--raised mg-right">Primary</button>
+								<button className="button button--secondary button--raised mg-right">Secondary</button>
+								<button className="button button--success button--raised mg-right">Success</button>
+								<button className="button button--danger button--raised mg-right">Danger</button>
+								<button className="button button--warning button--raised mg-right">Warning</button>
+							</div>
+							<div>
+								<button className="button button--dark button--raised mg-right">Dark</button>
+								<button className="button button--light button--raised">Light</button>
+							</div>
+						</div>
+					</div>
 				</div>
 				<hr />
 				<div className="mg-bottom-large">
@@ -75,9 +103,12 @@ const Button = props => {
 						<h5 className="title">Rounded</h5>
 						<h6 className="subtitle color-gray">Id dolore aute cillum velit laboris irure laborum elit irure occaecat magna minim.</h6>
 					</div>
-					<button className="button button--pill button--primary mg-right">Rounded Button</button>
-					<button className="button button--pill button--secondary mg-right">Rounded Button</button>
-					<button className="button button--pill button--success mg-right">Rounded Button</button>
+					<div className="fr-preview">
+						<span className="fr-preview__tag">Preview</span>
+						<div className="fr-preview__display">
+							<button className="button button--pill button--primary mg-right">Rounded Button</button>
+						</div>
+					</div>
 				</div>
 				<hr />
 				<div>
@@ -85,9 +116,14 @@ const Button = props => {
 						<h5 className="title">Sizes</h5>
 						<h6 className="subtitle color-gray">Id dolore aute cillum velit laboris irure laborum elit irure occaecat magna minim.</h6>
 					</div>
-					<button className="button button--small margin-right">Small</button>
-					<button className="button margin-right">Base</button>
-					<button className="button button--large">Large</button>
+					<div className="fr-preview">
+						<div className="fr-preview__tag">Preview</div>
+						<div className="fr-preview__display">
+							<button className="button button--small mg-right">Small</button>
+							<button className="button margin-right">Base</button>
+							<button className="button button--large">Large</button>
+						</div>
+					</div>
 				</div>
 			</article>
 		</div>

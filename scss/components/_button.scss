@@ -97,11 +97,16 @@ $button-paddings: (
 			}
 
 			&.button--raised {
+				&:not(:disabled) {
+					border-bottom-width: 2px;
+					border-bottom-color: shade($color, 10%);
+				}
+				
 				&:hover:not(:disabled),
 				&.button--hovered:not(:disabled) {
 					border-bottom-width: 4px;
 					border-bottom-color: $color;
-					margin-top: -3px;
+					margin-top: -2px;
 				}
 
 				&:focus:not(:disabled),

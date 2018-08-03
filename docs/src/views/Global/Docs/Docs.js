@@ -7,18 +7,20 @@ import DocsMenu from './DocsMenu';
 
 const Docs = props => {
 	return (
-		<div className="container">
-			<div className="grids">
-				<aside className="fr-sidebar grid grid-3">
-					<DocsMenu />
-				</aside>
-				<main className="fr-main grid">
-					<Switch>
-						<Route exact path="/docs" component={DocsHome} />
-						<Route path="/docs/components" component={Components} />
-						<Route path="/docs/forms" component={Forms} />
-					</Switch>
-				</main>
+		<div className="fr-docs">
+			<div className="container">
+				<div className="grids">
+					<main className="fr-docs__body grid">
+						<Switch>
+							<Route exact path="/docs" component={DocsHome} />
+							<Route path="/docs/components" component={Components} />
+							<Route path="/docs/forms" component={Forms} />
+						</Switch>
+					</main>
+					<aside className="fr-docs__sidebar grid grid-3">
+						<DocsMenu />
+					</aside>
+				</div>
 			</div>
 		</div>
 	);

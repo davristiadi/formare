@@ -13,7 +13,7 @@
   },
   "scripts": {
     "css:watch": "npm run css:build -- --watch",
-    "css:build": "node-sass --output-style expanded ./src/formare-docs.scss ./src/css/formare-docs.css",
+    "css:build": "node-sass --output-style compressed ./src/scss/formare-docs.scss ./src/css/formare-docs.css",
     "js:watch": "react-scripts start",
     "js:build": "react-scripts build",
     "start": "npm run css:watch | npm run js:watch",

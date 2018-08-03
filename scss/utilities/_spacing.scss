@@ -1,6 +1,3 @@
-/*  --------------------------------------------
-    SPACINGS
---------------------------------------------  */
 @each $size, $value in $spacings {
 	.margin, 
 	.mg { 
@@ -23,8 +20,7 @@
 	}
 }
 
-$spacing-directions: top left bottom right;
-@each $direction in $spacing-directions {
+@each $direction in (top left bottom right) {
 	.pd-#{$direction},
 	.padding-#{$direction} {
 		padding-#{$direction}: spacing(base) !important;

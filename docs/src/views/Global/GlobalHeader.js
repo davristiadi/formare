@@ -16,10 +16,10 @@ class GlobalHeader extends Component {
                             <nav className="nav">
                                 <ul className="nav__list">
                                     <li className="nav__item">
-                                        <Link to="/docs" className="nav__link">Documentation</Link>
+                                    	<Link to="/getting-started" className="nav__link">Getting Started</Link>
                                     </li>
                                     <li className="nav__item">
-                                    	<Link to="/help" className="nav__link">Getting Started</Link>
+                                        <Link to="/docs" className="nav__link">Documentation</Link>
                                     </li>
                                 </ul>
                             </nav>
