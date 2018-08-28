@@ -13,6 +13,7 @@ $input-background: $white;
 $input-disabled-background: $lightest;
 $input-transition: $transition;
 
+$input-group-extra-color: color-yiq($lighter);
 $input-group-extra-background: $lighter;
 $input-group-extra-border: solid 1px $lighter;
 $input-group-extra-border-radius: $border-radius;
@@ -172,6 +173,7 @@ $input-group-extra-focused-border: solid 1px $primary-color;
 		transition: $input-transition;
 		padding: $input-padding;
 		background-color: $input-group-extra-background;
+		color: $input-group-extra-color;
 		border: $input-group-extra-border;
 		border-radius: $input-group-extra-border-radius;
 	}

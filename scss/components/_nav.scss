@@ -13,6 +13,7 @@ $nav-item-icon-size: 48px;
 	.nav__list {
 		display: flex;
 		flex-direction: row;
+		align-items: center;
 		transition: all 100ms ease-out;
 
 		&--active {
