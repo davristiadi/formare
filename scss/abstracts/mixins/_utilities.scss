@@ -1,6 +1,3 @@
-/*  ------------------------------------------------------
-	Vendorize
-------------------------------------------------------  */
 @mixin vendorize($declarations, $prefixes: (), $non-prefix: true) {
 	@each $property, $value in $declarations {
 		@each $prefix in $prefixes {

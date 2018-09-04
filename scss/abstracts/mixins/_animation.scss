@@ -1,6 +1,3 @@
-/*  ------------------------------------------------------
-	Animation
-------------------------------------------------------  */
 @mixin animation($value...) {
     @include vendorize((animation: $value), webkit moz o);
 }
@@ -40,23 +37,5 @@
 
     @keyframes #{$animation-name} {
         @content;
-    }
-}
-
-//  ANIMATION: Bottom Out
-@include keyframes(bottomOut) {
-    0% {
-        border-width: 1px 1px 3px 1px;
-        transform: translateY(0);
-    }
-
-    50% {
-        border-width: 1px;
-        transform: translateY(1px);
-    }
-
-    100% {
-        border-width: 1px 1px 3px 1px;
-        transform: translateY(0);
     }
 }

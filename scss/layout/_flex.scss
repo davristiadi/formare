@@ -1,4 +1,4 @@
-$justify-contents : (
+$justify-contents: (
     flex-start: start,
     center: center,
     flex-end: end,
@@ -16,7 +16,7 @@ $align-items: (
 ) !default;
 
 .flex {
-    @include flexbox;
+    display: flex;
 
     &--inline   { display: inline-flex; }
     &--row      { flex-direction: row; }

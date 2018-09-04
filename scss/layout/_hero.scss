@@ -1,6 +1,5 @@
 $hero-themes: $theme-colors;
 $hero-height: 25em;
-
 $hero-heights: () !default;
 $hero-heights: map-merge((
 	x-small: ($hero-height * 0.5),
@@ -71,11 +70,7 @@ $hero-heights: map-merge((
 			}
 		}
 	}
-
-	/**
-	 *	A modifier class to make your hero layout spans over your entire viewport
-	 *	vertically.
-	 */
+	
 	&--full-height {
 		height: 100vh;
 		min-height: 100vh;

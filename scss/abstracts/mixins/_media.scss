@@ -1,6 +1,3 @@
-/*  ------------------------------------------------------
-	Media
-------------------------------------------------------  */
 @mixin media($breakpoint, $type: min) {
 	@if map-has-key($breakpoints, $breakpoint) {
 		$width: map-get($breakpoints, $breakpoint);

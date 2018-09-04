@@ -1,21 +1,15 @@
-/*  ------------------------------------------------------
-
-	TYPOGRAPHY
-	
-------------------------------------------------------  */
-
-/*  ------------------------------------------------------
-	Font Family
-------------------------------------------------------  */
 $font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
 $font-family-serif: Georgia, "Times New Roman", serif !default;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Roboto Mono", "Liberation Mono", "Courier New", monospace !default;
 
 $font-family: $font-family-sans-serif !default;
+$font-families: () !default;
+$font-families: map-merge((
+	primary: $font-family,
+	secondary: $font-family,
+	monospace: $font-family-monospace
+), $font-families);
 
-/*  ------------------------------------------------------
-	Font Size
-------------------------------------------------------  */
 $font-size: 1rem !default;
 $font-sizes: () !default;
 $font-sizes: map-merge((
@@ -27,10 +21,6 @@ $font-sizes: map-merge((
 	xx-large: ($font-size * 2)
 ), $font-sizes);
 
-
-/*  ------------------------------------------------------
-	Headings
-------------------------------------------------------  */
 $headings: () !default;
 $headings: map-merge((
 	h1: ($font-size * 3),
@@ -41,10 +31,6 @@ $headings: map-merge((
 	h6: ($font-size * 1)
 ), $headings);
 
-
-/*  ------------------------------------------------------
-	Font Weights
-------------------------------------------------------  */
 $font-weight: 400 !default;
 $font-weights: () !default;
 $font-weights: map-merge((
@@ -69,10 +55,6 @@ $font-weights: map-merge((
 	extra-ultra: 900
 ), $font-weights);
 
-
-/*  ------------------------------------------------------
-	Line Heights
-------------------------------------------------------  */
 $line-height: 1.5 !default;
 $line-heights: () !default;
 $line-heights: map-merge((
@@ -83,10 +65,6 @@ $line-heights: map-merge((
 	x-loose: ($line-height * 1.5)
 ), $line-heights);
 
-
-/*  ------------------------------------------------------
-	Alignments
-------------------------------------------------------  */
 $text-aligns: (
     left 
     right 
@@ -96,28 +74,21 @@ $text-aligns: (
     start
     end 
     match-parent
-) !default;
+);
 
-
-/*  ------------------------------------------------------
-	Text Transforms
-------------------------------------------------------  */
 $text-transforms: (
     capitalize 
     uppercase 
     lowercase 
     full-width
-) !default;
+);
 
-
-/*  ------------------------------------------------------
-	Letter Spacings
-------------------------------------------------------  */
-$letter-spacing: 0;
-$letter-spacings: (
-    x-tight: ($letter-spacing - 1.5),
+$letter-spacing: 0 !default;
+$letter-spacings: () !default;
+$letter-spacings: map-merge((
+	x-tight: ($letter-spacing - 1.5),
     tight: ($letter-spacing - 0.5),
     base: $letter-spacing,
     loose: ($letter-spacing + 2),
     x-loose: ($letter-spacing + 4.5),
-) !default;
+), $letter-spacings);

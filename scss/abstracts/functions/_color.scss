@@ -1,10 +1,3 @@
-/*  ------------------------------------------------------
-	Tinter Shader
-	
-	Set of functions to mix light/black color with 
-	the color of your choice to get a different set 
-	of color combinations.
-------------------------------------------------------  */
 @function tint($color, $percentage) {
 	@return mix(white, $color, $percentage);
 }
@@ -12,12 +5,6 @@
 @function shade($color, $percentage) {
 	@return mix(black, $color, $percentage);
 }
-
-//	Color Shade Getter
-
-// .rule {
-// 	color: theme-color(primary, 600);
-// }
 
 @function color-shade($color, $shade-level, $map: $color-shades) {
 	@return nested-map-get($map, $color, $shade-level);
@@ -38,19 +25,6 @@
 @function gray($shade-level: 600, $color: grays) {
 	@return color-shade($color, $shade-level);
 }
-
-
-
-/*  ------------------------------------------------------
-	Color YIQ
-	
-	Helps finding the correct contrasting color
-	by utilizing the YIQ color space. This function
-	will return a light or dark contrast color based
-	on the specified base color
-
-	(source: bootstrap)
-------------------------------------------------------  */
 
 @function color-yiq($color) {
 	$r: red($color);

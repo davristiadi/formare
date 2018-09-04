@@ -1,4 +1,3 @@
-//	Spacings
 $spacing: 0.875rem !default;
 $spacings: (
     x-small: ($spacing * .5),
@@ -8,7 +7,6 @@ $spacings: (
     x-large: ($spacing * 2)
 ) !default;
 
-//	Border Radius
 $border-radius: 4px !default;
 $border-radius-pill: 50px !default;
 $border-radius-circle: 100% !default;

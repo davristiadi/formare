@@ -1,0 +1,17 @@
+.title {
+	font-weight: font-weight(bold);
+}
+
+.subtitle {
+	font-weight: font-weight(regular);
+}
+
+.article {
+	.heading {
+		margin-bottom: spacing(base);
+	}
+	
+	p {
+		margin-bottom: spacing(large);
+	}
+}

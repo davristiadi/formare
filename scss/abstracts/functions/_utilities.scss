@@ -1,9 +1,3 @@
-/*  ------------------------------------------------------
-	Nested Map Getter
-	
-	An advanced map getter function used to fetch 
-	specific values from a nested map variable.
-------------------------------------------------------  */
 @function nested-map-get($map, $keys...) {
 	@each $key in $keys {
 		$map: map-get($map, $key);
@@ -12,18 +6,11 @@
 	@return $map;
 }
 
-
-/*  ------------------------------------------------------
-	Calculate Rem
-------------------------------------------------------  */
 @function calculateRem($font-size) {
 	$rem: $font-size / 16px;
 	@return $rem * 1rem;
 }
 
-/*  ------------------------------------------------------
-	Strip Unit
-------------------------------------------------------  */
 @function strip-unit($number) {
 	@if type-of($number) == 'number' and not unitless($number) {
 		@return $number / ($number * 0 + 1);
@@ -32,16 +19,10 @@
 	@return $number;
 }
 
-/*  ------------------------------------------------------
-	Border
-------------------------------------------------------  */
 @function border-radius($value, $map: $border-radiuses) {
 	@return map-get($map, $value);
 }
 
-/*  ------------------------------------------------------
-	Spacing
-------------------------------------------------------  */
 @function spacing($value, $map: $spacings) {
     @return map-get($map, $value);
 }

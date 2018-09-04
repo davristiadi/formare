@@ -6,8 +6,8 @@ $card-border-radius		: $border-radius;
 $card-inner-border		: solid 1px $lighter;
 
 .card {
-	@include flexbox;
-	@include flex-direction(column);
+	display: flex;
+	flex-direction: column;
 	position: relative;
 	background-color: $card-background;
 	border-radius: $card-border-radius;
@@ -44,7 +44,6 @@ $card-inner-border		: solid 1px $lighter;
 		}
 	}
 
-	//	Generate theme modifier classes for a card component.
 	@each $theme, $color in $card-themes {
 		&--#{$theme} {
 			transition: $transition;
@@ -110,13 +109,5 @@ $card-inner-border		: solid 1px $lighter;
 		.card__image {
 			border-radius: $card-border-radius;
 		}
-	}
-}
-
-.card-list {
-	@extend .row;
-
-	.card {
-		margin-bottom: spacing(large);
 	}
 }

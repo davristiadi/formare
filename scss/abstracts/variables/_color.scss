@@ -1,7 +1,3 @@
-/*  ------------------------------------------------------
-	COLOR SYSTEM
-------------------------------------------------------  */
-//	Color Palletes
 $azure					: #4381C1 !default;
 $valencia				: #D3492C !default;
 $sirocco				: #6D7A7D !default;
@@ -13,7 +9,6 @@ $cello					: #1C415B !default;
 $deep-cerulean			: #007EA7 !default;
 $pelorous				: #45A1BF !default;
 
-//	Color Patterns & States
 $primary-color			: $azure !default;
 $secondary-color		: $valencia !default;
 $success-color			: $malachite !default;
@@ -21,7 +16,6 @@ $warning-color			: $corn !default;
 $danger-color			: $spartan-crimson !default;
 $gray-color				: $sirocco !default;
 
-//	Generate color shades
 $color-shades: () !default;
 $color-shades: map-merge((
 	primary: (
@@ -114,7 +108,6 @@ $color-shades: map-merge((
 	)
 ), $color-shades);
 
-//	Global Colors
 $white: #FFFFFF;
 $lightest: gray(100);
 $lighter: gray(200);
@@ -128,7 +121,6 @@ $black: #000000;
 $text-color: $dark !default;
 $background-color: $white !default;
 
-//  Theme colors
 $theme-colors: () !default;
 $theme-colors: map-merge((
 	primary: $primary-color,
@@ -147,8 +139,6 @@ $theme-colors: map-merge((
 	darkest: $darkest
 ), $theme-colors);
 
-
-//	Color YIQ Contrastor
 $yiq-contrasted-threshold: 150 !default;
 $yiq-text-dark: $dark !default;
 $yiq-text-light: $lightest !default;
