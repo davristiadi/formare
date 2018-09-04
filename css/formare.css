@@ -1,154 +1,9 @@
 /*	-----------------------------------------------------------------------------
 
-	formare.io v0.1.0 | MIT License | github.com/dkk94/formare
+	formare v0.1.0 | MIT License | github.com/davidkk/formare
 
 -----------------------------------------------------------------------------  */
 @import url("https://use.fontawesome.com/releases/v5.0.10/css/all.css");
-/*  ------------------------------------------------------
-	Nested Map Getter
-	
-	An advanced map getter function used to fetch 
-	specific values from a nested map variable.
-------------------------------------------------------  */
-/*  ------------------------------------------------------
-	Calculate Rem
-------------------------------------------------------  */
-/*  ------------------------------------------------------
-	Strip Unit
-------------------------------------------------------  */
-/*  ------------------------------------------------------
-	Border
-------------------------------------------------------  */
-/*  ------------------------------------------------------
-	Spacing
-------------------------------------------------------  */
-/*  ------------------------------------------------------
-	Tinter Shader
-	
-	Set of functions to mix light/black color with 
-	the color of your choice to get a different set 
-	of color combinations.
-------------------------------------------------------  */
-/*  ------------------------------------------------------
-	Color YIQ
-	
-	Helps finding the correct contrasting color
-	by utilizing the YIQ color space. This function
-	will return a light or dark contrast color based
-	on the specified base color
-
-	(source: bootstrap)
-------------------------------------------------------  */
-/*  ------------------------------------------------------
-	COLOR SYSTEM
-------------------------------------------------------  */
-/*  ------------------------------------------------------
-
-	TYPOGRAPHY
-	
-------------------------------------------------------  */
-/*  ------------------------------------------------------
-	Font Family
-------------------------------------------------------  */
-/*  ------------------------------------------------------
-	Font Size
-------------------------------------------------------  */
-/*  ------------------------------------------------------
-	Headings
-------------------------------------------------------  */
-/*  ------------------------------------------------------
-	Font Weights
-------------------------------------------------------  */
-/*  ------------------------------------------------------
-	Line Heights
-------------------------------------------------------  */
-/*  ------------------------------------------------------
-	Alignments
-------------------------------------------------------  */
-/*  ------------------------------------------------------
-	Text Transforms
-------------------------------------------------------  */
-/*  ------------------------------------------------------
-	Letter Spacings
-------------------------------------------------------  */
-/*  ------------------------------------------------------
-	Transitions
-------------------------------------------------------  */
-/*  ------------------------------------------------------
-    Grid Systems
-------------------------------------------------------  */
-/*  ------------------------------------------------------
-	Vendorize
-------------------------------------------------------  */
-/*  ------------------------------------------------------
-	Media
-------------------------------------------------------  */
-/*  ------------------------------------------------------
-	Transition
-------------------------------------------------------  */
-/*  ------------------------------------------------------
-	Animation
-------------------------------------------------------  */
-@-webkit-keyframes bottomOut {
-  0% {
-    border-width: 1px 1px 3px 1px;
-    transform: translateY(0);
-  }
-  50% {
-    border-width: 1px;
-    transform: translateY(1px);
-  }
-  100% {
-    border-width: 1px 1px 3px 1px;
-    transform: translateY(0);
-  }
-}
-
-@-moz-keyframes bottomOut {
-  0% {
-    border-width: 1px 1px 3px 1px;
-    transform: translateY(0);
-  }
-  50% {
-    border-width: 1px;
-    transform: translateY(1px);
-  }
-  100% {
-    border-width: 1px 1px 3px 1px;
-    transform: translateY(0);
-  }
-}
-
-@-ms-keyframes bottomOut {
-  0% {
-    border-width: 1px 1px 3px 1px;
-    transform: translateY(0);
-  }
-  50% {
-    border-width: 1px;
-    transform: translateY(1px);
-  }
-  100% {
-    border-width: 1px 1px 3px 1px;
-    transform: translateY(0);
-  }
-}
-
-@keyframes bottomOut {
-  0% {
-    border-width: 1px 1px 3px 1px;
-    transform: translateY(0);
-  }
-  50% {
-    border-width: 1px;
-    transform: translateY(1px);
-  }
-  100% {
-    border-width: 1px 1px 3px 1px;
-    transform: translateY(0);
-  }
-}
-
 /** This project uses sanitize.css as its style resetter. */
 /*! sanitize.css v5.0.0 | CC0 License | github.com/jonathantneal/sanitize.css */
 /* Document (https://html.spec.whatwg.org/multipage/semantics.html#semantics)
@@ -785,22 +640,6 @@ h6,
   font-size: 1rem;
 }
 
-.title {
-  font-weight: 700;
-}
-
-.subtitle {
-  font-weight: 400;
-}
-
-.article .heading {
-  margin-bottom: 0.875rem;
-}
-
-.article p {
-  margin-bottom: 1.3125rem;
-}
-
 .container, .navbar .navbar__container {
   margin: 0 auto;
   padding: 0 22.5px;
@@ -839,7 +678,7 @@ h6,
   max-width: none;
 }
 
-.row, .card-list,
+.row,
 .grids {
   display: flex;
   flex-wrap: wrap;
@@ -1589,10 +1428,6 @@ h6,
   display: flex;
   flex-direction: column;
   min-height: 25em;
-  /**
-	 *	A modifier class to make your hero layout spans over your entire viewport
-	 *	vertically.
-	 */
 }
 
 .hero__bg {
@@ -1874,10 +1709,6 @@ h6,
 }
 
 .flex {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -1946,18 +1777,6 @@ h6,
 .ai-baseline,
 .align-items-baseline {
   align-items: baseline;
-}
-
-.header {
-  position: relative;
-}
-
-.footer {
-  position: relative;
-  background-color: #2c3132;
-  color: #f0f2f2;
-  min-height: 15em;
-  height: 15em;
 }
 
 .form .form__label {
@@ -2253,6 +2072,22 @@ h6,
 .alert > * {
   padding-top: 0.875rem;
   padding-bottom: 0.875rem;
+}
+
+.title {
+  font-weight: 700;
+}
+
+.subtitle {
+  font-weight: 400;
+}
+
+.article .heading {
+  margin-bottom: 0.875rem;
+}
+
+.article p {
+  margin-bottom: 1.3125rem;
 }
 
 .nav {
@@ -4309,16 +4144,7 @@ h6,
 }
 
 .card {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   position: relative;
   background-color: #FFFFFF;
@@ -5232,10 +5058,6 @@ h6,
   border-radius: 4px;
 }
 
-.card-list .card {
-  margin-bottom: 1.3125rem;
-}
-
 .fs-x-small,
 .font-size-x-small {
   font-size: 0.7rem !important;
@@ -5857,8 +5679,7 @@ h6,
   }
 }
 
-/*	--------------------------------------
-	END OF FRAMEWORK
+/*	end of framework
 --------------------------------------  */
 
 /*# sourceMappingURL=formare.css.map */
