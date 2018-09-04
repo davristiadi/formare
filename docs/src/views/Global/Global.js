@@ -4,8 +4,7 @@ import { PropsRoute } from '../../components/Utilities';
 import { GlobalHeader, GlobalFooter } from '../Global';
 import { 
     Home,
-    Docs,
-    GettingStarted
+    Docs
 } from '../Global';
 
 class Global extends Component {
@@ -16,7 +15,6 @@ class Global extends Component {
                 <div className="fr-global-body">
                     <Switch>
                         <PropsRoute exact path="/" component={Home} {...this.props} />
-                        <PropsRoute path="/getting-started" component={GettingStarted} {...this.props} />
                         <PropsRoute path="/docs" component={Docs} {...this.props} />
                     </Switch>
                 </div>
