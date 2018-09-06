@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 class GlobalHeader extends Component {
     render() {
         return (
-            <header id="global-header" className="fr-global-header">
+            <header className="fr-header fr-header--fixed">
                 <div className="navbar navbar--primary">
                     <div className="navbar__container">
                         <div className="navbar__block flex jc-start">
