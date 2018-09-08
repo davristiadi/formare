@@ -2,4 +2,8 @@
     .color-#{$theme} {
         color: $color !important;
     }
+
+    .bg-color-#{$theme} {
+        background-color: $color !important;
+    }
 }

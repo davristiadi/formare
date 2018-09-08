@@ -1,10 +1,10 @@
 .section {
 	position: relative;
 
-	@each $theme, $value in $theme-colors {
+	@each $theme, $color in $theme-colors {
 		&--#{$theme} {
-			background-color: $value;
-			color: color-yiq($value);
+			background-color: $color;
+			color: color-yiq($color);
 		}
 	}
 }

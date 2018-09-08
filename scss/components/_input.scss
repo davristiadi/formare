@@ -10,7 +10,7 @@ $input-padding-y: spacing(small) !default;
 $input-padding-x: spacing(base) !default;
 $input-padding: $input-padding-y $input-padding-x;
 $input-background: $white;
-$input-disabled-background: $lightest;
+$input-disabled-background: $lighter;
 $input-transition: $transition;
 
 $input-group-extra-color: color-yiq($lighter);

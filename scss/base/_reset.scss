@@ -10,6 +10,19 @@
 * 2. Add box sizing inheritence in all browsers (opinionated).
 */
 
+:root {
+    @each $theme, $color in $theme-colors {
+        --#{$theme}-color: #{$color};
+    }
+    
+    --font-family-text: #{font-family(primary)};
+    --font-family-title: #{font-family(secondary)};
+    --font-weight: #{font-weight(regular)};
+	--text-color: #{$dark};
+	--line-height: #{line-height(base)};
+    --background-color: #{$white};
+}
+
 *,
 ::before,
 ::after {
@@ -67,12 +80,12 @@ section {
 
 body {
 	margin: 0;
-	font-family: $font-family;
-	font-size: $font-size;
-	font-weight: $font-weight;
-	line-height: $line-height;
-	color: $text-color;
-	background-color: $background-color;
+	font-family: var(--font-family-text);
+	font-size: var(--font-size);
+	font-weight: var(--font-weight);
+	line-height: var(--line-height);
+	color: var(--text-color);
+	background-color: var(--background-color);
 }
 
 /**

@@ -1,19 +1,2 @@
-$breakpoints: () !default;
-$breakpoints: map-merge((
-    xs: 0,
-    sm: 576px,
-    md: 768px,
-    lg: 992px,
-    xl: 1200px,
-), $breakpoints);
-
-$grid-columns       : 12 !default;
-$grid-gap-width     : 45px !default;
-
-$container-max-widths: () !default;
-$container-max-widths: map-merge((
-    sm: 540px,
-    md: 720px,
-    lg: 960px,
-    xl: 1140px
-), $container-max-widths);
+$grid-columns: 12 !default;
+$grid-gap-width: 45px !default;

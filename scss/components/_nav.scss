@@ -61,19 +61,19 @@ $nav-item-icon-size: 48px;
 		}
 	}
 	
-	@each $theme, $value in $theme-colors {
+	@each $theme, $color in $nav-themes {
 		&--#{$theme} {
 			&.nav--tabs {
 				.nav__list {
 					.nav__item {
 						&:hover {
-							color: $value;
-							border-bottom: solid 2px $value;
+							color: $color;
+							border-bottom: solid 2px $color;
 						}
 						
 						&--active {
-							color: $value;
-							border-bottom: solid 2px $value;
+							color: $color;
+							border-bottom: solid 2px $color;
 						}
 					}
 				}

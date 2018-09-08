@@ -2,19 +2,21 @@ $font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI
 $font-family-serif: Georgia, "Times New Roman", serif !default;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Roboto Mono", "Liberation Mono", "Courier New", monospace !default;
 
-$font-family: $font-family-sans-serif !default;
+$font-family-primary: $font-family-sans-serif !default;
+$font-family-secondary: $font-family-serif !default;
 $font-families: () !default;
 $font-families: map-merge((
-	primary: $font-family,
-	secondary: $font-family,
+	primary: $font-family-primary,
+	secondary: $font-family-secondary,
 	monospace: $font-family-monospace
 ), $font-families);
 
 $font-size: 1rem !default;
 $font-sizes: () !default;
 $font-sizes: map-merge((
-	x-small: ($font-size * 0.7),
-	small: ($font-size * 0.85),
+	xx-small: ($font-size / 2),
+	x-small: ($font-size / 1.5),
+	small: ($font-size / 1.25),
 	base: $font-size,
 	large: ($font-size * 1.25),
 	x-large: ($font-size * 1.5),
@@ -23,12 +25,12 @@ $font-sizes: map-merge((
 
 $headings: () !default;
 $headings: map-merge((
-	h1: ($font-size * 3),
-	h2: ($font-size * 2.5),
-	h3: ($font-size * 2),
-	h4: ($font-size * 1.5),
-	h5: ($font-size * 1.25),
-	h6: ($font-size * 1)
+	h1: ($font-size * 3.5),
+	h2: ($font-size * 2.75),
+	h3: ($font-size * 2.25),
+	h4: ($font-size * 1.75),
+	h5: ($font-size * 1.5),
+	h6: ($font-size * 1.25)
 ), $headings);
 
 $font-weight: 400 !default;

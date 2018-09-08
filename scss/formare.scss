@@ -6,29 +6,11 @@
 
 @import url("https://use.fontawesome.com/releases/v5.0.10/css/all.css");
 
-@import "abstracts/functions";
-@import "abstracts/variables";
-@import "abstracts/mixins";
-@import "base/reset";
-@import "base/global";
-@import "base/typography";
-@import "layout/grid";
-@import "layout/layout";
-@import "layout/section";
-@import "layout/hero";
-@import "layout/flex";
-@import "layout/form";
-@import "components/alert";
-@import "components/article";
-@import "components/nav";
-@import "components/navbar";
-@import "components/button";
-@import "components/input";
-@import "components/card";
-@import "utilities/text";
-@import "utilities/color";
-@import "utilities/spacing";
-@import "utilities/animation";
+@import "abstracts/_all";
+@import "base/_all";
+@import "layout/_all";
+@import "components/_all";
+@import "utilities/_all";
 
 /*	end of framework
 --------------------------------------  */

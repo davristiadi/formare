@@ -1,24 +1,17 @@
-//	Font Size
 @each $size, $value in $font-sizes {
-	.fs-#{$size},
-	.font-size-#{$size} {
+	.fs-#{$size}, .font-size-#{$size} {
 		font-size: $value !important; 
 	} 
 }
 
-//	Font Weight
 @each $weight, $value in $font-weights {
-	.fw-#{$weight},
-	.font-weight-#{$weight} {
+	.fw-#{$weight}, .font-weight-#{$weight} {
 		font-weight: $value !important;
 	}
 }
 
-
-//	Alignments
 @each $align in $text-aligns {
-	.ta-#{$align},
-	.align-#{$align} {
+	.ta-#{$align}, .align-#{$align} {
 		text-align: $align !important;
 	}
 }

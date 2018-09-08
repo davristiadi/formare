@@ -1,5 +1,5 @@
 $card-themes			: $theme-colors;
-$card-padding			: $spacing;
+$card-padding			: spacing(base);
 $card-background		: $white;
 $card-border			: solid 1px $lighter;
 $card-border-radius		: $border-radius;
@@ -22,7 +22,7 @@ $card-inner-border		: solid 1px $lighter;
 	}
 
 	.card__header {
-		@each $theme, $value in $theme-colors {
+		@each $theme, $value in $card-themes {
 			&--#{$theme} {
 				background-color: $value;
 				color: color-yiq($value);

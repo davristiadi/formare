@@ -1,15 +1,16 @@
-$navbar-themes: $theme-colors;
+$navbar-themes: $theme-colors !default;
 $navbar-transition: $transition !default;
 $navbar-background: gray(100) !default;
 $navbar-color: color-yiq($navbar-background);
 $navbar-height: 4em;
-$navbar-heights: (
+$navbar-heights: () !default;
+$navbar-heights: map-merge((
 	x-small: ($navbar-height * .5),
 	small: ($navbar-height * .75),
 	base: ($navbar-height * 1),
 	large: ($navbar-height * 1.5),
 	x-large: ($navbar-height * 2)
-) !default;
+), $navbar-heights);
 
 .navbar {
 	position: relative;
@@ -18,7 +19,6 @@ $navbar-heights: (
 	transition: $navbar-transition;
 	background: $navbar-background;
 
-	// Generates different themes for Navbar component.
 	@each $theme, $color in $navbar-themes {
 		&--#{$theme} {
 			background-color: $color;
@@ -26,7 +26,6 @@ $navbar-heights: (
 		}
 	}
 	
-	// Generates different sizes for Navbar component.
 	@each $size, $value in $navbar-heights {
 		&--#{$size} {
 			height: $value;
@@ -60,11 +59,6 @@ $navbar-heights: (
 	.nav {
 		display: flex;
 		flex-direction: column;
-		height: 100%;
-
-		.nav__list {
-			flex: 1;
-		}
 
 		.nav__item {
 			display: flex;
@@ -73,7 +67,6 @@ $navbar-heights: (
 		}
 
 		.nav__link {
-			flex: 1;
 			display: flex;
 			justify-content: center;
 		}

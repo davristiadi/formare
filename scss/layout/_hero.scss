@@ -4,7 +4,7 @@ $hero-heights: () !default;
 $hero-heights: map-merge((
 	x-small: ($hero-height * 0.5),
 	small: ($hero-height * 0.75),
-	base: ($hero-height * 1),
+	normal: ($hero-height * 1),
 	large: ($hero-height * 1.5),
 	x-large: ($hero-height * 2)
 ), $hero-heights);

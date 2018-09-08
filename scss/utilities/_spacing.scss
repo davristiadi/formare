@@ -1,44 +1,36 @@
 @each $size, $value in $spacings {
-	.margin, 
-	.mg { 
+	.margin, .mg { 
 		margin: spacing(base) !important;
 	} 
 
-	.padding,
-	.pd {
+	.padding, .pd {
 		padding: spacing(base) !important;
 	}
 	
-	.margin-#{$size},
-	.mg-#{$size} {
+	.margin-#{$size}, .mg-#{$size} {
 		margin: $value !important;
 	}
 
-	.padding-#{$size},
-	.pd-#{$size} {
+	.padding-#{$size}, .pd-#{$size} {
 		padding: $value !important;
 	}
 }
 
 @each $direction in (top left bottom right) {
-	.pd-#{$direction},
-	.padding-#{$direction} {
+	.pd-#{$direction}, .padding-#{$direction} {
 		padding-#{$direction}: spacing(base) !important;
 	}
 
-	.mg-#{$direction},
-	.margin-#{$direction} {
+	.mg-#{$direction}, .margin-#{$direction} {
 		margin-#{$direction}: spacing(base) !important;
 	}
 	
 	@each $size, $value in $spacings {
-		.mg-#{$direction}-#{$size},
-		.margin-#{$direction}-#{$size} {
+		.mg-#{$direction}-#{$size}, .margin-#{$direction}-#{$size} {
 			margin-#{$direction}: $value !important;
 		}
 
-		.pd-#{$direction}-#{$size},
-		.padding-#{$direction}-#{$size} {
+		.pd-#{$direction}-#{$size}, .padding-#{$direction}-#{$size} {
 			padding-#{$direction}: $value !important;
 		}
 	}
