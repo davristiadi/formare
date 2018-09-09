@@ -10,7 +10,7 @@ const Card = props => {
                     <h3 className="title">Card</h3>
                     <h5 className="subtitle color-gray">Culpa culpa deserunt magna nostrud sunt adipisicing cillum commodo dolore cupidatat nostrud veniam. Commodo id nulla consectetur aliqua aute. Fugiat irure consectetur cillum pariatur laboris est.</h5>
                 </div>
-                <section class="section">
+                <section class="section mg-bottom-x-large">
 					<article className="article">
 						<div className="heading">
 							<h4 className="title">Default Card</h4>
@@ -43,8 +43,7 @@ const Card = props => {
 						</div>
 					</article>
                 </section>
-				<hr />
-				<section className="section">
+				<section className="section mg-bottom-x-large">
 					<article className="article">
 						<div className="heading">
 							<h4 className="title">Default Card with Image</h4>
@@ -87,8 +86,7 @@ const Card = props => {
 						</div>
 					</article>
 				</section>
-				<hr />
-				<section className="section">
+				<section className="section mg-bottom-x-large">
 					<article className="article">
 						<div className="heading">
 							<h4 className="title">Card with image overlays</h4>
@@ -114,7 +112,6 @@ const Card = props => {
 						</div>
 					</article>
 				</section>
-				<hr />
 				<section className="section">
 					<article className="article">
 						<div className="heading">

@@ -2,7 +2,6 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { Components } from './Components';
 import { Forms } from './Forms';
-import { PropsRoute } from '../../../components/Utilities';
 import DocsMenu from './DocsMenu';
 
 const Docs = props => {

@@ -17,13 +17,10 @@ class DocsMenu extends Component {
                         <Link to="/docs/components/navbar">Navbar</Link>
                     </li>
                     <li className="fr-menu__item">
-                        <Link to="/docs/components/buttons">Buttons</Link>
+                        <Link to="/docs/components/button">Button</Link>
                     </li>
                     <li className="fr-menu__item">
-                        <Link to="/docs/components/cards">Cards</Link>
-                    </li>
-                    <li className="fr-menu__item">
-                        <Link to="/docs/components/tabs">Tabs</Link>
+                        <Link to="/docs/components/card">Card</Link>
                     </li>
                     <li className="fr-menu__item fr-menu__item--parent">Form</li>
                     <li className="fr-menu__item">
