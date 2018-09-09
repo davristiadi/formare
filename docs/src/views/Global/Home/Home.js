@@ -21,15 +21,21 @@ const Home = props => {
 									</h4>
 								</div>
 								<div>
-									<button className="button button--primary button--large mg-right-large">Getting Started</button>
-									<button className="button button--outlined button--secondary button--large">Documentation</button>
+									<button className="button button--primary button--large mg-right-large">
+										<i className="fas fa-rocket mg-right-large"></i>
+										Getting Started
+									</button>
+									<button className="button button--outlined button--secondary button--large">
+										<i className="fas fa-book mg-right-large"></i>
+										Documentation
+									</button>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>	
-			<section className="section section--lightest">
+			<section className="section section--lighter">
 				<div className="container">
 					<div className="heading">
 						<h3 className="title color-primary">Why Formare?</h3>

@@ -13,27 +13,22 @@
 
 @function theme-color-shade($color-name: primary, $color-shade-level: 0) {
 	$color: theme-color($color-name);
-	$color-shade-level: abs($color-shade-level);
-	
-	@if $color-shade-level <= 100 or $color-shade-level >= -100 {
-		@if $color-shade-level > 0 {
-			@return tint($color, $color-shade-level * 1%);
-		}
-	
-		@else {
-			@return shade($color, $color-shade-level * 1%);
-		}
+	$color-shade-percentage: abs($color-shade-level) * 1%;
+
+	@if $color-shade-level > 0 {
+		@return shade($color, $color-shade-percentage);
 	}
+
 	@else {
-		@warn '$color-shade-level value must be between -100 to 100.';
+		@return tint($color, $color-shade-percentage);
 	}
 }
 
-@function primary-color($color-shade-level) {
+@function primary-color($color-shade-level: 0) {
 	@return theme-color-shade(primary, $color-shade-level);
 }
 
-@function secondary-color($color-shade-level) {
+@function secondary-color($color-shade-level: 0) {
 	@return theme-color-shade(secondary, $color-shade-level);
 }
 

@@ -4,8 +4,8 @@ $input-font-sizes: $font-sizes;
 $input-color: $dark;
 $input-border: solid 1px gray(200);
 $input-border-radius: border-radius(base);
-$input-focused-color: primary-color(1000);
-$input-focused-border: solid 1px primary-color(600);
+$input-focused-color: primary-color(40);
+$input-focused-border: solid 1px primary-color();
 $input-padding-y: spacing(small) !default;
 $input-padding-x: spacing(base) !default;
 $input-padding: $input-padding-y $input-padding-x;
@@ -93,7 +93,7 @@ $input-group-extra-focused-border: solid 1px $primary-color;
 		&:after {
 			top: 50%;
 			transform: rotate(180deg) translateY(-50%);
-			color: primary-color(600);
+			color: primary-color();
 		}
 	}
 }
@@ -142,7 +142,7 @@ $input-group-extra-focused-border: solid 1px $primary-color;
 
 		.input-set__extra {
 			> .icon {
-				color: primary-color(600);
+				color: primary-color();
 			}
 		}
 	}

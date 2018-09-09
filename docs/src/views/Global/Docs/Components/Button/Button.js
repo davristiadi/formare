@@ -16,11 +16,12 @@ const Button = props => {
 					</div>
 					<div className="fr-preview">
 						<span className="fr-preview__tag">Preview</span>
-						<button className="button">Button</button>
+						<button className="button button--primary mg-right">Primary</button>
+						<button className="button">Default</button>
 					</div>
 				</div>
-				<hr />
-				<div className="mg-bottom-large">
+				
+				<div className="mg-bottom-x-large">
 					<div className="heading">
 						<h5 className="title">Button States</h5>
 						<h6 className="subtitle color-gray">Id dolore aute cillum velit laboris irure laborum elit irure occaecat magna minim.</h6>
@@ -45,8 +46,8 @@ const Button = props => {
 						</div>
 					</div>
 				</div>
-				<hr />
-				<div className="mg-bottom-large">
+				
+				<div className="mg-bottom-x-large">
 					<div className="heading">
 						<h5 className="title">Outlined</h5>
 						<h6 className="subtitle color-gray">Id dolore aute cillum velit laboris irure laborum elit irure occaecat magna minim.</h6>
@@ -71,8 +72,8 @@ const Button = props => {
 						</div>
 					</div>
 				</div>
-				<hr />
-				<div className="mg-bottom-large">
+				
+				<div className="mg-bottom-x-large">
 					<div className="heading">
 						<h5 className="title">Raised</h5>
 						<h6 className="subtitle color-gray">Id dolore aute cillum velit laboris irure laborum elit irure occaecat magna minim.</h6>
@@ -97,8 +98,8 @@ const Button = props => {
 						</div>
 					</div>
 				</div>
-				<hr />
-				<div className="mg-bottom-large">
+				
+				<div className="mg-bottom-x-large">
 					<div className="heading">
 						<h5 className="title">Rounded</h5>
 						<h6 className="subtitle color-gray">Id dolore aute cillum velit laboris irure laborum elit irure occaecat magna minim.</h6>
@@ -110,7 +111,7 @@ const Button = props => {
 						</div>
 					</div>
 				</div>
-				<hr />
+				
 				<div>
 					<div className="heading">
 						<h5 className="title">Sizes</h5>

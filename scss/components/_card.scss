@@ -1,9 +1,9 @@
-$card-themes			: $theme-colors;
-$card-padding			: spacing(base);
-$card-background		: $white;
-$card-border			: solid 1px $lighter;
-$card-border-radius		: $border-radius;
-$card-inner-border		: solid 1px $lighter;
+$card-themes: $theme-colors;
+$card-padding: spacing(base);
+$card-background: $white;
+$card-border: solid 1px $light;
+$card-border-radius: $border-radius;
+$card-inner-border: solid 1px $lighter;
 
 .card {
 	display: flex;

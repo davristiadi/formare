@@ -1,0 +1,16 @@
+$breakpoints: () !default;
+$breakpoints: map-merge((
+    x-small: 0,
+    small: 576px,
+    medium: 768px,
+    large: 992px,
+    x-large: 1200px,
+), $breakpoints);
+
+$container-max-widths: () !default;
+$container-max-widths: map-merge((
+    small: 540px,
+    medium: 720px,
+    large: 960px,
+    x-large: 1140px
+), $container-max-widths);

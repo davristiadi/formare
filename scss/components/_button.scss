@@ -6,12 +6,12 @@ $button-border-style: solid;
 $button-border-width: 1px;
 $button-border-color: gray(300);
 $button-transition: $transition;
-$button-hovered-color: theme-color-shade(primary, 60);
-$button-hovered-border-color: theme-color-shade(primary, 40);
-$button-focused-color: primary-color(60);
-$button-focused-border-color: primary-color(60);
-$button-active-color: primary-color(100);
-$button-active-border-color: primary-color(100);
+$button-hovered-color: primary-color(0);
+$button-hovered-border-color: primary-color(0);
+$button-focused-color: primary-color(-20);
+$button-focused-border-color: primary-color(-20);
+$button-active-color: primary-color(40);
+$button-active-border-color: primary-color(40);
 $button-disabled-opacity: 0.5 !default;
 $button-padding-y: spacing(small);
 $button-padding-x: spacing(large);
@@ -39,6 +39,7 @@ $button-paddings: map-merge((
 	text-align: center;
 	white-space: nowrap;
 	vertical-align: middle;
+	outline: none;
 	cursor: pointer;
 
 	//	Pseudo states	
