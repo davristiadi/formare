@@ -25,12 +25,12 @@ $font-sizes: map-merge((
 
 $headings: () !default;
 $headings: map-merge((
-	h1: ($font-size * 3.5),
+	h1: ($font-size * 3.75),
 	h2: ($font-size * 2.75),
-	h3: ($font-size * 2.25),
-	h4: ($font-size * 1.75),
-	h5: ($font-size * 1.5),
-	h6: ($font-size * 1.25)
+	h3: ($font-size * 2.00),
+	h4: ($font-size * 1.50),
+	h5: ($font-size * 1.25),
+	h6: ($font-size * 1)
 ), $headings);
 
 $font-weight: 400 !default;
