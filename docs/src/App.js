@@ -5,7 +5,7 @@ import { Global } from './views/Global';
 class App extends Component {
 	render() {
 		return (
-			<BrowserRouter>
+			<BrowserRouter basename={process.env.PUBLIC_URL}>
 				<Switch>
 					<Route path="/" component={Global} />
 				</Switch>
