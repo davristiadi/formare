@@ -4,7 +4,7 @@ import { GlobalHeader, GlobalContent } from '../Global';
 class Global extends Component {
     render() {
         return (
-            <div className="fr-layout">
+            <div className="layout">
                 <GlobalHeader />
                 <GlobalContent />
             </div>

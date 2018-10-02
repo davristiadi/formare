@@ -22,6 +22,9 @@ class DocsMenu extends Component {
                     <li className="fr-menu__item">
                         <Link to="/docs/components/card">Card</Link>
                     </li>
+                    <li className="fr-menu__item">
+                        <Link to="/docs/components/table">Table</Link>
+                    </li>
                     <li className="fr-menu__item fr-menu__item--parent">Form</li>
                     <li className="fr-menu__item">
                         <Link to="/docs/forms/general">General</Link>

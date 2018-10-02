@@ -16,8 +16,10 @@ const Button = props => {
 					</div>
 					<div className="fr-preview">
 						<span className="fr-preview__tag">Preview</span>
-						<button className="button button--primary mg-right">Primary</button>
-						<button className="button">Default</button>
+						<div className="fr-preview__display">
+							<button className="button button--primary mg-right">Primary</button>
+							<button className="button">Default</button>
+						</div>
 					</div>
 				</div>
 				

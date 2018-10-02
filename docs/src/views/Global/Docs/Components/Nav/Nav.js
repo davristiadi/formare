@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 
 const Nav = props => {
     return (
-        <div id="nav">
+        <div className="fr-nav-page">
             <article className="fr-article article">
                 <div className="fr-heading heading">
                     <h3 className="title">Nav</h3>
@@ -12,7 +12,7 @@ const Nav = props => {
                         quis qui duis Lorem consectetur ullamco labore reprehenderit deserunt eu.
                     </h5>
                 </div>
-                <section className="section">
+                <section className="section mg-bottom-x-large">
                     <div className="heading">
                         <h4 className="title">Default Nav</h4>
                         <h6 className="subtitle color-gray">Dolor mollit officia amet do minim ut adipisicing.</h6>
@@ -39,8 +39,7 @@ const Nav = props => {
                         </div>
                     </div>
                 </section>
-                <hr />
-                <section className="section">
+                <section className="section mg-bottom-x-large">
                     <div className="heading">
                         <h4 className="title">Navigation inside Navbar</h4>
                         <h6 className="subtitle">Consequat Lorem id labore ad consectetur Lorem voluptate proident.</h6>
@@ -73,8 +72,7 @@ const Nav = props => {
                         </div>
                     </div>
                 </section>
-                <hr />
-                <section className="section">
+                <section className="section mg-bottom-x-large">
                     <div className="heading">
                         <h4 className="title">Tabbed Navigation</h4>
                         <h6 className="subtitle color-gray">Ullamco aute et id eu elit esse voluptate elit incididunt ad elit.</h6>

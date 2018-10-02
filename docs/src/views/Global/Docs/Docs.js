@@ -6,9 +6,9 @@ import DocsMenu from './DocsMenu';
 
 const Docs = props => {
 	return (
-		<div className="fr-layout">
-			<div className="container flex">
-				<main className="fr-layout pd-top-large pd-bottom pd-right-large">
+		<div class="fr-docs">
+			<div class="fr-docs__container container">
+				<main className="fr-docs__content layout">
 					<Switch>
 						<Route exact path="/docs" component={DocsHome} />
 						<Route path="/docs/components" component={Components} />
@@ -19,20 +19,6 @@ const Docs = props => {
 					<DocsMenu />
 				</aside>
 			</div>
-			{/* <div className="container">
-				<div className="grids">
-					<main className="fr-docs__body grid">
-						<Switch>
-							<Route exact path="/docs" component={DocsHome} />
-							<Route path="/docs/components" component={Components} />
-							<Route path="/docs/forms" component={Forms} />
-						</Switch>
-					</main>
-					<aside className="fr-docs__sidebar grid grid-3">
-						<DocsMenu />
-					</aside>
-				</div>
-			</div> */}
 		</div>
 	);
 }

@@ -1,0 +1,47 @@
+.table {
+    border-radius: border-radius(base);
+    overflow: hidden;
+    
+    > table {
+        width: 100%;
+    }
+    
+    &__head {
+        border-bottom-width: 3px;
+        border-bottom-style: solid;
+        border-bottom-color: gray(200);
+
+        @each $theme, $color in $theme-colors {
+            &--#{$theme} {
+                background-color: $color;
+                color: color-yiq($color);
+                border-bottom-color: shade($color, 10%);
+            }
+        }
+        
+        > tr {
+            > th {
+                padding: spacing(base);
+            }
+        }
+    }
+
+    &__body {
+        > tr {
+            background-color: $white;
+            border-bottom: solid 1px gray(100);
+            
+            > td {
+                padding: spacing(base);
+            }
+        }
+
+        .table--striped & {
+            > tr {
+                &:nth-child(2n + 2) {
+                    background-color: gray(100);
+                }
+            }
+        }
+    }
+}

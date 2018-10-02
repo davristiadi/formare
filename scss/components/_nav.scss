@@ -68,12 +68,12 @@ $nav-item-icon-size: 48px;
 					.nav__item {
 						&:hover {
 							color: $color;
-							border-bottom: solid 2px $color;
+							border-bottom: solid 1px $color;
 						}
 						
 						&--active {
 							color: $color;
-							border-bottom: solid 2px $color;
+							border-bottom: solid 1px $color;
 						}
 					}
 				}
@@ -83,21 +83,21 @@ $nav-item-icon-size: 48px;
 
 	&--tabs {
 		.nav__list {
-			border-bottom: solid 2px $lighter;
+			border-bottom: solid 1px $lighter;
 
 			.nav__item {
-				margin-bottom: -2px;
+				margin-bottom: -1px;
 				border-bottom-style: solid;
-				border-bottom-width: 2px;
+				border-bottom-width: 1px;
 				border-bottom-color: transparent;
 				transition: $transition;
 				
 				&:hover {
-					border-bottom: solid 2px $dark;
+					border-bottom: solid 1px $dark;
 				}
 				
 				&--active {
-					border-bottom: solid 2px $darker;
+					border-bottom: solid 1px $darker;
 				}
 			}
 		}
