@@ -2,6 +2,7 @@
   "name": "formare-docs",
   "version": "1.0.0",
   "author": "David Kurnia Kristiadi <davidkurniakristiadi@gmail.com>",
+  "homepage": "https://dkk94.github.io/formare",
   "private": true,
   "dependencies": {
     "node-sass": "^4.9.0",
@@ -12,6 +13,8 @@
     "react-scripts": "1.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "css:watch": "npm run css:build -- --watch",
     "css:build": "node-sass --output-style expanded ./src/scss/formare-docs.scss ./src/css/formare-docs.css",
     "js:watch": "react-scripts start",
@@ -20,5 +23,8 @@
     "build": "npm run js:build && npm run css:build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.0"
   }
 }

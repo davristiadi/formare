@@ -24,5 +24,6 @@
 		"clean-css-cli": "^4.1.11",
 		"node-sass": "^4.9.3",
 		"path": "^0.12.7"
-	}
+	},
+	"devDependencies": {}
 }
