@@ -1,0 +1,14 @@
+.fr-docs {
+    position: relative;
+    
+    &__container {
+        @extend .container;
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__content {
+        padding-top: spacing(large);
+        padding-right: spacing(x-large);
+    }
+}

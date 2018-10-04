@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { Preview, PreviewCode, PreviewDisplay } from 'components/Preview';
 
 const Button = props => {
 	return (
@@ -9,18 +9,15 @@ const Button = props => {
 					<h3 className="title">Buttons</h3>
 					<h5 className="subtitle color-gray">Consequat est magna et qui magna dolor consequat ex eiusmod velit sunt ullamco enim commodo laborum voluptate aliqua quis quis duis.</h5>
 				</div>
-				<div className="mg-bottom-large">
-					<div className="heading">
-						<h5 className="title">Default Button</h5>
-						<h6 className="subtitle color-gray">Id dolore aute cillum velit laboris irure laborum elit irure occaecat magna minim.</h6>                        
-					</div>
-					<div className="fr-preview">
-						<span className="fr-preview__tag">Preview</span>
-						<div className="fr-preview__display">
-							<button className="button button--primary mg-right">Primary</button>
-							<button className="button">Default</button>
-						</div>
-					</div>
+				<div className="mg-bottom-x-large">
+					<Preview>
+						<PreviewDisplay>
+							<button className="button mg-right">Default Button</button>
+							<button className="button button--primary">Primary Button</button>
+						</PreviewDisplay>
+					</Preview>
+				
+					
 				</div>
 				
 				<div className="mg-bottom-x-large">

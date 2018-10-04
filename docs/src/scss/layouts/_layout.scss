@@ -1,0 +1,22 @@
+.fr-main {
+    @extend .layout;
+    padding-top: 4em;
+}
+
+.fr-header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1500;
+
+    &--fixed {
+        position: fixed;
+    }
+}
+
+.fr-aside {
+    position: sticky;
+    height: calc(100vh - 2em);
+    width: 250px;
+}

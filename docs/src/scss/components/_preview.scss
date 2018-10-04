@@ -1,0 +1,22 @@
+.fr-preview {
+    position: relative;
+    border: solid 1px gray(200);
+    margin-top: 3em;
+
+    &__tag {
+        position: absolute;
+        top: 0;
+        transform: translateY(-100%);
+        font-size: 75%;
+        background-color: theme-color(secondary);
+        color: color-yiq(theme-color(secondary));
+        padding: .25em .75em;
+        border-top-left-radius: border-radius(base);
+        border-top-right-radius: border-radius(base);
+    }
+
+    &__display {
+        padding: spacing(large);
+        padding-top: 3em;
+    }
+}

@@ -5066,6 +5066,8 @@ hr {
 .fr-menu .fr-menu__item > a:hover {
   color: #4061C4;
   font-weight: 600;
+  background-color: #d9dff3;
+  border-radius: 4px;
 }
 
 .fr-menu .fr-menu__item--parent {

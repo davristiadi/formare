@@ -5,6 +5,7 @@
   "homepage": "https://dkk94.github.io/formare",
   "private": true,
   "dependencies": {
+    "classnames": "^2.2.6",
     "node-sass": "^4.9.0",
     "prismjs": "^1.14.0",
     "react": "^16.3.2",

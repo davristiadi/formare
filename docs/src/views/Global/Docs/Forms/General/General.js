@@ -16,36 +16,41 @@ const General = props => {
                     <div className="grid grid-8">
                         <div className="fr-preview">
                             <span className="fr-preview__tag">Preview</span>
-                            <form className="form">
-                                <div className="form__field">
-                                    <label className="form__label">Full Name</label>
-                                    <input type="text" className="input" placeholder="e.g: John Doe" />
-                                </div>
-                                <div className="form__field">
-                                    <label className="form__label">Email Address</label>
-                                    <div className="input-set">
-                                        <span className="input-set__extra">
-                                            <i className="icon fas fa-envelope"></i>
-                                        </span>
-                                        <input type="text" className="input" placeholder="e.g: johndoe@email.com" />
+                            <div className="fr-preview__display">
+                                <form className="form">
+                                    <div className="form__field">
+                                        <label className="form__label">Full Name</label>
+                                        <input type="text" className="input" placeholder="e.g: John Doe" />
                                     </div>
-                                    <small className="color-danger">The inserted email address has an invalid format.</small>
-                                </div>
-                                <div className="form__field">
-                                    <label className="form__label">Phone Number</label>
-                                    <div className="input-group">
-                                        <span className="input-group__extra">+62</span>
-                                        <input type="text" className="input" />
+                                    <div className="form__field">
+                                        <label className="form__label">Email Address</label>
+                                        <div className="input-set">
+                                            <span className="input-set__extra">
+                                                <i className="icon fas fa-envelope"></i>
+                                            </span>
+                                            <input type="text" className="input" placeholder="e.g: johndoe@email.com" />
+                                        </div>
+                                        <small className="color-danger">The inserted email address has an invalid format.</small>
                                     </div>
-                                </div>
-                                <div className="form__field">
-                                    <label className="form__label">Disabled</label>
-                                    <div className="input-group">
-                                        <span className="input-group__extra">+62</span>
-                                        <input type="text" className="input" disabled />
+                                    <div className="form__field">
+                                        <label className="form__label">Phone Number</label>
+                                        <div className="input-group">
+                                            <span className="input-group__extra">+62</span>
+                                            <input type="text" className="input" />
+                                        </div>
                                     </div>
-                                </div>
-                            </form>
+                                    <div className="form__field">
+                                        <label className="form__label">Disabled</label>
+                                        <div className="input-group">
+                                            <span className="input-group__extra">+62</span>
+                                            <input type="text" className="input" disabled />
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div className="fr-preview__code">
+                                
+                            </div>
                         </div>
                     </div>
                     <div className="grid">
