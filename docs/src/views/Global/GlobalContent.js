@@ -8,8 +8,8 @@ const GlobalContent = props => {
     return (
         <div className="fr-main">
             <Switch>
-                <PropsRoute exact path="/" component={Home} {...this.props} />
-                <PropsRoute path="/docs" component={Docs} {...this.props} />
+                <PropsRoute exact path="/" component={Home} {...props} />
+                <PropsRoute path="/docs" component={Docs} {...props} />
             </Switch>
         </div>
     )

@@ -14,11 +14,6 @@ const Home = props => {
 							<div className="grid grid-7">
 								<div className="heading mg-bottom-x-large">
 									<h2 className="title fw-medium mg-bottom"><span className="fw-bold">Formare</span> is lightweight, fast and easy to get started with.</h2>
-									<h4 className="subtitle color-gray">
-										Veniam dolore adipisicing eu excepteur aliqua deserunt
-										laboris dolor dolor commodo nisi occaecat aute pariatur
-										sunt culpa mollit ullamco.
-									</h4>
 								</div>
 								<div>
 									<button className="button button--primary button--large mg-right-large">

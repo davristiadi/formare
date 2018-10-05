@@ -8,7 +8,7 @@ $font-families: () !default;
 $font-families: map-merge((
 	primary: $font-family-primary,
 	secondary: $font-family-secondary,
-	monospace: $font-family-monospace
+	code: $font-family-monospace
 ), $font-families);
 
 $font-size: 1rem !default;

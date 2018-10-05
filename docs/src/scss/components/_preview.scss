@@ -6,10 +6,11 @@
     &__tag {
         position: absolute;
         top: 0;
-        transform: translateY(-100%);
+        transform: translateY(-100%) translateX(-1px);
         font-size: 75%;
         background-color: theme-color(secondary);
         color: color-yiq(theme-color(secondary));
+        border: solid 1px theme-color(secondary);
         padding: .25em .75em;
         border-top-left-radius: border-radius(base);
         border-top-right-radius: border-radius(base);
@@ -17,6 +18,5 @@
 
     &__display {
         padding: spacing(large);
-        padding-top: 3em;
     }
 }

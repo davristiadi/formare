@@ -15,9 +15,8 @@ const Button = props => {
 							<button className="button mg-right">Default Button</button>
 							<button className="button button--primary">Primary Button</button>
 						</PreviewDisplay>
+						<PreviewCode lang="markup"></PreviewCode>
 					</Preview>
-				
-					
 				</div>
 				
 				<div className="mg-bottom-x-large">

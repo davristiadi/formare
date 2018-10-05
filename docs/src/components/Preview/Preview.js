@@ -7,15 +7,18 @@ const Preview = props => {
         tag: Tag,
         className,
         children,
-        ...attributes,
-    } = props;  w
+        ...attributes
+    } = props;
+
+    let childArray = Children.toArray(children);
+    childArray.push(<div className="fr-preview__tag">Preview</div>);
 
     attributes.className = classNames(
         `fr-preview`,
         className
     );
     
-    return <Tag {...attributes}>{children}</Tag>
+    return <Tag {...attributes}>{childArray}</Tag>
 }
 
 Preview.defaultProps = {

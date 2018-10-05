@@ -27,6 +27,7 @@
   --font-size: 1rem;
   --font-family-text: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
   --font-family-title: Georgia, Times New Roman, serif;
+  --font-family-code: SFMono-Regular, Menlo, Monaco, Consolas, Roboto Mono, Liberation Mono, Courier New, monospace;
   --font-weight: 400;
   --text-color: #212526;
   --line-height: 1.5;
@@ -176,13 +177,11 @@ nav ul {
 
 /**
 * 1. Correct the inheritance and scaling of font size in all browsers.
-* 2. Correct the odd `em` font sizing in all browsers.
 */
 pre {
   font-family: monospace, monospace;
   /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-size: 0.8rem;
 }
 
 /* Text-level semantics (https://html.spec.whatwg.org/multipage/semantics.html#text-level-semantics)
@@ -236,9 +235,9 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
+  font-family: var(--font-family-code);
   /* 1 */
-  font-size: 1em;
+  font-size: 0.8rem;
   /* 2 */
 }
 
@@ -5089,10 +5088,11 @@ hr {
 .fr-preview__tag {
   position: absolute;
   top: 0;
-  transform: translateY(-100%);
+  transform: translateY(-100%) translateX(-1px);
   font-size: 75%;
   background-color: #38915A;
   color: #f0f2f2;
+  border: solid 1px #38915A;
   padding: .25em .75em;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
@@ -5100,7 +5100,6 @@ hr {
 
 .fr-preview__display {
   padding: 1.3125rem;
-  padding-top: 3em;
 }
 
 .fr-main {
