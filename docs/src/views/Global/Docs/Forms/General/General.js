@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react'
+import { Preview, PreviewDisplay, PreviewCode } from 'components/Preview';
 
 const General = props => {
     return (
@@ -13,10 +14,9 @@ const General = props => {
                     <h6 className="subtitle color-gray">Sit velit ea Lorem qui voluptate mollit do anim cupidatat qui adipisicing irure tempor.</h6>
                 </div>
                 <div className="grids">
-                    <div className="grid grid-8">
-                        <div className="fr-preview">
-                            <span className="fr-preview__tag">Preview</span>
-                            <div className="fr-preview__display">
+                    <div className="grid">
+                        <Preview>
+                            <PreviewDisplay>
                                 <form className="form">
                                     <div className="form__field">
                                         <label className="form__label">Full Name</label>
@@ -47,14 +47,41 @@ const General = props => {
                                         </div>
                                     </div>
                                 </form>
-                            </div>
-                            <div className="fr-preview__code">
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div className="grid">
-                    
+                            </PreviewDisplay>
+                            <PreviewCode lang="html">     
+                                {`<form className="form">
+                                    <div className="form__field">
+                                        <label className="form__label">Full Name</label>
+                                        <input type="text" className="input" placeholder="e.g: John Doe" />
+                                    </div>
+                                    <div className="form__field">
+                                        <label className="form__label">Email Address</label>
+                                        <div className="input-set">
+                                            <span className="input-set__extra">
+                                                <i className="icon fas fa-envelope"></i>
+                                            </span>
+                                            <input type="text" className="input" placeholder="e.g: johndoe@email.com" />
+                                        </div>
+                                        <small className="color-danger">The inserted email address has an invalid format.</small>
+                                    </div>
+                                    <div className="form__field">
+                                        <label className="form__label">Phone Number</label>
+                                        <div className="input-group">
+                                            <span className="input-group__extra">+62</span>
+                                            <input type="text" className="input" />
+                                        </div>
+                                    </div>
+                                    <div className="form__field">
+                                        <label className="form__label">Disabled</label>
+                                        <div className="input-group">
+                                            <span className="input-group__extra">+62</span>
+                                            <input type="text" className="input" disabled />
+                                        </div>
+                                    </div>
+                                </form>
+                                `}
+                            </PreviewCode>
+                        </Preview>
                     </div>
                 </div>
             </section>

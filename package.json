@@ -10,22 +10,25 @@
 	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "npm run build:clean && npm run build:sass",
-		"build:sass": "node-sass --output-style expanded --source-map true scss/formare.scss css/formare.css",
-		"build:clean": "cleancss -o css/formare.min.css css/formare.css",
+		"build": "npm run build-css && npm run build-autoprefix && npm run build-clean",
+		"build-css": "node-sass --output-style expanded --source-map true scss/formare.scss css/formare.css",
+		"build-clean": "cleancss -o css/formare.min.css css/formare.css",
+		"build-autoprefix": "postcss --use autoprefixer --output ./css/formare.css ./css/formare.css",
 		"publish:beta": "npm publish --tag beta",
 		"publish:next": "npm publish --tag next",
-		"start": "npm run build:sass && npm run build:clean"
+		"start": "npm run build"
 	},
 	"license": "ISC",
 	"dependencies": {
-		"autoprefixer": "^8.3.0",
 		"clean-css": "^4.1.11",
 		"clean-css-cli": "^4.1.11",
 		"node-sass": "^4.9.3",
 		"path": "^0.12.7",
+		"postcss-cli": "^6.0.0",
 		"prismjs": "^1.15.0",
 		"react-syntax-highlighter": "^8.0.1"
 	},
-	"devDependencies": {}
+	"devDependencies": {
+		"autoprefixer": "^8.6.5"
+	}
 }

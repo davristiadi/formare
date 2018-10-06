@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
+import ReactDOMServer from 'react-dom/server';
 import Prism from 'prismjs';
+import dedent from 'dedent';
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import "./styles.scss";
+import "./PreviewCode.scss";
 
 class PreviewCode extends Component {
     componentDidMount = () => {
@@ -22,14 +24,12 @@ class PreviewCode extends Component {
             `fr-preview__code`,
             className
         )
+
+        const codeBlock = dedent(children);
         
         return (
             <Tag {...attributes}>
-                <pre>
-                    <code className="language-html">
-                        {children}
-                    </code>
-                </pre>
+                <pre><code className={`language-${lang}`}>{codeBlock}</code></pre>
             </Tag>
         )
     }

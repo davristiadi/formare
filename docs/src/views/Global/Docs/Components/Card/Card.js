@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { Preview, PreviewDisplay, PreviewCode } from 'components/Preview';
 import { default as DummyPhoto } from '../../../../../assets/images/dummy-photo.jpeg';
 
 const Card = props => {
@@ -11,37 +11,42 @@ const Card = props => {
                     <h5 className="subtitle color-gray">Culpa culpa deserunt magna nostrud sunt adipisicing cillum commodo dolore cupidatat nostrud veniam. Commodo id nulla consectetur aliqua aute. Fugiat irure consectetur cillum pariatur laboris est.</h5>
                 </div>
                 <section class="section mg-bottom-x-large">
-					<article className="article">
-						<div className="heading">
-							<h4 className="title">Default Card</h4>
-							<h6 className="subtitle color-gray">
-								Sunt officia adipisicing ea consequat reprehenderit tempor non labore cupidatat aliquip 
-								reprehenderit eiusmod adipisicing.
-							</h6>
-						</div>
-						<div className="fr-preview">
-							<span className="fr-preview__tag">Preview</span>
-							<div className="fr-preview__display">
-								<div className="grids">
-									<div className="grid grid-6">
-										<div className="card">
-											<div className="card__header">
-												<h4 className="title">Card Title</h4>
-												<h5 className="subtitle color-gray">This is a subtitle.</h5>
-											</div>
-											<div className="card__body">
-												<span>Id anim officia commodo voluptate magna aliqua. Laborum pariatur ullamco occaecat labore aliqua et quis. Eiusmod reprehenderit pariatur laborum aute Lorem nisi et. Consectetur labore est consectetur officia. Laborum minim officia irure aliquip eu commodo aute. Quis culpa reprehenderit excepteur irure in. Est minim laborum consectetur nisi aliqua in sunt do veniam.</span>
-											</div>
-											<div className="card__footer flex jc-end">
-												<button className="button button--danger mg-right">Cancel</button>
-												<button className="button button--success">Submit</button>
-											</div>
+					<Preview>
+						<PreviewDisplay>
+							<div className="grids">
+								<div className="grid grid-6">
+									<div className="card">
+										<div className="card__header">
+											<h4 className="title">Card Title</h4>
+											<h5 className="subtitle color-gray">This is a subtitle.</h5>
+										</div>
+										<div className="card__body">
+											<span>Id anim officia commodo voluptate magna aliqua. Laborum pariatur ullamco occaecat labore aliqua et quis. Eiusmod reprehenderit pariatur laborum aute Lorem nisi et. Consectetur labore est consectetur officia. Laborum minim officia irure aliquip eu commodo aute. Quis culpa reprehenderit excepteur irure in. Est minim laborum consectetur nisi aliqua in sunt do veniam.</span>
+										</div>
+										<div className="card__footer flex jc-end">
+											<button className="button button--danger mg-right">Cancel</button>
+											<button className="button button--success">Submit</button>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-					</article>
+						</PreviewDisplay>
+						<PreviewCode lang="html">
+							{`<div className="card">
+								<div className="card__header">
+									<h4 className="title">Card Title</h4>
+									<h5 className="subtitle color-gray">This is a subtitle.</h5>
+								</div>
+								<div className="card__body">
+									<span>Id anim officia commodo voluptate magna aliqua. Laborum pariatur ullamco occaecat labore aliqua et quis. Eiusmod reprehenderit pariatur laborum aute Lorem nisi et. Consectetur labore est consectetur officia. Laborum minim officia irure aliquip eu commodo aute. Quis culpa reprehenderit excepteur irure in. Est minim laborum consectetur nisi aliqua in sunt do veniam.</span>
+								</div>
+								<div className="card__footer flex jc-end">
+									<button className="button button--danger mg-right">Cancel</button>
+									<button className="button button--success">Submit</button>
+								</div>
+							</div>`}
+						</PreviewCode>
+					</Preview>
                 </section>
 				<section className="section mg-bottom-x-large">
 					<article className="article">

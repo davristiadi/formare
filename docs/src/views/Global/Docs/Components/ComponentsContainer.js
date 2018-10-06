@@ -2,9 +2,14 @@ import React, { Component } from 'react'
 import Components from './Components';
 
 class ComponentsContainer extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            routes: props.hasChildren
+        }
+    }
+    
     render () {
-    	console.log(this.props);
-
         return (
             <Components
                 {...this.state}

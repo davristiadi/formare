@@ -13,17 +13,21 @@ const Home = props => {
 						<div className="grids">
 							<div className="grid grid-7">
 								<div className="heading mg-bottom-x-large">
-									<h2 className="title fw-medium mg-bottom"><span className="fw-bold">Formare</span> is lightweight, fast and easy to get started with.</h2>
+									<h2 className="title fw-regular mg-bottom"><span className="fw-bold">Formare</span> is lightweight, fast and easy to get started with.</h2>
 								</div>
 								<div>
+									<button className="button button--large button--secondary mg-right">
+										<i className="fas fa-download mg-right-large"></i>
+										Download
+									</button>
 									<button className="button button--primary button--large mg-right-large">
 										<i className="fas fa-rocket mg-right-large"></i>
 										Getting Started
 									</button>
-									<button className="button button--outlined button--secondary button--large">
+									{/* <button className="button button--outlined button--secondary button--large">
 										<i className="fas fa-book mg-right-large"></i>
 										Documentation
-									</button>
+									</button> */}
 								</div>
 							</div>
 						</div>

@@ -1,34 +1,36 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
 class DocsMenu extends Component {
     render() {
+        const { routes } = this.props;
+
         return (
             <div className="fr-menu">
                 <ul className="fr-menu__list">
-                    <li className="fr-menu__item fr-menu__item--parent">Components</li>
-                    <li className="fr-menu__item">
-                        <Link to="/docs/components/alert">Alert</Link>
-                    </li>
-                    <li className="fr-menu__item">
-                        <Link to="/docs/components/nav">Nav</Link>
-                    </li>
-                    <li className="fr-menu__item">
-                        <Link to="/docs/components/navbar">Navbar</Link>
-                    </li>
-                    <li className="fr-menu__item">
-                        <Link to="/docs/components/button">Button</Link>
-                    </li>
-                    <li className="fr-menu__item">
-                        <Link to="/docs/components/card">Card</Link>
-                    </li>
-                    <li className="fr-menu__item">
-                        <Link to="/docs/components/table">Table</Link>
-                    </li>
-                    <li className="fr-menu__item fr-menu__item--parent">Form</li>
-                    <li className="fr-menu__item">
-                        <Link to="/docs/forms/general">General</Link>
-                    </li>
+                    {
+                        routes.map(route => {
+                            return (
+                                <Fragment>
+                                    <li className="fr-menu__item fr-menu__item--parent">
+                                        <Link to={route.path}>{route.title}</Link>
+                                    </li>
+                                    {
+                                        route.hasChildren
+                                        ? route.hasChildren.map(subroute => {
+                                            return (
+                                                <li className="fr-menu__item">
+                                                    <Link to={subroute.path}>{subroute.title}</Link>
+                                                </li>
+                                            )       
+                                        })
+                                        : null
+                                    }
+                                </Fragment>
+                                
+                            )
+                        })
+                    }
                 </ul>
             </div>
         );

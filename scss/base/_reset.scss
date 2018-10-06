@@ -170,7 +170,7 @@ nav ul {
 */
 
 pre {
-	font-family: monospace, monospace; /* 1 */
+	font-family: var(--font-family-code); /* 1 */
 	font-size: font-size(small);
 }
 

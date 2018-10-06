@@ -1,12 +1,11 @@
 .fr-preview {
     position: relative;
-    border: solid 1px gray(200);
     margin-top: 3em;
 
     &__tag {
         position: absolute;
         top: 0;
-        transform: translateY(-100%) translateX(-1px);
+        transform: translateY(-100%);
         font-size: 75%;
         background-color: theme-color(secondary);
         color: color-yiq(theme-color(secondary));
@@ -18,5 +17,17 @@
 
     &__display {
         padding: spacing(large);
+        border: solid 1px gray(200);
+        overflow: hidden;
+    }
+
+    &__code {
+        overflow: hidden;
+        transform: translateY(-1px);
+
+        > pre {
+            overflow: auto;
+            max-width: 100%;
+        }
     }
 }

@@ -17,6 +17,9 @@
 
 .fr-aside {
     position: sticky;
-    height: calc(100vh - 2em);
-    width: 250px;
+    height: calc(100vh - 1em);
+    top: 4em;
+    flex: 1 1 250px;
+    max-width: 250px;
+    min-width: 250px;
 }

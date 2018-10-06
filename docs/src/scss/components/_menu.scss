@@ -1,8 +1,8 @@
 .fr-menu {
-    padding-top: 2em;
+    padding-top: 1em;
     padding-left: spacing(base);
     padding-right: spacing(base);
-    border-left: solid 1px gray(200);
+    border-left: solid 1px gray(100);
     height: 100%;
 
     .fr-menu__list {
@@ -14,22 +14,30 @@
     .fr-menu__item {
         > a {
             display: block;
-            padding: spacing(small) spacing(base);
+            padding: spacing(small);
             transition: $transition;
-            color: $gray;
 
             &:hover {
                 color: theme-color(primary);
-                font-weight: font-weight(semibold);
-                background-color: primary-color(-80);
-                border-radius: border-radius(base);
+            }
+        }
+        
+        &:not(.fr-menu__item--parent) {        
+            > a {
+                color: $gray;
+                font-size: font-size(small);
+
+                &:hover {
+                    color: theme-color(primary);
+                    font-weight: font-weight(semibold);
+                    background-color: primary-color(-90);
+                    border-radius: border-radius(base);
+                }
             }
         }
         
         &--parent {
-            padding: spacing(base);
             font-weight: font-weight(bold);
-            padding-top: spacing(large);
         }
 
         &:first-child {
