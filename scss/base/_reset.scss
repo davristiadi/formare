@@ -227,7 +227,15 @@ code,
 kbd,
 samp {
 	font-family: var(--font-family-code); /* 1 */
-	font-size: font-size(small); /* 2 */
+	font-size: font-size(small); 	/* 2 */
+}
+
+code {
+	background-color: gray(100);
+	color: $primary-color;
+	padding: .25em;
+	font-size: font-size(small);
+	border-radius: border-radius(base);
 }
 
 /**

@@ -89,7 +89,7 @@ $button-paddings: map-merge((
 				color: color-yiq($color);
 				background-color: tint($color, 20%);
 				border-color: tint($color, 20%);
-				box-shadow: 0 0 0.3em 0.2em tint($color, 70%);
+				box-shadow: 0 0 0.3em 0.2em rgba(tint($color, 15%), 0.3);
 			}
 			
 			&:active:not(:disabled),

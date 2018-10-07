@@ -6,11 +6,11 @@
         position: absolute;
         top: 0;
         transform: translateY(-100%);
-        font-size: 75%;
+        font-size: font-size(x-small);
         background-color: theme-color(secondary);
         color: color-yiq(theme-color(secondary));
         border: solid 1px theme-color(secondary);
-        padding: .25em .75em;
+        padding: .15em .5em;
         border-top-left-radius: border-radius(base);
         border-top-right-radius: border-radius(base);
     }

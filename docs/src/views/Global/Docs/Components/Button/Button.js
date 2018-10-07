@@ -27,7 +27,7 @@ const Button = props => {
                 </div>
                 <div className="mg-bottom-x-large">
                     <div className="heading">
-                        <h5 className="title">Button States</h5>
+                        <h5 className="title">Button Styles</h5>
                         <h6 className="subtitle color-gray">Id dolore aute cillum velit laboris irure laborum elit irure occaecat magna minim.</h6>
                     </div>
                     <Preview>
@@ -104,8 +104,6 @@ const Button = props => {
                         <PreviewDisplay>
                             <div className="mg-bottom">
                                 <button className="button button--raised mg-right">Button</button>
-                            </div>
-                            <div className="mg-bottom">
                                 <button className="button button--primary button--raised mg-right">Primary</button>
                                 <button className="button button--secondary button--raised mg-right">Secondary</button>
                                 <button className="button button--success button--raised mg-right">Success</button>
@@ -134,29 +132,56 @@ const Button = props => {
                 <div className="mg-bottom-x-large">
                     <div className="heading">
                         <h5 className="title">Rounded</h5>
-                        <h6 className="subtitle color-gray">Id dolore aute cillum velit laboris irure laborum elit irure occaecat magna minim.</h6>
+                        <h6 className="subtitle color-gray">
+                            Need a button with a circular sides (similar to that of a pill shape-wise)?{" "}
+                            Use <code>{`.button--pill`}</code> modifier class for that!
+                        </h6>
                     </div>
-                    <div className="fr-preview">
-                        <span className="fr-preview__tag">Preview</span>
-                        <div className="fr-preview__display">
-                            <button className="button button--pill button--primary mg-right">Rounded Button</button>
-                        </div>
-                    </div>
+                    <Preview>
+                        <PreviewDisplay>
+                            <button className="button button--pill mg-right">Rounded Button</button>
+                        </PreviewDisplay>
+                        <PreviewCode lang="html">
+                            {`<button class="button button--pill">Rounded Button</button>
+                            `}
+                        </PreviewCode>
+                    </Preview>
                 </div>
                 
                 <div>
                     <div className="heading">
-                        <h5 className="title">Sizes</h5>
-                        <h6 className="subtitle color-gray">Id dolore aute cillum velit laboris irure laborum elit irure occaecat magna minim.</h6>
+                        <h4 className="title">Sizes</h4>
                     </div>
-                    <div className="fr-preview">
-                        <div className="fr-preview__tag">Preview</div>
-                        <div className="fr-preview__display">
+                    <p>
+                        Need your button bigger, or rather smaller? Append <code>{`.button--#{size}`}</code> modifier class 
+                        to customize the size of a button component as needed.
+                    </p>
+                    <p>
+                        We've prepared several predefined sizes that you can use right out-of-the-box:
+                        <ul>
+                            <li><code>{`.button--x-small`}</code></li>
+                            <li><code>{`.button--small`}</code></li>
+                            <li><code>{`.button--large`}</code></li>
+                            <li><code>{`.button--x-large`}</code></li>
+                        </ul>
+                    </p>
+                    <Preview>
+                        <PreviewDisplay>
+                            <button className="button button--x-small mg-right">Extra Small</button>
                             <button className="button button--small mg-right">Small</button>
-                            <button className="button margin-right">Base</button>
-                            <button className="button button--large">Large</button>
-                        </div>
-                    </div>
+                            <button className="button mg-right">Base</button>
+                            <button className="button button--large mg-right">Large</button>
+                            <button className="button button--x-large">Extra Large</button>
+                        </PreviewDisplay>
+                        <PreviewCode lang="html">
+                            {`<button class="button button--x-small">Extra Small</button>
+                            <button class="button button--small">Small</button>
+                            <button class="button">Base</button>
+                            <button class="button button--large">Large</button> 
+                            <button class="button button--x-large">Extra Large</button>
+                            `}
+                        </PreviewCode>
+                    </Preview>
                 </div>
             </article>
         </div>
