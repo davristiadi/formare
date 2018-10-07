@@ -1,7 +1,14 @@
 {
-  "main.css": "static/css/main.776d333b.css",
-  "main.css.map": "static/css/main.776d333b.css.map",
-  "main.js": "static/js/main.c9ad7dc2.js",
-  "main.js.map": "static/js/main.c9ad7dc2.js.map",
-  "static/media/dummy-photo.jpeg": "static/media/dummy-photo.8f621bb7.jpeg"
+  "main.css": "/formare/static/css/main.a5642507.chunk.css",
+  "main.js": "/formare/static/js/main.c599a13f.chunk.js",
+  "main.js.map": "/formare/static/js/main.c599a13f.chunk.js.map",
+  "static/js/1.0aba2353.chunk.js": "/formare/static/js/1.0aba2353.chunk.js",
+  "static/js/1.0aba2353.chunk.js.map": "/formare/static/js/1.0aba2353.chunk.js.map",
+  "runtime~main.js": "/formare/static/js/runtime~main.271a316d.js",
+  "runtime~main.js.map": "/formare/static/js/runtime~main.271a316d.js.map",
+  "static/media/dummy-photo.jpeg": "/formare/static/media/dummy-photo.8f621bb7.jpeg",
+  "static/css/main.a5642507.chunk.css.map": "/formare/static/css/main.a5642507.chunk.css.map",
+  "index.html": "/formare/index.html",
+  "precache-manifest.5e3b3c6dc02e00bbc98fef366cace80a.js": "/formare/precache-manifest.5e3b3c6dc02e00bbc98fef366cace80a.js",
+  "service-worker.js": "/formare/service-worker.js"
 }
