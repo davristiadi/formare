@@ -1,6 +1,6 @@
 {
 	"name": "formare",
-	"version": "0.4.0-beta.4",
+	"version": "0.4.0-beta.5",
 	"author": "David Kurnia Kristiadi <davidkurniakristiadi@gmail.com>",
 	"description": "Formare is a modern, component-based CSS framework that helps you build web interfaces hassle-free.",
 	"main": "scss/formare.scss",
@@ -19,16 +19,13 @@
 		"start": "npm run build"
 	},
 	"license": "ISC",
-	"dependencies": {
+	"dependencies": {},
+	"devDependencies": {
+		"autoprefixer": "^8.6.5",
 		"clean-css": "^4.1.11",
 		"clean-css-cli": "^4.1.11",
 		"node-sass": "^4.9.3",
 		"path": "^0.12.7",
-		"postcss-cli": "^6.0.0",
-		"prismjs": "^1.15.0",
-		"react-syntax-highlighter": "^8.0.1"
-	},
-	"devDependencies": {
-		"autoprefixer": "^8.6.5"
+		"postcss-cli": "^6.0.0"
 	}
 }
