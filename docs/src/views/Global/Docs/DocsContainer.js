@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import Docs from './Docs';
-import { Start, Components, Forms } from '../Docs';
+// import { Start, Components, Forms } from '../Docs';
 import {
+	Start
+} from './Start';
+
+import {
+	Components,
     Alert,
     Nav,
     Navbar,
@@ -11,8 +16,14 @@ import {
 } from './Components';
 
 import {
+	Forms,
 	General
 } from './Forms';
+
+import { 
+	Layouts,
+	Grid
+} from './Layouts';
 
 class DocsContainer extends Component {
 	constructor(props) {
@@ -23,6 +34,23 @@ class DocsContainer extends Component {
 					path: '/docs/start',
 					title: 'Getting Started',
 					component: Start,
+				},
+				// {
+				// 	path: '/docs/general',
+				// 	title: 'General',
+				// 	component: General
+				// },
+				{
+					path: '/docs/layouts',
+					title: 'Layouts',
+					component: Layouts,
+					hasChildren: [
+						{
+							path: '/docs/layouts/grid-system',
+							title: 'Grid System',
+							component: Grid
+						},
+					]
 				},
 				{
 					path: '/docs/components',
@@ -70,9 +98,10 @@ class DocsContainer extends Component {
 							path: '/docs/forms/general',
 							title: 'General',
 							component: General
-						}
+						},
 					]
-				}	
+				},
+				
 			]
 		}
 	}

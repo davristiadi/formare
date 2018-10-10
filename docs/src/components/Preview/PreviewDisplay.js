@@ -25,7 +25,7 @@ PreviewDisplay.defaultProps = {
 PreviewDisplay.propTypes = {
     tag: PropTypes.oneOfType([
         PropTypes.func, PropTypes.string,
-    ]),
+    ])
 }
 
 export default PreviewDisplay

@@ -1,4 +1,6 @@
 .fr-preview {
+    display: flex;
+    flex-direction: column;
     position: relative;
     margin-top: 3em;
 
@@ -23,11 +25,20 @@
 
     &__code {
         overflow: hidden;
-        transform: translateY(-1px);
 
         > pre {
             overflow: auto;
             max-width: 100%;
+        }
+    }
+
+    &--horizontal {
+        flex-direction: row;
+
+        .fr-preview__code {
+            > pre {
+                height: 100%;
+            }
         }
     }
 }

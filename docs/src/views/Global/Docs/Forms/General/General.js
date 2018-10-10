@@ -16,7 +16,7 @@ const General = props => {
                                 <form className="form">
                                     <div className="form__field">
                                         <label className="form__label">Full Name</label>
-                                        <input type="text" className="input" placeholder="e.g: John Doe" />
+                                        <input type="text" className="input" placeholder="e.g John Doe" />
                                     </div>
                                     <div className="form__field form__field--danger">
                                         <label className="form__label">Email Address</label>
@@ -24,7 +24,7 @@ const General = props => {
                                             <span className="input-set__extra">
                                                 <i className="icon fas fa-envelope"></i>
                                             </span>
-                                            <input type="text" className="input" placeholder="e.g: johndoe@email.com" />
+                                            <input type="text" className="input" placeholder="e.g johndoe@email.com" />
                                         </div>
                                         <small className="color-danger">The inserted email address has an invalid format.</small>
                                     </div>
@@ -44,7 +44,39 @@ const General = props => {
                                     </div>
                                 </form>
                             </PreviewDisplay>
-                            
+                            <PreviewCode lang="html">
+                                {`<form class="form">
+                                    <div class="form__field">
+                                        <label class="form__label">Full Name</label>
+                                        <input type="text" class="input" placeholder="e.g John Doe" />
+                                    </div>
+                                    <div class="form__field form__field--danger">
+                                        <label class="form__label">Email Address</label>
+                                        <div class="input-set">
+                                            <span class="input-set__extra">
+                                                <i class="icon fas fa-envelope"></i>
+                                            </span>
+                                            <input type="text" class="input" placeholder="e.g johndoe@email.com" />
+                                        </div>
+                                        <small class="color-danger">The inserted email address has an invalid format.</small>
+                                    </div>
+                                    <div class="form__field">
+                                        <label class="form__label">Phone Number</label>
+                                        <div class="input-set">
+                                            <span class="input-set__addon">+62</span>
+                                            <input type="text" class="input" />
+                                        </div>
+                                    </div>
+                                    <div class="form__field">
+                                        <label class="form__label">Disabled</label>
+                                        <div class="input-set">
+                                            <span class="input-set__addon">+62</span>
+                                            <input type="text" class="input" disabled />
+                                        </div>
+                                    </div>
+                                </form>
+                                `}
+                            </PreviewCode>
                         </Preview>
                     </div>
                 </div>

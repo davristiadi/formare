@@ -7,6 +7,7 @@ const Preview = props => {
         tag: Tag,
         className,
         children,
+        horizontal,
         ...attributes
     } = props;
 
@@ -15,6 +16,7 @@ const Preview = props => {
 
     attributes.className = classNames(
         `fr-preview`,
+        horizontal ? `fr-preview--horizontal` : null,
         className
     );
     
@@ -29,6 +31,7 @@ Preview.propTypes = {
     tag: PropTypes.oneOfType([
         PropTypes.func, PropTypes.string,
     ]),
+    horizontal: PropTypes.bool,
 }
 
 export default Preview

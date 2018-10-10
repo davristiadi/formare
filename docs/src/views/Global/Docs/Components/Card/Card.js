@@ -7,8 +7,10 @@ const Card = props => {
         <div id="card">
             <article className="article fr-article">
                 <div className="heading fr-heading">
-                    <h3 className="title">Card</h3>
-                    <h5 className="subtitle color-gray">Culpa culpa deserunt magna nostrud sunt adipisicing cillum commodo dolore cupidatat nostrud veniam. Commodo id nulla consectetur aliqua aute. Fugiat irure consectetur cillum pariatur laboris est.</h5>
+                    <h2 className="title">Card</h2>
+                    <h4 className="subtitle color-gray">The <strong>card</strong> components provide you a way to compose a group of content in
+                    the most flexible way possible.</h4>
+                    {/* <h4 className="subtitle color-gray">Culpa culpa deserunt magna nostrud sunt adipisicing cillum commodo dolore cupidatat nostrud veniam. Commodo id nulla consectetur aliqua aute. Fugiat irure consectetur cillum pariatur laboris est.</h4> */}
                 </div>
                 <section class="section mg-bottom-x-large">
                     <Preview>
@@ -16,16 +18,14 @@ const Card = props => {
                             <div className="grids">
                                 <div className="grid grid-6">
                                     <div className="card">
-                                        <header className="card__header">
+                                        <header className="card__header card__header--primary">
                                             <h4 className="title">Card Title</h4>
-                                            <h5 className="subtitle color-gray">This is a subtitle.</h5>
                                         </header>
                                         <main className="card__body">
-                                            <span>Id anim officia commodo voluptate magna aliqua. Laborum pariatur ullamco occaecat labore aliqua et quis. Eiusmod reprehenderit pariatur laborum aute Lorem nisi et. Consectetur labore est consectetur officia. Laborum minim officia irure aliquip eu commodo aute. Quis culpa reprehenderit excepteur irure in. Est minim laborum consectetur nisi aliqua in sunt do veniam.</span>
+                                            <div>Anim aute elit ea nulla minim duis voluptate proident occaecat ipsum tempor ex. Lorem irure eiusmod cupidatat Lorem ad. Ex consectetur laboris ullamco non reprehenderit do ad velit consequat ut adipisicing id qui irure.</div>
                                         </main>
                                         <footer className="card__footer flex jc-end">
-                                            <button className="button button--danger mg-right">Cancel</button>
-                                            <button className="button button--success">Submit</button>
+                                            <button className="button button--primary">Submit</button>
                                         </footer>
                                     </div>
                                 </div>
@@ -35,25 +35,26 @@ const Card = props => {
                             {`<div class="card">
                                 <header class="card__header">
                                     <h4 class="title">Card Title</h4>
-                                    <h5 class="subtitle color-gray">This is a subtitle.</h5>
+                                    <h5 class="subtitle color-gray">This is an example card subtitle</h5>
                                 </header>
                                 <main class="card__body">
-                                    <span>Id anim officia commodo voluptate magna aliqua. Laborum pariatur ullamco occaecat labore aliqua et quis. Eiusmod reprehenderit pariatur laborum aute Lorem nisi et. Consectetur labore est consectetur officia. Laborum minim officia irure aliquip eu commodo aute. Quis culpa reprehenderit excepteur irure in. Est minim laborum consectetur nisi aliqua in sunt do veniam.</span>
+                                    <div>Anim aute elit ea nulla minim duis voluptate proident occaecat ipsum tempor ex. Lorem irure eiusmod cupidatat Lorem ad. Ex consectetur laboris ullamco non reprehenderit do ad velit consequat ut adipisicing id qui irure.</div>
                                 </main>
                                 <footer class="card__footer flex jc-end">
                                     <button class="button button--danger mg-right">Cancel</button>
                                     <button class="button button--success">Submit</button>
                                 </footer>
-                            </div>`}
+                            </div>
+                            `}
                         </PreviewCode>
                     </Preview>
                 </section>
                 <section className="section mg-bottom-x-large">
                     <article className="article">
                         <div className="heading">
-                            <h4 className="title">With Image</h4>
-                            <h6 className="subtitle color-gray">Use it with an piece of image or photo of your choice, and place it however you like.</h6>
+                            <h4 className="title">Image</h4>
                         </div>
+                        <p>Laborum quis consequat amet ad. Ea qui culpa occaecat consectetur deserunt eu aliquip aliqua qui. Elit ad magna magna ullamco et excepteur nisi duis dolore. Elit laboris velit ipsum minim deserunt dolore.</p>
                         <div className="fr-preview">
                             <span className="fr-preview__tag">Preview</span>
                             <div className="fr-preview__display">
@@ -63,12 +64,14 @@ const Card = props => {
                                             <div className="card__image">
                                                 <img src={DummyPhoto} /> 
                                             </div>
-                                            <div className="card__header">
-                                                <h4 className="title">Card Title</h4>
-                                                <h5 className="subtitle color-gray">This is a subtitle.</h5>
-                                            </div>
                                             <div className="card__body">
-                                                <p>Tempor eiusmod excepteur esse culpa qui elit sint aliqua dolor. Qui mollit esse officia labore deserunt laborum dolore. Adipisicing mollit dolore eiusmod aute pariatur nulla culpa laborum culpa et dolore aute aute. Aute voluptate excepteur velit proident laboris qui.</p>
+                                                <article className="article">
+                                                    <div className="heading">
+                                                        <h4 className="title">Card Title</h4>
+                                                        <h5 className="subtitle color-gray">This is a subtitle.</h5>
+                                                    </div>
+                                                    <p>Tempor eiusmod excepteur esse culpa qui elit sint aliqua dolor. Qui mollit esse officia labore deserunt laborum dolore. Adipisicing mollit dolore eiusmod aute pariatur nulla culpa laborum culpa et dolore aute aute. Aute voluptate excepteur velit proident laboris qui.</p>
+                                                </article>
                                             </div>
                                         </div>
                                     </div>

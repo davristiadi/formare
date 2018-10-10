@@ -15,17 +15,20 @@ $card-inner-border: solid 1px $lighter;
 	word-wrap: break-word;
 	overflow: hidden;
 
-	.card__header,
-	.card__body,
-	.card__footer {
+	&__header,
+	&__body,
+	&__footer {
 		padding: $card-padding;
 	}
 
-	.card__header {
-		@each $theme, $value in $card-themes {
+	&__header {
+		border-bottom: solid 1px $light;
+
+		@each $theme, $color in $card-themes {
 			&--#{$theme} {
-				background-color: $value;
-				color: color-yiq($value);
+				background-color: $color;
+				border: solid 1px $color;
+				color: color-yiq($color);
 			}
 		}
 	}

@@ -36,6 +36,7 @@ $input-group-extra-focused-border: solid 1px $primary-color;
 
 	&:focus {
 		border: $input-focused-border;
+		// box-shadow: 0 0 0em 0.2em rgba(tint($primary-color, 15%), 0.3);
 	}
 
 	&:disabled {
@@ -53,6 +54,7 @@ $input-group-extra-focused-border: solid 1px $primary-color;
 
 			&:focus {
 				border: solid 1px $color;
+				// box-shadow: 0 0 0em 0.2em rgba(tint($color, 15%), 0.3);
 			}
 		}
 	}
@@ -184,6 +186,7 @@ $input-group-extra-focused-border: solid 1px $primary-color;
 
 	&:focus-within {
 		border: $input-focused-border;
+		box-shadow: 0 0 0em 0.2em rgba(tint($primary-color, 15%), 0.3);
 
 		.input-set {
 			&__extra {
@@ -211,5 +214,6 @@ $input-group-extra-focused-border: solid 1px $primary-color;
 	> .input,
 	> .select {
 		border: 0;
+		box-shadow: none;
 	}
 }

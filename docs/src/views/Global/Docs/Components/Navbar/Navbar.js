@@ -11,7 +11,7 @@ const Navbar = props => {
                 </div>
                 <Preview>
                     <PreviewDisplay>
-                        <div className="navbar navbar--secondary">
+                        <div className="navbar">
                         	<div className="navbar__container navbar__container--full-width">
                         		<div className="navbar__block">
                         			<h5>Logo</h5>
@@ -29,7 +29,7 @@ const Navbar = props => {
                         </div>
                     </PreviewDisplay>
                     <PreviewCode lang="html">
-                        {`<div className="navbar navbar--secondary">
+                        {`<div className="navbar">
                         	<div className="navbar__container navbar__container--full-width">
                         		<div className="navbar__block">
                         			<h5>Logo</h5>
