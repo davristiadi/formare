@@ -40,6 +40,7 @@ $input-group-extra-focused-border: solid 1px $primary-color;
 
 	&:disabled {
 		background-color: $input-disabled-background;
+		cursor: not-allowed;
 	}
 
 	@each $theme, $color in $input-themes {
@@ -98,8 +99,42 @@ $input-group-extra-focused-border: solid 1px $primary-color;
 	}
 }
 
+
+// .input-group {
+// 	display: flex;
+// 	flex-direction: row;
+
+// 	&__extra {
+// 		transition: $input-transition;
+// 		padding: $input-padding;
+// 		background-color: $input-group-extra-background;
+// 		color: $input-group-extra-color;
+// 		border: $input-group-extra-border;
+// 		border-radius: $input-group-extra-border-radius;
+// 	}
+
+// 	&:focus-within {
+// 		.input-group__extra {
+// 			background-color: $input-group-extra-focused-background;
+// 			color: $input-group-extra-focused-color;
+// 			border: $input-group-extra-focused-border;
+// 		}
+// 	}
+	
+// 	> *:first-child {
+// 		border-top-right-radius: 0;
+// 		border-bottom-right-radius: 0;
+// 	}
+	
+// 	> *:last-child {
+// 		border-top-left-radius: 0;
+// 		border-bottom-left-radius: 0;
+// 	}
+// }
+
 .input-set {
 	display: flex;
+	flex-direction: row;
 	transition: $input-transition;
 	border: $input-border;
 	border-radius: $input-border-radius;
@@ -119,6 +154,16 @@ $input-group-extra-focused-border: solid 1px $primary-color;
 				border: solid 1px $color;
 			}
 		}
+	}
+	
+	&__addon {
+		display: flex;
+		align-items: center;
+		transition: $input-transition;
+		background-color: gray(200);
+		padding-left: spacing(base);
+		padding-right: spacing(base);
+		color: color-yiq(gray(200));
 	}
 
 	&__extra {
@@ -140,9 +185,16 @@ $input-group-extra-focused-border: solid 1px $primary-color;
 	&:focus-within {
 		border: $input-focused-border;
 
-		.input-set__extra {
-			> .icon {
-				color: primary-color();
+		.input-set {
+			&__extra {
+				> .icon {
+					color: primary-color();
+				}
+			}
+
+			&__addon {
+				background-color: primary-color();
+				color: color-yiq(primary-color());
 			}
 		}
 	}
@@ -154,45 +206,10 @@ $input-group-extra-focused-border: solid 1px $primary-color;
 	&--disabled {
 		position: relative;
 		background-color: $input-disabled-background;
-
-		> * {
-			cursor: not-allowed;
-		}
 	}
 
 	> .input,
 	> .select {
 		border: 0;
-	}
-}
-
-.input-group {
-	display: flex;
-
-	&__extra {
-		transition: $input-transition;
-		padding: $input-padding;
-		background-color: $input-group-extra-background;
-		color: $input-group-extra-color;
-		border: $input-group-extra-border;
-		border-radius: $input-group-extra-border-radius;
-	}
-
-	&:focus-within {
-		.input-group__extra {
-			background-color: $input-group-extra-focused-background;
-			color: $input-group-extra-focused-color;
-			border: $input-group-extra-focused-border;
-		}
-	}
-	
-	> *:first-child {
-		border-top-right-radius: 0;
-		border-bottom-right-radius: 0;
-	}
-	
-	> *:last-child {
-		border-top-left-radius: 0;
-		border-bottom-left-radius: 0;
 	}
 }

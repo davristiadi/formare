@@ -1,18 +1,26 @@
 $button-themes: $theme-colors;
-$button-font-weight: font-weight(medium);
-$button-color: $dark;
+
+$button-font-weight: font-weight(medium) !default;
+$button-color: $dark !default;
 $button-background-color: $white;
+
 $button-border-style: solid;
 $button-border-width: 1px;
 $button-border-color: gray(300);
+
 $button-transition: $transition;
+
 $button-hovered-color: primary-color(0);
 $button-hovered-border-color: primary-color(0);
+
 $button-focused-color: primary-color(-20);
 $button-focused-border-color: primary-color(-20);
+
 $button-active-color: primary-color(40);
 $button-active-border-color: primary-color(40);
+
 $button-disabled-opacity: 0.5 !default;
+
 $button-padding-y: spacing(small);
 $button-padding-x: spacing(large);
 $button-padding: $button-padding-y $button-padding-x;

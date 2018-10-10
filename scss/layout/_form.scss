@@ -18,6 +18,14 @@ $form-themes: $theme-colors !default;
 
                 .input-set {
                     border-color: $color;
+
+                    &:focus-within {
+                        .input-set__extra {
+                            > .icon {
+                                color: $color;
+                            }
+                        }
+                    }
                 }
 
                 .input,
