@@ -1,6 +1,6 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import { Preview, PreviewDisplay, PreviewCode } from 'components/Preview';
-import './Grid.scss';
+import "./Grid.scss";
 
 const Grid = props => {
     return (
@@ -22,12 +22,14 @@ const Grid = props => {
                             First, add the mandatory <code>{`.grids`}</code> container class, then add as many <code>{`.grid`}</code>{" "} 
                             element inside as many as you need.
                         </p>
-                        <Preview hprizontal>
+                        <Preview>
                             <PreviewDisplay>
-                                <div className="fr-grids-preview">
-                                    <div className="grid">Grid #1</div>
-                                    <div className="grid">Grid #2</div>
-                                    <div className="grid">Grid #3</div>
+                                <div className="fr-grid-example">
+                                    <div className="grids">
+                                        <div className="grid">Grid #1</div>
+                                        <div className="grid">Grid #2</div>
+                                        <div className="grid">Grid #3</div>
+                                    </div>
                                 </div>
                             </PreviewDisplay>
                             <PreviewCode lang="html">

@@ -1,6 +1,8 @@
-
+//  Import core dependencies
 @import url("https://use.fontawesome.com/releases/v5.0.10/css/all.css");
 @import "../../../scss/formare.scss";
+
+//  Import local resuable component styling
 @import "base/global";
 @import "components/article";
 @import "components/menu";

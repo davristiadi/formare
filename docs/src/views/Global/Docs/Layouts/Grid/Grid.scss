@@ -1,16 +1,21 @@
-@import '../../../../../scss/formare-docs.scss';
+@import "~scss/abstracts";
 
-.fr-grids-preview {
-    @extend .grids;
-    margin: 0 spacing(base);
-    
+.fr-grid-example {
+    position: relative;
+
+    .grids {
+        padding: spacing(large);
+    }
+
     .grid {
-        height: 100px;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: spacing(large);
+        height: 150px;
+        margin-left: spacing(base);
+        margin-right: spacing(base);
+        background-color: theme-color(primary);
+        color: color-yiq(theme-color(primary));
         border-radius: border-radius(base);
-        background-color: $light;
     }
 }

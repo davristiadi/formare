@@ -1,25 +1,39 @@
-$input-themes: $theme-colors;
 $input-font-size: $font-size;
-$input-font-sizes: $font-sizes;
 $input-color: $dark;
-$input-border: solid 1px gray(200);
+$input-border-style: solid;
+$input-border-width: 1px;
+$input-border-color: $light;
 $input-border-radius: border-radius(base);
+
+$input-hovered-color: primary-color(40);
+
 $input-focused-color: primary-color(40);
-$input-focused-border: solid 1px primary-color();
-$input-padding-y: spacing(small) !default;
-$input-padding-x: spacing(base) !default;
-$input-padding: $input-padding-y $input-padding-x;
+$input-focused-border-style: solid;
+$input-focused-border-width: 1px;
+$input-focused-border-color: primary-color();
+$input-focused-box-shadow: 0 0 0em 0.2em rgba(tint($primary-color, 15%), 0.3);
+
+$input-spacing-y: spacing(base) !default;
+$input-spacing-x: spacing(base) !default;
+$input-spacing: $input-spacing-y $input-spacing-x;
+
 $input-background: $white;
-$input-disabled-background: $lighter;
 $input-transition: $transition;
 
-$input-group-extra-color: color-yiq($lighter);
-$input-group-extra-background: $lighter;
-$input-group-extra-border: solid 1px $lighter;
-$input-group-extra-border-radius: $border-radius;
-$input-group-extra-focused-background: $primary-color;
-$input-group-extra-focused-color: color-yiq($primary-color);
-$input-group-extra-focused-border: solid 1px $primary-color;
+$input-disabled-background: $lighter;
+
+$input-set-border-color: $light !default;
+$input-set-border-radius: border-radius(base);
+
+$input-set-extra-transition: $transition;
+$input-set-extra-spacing: spacing(base);
+$input-set-extra-icon-color: $light;
+
+$input-set-addon-transition: $input-transition !default;
+$input-set-addon-background-color: $light !default;
+$input-set-addon-spacing: spacing(base) !default;
+$input-set-addon-color: color-yiq($input-set-addon-background-color);
+
 
 .input,
 .select > select {
@@ -27,15 +41,19 @@ $input-group-extra-focused-border: solid 1px $primary-color;
 	font-size: $input-font-size;
 	background-color: $input-background;
 	color: $input-color;
-	border: $input-border;
+	border-style: $input-border-style;
+	border-width: $input-border-width;
+	border-color: $input-border-color;
 	border-radius: $input-border-radius;
-	padding: $input-padding;
+	padding: $input-spacing;
 	outline: none;
 	white-space: normal;
 	width: 100%;
 
+
 	&:focus {
-		border: $input-focused-border;
+		border-color: $input-focused-border-color;
+		box-shadow: $input-focused-box-shadow;
 		// box-shadow: 0 0 0em 0.2em rgba(tint($primary-color, 15%), 0.3);
 	}
 
@@ -44,7 +62,7 @@ $input-group-extra-focused-border: solid 1px $primary-color;
 		cursor: not-allowed;
 	}
 
-	@each $theme, $color in $input-themes {
+	@each $theme, $color in $theme-colors {
 		&--#{$theme} {
 			border-color: tint($color, 20%);
 
@@ -59,7 +77,7 @@ $input-group-extra-focused-border: solid 1px $primary-color;
 		}
 	}
 
-	@each $size, $value in $input-font-sizes {
+	@each $size, $value in $font-sizes {
 		&--#{$size} {
 			font-size: $value;
 			padding: spacing($size);
@@ -101,50 +119,19 @@ $input-group-extra-focused-border: solid 1px $primary-color;
 	}
 }
 
-
-// .input-group {
-// 	display: flex;
-// 	flex-direction: row;
-
-// 	&__extra {
-// 		transition: $input-transition;
-// 		padding: $input-padding;
-// 		background-color: $input-group-extra-background;
-// 		color: $input-group-extra-color;
-// 		border: $input-group-extra-border;
-// 		border-radius: $input-group-extra-border-radius;
-// 	}
-
-// 	&:focus-within {
-// 		.input-group__extra {
-// 			background-color: $input-group-extra-focused-background;
-// 			color: $input-group-extra-focused-color;
-// 			border: $input-group-extra-focused-border;
-// 		}
-// 	}
-	
-// 	> *:first-child {
-// 		border-top-right-radius: 0;
-// 		border-bottom-right-radius: 0;
-// 	}
-	
-// 	> *:last-child {
-// 		border-top-left-radius: 0;
-// 		border-bottom-left-radius: 0;
-// 	}
-// }
-
 .input-set {
 	display: flex;
 	flex-direction: row;
 	transition: $input-transition;
-	border: $input-border;
-	border-radius: $input-border-radius;
+	border-style: $input-border-style;
+	border-width: $input-border-width;
+	border-color: $input-border-color;
+	border-radius: $input-set-border-radius;
 	background-color: $input-background;
 	overflow: hidden;
 	width: 100%;
 	
-	@each $theme, $color in $input-themes {
+	@each $theme, $color in $theme-colors {
 		&--#{$theme} {
 			border-color: tint($color, 20%);
 
@@ -153,7 +140,7 @@ $input-group-extra-focused-border: solid 1px $primary-color;
 			}
 
 			&:focus {
-				border: solid 1px $color;
+				border-color: $color;
 			}
 		}
 	}
@@ -161,31 +148,31 @@ $input-group-extra-focused-border: solid 1px $primary-color;
 	&__addon {
 		display: flex;
 		align-items: center;
-		transition: $input-transition;
-		background-color: gray(200);
-		padding-left: spacing(base);
-		padding-right: spacing(base);
-		color: color-yiq(gray(200));
+		transition: $input-set-addon-transition;
+		padding-left: $input-set-addon-spacing;
+		padding-right: $input-set-addon-spacing;
+		color: $input-set-addon-color;
+		background-color: $input-set-addon-background-color;
 	}
 
 	&__extra {
 		display: flex;
 		align-items: center;
-		transition: $input-transition;
-		padding-top: $input-padding-y;
-		padding-bottom: $input-padding-y;
+		transition: $input-set-extra-transition;
+		padding-top: $input-set-extra-spacing;
+		padding-bottom: $input-set-extra-spacing;
 
 		> .icon {
-			transition: $input-transition;
-			color: gray(600);
+			transition: $input-set-extra-transition;
+			color: $input-set-extra-icon-color;
 		}
 
-		&:first-child { padding-left: $input-padding-x; }
-		&:last-child { padding-right: $input-padding-x; }
+		&:first-child { padding-left: $input-set-extra-spacing; }
+		&:last-child { padding-right: $input-set-extra-spacing; }
 	}
 
 	&:focus-within {
-		border: $input-focused-border;
+		border-color: $input-focused-border-color;
 		box-shadow: 0 0 0em 0.2em rgba(tint($primary-color, 15%), 0.3);
 
 		.input-set {
