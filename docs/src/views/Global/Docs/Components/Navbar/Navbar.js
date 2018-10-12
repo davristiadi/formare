@@ -1,13 +1,13 @@
 import React from 'react'
-import { Preview, PreviewCode, PreviewDisplay } from 'components/Preview';
+import { Preview, PreviewHighlight, PreviewDisplay } from 'components/Preview';
 
 const Navbar = props => {
     return (
         <div className="fr-navbar-page">
             <article className="article">
                 <div className="fr-heading heading">
-                    <h3 className="title">Navbar</h3>
-                    <h5 className="subtitle color-gray">Consectetur non Lorem mollit incididunt nostrud qui. Tempor ea enim qui in id mollit anim consectetur id sit aute id proident. Tempor Lorem ea dolor cupidatat nulla commodo amet.</h5>
+                    <h2 className="title">Navbar</h2>
+                    <h4 className="subtitle color-gray">Consectetur non Lorem mollit incididunt nostrud qui. Tempor ea enim qui in id mollit anim consectetur id sit aute id proident. Tempor Lorem ea dolor cupidatat nulla commodo amet.</h4>
                 </div>
                 <Preview>
                     <PreviewDisplay>
@@ -28,7 +28,7 @@ const Navbar = props => {
                         	</div>
                         </div>
                     </PreviewDisplay>
-                    <PreviewCode lang="html">
+                    <PreviewHighlight lang="html">
                         {`<div className="navbar">
                         	<div className="navbar__container navbar__container--full-width">
                         		<div className="navbar__block">
@@ -46,7 +46,7 @@ const Navbar = props => {
                         	</div>
                         </div>
                         `}
-                    </PreviewCode>
+                    </PreviewHighlight>
                 </Preview>
             </article>
         </div>

@@ -7,11 +7,13 @@ $input-border-radius: border-radius(base);
 
 $input-hovered-color: primary-color(40);
 
-$input-focused-color: primary-color(40);
-$input-focused-border-style: solid;
-$input-focused-border-width: 1px;
 $input-focused-border-color: primary-color();
-$input-focused-box-shadow: 0 0 0em 0.2em rgba(tint($primary-color, 15%), 0.3);
+$input-focused-box-shadow-blur: 0.3em !default;
+$input-focused-box-shadow-spread: 0.2em !default;
+$input-focused-box-shadow-color: rgba(tint($primary-color, 15%), 0.3) !default;
+$input-focused-box-shadow: 0 0 ($input-focused-box-shadow-blur) ($input-focused-box-shadow-spread) ($input-focused-box-shadow-color);
+
+$input-hovered-border-color: primary-color(-20);
 
 $input-spacing-y: spacing(base) !default;
 $input-spacing-x: spacing(base) !default;
@@ -36,7 +38,8 @@ $input-set-addon-color: color-yiq($input-set-addon-background-color);
 
 
 .input,
-.select > select {
+.select > select,
+.textarea {
 	transition: $input-transition;
 	font-size: $input-font-size;
 	background-color: $input-background;
@@ -49,12 +52,10 @@ $input-set-addon-color: color-yiq($input-set-addon-background-color);
 	outline: none;
 	white-space: normal;
 	width: 100%;
-
-
+	
 	&:focus {
 		border-color: $input-focused-border-color;
 		box-shadow: $input-focused-box-shadow;
-		// box-shadow: 0 0 0em 0.2em rgba(tint($primary-color, 15%), 0.3);
 	}
 
 	&:disabled {
@@ -62,17 +63,25 @@ $input-set-addon-color: color-yiq($input-set-addon-background-color);
 		cursor: not-allowed;
 	}
 
+	&:not(:disabled) {
+		&:hover {
+			border-color: $input-hovered-border-color;
+		}
+	}
+
 	@each $theme, $color in $theme-colors {
 		&--#{$theme} {
 			border-color: tint($color, 20%);
 
-			&:hover {
-				border-color: tint($color, 10%);
+			&:not(:disabled) {
+				&:hover {
+					border-color: tint($color, 10%);
+				}
 			}
 
 			&:focus {
 				border: solid 1px $color;
-				// box-shadow: 0 0 0em 0.2em rgba(tint($color, 15%), 0.3);
+				box-shadow: 0 0 $input-focused-box-shadow-blur $input-focused-box-shadow-spread rgba(tint($color, 15%), 0.3);
 			}
 		}
 	}
@@ -94,7 +103,7 @@ $input-set-addon-color: color-yiq($input-set-addon-background-color);
 	
 	> select {
 		-webkit-appearance: none;
-		-moz-appearance: none;
+		-moz-appearance: none;	
 	}
 
 	&:after {
@@ -130,7 +139,7 @@ $input-set-addon-color: color-yiq($input-set-addon-background-color);
 	background-color: $input-background;
 	overflow: hidden;
 	width: 100%;
-	
+
 	@each $theme, $color in $theme-colors {
 		&--#{$theme} {
 			border-color: tint($color, 20%);
@@ -197,6 +206,13 @@ $input-set-addon-color: color-yiq($input-set-addon-background-color);
 		position: relative;
 		background-color: $input-disabled-background;
 	}
+
+	&:not(.input-set--disabled) {
+		&:hover {
+			border-color: $input-focused-border-color;
+		}
+	}
+	
 
 	> .input,
 	> .select {

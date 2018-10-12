@@ -49,8 +49,7 @@ $button-paddings: map-merge((
 	vertical-align: middle;
 	outline: none;
 	cursor: pointer;
-
-	//	Pseudo states	
+	
 	&:hover:not(:disabled),
 	&--hovered:not(:disabled) {
 		color: $button-hovered-color;
@@ -62,6 +61,7 @@ $button-paddings: map-merge((
 	&--focused:not(:disabled) {
 		color: $button-focused-color;
 		border-color: $button-focused-border-color;
+		box-shadow: 0 0 0.3em 0.2em rgba(tint($primary-color, 15%), 0.3);
 		outline: none;
 	}
 	
@@ -97,7 +97,7 @@ $button-paddings: map-merge((
 				color: color-yiq($color);
 				background-color: tint($color, 20%);
 				border-color: tint($color, 20%);
-				box-shadow: 0 0 0.3em 0.2em rgba(tint($color, 15%), 0.3);
+				box-shadow: 0 0 0.3em 0.2em rgba($color, 0.3);
 			}
 			
 			&:active:not(:disabled),

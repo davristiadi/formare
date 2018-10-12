@@ -1,5 +1,3 @@
-$form-themes: $theme-colors !default;
-
 .form {
     .form__label {
         display: block;
@@ -10,10 +8,24 @@ $form-themes: $theme-colors !default;
     .form__field {
         margin-bottom: spacing(base);
         
-        @each $theme, $color in $form-themes {
+        @each $theme, $color in $theme-colors {
             &--#{$theme} {
                 .form__label {
                     color: $color;
+                }
+
+                .input,
+                .select {
+                    border-color: $color;
+                    
+                    &:hover {
+                        border-color: $color;
+                    }
+                    
+                    &:focus {
+                        border-color: $color;
+                        box-shadow: 0 0 0.3em 0.2em rgba($color, 0.3);
+                    }
                 }
 
                 .input-set {
@@ -26,11 +38,6 @@ $form-themes: $theme-colors !default;
                             }
                         }
                     }
-                }
-
-                .input,
-                .select {
-                    border-color: $color;
                 }
             }
         }

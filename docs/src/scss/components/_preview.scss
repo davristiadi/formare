@@ -21,17 +21,14 @@
         padding: spacing(large);
         border: solid 1px gray(200);
         overflow: hidden;
-    }
 
-    &__code {
-        overflow: hidden;
-
-        > pre {
-            overflow: auto;
-            max-width: 100%;
-            padding: spacing(large);
+        &--borderless {
+            border: none;
+            padding: none;
         }
     }
+
+    &__highlight {}
 
     &--horizontal {
         flex-direction: row;

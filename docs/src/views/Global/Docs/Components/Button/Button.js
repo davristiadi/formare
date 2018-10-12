@@ -1,35 +1,35 @@
 import React from 'react';
-import { Preview, PreviewCode, PreviewDisplay } from 'components/Preview';
+import { Preview, PreviewHighlight, PreviewDisplay } from 'components/Preview';
+import { Highlight } from 'components/Highlight';
 
 const Button = props => {
     return (
         <div id="button">
             <article className="fr-article article">
                 <div className="fr-heading heading">
-                    <h3 className="title">Buttons</h3>
-                    <h5 className="subtitle color-gray">
-                        An essential, call-to-action <strong>interactive</strong> component that users can interact with that
-                        is generally found within a form, card and modal.
-                    </h5>
+                    <h2 className="title">Buttons</h2>
+                    <h4 className="subtitle color-gray">
+                        <span>
+                            Sit cillum velit sint deserunt et sunt. Nisi esse ut laborum pariatur mollit do excepteur. Nisi enim cillum dolore commodo sit ullamco fugiat.
+                        </span>
+                    </h4>
                 </div>
                 <div className="mg-bottom-x-large">
-                    <Preview>
-                        <PreviewDisplay>
-                            <button className="button mg-right">Default Button</button>
-                            <button className="button button--primary">Primary Button</button>
-                        </PreviewDisplay>
-                        <PreviewCode lang="html">
-                            {`<button className="button mg-right">Default Button</button>
-                            <button className="button button--primary">Primary Button</button>
-                            `}
-                        </PreviewCode>
-                    </Preview>
+                    <div className="mg-bottom-large">
+                        <button className="button mg-right">Default Button</button>
+                        <button className="button button--primary">Primary Button</button>
+                    </div>
+                    <Highlight lang="html">
+                        {`<button className="button mg-right">Default Button</button>
+                        <button className="button button--primary">Primary Button</button>
+                        `}
+                    </Highlight>
                 </div>
                 <div className="mg-bottom-x-large">
                     <div className="heading">
-                        <h5 className="title">Button Styles</h5>
-                        <h6 className="subtitle color-gray">Id dolore aute cillum velit laboris irure laborum elit irure occaecat magna minim.</h6>
+                        <h4 className="title">Button Styles</h4>
                     </div>
+                    <p>Fugiat est pariatur velit ipsum nisi dolor proident amet culpa duis fugiat ullamco dolore. Ipsum occaecat anim ipsum officia irure proident quis occaecat amet consequat.</p>
                     <Preview>
                         <PreviewDisplay>
                             <div className="mg-bottom">
@@ -45,7 +45,7 @@ const Button = props => {
                                 <button className="button button--light">Light</button>
                             </div>
                         </PreviewDisplay>
-                        <PreviewCode lang="html">
+                        <PreviewHighlight lang="html">
                             {`<button class="button">Default</button>
                             <button class="button button--primary">Primary</button>
                             <button class="button button--secondary">Secondary</button>
@@ -57,7 +57,7 @@ const Button = props => {
                             <button class="button button--dark mg-right">Dark</button>
                             <button class="button button--light">Light</button>
                             `}
-                        </PreviewCode>
+                        </PreviewHighlight>
                     </Preview>
                 </div>
                 
@@ -81,7 +81,7 @@ const Button = props => {
                                 <button className="button button--light button--outlined">Light</button>
                             </div>
                         </PreviewDisplay>
-                        <PreviewCode lang="html">
+                        <PreviewHighlight lang="html">
                             {`<button class="button button--outlined">Default</button>
                             <button class="button button--primary button--outlined">Primary</button>
                             <button class="button button--secondary button--outlined">Secondary</button>
@@ -91,7 +91,7 @@ const Button = props => {
                             <button class="button button--dark button--outlined">Dark</button>
                             <button class="button button--light button--outlined">Light</button>
                             `}
-                        </PreviewCode>
+                        </PreviewHighlight>
                     </Preview>
                 </div>
                 
@@ -115,7 +115,7 @@ const Button = props => {
                                 <button className="button button--light button--raised">Light</button>
                             </div>
                         </PreviewDisplay>
-                        <PreviewCode lang="html">
+                        <PreviewHighlight lang="html">
                             {`<button class="button button--raised">Button</button>
                             <button class="button button--primary button--raised">Primary</button>
                             <button class="button button--secondary button--raised">Secondary</button>
@@ -125,7 +125,7 @@ const Button = props => {
                             <button class="button button--dark button--raised">Dark</button>
                             <button class="button button--light button--raised">Light</button>
                             `}
-                        </PreviewCode>
+                        </PreviewHighlight>
                     </Preview>
                 </div>
                 
@@ -141,10 +141,10 @@ const Button = props => {
                         <PreviewDisplay>
                             <button className="button button--pill mg-right">Rounded Button</button>
                         </PreviewDisplay>
-                        <PreviewCode lang="html">
+                        <PreviewHighlight lang="html">
                             {`<button class="button button--pill">Rounded Button</button>
                             `}
-                        </PreviewCode>
+                        </PreviewHighlight>
                     </Preview>
                 </div>
                 
@@ -173,14 +173,14 @@ const Button = props => {
                             <button className="button button--large mg-right">Large</button>
                             <button className="button button--x-large">Extra Large</button>
                         </PreviewDisplay>
-                        <PreviewCode lang="html">
+                        <PreviewHighlight lang="html">
                             {`<button class="button button--x-small">Extra Small</button>
                             <button class="button button--small">Small</button>
                             <button class="button">Base</button>
                             <button class="button button--large">Large</button> 
                             <button class="button button--x-large">Extra Large</button>
                             `}
-                        </PreviewCode>
+                        </PreviewHighlight>
                     </Preview>
                 </div>
             </article>

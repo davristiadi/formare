@@ -5,12 +5,12 @@ const Nav = props => {
         <div className="fr-nav-page">
             <article className="fr-article article">
                 <div className="fr-heading heading">
-                    <h3 className="title">Nav</h3>
-                    <h5 className="subtitle color-gray">
+                    <h2 className="title">Nav</h2>
+                    <h4 className="subtitle color-gray">
                         Eu ad commodo adipisicing occaecat sunt ex cupidatat amet quis voluptate nulla ex veniam. 
                         Dolor voluptate do quis in esse exercitation anim sunt fugiat in. Aute amet nisi velit 
                         quis qui duis Lorem consectetur ullamco labore reprehenderit deserunt eu.
-                    </h5>
+                    </h4>
                 </div>
                 <section className="section mg-bottom-x-large">
                     <div className="heading">

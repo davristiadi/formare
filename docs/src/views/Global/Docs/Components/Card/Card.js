@@ -1,5 +1,5 @@
 import React from 'react';
-import { Preview, PreviewDisplay, PreviewCode } from 'components/Preview';
+import { Preview, PreviewDisplay, PreviewHighlight } from 'components/Preview';
 import { default as DummyPhoto } from '../../../../../assets/images/dummy-photo.jpeg';
 
 const Card = props => {
@@ -29,9 +29,10 @@ const Card = props => {
                                         </footer>
                                     </div>
                                 </div>
+
                             </div>
                         </PreviewDisplay>
-                        <PreviewCode lang="html">
+                        <PreviewHighlight lang="html">
                             {`<div class="card">
                                 <header class="card__header">
                                     <h4 class="title">Card Title</h4>
@@ -46,7 +47,7 @@ const Card = props => {
                                 </footer>
                             </div>
                             `}
-                        </PreviewCode>
+                        </PreviewHighlight>
                     </Preview>
                 </section>
                 <section className="section mg-bottom-x-large">

@@ -5,8 +5,8 @@ const Start = props => {
         <div id="start">
             <article className="fr-article">
                 <div className="fr-heading">
-                    <h3 className="title">Getting Started</h3>
-                    <h5 className="subtitle color-gray">There are multiple ways you can start using Formare in your project.</h5>
+                    <h2 className="title">Getting Started</h2>
+                    <h4 className="subtitle color-gray">There are multiple ways you can start using <strong>Formare</strong> in your project.</h4>
                 </div>
             </article>
         </div>
