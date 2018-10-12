@@ -11,11 +11,17 @@ import {
 
 const Components = props => {
     const { routes } = props;
+
+    const sortedRoutes = routes.sort((a, b) => {
+        const first = a.title;
+        const second = b.title;
+        return (first < second) ? -1 : (first > second) ? 1 : 0;
+    });
     
     return (
         <Switch>
             {
-                routes.map(route => {
+                sortedRoutes.map(route => {
                     return <Route path={route.path} component={route.component} />
                 })
             }
