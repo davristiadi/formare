@@ -21,7 +21,7 @@
                 color: theme-color(primary);
             }
         }
-        
+
         &:not(.fr-menu__item--parent) {        
             > a {
                 color: $gray;
@@ -29,6 +29,14 @@
 
                 &:hover {
                     color: theme-color(primary);
+                }
+            }
+        }
+
+        &--active {
+            &:not(.fr-menu__item--parent) {
+                > a {
+                    color: primary-color();
                     font-weight: font-weight(semibold);
                     background-color: primary-color(-90);
                     border-radius: border-radius(base);

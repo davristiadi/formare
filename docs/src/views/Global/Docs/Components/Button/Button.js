@@ -7,12 +7,10 @@ const Button = props => {
         <div id="button">
             <article className="fr-article article">
                 <div className="fr-heading heading">
-                    <h2 className="title">Buttons</h2>
-                    <h4 className="subtitle color-gray">
-                        <span>
-                            Sit cillum velit sint deserunt et sunt. Nisi esse ut laborum pariatur mollit do excepteur. Nisi enim cillum dolore commodo sit ullamco fugiat.
-                        </span>
-                    </h4>
+                    <h3 className="title">Buttons</h3>
+                    <h5 className="subtitle color-gray">
+                        Sit cillum velit sint deserunt et sunt. Nisi esse ut laborum pariatur mollit do excepteur. Nisi enim cillum dolore commodo sit ullamco fugiat.
+                    </h5>
                 </div>
                 <div className="mg-bottom-x-large">
                     <div className="mg-bottom-large">
@@ -60,7 +58,7 @@ const Button = props => {
                         </PreviewHighlight>
                     </Preview>
                 </div>
-                
+
                 <div className="mg-bottom-x-large">
                     <div className="heading">
                         <h5 className="title">Outlined</h5>
@@ -94,7 +92,7 @@ const Button = props => {
                         </PreviewHighlight>
                     </Preview>
                 </div>
-                
+
                 <div className="mg-bottom-x-large">
                     <div className="heading">
                         <h5 className="title">Raised</h5>
@@ -128,7 +126,7 @@ const Button = props => {
                         </PreviewHighlight>
                     </Preview>
                 </div>
-                
+
                 <div className="mg-bottom-x-large">
                     <div className="heading">
                         <h5 className="title">Rounded</h5>
@@ -147,13 +145,13 @@ const Button = props => {
                         </PreviewHighlight>
                     </Preview>
                 </div>
-                
+
                 <div>
                     <div className="heading">
                         <h4 className="title">Sizes</h4>
                     </div>
                     <p>
-                        Need your button bigger, or rather smaller? Append <code>{`.button--#{size}`}</code> modifier class 
+                        Need your button bigger, or rather smaller? Append <code>{`.button--#{size}`}</code> modifier class
                         to customize the size of a button component as needed.
                     </p>
                     <p>
@@ -189,7 +187,7 @@ const Button = props => {
 };
 
 Button.propTypes = {
-    
+
 };
 
 export default Button;

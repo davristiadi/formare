@@ -7,7 +7,7 @@ const Home = props => {
 	
 	return (
 		<div className="fr-home">
-			<section className="hero hero--primary hero--x-large">
+			<section className="hero hero--primary hero--large">
 				<div className="hero__body hero__body--centerized">
 					<div className="container">
 							<div className="grid grid-8">

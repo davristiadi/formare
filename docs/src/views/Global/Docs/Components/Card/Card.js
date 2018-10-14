@@ -8,19 +8,18 @@ const Card = props => {
         <div id="card">
             <article className="article fr-article">
                 <div className="heading fr-heading">
-                    <h2 className="title">Card</h2>
-                    <h4 className="subtitle color-gray">
-                        The <strong>card</strong> components provide you a way to compose a group of content in
-                        the most flexible way possible.
-                    </h4>
+                    <h3 className="title">Card</h3>
+                    <h5 className="subtitle color-gray">
+                        Use the <strong>card</strong> component to display several related content together in a flexible way possible.
+                    </h5>
                     {/* <h4 className="subtitle color-gray">Culpa culpa deserunt magna nostrud sunt adipisicing cillum commodo dolore cupidatat nostrud veniam. Commodo id nulla consectetur aliqua aute. Fugiat irure consectetur cillum pariatur laboris est.</h4> */}
                 </div>
-                <section id="overview" className="section mg-bottom-large">
+                <section id="overview" className="section mg-bottom-x-large">
                     <div className="grids mg-bottom-large">
                         <div className="grid grid-12 grid-md-6">
                             <div className="card">
                                 <header className="card__header">
-                                    <h4 className="title">Card Title</h4>
+                                    <h5 className="title">Card Title</h5>
                                     <h6 className="subtitle color-gray">This is a subtitle</h6>
                                 </header>
                                 <main className="card__body">
@@ -51,7 +50,7 @@ const Card = props => {
                     </Highlight>
                 </section>
 
-                <section id="card-with-image" className="mg-bottom-x-large">
+                <section id="card-with-thumbnail" className="mg-bottom-x-large">
                     <div className="heading">
                         <h4 className="title">Card with Thumbnail</h4>
                     </div>

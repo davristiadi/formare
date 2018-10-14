@@ -6,8 +6,11 @@ const Alert = props => {
         <div id="alert">
             <article className="fr-article article">
             <div className="heading fr-heading">
-                    <h2 className="title">Alerts</h2>
-                    <h4 className="subtitle color-gray">Consectetur esse laboris do aliqua ex est incididunt aute officia irure mollit aliquip. Ut do anim duis consequat eu dolor ut officia ipsum fugiat officia.</h4>
+                    <h3 className="title">Alerts</h3>
+                    <h5 className="subtitle color-gray">
+                        Consectetur esse laboris do aliqua ex est incididunt aute officia irure mollit aliquip. 
+                        Ut do anim duis consequat eu dolor ut officia ipsum fugiat officia.
+                    </h5>
                 </div>
                 <section className="section mg-bottom-x-large">
                     <Preview>
@@ -59,9 +62,9 @@ const Alert = props => {
                         </PreviewHighlight>
                     </Preview>
                 </section>
-                <section className="section">
+                <section id="alert-states" className="section section--lightest">
                     <div className="heading">
-                        <h4 className="title">Alert States</h4>
+                        <h4 className="title">With Icons</h4>
                     </div>
                     <Preview>
                         <PreviewDisplay>
