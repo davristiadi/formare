@@ -13,7 +13,7 @@
 :root {
     @each $theme, $color in $theme-colors {
         --#{$theme}-color: #{$color};
-    }
+	}
 	
 	--font-size: #{$font-size};
     --font-family-text: #{font-family(primary)};

@@ -6,11 +6,11 @@ const Alert = props => {
         <div id="alert">
             <article className="fr-article article">
             <div className="heading fr-heading">
-                    <h3 className="title">Alerts</h3>
-                    <h5 className="subtitle color-gray">
+                    <h2 className="title">Alerts</h2>
+                    <h4 className="subtitle color-gray">
                         Consectetur esse laboris do aliqua ex est incididunt aute officia irure mollit aliquip. 
                         Ut do anim duis consequat eu dolor ut officia ipsum fugiat officia.
-                    </h5>
+                    </h4>
                 </div>
                 <section className="section mg-bottom-x-large">
                     <Preview>

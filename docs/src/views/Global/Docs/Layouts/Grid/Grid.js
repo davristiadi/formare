@@ -10,7 +10,7 @@ const Grid = props => {
                 <div className="fr-heading">
                     <h3 className="title">Grid System</h3>
                     <h4 className="subtitle color-gray">
-                        Build responsive websites easily using our fully customizable Grid System.
+                        Build responsive and mobile-first websites easily using our grid system.
                     </h4>
                 </div>
                 <article className="article">
@@ -19,7 +19,7 @@ const Grid = props => {
                             <h4 className="title">Overview</h4>
                         </div>
                         <p>
-                            The grid system is one of the most essential element in any modern websites. Grid system makes any website design look good
+                            The grid system is one of the most essential element in any modern websites. It makes any website design look good
                             in any device resolutions.
                         </p>
                         <div className="fr-example-grids mg-bottom-large">

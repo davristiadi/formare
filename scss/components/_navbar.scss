@@ -1,16 +1,15 @@
-$navbar-themes: $theme-colors !default;
 $navbar-transition: $transition !default;
 $navbar-background: gray(100) !default;
 $navbar-color: color-yiq($navbar-background);
 $navbar-height: 4em;
-$navbar-heights: () !default;
-$navbar-heights: map-merge((
+$navbar-sizes: () !default;
+$navbar-sizes: map-merge((
 	x-small: ($navbar-height * .5),
 	small: ($navbar-height * .75),
 	base: ($navbar-height * 1),
 	large: ($navbar-height * 1.5),
 	x-large: ($navbar-height * 2)
-), $navbar-heights);
+), $navbar-sizes);
 
 .navbar {
 	position: relative;
@@ -19,14 +18,14 @@ $navbar-heights: map-merge((
 	transition: $navbar-transition;
 	background: $navbar-background;
 
-	@each $theme, $color in $navbar-themes {
+	@each $theme, $color in $theme-colors {
 		&--#{$theme} {
 			background-color: $color;
 			color: color-yiq($color);
 		}
 	}
 	
-	@each $size, $value in $navbar-heights {
+	@each $size, $value in $navbar-sizes {
 		&--#{$size} {
 			height: $value;
 			min-height: $value;
