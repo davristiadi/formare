@@ -1,9 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const NavbarExample = props => {
     const {
         theme,
+        size,
         className,
         ...attributes
     } = props;
@@ -11,8 +13,9 @@ const NavbarExample = props => {
     attributes.className = classNames(
         `navbar`,
         theme ? `navbar--${theme}` : null,
+        size ? `navbar--${size}` : null,
         className
-    )
+    );
     
     return (
         <div className={attributes.className}>
@@ -35,7 +38,8 @@ const NavbarExample = props => {
 }
 
 NavbarExample.propTypes = {
-    
+    theme: PropTypes.string,
+    size: PropTypes.string,
 }
 
 export default NavbarExample

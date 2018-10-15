@@ -15,7 +15,7 @@ $input-focused-box-shadow: 0 0 ($input-focused-box-shadow-blur) ($input-focused-
 
 $input-hovered-border-color: primary-color(-20);
 
-$input-spacing-y: spacing(base) !default;
+$input-spacing-y: spacing(small) !default;
 $input-spacing-x: spacing(base) !default;
 $input-spacing: $input-spacing-y $input-spacing-x;
 

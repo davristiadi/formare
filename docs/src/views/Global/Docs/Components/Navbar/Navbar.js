@@ -50,6 +50,15 @@ const Navbar = props => {
                         </PreviewDisplay>
                     </Preview>
                 </section>
+                <section id="sizes">
+                    <Preview>
+                        <PreviewDisplay>
+                            <NavbarExample theme="primary" size="small" className="mg-bottom-x-large" />
+                            <NavbarExample theme="primary" className="mg-bottom-x-large" />
+                            <NavbarExample theme="primary" size="large" />
+                        </PreviewDisplay>
+                    </Preview>
+                </section>
             </article>
         </div>
     )

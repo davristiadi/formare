@@ -7,10 +7,10 @@ const Button = props => {
         <div id="button">
             <article className="fr-article article">
                 <div className="fr-heading heading">
-                    <h3 className="title">Buttons</h3>
-                    <h5 className="subtitle color-gray">
+                    <h2 className="title">Buttons</h2>
+                    <h4 className="subtitle color-gray">
                         Sit cillum velit sint deserunt et sunt. Nisi esse ut laborum pariatur mollit do excepteur. Nisi enim cillum dolore commodo sit ullamco fugiat.
-                    </h5>
+                    </h4>
                 </div>
                 <div className="mg-bottom-x-large">
                     <div className="mg-bottom-large">

@@ -8,10 +8,10 @@ const Card = props => {
         <div id="card">
             <article className="article fr-article">
                 <div className="heading fr-heading">
-                    <h3 className="title">Card</h3>
-                    <h5 className="subtitle color-gray">
+                    <h2 className="title">Card</h2>
+                    <h4 className="subtitle color-gray">
                         Use the <strong>card</strong> component to display several related content together in a flexible way possible.
-                    </h5>
+                    </h4>
                     {/* <h4 className="subtitle color-gray">Culpa culpa deserunt magna nostrud sunt adipisicing cillum commodo dolore cupidatat nostrud veniam. Commodo id nulla consectetur aliqua aute. Fugiat irure consectetur cillum pariatur laboris est.</h4> */}
                 </div>
                 <section id="overview" className="section mg-bottom-x-large">
