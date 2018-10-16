@@ -1,13 +1,3 @@
 .fr-heading {
     margin-bottom: spacing(x-large);
-    
-    .title {
-        background-image: linear-gradient(to right, $primary-color, $secondary-color);
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-    
-    .subtitle {
-        color: gray(1000);
-    }
 }

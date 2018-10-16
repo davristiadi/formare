@@ -6,72 +6,92 @@ const General = props => {
         <article className="fr-article article">
             <div className="fr-heading heading">
                 <h2 className="title">Form</h2>
-                <h4 className="subtitle color-gray">Non magna officia <strong>ut nisi excepteur</strong> in aliqua. Aliqua culpa cillum ea elit aute nisi sit id. Fugiat esse non Lorem nulla esse cupidatat nostrud excepteur.</h4>
+                <h5 className="subtitle color-gray">
+                    Form is used to collect, validate, and submit the user input, usually contains various form items including checkbox, radio, input, select, and etc.
+                </h5>
             </div>
             <section className="fr-section">
+                <div className="heading">
+                    <h4 className="title">Examples</h4>
+                </div>
+
                 <Preview>
                     <PreviewDisplay>
                         <form className="form">
                             <div className="form__field">
-                                <label className="form__label">Full Name</label>
+                                <label className="form__label">Name</label>
                                 <input type="text" className="input" placeholder="e.g John Doe" />
                             </div>
                             <div className="form__field">
                                 <label className="form__label">Email</label>
                                 <div className="input-set">
-                                    <span className="input-set__extra">
+                                    <div className="input-set__icon">
                                         <i className="icon fas fa-envelope"></i>
-                                    </span>
+                                    </div>
                                     <input type="text" className="input" placeholder="e.g johndoe@email.com" />
                                 </div>
                             </div>
                             <div className="form__field">
                                 <label className="form__label">Phone</label>
                                 <div className="input-set">
-                                    <span className="input-set__addon">
-                                        <i className="fas fa-phone" />
-                                    </span>
-                                    <input type="text" className="input" placeholder="e.g +62 812 345 6789" />
+                                    <div className="input-set__extra">
+                                        <i className="icon fas fa-phone" />
+                                    </div>
+                                    <input type="text" className="input" placeholder="e.g +62 812 345 678" />
                                 </div>
                             </div>
                             <div className="form__field">
                                 <label className="form__label">Address</label>
-                                <textarea className="textarea" rows="4" placeholder="e.g Main Road, Park Avenue 5 St">
-                                </textarea>
+                                <textarea className="textarea" rows="3" placeholder="e.g Bryar Pitts, 5543 Aliquet St. Fort Dodge GA 20783, (717) 450-4729"></textarea>
                             </div>
-
+                            <div className="form__field">
+                                <label className="form__label">Website</label>
+                                <div className="input-group">
+                                    <div className="select">
+                                        <select>
+                                            <option>https://</option>
+                                            <option>http://</option>
+                                        </select>
+                                    </div>
+                                    <div className="input-set">
+                                        <input type="text" className="input" placeholder="e.g formare.com" />
+                                        <div className="input-set__extra fw-semibold">.com</div>
+                                    </div>
+                                </div>
+                            </div>
                         </form>
                     </PreviewDisplay>
                     <PreviewHighlight lang="html">
                         {`<form class="form">
                             <div class="form__field">
-                                <label class="form__label">Full Name</label>
+                                <label class="form__label">Name</label>
                                 <input type="text" class="input" placeholder="e.g John Doe" />
                             </div>
                             <div class="form__field">
                                 <label class="form__label">Email</label>
                                 <div class="input-set">
-                                    <span class="input-set__extra">
+                                    <div class="input-set__icon">
                                         <i class="icon fas fa-envelope"></i>
-                                    </span>
+                                    </div>
                                     <input type="text" class="input" placeholder="e.g johndoe@email.com" />
                                 </div>
                             </div>
                             <div class="form__field">
                                 <label class="form__label">Phone</label>
                                 <div class="input-set">
-                                    <span class="input-set__addon">
-                                        <i class="fas fa-phone" />
-                                    </span>
-                                    <input type="text" class="input" placeholder="e.g +62 812 345 6789" />
+                                    <div class="input-set__extra">
+                                        <i class="icon fas fa-phone" />
+                                    </div>
+                                    <input type="text" class="input" placeholder="e.g +62 812 345 678" />
                                 </div>
+                            </div>
+                            <div class="form__field">
+                                <label class="form__label">Address</label>
+                                <textarea class="textarea" rows="3" placeholder="e.g Bryar Pitts, 5543 Aliquet St. Fort Dodge GA 20783, (717) 450-4729"></textarea>
                             </div>
                         </form>
                         `}
                     </PreviewHighlight>
-                    {/* <PreviewCode lang="html">
-                        {``}
-                    </PreviewCode> */}
                 </Preview>
             </section>
             <br />

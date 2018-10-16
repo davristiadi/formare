@@ -27,19 +27,16 @@ $input-disabled-background: $lighter;
 $input-set-border-color: $light !default;
 $input-set-border-radius: border-radius(base);
 
-$input-set-extra-transition: $transition;
-$input-set-extra-spacing: spacing(base);
-$input-set-extra-icon-color: $light;
-
-$input-set-addon-transition: $input-transition !default;
-$input-set-addon-background-color: $light !default;
-$input-set-addon-spacing: spacing(base) !default;
-$input-set-addon-color: color-yiq($input-set-addon-background-color);
-
+.input,
+.textarea {
+	width: 100%;
+}
 
 .input,
 .select > select,
 .textarea {
+	padding: $input-spacing;
+	position: relative;
 	transition: $input-transition;
 	font-size: $input-font-size;
 	background-color: $input-background;
@@ -48,10 +45,8 @@ $input-set-addon-color: color-yiq($input-set-addon-background-color);
 	border-width: $input-border-width;
 	border-color: $input-border-color;
 	border-radius: $input-border-radius;
-	padding: $input-spacing;
 	outline: none;
 	white-space: normal;
-	width: 100%;
 	
 	&:focus {
 		border-color: $input-focused-border-color;
@@ -63,10 +58,8 @@ $input-set-addon-color: color-yiq($input-set-addon-background-color);
 		cursor: not-allowed;
 	}
 
-	&:not(:disabled) {
-		&:hover {
-			border-color: $input-hovered-border-color;
-		}
+	&:hover:not(:disabled) {
+		border-color: $input-hovered-border-color;
 	}
 
 	@each $theme, $color in $theme-colors {
@@ -103,28 +96,54 @@ $input-set-addon-color: color-yiq($input-set-addon-background-color);
 	
 	> select {
 		-webkit-appearance: none;
-		-moz-appearance: none;	
+		-moz-appearance: none;
+		padding-right: 3em;
+		cursor: pointer;
 	}
 
 	&:after {
-		transition: $input-transition;
 		content: "\f078";
+		transition: $input-transition;
 		font-family: "Font Awesome 5 Free";
 		font-weight: 900;
 		position: absolute;
+		pointer-events: none;
 		right: spacing(base);
 		top: 50%;
 		transform: translateY(-50%);
 		line-height: 0;
-		color: gray(600);
+		color: $gray;
 	}
 
+	
 	&:focus-within {
 		&:after {
-			top: 50%;
 			transform: rotate(180deg) translateY(-50%);
 			color: primary-color();
 		}
+	}
+}
+
+.input-group {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+
+	> *:first-child,
+	> .select:first-child > select {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	> *:not(:first-child):not(:last-child),
+	> .select:not(:first-child):not(:last-child) > select {
+		border-radius: 0;
+	}
+
+	> *:last-child,
+	> .select:last-child > select {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
 	}
 }
 
@@ -135,88 +154,58 @@ $input-set-addon-color: color-yiq($input-set-addon-background-color);
 	border-style: $input-border-style;
 	border-width: $input-border-width;
 	border-color: $input-border-color;
-	border-radius: $input-set-border-radius;
-	background-color: $input-background;
+	border-radius: $input-border-radius;
 	overflow: hidden;
 	width: 100%;
 
-	@each $theme, $color in $theme-colors {
-		&--#{$theme} {
-			border-color: tint($color, 20%);
-
-			&:hover {
-				border-color: tint($color, 10%);
-			}
-
-			&:focus {
-				border-color: $color;
-			}
-		}
-	}
-	
-	&__addon {
-		display: flex;
-		align-items: center;
-		transition: $input-set-addon-transition;
-		padding-left: $input-set-addon-spacing;
-		padding-right: $input-set-addon-spacing;
-		color: $input-set-addon-color;
-		background-color: $input-set-addon-background-color;
+	&:hover {
+		border-color: $input-hovered-border-color;
 	}
 
 	&__extra {
 		display: flex;
 		align-items: center;
-		transition: $input-set-extra-transition;
-		padding-top: $input-set-extra-spacing;
-		padding-bottom: $input-set-extra-spacing;
+		transition: $input-transition;
+		padding-left: $input-spacing-x;
+		padding-right: $input-spacing-x;
+		background-color: $light;
+	}
+
+	&__icon {
+		display: flex;
+		align-items: center;
+		transition: $input-transition;
 
 		> .icon {
-			transition: $input-set-extra-transition;
-			color: $input-set-extra-icon-color;
+			color: $light;
 		}
 
-		&:first-child { padding-left: $input-set-extra-spacing; }
-		&:last-child { padding-right: $input-set-extra-spacing; }
+		&:first-child {
+			padding-left: $input-spacing-x;
+		}
+
+		&:last-child {
+			padding-right: $input-spacing-x;
+		}
 	}
 
 	&:focus-within {
+		box-shadow: $input-focused-box-shadow;
 		border-color: $input-focused-border-color;
-		box-shadow: 0 0 0em 0.2em rgba(tint($primary-color, 15%), 0.3);
 
-		.input-set {
-			&__extra {
-				> .icon {
-					color: primary-color();
-				}
-			}
+		.input-set__icon > .icon {
+			color: primary-color();
+		}
 
-			&__addon {
-				background-color: primary-color();
-				color: color-yiq(primary-color());
-			}
+		.input-set__extra {
+			background-color: primary-color();
+			color: color-yiq(primary-color());
 		}
 	}
-
-	&--pill {
-		border-radius: $border-radius-pill;
-	}
-
-	&--disabled {
-		position: relative;
-		background-color: $input-disabled-background;
-	}
-
-	&:not(.input-set--disabled) {
-		&:hover {
-			border-color: $input-focused-border-color;
-		}
-	}
-	
 
 	> .input,
 	> .select {
-		border: 0;
+		border: none;
 		box-shadow: none;
 	}
 }
