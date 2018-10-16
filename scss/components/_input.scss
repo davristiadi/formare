@@ -124,29 +124,6 @@ $input-set-border-radius: border-radius(base);
 	}
 }
 
-.input-group {
-	display: flex;
-	flex-direction: row;
-	width: 100%;
-
-	> *:first-child,
-	> .select:first-child > select {
-		border-top-right-radius: 0;
-		border-bottom-right-radius: 0;
-	}
-
-	> *:not(:first-child):not(:last-child),
-	> .select:not(:first-child):not(:last-child) > select {
-		border-radius: 0;
-	}
-
-	> *:last-child,
-	> .select:last-child > select {
-		border-top-left-radius: 0;
-		border-bottom-left-radius: 0;
-	}
-}
-
 .input-set {
 	display: flex;
 	flex-direction: row;

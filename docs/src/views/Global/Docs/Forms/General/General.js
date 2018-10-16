@@ -33,29 +33,36 @@ const General = props => {
                             </div>
                             <div className="form__field">
                                 <label className="form__label">Phone</label>
-                                <div className="input-set">
-                                    <div className="input-set__extra">
-                                        <i className="icon fas fa-phone" />
+                                <div className="form__input">
+                                    <div className="input-set">
+                                        <div className="input-set__extra">
+                                            <i className="icon fas fa-phone" />
+                                        </div>
+                                        <input type="text" className="input" placeholder="e.g +62 812 345 678" />
                                     </div>
-                                    <input type="text" className="input" placeholder="e.g +62 812 345 678" />
                                 </div>
                             </div>
                             <div className="form__field">
                                 <label className="form__label">Address</label>
-                                <textarea className="textarea" rows="3" placeholder="e.g Bryar Pitts, 5543 Aliquet St. Fort Dodge GA 20783, (717) 450-4729"></textarea>
+                                <div className="form__input">
+                                    <textarea className="textarea" rows="3" placeholder="e.g Bryar Pitts, 5543 Aliquet St. Fort Dodge GA 20783, (717) 450-4729"></textarea>
+                                </div>
                             </div>
                             <div className="form__field">
                                 <label className="form__label">Website</label>
-                                <div className="input-group">
+                                <div className="form__input form__input--grouped">
                                     <div className="select">
                                         <select>
                                             <option>https://</option>
                                             <option>http://</option>
                                         </select>
                                     </div>
-                                    <div className="input-set">
-                                        <input type="text" className="input" placeholder="e.g formare.com" />
-                                        <div className="input-set__extra fw-semibold">.com</div>
+                                    <input type="text" className="input" placeholder="e.g formare.com" />
+                                    <div className="select">
+                                        <select>
+                                            <option>.com</option>
+                                            <option>.co.id</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
