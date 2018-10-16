@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/formare/static/js/runtime~main.271a316d.js"
   },
   {
-    "revision": "5401f1b557cf6ae98aa1",
-    "url": "/formare/static/js/main.5401f1b5.chunk.js"
+    "revision": "8871367a4b7c405802ac",
+    "url": "/formare/static/js/main.8871367a.chunk.js"
   },
   {
     "revision": "3ef5902977716cfb1baa",
     "url": "/formare/static/js/1.3ef59029.chunk.js"
   },
   {
-    "revision": "5401f1b557cf6ae98aa1",
-    "url": "/formare/static/css/main.93a3411b.chunk.css"
+    "revision": "8871367a4b7c405802ac",
+    "url": "/formare/static/css/main.11ca4551.chunk.css"
   },
   {
-    "revision": "c2039802ee1cacddb9c1d80509628f95",
+    "revision": "34dafdb36bc1829ab5e356b907f553f4",
     "url": "/formare/index.html"
   }
 ];
