@@ -1,7 +1,7 @@
 {
   "main.css": "/formare/static/css/main.11ca4551.chunk.css",
-  "main.js": "/formare/static/js/main.8871367a.chunk.js",
-  "main.js.map": "/formare/static/js/main.8871367a.chunk.js.map",
+  "main.js": "/formare/static/js/main.bfe111ea.chunk.js",
+  "main.js.map": "/formare/static/js/main.bfe111ea.chunk.js.map",
   "static/js/1.3ef59029.chunk.js": "/formare/static/js/1.3ef59029.chunk.js",
   "static/js/1.3ef59029.chunk.js.map": "/formare/static/js/1.3ef59029.chunk.js.map",
   "runtime~main.js": "/formare/static/js/runtime~main.271a316d.js",
@@ -9,6 +9,6 @@
   "static/media/dummy-photo.jpeg": "/formare/static/media/dummy-photo.8f621bb7.jpeg",
   "static/css/main.11ca4551.chunk.css.map": "/formare/static/css/main.11ca4551.chunk.css.map",
   "index.html": "/formare/index.html",
-  "precache-manifest.5f1b5aa755ce1496eee86cd8f5f0e318.js": "/formare/precache-manifest.5f1b5aa755ce1496eee86cd8f5f0e318.js",
+  "precache-manifest.a1d056dc41cc20903e93c1652486401d.js": "/formare/precache-manifest.a1d056dc41cc20903e93c1652486401d.js",
   "service-worker.js": "/formare/service-worker.js"
 }
