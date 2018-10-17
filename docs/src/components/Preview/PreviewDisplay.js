@@ -7,11 +7,15 @@ const PreviewDisplay = props => {
         tag: Tag,
         className,
         children,
+        simple,
         ...attributes
     } = props;
 
+    console.log(props);
+
     attributes.className = classNames(
         `fr-preview__display`,
+        simple ? `fr-preview__display--borderless` : null,
         className
     );
     
@@ -25,7 +29,8 @@ PreviewDisplay.defaultProps = {
 PreviewDisplay.propTypes = {
     tag: PropTypes.oneOfType([
         PropTypes.func, PropTypes.string,
-    ])
+    ]),
+    simple: PropTypes.bool,
 }
 
 export default PreviewDisplay

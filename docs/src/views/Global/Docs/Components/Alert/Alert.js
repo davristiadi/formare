@@ -5,14 +5,68 @@ const Alert = props => {
     return (
         <div id="alert">
             <article className="fr-article article">
-            <div className="heading fr-heading">
+                <header className="heading fr-heading">
                     <h2 className="title">Alerts</h2>
-                    <h4 className="subtitle color-gray">
-                        Consectetur esse laboris do aliqua ex est incididunt aute officia irure mollit aliquip. 
-                        Ut do anim duis consequat eu dolor ut officia ipsum fugiat officia.
-                    </h4>
-                </div>
-                <section className="section mg-bottom-x-large">
+                </header>
+                <section id="overview" className="fr-section">
+                    <div className="heading">
+                        <h4 className="title">Overview</h4>
+                    </div>
+                    <p>In veniam labore do eiusmod fugiat. Occaecat pariatur sit laboris id est nisi eiusmod do officia adipisicing qui. Cillum ea adipisicing duis enim dolor deserunt ipsum eu ullamco elit ut minim.</p>
+                    <Preview simple>
+                        <PreviewDisplay>
+                            <div className="alert">
+                                <div className="alert__body">This is an example alert.</div>
+                            </div>
+                        </PreviewDisplay>
+                        <PreviewHighlight lang="html">
+                            {`<div className="alert">
+                                <div className="alert__body">This is an example alert.</div>
+                            </div>
+                            `}
+                        </PreviewHighlight>
+                    </Preview>
+                </section>
+                <section id="usage" className="fr-section">
+                    <header className="heading">
+                        <h4 className="title">Usage</h4>
+                    </header>
+                    <p></p>
+                </section>
+                <section id="themes" className="fr-section">
+                    <header className="heading">
+                        <h4 className="title">Themes</h4>
+                    </header>
+                    <p>Deserunt irure veniam irure pariatur quis. Duis magna deserunt sit eiusmod nisi consequat cillum irure eiusmod. Nisi cupidatat sunt adipisicing officia qui voluptate.</p>
+                    <Preview>
+                        <PreviewDisplay>
+                            <div className="alert alert--primary mg-bottom">
+                                <div className="alert__body">This is an alert with primary theme!</div>
+                            </div>
+                            <div className="alert alert--secondary mg-bottom">
+                                <div className="alert__body">This is an alert with secondary theme!</div>
+                            </div>
+                            <div className="alert alert--success mg-bottom">
+                                <div className="alert__body">This is an alert with success theme!</div>
+                            </div>
+                            <div className="alert alert--warning mg-bottom">
+                                <div className="alert__body">This is an alert with warning theme!</div>
+                            </div>
+                            <div className="alert alert--danger mg-bottom">
+                                <div className="alert__body">This is an alert with danger theme!</div>
+                            </div>
+                            <div className="alert alert--light mg-bottom">
+                                <div className="alert__body">This is an alert with light theme!</div>
+                            </div>
+                            <div className="alert alert--dark">
+                                <div className="alert__body">This is an alert with dark theme!</div>
+                            </div>
+
+                        </PreviewDisplay>
+                    </Preview>
+                </section>
+
+                {/* <section className="section mg-bottom-x-large">
                     <Preview>
                         <PreviewDisplay>
                             <div className="alert alert--primary mg-bottom">
@@ -23,7 +77,7 @@ const Alert = props => {
                             </div>
                             <div className="alert alert--success mg-bottom">
                                 <div className="alert__message">This is a success alert!</div>
-                            </div>
+                            </div>  
                             <div className="alert alert--danger mg-bottom">
                                 <div className="alert__message">This is a danger alert!</div>
                             </div>
@@ -109,7 +163,7 @@ const Alert = props => {
                             `}
                         </PreviewHighlight>
                     </Preview>
-                </section>
+                </section> */}
             </article>
         </div>
     );

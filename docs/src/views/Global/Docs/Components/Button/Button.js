@@ -8,11 +8,12 @@ const Button = props => {
             <article className="fr-article article">
                 <div className="fr-heading heading">
                     <h2 className="title">Buttons</h2>
-                    <h4 className="subtitle color-gray">
-                        Sit cillum velit sint deserunt et sunt. Nisi esse ut laborum pariatur mollit do excepteur. Nisi enim cillum dolore commodo sit ullamco fugiat.
-                    </h4>
                 </div>
-                <div className="mg-bottom-x-large">
+                <article id="overview" className="fr-section">
+                    <header className="heading">
+                        <h4 className="title">Overview</h4>
+                    </header>
+                    <p>Minim culpa do anim laboris minim ex. Eiusmod deserunt veniam do labore veniam labore voluptate Lorem eu labore.</p>
                     <div className="mg-bottom-large">
                         <button className="button mg-right">Default Button</button>
                         <button className="button button--primary">Primary Button</button>
@@ -22,10 +23,10 @@ const Button = props => {
                         <button className="button button--primary">Primary Button</button>
                         `}
                     </Highlight>
-                </div>
-                <div className="mg-bottom-x-large">
+                </article>
+                <article id="themes" className="fr-section">
                     <div className="heading">
-                        <h4 className="title">Button Styles</h4>
+                        <h4 className="title">Themes</h4>
                     </div>
                     <p>Fugiat est pariatur velit ipsum nisi dolor proident amet culpa duis fugiat ullamco dolore. Ipsum occaecat anim ipsum officia irure proident quis occaecat amet consequat.</p>
                     <Preview>
@@ -57,41 +58,8 @@ const Button = props => {
                             `}
                         </PreviewHighlight>
                     </Preview>
-                </div>
-
-                <div className="mg-bottom-x-large">
-                    <div className="heading">
-                        <h5 className="title">Outlined</h5>
-                        <h6 className="subtitle color-gray">Id dolore aute cillum velit laboris irure laborum elit irure occaecat magna minim.</h6>
-                    </div>
-                    <Preview>
-                        <PreviewDisplay>
-                            <div className="mg-bottom">
-                                <button className="button button--outlined mg-right">Default</button>
-                                <button className="button button--primary button--outlined mg-right">Primary</button>
-                                <button className="button button--secondary button--outlined mg-right">Secondary</button>
-                                <button className="button button--success button--outlined mg-right">Success</button>
-                                <button className="button button--danger button--outlined mg-right">Danger</button>
-                                <button className="button button--warning button--outlined mg-right">Warning</button>
-                            </div>
-                            <div>
-                                <button className="button button--dark button--outlined mg-right">Dark</button>
-                                <button className="button button--light button--outlined">Light</button>
-                            </div>
-                        </PreviewDisplay>
-                        <PreviewHighlight lang="html">
-                            {`<button class="button button--outlined">Default</button>
-                            <button class="button button--primary button--outlined">Primary</button>
-                            <button class="button button--secondary button--outlined">Secondary</button>
-                            <button class="button button--success button--outlined">Success</button>
-                            <button class="button button--danger button--outlined">Danger</button>
-                            <button class="button button--warning button--outlined">Warning</button>
-                            <button class="button button--dark button--outlined">Dark</button>
-                            <button class="button button--light button--outlined">Light</button>
-                            `}
-                        </PreviewHighlight>
-                    </Preview>
-                </div>
+                </article>
+                
 
                 <div className="mg-bottom-x-large">
                     <div className="heading">

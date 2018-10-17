@@ -7,15 +7,11 @@ const Table = props => {
             <article className="fr-article article">
                 <div className="fr-heading heading">
                     <h2 className="title">Table</h2>
-                    <h4 className="subtitle color-gray">
-                        The Table component enables you to visualize a large set of data concisely and
-                        in an easiest way possible.
-                    </h4>
                 </div>
                 <section>
                     <div className="table table--striped mg-bottom">
                         <table>
-                            <thead className="table__head table__head--primary">
+                            <thead className="table__head">
                                 <tr>
                                     <th>#</th>
                                     <th>Name</th>
@@ -60,7 +56,7 @@ const Table = props => {
                     <Highlight lang="html">
                         {`<div class="table">
                             <table>
-                                <thead className="table__head table__head--primary">
+                                <thead className="table__head">
                                     <tr>
                                         <th>#</th>
                                         <th>Name</th>

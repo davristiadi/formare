@@ -3,14 +3,14 @@ import React, { PropTypes } from 'react'
 const Nav = props => {
     return (
         <div className="fr-nav">
-            <article className="fr-article article">
-                <div className="fr-heading heading">
+            <article className="fr-article">
+                <div className="fr-heading">
                     <h2 className="title">Navigation</h2>
-                    <h5 className="subtitle color-gray">
-                        Velit irure do cupidatat fugiat mollit aliqua labore magna laboris et nostrud est.
-                    </h5>
                 </div>
-                <div className="fr-section">
+                <div id="overview" className="fr-section">
+                    <div className="heading">
+                        
+                    </div>
                 </div>
 
                 {/* <section className="section mg-bottom-x-large">

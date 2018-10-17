@@ -10,13 +10,13 @@ const Docs = props => {
 		<div className="fr-docs">
 			<div className="container">
 				<div className="grids">
-					<div className="grid">
+					<div className="grid grid-3">
 						<aside className="fr-aside">
 							<DocsMenu {...props} />
 						</aside>
 					</div>
 					<div className="grid grid-9">
-						<main className="pd-top-x-large pd-right">
+						<main className="pd-top-x-large pd-left-large">
 							<Switch>
 								{
 									routes.map(route => {

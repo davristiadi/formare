@@ -6,29 +6,31 @@ const General = props => {
         <article className="fr-article article">
             <div className="fr-heading heading">
                 <h2 className="title">Form</h2>
-                <h5 className="subtitle color-gray">
-                    Form is used to collect, validate, and submit the user input, usually contains various form items including checkbox, radio, input, select, and etc.
-                </h5>
+                <h5 className="subtitle color-gray">Voluptate irure ex esse aliquip laborum voluptate est excepteur mollit pariatur</h5>
             </div>
             <section className="fr-section">
                 <div className="heading">
-                    <h4 className="title">Examples</h4>
+                    <h4 className="title">Overview</h4>
                 </div>
-
+                <p>Sunt minim eiusmod exercitation laborum mollit commodo quis pariatur ex ut non ullamco sint ad. Minim velit fugiat aliqua reprehenderit officia aute magna consequat consectetur eu esse pariatur eu.</p>
                 <Preview>
                     <PreviewDisplay>
                         <form className="form">
                             <div className="form__field">
                                 <label className="form__label">Name</label>
-                                <input type="text" className="input" placeholder="e.g John Doe" />
+                                <div className="form__input">
+                                    <input type="text" className="input" placeholder="e.g John Doe" />
+                                </div>
                             </div>
                             <div className="form__field">
                                 <label className="form__label">Email</label>
-                                <div className="input-set">
-                                    <div className="input-set__icon">
-                                        <i className="icon fas fa-envelope"></i>
+                                <div className="form__input">
+                                    <div className="input-set">
+                                        <div className="input-set__icon">
+                                            <i className="icon fas fa-envelope"></i>
+                                        </div>
+                                        <input type="text" className="input" placeholder="e.g johndoe@email.com" />
                                     </div>
-                                    <input type="text" className="input" placeholder="e.g johndoe@email.com" />
                                 </div>
                             </div>
                             <div className="form__field">

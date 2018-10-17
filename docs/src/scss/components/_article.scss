@@ -1,9 +1,13 @@
 .fr-article {
+    @extend .article;
+    
     .fr-heading {
+        @extend .heading;
         margin-bottom: spacing(x-large);
     }
 
     .fr-section {
-        margin-bottom: spacing(large);
+        @extend .section;
+        margin-bottom: 3rem;
     }
 }

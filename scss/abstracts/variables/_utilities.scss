@@ -1,11 +1,13 @@
 $spacing: 1rem !default;
 $spacings: () !default;
 $spacings: map-merge((
-    x-small: ($spacing * .5),
-    small: ($spacing * .75),
+    xx-small: ($spacing * .50),
+    x-small: ($spacing * .70),
+    small: ($spacing * .85),
     base: $spacing,
     large: ($spacing * 1.5),
-    x-large: ($spacing * 2)
+    x-large: ($spacing * 2),
+    xx-large: ($spacing * 3)
 ), $spacings);
 
 $border-radius: 4px !default;
