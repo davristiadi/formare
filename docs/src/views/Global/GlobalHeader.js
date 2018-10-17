@@ -8,9 +8,9 @@ class GlobalHeader extends Component {
                 <div className="navbar navbar--primary">
                     <div className="navbar__container">
                         <div className="navbar__block flex jc-start">
-                            <h5 className="font fw-bold fs-x-large">
+                            <h4 className="fw-bold pd-left">
                             	<Link to="/" className="nav__link">Formare</Link>
-                            </h5>
+                            </h4>
                         </div>
                         <div className="navbar__block flex jc-end">
                             <nav className="nav">

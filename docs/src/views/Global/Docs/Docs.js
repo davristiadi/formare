@@ -10,7 +10,12 @@ const Docs = props => {
 		<div className="fr-docs">
 			<div className="container">
 				<div className="grids">
-					<div className="grid grid-10">
+					<div className="grid">
+						<aside className="fr-aside">
+							<DocsMenu {...props} />
+						</aside>
+					</div>
+					<div className="grid grid-9">
 						<main className="pd-top-x-large pd-right">
 							<Switch>
 								{
@@ -21,11 +26,6 @@ const Docs = props => {
 								<Redirect exact from='/docs' to={routes[0].path} />
 							</Switch>
 						</main>
-					</div>
-					<div className="grid grid-2">
-						<aside className="fr-aside">
-							<DocsMenu {...props} />
-						</aside>
 					</div>
 				</div>
 			</div>

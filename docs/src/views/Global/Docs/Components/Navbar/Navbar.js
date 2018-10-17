@@ -7,7 +7,7 @@ const Navbar = props => {
         <div className="fr-navbar-page">
             <article className="fr-article">
                 <div className="fr-heading heading">
-                    <h2 className="title">Navbar</h2>
+                    <h2 className="title">Navigation Bar</h2>
                     <h4 className="subtitle color-gray">Consectetur non Lorem mollit incididunt nostrud qui. Tempor ea enim qui in id mollit anim consectetur id sit aute id proident. Tempor Lorem ea dolor cupidatat nulla commodo amet.</h4>
                 </div>
                 <section id="overview">
