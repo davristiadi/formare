@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Docs from './Docs';
-// import { Start, Components, Forms } from '../Docs';
 import {
 	Start
 } from './Start';
@@ -22,7 +21,8 @@ import {
 
 import { 
 	Layouts,
-	Grid
+	Grid,
+	Foundation
 } from './Layouts';
 
 class DocsContainer extends Component {
@@ -35,11 +35,6 @@ class DocsContainer extends Component {
 					title: 'Getting Started',
 					component: Start,
 				},
-				// {
-				// 	path: '/docs/general',
-				// 	title: 'General',
-				// 	component: General
-				// },
 				{
 					path: '/docs/layouts',
 					title: 'Layouts',
@@ -50,6 +45,11 @@ class DocsContainer extends Component {
 							title: 'Grid System',
 							component: Grid
 						},
+						{
+							path: '/docs/layouts/foundation',
+							title: 'Foundation',
+							component: Foundation
+						}
 					]
 				},
 				{

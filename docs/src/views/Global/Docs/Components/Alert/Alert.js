@@ -27,12 +27,6 @@ const Alert = props => {
                         </PreviewHighlight>
                     </Preview>
                 </section>
-                <section id="usage" className="fr-section">
-                    <header className="heading">
-                        <h4 className="title">Usage</h4>
-                    </header>
-                    <p></p>
-                </section>
                 <section id="themes" className="fr-section">
                     <header className="heading">
                         <h4 className="title">Themes</h4>
@@ -61,9 +55,82 @@ const Alert = props => {
                             <div className="alert alert--dark">
                                 <div className="alert__body">This is an alert with dark theme!</div>
                             </div>
-
                         </PreviewDisplay>
+                        <PreviewHighlight lang="html">
+                            {`<div class="alert alert--primary mg-bottom">
+                                <div class="alert__body">This is an alert with primary theme!</div>
+                            </div>
+                            <div class="alert alert--secondary mg-bottom">
+                                <div class="alert__body">This is an alert with secondary theme!</div>
+                            </div>
+                            <div class="alert alert--success mg-bottom">
+                                <div class="alert__body">This is an alert with success theme!</div>
+                            </div>
+                            <div class="alert alert--warning mg-bottom">
+                                <div class="alert__body">This is an alert with warning theme!</div>
+                            </div>
+                            <div class="alert alert--danger mg-bottom">
+                                <div class="alert__body">This is an alert with danger theme!</div>
+                            </div>
+                            <div class="alert alert--light mg-bottom">
+                                <div class="alert__body">This is an alert with light theme!</div>
+                            </div>
+                            <div class="alert alert--dark">
+                                <div class="alert__body">This is an alert with dark theme!</div>
+                            </div>
+                            `}
+                        </PreviewHighlight>
                     </Preview>
+                </section>
+                <section id="" className="fr-section">
+                    <header className="heading">
+                        <h4 className="title">Extras</h4>
+                    </header>
+                    <p>Fugiat sit exercitation id aute dolore do officia. Aliqua non sint elit laborum labore occaecat ea Lorem duis velit sint cupidatat veniam dolor.</p>
+                    <Preview>
+                        <PreviewDisplay>
+                            <div className="alert alert--warning mg-bottom">
+                                <div className="alert__extra">
+                                    <i className="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <div className="alert__body">This is an alert with an icon!</div>
+                            </div>
+                            <div className="alert alert--success mg-bottom">
+                                <div className="alert__extra">
+                                    <i className="fas fa-check"></i>
+                                </div>
+                                <div className="alert__body">This is an alert with an icon!</div>
+                            </div>
+                            <div className="alert alert--primary">
+                                <div className="alert__extra">
+                                    <i className="fas fa-exclamation-circle"></i>
+                                </div>
+                                <div className="alert__body">This is an alert with an icon!</div>
+                            </div>
+                        </PreviewDisplay>
+                        <PreviewHighlight lang="html">
+                            {`<div class="alert alert--warning">
+                                <div class="alert__extra">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <div class="alert__body">This is an alert with an icon!</div>
+                            </div>
+                            <div class="alert alert--success">
+                                <div class="alert__extra">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="alert__body">This is an alert with an icon!</div>
+                            </div>
+                            <div class="alert alert--primary">
+                                <div class="alert__extra">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                </div>
+                                <div class="alert__body">This is an alert with an icon!</div>
+                            </div>
+                            `}
+                        </PreviewHighlight>
+                    </Preview>
+
                 </section>
 
                 {/* <section className="section mg-bottom-x-large">

@@ -25,8 +25,6 @@ class DocsMenu extends Component {
         // });
 
         const renderRoute = route => {
-            console.log(route);
-
             if (route.hasChildren) {
                 return route.hasChildren.map(subroute => {
                     return (
