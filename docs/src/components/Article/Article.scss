@@ -1,0 +1,6 @@
+@import 'src/scss/abstracts';
+@import '../../../../scss/components/article';
+
+.fr-article {
+  @extend .article;
+}

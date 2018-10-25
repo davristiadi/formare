@@ -1,13 +1,7 @@
 .fr-article {
     @extend .article;
     
-    .fr-heading {
-        @extend .heading;
+    .heading {
         margin-bottom: spacing(x-large);
-    }
-
-    .fr-section {
-        @extend .section;
-        margin-bottom: 3rem;
     }
 }

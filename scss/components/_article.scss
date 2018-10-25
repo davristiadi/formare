@@ -1,17 +1,11 @@
-.title {
-	font-weight: font-weight(bold);
-}
-
-.subtitle {
-	font-weight: font-weight(regular);
-}
-
 .article {
-	.heading {
+	position: relative;
+	
+	> .heading {
 		margin-bottom: spacing(x-small);
 	}
 	
-	p {
+	> p {
 		margin-bottom: spacing(large);
 	}
 }

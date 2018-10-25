@@ -27,7 +27,10 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "gh-pages": "^2.0.0"
+    "gh-pages": "^2.0.0",
+    "sass-extract": "^2.1.0",
+    "sass-extract-js": "^0.4.0",
+    "sass-extract-loader": "^1.1.0"
   },
   "browserslist": [
     ">0.2%",
