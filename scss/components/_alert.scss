@@ -30,13 +30,13 @@ $alert-color: theme-color-shade(warning, $alert-color-shade-level);
     }
 
     &__body,
-    > *:not(.alert__extra) {
+    > *:not(.alert__icon) {
         flex: 1;
         padding-left: $alert-spacing-x;
         padding-right: $alert-spacing-x;
     }
 
-    &__extra {
+    &__icon {
         &:first-child { padding-left: $spacing }
         &:last-child { padding-right: $spacing }    
     }

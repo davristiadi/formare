@@ -11,8 +11,6 @@ const PreviewDisplay = props => {
         ...attributes
     } = props;
 
-    console.log(props);
-
     attributes.className = classNames(
         `fr-preview__display`,
         simple ? `fr-preview__display--borderless` : null,

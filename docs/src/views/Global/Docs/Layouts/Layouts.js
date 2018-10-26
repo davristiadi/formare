@@ -17,11 +17,12 @@ const Layouts = props => {
 
 const Home = () => {
 	return (
-		<Article>
+		<article className="article">
 			<header className="heading">
-				<h1 className="title">Tes</h1>
+				<h2 className="title">Layouts</h2>
+				<h5 className="subtitle color-gray">Irure magna exercitation fugiat enim reprehenderit ex anim mollit cupidatat irure dolore cillum.</h5>
 			</header>
-		</Article>
+		</article>
 	);
 };
 

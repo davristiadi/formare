@@ -5,7 +5,7 @@ import PreviewDisplay from './PreviewDisplay';
 
 const Preview = props => {
     const {
-        tag: Tag,
+        tag: Tag = 'div',
         className,
         children,
         horizontal,
@@ -17,14 +17,14 @@ const Preview = props => {
 
     if(!simple) {
         childArray.push(<div className="fr-preview__tag">Preview</div>);
-    } else {
-        return childArray.map(child => {
+    } 
+    else {
+        childArray.map(child => {
             if(child.type === PreviewDisplay) {
-                return cloneElement(child, {
-                    simple
-                })
+                return child = cloneElement(child, { simple });
             }
-            else return child;
+            
+            return child;
         })
     }
     
@@ -35,10 +35,6 @@ const Preview = props => {
     );
     
     return <Tag {...attributes}>{childArray}</Tag>
-}
-
-Preview.defaultProps = {
-    tag: 'div'
 }
 
 Preview.propTypes = {

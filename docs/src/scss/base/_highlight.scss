@@ -11,8 +11,8 @@ $highlight-spacing: spacing(base);
 .highlight {
     border-radius: $highlight-border-radius;
     overflow: hidden;
-    
-    pre {
+
+    > pre {
         padding: $highlight-spacing;
     }
 }

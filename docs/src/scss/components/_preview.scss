@@ -19,7 +19,8 @@
 
     &__display {
         padding: spacing(large);
-        border: solid 1px gray(200);
+        border: solid 1px $light;
+        border-top-right-radius: $border-radius;
         overflow: hidden;
 
         &--borderless {
@@ -29,7 +30,10 @@
         }
     }
 
-    &__highlight {}
+    &__highlight {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
 
     &--horizontal {
         flex-direction: row;
