@@ -13,7 +13,7 @@ const Docs = props => {
 					<aside className="fr-aside">
 						<DocsMenu {...props} />
 					</aside>
-					<main className="layout pd-top-x-large pd-left-large">
+					<main className="layout pd-top-x-large pd-left-x-large">
 						<Switch>
 							{
 								routes.map(route => {

@@ -1,7 +1,7 @@
 $button-themes: $theme-colors;
 
 $button-font-weight: font-weight(medium) !default;
-$button-color: $dark !default;
+$button-text-color: $dark !default;
 $button-background-color: $white;
 
 $button-border-style: solid;
@@ -21,6 +21,9 @@ $button-active-border-color: primary-color(40);
 
 $button-disabled-opacity: 0.5 !default;
 
+$button-clear-text-color: primary-color(0) !default;
+$button-clear-hovered-text-color: primary-color(20) !default;
+
 $button-padding-y: spacing(small);
 $button-padding-x: spacing(large);
 $button-padding: $button-padding-y $button-padding-x;
@@ -28,9 +31,9 @@ $button-paddings: () !default;
 $button-paddings: map-merge((
 	x-small: ($button-padding-y * .5) ($button-padding-x * .5),
 	small: ($button-padding-y * .75) ($button-padding-x * .75),
-	base: ($button-padding-y * 1) ($button-padding-x * 1),
-	large: ($button-padding-y * 1.5) ($button-padding-x * 1.25),
-	x-large: ($button-padding-y * 2) ($button-padding-x * 2)
+	base: $button-padding,
+	large: ($button-padding-y * 1.25) ($button-padding-x * 1.25),
+	x-large: ($button-padding-y * 1.5) ($button-padding-x * 1.5)
 ), $button-paddings);
 
 .button {
@@ -43,7 +46,7 @@ $button-paddings: map-merge((
 	border-color: $button-border-color;
 	border-radius: $border-radius;
 	transition: $button-transition;
-	color: $button-color;
+	color: $button-text-color;
 	text-align: center;
 	white-space: nowrap;
 	vertical-align: middle;
@@ -57,8 +60,8 @@ $button-paddings: map-merge((
 		outline: none;
 	}
 	
-	&:focus:not(:disabled),
-	&--focused:not(:disabled) {
+	&:focus:not(:disabled):not(.button--clear),
+	&--focused:not(:disabled):not(.button--clear) {
 		color: $button-focused-color;
 		border-color: $button-focused-border-color;
 		box-shadow: 0 0 0.3em 0.2em rgba(tint($primary-color, 15%), 0.3);
@@ -92,7 +95,7 @@ $button-paddings: map-merge((
 				border-color: tint($color, 20%);
 			}
 			
-			&:focus:not(:disabled),
+			&:focus:not(:disabled):not(.button--clear),
 			&.button--focused:not(:disabled) {
 				color: color-yiq($color);
 				background-color: tint($color, 20%);
@@ -100,7 +103,7 @@ $button-paddings: map-merge((
 				box-shadow: 0 0 0.3em 0.2em rgba($color, 0.3);
 			}
 			
-			&:active:not(:disabled),
+			&:active:not(:disabled):not(.button--clear),
 			&.button--active:not(:disabled) {
 				color: color-yiq($color);
 				background-color: shade($color, 20%);
@@ -180,6 +183,17 @@ $button-paddings: map-merge((
 	}
 
 	//	Other modifiers
+	&--clear {
+		border: none;
+		transition: $button-transition;
+		color: $button-clear-text-color;
+
+		&:hover:not(:disabled) {
+			color: $button-clear-hovered-text-color;
+			text-decoration: underline;
+		}
+	}
+
 	&--pill {
 		border-radius: $border-radius-pill;
 	}
