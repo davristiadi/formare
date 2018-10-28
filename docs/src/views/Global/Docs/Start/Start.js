@@ -4,7 +4,7 @@ const Start = props => {
     return (
         <article id="getting-started" className="fr-article">
             <div className="fr-article-heading">
-                <h3 className="fr-article-title">Getting Started</h3>
+                <h2 className="fr-article-title">Getting Started</h2>
                 <h5 className="fr-article-subtitle">There are multiple ways you can start using <strong>Formare</strong> in your project.</h5>
             </div>
             <section className="fr-article-section">
