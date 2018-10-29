@@ -25,7 +25,9 @@
 		padding: 0;
 
 		.column,
-		[class*='column-'] {
+		.grid,
+		[class*='column-'],
+		[class*='grid-'] {
 			padding: 0;
 		}
 	}

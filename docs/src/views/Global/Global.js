@@ -1,13 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { GlobalHeader, GlobalContent } from '../Global';
+import './Global.scss';
 
 class Global extends Component {
     render() {
         return (
-            <div className="layout">
+            <Fragment>
                 <GlobalHeader />
                 <GlobalContent />
-            </div>
+            </Fragment>
         );
     }
 }

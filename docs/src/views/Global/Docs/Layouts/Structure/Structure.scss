@@ -1,0 +1,37 @@
+@import 'src/scss/abstracts';
+
+.fr-structure-example {
+    margin-bottom: spacing(x-large);
+    
+    .structure {
+        background-color: secondary-color(0);
+        
+        .header,
+        .content,
+        .footer,
+        .aside {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .header,
+        .footer {
+            background-color: secondary-color(-20);
+            color: color-yiq(secondary-color(-20));
+            height: 4em;
+        }
+
+        .content {
+            flex: 1 1 100%;
+            background-color: secondary-color(0);
+            color: color-yiq(secondary-color(0));
+            height: 8em;
+        }
+
+        .aside {
+            flex: 0 0 200px;
+            background-color: secondary-color(-10);
+        }
+    }
+}

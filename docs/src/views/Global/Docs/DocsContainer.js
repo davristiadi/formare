@@ -22,7 +22,7 @@ import {
 import { 
 	Layouts,
 	Grid,
-	Blocks
+	Structure
 } from './Layouts';
 
 class DocsContainer extends Component {
@@ -47,8 +47,8 @@ class DocsContainer extends Component {
 						},
 						{
 							path: '/docs/layouts/blocks',
-							title: 'Blocks',
-							component: Blocks
+							title: 'Structure',
+							component: Structure
 						}
 					]
 				},

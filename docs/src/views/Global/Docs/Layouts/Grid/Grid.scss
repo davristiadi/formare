@@ -1,17 +1,20 @@
 @import "~scss/abstracts";
 
 .fr-grids-example {
-    margin-bottom: spacing(base);
+    position: relative;
+    margin-top: spacing(large);
+    margin-bottom: spacing(large);
     
     .grid {
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 0 $grid-gap-width;
-        padding-top: spacing(small);
-        padding-bottom: spacing(small);
-        background-color: $light;
-        color: color-yiq($light);
+        padding-top: spacing(base);
+        padding-bottom: spacing(base);
+        font-weight: font-weight(semibold);
+        background-color: secondary-color(-20);
+        color: color-yiq(secondary-color(-20));
         border-radius: border-radius(base);
     }
 }

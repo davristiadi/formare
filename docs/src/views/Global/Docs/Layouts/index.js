@@ -1,4 +1,4 @@
 export { default as Layouts } from './LayoutsContainer';
 
 export * from './Grid';
-export * from './Blocks';
+export * from './Structure';

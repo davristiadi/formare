@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import Blocks from './Blocks';
+import Structure from './Structure';
 
-class BlocksContainer extends Component {
+class StructureContainer extends Component {
     render () {
         return (
-            <Blocks
+            <Structure
                 {...this.state}
                 {...this.props}
             />
@@ -12,4 +12,4 @@ class BlocksContainer extends Component {
     }
 }
 
-export default BlocksContainer
+export default StructureContainer;

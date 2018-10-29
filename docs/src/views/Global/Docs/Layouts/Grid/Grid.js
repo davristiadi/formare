@@ -18,18 +18,28 @@ const Grid = props => {
                     The grid system is one of the most essential element in any modern websites. It makes any website design look good
                     in any device resolutions.
                 </p>
+            </section>
+            <section id="usage" className="fr-acticle-section">
+                <div className="heading">
+                    <h4 className="title">Basic Usage</h4>
+                </div>
+                <p>Formare's grid system is very simple and easy to implement:</p>
+                <ul>
+                    <li><code>grids</code>: Acts as the wrapper class to the grid layout that contain <code>grid</code> elements (notice the plural declaration).</li>
+                    <li><code>grid</code>: Add as many as you'd like inside of the grid layout (notice the singular declaration).</li>
+                </ul>
                 <div className="fr-grids-example">
                     <div className="grids">
-                        <div className="grid">Grid 1</div>
-                        <div className="grid">Grid 2</div>
-                        <div className="grid">Grid 3</div>
+                        <div className="grid">First Grid</div>
+                        <div className="grid">Second Grid</div>
+                        <div className="grid">Third Grid</div>
                     </div>
                 </div>
                 <Highlight lang="html">
                     {`<div class="grids">
-                        <div class="grid">Grid 1</div>
-                        <div class="grid">Grid 2</div>
-                        <div class="grid">Grid 3</div>
+                        <div class="grid">First Grid</div>
+                        <div class="grid">Second Grid</div>
+                        <div class="grid">Third Grid</div>
                     </div>
                     `}
                 </Highlight>

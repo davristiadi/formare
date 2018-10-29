@@ -1,0 +1,26 @@
+@import 'src/scss/abstracts';
+@import '../../../../scss/layout/structure';
+
+.fr-header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1500;
+
+  &--fixed {
+      position: fixed;
+  }
+}
+
+.fr-content {
+  @extend .structure;
+  padding-top: 4em;
+}
+
+.fr-aside {
+  position: sticky;
+  height: calc(100vh - 4em);
+  top: 4em;
+  flex-basis: 300px;
+}

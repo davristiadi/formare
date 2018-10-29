@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { PropsRoute } from 'components/Utilities';
 import DocsMenu from './DocsMenu';
@@ -7,13 +7,13 @@ const Docs = props => {
 	const { routes } = props;
 	
 	return (
-		<div className="fr-docs">
+		<Fragment>
 			<div className="container">
-				<div className="layout layout--horizontal">
+				<div className="structure structure--horizontal">
 					<aside className="fr-aside">
 						<DocsMenu {...props} />
 					</aside>
-					<main className="layout pd-top-x-large pd-left-x-large">
+					<main className="structure pd-top-x-large pd-left-x-large pd-right-large">
 						<Switch>
 							{
 								routes.map(route => {
@@ -45,7 +45,7 @@ const Docs = props => {
 					</div>
 				</div> */}
 			</div>
-		</div>
+		</Fragment>
 	);
 }
 
