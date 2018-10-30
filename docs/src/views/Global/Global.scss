@@ -13,8 +13,7 @@
   }
 }
 
-.fr-content {
-  @extend .structure;
+.fr-main {
   padding-top: 4em;
 }
 
@@ -22,5 +21,15 @@
   position: sticky;
   height: calc(100vh - 4em);
   top: 4em;
-  flex-basis: 300px;
+  flex: 0 0 250px;
 }
+
+.fr-content {
+  @extend .structure;
+  padding-top: spacing(large);
+  padding-left: spacing(large);
+  padding-right: spacing(large);
+}
+
+// pd-top-x-large pd-left-x-large pd-right-large
+

@@ -23,6 +23,10 @@
         border-top-right-radius: $border-radius;
         overflow: hidden;
 
+        &--paddingless {
+            padding: 0;
+        }
+
         &--borderless {
             border: none;
             padding-left: 0;

@@ -12,7 +12,7 @@ class GlobalHeader extends Component {
                             	<Link to="/" className="nav__link">Formare</Link>
                             </h4>
                         </div>
-                        <div className="navbar__block flex jc-end">
+                        <div className="navbar__block navbar__block--end">
                             <nav className="nav">
                                 <ul className="nav__list">
                                     <li className="nav__item">

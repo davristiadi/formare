@@ -1,0 +1,14 @@
+@import 'src/scss/abstracts';
+
+.fr-navbar-example {
+  .navbar {
+    #logo {
+      font-weight: font-weight(bold);
+      background-color: gray(200);
+      padding: spacing(xx-small) spacing(base);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-radius: border-radius(base);
+    }
+  }
+}

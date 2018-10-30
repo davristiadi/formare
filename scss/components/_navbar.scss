@@ -1,6 +1,7 @@
 $navbar-transition: $transition !default;
-$navbar-background: gray(100) !default;
+$navbar-background: $white !default;
 $navbar-color: color-yiq($navbar-background);
+$navbar-hovered-color: $primary-color; 
 $navbar-height: 4em;
 $navbar-sizes: () !default;
 $navbar-sizes: map-merge((
@@ -18,21 +19,7 @@ $navbar-sizes: map-merge((
 	transition: $navbar-transition;
 	background: $navbar-background;
 
-	@each $theme, $color in $theme-colors {
-		&--#{$theme} {
-			background-color: $color;
-			color: color-yiq($color);
-		}
-	}
-	
-	@each $size, $value in $navbar-sizes {
-		&--#{$size} {
-			height: $value;
-			min-height: $value;
-		}
-	}
-
-	.navbar__container {
+	&__container {
 		@extend .container;
 		display: flex;
 		justify-content: space-between;
@@ -43,31 +30,80 @@ $navbar-sizes: map-merge((
 		}
 	}
 	
-	.navbar__block {
+	&__block {
 		position: relative;
 		display: flex;
 		flex: 1 1 auto;
 		align-items: center;
 		height: 100%;
-		
+
 		&--start { justify-content: flex-start; }
 		&--center { justify-content: center; }
 		&--end { justify-content: flex-end; }
 	}
-	
+
 	.nav {
 		display: flex;
-		flex-direction: column;
+		height: 100%;
 
-		.nav__item {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
+		.nav {
+			&__list {
+				display: flex;
+				flex-direction: row;
+				flex: 1;
+			}
+			
+			&__item {
+				display: flex;
+				
+				&:hover {
+					.nav__link {
+						color: $navbar-hovered-color;
+					}
+				}
+			}
+			
+			&__link {
+				display: flex;
+				flex: 1;
+				align-items: center;
+				padding-top: 0;
+				padding-bottom: 0;
+				color: $navbar-color;
+			}
+
 		}
 
-		.nav__link {
-			display: flex;
-			justify-content: center;
+	}
+
+	@each $theme, $color in $theme-colors {
+		&--#{$theme} {
+			background-color: $color;
+			color: color-yiq($color);
+
+			.nav {
+				.nav {
+					&__item {
+						&:hover {
+							.nav__link {
+								color: rgba(color-yiq($color), 1);		
+							}
+						}
+					}
+	
+					&__link {
+						transition: $transition;
+						color: rgba(color-yiq($color), 0.7);	
+					}
+				}
+			}
+		}
+	}
+	
+	@each $size, $value in $navbar-sizes {
+		&--#{$size} {
+			height: $value;
+			min-height: $value;
 		}
 	}
 }

@@ -6,7 +6,7 @@ import { Home, Docs } from '../Global'
 
 const GlobalContent = props => {
     return (
-        <main className="fr-content">
+        <main className="fr-main">
             <Switch>
                 <PropsRoute exact path="/" component={Home} {...props} />
                 <PropsRoute path="/docs" component={Docs} {...props} />

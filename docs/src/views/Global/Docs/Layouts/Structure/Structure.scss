@@ -1,6 +1,6 @@
 @import 'src/scss/abstracts';
 
-.fr-structure-example {
+.fr-structure-showcase {
     margin-bottom: spacing(x-large);
     
     .structure {
@@ -23,15 +23,56 @@
         }
 
         .content {
-            flex: 1 1 100%;
+            flex: 1;
             background-color: secondary-color(0);
             color: color-yiq(secondary-color(0));
-            height: 8em;
+            height: 12em;
         }
 
         .aside {
             flex: 0 0 200px;
             background-color: secondary-color(-10);
+            color: color-yiq(secondary-color(-10));
+        }
+    }
+}
+
+.fr-structure-example {
+    .structure {
+        .header {
+            .navbar {
+                
+                &__container {
+                    padding-left: spacing(x-large);
+                    padding-right: spacing(x-large);
+                }
+            }
+
+            #logo {
+                height: 30px;
+                padding: 0 spacing(base);
+                background-color: primary-color(-20);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: font-size(base);
+                font-weight: font-weight(bold);
+                border-radius: border-radius(base);
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+        }
+        
+        .content {
+            background-color: $lighter;
+            padding: spacing(x-large);
+
+            &__box {
+                min-height: 20em;
+                padding: spacing(base);
+                background-color: $white;
+                border-radius: border-radius(base);
+            }
         }
     }
 }

@@ -1,19 +1,57 @@
-import React, { PropTypes } from 'react'
+import React, { PropTypes } from "react";
+import { Preview, PreviewDisplay, PreviewHighlight } from "components/Preview";
 
 const Nav = props => {
-    return (
-        <div className="fr-nav">
-            <article className="fr-article">
-                <div className="fr-heading">
-                    <h2 className="title">Navigation</h2>
-                </div>
-                <div id="overview" className="fr-section">
-                    <div className="heading">
-                        
-                    </div>
-                </div>
+  return (
+    <div className="fr-nav">
+      <article className="fr-article">
+        <div className="fr-article-heading">
+          <h2 className="fr-article-title">Navigation</h2>
+          <h5 className="fr-article-subtitle">
+            Sint elit sint non et quis sit sint veniam est pariatur.
+          </h5>
+        </div>
+        <div id="overview" className="fr-article-section">
+          <div className="heading">
+            <h4 className="title">Overview</h4>
+          </div>
+          <p>Eu do qui officia ut ea duis cillum ullamco cillum ut.</p>
+          <Preview>
+            <PreviewDisplay>
+              <nav className="nav">
+                <ul className="nav__list">
+                  <li className="nav__item">
+                    <a className="nav__link">Home</a>
+                  </li>
+                  <li className="nav__item">
+                    <a className="nav__link">About</a>
+                  </li>
+                  <li className="nav__item">
+                    <a className="nav__link">Contact</a>
+                  </li>
+                </ul>
+              </nav>
+            </PreviewDisplay>
+            <PreviewHighlight lang="html">
+              {`<nav className="nav">
+                <ul className="nav__list">
+                  <li className="nav__item">
+                    <a className="nav__link">Home</a>
+                  </li>
+                  <li className="nav__item">
+                    <a className="nav__link">About</a>
+                  </li>
+                  <li className="nav__item">
+                    <a className="nav__link">Contact</a>
+                  </li>
+                </ul>
+              </nav>
+              `}
+            </PreviewHighlight>
+          </Preview>
+        </div>
 
-                {/* <section className="section mg-bottom-x-large">
+        {/* <section className="section mg-bottom-x-large">
                     <div className="heading">
                         <h4 className="title">Default Nav</h4>
                         <h6 className="subtitle color-gray">Dolor mollit officia amet do minim ut adipisicing.</h6>
@@ -120,13 +158,11 @@ const Nav = props => {
                         </div>
                     </div>
                 </section> */}
-            </article>
-        </div>
-    )
-}
+      </article>
+    </div>
+  );
+};
 
-Nav.propTypes = {
-    
-}
+Nav.propTypes = {};
 
-export default Nav
+export default Nav;

@@ -63,14 +63,14 @@ class DocsContainer extends Component {
 							component: Alert,
 						},
 						{
-							path: '/docs/components/nav',
-							title: 'Nav',
-							component: Nav
-						},
-						{
 							path: '/docs/components/navbar',
 							title: 'Navbar',
 							component: Navbar
+						},
+						{
+							path: '/docs/components/nav',
+							title: 'Navigation',
+							component: Nav
 						},
 						{
 							path: '/docs/components/button',
