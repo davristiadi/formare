@@ -19,7 +19,7 @@ const Grid = props => {
                     in any device resolutions.
                 </p>
             </section>
-            <section id="usage" className="fr-acticle-section">
+            <section id="usage" className="fr-article-section">
                 <div className="heading">
                     <h4 className="title">Basic Usage</h4>
                 </div>
@@ -37,6 +37,7 @@ const Grid = props => {
                 </div>
                 <Highlight lang="html">
                     {`<div class="grids">
+                        <p>Velit officia aute et excepteur id cillum ipsum duis reprehenderit qui. Aute officia sint et labore ut consectetur quis in dolore proident duis nulla commodo reprehenderit. Est sint enim elit enim eu laboris ullamco eiusmod officia magna eu. Consequat veniam officia minim in. Dolor qui duis commodo irure eiusmod dolore ex.</p>
                         <div class="grid">First Grid</div>
                         <div class="grid">Second Grid</div>
                         <div class="grid">Third Grid</div>

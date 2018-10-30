@@ -1,6 +1,6 @@
 {
 	"name": "formare",
-	"version": "0.4.0-beta.13",
+	"version": "0.4.0-beta.14",
 	"author": "David Kurnia Kristiadi <davidkurniakristiadi@gmail.com>",
 	"description": "Formare is a hassle-free CSS framework that helps in building web-interfaces easily.",
 	"main": "scss/formare.scss",
@@ -16,6 +16,7 @@
 		"build-autoprefix": "postcss --use autoprefixer --output ./css/formare.css ./css/formare.css",
 		"publish:beta": "npm publish --tag beta",
 		"publish:next": "npm publish --tag next",
+		"start:docs": "cd docs && npm start",
 		"start": "npm run build"
 	},
 	"license": "ISC",

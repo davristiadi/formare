@@ -24,8 +24,8 @@ $button-disabled-opacity: 0.5 !default;
 $button-clear-text-color: primary-color(0) !default;
 $button-clear-hovered-text-color: primary-color(20) !default;
 
-$button-padding-y: spacing(small);
-$button-padding-x: spacing(large);
+$button-padding-y: 0.7em;
+$button-padding-x: 1.2em;
 $button-padding: $button-padding-y $button-padding-x;
 $button-paddings: () !default;
 $button-paddings: map-merge((
