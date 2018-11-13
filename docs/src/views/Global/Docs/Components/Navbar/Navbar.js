@@ -15,25 +15,6 @@ const Navbar = props => {
           <h4 className="title">Overview</h4>
         </div>
         <p>Voluptate Lorem fugiat in laborum ex occaecat sit. Qui aliquip aute sint proident.</p>
-        <section>
-          <div className="fr-navbar-example">
-            <div className="navbar navbar--primary">
-              <div className="navbar__block">
-                <div id="logo">SWARA</div>
-              </div>
-              <div className="navbar__block">
-                <nav className="nav">
-                  <ul className="nav__list">
-                    <li className="nav__item">
-                      Tes
-                      {/* <a className="nav__link">Tes</a> */}
-                    </li>
-                  </ul>    
-                </nav>
-              </div>  
-            </div>
-          </div>
-        </section>
         <Preview>
           <PreviewDisplay>
             <div className="fr-navbar-example">

@@ -7,17 +7,20 @@
 	}
 
 	&__item {
+		display: flex;
+		align-items: center;
 		transition: $transition;
 		font-weight: font-weight(medium);
+		padding-left: spacing(large);
+		padding-right: spacing(large);
 	}
 
 	&__link {
 		display: block;
 		transition: $transition;
-		padding-top: spacing(base);
-		padding-bottom: spacing(base);
-		padding-left: spacing(large);
-		padding-right: spacing(large);
+		padding: spacing(base) spacing(large);
+		margin-left: spacing(large) / -1;
+		margin-right: spacing(large) / -1;
 
 		&:hover {
 			cursor: pointer;
