@@ -93,6 +93,16 @@ $input-set-border-radius: border-radius(base);
 
 .select {
 	position: relative;
+
+	&--expanded {
+		display: flex;
+		flex-grow: 1;
+		
+		> select { 
+			display: flex;
+			flex-grow: 1;
+		}
+	}
 	
 	> select {
 		-webkit-appearance: none;
@@ -113,6 +123,7 @@ $input-set-border-radius: border-radius(base);
 		transform: translateY(-50%);
 		line-height: 0;
 		color: $gray;
+		z-index: 5;
 	}
 
 	
@@ -204,7 +215,7 @@ $input-set-border-radius: border-radius(base);
 		transition: $input-transition;
 
 		> .icon {
-			color: $light;
+			color: $gray;
 		}
 
 		&:first-child {

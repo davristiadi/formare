@@ -1,137 +1,158 @@
-import React, { PropTypes } from 'react'
-import { Preview, PreviewDisplay, PreviewHighlight } from 'components/Preview';
+import React, { PropTypes } from "react";
+import { Preview, PreviewDisplay, PreviewHighlight } from "components/Preview";
 
 const General = props => {
-    return (
-        <article className="fr-article article">
-            <div className="fr-heading heading">
-                <h2 className="title">Form</h2>
-                <h5 className="subtitle color-gray">Voluptate irure ex esse aliquip laborum voluptate est excepteur mollit pariatur</h5>
-            </div>
-            <section className="fr-section">
-                <div className="heading">
-                    <h4 className="title">Overview</h4>
+  return (
+    <article className="fr-article">
+      <div className="fr-article-heading">
+        <h2 className="title">Form</h2>
+        <h5 className="subtitle color-gray">
+          Voluptate irure ex esse aliquip laborum voluptate est excepteur mollit
+          pariatur
+        </h5>
+      </div>
+
+      <section id="overview" className="fr-article-section">
+        <div className="heading">
+          <h4 className="title">Overview</h4>
+        </div>
+        <p>
+          Sunt minim eiusmod exercitation laborum mollit commodo quis pariatur
+          ex ut non ullamco sint ad. Minim velit fugiat aliqua reprehenderit
+          officia aute magna consequat consectetur eu esse pariatur eu.
+        </p>
+        <Preview>
+          <PreviewDisplay>
+            <form className="form">
+              <div className="form__field">
+                <label className="form__label">Name</label>
+                <div className="form__input">
+                  <input
+                    type="text"
+                    className="input"
+                    placeholder="e.g John Doe"
+                  />
                 </div>
-                <p>Sunt minim eiusmod exercitation laborum mollit commodo quis pariatur ex ut non ullamco sint ad. Minim velit fugiat aliqua reprehenderit officia aute magna consequat consectetur eu esse pariatur eu.</p>
-                <Preview>
-                    <PreviewDisplay>
-                        <form className="form">
-                            <div className="form__field">
-                                <label className="form__label">Name</label>
-                                <div className="form__input">
-                                    <input type="text" className="input" placeholder="e.g John Doe" />
-                                </div>
-                            </div>
-                            <div className="form__field">
-                                <label className="form__label">Email</label>
-                                <div className="form__input">
-                                    <div className="input-set">
-                                        <div className="input-set__icon">
-                                            <i className="icon fas fa-envelope"></i>
-                                        </div>
-                                        <input type="text" className="input" placeholder="e.g johndoe@email.com" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="form__field">
-                                <label className="form__label">Phone</label>
-                                <div className="form__input">
-                                    <div className="input-set">
-                                        <div className="input-set__extra">
-                                            <i className="icon fas fa-phone" />
-                                        </div>
-                                        <input type="text" className="input" placeholder="e.g +62 812 345 678" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="form__field">
-                                <label className="form__label">Address</label>
-                                <div className="form__input">
-                                    <textarea className="textarea" rows="3" placeholder="e.g Bryar Pitts, 5543 Aliquet St. Fort Dodge GA 20783, (717) 450-4729"></textarea>
-                                </div>
-                            </div>
-                            <div className="form__field">
-                                <label className="form__label">Website</label>
-                                <div className="form__input">
-                                    <div className="select">
-                                        <select>
-                                            <option>https://</option>
-                                            <option>http://</option>
-                                        </select>
-                                    </div>
-                                    <input type="text" className="input" placeholder="e.g formare.com" />
-                                    <div className="select">
-                                        <select>
-                                            <option>.com</option>
-                                            <option>.co.id</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </PreviewDisplay>
-                    <PreviewHighlight lang="html">
-                        {`<form class="form">
-                            <div class="form__field">
-                                <label class="form__label">Name</label>
-                                <input type="text" class="input" placeholder="e.g John Doe" />
-                            </div>
-                            <div class="form__field">
-                                <label class="form__label">Email</label>
-                                <div class="input-set">
-                                    <div class="input-set__icon">
-                                        <i class="icon fas fa-envelope"></i>
-                                    </div>
-                                    <input type="text" class="input" placeholder="e.g johndoe@email.com" />
-                                </div>
-                            </div>
-                            <div class="form__field">
-                                <label class="form__label">Phone</label>
-                                <div class="form__input">
-                                    <div class="input-set">
-                                        <div class="input-set__extra">
-                                            <i class="icon fas fa-phone" />
-                                        </div>
-                                        <input type="text" class="input" placeholder="e.g +62 812 345 678" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form__field">
-                                <label class="form__label">Address</label>
-                                <div class="form__input">
-                                    <textarea class="textarea" rows="3" placeholder="e.g Bryar Pitts, 5543 Aliquet St. Fort Dodge GA 20783, (717) 450-4729"></textarea>
-                                </div>
-                            </div>
-                            <div class="form__field">
-                                <label class="form__label">Website</label>
-                                <div class="form__input">
-                                    <div class="select">
-                                        <select>
-                                            <option>https://</option>
-                                            <option>http://</option>
-                                        </select>
-                                    </div>
-                                    <input type="text" class="input" placeholder="e.g formare.com" />
-                                    <div class="select">
-                                        <select>
-                                            <option>.com</option>
-                                            <option>.co.id</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                        `}
-                    </PreviewHighlight>
-                </Preview>
-            </section>
-            <br />
-        </article>
-    )
-}
+              </div>
+              <div className="form__field">
+                <label className="form__label">Email</label>
+                <div className="form__input">
+                  <input
+                    type="text"
+                    className="input"
+                    placeholder="e.g johndoe@email.com"
+                  />
+                </div>
+              </div>
+              <div className="form__field">
+                <label className="form__label">Password</label>
+                <div className="form__input">
+                  <input 
+                    type="text" 
+                    className="input" 
+                    placeholder="Insert your password here"
+                  />
+                </div>
+                <div className="fs-small color-gray mg-top-xx-small">Password should be at least 8 characters or more.</div>
+              </div>
+            </form>
+          </PreviewDisplay>
+          <PreviewHighlight lang="html">
+            {`<form className="form">
+              <div className="form__field">
+                <label className="form__label">Name</label>
+                <div className="form__input">
+                  <input
+                    type="text"
+                    className="input"
+                    placeholder="e.g John Doe"
+                  />
+                </div>
+              </div>
+              <div className="form__field">
+                <label className="form__label">Email</label>
+                <div className="form__input">
+                  <input
+                    type="text"
+                    className="input"
+                    placeholder="e.g johndoe@email.com"
+                  />
+                </div>
+              </div>
+              <div className="form__field">
+                <label className="form__label">Password</label>
+                <div className="form__input">
+                  <input 
+                    type="text" 
+                    className="input" 
+                    placeholder="Insert your password here"
+                  />
+                </div>
+                <div className="fs-small color-gray mg-top-xx-small">Password should be at least 8 characters or more.</div>
+              </div>
+            </form>
+            `}
+          </PreviewHighlight>
+        </Preview>
+      </section>
+      
+      <section className="fr-article-section">
+        <div className='heading'>
+          <h4 className="title">Form Input</h4>
+        </div>
+        <p>Occaecat ut magna tempor consequat aute proident dolor occaecat.</p>
+        <Preview>
+          <PreviewDisplay>
+            <form className="form">
+              <div className="grids">
+                <div className="grid grid-6">
+                  <div className="form__field">
+                    <label className="form__label">Search</label>
+                    <div className="form__control">
+                      <input type="text" placeholder="Insert keyword" className="input" />
+                      <button className="button button--primary">Search Now</button>
+                    </div>
+                  </div>
+                </div>
+                <div className="grid grid-6">
+                  <div className="form__field">
+                    <label className="form__label">Select</label>
+                    <div className="form__control">
+                      <div className="select select--expanded">
+                        <select>
+                          <option>Yo</option>
+                        </select>
+                      </div>
+                      <button className="button button--raised">Submit</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </PreviewDisplay>
+          <PreviewHighlight lang="html">
+            {`<form className="form">
+              <div className="form__field">
+                <label className="form__label">Search</label>
+                <div className="form__input">
+                  <div className="input-set">
+                    <div className="input-set__icon">
+                      <i className="icon fas fa-icon fa-search"></i>
+                    </div>
+                    <input type="text" placeholder="Insert keyword" className="input" />
+                  </div>
+                  <button className="button button--primary">Search Now</button>
+                </div>
+              </div>
+            </form>
+            `}
+          </PreviewHighlight>
+        </Preview>
+      </section>
+    </article>
+  );
+};
 
-General.propTypes = {
-    
-}
+General.propTypes = {};
 
-export default General
+export default General;

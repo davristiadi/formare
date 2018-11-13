@@ -15,6 +15,25 @@ const Navbar = props => {
           <h4 className="title">Overview</h4>
         </div>
         <p>Voluptate Lorem fugiat in laborum ex occaecat sit. Qui aliquip aute sint proident.</p>
+        <section>
+          <div className="fr-navbar-example">
+            <div className="navbar navbar--primary">
+              <div className="navbar__block">
+                <div id="logo">SWARA</div>
+              </div>
+              <div className="navbar__block">
+                <nav className="nav">
+                  <ul className="nav__list">
+                    <li className="nav__item">
+                      Tes
+                      {/* <a className="nav__link">Tes</a> */}
+                    </li>
+                  </ul>    
+                </nav>
+              </div>  
+            </div>
+          </div>
+        </section>
         <Preview>
           <PreviewDisplay>
             <div className="fr-navbar-example">
@@ -71,9 +90,8 @@ const Navbar = props => {
         </div>
         <p>
           <span>
-            Customizing your navbar's color is simple and easy to implement. 
-            Just append <code>{`navbar--#{theme}`}</code> in your navbar class. Below is the list of colors
-            we've provided out-of-the-box:
+            Like other components, navbar can also be customizable with our out-of-the-box theme set. 
+            Append the <code>{`navbar--#{theme}`}</code> alongside the <code>{`navbar`}</code> class in order to change its theme.
           </span>
         </p>
         <ul>
