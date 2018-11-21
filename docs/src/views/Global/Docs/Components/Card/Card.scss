@@ -1,0 +1,10 @@
+@import "src/scss/abstracts";
+
+.fr-card-demo {
+  padding-top: spacing(base);
+  padding-bottom: spacing(base);
+  
+  .card {
+    max-width: 400px;
+  }
+}

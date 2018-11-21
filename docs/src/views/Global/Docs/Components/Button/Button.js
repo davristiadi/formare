@@ -28,9 +28,10 @@ const Button = props => {
           <button className="button button--clear">Clear Button</button>
         </div>
         <Highlight lang="html">
-          {`<button className="button mg-right">Default Button</button>
-                    <button className="button button--primary">Primary Button</button>
-                    `}
+          {`<button class="button mg-right">Default Button</button>
+            <button class="button button--primary">Primary Button</button>
+            <button class="button button--clear">Clear Button</button>
+          `}
         </Highlight>
       </section>
       <section id="themes" className="fr-article-section">
@@ -45,20 +46,11 @@ const Button = props => {
         <Preview>
           <PreviewDisplay>
             <div className="mg-bottom">
-              <button className="button mg-right">Default</button>
-              <button className="button button--primary mg-right">
-                Primary
-              </button>
-              <button className="button button--secondary mg-right">
-                Secondary
-              </button>
-              <button className="button button--success mg-right">
-                Success
-              </button>
+              <button className="button button--primary mg-right">Primary</button>
+              <button className="button button--secondary mg-right">Secondary</button>
+              <button className="button button--success mg-right">Success</button>
               <button className="button button--danger mg-right">Danger</button>
-              <button className="button button--warning mg-right">
-                Warning
-              </button>
+              <button className="button button--warning mg-right">Warning</button>
             </div>
             <div>
               <button className="button button--dark mg-right">Dark</button>
@@ -67,32 +59,46 @@ const Button = props => {
           </PreviewDisplay>
           <PreviewHighlight lang="html">
             {`<button class="button">Default</button>
-                        <button class="button button--primary">Primary</button>
-                        <button class="button button--secondary">Secondary</button>
-                        <button class="button button--success">Success</button>
-                        <button class="button button--danger">Danger</button>
-                        <button class="button button--warning">Warning</button>
-                        <button class="button button--dark">Dark</button>
-                        <button class="button button--light">Light</button>
-                        <button class="button button--dark mg-right">Dark</button>
-                        <button class="button button--light">Light</button>
-                        `}
+              <button class="button button--primary">Primary</button>
+              <button class="button button--secondary">Secondary</button>
+              <button class="button button--success">Success</button>
+              <button class="button button--danger">Danger</button>
+              <button class="button button--warning">Warning</button>
+              <button class="button button--dark">Dark</button>
+              <button class="button button--light">Light</button>
+              `}
           </PreviewHighlight>
         </Preview>
       </section>
 
-      <div className="mg-bottom-x-large">
+      <section id="pill" className="fr-article-section">
+        <div className="heading">
+          <h5 className="title">Rounded</h5>
+        </div>
+        <p>Prepend <code>{`.button-pill`}</code> modifier class to transform your button component to a pill-like shape.</p>
+        <Preview>
+          <PreviewDisplay>
+            <div>
+              <button className="button button--pill mg-right">Rounded Button</button>
+              <button className="button button--pill button--primary mg-right">Primary Button</button>
+              <button className="button button--pill button--secondary mg-right">Rounded Button</button>
+              <button className="button button--pill button--raised button--primary mg-right">Raised Button </button>
+            </div>
+          </PreviewDisplay>
+          <PreviewHighlight lang="html">
+            {`<button class="button button--pill">Rounded Button</button>`}
+          </PreviewHighlight>
+        </Preview>
+      </section>
+
+      <section id="raised" className="fr-article-section">
         <div className="heading">
           <h5 className="title">Raised</h5>
-          <h6 className="subtitle color-gray">
-            Id dolore aute cillum velit laboris irure laborum elit irure
-            occaecat magna minim.
-          </h6>
         </div>
+        <p>Aliquip et sunt occaecat nisi commodo velit quis culpa anim.</p>
         <Preview>
           <PreviewDisplay>
             <div className="mg-bottom">
-              <button className="button button--raised mg-right">Button</button>
               <button className="button button--primary button--raised mg-right">
                 Primary
               </button>
@@ -130,28 +136,7 @@ const Button = props => {
             `}
           </PreviewHighlight>
         </Preview>
-      </div>
-
-      <div className="mg-bottom-x-large">
-        <div className="heading">
-          <h5 className="title">Rounded</h5>
-          <h6 className="subtitle color-gray">
-            Need a button with a circular sides (similar to that of a pill
-            shape-wise)? Use <code>{`.button--pill`}</code> modifier class for
-            that!
-          </h6>
-        </div>
-        <Preview>
-          <PreviewDisplay>
-            <button className="button button--pill mg-right">
-              Rounded Button
-            </button>
-          </PreviewDisplay>
-          <PreviewHighlight lang="html">
-            {`<button class="button button--pill">Rounded Button</button>`}
-          </PreviewHighlight>
-        </Preview>
-      </div>
+      </section>  
 
       <div>
         <div className="heading">

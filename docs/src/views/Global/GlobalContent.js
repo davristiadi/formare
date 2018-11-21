@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { BrowserRouter, Switch } from 'react-router-dom'
 import { PropsRoute } from '../../components/Utilities'
-import { Home, Docs } from '../Global'
+import { Home, Docs, GettingStarted } from '../Global'
 
 const GlobalContent = props => {
     return (
@@ -10,6 +10,7 @@ const GlobalContent = props => {
             <Switch>
                 <PropsRoute exact path="/" component={Home} {...props} />
                 <PropsRoute path="/docs" component={Docs} {...props} />
+                <PropsRoute path="/getting-started" component={GettingStarted} {...props} />
             </Switch>
         </main>
     )

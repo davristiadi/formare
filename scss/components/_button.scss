@@ -24,8 +24,8 @@ $button-disabled-opacity: 0.5 !default;
 $button-clear-text-color: primary-color(0) !default;
 $button-clear-hovered-text-color: primary-color(20) !default;
 
-$button-padding-y: 0.7em;
-$button-padding-x: 1.2em;
+$button-padding-y: 0.5em;
+$button-padding-x: 1em;
 $button-padding: $button-padding-y $button-padding-x;
 $button-paddings: () !default;
 $button-paddings: map-merge((
@@ -112,15 +112,13 @@ $button-paddings: map-merge((
 
 			&.button--raised {
 				&:not(:disabled) {
-					border-bottom-width: 2px;
+					border-bottom-width: 4px;
 					border-bottom-color: shade($color, 10%);
 				}
 				
 				&:hover:not(:disabled),
 				&.button--hovered:not(:disabled) {
-					border-bottom-width: 4px;
 					border-bottom-color: $color;
-					margin-top: -2px;
 				}
 
 				&:focus:not(:disabled),
@@ -129,7 +127,7 @@ $button-paddings: map-merge((
 					border-bottom-width: 4px;
 					border-bottom-color: shade($color, 10%);
 					background-color: tint($color, 10%);
-					margin-top: -4px;
+					margin-top: 0px;
 					outline: none;
 				}
 
@@ -138,7 +136,7 @@ $button-paddings: map-merge((
 					border-bottom-width: 1px;
 					border-bottom-color: shade($color, 20%);
 					background-color: shade($color, 20%);
-					margin-top: 0;
+					margin-top: 3px;
 					outline: none;
 				}
 

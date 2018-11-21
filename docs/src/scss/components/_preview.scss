@@ -1,51 +1,53 @@
 .fr-preview {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 3em;
 
-    &__tag {
-        position: absolute;
-        top: 0;
-        transform: translateY(-100%);
-        font-size: font-size(x-small);
-        background-color: theme-color(secondary);
-        color: color-yiq(theme-color(secondary));
-        border: solid 1px theme-color(secondary);
-        padding: .15em .5em;
-        border-top-left-radius: border-radius(base);
-        border-top-right-radius: border-radius(base);
+  &__tag {
+    position: absolute;
+    top: 0;
+    transform: translateY(-100%);
+    font-size: font-size(x-small);
+    background-color: theme-color(secondary);
+    color: color-yiq(theme-color(secondary));
+    border: solid 1px theme-color(secondary);
+    padding: 0.15em 0.5em;
+    border-top-left-radius: border-radius(base);
+    border-top-right-radius: border-radius(base);
+  }
+
+  &__display {
+    padding: spacing(large);
+    border: solid 1px $light;
+    border-top-right-radius: $border-radius;
+    overflow: hidden;
+
+    &--paddingless {
+      padding: 0;
     }
 
-    &__display {
-        padding: spacing(large);
-        border: solid 1px $light;
-        border-top-right-radius: $border-radius;
-        overflow: hidden;
-
-        &--paddingless {
-            padding: 0;
-        }
-
-        &--borderless {
-            border: none;
-            padding-left: 0;
-            padding-right: 0;
-        }
+    &--borderless {
+      border: none;
+      padding-left: 0;
+      padding-right: 0;
     }
+  }
 
-    &__highlight {
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
+  &__highlight {
+    > pre {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
     }
+  }
 
-    &--horizontal {
-        flex-direction: row;
+  &--horizontal {
+    flex-direction: row;
 
-        .fr-preview__code {
-            > pre {
-                height: 100%;
-            }
-        }
+    .fr-preview__code {
+      > pre {
+        height: 100%;
+      }
     }
+  }
 }

@@ -8,7 +8,9 @@ const Navbar = props => {
     <article id="navbar-page" className="fr-article">
       <div className="fr-article-heading">
         <h2 className="fr-article-title">Navigation Bar</h2>
-        <h5 className="fr-article-subtitle">Sint ex nisi in adipisicing esse esse do ad deserunt labore consectetur cupidatat reprehenderit.</h5>
+        <h5 className="fr-article-subtitle">
+          Navbar is one of the most essential element in a website as it usually includes the website's branding and main navigation links.
+        </h5>
       </div>
       <section id="overview" className="fr-article-section">
         <div className="heading">
@@ -22,7 +24,7 @@ const Navbar = props => {
                 <div className="navbar__block">
                   <span id="logo">Logo</span>
                 </div>
-                <div className="navbar__block">
+                <div className="navbar__block navbar__block--expanded navbar__block--start">
                   <nav className="nav">
                     <ul className="nav__list">
                       <li className="nav__item">
@@ -33,6 +35,15 @@ const Navbar = props => {
                       </li>
                       <li className="nav__item">
                         <a className="nav__link">Contact Us</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                <div className="navbar__block">
+                  <nav className="nav">
+                    <ul className="nav__list">
+                      <li className="nav__item">
+                        <button className="button button--primary">Sign up</button>
                       </li>
                     </ul>
                   </nav>

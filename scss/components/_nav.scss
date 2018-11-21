@@ -11,16 +11,16 @@
 		align-items: center;
 		transition: $transition;
 		font-weight: font-weight(medium);
-		padding-left: spacing(large);
-		padding-right: spacing(large);
+		padding-left: spacing(base);
+		padding-right: spacing(base);
 	}
 
 	&__link {
 		display: block;
 		transition: $transition;
-		padding: spacing(base) spacing(large);
-		margin-left: spacing(large) / -1;
-		margin-right: spacing(large) / -1;
+		padding: spacing(base);
+		margin-left: spacing(base) / -1;
+		margin-right: spacing(base) / -1;
 
 		&:hover {
 			cursor: pointer;

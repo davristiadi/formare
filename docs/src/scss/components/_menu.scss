@@ -1,55 +1,45 @@
 .fr-menu {
-    padding-top: 1em;
-    padding-right: spacing(base);
-    border-right: solid 1px gray(100);
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1em;
+  padding-right: spacing(base);
+  height: 100%;
+  flex: 1;
 
-    .fr-menu__list {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
+  .fr-menu__label {
+    font-weight: font-weight(bold);
+    padding: spacing(small);
+    padding-left: spacing(base);
+  }
+  
+  .fr-menu__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .fr-menu__item {
+    > a {
+      display: block;
+      padding: spacing(small);
+      padding-left: spacing(base);
+      transition: $transition;
+      color: $gray;
+
+      &:hover {
+        color: theme-color(primary);
+      }
     }
 
-    .fr-menu__item {
+    &--active {
+      &:not(.fr-menu__item--parent) {
         > a {
-            display: block;
-            padding: spacing(x-small);
-            padding-left: spacing(base);
-            transition: $transition;
-
-            &:hover {
-                color: theme-color(primary);
-            }
+          color: primary-color();
+          font-weight: font-weight(semibold);
+          background-color: primary-color(-90);
+          border-radius: border-radius(base);
         }
-
-        &:not(.fr-menu__item--parent) {        
-            > a {
-                color: $gray;
-                font-size: font-size(small);
-
-                &:hover {
-                    color: theme-color(primary);
-                }
-            }
-        }
-
-        &--active {
-            &:not(.fr-menu__item--parent) {
-                > a {
-                    color: primary-color();
-                    font-weight: font-weight(semibold);
-                    background-color: primary-color(-90);
-                    border-radius: border-radius(base);
-                }
-            }
-        }
-        
-        &--parent {
-            font-weight: font-weight(bold);
-        }
-
-        &:first-child {
-            padding-top: spacing(x-small);
-        }
+      }
     }
+  }
 }

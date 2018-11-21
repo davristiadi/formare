@@ -27,28 +27,28 @@ $navbar-heights: map-merge((
 		align-items: center;
 		height: 100%;
 
-		&:not(:first-child) {
-			padding-left: spacing(base);
+		&--expanded {
+			flex-grow: 1;
+		}
+		
+		&:not(:first-child):not(:only-child) {
+			padding-left: spacing(small);
 		}
 
-		&:not(:last-child) {
-			padding-right: spacing(base);
+		&:not(:last-child):not(:only-child) {
+			padding-right: spacing(small);
 		}
 		
 		&--start { 
-			justify-content: flex-start; 
+			justify-content: flex-start;
 		}
-		
+
 		&--center {
 			justify-content: center;
 		}
 
 		&--end {
 			justify-content: flex-end;
-		}
-
-		&--expanded {
-			flex-grow: 1;
 		}
 	}
 

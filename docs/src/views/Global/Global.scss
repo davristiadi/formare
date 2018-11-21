@@ -9,32 +9,23 @@
 }
 
 .fr-header {
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1500;
+  
+  #master-nav {
+    display: none;
+  }
 
-  &--fixed {
-      position: fixed;
+  @include media(md) {
+    #master-nav {
+      display: flex;
+    }
   }
 }
 
 .fr-main {
-  padding-top: 4em;
+  padding-top: 6em;
 }
-
-.fr-aside {
-  position: sticky;
-  height: calc(100vh - 4em);
-  top: 4em;
-  flex: 0 0 250px;
-}
-
-.fr-content {
-  @extend .structure;
-  padding-top: spacing(large);
-  padding-left: spacing(x-large);
-  padding-right: spacing(large);
-}
-
