@@ -1,14 +1,14 @@
 {
-  "main.css": "/formare/static/css/main.05fe5976.chunk.css",
-  "main.js": "/formare/static/js/main.2c7c314f.chunk.js",
-  "main.js.map": "/formare/static/js/main.2c7c314f.chunk.js.map",
-  "static/js/1.adfe8cc6.chunk.js": "/formare/static/js/1.adfe8cc6.chunk.js",
-  "static/js/1.adfe8cc6.chunk.js.map": "/formare/static/js/1.adfe8cc6.chunk.js.map",
+  "main.css": "/formare/static/css/main.c587bae2.chunk.css",
+  "main.js": "/formare/static/js/main.f49c5984.chunk.js",
+  "main.js.map": "/formare/static/js/main.f49c5984.chunk.js.map",
+  "static/js/1.8e583c5b.chunk.js": "/formare/static/js/1.8e583c5b.chunk.js",
+  "static/js/1.8e583c5b.chunk.js.map": "/formare/static/js/1.8e583c5b.chunk.js.map",
   "runtime~main.js": "/formare/static/js/runtime~main.271a316d.js",
   "runtime~main.js.map": "/formare/static/js/runtime~main.271a316d.js.map",
   "static/media/dummy-photo.jpeg": "/formare/static/media/dummy-photo.8f621bb7.jpeg",
-  "static/css/main.05fe5976.chunk.css.map": "/formare/static/css/main.05fe5976.chunk.css.map",
+  "static/css/main.c587bae2.chunk.css.map": "/formare/static/css/main.c587bae2.chunk.css.map",
   "index.html": "/formare/index.html",
-  "precache-manifest.9844ec9647b62343ea1457f4dc6d3930.js": "/formare/precache-manifest.9844ec9647b62343ea1457f4dc6d3930.js",
+  "precache-manifest.cf2a894c4758eff009f8870f0ee8c383.js": "/formare/precache-manifest.cf2a894c4758eff009f8870f0ee8c383.js",
   "service-worker.js": "/formare/service-worker.js"
 }
