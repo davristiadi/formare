@@ -2,7 +2,7 @@ $navbar-transition: $transition !default;
 $navbar-background: $lighter !default;
 $navbar-color: color-yiq($navbar-background) !default;
 $navbar-hovered-color: $primary-color;
-$navbar-height: 4em;
+$navbar-height: 5em;
 $navbar-heights: () !default;
 $navbar-heights: map-merge((
 	x-small: ($navbar-height * .5),

@@ -15,8 +15,8 @@
     @include media(md) {
       position: sticky;
       display: flex;
-      height: calc(100vh - 6em);
-      top: 6em;
+      height: calc(100vh - 7em);
+      top: 7em;
       flex: 0 0 250px;
       border-right: solid 1px gray(100);
     }
@@ -24,8 +24,8 @@
 
   &-content {
     @extend .structure;
-    padding-top: spacing(large);
-    padding-left: spacing(large);
+    padding-top: spacing(x-large);
+    padding-left: spacing(x-large);
     padding-right: spacing(large);
   }
 }
