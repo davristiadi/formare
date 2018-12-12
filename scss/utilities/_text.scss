@@ -1,3 +1,6 @@
+$text-aligns: ( left right center justify justify-all start end match-parent );
+$text-transforms: ( capitalize uppercase lowercase full-width );
+
 @each $size, $value in $font-sizes {
 	.fs-#{$size}, .font-size-#{$size} {
 		font-size: $value !important; 

@@ -1,52 +1,14 @@
-$button-themes: $theme-colors;
-
-$button-font-weight: font-weight(medium) !default;
-$button-text-color: $dark !default;
-$button-background-color: $white;
-
-$button-border-style: solid;
-$button-border-width: 1px;
-$button-border-color: gray(300);
-
-$button-transition: $transition;
-
-$button-hovered-color: primary-color(0);
-$button-hovered-border-color: primary-color(0);
-
-$button-focused-color: primary-color(-20);
-$button-focused-border-color: primary-color(-20);
-
-$button-active-color: primary-color(40);
-$button-active-border-color: primary-color(40);
-
-$button-disabled-opacity: 0.5 !default;
-
-$button-clear-text-color: primary-color(0) !default;
-$button-clear-hovered-text-color: primary-color(20) !default;
-
-$button-padding-y: spacing(x-small) !default;
-$button-padding-x: spacing(base) !default;
-$button-padding: $button-padding-y $button-padding-x;
-$button-paddings: () !default;
-$button-paddings: map-merge((
-	x-small: ($button-padding-y * .5) ($button-padding-x * .5),
-	small: ($button-padding-y * .75) ($button-padding-x * .75),
-	base: $button-padding,
-	large: ($button-padding-y * 1.25) ($button-padding-x * 1.25),
-	x-large: ($button-padding-y * 1.5) ($button-padding-x * 1.5)
-), $button-paddings);
-
 .button {
 	position: relative;
 	font-weight: $button-font-weight;
 	padding: $button-padding;
-	background-color: $button-background-color;
+	color: $button-fg-color;
+	background-color: $button-bg-color;
 	border-style: $button-border-style;
 	border-width: $button-border-width;
 	border-color: $button-border-color;
 	border-radius: $border-radius;
 	transition: $button-transition;
-	color: $button-text-color;
 	text-align: center;
 	white-space: nowrap;
 	vertical-align: middle;
@@ -81,8 +43,7 @@ $button-paddings: map-merge((
 		cursor: not-allowed;
 	}
 
-	//	Theme modifier classes
-	@each $theme, $color in $button-themes {
+	@each $theme, $color in $theme-colors {
 		&--#{$theme} {	
 			background-color: $color;
 			color: color-yiq($color);

@@ -1,3 +1,3 @@
-$transition-duration: 150ms;
-$transition-timing: cubic-bezier(.78,.23,.33,.83);
-$transition: all $transition-duration $transition-timing;
+$transition-duration:     150ms !default;
+$transition-timing:       cubic-bezier(.78,.23,.33,.83) !default;
+$transition:              all $transition-duration $transition-timing !default;

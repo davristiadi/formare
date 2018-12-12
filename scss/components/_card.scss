@@ -1,4 +1,3 @@
-$card-themes: $theme-colors;
 $card-padding: spacing(base);
 $card-background: $white;
 $card-border: solid 1px $light;
@@ -24,7 +23,7 @@ $card-inner-border: solid 1px $lighter;
 	&__header {
 		border-bottom: solid 1px $light;
 
-		@each $theme, $color in $card-themes {
+		@each $theme, $color in $theme-colors {
 			&--#{$theme} {
 				background-color: $color;
 				border: solid 1px $color;
@@ -47,7 +46,7 @@ $card-inner-border: solid 1px $lighter;
 		}
 	}
 
-	@each $theme, $color in $card-themes {
+	@each $theme, $color in $theme-colors {
 		&--#{$theme} {
 			transition: $transition;
 			background-color: $color;
@@ -56,9 +55,9 @@ $card-inner-border: solid 1px $lighter;
 			overflow: hidden;
 
 			&.card--has-overlay {
-				@include flexbox;
-				@include flex-direction(column);
-				@include justify-content(flex-end);
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
 				min-height: 15em;
 				border: 0;
 		

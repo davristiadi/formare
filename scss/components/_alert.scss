@@ -1,77 +1,36 @@
-$alert-themes: $theme-colors;
-$alert-border-radius: $border-radius;
-$alert-spacing-x: spacing(large);
-$alert-spacing-y: spacing(base);
-
-$alert-color-shade-level: 25 !default;
-$alert-background-color-shade-level: -50 !default;
-
-$alert-background: theme-color-shade(warning, $alert-background-color-shade-level);
-$alert-color: theme-color-shade(warning, $alert-color-shade-level);
-
 .alert {
-    display: flex;
-    align-items: center;
-    position: relative;
-    border-radius: $alert-border-radius;
-    background-color: $alert-background;
-    color: $alert-color;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: $alert-fg-color;
+  background-color: $alert-bg-color;
+  border-radius: $alert-border-radius;
 
-    @each $theme, $color in $theme-colors {
-        &--#{$theme} {
-            background-color: theme-color-shade($theme, $alert-background-color-shade-level);
-            color: theme-color-shade($theme, $alert-color-shade-level);
-        }
+  @each $theme, $color in $theme-colors {
+    &--#{$theme} {
+      background-color: theme-color-shade($theme, $alert-bg-color-shade-level);
+      color: theme-color-shade($theme, $alert-fg-color-shade-level);
     }
-    
-    > * {
-        padding-top: $alert-spacing-y;
-        padding-bottom: $alert-spacing-y;
-    }
+  }
 
-    &__body,
-    > *:not(.alert__icon) {
-        flex: 1;
-        padding-left: $alert-spacing-x;
-        padding-right: $alert-spacing-x;
-    }
+  > * {
+    padding-top: $alert-padding-y;
+    padding-bottom: $alert-padding-y;
+  }
 
-    &__icon {
-        &:first-child { padding-left: $spacing }
-        &:last-child { padding-right: $spacing }    
+  &__body,
+  > *:not(.alert__icon) {
+    flex: 1;
+    padding-left: $alert-padding-x;
+    padding-right: $alert-padding-x;
+  }
+
+  &__icon {
+    &:first-child {
+      padding-left: spacing(base);
     }
+    &:last-child {
+      padding-right: spacing(base);
+    }
+  }
 }
-
-// .alert {
-//     position: relative;
-//     border-radius: $alert-border-radius;
-
-//     @each $theme, $color in $alert-themes {
-//         &--#{$theme} {
-//             background-color: tint($color, 80%);
-//             color: shade($color, 25%);
-//         }
-//     }
-
-//     &__message {
-//         padding-left: $spacing;
-//         padding-right: $spacing;
-//     }
-
-//     &--has-extra {
-//         display: flex;
-//         flex-direction: row;
-//         align-items: center;
-
-//         .alert__message { flex: 1 1 auto; }
-//         .alert__extra {
-//             &:first-child { padding-left: $spacing; }
-//             &:last-child { padding-right: $spacing; }
-//         }
-//     }
-
-//     > * {
-//         padding-top: $spacing;
-//         padding-bottom: $spacing;
-//     }
-// }
