@@ -1,7 +1,7 @@
 $violet-blue: 					#4061C4 !default;
-$sea-green: 						#38915A !default;
-$tangerine: 						#E68903 !default;
-$ufo-green: 						#47EF74 !default;
+$zest: 									#E57A2D !default;
+$trinidad: 							#E54206 !default;
+$mountain-meadow:				#18B247 !default;
 $maximum-green-yellow: 	#E2ED49 !default;
 $medium-vermillion: 		#D86141 !default;
 $cello: 								#1C415B !default;
@@ -11,9 +11,9 @@ $sirocco: 							#6D7A7D !default;
 
 //- Theme Colors
 $primary-color: 				$violet-blue !default;
-$secondary-color: 			$sea-green !default;
-$tertiary-color: 				$tangerine !default;
-$success-color: 				$ufo-green !default;
+$secondary-color: 			$zest !default;
+$tertiary-color: 				$trinidad !default;
+$success-color: 				$mountain-meadow !default;
 $warning-color: 				$maximum-green-yellow !default;
 $danger-color: 					$medium-vermillion !default;
 $info-color: 						$cello !default;
@@ -71,6 +71,6 @@ $theme-colors: map-merge(
 	$theme-colors
 );
 
-$yiq-contrasted-threshold: 		150 !default;
+$yiq-contrasted-threshold: 		200 !default;
 $yiq-text-dark: 							$dark !default;
 $yiq-text-light: 							$lighter !default;
