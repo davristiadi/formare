@@ -5,7 +5,7 @@ import './Global.scss';
 class Global extends Component {
   render() {
     return (
-      <div className="structure">
+      <div className="fr-global">
         <GlobalHeader />
         <GlobalContent />
       </div>

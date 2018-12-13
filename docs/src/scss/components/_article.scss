@@ -1,14 +1,8 @@
 .fr-article {
   @extend .article;
 
-  .fr-article-section {
-    margin-top: spacing(x-large);
-    margin-bottom: spacing(x-large);
-  }
-
   .fr-article-heading {
-    @extend .heading;
-    margin-bottom: spacing(x-large);
+    margin-bottom: spacing(xx-large);
 
     .fr-article-title {
       @extend .title;

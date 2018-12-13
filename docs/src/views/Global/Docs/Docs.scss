@@ -1,4 +1,4 @@
-@import "src/scss/abstracts";
+@import "~scss/vendor/abstracts";
 @import "../../../../../scss/layout/structure";
 
 .fr-docs {
@@ -15,8 +15,8 @@
     @include media(md) {
       position: sticky;
       display: flex;
-      height: calc(100vh - 7em);
-      top: 7em;
+      height: calc(100vh - 5em);
+      top: 5em;
       flex: 0 0 250px;
       border-right: solid 1px gray(100);
     }
@@ -24,8 +24,12 @@
 
   &-content {
     @extend .structure;
-    padding-top: spacing(x-large);
-    padding-left: spacing(x-large);
-    padding-right: spacing(large);
+    padding: spacing(base);
+
+    @include media(lg) {
+      padding-top: spacing(x-large);
+      padding-left: spacing(x-large);
+      padding-right: spacing(large);
+    }
   }
 }

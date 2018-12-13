@@ -1,13 +1,10 @@
-//  Import core dependencies
+// Import core icon pack
 @import url("https://use.fontawesome.com/releases/v5.0.10/css/all.css");
-@import "./overrides";
+
+// Import core vendor files
+@import "vendor/overrides";
 @import "../../../scss/formare.scss";
 
-//  Import local resuable component styling
-@import "base/global";
-@import "base/highlight";
-
-@import "components/article";
-@import "components/heading";
-@import "components/menu";
-@import "components/preview";
+//  Import local-based CSS files
+@import "base/all";
+@import "components/all";

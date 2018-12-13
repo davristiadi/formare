@@ -1,4 +1,4 @@
-@import 'src/scss/abstracts';
+@import '~scss/vendor/abstracts';
 @import '../../../../scss/layout/structure';
 
 #master-logo {
@@ -8,24 +8,28 @@
   padding-right: spacing(base);
 }
 
-.fr-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1500;
+.fr-global {
+  @extend .structure;
   
-  #master-nav {
-    display: none;
-  }
-
-  @include media(md) {
+  .fr-global-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1500;
+    
     #master-nav {
-      display: flex;
+      display: none;
+    }
+  
+    @include media(md) {
+      #master-nav {
+        display: flex;
+      }
     }
   }
-}
-
-.fr-main {
-  padding-top: 7.5em;
+  
+  .fr-global-content {
+    padding-top: 5em;
+  }
 }

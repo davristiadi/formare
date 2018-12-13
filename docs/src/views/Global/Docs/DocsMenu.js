@@ -17,12 +17,6 @@ class DocsMenu extends Component {
       }
     };
 
-    // const sortedRoutes = routes.sort((a, b) => {
-    //     const first = a.title;
-    //     const second = b.title;
-    //     return (first < second) ? -1 : (first > second) ? 1 : 0;
-    // });
-
     const renderRoute = route => {
       if (route.hasChildren) {
         return route.hasChildren.map(subroute => {
@@ -57,23 +51,10 @@ class DocsMenu extends Component {
               <span className="fr-menu__label">
                 <Link to={route.path}>{route.title}</Link>
               </span>
-              { renderMenuItems(route)}
+              { renderMenuItems(route) }
             </Fragment>
           )
         })}
-      
-        {/* <ul className="fr-menu__list">
-          {routes.map(route => {
-            return (
-              <Fragment>
-                <li className="fr-menu__item fr-menu__item--parent">
-                  <Link to={route.path}>{route.title}</Link>
-                </li>
-                {renderRoute(route)}
-              </Fragment>
-            );
-          })}
-        </ul> */}
       </div>
     );
   }
