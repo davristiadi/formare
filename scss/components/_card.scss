@@ -1,27 +1,27 @@
-$card-padding: spacing(base);
-$card-background: $white;
-$card-border: solid 1px $light;
-$card-border-radius: $border-radius;
-$card-inner-border: solid 1px $lighter;
-
 .card {
 	display: flex;
 	flex-direction: column;
 	position: relative;
 	background-color: $card-background;
-	border-radius: $card-border-radius;
-	border: $card-border;
 	word-wrap: break-word;
-	overflow: hidden;
 
+	> * {
+		&:first-child {
+			border-top-left-radius: $border-radius;
+			border-top-right-radius: $border-radius;
+		}
+	
+		&:last-child {
+			border-bottom-left-radius: $border-radius;
+			border-bottom-right-radius: $border-radius;
+		}
+	}
+	
 	&__header,
 	&__body,
 	&__footer {
 		padding: $card-padding;
-	}
-
-	&__header {
-		border-bottom: solid 1px $light;
+		border: $card-border;
 
 		@each $theme, $color in $theme-colors {
 			&--#{$theme} {
@@ -32,7 +32,17 @@ $card-inner-border: solid 1px $lighter;
 		}
 	}
 
-	.card__image {
+	&__body {
+		&:not(:first-child) {
+			border-top: none;
+		}
+
+		&:not(:last-child) {
+			border-bottom: none;
+		}
+	}
+
+	&__image {
 		position: relative;
 		height: 200px;
 		min-height: 200px;
@@ -53,42 +63,44 @@ $card-inner-border: solid 1px $lighter;
 			color: color-yiq($color);
 			border: solid 1px shade($color, 10%);
 			overflow: hidden;
-
-			&.card--has-overlay {
-				display: flex;
-				flex-direction: column;
-				justify-content: flex-end;
-				min-height: 15em;
-				border: 0;
+			
+			// &.card--has-overlay {
+			// 	display: flex;
+			// 	flex-direction: column;
+			// 	justify-content: flex-end;
+			// 	min-height: 15em;
+			// 	border-radius: $border-radius;
+			// 	border: 0;
 		
-				&:after {
-					content: "";
-					position: absolute;
-					top: 0;
-					left: 0;
-					height: 100%;
-					width: 100%;
-					background-color: $color;
-					color: color-yiq($color);
-					opacity: 0.7;
-					z-index: 10;
-				}
+			// 	&:after {
+			// 		content: "";
+			// 		position: absolute;
+			// 		top: 0;
+			// 		left: 0;
+			// 		height: 100%;
+			// 		width: 100%;
+			// 		background-color: $color;
+			// 		color: color-yiq($color);
+			// 		opacity: 0.7;
+			// 		z-index: 10;
+			// 	}
 		
-				.card__image {
-					position: absolute;
-					top: 0;
-					left: 0;
-					height: 100%;
-					width: 100%;
-					z-index: 5;
-				}
+			// 	.card__image {
+			// 		position: absolute;
+			// 		top: 0;
+			// 		left: 0;
+			// 		height: 100%;
+			// 		width: 100%;
+			// 		z-index: 5;
+			// 	}
 		
-				.card__header,
-				.card__body,
-				.card__footer {
-					z-index: 15;
-				}
-			}
+			// 	.card__header,
+			// 	.card__body,
+			// 	.card__footer {
+			// 		border: none;
+			// 		z-index: 15;
+			// 	}
+			// }
 		}
 
 	}

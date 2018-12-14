@@ -34,9 +34,9 @@ const Alert = props => {
           </PreviewDisplay>
           <PreviewHighlight lang="html">
             {`<div className="alert">
-                            <div className="alert__body">This is an example alert.</div>
-                        </div>
-                        `}
+              <div className="alert__body">This is an example alert.</div>
+            </div>
+            `}
           </PreviewHighlight>
         </Preview>
       </section>

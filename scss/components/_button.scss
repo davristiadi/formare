@@ -144,12 +144,12 @@
 	//	Other modifiers
 	&--clear {
 		border: none;
+		background-color: transparent;
 		transition: $button-transition;
 		color: $button-clear-text-color;
 
 		&:hover:not(:disabled) {
 			color: $button-clear-hovered-text-color;
-			text-decoration: underline;
 		}
 	}
 

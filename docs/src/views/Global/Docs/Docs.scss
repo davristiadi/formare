@@ -27,9 +27,9 @@
     padding: spacing(base);
 
     @include media(lg) {
-      padding-top: spacing(x-large);
-      padding-left: spacing(x-large);
-      padding-right: spacing(large);
+      padding-top: spacing(large);
+      padding-left: spacing(large);
+      padding-right: spacing(base);
     }
   }
 }

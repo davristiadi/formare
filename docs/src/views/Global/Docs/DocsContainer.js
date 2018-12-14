@@ -35,23 +35,6 @@ class DocsContainer extends Component {
 					title: 'Getting Started',
 					component: Start,
 				},
-				// {
-				// 	path: '/docs/base',
-				// 	title: 'Base',
-				// 	component: Base,
-				// 	hasChildren: [
-				// 		{
-				// 			path: '/docs/systems/colors',
-				// 			title: 'Colors',
-				// 			component: Color
-				// 		},
-				// 		{
-				// 			path: '/docs/systems/typography',
-				// 			title: 'Typography',
-				// 			component: Typography
-				// 		},
-				// 	]
-				// },
 				{
 					path: '/docs/layouts',
 					title: 'Layouts',
@@ -63,7 +46,7 @@ class DocsContainer extends Component {
 							component: Grid
 						},
 						{
-							path: '/docs/layouts/blocks',
+							path: '/docs/layouts/structure',
 							title: 'Structure',
 							component: Structure
 						}

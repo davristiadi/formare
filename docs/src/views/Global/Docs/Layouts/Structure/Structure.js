@@ -10,8 +10,7 @@ class Structure extends PureComponent {
           <div className="fr-article-heading">
             <h2 className="fr-article-title">Structure</h2>
             <h5 className="fr-article-subtitle">
-              Formare's structure system handles the foundation of a page
-              layout.
+              Defines the main structure layout of your website easily.
             </h5>
           </div>
           <section id="overview" className="fr-article-section">
@@ -23,12 +22,9 @@ class Structure extends PureComponent {
               aliquip labore pariatur. Dolor non cillum dolore est ad est.
               Tempor reprehenderit ex consequat occaecat commodo dolore duis.
             </p>
-            {/* <p>Ea irure aliqua non duis laboris sunt tempor qui veniam irure officia enim irure fugiat. In veniam laboris tempor et proident incididunt officia.</p>
-            <p>Id voluptate est commodo adipisicing id irure sint aliquip enim Lorem ullamco magna.</p> */}
             <ul>
               <li>
-                <code>Structure</code>: Voluptate deserunt aliqua enim
-                proident..
+                <code>Structure</code>: Voluptate deserunt aliqua enim proident.
               </li>
               <li>
                 <code>Header</code>: Commodo reprehenderit cillum esse minim.
@@ -99,33 +95,26 @@ class Structure extends PureComponent {
               <h4 className="title">Examples</h4>
             </div>
             <Preview>
-              <PreviewDisplay>
+              <PreviewDisplay>                
                 <div className="fr-structure-example">
                   <div className="structure">
                     <header className="header">
                       <div className="navbar navbar--primary">
-                        <div className="navbar__container navbar__container--full-width">
+                        <div className="container">
                           <div className="navbar__block">
                             <span id="logo">Logo</span>
                           </div>
-                          <div className="navbar__block navbar__block--end">
+                          <div className="navbar__block">
                             <nav className="nav">
                               <ul className="nav__list">
                                 <li className="nav__item">
-                                  <a className="nav__link">Home</a>
+                                  <a href="/" className="nav__link">Home</a>
                                 </li>
                                 <li className="nav__item">
-                                  <a className="nav__link">Contact Us</a>
+                                  <a href="/" className="nav__link">Contact us</a>
                                 </li>
                               </ul>
                             </nav>
-                            {/* <nav className="nav">
-                              <ul className="nav__list">
-                                <li className="nav__item"><a className="nav__link">Home</a></li>
-                                <li className="nav__item"><a className="nav__link">FAQ</a></li>
-                                <li className="nav__item"><a className="nav__link">Contact Us</a></li>
-                              </ul>
-                            </nav> */}
                           </div>
                         </div>
                       </div>
@@ -147,15 +136,6 @@ class Structure extends PureComponent {
                     <div className="navbar">
                       <div className="navbar__block">
                         <span id="logo"></span>
-                      </div>
-                      <div className="navbar__block navbar__block--end">
-                        <nav className="nav">
-                          <ul className="nav__list">
-                            <li className="nav__item">Home</li>
-                            <li className="nav__item">FAQ</li>
-                            <li className="nav__item">Contact Us</li>
-                          </ul>
-                        </nav>
                       </div>
                     </div>
                   </header>

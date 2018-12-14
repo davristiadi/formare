@@ -20,45 +20,78 @@ const Card = props => {
           <h4 className="title">Overview</h4>
         </div>
         <p>Pariatur pariatur consectetur qui ullamco Lorem amet ut officia culpa.</p>
-        <div className="fr-card-demo">
-          <div className="card">
-            <header className="card__header">
-              <h5 className="title">Card Title</h5>
-              <h6 className="subtitle color-gray">This is a subtitle</h6>
-            </header>
-            <main className="card__body">
-              <div>
-                Anim aute elit ea nulla minim duis voluptate proident occaecat
-                ipsum tempor ex. Lorem irure eiusmod cupidatat Lorem ad. Ex
-                consectetur laboris ullamco non reprehenderit do ad velit
-                consequat ut adipisicing id qui irure.
-              </div>
-            </main>
-            <footer className="card__footer">
-              <button className="button button--primary">Submit</button>
-            </footer>
-          </div>
-        </div>
-        <Highlight lang="html">
-          {`<div className="card">
-              <header className="card__header">
-                <h5 className="title">Card Title</h5>
-                <h6 className="subtitle color-gray">This is a subtitle</h6>
-              </header>
-              <main className="card__body">
-                <div>
-                  Anim aute elit ea nulla minim duis voluptate proident occaecat
-                  ipsum tempor ex. Lorem irure eiusmod cupidatat Lorem ad. Ex
-                  consectetur laboris ullamco non reprehenderit do ad velit
-                  consequat ut adipisicing id qui irure.
+        <Preview>
+          <PreviewDisplay>
+            <div className="grids">
+              <div className="grid grid-6">
+                <div className="card">
+                  <header className="card__header">
+                    <h5 className="title">Card Title</h5>
+                    <h6 className="subtitle color-gray">This is a subtitle</h6>
+                  </header>
+                  <main className="card__body">
+                    <div>
+                      Anim aute elit ea nulla minim duis voluptate proident occaecat
+                      ipsum tempor ex. Lorem irure eiusmod cupidatat Lorem ad. Ex
+                      consectetur laboris ullamco non reprehenderit do ad velit
+                      consequat ut adipisicing id qui irure.
+                    </div>
+                  </main>
+                  <footer className="card__footer">
+                    <button className="button button--primary">Submit</button>
+                  </footer>
                 </div>
-              </main>
-              <footer className="card__footer">
-                <button className="button button--primary">Submit</button>
-              </footer>
+              </div>
+              <div className="grid grid-6">
+                <div className="card">
+                  <header className="card__header card__header--primary">
+                    <h5 className="title">John Doe</h5>
+                    <h6 className="subtitle color-light">@johndoeishere</h6>
+                  </header>
+                  <main className="card__body">
+                    <span>
+                      Est proident minim cupidatat qui dolor pariatur cillum exercitation 
+                      pariatur deserunt ea aliqua esse excepteur. Exercitation do amet 
+                      occaecat dolore sint in pariatur aliqua anim Lorem.
+                    </span>
+                  </main>
+                </div>
+              </div>
             </div>
-          `}
-        </Highlight>
+          </PreviewDisplay>
+          <PreviewHighlight lang="html">
+            {`<div className="card">
+                <header className="card__header">
+                  <h5 className="title">Card Title</h5>
+                  <h6 className="subtitle color-gray">This is a subtitle</h6>
+                </header>
+                <main className="card__body">
+                  <div>
+                    Anim aute elit ea nulla minim duis voluptate proident occaecat
+                    ipsum tempor ex. Lorem irure eiusmod cupidatat Lorem ad. Ex
+                    consectetur laboris ullamco non reprehenderit do ad velit
+                    consequat ut adipisicing id qui irure.
+                  </div>
+                </main>
+                <footer className="card__footer">
+                  <button className="button button--primary">Submit</button>
+                </footer>
+              </div>
+            </div>   
+            `}
+          </PreviewHighlight>
+        </Preview>
+      </section>
+
+
+      <section id="themes" className="fr-article-section">
+        <article className="article">
+          <div className="heading">
+            <h4 className="title">Themes</h4>
+          </div>
+          <p>Dolore est excepteur culpa voluptate culpa quis dolor 
+            ipsum et et exercitation.</p>
+        </article>
       </section>
 
       <section id="card-with-thumbnail" className="mg-bottom-x-large">
@@ -77,12 +110,10 @@ const Card = props => {
                 <img src={DummyPhoto} />
               </div>
               <div className="card__body">
-                <div className="heading">
-                  <h4 className="title">Card Title</h4>
-                  <h6 className="subtitle color-gray">
-                    This is a subtitle.
-                  </h6>
-                </div>
+                <h4 className="title">Card Title</h4>
+                <h6 className="subtitle color-gray">
+                  This is a subtitle.
+                </h6>
                 <p>
                   Tempor eiusmod excepteur esse culpa qui elit sint aliqua
                   dolor. Qui mollit esse officia labore deserunt laborum

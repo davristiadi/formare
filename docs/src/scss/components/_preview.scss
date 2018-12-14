@@ -7,8 +7,11 @@
   &__tag {
     position: absolute;
     top: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: font-weight(medium);
     transform: translateY(-100%);
-    font-size: font-size(x-small);
+    font-size: font-size(xx-small);
     background-color: theme-color(secondary);
     color: color-yiq(theme-color(secondary));
     border: solid 1px theme-color(secondary);

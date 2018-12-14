@@ -1,5 +1,6 @@
 @import "src/scss/vendor/abstracts";
 
+
 .fr-structure-showcase {
   padding-top: spacing(base);
   padding-bottom: spacing(base);
@@ -49,23 +50,16 @@
       }
 
       #logo {
-        height: 30px;
-        padding: 0 spacing(base);
-        background-color: primary-color(-20);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: font-size(base);
-        font-weight: font-weight(bold);
-        border-radius: border-radius(base);
-        text-transform: uppercase;
         letter-spacing: 1px;
+        text-transform: uppercase;
+        font-size: font-size(base);
+        font-weight: font-weight(semibold);
       }
     }
 
     .content {
       background-color: $lighter;
-      padding: spacing(x-large);
+      padding: spacing(base);
 
       &__box {
         min-height: 20em;
