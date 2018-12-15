@@ -1,7 +1,8 @@
 $alert-border-radius:             border-radius(base);
 
-$alert-padding-y:                 spacing(small);
-$alert-padding-x:                 spacing(base);
+$alert-spacing-y:                 spacing(small);
+$alert-spacing-x:                 spacing(base);
+$alert-spacing:                   $alert-spacing-y $alert-spacing-x;
 
 $alert-bg-color-shade-level:      -60 !default;
 $alert-fg-color-shade-level:      30 !default;

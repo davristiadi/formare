@@ -1,3 +1,19 @@
+.Alert {
+  display: flex;
+  align-items: center;
+  color: $alert-fg-color;
+  background-color: $alert-bg-color;
+  border-radius: $alert-border-radius;
+  padding: $alert-spacing;
+
+  @each $theme, $color in $theme-colors {
+    &--#{$theme} {
+      background-color: theme-color-shade($theme, $alert-bg-color-shade-level);
+      color: theme-color-shade($theme, $alert-fg-color-shade-level);
+    }
+  }
+}
+
 .alert {
   display: flex;
   align-items: center;
@@ -13,15 +29,15 @@
   }
 
   > * {
-    padding-top: $alert-padding-y;
-    padding-bottom: $alert-padding-y;
+    padding-top: $alert-spacing-y;
+    padding-bottom: $alert-spacing-y;
   }
 
   &__body,
   > *:not(.alert__icon) {
     flex: 1;
-    padding-left: $alert-padding-x;
-    padding-right: $alert-padding-x;
+    padding-left: $alert-spacing-x;
+    padding-right: $alert-spacing-x;
   }
 
   &__icon {

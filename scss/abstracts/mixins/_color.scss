@@ -1,0 +1,7 @@
+@mixin create-themes($themes: $theme-colors) {
+  @each $theme, $color in $themes {
+    &--#{$theme} {
+      @content;
+    }
+  }
+}

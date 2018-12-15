@@ -31,6 +31,9 @@ const Alert = props => {
             <div className="alert">
               <div className="alert__body">This is an example alert.</div>
             </div>
+            <div className="Alert">
+              <div className="Alert-body">test</div>
+            </div>
           </PreviewDisplay>
           <PreviewHighlight lang="html">
             {`<div className="alert">
