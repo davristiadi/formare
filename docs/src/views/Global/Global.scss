@@ -1,13 +1,6 @@
 @import '~scss/vendor/abstracts';
 @import '../../../../scss/layout/structure';
 
-#master-logo {
-  font-size: font-size(x-large);
-  font-weight: font-weight(bold);
-  padding-left: spacing(base);
-  padding-right: spacing(base);
-}
-
 .fr-global {
   @extend .structure;
   

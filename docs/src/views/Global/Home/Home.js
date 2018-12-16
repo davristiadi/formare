@@ -4,7 +4,7 @@ const Home = props => {
   const { hero } = props;
 
   return (
-    <div className="fr-home">
+    <div id="homepage">
       <section className="hero hero--primary hero--large">
         <div className="hero__body hero__body--centerized">
           <div className="container" style={{
@@ -17,7 +17,7 @@ const Home = props => {
 								fast and easy to get started with.
 							</h1>
 						</div>
-						<div>
+						<div className="flex jc-center">
 							<button className="button button--large button--raised button--secondary mg-right-large">
 								<i className="fas fa-download mg-right-large" />
 								Download

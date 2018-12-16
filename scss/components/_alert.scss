@@ -4,23 +4,7 @@
   color: $alert-fg-color;
   background-color: $alert-bg-color;
   border-radius: $alert-border-radius;
-  padding: $alert-spacing;
-
-  @each $theme, $color in $theme-colors {
-    &--#{$theme} {
-      background-color: theme-color-shade($theme, $alert-bg-color-shade-level);
-      color: theme-color-shade($theme, $alert-fg-color-shade-level);
-    }
-  }
-}
-
-.alert {
-  display: flex;
-  align-items: center;
-  color: $alert-fg-color;
-  background-color: $alert-bg-color;
-  border-radius: $alert-border-radius;
-
+  
   @each $theme, $color in $theme-colors {
     &--#{$theme} {
       background-color: theme-color-shade($theme, $alert-bg-color-shade-level);
@@ -28,24 +12,23 @@
     }
   }
 
-  > * {
-    padding-top: $alert-spacing-y;
-    padding-bottom: $alert-spacing-y;
-  }
-
-  &__body,
-  > *:not(.alert__icon) {
-    flex: 1;
-    padding-left: $alert-spacing-x;
-    padding-right: $alert-spacing-x;
+  &__text {
+    display: flex;
+    flex-grow: 1;
+    line-height: $line-height;
+    padding: $alert-spacing;
   }
 
   &__icon {
-    &:first-child {
-      padding-left: spacing(base);
+    padding-top: $alert-spacing-y;
+    padding-bottom: $alert-spacing-x;
+  
+    &:first-child { 
+      padding-left: $alert-spacing-y;
     }
+    
     &:last-child {
-      padding-right: spacing(base);
+      padding-right: $alert-spacing-x;
     }
   }
 }

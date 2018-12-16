@@ -16,28 +16,24 @@ const Alert = props => {
           <h4 className="title">Overview</h4>
         </div>
         <p>
-          In veniam labore do eiusmod fugiat. Occaecat pariatur sit laboris id
-          est nisi eiusmod do officia adipisicing qui. Cillum ea adipisicing
-          duis enim dolor deserunt ipsum eu ullamco elit ut minim.
-        </p>
-        <p>
-          Eu cillum dolore ut Lorem excepteur est pariatur. Consequat aliqua
-          velit ipsum nostrud nostrud elit in reprehenderit id ea. Nisi
-          adipisicing mollit labore eiusmod amet. Aute fugiat nisi duis sit
-          fugiat.
+          We can use alerts to notify users about something that needs attention. 
+          Alerts are usually non-interuptive and should be easily dismissable.
         </p>
         <Preview>
           <PreviewDisplay>
-            <div className="alert">
-              <div className="alert__body">This is an example alert.</div>
+            <div className="Alert">
+              <div className="Alert__text">This is just a simple alert.</div>
             </div>
             <div className="Alert">
-              <div className="Alert-body">test</div>
+              <div className="Alert__icon">
+                <i className="fas fa-check"></i>
+              </div>
             </div>
           </PreviewDisplay>
           <PreviewHighlight lang="html">
-            {`<div className="alert">
-              <div className="alert__body">This is an example alert.</div>
+            {`
+            <div className="Alert">
+              <div className="Alert__text">Hello</div>
             </div>
             `}
           </PreviewHighlight>
@@ -48,32 +44,16 @@ const Alert = props => {
           <h4 className="title">Themes</h4>
         </header>
         <p>
-          Deserunt irure veniam irure pariatur quis. Duis magna deserunt sit
-          eiusmod nisi consequat cillum irure eiusmod. Nisi cupidatat sunt
-          adipisicing officia qui voluptate.
+          Alerts come with different <a href="">themes</a> that you can use accordingly for different contexts.
         </p>
         <ul>
-          <li>
-            <code>{`.alert--primary`}</code>
-          </li>
-          <li>
-            <code>{`.alert--secondary`}</code>
-          </li>
-          <li>
-            <code>{`.alert--success`}</code>
-          </li>
-          <li>
-            <code>{`.alert--danger`}</code>
-          </li>
-          <li>
-            <code>{`.alert--warning`}</code>
-          </li>
-          <li>
-            <code>{`.alert--light`}</code>
-          </li>
-          <li>
-            <code>{`.alert--dark`}</code>
-          </li>
+          <li> <code>{`.alert--primary`}</code> </li>
+          <li> <code>{`.alert--secondary`}</code> </li>
+          <li> <code>{`.alert--success`}</code> </li>
+          <li> <code>{`.alert--danger`}</code> </li>
+          <li> <code>{`.alert--warning`}</code> </li>
+          <li> <code>{`.alert--light`}</code> </li>
+          <li> <code>{`.alert--dark`}</code> </li>
         </ul>
         <Preview>
           <PreviewDisplay>

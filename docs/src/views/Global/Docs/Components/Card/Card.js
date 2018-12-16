@@ -10,9 +10,7 @@ const Card = props => {
       <div className="fr-article-heading">
         <h2 className="fr-article-title">Card</h2>
         <h5 className="fr-article-subtitle">
-          Culpa culpa deserunt magna nostrud sunt adipisicing cillum commodo
-          dolore cupidatat nostrud veniam. Commodo id nulla consectetur aliqua
-          aute. Fugiat irure consectetur cillum pariatur laboris est.
+          
         </h5>
       </div>
       <section id="overview" className="fr-article-section">
@@ -24,60 +22,69 @@ const Card = props => {
           <PreviewDisplay>
             <div className="grids">
               <div className="grid grid-6">
-                <div className="card">
-                  <header className="card__header">
+                <div className="Card">
+                  <div className="Card__header">
                     <h5 className="title">Card Title</h5>
                     <h6 className="subtitle color-gray">This is a subtitle</h6>
-                  </header>
-                  <main className="card__body">
-                    <div>
-                      Anim aute elit ea nulla minim duis voluptate proident occaecat
-                      ipsum tempor ex. Lorem irure eiusmod cupidatat Lorem ad. Ex
-                      consectetur laboris ullamco non reprehenderit do ad velit
-                      consequat ut adipisicing id qui irure.
-                    </div>
-                  </main>
-                  <footer className="card__footer">
+                  </div>
+                  <div className="Card__body">
+                    <span>
+                      Elit non consectetur eu dolor deserunt eiusmod deserunt. 
+                      Eu fugiat esse aliqua magna excepteur irure minim. Id tempor esse cillum aliquip enim.
+                    </span>
+                  </div>
+                  <div className="Card__footer">
                     <button className="button button--primary">Submit</button>
-                  </footer>
+                  </div>
                 </div>
               </div>
               <div className="grid grid-6">
-                <div className="card">
-                  <header className="card__header card__header--primary">
-                    <h5 className="title">John Doe</h5>
-                    <h6 className="subtitle color-light">@johndoeishere</h6>
+                <div className="Card">
+                  <header className="Card__header">
+                    <h5 className="title">Formare CSS Framework</h5>
+                    <h6 className="subtitle color-gray">@formare</h6>
                   </header>
-                  <main className="card__body">
-                    <span>
+                  <main className="Card__body">
+                    <div className="mg-bottom">
                       Est proident minim cupidatat qui dolor pariatur cillum exercitation 
                       pariatur deserunt ea aliqua esse excepteur. Exercitation do amet 
-                      occaecat dolore sint in pariatur aliqua anim Lorem.
-                    </span>
+                      occaecat dolore sint in pariatur aliqua anim Lorem. <a href="/">#css #frameworkl</a>
+                    </div>
                   </main>
                 </div>
               </div>
             </div>
           </PreviewDisplay>
           <PreviewHighlight lang="html">
-            {`<div className="card">
-                <header className="card__header">
+            {`<div className="Card">
+                <div className="Card__header">
                   <h5 className="title">Card Title</h5>
                   <h6 className="subtitle color-gray">This is a subtitle</h6>
-                </header>
-                <main className="card__body">
-                  <div>
-                    Anim aute elit ea nulla minim duis voluptate proident occaecat
-                    ipsum tempor ex. Lorem irure eiusmod cupidatat Lorem ad. Ex
-                    consectetur laboris ullamco non reprehenderit do ad velit
-                    consequat ut adipisicing id qui irure.
-                  </div>
-                </main>
-                <footer className="card__footer">
+                </div>
+                <div className="Card__body">
+                  <span>
+                    Elit non consectetur eu dolor deserunt eiusmod deserunt. 
+                    Eu fugiat esse aliqua magna excepteur irure minim. Id tempor esse cillum aliquip enim.
+                  </span>
+                </div>
+                <div className="Card__footer">
                   <button className="button button--primary">Submit</button>
-                </footer>
+                </div>
               </div>
-            </div>   
+
+              <div className="Card">
+                <header className="Card__header Card__header--primary">
+                  <h5 className="title">John Doe</h5>
+                  <h6 className="subtitle color-light">@johndoeishere</h6>
+                </header>
+                <main className="Card__body">
+                  <span>
+                    Est proident minim cupidatat qui dolor pariatur cillum exercitation 
+                    pariatur deserunt ea aliqua esse excepteur. Exercitation do amet 
+                    occaecat dolore sint in pariatur aliqua anim Lorem.
+                  </span>
+                </main>
+              </div>
             `}
           </PreviewHighlight>
         </Preview>
@@ -94,7 +101,7 @@ const Card = props => {
         </article>
       </section>
 
-      <section id="card-with-thumbnail" className="mg-bottom-x-large">
+      <section id="card-with-thumbnail" className="fr-article-section">
         <div className="heading">
           <h4 className="title">Card with Thumbnail</h4>
         </div>

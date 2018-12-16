@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 class GlobalHeader extends Component {
 	render() {
@@ -8,15 +8,15 @@ class GlobalHeader extends Component {
 				<div className="navbar navbar--primary">
 					<div className="container flex jc-between">
 						<div id="master-brand" className="navbar__block">
-							<span id="master-logo">
-								<Link to="/">Formare</Link>
-							</span>
+							<div className="pd-left pd-right">
+								<NavLink to="/" className="color-lighter fw-semibold fs-x-large">Formare</NavLink>
+							</div>	
 						</div>
 						<div id="master-nav" className="navbar__block navbar__block--expanded">
 							<nav className="nav">
 								<ul className="nav__list">
 									<li className="nav__item">
-										<Link to="/docs" className="nav__link">Documentation</Link>
+										<NavLink className="nav__link" to="/docs">Documentation</NavLink>
 									</li>
 								</ul>
 							</nav>
