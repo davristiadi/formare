@@ -24,11 +24,6 @@ const Alert = props => {
             <div className="Alert">
               <div className="Alert__text">This is just a simple alert.</div>
             </div>
-            <div className="Alert">
-              <div className="Alert__icon">
-                <i className="fas fa-check"></i>
-              </div>
-            </div>
           </PreviewDisplay>
           <PreviewHighlight lang="html">
             {`
@@ -43,77 +38,61 @@ const Alert = props => {
         <header className="heading">
           <h4 className="title">Themes</h4>
         </header>
-        <p>
-          Alerts come with different <a href="">themes</a> that you can use accordingly for different contexts.
-        </p>
+        <p>Alerts come with different <a href="">themes</a> that can be used accordingly in different contexts</p>
         <ul>
-          <li> <code>{`.alert--primary`}</code> </li>
-          <li> <code>{`.alert--secondary`}</code> </li>
-          <li> <code>{`.alert--success`}</code> </li>
-          <li> <code>{`.alert--danger`}</code> </li>
-          <li> <code>{`.alert--warning`}</code> </li>
-          <li> <code>{`.alert--light`}</code> </li>
-          <li> <code>{`.alert--dark`}</code> </li>
+          <li> <code>{`.Alert--primary`}</code> </li>
+          <li> <code>{`.Alert--secondary`}</code> </li>
+          <li> <code>{`.Alert--success`}</code> </li>
+          <li> <code>{`.Alert--danger`}</code> </li>
+          <li> <code>{`.Alert--warning`}</code> </li>
+          <li> <code>{`.Alert--light`}</code> </li>
+          <li> <code>{`.Alert--dark`}</code> </li>
         </ul>
         <Preview>
           <PreviewDisplay>
-            <div className="alert alert--primary mg-bottom">
-              <div className="alert__body">
-                This is an alert with primary theme!
-              </div>
+            <div className="Alert Alert--primary mg-bottom">
+              <div className="Alert__text"> This is an alert with primary theme! </div>
             </div>
-            <div className="alert alert--secondary mg-bottom">
-              <div className="alert__body">
-                This is an alert with secondary theme!
-              </div>
+            <div className="Alert Alert--secondary mg-bottom">
+              <div className="Alert__text"> This is an alert with secondary theme! </div>
             </div>
-            <div className="alert alert--success mg-bottom">
-              <div className="alert__body">
-                This is an alert with success theme!
-              </div>
+            <div className="Alert Alert--success mg-bottom">
+              <div className="Alert__text"> This is an alert with success theme! </div>
             </div>
-            <div className="alert alert--warning mg-bottom">
-              <div className="alert__body">
-                This is an alert with warning theme!
-              </div>
+            <div className="Alert Alert--warning mg-bottom">
+              <div className="Alert__text"> This is an alert with warning theme! </div>
             </div>
-            <div className="alert alert--danger mg-bottom">
-              <div className="alert__body">
-                This is an alert with danger theme!
-              </div>
+            <div className="Alert Alert--danger mg-bottom">
+              <div className="Alert__text"> This is an alert with danger theme! </div>
             </div>
-            <div className="alert alert--light mg-bottom">
-              <div className="alert__body">
-                This is an alert with light theme!
-              </div>
+            <div className="Alert Alert--light mg-bottom">
+              <div className="Alert__text"> This is an alert with light theme! </div>
             </div>
-            <div className="alert alert--dark">
-              <div className="alert__body">
-                This is an alert with dark theme!
-              </div>
-            </div>
+            <div className="Alert Alert--dark">
+              <div className="Alert__text"> This is an alert with dark theme! </div>
+            </div>  
           </PreviewDisplay>
           <PreviewHighlight lang="html">
-            {`<div class="alert alert--primary mg-bottom">
-              <div class="alert__body">This is an alert with primary theme!</div>
+            {`<div className="Alert Alert--primary mg-bottom">
+              <div className="Alert__text"> This is an alert with primary theme! </div>
             </div>
-            <div class="alert alert--secondary mg-bottom">
-              <div class="alert__body">This is an alert with secondary theme!</div>
+            <div className="Alert Alert--secondary mg-bottom">
+              <div className="Alert__text"> This is an alert with secondary theme! </div>
             </div>
-            <div class="alert alert--success mg-bottom">
-              <div class="alert__body">This is an alert with success theme!</div>
+            <div className="Alert Alert--success mg-bottom">
+              <div className="Alert__text"> This is an alert with success theme! </div>
             </div>
-            <div class="alert alert--warning mg-bottom">
-              <div class="alert__body">This is an alert with warning theme!</div>
+            <div className="Alert Alert--warning mg-bottom">
+              <div className="Alert__text"> This is an alert with warning theme! </div>
             </div>
-            <div class="alert alert--danger mg-bottom">
-              <div class="alert__body">This is an alert with danger theme!</div>
+            <div className="Alert Alert--danger mg-bottom">
+              <div className="Alert__text"> This is an alert with danger theme! </div>
             </div>
-            <div class="alert alert--light mg-bottom">
-              <div class="alert__body">This is an alert with light theme!</div>
+            <div className="Alert Alert--light mg-bottom">
+              <div className="Alert__text"> This is an alert with light theme! </div>
             </div>
-            <div class="alert alert--dark">
-              <div class="alert__body">This is an alert with dark theme!</div>
+            <div className="Alert Alert--dark">
+              <div className="Alert__text"> This is an alert with dark theme! </div>
             </div>
             `}
           </PreviewHighlight>

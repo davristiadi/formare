@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
-class GlobalHeader extends Component {
+class MainHeader extends Component {
 	render() {
 		return (
-			<header className="fr-global-header">
+			<header className="MainHeader">
 				<div className="navbar navbar--primary">
 					<div className="container flex jc-between">
 						<div id="master-brand" className="navbar__block">
@@ -40,4 +40,4 @@ class GlobalHeader extends Component {
 	}
 }
 
-export default GlobalHeader;
+export default MainHeader;

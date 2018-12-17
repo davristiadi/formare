@@ -9,9 +9,9 @@ class DocsMenu extends Component {
     const classes = {
       menuItem: route => {
         return classNames(
-          `fr-menu__item`,
+          `Menu__item`,
           history.location.pathname === route.path
-            ? "fr-menu__item--active"
+            ? "Menu__item--active"
             : null
         );
       }
@@ -34,27 +34,34 @@ class DocsMenu extends Component {
     const renderMenuItems = (route) => {
       if(route.hasChildren) {
         return (
-          <ul className="fr-menu__list">
-            {renderRoute(route)}
-          </ul>
+          <li className="Menu__item">
+            <Link className="Menu__label" to={route.path}>{route.title}</Link>
+            <ul className="Menu__list">
+              {renderRoute(route)}
+            </ul>
+          </li>
         )
       }
-
-      return null;
+      else {
+        return (
+          <li className="Menu__item">
+            <Link className="Menu__label" to={route.path}>{route.title}</Link>
+          </li>
+        )
+      }
     }
 
     return (
-      <div className="fr-menu">
-        { routes.map(route => {
-          return (
-            <Fragment>
-              <span className="fr-menu__label">
-                <Link to={route.path}>{route.title}</Link>
-              </span>
-              { renderMenuItems(route) }
-            </Fragment>
-          )
-        })}
+      <div className="Menu">
+        <ul className="Menu__list">
+          { routes.map(route => {
+            return (
+              <Fragment>
+                { renderMenuItems(route) }
+              </Fragment>
+            )
+          })}
+        </ul>
       </div>
     );
   }

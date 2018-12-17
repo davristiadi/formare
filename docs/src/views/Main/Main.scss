@@ -1,0 +1,28 @@
+@import '~scss/vendor/abstracts';
+@import '../../../../scss/layout/structure';
+
+.Main {
+  position: relative;
+}
+
+.MainHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1500;
+  
+  #master-nav {
+    display: none;
+  }
+
+  @include media(md) {
+    #master-nav {
+      display: flex;
+    }
+  }
+}
+
+.MainContent {
+  padding-top: 5em;
+}

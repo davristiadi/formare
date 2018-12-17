@@ -2,7 +2,7 @@ import React from "react";
 import './Card.scss';
 import { Preview, PreviewDisplay, PreviewHighlight } from "components/Preview";
 import { Highlight } from "components/Highlight";
-import { default as DummyPhoto } from "../../../../../assets/images/dummy-photo.jpeg";
+import { default as PhotoDummy } from "../../../../../assets/images/dummy-photo.jpeg";
 
 const Card = props => {
   return (
@@ -10,7 +10,7 @@ const Card = props => {
       <div className="fr-article-heading">
         <h2 className="fr-article-title">Card</h2>
         <h5 className="fr-article-subtitle">
-          
+          Duis irure ullamco ullamco anim aute labore mollit.
         </h5>
       </div>
       <section id="overview" className="fr-article-section">
@@ -40,17 +40,19 @@ const Card = props => {
               </div>
               <div className="grid grid-6">
                 <div className="Card">
-                  <header className="Card__header">
-                    <h5 className="title">Formare CSS Framework</h5>
-                    <h6 className="subtitle color-gray">@formare</h6>
-                  </header>
-                  <main className="Card__body">
-                    <div className="mg-bottom">
-                      Est proident minim cupidatat qui dolor pariatur cillum exercitation 
-                      pariatur deserunt ea aliqua esse excepteur. Exercitation do amet 
-                      occaecat dolore sint in pariatur aliqua anim Lorem. <a href="/">#css #frameworkl</a>
-                    </div>
-                  </main>
+                  <div className="Card__header">
+                    <h5 className="title">Card Title</h5>
+                    <h6 className="subtitle color-gray">This is a subtitle</h6>
+                  </div>
+                  <div className="Card__body">
+                    <span>
+                      Elit non consectetur eu dolor deserunt eiusmod deserunt. 
+                      Eu fugiat esse aliqua magna excepteur irure minim. Id tempor esse cillum aliquip enim.
+                    </span>
+                  </div>
+                  <div className="Card__footer">
+                    <button className="button button--primary">Submit</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -70,20 +72,6 @@ const Card = props => {
                 <div className="Card__footer">
                   <button className="button button--primary">Submit</button>
                 </div>
-              </div>
-
-              <div className="Card">
-                <header className="Card__header Card__header--primary">
-                  <h5 className="title">John Doe</h5>
-                  <h6 className="subtitle color-light">@johndoeishere</h6>
-                </header>
-                <main className="Card__body">
-                  <span>
-                    Est proident minim cupidatat qui dolor pariatur cillum exercitation 
-                    pariatur deserunt ea aliqua esse excepteur. Exercitation do amet 
-                    occaecat dolore sint in pariatur aliqua anim Lorem.
-                  </span>
-                </main>
               </div>
             `}
           </PreviewHighlight>
@@ -112,15 +100,56 @@ const Card = props => {
         </p>
         <Preview>
           <PreviewDisplay>
-            <div className="card" style={{maxWidth: '400px'}}>
-              <div className="card__image">
-                <img src={DummyPhoto} />
+            <div className="grids">
+              <div className="grid grid-6">
+                <div className="Card">
+                  <div className="Card__image">
+                    <img src={PhotoDummy} />
+                  </div>
+                  <div className="Card__body">
+                    <h5 className="title">Card Title</h5>
+                    <h6 className="subtitle color-gray">This is a subtitle.</h6>
+                    <p>
+                      Tempor eiusmod excepteur esse culpa qui elit sint aliqua
+                      dolor. Qui mollit esse officia labore deserunt laborum
+                      dolore. Adipisicing mollit dolore eiusmod aute pariatur
+                      nulla culpa laborum culpa et dolore aute aute. Aute
+                      voluptate excepteur velit proident laboris qui.
+                    </p>
+                  </div>
+                  <div className="Card__footer">
+                    <button className="button button--primary">Submit</button>
+                  </div>
+                </div>
               </div>
-              <div className="card__body">
-                <h4 className="title">Card Title</h4>
-                <h6 className="subtitle color-gray">
-                  This is a subtitle.
-                </h6>
+              <div className="grid grid-6">
+                <div className="Card">
+                  <div className="Card__header">
+                    <h5 className="title">Card Title</h5>
+                    <h6 className="subtitle color-gray">This is a subtitle. </h6>
+                  </div>
+                  <div className="Card__image">
+                    <img src={PhotoDummy} />  
+                  </div>
+                  <div className="Card__body">
+                    Culpa ea reprehenderit Lorem ad voluptate. Ad voluptate eu cillum reprehenderit. 
+                    Nisi sit laborum dolore exercitation.
+                  </div>
+                  <div className="Card__footer">
+                    <button className="button button--primary">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </PreviewDisplay>
+          <PreviewHighlight lang="html">
+            {`<div className="Card">
+              <div className="Card__image">
+                <img src="path/to/image" />
+              </div>
+              <div className="Card__body">
+                <h5 className="title">Card Title</h5>
+                <h6 className="subtitle color-gray">This is a subtitle.</h6>
                 <p>
                   Tempor eiusmod excepteur esse culpa qui elit sint aliqua
                   dolor. Qui mollit esse officia labore deserunt laborum
@@ -129,35 +158,10 @@ const Card = props => {
                   voluptate excepteur velit proident laboris qui.
                 </p>
               </div>
-              <div className="card__footer">
+              <div className="Card__footer">
                 <button className="button button--primary">Submit</button>
               </div>
             </div>
-          </PreviewDisplay>
-          <PreviewHighlight lang="html">
-            {`<div className="card">
-                <div className="card__image">
-                  <img src="path/to/image" />
-                </div>
-                <div className="card__body">
-                  <div className="heading">
-                    <h4 className="title">Card Title</h4>
-                    <h6 className="subtitle color-gray">
-                      This is a subtitle.
-                    </h6>
-                  </div>
-                  <p>
-                    Tempor eiusmod excepteur esse culpa qui elit sint aliqua
-                    dolor. Qui mollit esse officia labore deserunt laborum
-                    dolore. Adipisicing mollit dolore eiusmod aute pariatur
-                    nulla culpa laborum culpa et dolore aute aute. Aute
-                    voluptate excepteur velit proident laboris qui.
-                  </p>
-                </div>
-                <div className="card__footer">
-                  <button className="button button--primary">Submit</button>
-                </div>
-              </div>
             `}
           </PreviewHighlight>
         </Preview>
@@ -173,7 +177,7 @@ const Card = props => {
             <PreviewDisplay>
               <div className="card card--dark card--has-overlay" style={{maxWidth: '400px'}}>
                 <div className="card__image">
-                  <img src={DummyPhoto} />
+                  <img src={PhotoDummy} />
                 </div>
                 <div className="card__body">
                   <h5 class="title">Lorem ea non cillum.</h5>
@@ -208,7 +212,7 @@ const Card = props => {
                 <div className="grid grid-6 mg-bottom">
                   <div className="card card--dark card--has-overlay">
                     <div className="card__image">
-                      <img src={DummyPhoto} />
+                      <img src={PhotoDummy} />
                     </div>
                     <div className="card__body">
                       <h5 class="title">Lorem ea non cillum.</h5>
@@ -239,7 +243,7 @@ const Card = props => {
                 <div className="grid grid-6 mg-bottom">
                   <div className="card card--transparent">
                     <div className="card__image">
-                      <img src={DummyPhoto} />
+                      <img src={PhotoDummy} />
                     </div>
                     <div className="card__body">
                       <article className="article">

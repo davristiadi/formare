@@ -10,11 +10,11 @@ const Docs = props => {
 	return (
 		<Fragment>
 			<div className="container">
-				<div className="fr-docs">
-					<aside className="fr-docs-sidebar">
+				<div className="Docs">
+					<aside className="DocsSidebar">
 						<DocsMenu {...props} />
 					</aside>
-					<main className="fr-docs-content">
+					<main className="DocsContent">
 						<Switch>
 							{
 								routes.map(route => {

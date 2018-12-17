@@ -1,0 +1,37 @@
+@import "~scss/vendor/abstracts";
+@import "../../../../../scss/layout/structure";
+
+.Docs {
+  @extend .structure;
+  flex-direction: column;
+    
+  @include media(md) {
+    flex-direction: row;
+  }
+}
+
+.DocsSidebar {
+  display: none;
+  position: sticky;
+  height: calc(100vh - 5em);
+  top: 5em;
+  flex: 0 0 250px;
+  border-right: solid 1px gray(100);
+  padding-top: spacing(large);
+  padding-right: spacing(large);
+
+  @include media(md) {
+    display: flex;
+  }
+}
+
+.DocsContent {
+  @extend .structure;
+  padding: spacing(base);
+
+  @include media(lg) {
+    padding-top: spacing(large);
+    padding-left: spacing(large);
+    padding-right: spacing(base);
+  }
+}
