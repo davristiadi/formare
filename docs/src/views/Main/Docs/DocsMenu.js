@@ -51,19 +51,34 @@ class DocsMenu extends Component {
       }
     }
 
+    // return (
+    //   <div className="Menu">
+    //     <ul className="Menu__list">
+    //       { routes.map(route => {
+    //         return (
+    //           <Fragment>
+    //             { renderMenuItems(route) }
+    //           </Fragment>
+    //         )
+    //       })}
+    //     </ul>
+    //   </div>
+    // );
+
     return (
       <div className="Menu">
         <ul className="Menu__list">
-          { routes.map(route => {
-            return (
-              <Fragment>
-                { renderMenuItems(route) }
-              </Fragment>
-            )
-          })}
+          <li className="Menu__item">
+            <label className="Menu__label">
+              <a href="#">Category I</a>
+            </label>
+            <ul className="Menu__list">
+              <li className="Menu__item"></li>
+            </ul>
+          </li>
         </ul>
       </div>
-    );
+    )
   }
 }
 

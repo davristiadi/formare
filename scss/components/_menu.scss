@@ -1,59 +1,62 @@
-.Menu {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  
-  &__label,
-  &__item {
-    > a {
-      display: block;
-      transition: $transition;
-    }
-  }
-  
-  &__label {
-    display: block;
-    color: $menu-label-fg-color;
-    font-weight: $menu-label-font-weight;
-    padding-top: $menu-item-spacing-y;
-    padding-bottom: $menu-item-spacing-y;
-    padding-left: $menu-item-spacing-x;
-    padding-right: $menu-item-spacing-x;
-  }
-  
-  &__item {
-    > a {
-      padding-top: $menu-item-spacing-y;
-      padding-bottom: $menu-item-spacing-y;
-      padding-left: $menu-item-spacing-x;
-      padding-right: $menu-item-spacing-x;
 
-      &:hover {
-        color: $menu-item-hovered-fg-color;
-      }
-    }
-  }
+
+
+// .Menu {
+//   display: flex;
+//   flex-direction: column;
+//   flex-grow: 1;
   
-  &__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+//   &__label,
+//   &__item {
+//     > a {
+//       display: block;
+//       transition: $transition;
+//     }
+//   }
+  
+//   &__label {
+//     display: block;
+//     color: $menu-label-fg-color;
+//     font-weight: $menu-label-font-weight;
+//     padding-top: $menu-item-spacing-y;
+//     padding-bottom: $menu-item-spacing-y;
+//     padding-left: $menu-item-spacing-x;
+//     padding-right: $menu-item-spacing-x;
+//   }
+  
+//   &__item {
+//     > a {
+//       padding-top: $menu-item-spacing-y;
+//       padding-bottom: $menu-item-spacing-y;
+//       padding-left: $menu-item-spacing-x;
+//       padding-right: $menu-item-spacing-x;
 
-  &__item {
-    > a {
-      color: $menu-item-fg-color;
-    }
+//       &:hover {
+//         color: $menu-item-hovered-fg-color;
+//       }
+//     }
+//   }
+  
+//   &__list {
+//     list-style: none;
+//     margin: 0;
+//     padding: 0;
+//   }
 
-    &--active {
-      &:not(.Menu__item--label) {
-        > a {
-          color: $menu-item-active-fg-color;
-          font-weight: $menu-item-active-font-weight;
-          background-color: $menu-item-active-bg-color;
-          border-radius: $menu-item-border-radius;
-        }
-      }
-    }
-  }
-}
+//   &__item {
+//     > a {
+//       color: $menu-item-fg-color;
+//     }
+
+//     &--active {
+//       &:not(.Menu__item--label) {
+//         > a {
+//           color: $menu-item-active-fg-color;
+//           font-weight: $menu-item-active-font-weight;
+//           background-color: $menu-item-active-bg-color;
+//           border-radius: $menu-item-border-radius;
+//         }
+//       }
+//     }
+//   }
+// }
