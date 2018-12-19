@@ -109,24 +109,23 @@ const Alert = props => {
         </p>
         <Preview>
           <PreviewDisplay>
-            <div className="alert alert--warning mg-bottom">
-              <div className="alert__icon">
+            <div className="Alert Alert--warning mg-bottom">
+              <div className="Alert__icon">
                 <i className="fas fa-exclamation-triangle" />
               </div>
-              <span>This is an alert with an icon</span>
-              {/* <div className="alert__body">This is an alert with an icon!</div> */}
+              <div className="Alert__text">This is an alert with an icon!</div>
             </div>
-            <div className="alert alert--success mg-bottom">
-              <div className="alert__icon">
+            <div className="Alert Alert--success mg-bottom">
+              <div className="Alert__icon">
                 <i className="fas fa-check" />
               </div>
-              <div className="alert__body">This is an alert with an icon!</div>
+              <div className="Alert__text">This is an alert with an icon!</div>
             </div>
-            <div className="alert alert--danger">
-              <div className="alert__icon">
+            <div className="Alert Alert--danger">
+              <div className="Alert__icon">
                 <i className="fas fa-times" />
               </div>
-              <div className="alert__body">This is an alert with an icon!</div>
+              <div className="Alert__text">This is an alert with an icon!</div>
             </div>
           </PreviewDisplay>
           <PreviewHighlight lang="html">

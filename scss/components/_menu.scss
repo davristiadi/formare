@@ -1,62 +1,45 @@
-
-
-
-// .Menu {
-//   display: flex;
-//   flex-direction: column;
-//   flex-grow: 1;
+.Menu {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   
-//   &__label,
-//   &__item {
-//     > a {
-//       display: block;
-//       transition: $transition;
-//     }
-//   }
-  
-//   &__label {
-//     display: block;
-//     color: $menu-label-fg-color;
-//     font-weight: $menu-label-font-weight;
-//     padding-top: $menu-item-spacing-y;
-//     padding-bottom: $menu-item-spacing-y;
-//     padding-left: $menu-item-spacing-x;
-//     padding-right: $menu-item-spacing-x;
-//   }
-  
-//   &__item {
-//     > a {
-//       padding-top: $menu-item-spacing-y;
-//       padding-bottom: $menu-item-spacing-y;
-//       padding-left: $menu-item-spacing-x;
-//       padding-right: $menu-item-spacing-x;
+  $menu: &;
 
-//       &:hover {
-//         color: $menu-item-hovered-fg-color;
-//       }
-//     }
-//   }
-  
-//   &__list {
-//     list-style: none;
-//     margin: 0;
-//     padding: 0;
-//   }
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 
-//   &__item {
-//     > a {
-//       color: $menu-item-fg-color;
-//     }
+  &__item {
+    > #{$menu}__link { 
+      display: block;
+      color: inherit;
+      font-weight: font-weight(bold);
+      padding: spacing(small) spacing(base);
+      transition: $transition;
+    }
 
-//     &--active {
-//       &:not(.Menu__item--label) {
-//         > a {
-//           color: $menu-item-active-fg-color;
-//           font-weight: $menu-item-active-font-weight;
-//           background-color: $menu-item-active-bg-color;
-//           border-radius: $menu-item-border-radius;
-//         }
-//       }
-//     }
-//   }
-// }
+    &--hasSubmenu {
+      #{$menu}__item {  
+        > #{$menu}__link {
+          font-weight: font-weight(regular);
+          color: $gray;
+        }
+
+        &--isActive {
+          > #{$menu}__link {
+            background-color: theme-color-shade(primary, -90);
+            color: theme-color(primary);
+            font-weight: font-weight(semibold);
+            border-radius: border-radius(base);
+          }
+        }
+      }
+    }
+  }
+
+  @each $theme, $color in $theme-colors {
+    
+  }
+}

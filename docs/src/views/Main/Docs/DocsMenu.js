@@ -11,18 +11,18 @@ class DocsMenu extends Component {
         return classNames(
           `Menu__item`,
           history.location.pathname === route.path
-            ? "Menu__item--active"
+            ? "Menu__item--isActive"
             : null
         );
       }
     };
 
-    const renderRoute = route => {
+    const renderSubmenuItem = route => {
       if (route.hasChildren) {
         return route.hasChildren.map(subroute => {
           return (
             <li className={classes.menuItem(subroute)}>
-              <Link to={subroute.path}>{subroute.title}</Link>
+              <Link className="Menu__link" to={subroute.path}>{subroute.title}</Link>
             </li>
           );
         });
@@ -31,51 +31,28 @@ class DocsMenu extends Component {
       return null;
     };
 
-    const renderMenuItems = (route) => {
-      if(route.hasChildren) {
-        return (
-          <li className="Menu__item">
-            <Link className="Menu__label" to={route.path}>{route.title}</Link>
-            <ul className="Menu__list">
-              {renderRoute(route)}
-            </ul>
-          </li>
-        )
-      }
-      else {
-        return (
-          <li className="Menu__item">
-            <Link className="Menu__label" to={route.path}>{route.title}</Link>
-          </li>
-        )
-      }
+    const renderSubmenu = route => {
+      return <ul className="Menu__list">{renderSubmenuItem(route)}</ul>
     }
 
-    // return (
-    //   <div className="Menu">
-    //     <ul className="Menu__list">
-    //       { routes.map(route => {
-    //         return (
-    //           <Fragment>
-    //             { renderMenuItems(route) }
-    //           </Fragment>
-    //         )
-    //       })}
-    //     </ul>
-    //   </div>
-    // );
+    const renderMenuItems = route => {
+      return (
+        <li className={`Menu__item ${route.hasChildren ? 'Menu__item--hasSubmenu' : ''}`}>
+          <Link className="Menu__link" to={route.path}>{route.title}</Link>
+          { route.hasChildren ? renderSubmenu(route) : null }
+          
+          {/* { route.hasChildren
+            ? routes.map(route => <Fragment>{renderRoute(route)}</Fragment>)
+            : null
+          } */}
+        </li>
+      )
+    }
 
     return (
       <div className="Menu">
         <ul className="Menu__list">
-          <li className="Menu__item">
-            <label className="Menu__label">
-              <a href="#">Category I</a>
-            </label>
-            <ul className="Menu__list">
-              <li className="Menu__item"></li>
-            </ul>
-          </li>
+          { routes.map(route => <Fragment>{ renderMenuItems(route) }</Fragment>) }
         </ul>
       </div>
     )
