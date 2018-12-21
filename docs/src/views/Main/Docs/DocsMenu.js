@@ -40,11 +40,6 @@ class DocsMenu extends Component {
         <li className={`Menu__item ${route.hasChildren ? 'Menu__item--hasSubmenu' : ''}`}>
           <Link className="Menu__link" to={route.path}>{route.title}</Link>
           { route.hasChildren ? renderSubmenu(route) : null }
-          
-          {/* { route.hasChildren
-            ? routes.map(route => <Fragment>{renderRoute(route)}</Fragment>)
-            : null
-          } */}
         </li>
       )
     }

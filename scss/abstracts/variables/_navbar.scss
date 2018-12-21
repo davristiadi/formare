@@ -1,0 +1,13 @@
+$navbar-transition: $transition !default;
+$navbar-background: $lighter !default;
+$navbar-color: color-yiq($navbar-background) !default;
+$navbar-hovered-color: $primary-color;
+$navbar-height: 5em;
+$navbar-heights: () !default;
+$navbar-heights: map-merge((
+	x-small: ($navbar-height * .5),
+	small: ($navbar-height * .75),
+	base: ($navbar-height * 1),
+	large: ($navbar-height * 1.5),
+	x-large: ($navbar-height * 2)
+), $navbar-heights);
