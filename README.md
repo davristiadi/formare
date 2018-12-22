@@ -5,8 +5,14 @@ Currently, Formare is under development, but you are more than welcome to try us
 
 ## Installation
 ### NPM
-Install the latest version of Formare using NPM (Formare isn't available on Yarn as of yet).
+Install the latest version of Formare using NPM
 
 ```
 npm install formare
+```
+
+### Yarn
+
+```
+yarn install formare
 ```
