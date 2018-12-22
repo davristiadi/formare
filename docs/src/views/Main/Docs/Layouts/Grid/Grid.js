@@ -1,8 +1,6 @@
 import React from "react";
 import "./Grid.scss";
 import { Preview, PreviewDisplay, PreviewHighlight } from "components/Preview";
-import { Highlight } from "components/Highlight";
-
 const Grid = props => {
   return (
     <article id="grids" className="fr-article">
@@ -39,21 +37,25 @@ const Grid = props => {
             layout (notice the singular declaration).
           </li>
         </ul>
-        <div className="fr-grids-example">
-          <div className="grids">
-            <div className="grid">First Grid</div>
-            <div className="grid">Second Grid</div>
-            <div className="grid">Third Grid</div>
-          </div>
-        </div>
-        <Highlight lang="html">
-          {`<div class="grids">
-              <div class="grid">First Grid</div>
-              <div class="grid">Second Grid</div>
-              <div class="grid">Third Grid</div>
-          </div>
-          `}
-        </Highlight>
+        <Preview>
+          <PreviewDisplay>
+            <div className="fr-grids-example">
+              <div className="grids">
+                <div className="grid">First Grid</div>
+                <div className="grid">Second Grid</div>
+                <div className="grid">Third Grid</div>
+              </div>
+            </div>
+          </PreviewDisplay>
+          <PreviewHighlight lang="html">
+            {`<div className="grids">
+                <div className="grid">First Grid</div>
+                <div className="grid">Second Grid</div>
+                <div className="grid">Third Grid</div>
+              </div>
+            `}
+          </PreviewHighlight>
+        </Preview>
       </section>
     </article>
   );

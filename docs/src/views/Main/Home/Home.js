@@ -18,12 +18,12 @@ const Home = props => {
 							</h1>
 						</div>
 						<div className="flex jc-center">
-							<button className="button button--large button--raised button--secondary mg-right-large">
-								<i className="fas fa-download mg-right-large" />
+							<button className="Button Button--large Button--raised Button--secondary mg-right-large">
+								<i className="Icon fas fa-download mg-right-large" />
 								Download
 							</button>
-							<button className="button button--light button--raised button--large">
-								<i className="fas fa-rocket mg-right-large" />
+							<button className="Button Button--light Button--raised Button--large">
+								<i className="Icon fas fa-rocket mg-right-large" />
 								Getting Started
 							</button>
 						</div>

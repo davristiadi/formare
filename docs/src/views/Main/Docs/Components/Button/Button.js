@@ -20,19 +20,21 @@ const Button = props => {
           ullamco enim amet magna anim. Elit fugiat nulla aliqua deserunt culpa
           ipsum fugiat.
         </p>
-        <div className="mg-top-large mg-bottom-large">
-          <button className="button mg-right">Default Button</button>
-          <button className="button button--primary mg-right">
-            Primary Button
-          </button>
-          <button className="button button--clear">Clear Button</button>
-        </div>
-        <Highlight lang="html">
-          {`<button class="button mg-right">Default Button</button>
-            <button class="button button--primary">Primary Button</button>
-            <button class="button button--clear">Clear Button</button>
-          `}
-        </Highlight>
+        <Preview>
+          <PreviewDisplay>
+            <button className="Button mg-right">Default Button</button>
+            <button className="Button Button--primary mg-right">Primary Button</button>
+            <button className="Button Button--primary mg-right" disabled>Disabled Button</button>
+            <button className="Button Button--clear">Clear Button</button>
+          </PreviewDisplay>
+          <PreviewHighlight lang="html">
+            {`<button class="Button">Default Button</button>
+            <button class="Button Button--primary">Primary Button</button>
+            <button class="Button Button--primary" disabled>Disabled Button</button>
+            <button class="Button Button--clear">Clear Button</button>
+            `}
+          </PreviewHighlight>
+        </Preview>
       </section>
       <section id="themes" className="fr-article-section">
         <div className="heading">
@@ -46,43 +48,41 @@ const Button = props => {
         <Preview>
           <PreviewDisplay>
             <div className="mg-bottom">
-              <button className="button button--primary mg-right">Primary</button>
-              <button className="button button--secondary mg-right">Secondary</button>
-              <button className="button button--success mg-right">Success</button>
-              <button className="button button--danger mg-right">Danger</button>
-              <button className="button button--warning mg-right">Warning</button>
+              <button className="Button Button--primary mg-right">Primary</button>
+              <button className="Button Button--secondary mg-right">Secondary</button>
+              <button className="Button Button--success mg-right">Success</button>
+              <button className="Button Button--danger mg-right">Danger</button>
+              <button className="Button Button--warning mg-right">Warning</button>
             </div>
             <div>
-              <button className="button button--dark mg-right">Dark</button>
-              <button className="button button--light">Light</button>
+              <button className="Button Button--dark mg-right">Dark</button>
+              <button className="Button Button--light">Light</button>
             </div>
           </PreviewDisplay>
           <PreviewHighlight lang="html">
-            {`<button class="button">Default</button>
-              <button class="button button--primary">Primary</button>
-              <button class="button button--secondary">Secondary</button>
-              <button class="button button--success">Success</button>
-              <button class="button button--danger">Danger</button>
-              <button class="button button--warning">Warning</button>
-              <button class="button button--dark">Dark</button>
-              <button class="button button--light">Light</button>
+            {`<button class="Button">Default</button>
+              <button class="Button Button--primary">Primary</button>
+              <button class="Button Button--secondary">Secondary</button>
+              <button class="Button Button--success">Success</button>
+              <button class="Button Button--danger">Danger</button>
+              <button class="Button Button--warning">Warning</button>
+              <button class="Button Button--dark">Dark</button>
+              <button class="Button Button--light">Light</button>
               `}
           </PreviewHighlight>
         </Preview>
       </section>
-
       <section id="pill" className="fr-article-section">
         <div className="heading">
-          <h5 className="title">Rounded</h5>
+          <h4 className="title">Rounded</h4>
         </div>
         <p>Prepend <code>{`.button-pill`}</code> modifier class to transform your button component to a pill-like shape.</p>
         <Preview>
           <PreviewDisplay>
             <div>
-              <button className="button button--pill mg-right">Rounded Button</button>
-              <button className="button button--pill button--primary mg-right">Primary Button</button>
-              <button className="button button--pill button--secondary mg-right">Rounded Button</button>
-              <button className="button button--pill button--raised button--primary mg-right">Raised Button </button>
+              <button className="Button Button--pill mg-right">Rounded Button</button>
+              <button className="Button Button--pill Button--primary mg-right">Primary Button</button>
+              <button className="Button Button--pill Button--primary mg-right" disabled>Primary Button</button>
             </div>
           </PreviewDisplay>
           <PreviewHighlight lang="html">
@@ -93,52 +93,38 @@ const Button = props => {
 
       <section id="raised" className="fr-article-section">
         <div className="heading">
-          <h5 className="title">Raised</h5>
+          <h4 className="title">Raised</h4>
         </div>
-        <p>Aliquip et sunt occaecat nisi commodo velit quis culpa anim.</p>
+        <p>Id eu Lorem exercitation ex occaecat quis enim cupidatat incididunt sunt nostrud minim. Esse nulla in Lorem elit commodo.</p>
         <Preview>
           <PreviewDisplay>
             <div className="mg-bottom">
-              <button className="button button--primary button--raised mg-right">
-                Primary
-              </button>
-              <button className="button button--secondary button--raised mg-right">
-                Secondary
-              </button>
-              <button className="button button--success button--raised mg-right">
-                Success
-              </button>
-              <button className="button button--danger button--raised mg-right">
-                Danger
-              </button>
-              <button className="button button--warning button--raised mg-right">
-                Warning
-              </button>
+              <button className="Button Button--primary Button--raised mg-right">Primary</button>
+              <button className="Button Button--secondary Button--raised mg-right">Secondary</button>
+              <button className="Button Button--success Button--raised mg-right">Success</button>
+              <button className="Button Button--danger Button--raised mg-right">Danger</button>
+              <button className="Button Button--warning Button--raised mg-right">Warning</button>
             </div>
             <div>
-              <button className="button button--dark button--raised mg-right">
-                Dark
-              </button>
-              <button className="button button--light button--raised">
-                Light
-              </button>
+              <button className="Button Button--dark Button--raised mg-right">Dark</button>
+              <button className="Button Button--light Button--raised">Light</button>
             </div>
           </PreviewDisplay>
           <PreviewHighlight lang="html">
-            {`<button class="button button--raised">Button</button>
-              <button class="button button--primary button--raised">Primary</button>
-              <button class="button button--secondary button--raised">Secondary</button>
-              <button class="button button--success button--raised">Success</button>
-              <button class="button button--danger button--raised">Danger</button>
-              <button class="button button--warning button--raised">Warning</button>
-              <button class="button button--dark button--raised">Dark</button>
-              <button class="button button--light button--raised">Light</button>
+            {`<button class="Button Button--raised">Button</button>
+              <button class="Button Button--primary Button--raised">Primary</button>
+              <button class="Button Button--secondary Button--raised">Secondary</button>
+              <button class="Button Button--success Button--raised">Success</button>
+              <button class="Button Button--danger Button--raised">Danger</button>
+              <button class="Button Button--warning Button--raised">Warning</button>
+              <button class="Button Button--dark Button--raised">Dark</button>
+              <button class="Button Button--light Button--raised">Light</button>
             `}
           </PreviewHighlight>
         </Preview>
       </section>  
 
-      <div>
+      <section id="sizes" className="fr-article-section">
         <div className="heading">
           <h4 className="title">Sizes</h4>
         </div>
@@ -151,40 +137,30 @@ const Button = props => {
           We've prepared several predefined sizes that you can use right
           out-of-the-box:
           <ul>
-            <li>
-              <code>{`.button--x-small`}</code>
-            </li>
-            <li>
-              <code>{`.button--small`}</code>
-            </li>
-            <li>
-              <code>{`.button--large`}</code>
-            </li>
-            <li>
-              <code>{`.button--x-large`}</code>
-            </li>
+            <li><code>{`.Button--x-small`}</code></li>
+            <li><code>{`.Button--small`}</code></li>
+            <li><code>{`.Button--large`}</code></li>
+            <li><code>{`.Button--x-large`}</code></li>
           </ul>
         </p>
         <Preview>
           <PreviewDisplay>
-            <button className="button button--x-small mg-right">
-              Extra Small
-            </button>
-            <button className="button button--small mg-right">Small</button>
-            <button className="button mg-right">Base</button>
-            <button className="button button--large mg-right">Large</button>
-            <button className="button button--x-large">Extra Large</button>
+            <button className="Button Button--x-small mg-right">Extra Small</button>
+            <button className="Button Button--small mg-right">Small</button>
+            <button className="Button mg-right">Base</button>
+            <button className="Button Button--large mg-right">Large</button>
+            <button className="Button Button--x-large">Extra Large</button>
           </PreviewDisplay>
           <PreviewHighlight lang="html">
-            {`<button class="button button--x-small">Extra Small</button>
-              <button class="button button--small">Small</button>
-              <button class="button">Base</button>
-              <button class="button button--large">Large</button> 
-              <button class="button button--x-large">Extra Large</button>
+            {`<button class="Button Button--x-small">Extra Small</button>
+              <button class="Button Button--small">Small</button>
+              <button class="Button">Base</button>
+              <button class="Button Button--large">Large</button> 
+              <button class="Button Button--x-large">Extra Large</button>
             `}
           </PreviewHighlight>
         </Preview>
-      </div>
+      </section>
     </article>
   );
 };

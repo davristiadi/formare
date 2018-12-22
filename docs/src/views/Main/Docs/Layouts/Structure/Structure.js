@@ -100,9 +100,9 @@ class Structure extends PureComponent {
                   <div className="structure">
                     <header className="header">
                       <div className="navbar navbar--primary">
-                        <div className="container">
+                        <div className="container flex jc-between">
                           <div className="navbar__block">
-                            <span id="logo">Logo</span>
+                            <span id="logo">Lowgo</span>
                           </div>
                           <div className="navbar__block">
                             <nav className="nav">

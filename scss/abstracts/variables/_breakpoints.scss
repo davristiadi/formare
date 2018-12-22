@@ -13,7 +13,7 @@ $breakpoints: map-merge(
 $container-max-widths: () !default;
 $container-max-widths: map-merge(
   (
-    sm: 540px,
+    sm: 100%,
     md: 720px,
     lg: 960px,
     xl: 1140px

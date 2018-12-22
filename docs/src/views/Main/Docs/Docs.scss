@@ -15,23 +15,25 @@
   position: sticky;
   height: calc(100vh - 5em);
   top: 5em;
-  flex: 0 0 250px;
   border-right: solid 1px gray(100);
   padding-top: spacing(large);
   padding-right: spacing(large);
 
-  @include media(md) {
+  @include media(lg) {
     display: flex;
+    flex: 0 0 250px;
   }
 }
 
 .DocsContent {
   @extend .structure;
-  padding: spacing(base);
-
+  padding-top: spacing(base);
+  padding-left: spacing(base);
+  padding-right: spacing(base);
+  background-color: $white;
+  
   @include media(lg) {
     padding-top: spacing(large);
-    padding-left: spacing(large);
-    padding-right: spacing(base);
+    padding-left: spacing(x-large);
   }
 }

@@ -18,6 +18,9 @@ class MainHeader extends Component {
 									<li className="nav__item">
 										<NavLink className="nav__link" to="/docs">Documentation</NavLink>
 									</li>
+									<li className="nav__item">
+										<NavLink className="nav__link" to="/docs">Github</NavLink>
+									</li>
 								</ul>
 							</nav>
 						</div>
@@ -25,7 +28,7 @@ class MainHeader extends Component {
 							<nav className="nav">
 								<ul className="nav__list">
 									<li className="nav__item">
-										<button className="button button--secondary">
+										<button className="Button Button--raised Button--secondary">
 											<i className="fas fa-download mg-right"></i>
 											Download
 										</button>

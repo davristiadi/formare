@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { MainHeader, MainContent } from '.';
 import './Main.scss';
 
 class Main extends Component {
   render() {
     return (
-      <div className="Main">
+      <Fragment>
         <MainHeader />
         <MainContent />
-      </div>
+      </Fragment>
     );
   }
 }

@@ -1,6 +1,7 @@
-.button {
+.Button {
 	position: relative;
 	font-weight: $button-font-weight;
+	font-family: $button-font-family;
 	padding: $button-padding;
 	color: $button-fg-color;
 	background-color: $button-bg-color;
@@ -14,27 +15,29 @@
 	vertical-align: middle;
 	outline: none;
 	cursor: pointer;
-	
-	&:hover:not(:disabled),
-	&--hovered:not(:disabled) {
-		color: $button-hovered-color;
-		border-color: $button-hovered-border-color;
-		outline: none;
-	}
-	
-	&:focus:not(:disabled):not(.button--clear),
-	&--focused:not(:disabled):not(.button--clear) {
-		color: $button-focused-color;
-		border-color: $button-focused-border-color;
-		box-shadow: 0 0 0.3em 0.2em rgba(tint($primary-color, 15%), 0.3);
-		outline: none;
-	}
-	
-	&:active:not(:disabled),
-	&--active:not(:disabled) {
-		color: $button-active-color;
-		border-color: $button-active-border-color;
-		outline: none;
+
+	&:not(:disabled):not(.Button--clear) {
+		&:hover,
+		&.Button--hovered {
+			color: $button-hovered-color;
+			border-color: $button-hovered-border-color;
+			outline: none;
+		}
+
+		&:focus,
+		&.Button--focused {
+			color: $button-focused-color;
+			border-color: $button-focused-border-color;
+			box-shadow: 0 0 0.3em 0.2em rgba(tint($primary-color, 15%), 0.3);
+			outline: none;
+		}
+
+		&:active, 
+		&.Button--active {
+			color: $button-active-color;
+			border-color: $button-active-border-color;
+			outline: none;
+		}
 	}
 
 	&:disabled,
@@ -44,90 +47,93 @@
 	}
 
 	@each $theme, $color in $theme-colors {
-		&--#{$theme} {	
+		&--#{$theme} {
 			background-color: $color;
 			color: color-yiq($color);
 			border-color: $color;
 
-			&:hover:not(:disabled),
-			&.button--hovered:not(:disabled) {
-				color: color-yiq($color);
-				background-color: tint($color, 20%);
-				border-color: tint($color, 20%);
-			}
-			
-			&:focus:not(:disabled):not(.button--clear),
-			&.button--focused:not(:disabled) {
-				color: color-yiq($color);
-				background-color: tint($color, 20%);
-				border-color: tint($color, 20%);
-				box-shadow: 0 0 0.3em 0.2em rgba($color, 0.3);
-			}
-			
-			&:active:not(:disabled):not(.button--clear),
-			&.button--active:not(:disabled) {
-				color: color-yiq($color);
-				background-color: shade($color, 20%);
-				border-color: shade($color, 20%);
-			}
-
-			&.button--raised {
-				&:not(:disabled) {
-					border-bottom-width: 4px;
-					border-bottom-color: shade($color, 10%);
-				}
-				
-				&:hover:not(:disabled),
-				&.button--hovered:not(:disabled) {
-					border-bottom-color: $color;
-				}
-
-				&:focus:not(:disabled),
-				&.button--focus:not(:disabled) {
-					border-color: tint($color, 10%);
-					border-bottom-width: 4px;
-					border-bottom-color: shade($color, 10%);
-					background-color: tint($color, 10%);
-					margin-top: 0px;
-					outline: none;
-				}
-
-				&:active:not(:disabled),
-				&.button--active:not(:disabled) {
-					border-bottom-width: 1px;
-					border-bottom-color: shade($color, 20%);
-					background-color: shade($color, 20%);
-					margin-top: 3px;
-					outline: none;
-				}
-
-			}
-
-			&.button--outlined {
-				color: $color;
-				background-color: transparent;
-
-				&:hover:not(:disabled),
-				&.button--hovered:not(:disabled) {
+			&:not(:disabled):not(.Button--clear) {
+				&:hover,
+				&.Button--hovered {
 					color: color-yiq($color);
-					background-color: tint($color, 10%);
-					border-color: tint($color, 10%);
+					background-color: tint($color, 20%);
+					border-color: tint($color, 20%);
 				}
 
-				
-				&:focus:not(:disabled),
-				&.button--focused:not(:disabled) {
+				&:focus,
+				&.Button--focused {
 					color: color-yiq($color);
-					background-color: tint($color, 10%);
-					border-color: tint($color, 10%);
-					outline: none;
+					background-color: tint($color, 20%);
+					border-color: tint($color, 20%);
+					box-shadow: 0 0 0.3em 0.2em rgba($color, 0.3);
 				}
 
-				&:active:not(:disabled),
-				&.button--active:not(:disabled) {
+				&:active,
+				&.Button--active {
 					color: color-yiq($color);
 					background-color: shade($color, 20%);
 					border-color: shade($color, 20%);
+				}
+			}
+
+			&.Button--raised {
+				border-bottom-width: 4px;
+				border-bottom-color: shade($color, 10%);
+				
+				&:not(:disabled):not(.Button--clear) {
+					&:hover,
+					&.Button--hovered {
+						border-bottom-color: $color;
+					}
+
+					&:focus,
+					&.Button--focused {
+						border-color: tint($color, 10%);
+						border-bottom-width: 4px;
+						border-bottom-color: shade($color, 10%);
+						background-color: tint($color, 10%);
+						margin-top: 0px;
+						outline: none;
+					}
+
+					&:active,
+					&.Button--active {
+						border-bottom-width: 1px;
+						border-bottom-color: shade($color, 20%);
+						background-color: shade($color, 20%);
+						margin-top: 3px;
+						outline: none;
+					}
+				}
+			}
+
+			&.Button--outlined {
+				color: $color;
+				background-color: transparent;
+				
+				&:not(:disabled):not(.Button--clear) {
+					&:hover,
+					&.Button--hovered {
+						color: color-yiq($color);
+						background-color: tint($color, 10%);
+						border-color: tint($color, 10%);
+					}
+
+					
+					&:focus,
+					&.Button--focused {
+						color: color-yiq($color);
+						background-color: tint($color, 10%);
+						border-color: tint($color, 10%);
+						outline: none;
+					}
+
+					&:active,
+					&.Button--active {
+						color: color-yiq($color);
+						background-color: shade($color, 20%);
+						border-color: shade($color, 20%);
+					}
 				}
 			}
 		}
