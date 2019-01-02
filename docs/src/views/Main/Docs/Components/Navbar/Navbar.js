@@ -5,26 +5,58 @@ import './Navbar.scss';
 
 const Navbar = props => {
   return (
-    <article id="navbar-page" className="fr-article">
-      <div className="fr-article-heading">
-        <h2 className="fr-article-title">Navigation Bar</h2>
-        <h5 className="fr-article-subtitle">
+    <article id="navbar-docs" className="fr-DocsArticle">
+      <div className="fr-DocsArticle-heading">
+        <h2 className="fr-DocsArticle-title">Navigation Bar</h2>
+        <h5 className="fr-DocsArticle-subtitle">
           Navbar is one of the most essential element in a website as it usually includes the website's branding and main navigation links.
         </h5>
       </div>
-      <section id="overview" className="fr-article-section">
+      <section id="overview" className="fr-DocsArticle-section">
         <div className="heading">
           <h4 className="title">Overview</h4>
         </div>
         <p>Voluptate Lorem fugiat in laborum ex occaecat sit. Qui aliquip aute sint proident.</p>
         <Preview>
           <PreviewDisplay>
-            <div className="fr-navbar-example">
-              <div className="navbar">
-                <div className="navbar__block">
-                  <span id="logo">Logo</span>
+            <div className="fr-NavbarExample">
+              <div className="Navbar">
+                <div className="Navbar-block">
+                  <span className="fr-NavbarExample__logo">Logo</span>
                 </div>
-                <div className="navbar__block navbar__block--expanded navbar__block--start">
+                <div className="Navbar-block Navbar-block--expanded">
+                  <nav className="Nav">
+                    <ul className="Nav-list">
+                      <li className="Nav-item">
+                        <a className="Nav-link">Home</a>
+                      </li>
+                      <li className="Nav-item">
+                        <a className="Nav-link">FAQ</a>
+                      </li>
+                      <li className="Nav-item">
+                        <a className="Nav-link">Contact Us</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                <div className="Navbar-block">
+                  <nav className="Nav">
+                    <ul className="Nav-list">
+                      <li className="Nav-item">
+                        <button className="Button Button--primary">Sign up</button>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </PreviewDisplay>
+          <PreviewHighlight lang="html">
+            {`<div className="Navbar">
+                <div className="Navbar__block">
+                  <span>Logo</span>
+                </div>
+                <div className="Navbar__block Navbar__block--expanded">
                   <nav className="nav">
                     <ul className="nav__list">
                       <li className="nav__item">
@@ -43,40 +75,17 @@ const Navbar = props => {
                   <nav className="nav">
                     <ul className="nav__list">
                       <li className="nav__item">
-                        <button className="button button--primary">Sign up</button>
+                        <button className="Button Button--primary">Sign up</button>
                       </li>
                     </ul>
                   </nav>
                 </div>
               </div>
-            </div>
-          </PreviewDisplay>
-          <PreviewHighlight lang="html">
-            {`<div className="navbar">
-              <div className="navbar__block">
-                <span id="logo">Logo</span>
-              </div>
-              <div className="navbar__block navbar__block--end">
-                <nav className="nav">
-                  <ul className="nav__list">
-                    <li className="nav__item">
-                      <a className="nav__link">Home</a>
-                    </li>
-                    <li className="nav__item">
-                      <a className="nav__link">FAQ</a>
-                    </li>
-                    <li className="nav__item">
-                      <a className="nav__link">Contact Us</a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
             `}
           </PreviewHighlight>
         </Preview>
       </section>
-      <section id="themes" className="fr-article-section">
+      <section id="themes" className="fr-DocsArticle-section">
         <div className="heading">
           <h4 className="title">Themes</h4>
         </div>
@@ -115,7 +124,7 @@ const Navbar = props => {
           </PreviewHighlight>
         </Preview>
       </section>
-      <section id="blocks" className="fr-article-section">
+      <section id="blocks" className="fr-DocsArticle-section">
         <div className="heading">
           <h4 className="title">Navbar Block</h4>
         </div>
@@ -124,65 +133,6 @@ const Navbar = props => {
 
     </article>
   )
-
-  // return (
-  //     <div className="fr-navbar-page">
-  //         <article className="fr-article">
-  //             <div className="fr-heading heading">
-  //                 <h2 className="title">Navigation Bar</h2>
-  //             </div>
-  //             <section id="overview">
-  //                 <Preview>
-  //                     <PreviewDisplay>
-  //                         <NavbarExample />                            
-  //                     </PreviewDisplay>
-  //                     <PreviewHighlight lang="html">
-  //                         {`<div class="navbar">
-  //                             <div class="navbar__container navbar__container--full-width">
-  //                                 <div class="navbar__block">
-  //                                     <h5>Logo</h5>
-  //                                 </div>
-  //                                 <div class="navbar__block navbar__block--end">
-  //                                     <nav class="nav">
-  //                                         <ul class="nav__list">
-  //                                             <li class="nav__item"><a class="nav__link">Home</a></li>
-  //                                             <li class="nav__item"><a class="nav__link">Documentation</a></li>
-  //                                             <li class="nav__item"><a class="nav__link">FAQ</a></li>
-  //                                         </ul>
-  //                                     </nav>
-  //                                 </div>
-  //                             </div>
-  //                         </div>
-  //                         `}
-  //                     </PreviewHighlight>
-  //                 </Preview>
-  //             </section>
-  //             <section id="themes">
-  //                 <Preview>
-  //                     <PreviewDisplay>
-  //                         <NavbarExample theme="primary" className="mg-bottom-x-large" />
-  //                         <NavbarExample theme="secondary" className="mg-bottom-x-large" />
-  //                         <NavbarExample theme="warning" className="mg-bottom-x-large" />
-  //                         <NavbarExample theme="danger" className="mg-bottom-x-large" />
-  //                         <NavbarExample theme="lighter" className="mg-bottom-x-large" />
-  //                         <NavbarExample theme="light" className="mg-bottom-x-large" />
-  //                         <NavbarExample theme="dark" className="mg-bottom-x-large" />
-  //                         <NavbarExample theme="darker" className="mg-bottom-x-large" />
-  //                     </PreviewDisplay>
-  //                 </Preview>
-  //             </section>
-  //             <section id="sizes">
-  //                 <Preview>
-  //                     <PreviewDisplay>
-  //                         <NavbarExample theme="primary" size="small" className="mg-bottom-x-large" />
-  //                         <NavbarExample theme="primary" className="mg-bottom-x-large" />
-  //                         <NavbarExample theme="primary" size="large" />
-  //                     </PreviewDisplay>
-  //                 </Preview>
-  //             </section>
-  //         </article>
-  //     </div>
-  // )
 }
 
 Navbar.propTypes = {

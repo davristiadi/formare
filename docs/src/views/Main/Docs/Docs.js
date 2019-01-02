@@ -8,25 +8,23 @@ const Docs = props => {
 	const { routes } = props;
 	
 	return (
-		<Fragment>
-			<div className="container">
-				<div className="Docs">
-					<aside className="DocsSidebar">
-						<DocsMenu {...props} />
-					</aside>
-					<main className="DocsContent">
-						<Switch>
-							{
-								routes.map(route => {
-									return <PropsRoute path={route.path} component={route.component} {...route} />
-								})
-							}
-							<Redirect exact from='/docs' to={routes[0].path} />
-						</Switch>
-					</main>
-				</div>
+		<div className="Container">
+			<div className="Docs">
+				<aside className="DocsSidebar">
+					<DocsMenu {...props} />
+				</aside>
+				<main className="DocsContent">
+					<Switch>
+						{
+							routes.map(route => {
+								return <PropsRoute path={route.path} component={route.component} {...route} />
+							})
+						}
+						<Redirect exact from='/docs' to={routes[0].path} />
+					</Switch>
+				</main>
 			</div>
-		</Fragment>
+		</div>
 	);
 }
 

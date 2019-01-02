@@ -2,13 +2,13 @@ $spacing: 1rem !default;
 $spacings: () !default;
 $spacings: map-merge(
   (
-    xx-small:   ($spacing / 2.5),
-    x-small:    ($spacing / 1.75),
-    small:      ($spacing / 1.25),
-    base:       $spacing,
-    large:      ($spacing * 1.5),
-    x-large:    ($spacing * 2),
-    xx-large:   ($spacing * 3)
+    "xxsmall":   ($spacing / 2.5),
+    "xsmall":    ($spacing / 1.75),
+    "small":      ($spacing / 1.25),
+    "base":       $spacing,
+    "large":      ($spacing * 1.5),
+    "xlarge":    ($spacing * 2),
+    "xxlarge":   ($spacing * 3)
   ), 
   $spacings
 );

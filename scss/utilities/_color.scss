@@ -1,9 +1,10 @@
 @each $theme, $color in $theme-colors {
-    .color-#{$theme} {
-        color: $color !important;
-    }
+  &-color-#{$theme} {
+    color: $color !important;
+  }
 
-    .bg-color-#{$theme} {
-        background-color: $color !important;
-    }
+  &-bg-#{$theme},
+  &-bgColor-#{$theme} {
+    background-color: $color !important;
+  }
 }

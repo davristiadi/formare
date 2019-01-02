@@ -3,8 +3,8 @@ import { Preview, PreviewDisplay, PreviewHighlight } from "components/Preview";
 
 const General = props => {
   return (
-    <article className="fr-article">
-      <div className="fr-article-heading">
+    <article className="fr-DocsArticle">
+      <div className="fr-DocsArticle-heading">
         <h2 className="title">Form</h2>
         <h5 className="subtitle color-gray">
           Voluptate irure ex esse aliquip laborum voluptate est excepteur mollit
@@ -12,7 +12,7 @@ const General = props => {
         </h5>
       </div>
 
-      <section id="overview" className="fr-article-section">
+      <section id="overview" className="fr-DocsArticle-section">
         <div className="heading">
           <h4 className="title">Overview</h4>
         </div>
@@ -96,7 +96,7 @@ const General = props => {
         </Preview>
       </section>
       
-      <section className="fr-article-section">
+      <section className="fr-DocsArticle-section">
         <div className='heading'>
           <h4 className="title">Form Input</h4>
         </div>

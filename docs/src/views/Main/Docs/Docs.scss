@@ -1,13 +1,8 @@
 @import "~scss/vendor/abstracts";
-@import "../../../../../scss/layout/structure";
 
 .Docs {
-  @extend .structure;
-  flex-direction: column;
-    
-  @include media(md) {
-    flex-direction: row;
-  }
+  display: flex;
+  flex-direction: row;
 }
 
 .DocsSidebar {
@@ -26,7 +21,6 @@
 }
 
 .DocsContent {
-  @extend .structure;
   padding-top: spacing(base);
   padding-left: spacing(base);
   padding-right: spacing(base);
@@ -34,6 +28,6 @@
   
   @include media(lg) {
     padding-top: spacing(large);
-    padding-left: spacing(x-large);
+    padding-left: spacing(xlarge);
   }
 }

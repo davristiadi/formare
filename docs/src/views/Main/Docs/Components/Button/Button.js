@@ -4,14 +4,14 @@ import { Highlight } from "components/Highlight";
 
 const Button = props => {
   return (
-    <article id="button" className="fr-article">
-      <div className="fr-article-heading">
-        <h2 className="fr-article-title">Buttons</h2>
-        <h5 className="fr-article-subtitle">
+    <article id="button" className="fr-DocsArticle">
+      <div className="fr-DocsArticle-heading">
+        <h2 className="fr-DocsArticle-title">Buttons</h2>
+        <h5 className="fr-DocsArticle-subtitle">
           Mollit tempor Lorem veniam incididunt officia tempor.
         </h5>
       </div>
-      <section id="overview" className="fr-article-section">
+      <section id="overview" className="fr-DocsArticle-section">
         <header className="heading">
           <h4 className="title">Overview</h4>
         </header>
@@ -36,7 +36,7 @@ const Button = props => {
           </PreviewHighlight>
         </Preview>
       </section>
-      <section id="themes" className="fr-article-section">
+      <section id="themes" className="fr-DocsArticle-section">
         <div className="heading">
           <h4 className="title">Themes</h4>
         </div>
@@ -72,7 +72,7 @@ const Button = props => {
           </PreviewHighlight>
         </Preview>
       </section>
-      <section id="pill" className="fr-article-section">
+      <section id="pill" className="fr-DocsArticle-section">
         <div className="heading">
           <h4 className="title">Rounded</h4>
         </div>
@@ -91,7 +91,7 @@ const Button = props => {
         </Preview>
       </section>
 
-      <section id="raised" className="fr-article-section">
+      <section id="raised" className="fr-DocsArticle-section">
         <div className="heading">
           <h4 className="title">Raised</h4>
         </div>
@@ -124,7 +124,7 @@ const Button = props => {
         </Preview>
       </section>  
 
-      <section id="sizes" className="fr-article-section">
+      <section id="sizes" className="fr-DocsArticle-section">
         <div className="heading">
           <h4 className="title">Sizes</h4>
         </div>
@@ -137,26 +137,26 @@ const Button = props => {
           We've prepared several predefined sizes that you can use right
           out-of-the-box:
           <ul>
-            <li><code>{`.Button--x-small`}</code></li>
+            <li><code>{`.Button--xsmall`}</code></li>
             <li><code>{`.Button--small`}</code></li>
             <li><code>{`.Button--large`}</code></li>
-            <li><code>{`.Button--x-large`}</code></li>
+            <li><code>{`.Button--xlarge`}</code></li>
           </ul>
         </p>
         <Preview>
           <PreviewDisplay>
-            <button className="Button Button--x-small mg-right">Extra Small</button>
+            <button className="Button Button--xsmall mg-right">Extra Small</button>
             <button className="Button Button--small mg-right">Small</button>
             <button className="Button mg-right">Base</button>
             <button className="Button Button--large mg-right">Large</button>
-            <button className="Button Button--x-large">Extra Large</button>
+            <button className="Button Button--xlarge">Extra Large</button>
           </PreviewDisplay>
           <PreviewHighlight lang="html">
-            {`<button class="Button Button--x-small">Extra Small</button>
+            {`<button class="Button Button--xsmall">Extra Small</button>
               <button class="Button Button--small">Small</button>
               <button class="Button">Base</button>
               <button class="Button Button--large">Large</button> 
-              <button class="Button Button--x-large">Extra Large</button>
+              <button class="Button Button--xlarge">Extra Large</button>
             `}
           </PreviewHighlight>
         </Preview>

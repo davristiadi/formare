@@ -1,3 +1,7 @@
-@import "text";
-@import "color";
-@import "spacing";
+.u {
+  @import "text";
+  @import "color";
+  @import "flex";
+  @import "spacing";
+}
+

@@ -4,7 +4,7 @@ import { Highlight } from 'components/Highlight';
 const Table = props => {
     return (
         <div id="card">
-            <article className="fr-article article">
+            <article className="fr-DocsArticle article">
                 <div className="fr-heading heading">
                     <h2 className="title">Table</h2>
                 </div>

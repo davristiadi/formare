@@ -1,4 +1,4 @@
-$form-label-spacing: spacing(x-small) !default;
+$form-label-spacing: spacing(xsmall) !default;
 $font-label-font-weight: font-weight(medium) !default;
 
 $form-field-spacing: spacing(base) !default; 
@@ -8,7 +8,7 @@ $form-field-spacing: spacing(base) !default;
   &__label {
     display: flex;
     font-weight: font-weight(medium);
-    margin-bottom: spacing(x-small);
+    margin-bottom: spacing(xsmall);
   }
 
   &__field {

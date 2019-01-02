@@ -20,11 +20,11 @@ $font-sizes: () !default;
 $font-sizes: map-merge(
 	(
 		xx-small: 	($font-size / 1.75),
-		x-small: 		($font-size / 1.35),
+		xsmall: 		($font-size / 1.35),
 		small: 			($font-size / 1.15),
 		base: 			$font-size,
 		large: 			($font-size * 1.25),
-		x-large: 		($font-size * 1.5),
+		xlarge: 		($font-size * 1.5),
 		xx-large: 	($font-size * 2)
 	), 
 	$font-sizes
@@ -74,11 +74,11 @@ $line-height: 1.5 !default;
 $line-heights: () !default;
 $line-heights: map-merge(
 	(
-		x-small: 	($line-height * .5),
+		xsmall: 	($line-height * .5),
 		small: 		($line-height * .75),
 		base: 		($line-height * 1),
 		large: 		($line-height * 1.25),
-		x-large: 	($line-height * 1.5)
+		xlarge: 	($line-height * 1.5)
 	), 
 	$line-heights
 );
@@ -87,11 +87,11 @@ $letter-spacing: 0 !default;
 $letter-spacings: () !default;
 $letter-spacings: map-merge(
 	(
-		x-small: 	($letter-spacing - 1.5),
+		xsmall: 	($letter-spacing - 1.5),
 		small: 		($letter-spacing - 0.5),
 		base: 		($letter-spacing + 0),
 		large: 		($letter-spacing + 2),
-		x-large: 	($letter-spacing + 4.5),
+		xlarge: 	($letter-spacing + 4.5),
 	), 
 	$letter-spacings
 );

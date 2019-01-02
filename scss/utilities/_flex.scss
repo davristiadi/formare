@@ -1,0 +1,45 @@
+&-Flex { 
+  display: flex;
+}
+
+&-InlineFlex {
+  display: inline-flex;
+}
+
+&-Flex,
+&-InlineFlex {
+  &-row {
+    flex-direction: row;
+  }
+  
+  &-column {
+    flex-direction: column;
+  }
+}
+
+@each $type, $abbr in (
+  flex-start: start,
+  center: center,
+  flex-end: end,
+  space-between: between,
+  space-around: around,
+  space-evenly: evenly
+) {
+	&-jc-#{$abbr},
+  &-JustifyContent-#{$abbr} {
+    justify-content: $type;
+  }
+}
+
+@each $type, $abbr in (
+  flex-start: start,
+  center: center,
+  flex-end: end,
+  stretch: stretch,
+baseline: baseline
+) {
+  &-ai-#{$abbr},
+  &-AlignItems-#{$abbr} {
+    align-items: $type;
+  }
+}

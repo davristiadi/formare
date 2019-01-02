@@ -3,15 +3,15 @@ import { Preview, PreviewDisplay, PreviewHighlight } from 'components/Preview';
 
 const Alert = props => {
   return (
-    <article id="alerts" className="fr-article">
-      <header className="fr-article-heading">
-        <h2 className="fr-article-title">Alerts</h2>
-        <h5 className="fr-article-subtitle">
+    <article id="alert-docs" className="fr-DocsArticle">
+      <header className="fr-DocsArticle-heading">
+        <h2 className="fr-DocsArticle-title">Alerts</h2>
+        <h5 className="fr-DocsArticle-subtitle">
           The easiest way to show non-interuptible feedback content with lots of
           customizations.
         </h5>
       </header>
-      <section id="overview" className="fr-article-section">
+      <section id="overview" className="fr-DocsArticle-section">
         <div className="heading">
           <h4 className="title">Overview</h4>
         </div>
@@ -34,7 +34,7 @@ const Alert = props => {
           </PreviewHighlight>
         </Preview>
       </section>
-      <section id="themes" className="fr-article-section">
+      <section id="themes" className="fr-DocsArticle-section">
         <header className="heading">
           <h4 className="title">Themes</h4>
         </header>
@@ -98,14 +98,14 @@ const Alert = props => {
           </PreviewHighlight>
         </Preview>
       </section>
-      <section id="extras" className="fr-article-section">
+      <section id="extras" className="fr-DocsArticle-section">
         <header className="heading">
           <h4 className="title">Icons</h4>
         </header>
         <p>
           Fugiat sit exercitation id aute dolore do officia. Aliqua non sint
           elit laborum labore occaecat ea Lorem duis velit sint cupidatat veniam
-          dolor.
+          dolor.renungan
         </p>
         <Preview>
           <PreviewDisplay>

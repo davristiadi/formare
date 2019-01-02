@@ -17,8 +17,8 @@ const Layouts = props => {
 
 const Home = () => {
 	return (
-		<article className="fr-article">
-			<header className="fr-article-heading">
+		<article className="fr-DocsArticle">
+			<header className="fr-DocsArticle-heading">
 				<h2 className="title">Layouts</h2>
 				<h5 className="subtitle color-gray">Irure magna exercitation fugiat enim reprehenderit ex anim mollit cupidatat irure dolore cillum.</h5>
 			</header>

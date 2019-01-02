@@ -3,15 +3,15 @@ import "./Grid.scss";
 import { Preview, PreviewDisplay, PreviewHighlight } from "components/Preview";
 const Grid = props => {
   return (
-    <article id="grids" className="fr-article">
-      <div className="fr-article-heading">
-        <h2 className="fr-article-title">Grid System</h2>
-        <h5 className="fr-article-subtitle">
+    <article id="grids" className="fr-DocsArticle">
+      <div className="fr-DocsArticle-heading">
+        <h2 className="fr-DocsArticle-title">Grid System</h2>
+        <h5 className="fr-DocsArticle-subtitle">
           Easily build responsive layouts using Formare's own simple grid
           system.
         </h5>
       </div>
-      <section className="fr-article-section">
+      <section className="fr-DocsArticle-section">
         <div className="heading">
           <h4 className="title">Overview</h4>
         </div>
@@ -21,7 +21,7 @@ const Grid = props => {
           resolutions.
         </p>
       </section>
-      <section id="usage" className="fr-article-section">
+      <section id="usage" className="fr-DocsArticle-section">
         <div className="heading">
           <h4 className="title">Basic Usage</h4>
         </div>
@@ -39,11 +39,11 @@ const Grid = props => {
         </ul>
         <Preview>
           <PreviewDisplay>
-            <div className="fr-grids-example">
-              <div className="grids">
-                <div className="grid">First Grid</div>
-                <div className="grid">Second Grid</div>
-                <div className="grid">Third Grid</div>
+            <div className="fr-GridExample">
+              <div className="Grids">
+                <div className="Grid">First Grid</div>
+                <div className="Grid">Second Grid</div>
+                <div className="Grid">Third Grid</div>
               </div>
             </div>
           </PreviewDisplay>

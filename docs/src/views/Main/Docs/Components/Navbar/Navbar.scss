@@ -1,18 +1,16 @@
 @import '~scss/vendor/abstracts';
 
-.fr-navbar-example {
+.fr-NavbarExample {
   &:not(:last-child) {
     margin-bottom: spacing(base);
   }
   
-  .navbar {
-    #logo {
-      font-weight: font-weight(bold);
-      font-size: font-size(large);
-      padding: spacing(xx-small) spacing(base);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      border-radius: border-radius(base);
-    }
+  &__logo {
+    font-weight: font-weight(bold);
+    font-size: font-size(large);
+    padding: spacing(xx-small) spacing(base);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: border-radius(base);
   }
 }

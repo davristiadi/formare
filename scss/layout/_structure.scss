@@ -1,15 +1,5 @@
 .Structure {
   display: flex;
-
-  &--horizontal {
-    
-    display: flex;
-    flex-direction: column;  
-  }
-}
-
-.structure {
-  display: flex;
   flex-direction: column;
   flex: 1 1 100%;
   min-width: 0;

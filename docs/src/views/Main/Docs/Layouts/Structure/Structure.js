@@ -6,14 +6,14 @@ class Structure extends PureComponent {
   render() {
     return (
       <div id="structure">
-        <article className="fr-article">
-          <div className="fr-article-heading">
-            <h2 className="fr-article-title">Structure</h2>
-            <h5 className="fr-article-subtitle">
+        <article className="fr-DocsArticle">
+          <div className="fr-DocsArticle-heading">
+            <h2 className="fr-DocsArticle-title">Structure</h2>
+            <h5 className="fr-DocsArticle-subtitle">
               Defines the main structure layout of your website easily.
             </h5>
           </div>
-          <section id="overview" className="fr-article-section">
+          <section id="overview" className="fr-DocsArticle-section">
             <div className="heading">
               <h4 className="title">Overview</h4>
             </div>
@@ -43,7 +43,7 @@ class Structure extends PureComponent {
               </li>
             </ul>
           </section>
-          <section id="basic" className="fr-article-section">
+          <section id="basic" className="fr-DocsArticle-section">
             <div className="heading">
               <h4 className="title">Types</h4>
             </div>
@@ -90,7 +90,7 @@ class Structure extends PureComponent {
               </div>
             </div>
           </section>
-          <section id="examples" className="fr-article-section">
+          <section id="examples" className="fr-DocsArticle-section">
             <div className="heading">
               <h4 className="title">Examples</h4>
             </div>

@@ -1,12 +1,12 @@
-.nav {
+.Nav {
 	position: relative;
 
-	&__list {
+	&-list {
 		display: flex;
 		flex-direction: row;
 	}
 
-	&__item {
+	&-item {
 		display: flex;
 		align-items: center;
 		transition: $transition;
@@ -15,7 +15,7 @@
 		padding-right: spacing(base);
 	}
 
-	&__link {
+	&-link {
 		display: block;
 		transition: $transition;
 		padding: spacing(base);
@@ -28,101 +28,3 @@
 		}
 	}
 }
-
-// .nav {
-// 	display: flex;
-// 	flex-direction: row;
-
-// 	.nav__list {
-// 		display: flex;
-// 		flex-direction: row;
-// 		align-items: center;
-// 		transition: $transition;
-
-// 		&--active {
-// 			.nav__item:not(.nav__item--active) {
-// 				opacity: $nav-item-opacity-inactive;
-// 			}
-// 		}
-
-// 		&:hover {
-// 			.nav__item {
-// 				opacity: $nav-item-opacity-inactive;
-// 			}
-// 		}
-		
-// 		.nav__item {
-// 			display: flex;
-// 			flex: 1 0 auto;
-// 			transition: all 100ms ease-out;
-// 			padding: $nav-item-padding;
-// 			text-align: center;
-
-// 			&--active {
-// 				opacity: $nav-item-opacity-active;
-// 			}
-
-// 			&--has-icon {
-// 				.icon {
-// 					font-size: $nav-item-icon-size;
-// 				}
-// 			}
-
-// 			&:hover {
-// 				opacity: $nav-item-opacity-active;
-// 			}
-// 		}
-
-// 		.nav__link {
-// 			display: flex;
-// 			flex: 1 0 auto;
-// 			flex-direction: column;
-// 			font-weight: $nav-item-weight;
-// 			text-decoration: none;
-// 			color: inherit;
-// 			cursor: pointer;
-// 		}
-// 	}
-	
-// 	@each $theme, $color in $nav-themes {
-// 		&--#{$theme} {
-// 			&.nav--tabs {
-// 				.nav__list {
-// 					.nav__item {
-// 						&:hover {
-// 							color: $color;
-// 							border-bottom: solid 1px $color;
-// 						}
-						
-// 						&--active {
-// 							color: $color;
-// 							border-bottom: solid 1px $color;
-// 						}
-// 					}
-// 				}
-// 			}
-// 		}
-// 	}
-
-// 	&--tabs {
-// 		.nav__list {
-// 			border-bottom: solid 1px $lighter;
-
-// 			.nav__item {
-// 				margin-bottom: -1px;
-// 				border-bottom-style: solid;
-// 				border-bottom-width: 1px;
-// 				border-bottom-color: transparent;
-// 				transition: $transition;
-				
-// 				&:hover {
-// 					border-bottom: solid 1px $dark;
-// 				}
-				
-// 				&--active {
-// 					border-bottom: solid 1px $darker;
-// 				}
-// 			}
-// 		}
-// 	}
-// }

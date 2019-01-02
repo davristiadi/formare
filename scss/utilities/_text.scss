@@ -1,20 +1,21 @@
-$text-aligns: ( left right center justify justify-all start end match-parent );
-$text-transforms: ( capitalize uppercase lowercase full-width );
 
 @each $size, $value in $font-sizes {
-	.fs-#{$size}, .font-size-#{$size} {
+	&-fs-#{$size}, 
+	&-FontSize-#{$size} {
 		font-size: $value !important; 
 	} 
 }
 
 @each $weight, $value in $font-weights {
-	.fw-#{$weight}, .font-weight-#{$weight} {
+	&-fw-#{$weight}, 
+	&-FontWeight-#{$weight} {
 		font-weight: $value !important;
 	}
 }
 
-@each $align in $text-aligns {
-	.ta-#{$align}, .align-#{$align} {
+@each $align in (left right center justify justify-all start end match-parent ) {
+	&-ta-#{$align}, 
+	&-Align-#{$align} {
 		text-align: $align !important;
 	}
 }

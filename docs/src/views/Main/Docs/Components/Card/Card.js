@@ -6,14 +6,14 @@ import { default as PhotoDummy } from "../../../../../assets/images/dummy-photo.
 
 const Card = props => {
   return (
-    <article className="fr-article">
-      <div className="fr-article-heading">
-        <h2 className="fr-article-title">Card</h2>
-        <h5 className="fr-article-subtitle">
+    <article className="fr-DocsArticle">
+      <div className="fr-DocsArticle-heading">
+        <h2 className="fr-DocsArticle-title">Card</h2>
+        <h5 className="fr-DocsArticle-subtitle">
           Duis irure ullamco ullamco anim aute labore mollit.
         </h5>
       </div>
-      <section id="overview" className="fr-article-section">
+      <section id="overview" className="fr-DocsArticle-section">
         <div className="heading">
           <h4 className="title">Overview</h4>
         </div>
@@ -34,7 +34,7 @@ const Card = props => {
                     </span>
                   </div>
                   <div className="Card__footer">
-                    <button className="button button--primary">Submit</button>
+                    <button className="Button Button--primary">Submit</button>
                   </div>
                 </div>
               </div>
@@ -51,7 +51,7 @@ const Card = props => {
                     </span>
                   </div>
                   <div className="Card__footer">
-                    <button className="button button--primary">Submit</button>
+                    <button className="Button Button--primary">Submit</button>
                   </div>
                 </div>
               </div>
@@ -79,7 +79,7 @@ const Card = props => {
       </section>
 
 
-      <section id="themes" className="fr-article-section">
+      <section id="themes" className="fr-DocsArticle-section">
         <article className="article">
           <div className="heading">
             <h4 className="title">Themes</h4>
@@ -89,7 +89,7 @@ const Card = props => {
         </article>
       </section>
 
-      <section id="card-with-thumbnail" className="fr-article-section">
+      <section id="card-with-thumbnail" className="fr-DocsArticle-section">
         <div className="heading">
           <h4 className="title">Card with Thumbnail</h4>
         </div>
@@ -167,7 +167,7 @@ const Card = props => {
         </Preview>
       </section>
 
-      <section id="overlay" className="fr-article-section">
+      <section id="overlay" className="fr-DocsArticle-section">
         <article className="article">
           <div className="heading">
             <h4 className="title">Card with Image Overlay</h4>

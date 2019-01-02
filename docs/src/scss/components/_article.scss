@@ -1,16 +1,18 @@
-.fr-article {
-  @extend .article;
+.fr-DocsArticle {
+  &-heading {
+    margin-bottom: spacing(xlarge);
+  }
 
-  .fr-article-heading {
-    margin-bottom: spacing(x-large);
+  &-title {
+    @extend .title;
+  }
 
-    .fr-article-title {
-      @extend .title;
-    }
+  &-subtitle {
+    @extend .subtitle;
+    color: $gray;
+  }
 
-    .fr-article-subtitle {
-      @extend .subtitle;
-      color: $gray;
-    }
+  &-section {
+    
   }
 }

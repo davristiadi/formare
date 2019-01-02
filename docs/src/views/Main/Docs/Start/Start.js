@@ -2,14 +2,14 @@ import React, { PropTypes } from "react";
 
 const Start = props => {
   return (
-    <article id="getting-started" className="fr-article">
-      <div className="fr-article-heading">
-        <h2 className="fr-article-title">Getting Started</h2>
-        <h5 className="fr-article-subtitle">
+    <article id="getting-started" className="fr-DocsArticle">
+      <div className="fr-DocsArticle-heading">
+        <h2 className="fr-DocsArticle-title">Getting Started</h2>
+        <h5 className="fr-DocsArticle-subtitle">
           Multiple ways you can start using <strong>Formare</strong> in your project.
         </h5>
       </div>
-      <section className="fr-article-section" />
+      <section className="fr-DocsArticle-section" />
     </article>
   );
 };

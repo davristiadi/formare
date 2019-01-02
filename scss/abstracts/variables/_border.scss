@@ -4,7 +4,7 @@ $border-radiuses: map-merge(
   (
     base:     $border-radius,
     large:    ($border-radius * 1.5),
-    x-large:  ($border-radius * 2),
+    xlarge:  ($border-radius * 2),
     xx-large: ($border-radius * 3)
   ), 
   $border-radiuses

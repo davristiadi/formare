@@ -1,21 +1,10 @@
-$hero-themes: $theme-colors;
-$hero-height: 25em;
-$hero-heights: () !default;
-$hero-heights: map-merge((
-	x-small: ($hero-height * 0.5),
-	small: ($hero-height * 0.75),
-	normal: ($hero-height * 1),
-	large: ($hero-height * 1.5),
-	x-large: ($hero-height * 2)
-), $hero-heights);
-
-.hero {
+.Hero {
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	min-height: $hero-height;
 
-	&__bg {
+	&-bg {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -26,11 +15,11 @@ $hero-heights: map-merge((
 		background-size: cover;
 	}
 
-	&__body {
+	&-body {
 		flex: 1;
 		height: 100%;
-		padding-top: spacing(x-large);
-		padding-bottom: spacing(x-large);
+		padding-top: spacing(xlarge);
+		padding-bottom: spacing(xlarge);
 		
 		&--centerized {
 			display: flex;
@@ -39,8 +28,8 @@ $hero-heights: map-merge((
 		}
 	}
 	
-	> *:not(.hero__bg),
-	&__body {
+	> *:not(.Hero-bg),
+	&-body {
 		position: relative;
 		z-index: 500;
 	}
@@ -51,12 +40,12 @@ $hero-heights: map-merge((
 		}
 	}
 	
-	@each $theme, $color in $hero-themes {
+	@each $theme, $color in $theme-colors {
 		&--#{$theme} {
 			background-color: $color;
 			color: color-yiq($color);
 
-			.hero__bg {
+			.Hero-bg {
 				&:before {
 					content: "";
 					position: absolute;
@@ -71,7 +60,7 @@ $hero-heights: map-merge((
 		}
 	}
 	
-	&--full-height {
+	&--fullHeight {
 		height: 100vh;
 		min-height: 100vh;
 	}

@@ -5,31 +5,31 @@ class MainHeader extends Component {
 	render() {
 		return (
 			<header className="MainHeader">
-				<div className="navbar navbar--primary">
-					<div className="container flex jc-between">
-						<div id="master-brand" className="navbar__block">
-							<div className="pd-left pd-right">
-								<NavLink to="/" className="color-lighter fw-semibold fs-x-large">Formare</NavLink>
+				<div className="Navbar Navbar--primary">
+					<div className="Container u-Flex u-JustifyContent-between">
+						<div id="master-brand" className="Navbar-block">
+							<div className="u-PaddingLeft u-PaddingRight">
+								<NavLink to="/" className="u-color-lighter u-fw-semibold u-fs-xlarge">Formare</NavLink>
 							</div>	
 						</div>
-						<div id="master-nav" className="navbar__block navbar__block--expanded">
-							<nav className="nav">
-								<ul className="nav__list">
-									<li className="nav__item">
-										<NavLink className="nav__link" to="/docs">Documentation</NavLink>
+						<div id="master-nav" className="Navbar-block Navbar-block--expanded">
+							<nav className="Nav">
+								<ul className="Nav-list">
+									<li className="Nav-item">
+										<NavLink className="Nav-link" to="/docs">Documentation</NavLink>
 									</li>
-									<li className="nav__item">
-										<NavLink className="nav__link" to="/docs">Github</NavLink>
+									<li className="Nav-item">
+										<NavLink className="Nav-link" to="/docs">Github</NavLink>
 									</li>
 								</ul>
 							</nav>
 						</div>
-						<div className="navbar__block navbar__block--end">
-							<nav className="nav">
-								<ul className="nav__list">
-									<li className="nav__item">
+						<div className="Navbar-block Navbar-block--end">
+							<nav className="Nav">
+								<ul className="Nav-list">
+									<li className="Nav-item">
 										<button className="Button Button--raised Button--secondary">
-											<i className="fas fa-download mg-right"></i>
+											<i className="fas fa-download u-mg-right"></i>
 											Download
 										</button>
 									</li>

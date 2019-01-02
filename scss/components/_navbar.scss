@@ -1,6 +1,4 @@
-
-
-.navbar {
+.Navbar {
 	position: relative;
 	display: flex;
 	justify-content: space-between;
@@ -9,7 +7,7 @@
 	transition: $navbar-transition;
 	background: $navbar-background;
 	
-	&__block {
+	&-block {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -40,26 +38,22 @@
 		}
 	}
 
-	.nav {
+	.Nav {
 		display: flex;
 		height: 100%;
+		
+		&-link {
+			display: flex;
+			height: 100%;
+			align-items: center;
+			padding-top: 0;
+			padding-bottom: 0;
+			color: $navbar-color;
 
-		.nav {
-			&__link {
-				display: flex;
-				height: 100%;
-				align-items: center;
-				padding-top: 0;
-				padding-bottom: 0;
-				color: $navbar-color;
-
-				&:hover {
-					color: $navbar-hovered-color;
-				}
+			&:hover {
+				color: $navbar-hovered-color;
 			}
-
 		}
-
 	}
 
 	@each $theme, $color in $theme-colors {
@@ -67,15 +61,13 @@
 			background-color: $color;
 			color: color-yiq($color);
 
-			.nav {
-				.nav {
-					&__link {
-						transition: $transition;
-						color: rgba(color-yiq($color), 0.7);
+			.Nav {
+				&-link {
+					transition: $transition;
+					color: rgba(color-yiq($color), 0.7);
 
-						&:hover {
-							color: rgba(color-yiq($color), 1);
-						}
+					&:hover {
+						color: rgba(color-yiq($color), 1);
 					}
 				}
 			}
