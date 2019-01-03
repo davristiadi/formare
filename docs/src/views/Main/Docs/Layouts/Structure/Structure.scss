@@ -1,13 +1,14 @@
 @import "src/scss/vendor/abstracts";
 
 .fr-Structure-showcase {
-  padding-top: spacing(base);
-  padding-bottom: spacing(base);
+  margin-top: spacing(large);
+  margin-bottom: spacing(large);
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
   
   .Structure {
     position: relative;
-    overflow: hidden;
-    border-radius: 10px;
     background-color: theme-color(secondary);
 
     .Header,

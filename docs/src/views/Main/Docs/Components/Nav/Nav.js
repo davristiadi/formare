@@ -18,31 +18,31 @@ const Nav = props => {
           <p>Eu do qui officia ut ea duis cillum ullamco cillum ut.</p>
           <Preview>
             <PreviewDisplay>
-              <nav className="nav">
-                <ul className="nav__list">
-                  <li className="nav__item">
-                    <a className="nav__link">Home</a>
+              <nav className="Nav">
+                <ul className="Nav-list">
+                  <li className="Nav-item">
+                    <a className="Nav-link">Home</a>
                   </li>
-                  <li className="nav__item">
-                    <a className="nav__link">About</a>
+                  <li className="Nav-item">
+                    <a className="Nav-link">About</a>
                   </li>
-                  <li className="nav__item">
-                    <a className="nav__link">Contact</a>
+                  <li className="Nav-item">
+                    <a className="Nav-link">Contact</a>
                   </li>
                 </ul>
               </nav>
             </PreviewDisplay>
             <PreviewHighlight lang="html">
-              {`<nav class="nav">
-                <ul class="nav__list">
-                  <li class="nav__item">
-                    <a class="nav__link">Home</a>
+              {`<nav class="Nav">
+                <ul class="Nav-list">
+                  <li class="Nav-item">
+                    <a class="Nav-link">Home</a>
                   </li>
-                  <li class="nav__item">
-                    <a class="nav__link">About</a>
+                  <li class="Nav-item">
+                    <a class="Nav-link">About</a>
                   </li>
-                  <li class="nav__item">
-                    <a class="nav__link">Contact</a>
+                  <li class="Nav-item">
+                    <a class="Nav-link">Contact</a>
                   </li>
                 </ul>
               </nav>

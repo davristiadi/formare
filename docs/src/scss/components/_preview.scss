@@ -22,16 +22,17 @@
 
   &-display {
     padding: spacing(large);
-    border: solid 1px $lighter;
+    border: solid 1px $light;
     border-top-right-radius: $border-radius;
     overflow: hidden;
 
     &--gapless {
+      border: none;
       padding: 0;
     }
 
     &--borderless {
-      border: none;
+      border: 0;
       padding-left: 0;
       padding-right: 0;
     }

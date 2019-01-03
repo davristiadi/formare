@@ -95,7 +95,7 @@ class Structure extends PureComponent {
               <h4 className="Title">Examples</h4>
             </div>
             <Preview>
-              <PreviewDisplay gapless>                
+              <PreviewDisplay gapless borderless>                
                 <div className="fr-Structure-example">
                   <div className="Structure">
                     <header className="Header">

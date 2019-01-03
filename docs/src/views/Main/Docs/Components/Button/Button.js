@@ -122,7 +122,29 @@ const Button = props => {
             `}
           </PreviewHighlight>
         </Preview>
-      </section>  
+      </section>
+
+      <section id="outlined" className="fr-DocsArticle-section">
+        <div className="Heading">
+          <h4 className="Title">Outlined Button</h4>
+        </div>
+        <p>Culpa labore nisi ut et magna proident deserunt non quis. Officia amet dolore qui consectetur dolore sint in ad ea Lorem aliquip aliquip enim esse.</p>
+        <blockquote>
+          Outlined buttons are usually used to less emphasize the user action.
+        </blockquote>
+        <Preview>
+          <PreviewDisplay>
+            <button className="Button Button--primary Button--outlined u-MarginRight">Button</button>
+            <button className="Button Button--secondary Button--outlined u-MarginRight">Button</button>
+            <button className="Button Button--success Button--outlined u-MarginRight">Button</button>
+            <button className="Button Button--warning Button--outlined u-MarginRight">Button</button>
+            <button className="Button Button--danger Button--outlined u-MarginRight">Button</button>
+            <button className="Button Button--light Button--outlined u-MarginRight">Button</button>
+            <button className="Button Button--dark Button--outlined u-MarginRight">Button</button>
+          </PreviewDisplay>
+        </Preview>
+      </section>
+
 
       <section id="sizes" className="fr-DocsArticle-section">
         <div className="Heading">

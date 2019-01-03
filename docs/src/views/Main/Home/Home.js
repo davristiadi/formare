@@ -22,8 +22,12 @@ const Home = props => {
 							maxWidth: '480px',
 							margin: '0 auto'
 						}}>
-							<Highlight style={{width: '100%', textAlign: 'center'}}>
-								{`npm install formare`}
+							<Highlight lang="javascript" style={{width: '100%', textAlign: 'center'}}>
+								{`
+                npm install formare
+                // or
+                yarn add formare
+								`}
 							</Highlight>
 						</div>
 						<div className="u-Flex u-JustifyContent-center">

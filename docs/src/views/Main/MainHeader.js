@@ -5,7 +5,7 @@ class MainHeader extends Component {
 	render() {
 		return (
 			<header className="MainHeader">
-				<div className="Navbar Navbar--primary Navbar--xsmall">
+				<div className="Navbar Navbar--primary">
 					<div className="Container u-Flex u-JustifyContent-between">
 						<div id="master-brand" className="Navbar-block">
 							<div className="u-PaddingLeft u-PaddingRight">

@@ -109,6 +109,7 @@
 
 			&.Button--outlined {
 				color: $color;
+				border-color: $color;
 				background-color: transparent;
 				
 				&:not(:disabled):not(.Button--clear) {
