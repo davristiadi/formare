@@ -5,7 +5,7 @@ const General = props => {
   return (
     <article className="fr-DocsArticle">
       <div className="fr-DocsArticle-heading">
-        <h2 className="title">Form</h2>
+        <h2 className="Title">Form</h2>
         <h5 className="subtitle color-gray">
           Voluptate irure ex esse aliquip laborum voluptate est excepteur mollit
           pariatur
@@ -13,8 +13,8 @@ const General = props => {
       </div>
 
       <section id="overview" className="fr-DocsArticle-section">
-        <div className="heading">
-          <h4 className="title">Overview</h4>
+        <div className="Heading">
+          <h4 className="Title">Overview</h4>
         </div>
         <p>
           Sunt minim eiusmod exercitation laborum mollit commodo quis pariatur
@@ -53,7 +53,7 @@ const General = props => {
                     placeholder="Insert your password here"
                   />
                 </div>
-                <div className="fs-small color-gray mg-top-xx-small">Password should be at least 8 characters or more.</div>
+                <div className="fs-small color-gray u-MarginTop-xx-small">Password should be at least 8 characters or more.</div>
               </div>
             </form>
           </PreviewDisplay>
@@ -88,7 +88,7 @@ const General = props => {
                     placeholder="Insert your password here"
                   />
                 </div>
-                <div className="fs-small color-gray mg-top-xx-small">Password should be at least 8 characters or more.</div>
+                <div className="fs-small color-gray u-MarginTop-xx-small">Password should be at least 8 characters or more.</div>
               </div>
             </form>
             `}
@@ -98,13 +98,13 @@ const General = props => {
       
       <section className="fr-DocsArticle-section">
         <div className='heading'>
-          <h4 className="title">Form Input</h4>
+          <h4 className="Title">Form Input</h4>
         </div>
         <p>Occaecat ut magna tempor consequat aute proident dolor occaecat.</p>
         <Preview>
           <PreviewDisplay>
             <form className="form">
-              <div className="grids">
+              <div className="Grids">
                 <div className="grid grid-6">
                   <div className="form__field">
                     <label className="form__label">Search</label>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Highlight } from 'components/Highlight';
 
 const Home = props => {
   const { hero } = props;
@@ -7,8 +8,8 @@ const Home = props => {
     <div id="homepage">
       <section className="Hero Hero--primary Hero--large">
         <div className="Hero-body Hero-body--centerized">
-          <div className="container" style={{
-						width: '800px',
+          <div className="Container" style={{
+						width: '640px',
 						textAlign: 'center'
 					}}>
 						<div className="Heading u-MarginBottom-xlarge">
@@ -17,7 +18,15 @@ const Home = props => {
 								fast and easy to get started with.
 							</h1>
 						</div>
-						<div className="u-Flex u-jc-center">
+						<div className="u-MarginBottom-xlarge" style={{
+							maxWidth: '480px',
+							margin: '0 auto'
+						}}>
+							<Highlight style={{width: '100%', textAlign: 'center'}}>
+								{`npm install formare`}
+							</Highlight>
+						</div>
+						<div className="u-Flex u-JustifyContent-center">
 							<button className="Button Button--large Button--raised Button--secondary u-MarginRight-large">
 								<i className="Icon fas fa-download u-MarginRight-large" />
 								Download

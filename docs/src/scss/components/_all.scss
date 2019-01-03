@@ -1,5 +1,6 @@
-@import "article";
-@import "heading";
 @import "highlight";
-@import "menu";
-@import "preview";
+
+.fr {
+  @import "menu";
+  @import "preview";
+}

@@ -7,13 +7,15 @@ const PreviewDisplay = props => {
         tag: Tag,
         className,
         children,
-        simple,
+        borderless,
+        gapless,
         ...attributes
     } = props;
 
     attributes.className = classNames(
-        `fr-preview__display`,
-        simple ? `fr-preview__display--borderless` : null,
+        `fr-Preview-display`,
+        borderless ? `fr-Preview-display--borderless` : null,
+        gapless ? `fr-Preview-display--gapless` : null,
         className
     );
     
@@ -28,7 +30,8 @@ PreviewDisplay.propTypes = {
     tag: PropTypes.oneOfType([
         PropTypes.func, PropTypes.string,
     ]),
-    simple: PropTypes.bool,
+    borderless: PropTypes.bool,
+    gapless: PropTypes.bool,
 }
 
 export default PreviewDisplay

@@ -1,16 +1,16 @@
 @import "~scss/vendor/abstracts";
+@import "../../../../../scss/components/heading";
 
-.Docs {
+.fr-Docs {
   display: flex;
   flex-direction: row;
 }
 
-.DocsSidebar {
+.fr-DocsSidebar {
   display: none;
   position: sticky;
   height: calc(100vh - 5em);
   top: 5em;
-  border-right: solid 1px gray(100);
   padding-top: spacing(large);
   padding-right: spacing(large);
 
@@ -18,16 +18,100 @@
     display: flex;
     flex: 0 0 250px;
   }
+
+  &-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background-color: primary-color(-95);
+    z-index: 250;
+  }
 }
 
-.DocsContent {
-  padding-top: spacing(base);
+.fr-DocsContent {
+  position: relative;
+  background-color: $white;
+  width: 100%;
+  z-index: 500;
+
+  @include media(md) {
+    padding-top: spacing(large);
+    padding-left: spacing(large);
+  }
+}
+
+.fr-DocsArticle {
+  padding-top: spacing(large);
   padding-left: spacing(base);
   padding-right: spacing(base);
-  background-color: $white;
   
-  @include media(lg) {
+  @include media(md) {
     padding-top: spacing(large);
-    padding-left: spacing(xlarge);
+    padding-left: spacing(large);
+    padding-right: spacing(base);
+  }
+  
+  &-heading {
+    margin-bottom: spacing(xlarge);
+  }
+
+  &-title {
+    @extend .Title;
+  }
+
+  &-subtitle {
+    @extend .Subtitle;
+    color: $gray;
+  }
+
+  .Heading {
+    margin-top: spacing(xxlarge);
+    margin-bottom: spacing(base);
+  }
+}
+
+.fr-DocsMenu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  z-index: 500;
+  
+  $menu: &;
+  
+  &-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &-item {
+    > #{$menu}-link { 
+      display: block;
+      color: inherit;
+      font-weight: font-weight(bold);
+      padding: spacing(small) spacing(base);
+      transition: $transition;
+    }
+
+    &--hasSubmenu {
+      #{$menu}-item {  
+        > #{$menu}-link {
+          font-weight: font-weight(regular);
+          color: $gray;
+        }
+
+        &--isActive {
+          > #{$menu}-link {
+            background-color: theme-color-shade(primary, -80);
+            color: theme-color(primary);
+            font-weight: font-weight(semibold);
+            border-radius: border-radius(base);
+          }
+        }
+      }
+    }
   }
 }

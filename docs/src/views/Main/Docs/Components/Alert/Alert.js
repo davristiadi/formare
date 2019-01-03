@@ -7,36 +7,34 @@ const Alert = props => {
       <header className="fr-DocsArticle-heading">
         <h2 className="fr-DocsArticle-title">Alerts</h2>
         <h5 className="fr-DocsArticle-subtitle">
-          The easiest way to show non-interuptible feedback content with lots of
-          customizations.
+          Display non-interuptive and dismissable feedback message to your users.
         </h5>
       </header>
       <section id="overview" className="fr-DocsArticle-section">
-        <div className="heading">
-          <h4 className="title">Overview</h4>
+        <div className="Heading">
+          <h4 className="Title">Overview</h4>
         </div>
         <p>
-          We can use alerts to notify users about something that needs attention. 
-          Alerts are usually non-interuptive and should be easily dismissable.
+          Alerts usually consist of <strong>text element</strong> and <strong>user actions.</strong> 
         </p>
         <Preview>
           <PreviewDisplay>
             <div className="Alert">
-              <div className="Alert__text">This is just a simple alert.</div>
+              <div className="Alert-text">This is just a simple alert.</div>
             </div>
           </PreviewDisplay>
           <PreviewHighlight lang="html">
             {`
             <div className="Alert">
-              <div className="Alert__text">Hello</div>
+              <div className="Alert-text">Hello</div>
             </div>
             `}
           </PreviewHighlight>
         </Preview>
       </section>
       <section id="themes" className="fr-DocsArticle-section">
-        <header className="heading">
-          <h4 className="title">Themes</h4>
+        <header className="Heading">
+          <h4 className="Title">Themes</h4>
         </header>
         <p>Alerts come with different <a href="">themes</a> that can be used accordingly in different contexts</p>
         <ul>
@@ -50,86 +48,101 @@ const Alert = props => {
         </ul>
         <Preview>
           <PreviewDisplay>
-            <div className="Alert Alert--primary mg-bottom">
-              <div className="Alert__text"> This is an alert with primary theme! </div>
+            <div className="Alert Alert--primary u-MarginBottom">
+              <div className="Alert-text"> This is an alert with primary theme! </div>
             </div>
-            <div className="Alert Alert--secondary mg-bottom">
-              <div className="Alert__text"> This is an alert with secondary theme! </div>
+            <div className="Alert Alert--secondary u-MarginBottom">
+              <div className="Alert-text"> This is an alert with secondary theme! </div>
             </div>
-            <div className="Alert Alert--success mg-bottom">
-              <div className="Alert__text"> This is an alert with success theme! </div>
+            <div className="Alert Alert--success u-MarginBottom">
+              <div className="Alert-text"> This is an alert with success theme! </div>
             </div>
-            <div className="Alert Alert--warning mg-bottom">
-              <div className="Alert__text"> This is an alert with warning theme! </div>
+            <div className="Alert Alert--warning u-MarginBottom">
+              <div className="Alert-text"> This is an alert with warning theme! </div>
             </div>
-            <div className="Alert Alert--danger mg-bottom">
-              <div className="Alert__text"> This is an alert with danger theme! </div>
+            <div className="Alert Alert--danger u-MarginBottom">
+              <div className="Alert-text"> This is an alert with danger theme! </div>
             </div>
-            <div className="Alert Alert--light mg-bottom">
-              <div className="Alert__text"> This is an alert with light theme! </div>
+            <div className="Alert Alert--light u-MarginBottom">
+              <div className="Alert-text"> This is an alert with light theme! </div>
             </div>
             <div className="Alert Alert--dark">
-              <div className="Alert__text"> This is an alert with dark theme! </div>
+              <div className="Alert-text"> This is an alert with dark theme! </div>
             </div>  
           </PreviewDisplay>
           <PreviewHighlight lang="html">
-            {`<div className="Alert Alert--primary mg-bottom">
-              <div className="Alert__text"> This is an alert with primary theme! </div>
+            {`<div className="Alert Alert--primary u-MarginBottom">
+              <div className="Alert-text"> This is an alert with primary theme! </div>
             </div>
-            <div className="Alert Alert--secondary mg-bottom">
-              <div className="Alert__text"> This is an alert with secondary theme! </div>
+            <div className="Alert Alert--secondary u-MarginBottom">
+              <div className="Alert-text"> This is an alert with secondary theme! </div>
             </div>
-            <div className="Alert Alert--success mg-bottom">
-              <div className="Alert__text"> This is an alert with success theme! </div>
+            <div className="Alert Alert--success u-MarginBottom">
+              <div className="Alert-text"> This is an alert with success theme! </div>
             </div>
-            <div className="Alert Alert--warning mg-bottom">
-              <div className="Alert__text"> This is an alert with warning theme! </div>
+            <div className="Alert Alert--warning u-MarginBottom">
+              <div className="Alert-text"> This is an alert with warning theme! </div>
             </div>
-            <div className="Alert Alert--danger mg-bottom">
-              <div className="Alert__text"> This is an alert with danger theme! </div>
+            <div className="Alert Alert--danger u-MarginBottom">
+              <div className="Alert-text"> This is an alert with danger theme! </div>
             </div>
-            <div className="Alert Alert--light mg-bottom">
-              <div className="Alert__text"> This is an alert with light theme! </div>
+            <div className="Alert Alert--light u-MarginBottom">
+              <div className="Alert-text"> This is an alert with light theme! </div>
             </div>
             <div className="Alert Alert--dark">
-              <div className="Alert__text"> This is an alert with dark theme! </div>
+              <div className="Alert-text"> This is an alert with dark theme! </div>
             </div>
             `}
           </PreviewHighlight>
         </Preview>
       </section>
       <section id="extras" className="fr-DocsArticle-section">
-        <header className="heading">
-          <h4 className="title">Icons</h4>
+        <header className="Heading">
+          <h4 className="Title">Icons</h4>
         </header>
         <p>
-          Fugiat sit exercitation id aute dolore do officia. Aliqua non sint
-          elit laborum labore occaecat ea Lorem duis velit sint cupidatat veniam
-          dolor.renungan
+          Icons can also be used inside of an alert component.
         </p>
         <Preview>
           <PreviewDisplay>
-            <div className="Alert Alert--warning mg-bottom">
-              <div className="Alert__icon">
+            <div className="Alert Alert--warning u-MarginBottom">
+              <div className="Alert-icon">
                 <i className="fas fa-exclamation-triangle" />
               </div>
-              <div className="Alert__text">This is an alert with an icon!</div>
+              <div className="Alert-text">This is an alert with an icon!</div>
             </div>
-            <div className="Alert Alert--success mg-bottom">
-              <div className="Alert__icon">
+            <div className="Alert Alert--success u-MarginBottom">
+              <div className="Alert-icon">
                 <i className="fas fa-check" />
               </div>
-              <div className="Alert__text">This is an alert with an icon!</div>
+              <div className="Alert-text">This is an alert with an icon!</div>
             </div>
             <div className="Alert Alert--danger">
-              <div className="Alert__icon">
+              <div className="Alert-icon">
                 <i className="fas fa-times" />
               </div>
-              <div className="Alert__text">This is an alert with an icon!</div>
+              <div className="Alert-text">This is an alert with an icon!</div>
             </div>
           </PreviewDisplay>
           <PreviewHighlight lang="html">
-            {`
+            {`<div class="Alert Alert--warning">
+              <div class="Alert-icon">
+                <i class="fas fa-exclamation-triangle" />
+              </div>
+              <div class="Alert-text">This is an alert with an icon!</div>
+            </div>
+            <div class="Alert Alert--success">
+              <div class="Alert-icon">
+                <i class="fas fa-check" />
+              </div>
+              <div class="Alert-text">This is an alert with an icon!</div>
+            </div>
+            <div class="Alert Alert--danger">
+              <div class="Alert-icon">
+                <i class="fas fa-times" />
+              </div>
+              <div class="Alert-text">This is an alert with an icon!</div>
+            </div>
             `}
           </PreviewHighlight>
         </Preview>

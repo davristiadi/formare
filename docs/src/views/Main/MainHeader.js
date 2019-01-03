@@ -5,11 +5,11 @@ class MainHeader extends Component {
 	render() {
 		return (
 			<header className="MainHeader">
-				<div className="Navbar Navbar--primary">
+				<div className="Navbar Navbar--primary Navbar--xsmall">
 					<div className="Container u-Flex u-JustifyContent-between">
 						<div id="master-brand" className="Navbar-block">
 							<div className="u-PaddingLeft u-PaddingRight">
-								<NavLink to="/" className="u-color-lighter u-fw-semibold u-fs-xlarge">Formare</NavLink>
+								<NavLink to="/" className="u-Color-lighter u-FontWeight-semibold u-FontSize-xlarge">Formare</NavLink>
 							</div>	
 						</div>
 						<div id="master-nav" className="Navbar-block Navbar-block--expanded">
@@ -29,7 +29,7 @@ class MainHeader extends Component {
 								<ul className="Nav-list">
 									<li className="Nav-item">
 										<button className="Button Button--raised Button--secondary">
-											<i className="fas fa-download u-mg-right"></i>
+											<i className="fas fa-download u-MarginRight"></i>
 											Download
 										</button>
 									</li>

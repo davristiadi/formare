@@ -1,37 +1,43 @@
 @import "src/scss/vendor/abstracts";
 
-
-.fr-structure-showcase {
+.fr-Structure-showcase {
   padding-top: spacing(base);
   padding-bottom: spacing(base);
+  
+  .Structure {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: theme-color(secondary);
 
-  .structure {
-    background-color: secondary-color(0);
-
-    .header,
-    .content,
-    .footer,
-    .aside {
+    .Header,
+    .Content,
+    .Footer,
+    .Aside {
       display: flex;
       align-items: center;
       justify-content: center;
+      letter-spacing: 0.5px;
+      font-size: 87.5%;
+      text-transform: uppercase;
+      font-weight: font-weight(semibold);
     }
 
-    .header,
-    .footer {
+    .Header,
+    .Footer {
       background-color: secondary-color(-20);
       color: color-yiq(secondary-color(-20));
-      height: 4em;
+      height: 5em;
     }
 
-    .content {
+    .Content {
       flex: 1;
       background-color: secondary-color(0);
       color: color-yiq(secondary-color(0));
-      height: 12em;
+      height: 15em;
     }
 
-    .aside {
+    .Aside {
       flex: 0 0 200px;
       background-color: secondary-color(-10);
       color: color-yiq(secondary-color(-10));
@@ -39,10 +45,10 @@
   }
 }
 
-.fr-structure-example {
-  .structure {
-    .header {
-      .navbar {
+.fr-Structure-example {
+  .Structure {
+    .Header {
+      .Navbar {
         &__container {
           padding-left: spacing(xlarge);
           padding-right: spacing(xlarge);
@@ -57,11 +63,11 @@
       }
     }
 
-    .content {
+    .Content {
       background-color: $lighter;
       padding: spacing(base);
 
-      &__box {
+      &-box {
         min-height: 20em;
         padding: spacing(base);
         background-color: $white;

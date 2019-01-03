@@ -19,7 +19,7 @@ const Home = () => {
 	return (
 		<article className="fr-DocsArticle">
 			<header className="fr-DocsArticle-heading">
-				<h2 className="title">Layouts</h2>
+				<h2 className="Title">Layouts</h2>
 				<h5 className="subtitle color-gray">Irure magna exercitation fugiat enim reprehenderit ex anim mollit cupidatat irure dolore cillum.</h5>
 			</header>
 		</article>

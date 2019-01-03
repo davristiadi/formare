@@ -13,8 +13,8 @@ const Navbar = props => {
         </h5>
       </div>
       <section id="overview" className="fr-DocsArticle-section">
-        <div className="heading">
-          <h4 className="title">Overview</h4>
+        <div className="Heading">
+          <h4 className="Title">Overview</h4>
         </div>
         <p>Voluptate Lorem fugiat in laborum ex occaecat sit. Qui aliquip aute sint proident.</p>
         <Preview>
@@ -86,8 +86,8 @@ const Navbar = props => {
         </Preview>
       </section>
       <section id="themes" className="fr-DocsArticle-section">
-        <div className="heading">
-          <h4 className="title">Themes</h4>
+        <div className="Heading">
+          <h4 className="Title">Themes</h4>
         </div>
         <p>
           <span>
@@ -125,8 +125,8 @@ const Navbar = props => {
         </Preview>
       </section>
       <section id="blocks" className="fr-DocsArticle-section">
-        <div className="heading">
-          <h4 className="title">Navbar Block</h4>
+        <div className="Heading">
+          <h4 className="Title">Navbar Block</h4>
         </div>
         <p>Navbar block is the d</p>
       </section>

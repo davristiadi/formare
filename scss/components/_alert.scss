@@ -12,15 +12,14 @@
     }
   }
 
-  // <div className="Alert_text Alert_text--primary"></div>
-  &__text {
+  &-text {
     display: flex;
     flex-grow: 1;
     line-height: $line-height;
     padding: $alert-spacing;
   }
 
-  &__icon {
+  &-icon {
   
     &:first-child { 
       padding-left: $alert-spacing-y;

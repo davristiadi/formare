@@ -1,10 +1,10 @@
-.fr-preview {
+&-Preview {
   display: flex;
   flex-direction: column;
   position: relative;
   margin-top: 3em;
 
-  &__tag {
+  &-tag {
     position: absolute;
     top: 0;
     text-transform: uppercase;
@@ -20,13 +20,13 @@
     border-top-right-radius: border-radius(base);
   }
 
-  &__display {
+  &-display {
     padding: spacing(large);
     border: solid 1px $lighter;
     border-top-right-radius: $border-radius;
     overflow: hidden;
 
-    &--paddingless {
+    &--gapless {
       padding: 0;
     }
 
@@ -37,20 +37,10 @@
     }
   }
 
-  &__highlight {
+  &-highlight {
     > pre {
       border-top-left-radius: 0;
       border-top-right-radius: 0;
-    }
-  }
-
-  &--horizontal {
-    flex-direction: row;
-
-    .fr-preview__code {
-      > pre {
-        height: 100%;
-      }
     }
   }
 }

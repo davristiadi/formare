@@ -12,7 +12,7 @@ const PreviewHighlight = props => {
     } = props;
     
     attributes.className = classNames(
-        `fr-preview__highlight`,
+        `fr-Preview-highlight`,
         className
     );
     

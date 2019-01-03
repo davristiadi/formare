@@ -14,8 +14,8 @@ class Structure extends PureComponent {
             </h5>
           </div>
           <section id="overview" className="fr-DocsArticle-section">
-            <div className="heading">
-              <h4 className="title">Overview</h4>
+            <div className="Heading">
+              <h4 className="Title">Overview</h4>
             </div>
             <p>
               Qui sunt voluptate fugiat duis quis labore anim pariatur tempor
@@ -44,74 +44,77 @@ class Structure extends PureComponent {
             </ul>
           </section>
           <section id="basic" className="fr-DocsArticle-section">
-            <div className="heading">
-              <h4 className="title">Types</h4>
+            <div className="Heading">
+              <h4 className="Title">Types</h4>
             </div>
             <p>
               Aute veniam aliqua laborum nulla dolore nulla. Consectetur
               consectetur et ea enim in. Irure magna laborum dolore ullamco
               culpa ipsum cillum ex dolor qui deserunt.
             </p>
-            <div className="fr-structure-showcase">
-              <div className="structure">
-                <header className="header">
+            <div className="fr-Structure-showcase">
+              <div className="Structure">
+                <header className="Header">
                   <span>Header</span>
                 </header>
-                <div className="content">
+                <div className="Content">
                   <span>Content</span>
                 </div>
-                <footer className="footer">
+                <footer className="Footer">
                   <span>Footer</span>
                 </footer>
               </div>
             </div>
-            <div className="fr-structure-showcase">
-              <div className="structure">
-                <header className="header">
+            <div className="fr-Structure-showcase">
+              <div className="Structure">
+                <header className="Header">
                   <span>Header</span>
                 </header>
-                <div className="structure structure--horizontal">
-                  <aside className="aside">Sidebar</aside>
-                  <div className="content">Content</div>
+                <div className="Structure Structure--horizontal">
+                  <aside className="Aside">Sidebar</aside>
+                  <div className="Content">Content</div>
                 </div>
-                <footer className="footer">Footer</footer>
+                <footer className="Footer">Footer</footer>
               </div>
             </div>
-            <div className="fr-structure-showcase">
-              <div className="structure structure--horizontal">
-                <aside className="aside">
+            <div className="fr-Structure-showcase">
+              <div className="Structure Structure--horizontal">
+                <aside className="Aside">
                   <span>Sidebar</span>
                 </aside>
-                <div className="structure">
-                  <header className="header">Header</header>
-                  <div className="content">Content</div>
-                  <footer className="footer">Footer</footer>
+                <div className="Structure">
+                  <header className="Header">Header</header>
+                  <div className="Content">Content</div>
+                  <footer className="Footer">Footer</footer>
                 </div>
               </div>
             </div>
           </section>
           <section id="examples" className="fr-DocsArticle-section">
-            <div className="heading">
-              <h4 className="title">Examples</h4>
+            <div className="Heading">
+              <h4 className="Title">Examples</h4>
             </div>
             <Preview>
-              <PreviewDisplay>                
-                <div className="fr-structure-example">
-                  <div className="structure">
-                    <header className="header">
-                      <div className="navbar navbar--primary">
-                        <div className="container flex jc-between">
-                          <div className="navbar__block">
-                            <span id="logo">Lowgo</span>
+              <PreviewDisplay gapless>                
+                <div className="fr-Structure-example">
+                  <div className="Structure">
+                    <header className="Header">
+                      <div className="Navbar Navbar--primary">
+                        <div className="Container u-Flex u-JustifyContent-between">
+                          <div className="Navbar-block">
+                            <span id="logo">Logo</span>
                           </div>
-                          <div className="navbar__block">
-                            <nav className="nav">
-                              <ul className="nav__list">
-                                <li className="nav__item">
-                                  <a href="/" className="nav__link">Home</a>
+                          <div className="Navbar-block">
+                            <nav className="Nav">
+                              <ul className="Nav-list">
+                                <li className="Nav-item">
+                                  <a href="/" className="Nav-link">Home</a>
                                 </li>
-                                <li className="nav__item">
-                                  <a href="/" className="nav__link">Contact us</a>
+                                <li className="Nav-item">
+                                  <a href="/" className="Nav-link">About Us</a>
+                                </li>
+                                <li className="Nav-item">
+                                  <a href="/" className="Nav-link">Contact</a>
                                 </li>
                               </ul>
                             </nav>
@@ -119,9 +122,9 @@ class Structure extends PureComponent {
                         </div>
                       </div>
                     </header>
-                    <div className="content">
-                      <div className="content__box">
-                        <h5 className="title">Title</h5>
+                    <div className="Content">
+                      <div className="Content-box">
+                        <h5 className="Title">Title</h5>
                         <h6 className="subtitle color-gray">
                           This is a subtitle.
                         </h6>
@@ -131,19 +134,19 @@ class Structure extends PureComponent {
                 </div>
               </PreviewDisplay>
               <PreviewHighlight lang="html">
-                {`<div className="structure">
-                  <header className="header">
-                    <div className="navbar">
-                      <div className="navbar__block">
+                {`<div className="Structure">
+                  <header className="Header">
+                    <div className="Navbar">
+                      <div className="Navbar-block">
                         <span id="logo"></span>
                       </div>
                     </div>
                   </header>
                   
-                  <div className="content">
+                  <div className="Content">
                   </div>
 
-                  <div className="footer">
+                  <div className="Footer">
                   </div>
                 </div>
                 `}

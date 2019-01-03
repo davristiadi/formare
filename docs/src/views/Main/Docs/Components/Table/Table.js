@@ -6,10 +6,10 @@ const Table = props => {
         <div id="card">
             <article className="fr-DocsArticle article">
                 <div className="fr-heading heading">
-                    <h2 className="title">Table</h2>
+                    <h2 className="Title">Table</h2>
                 </div>
                 <section>
-                    <div className="table table--striped mg-bottom">
+                    <div className="table table--striped u-MarginBottom">
                         <table>
                             <thead className="table__head">
                                 <tr>

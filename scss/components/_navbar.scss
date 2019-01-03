@@ -2,7 +2,7 @@
 	position: relative;
 	display: flex;
 	justify-content: space-between;
-	height: $navbar-height;
+	// height: $navbar-height;
 	min-height: $navbar-height;
 	transition: $navbar-transition;
 	background: $navbar-background;
@@ -11,6 +11,8 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
+		padding-top: spacing(base);
+		padding-bottom: spacing(base);
 		height: 100%;
 
 		&--expanded {
@@ -76,7 +78,7 @@
 	
 	@each $size, $value in $navbar-heights {
 		&--#{$size} {
-			height: $value;
+			// height: $value;
 			min-height: $value;
 		}
 	}

@@ -12,8 +12,8 @@ const Button = props => {
         </h5>
       </div>
       <section id="overview" className="fr-DocsArticle-section">
-        <header className="heading">
-          <h4 className="title">Overview</h4>
+        <header className="Heading">
+          <h4 className="Title">Overview</h4>
         </header>
         <p>
           Labore minim adipisicing eu amet culpa nostrud labore. Dolor veniam
@@ -22,9 +22,9 @@ const Button = props => {
         </p>
         <Preview>
           <PreviewDisplay>
-            <button className="Button mg-right">Default Button</button>
-            <button className="Button Button--primary mg-right">Primary Button</button>
-            <button className="Button Button--primary mg-right" disabled>Disabled Button</button>
+            <button className="Button u-MarginRight">Default Button</button>
+            <button className="Button Button--primary u-MarginRight">Primary Button</button>
+            <button className="Button Button--primary u-MarginRight" disabled>Disabled Button</button>
             <button className="Button Button--clear">Clear Button</button>
           </PreviewDisplay>
           <PreviewHighlight lang="html">
@@ -37,8 +37,8 @@ const Button = props => {
         </Preview>
       </section>
       <section id="themes" className="fr-DocsArticle-section">
-        <div className="heading">
-          <h4 className="title">Themes</h4>
+        <div className="Heading">
+          <h4 className="Title">Themes</h4>
         </div>
         <p>
           Fugiat est pariatur velit ipsum nisi dolor proident amet culpa duis
@@ -47,15 +47,15 @@ const Button = props => {
         </p>
         <Preview>
           <PreviewDisplay>
-            <div className="mg-bottom">
-              <button className="Button Button--primary mg-right">Primary</button>
-              <button className="Button Button--secondary mg-right">Secondary</button>
-              <button className="Button Button--success mg-right">Success</button>
-              <button className="Button Button--danger mg-right">Danger</button>
-              <button className="Button Button--warning mg-right">Warning</button>
+            <div className="u-MarginBottom">
+              <button className="Button Button--primary u-MarginRight">Primary</button>
+              <button className="Button Button--secondary u-MarginRight">Secondary</button>
+              <button className="Button Button--success u-MarginRight">Success</button>
+              <button className="Button Button--danger u-MarginRight">Danger</button>
+              <button className="Button Button--warning u-MarginRight">Warning</button>
             </div>
             <div>
-              <button className="Button Button--dark mg-right">Dark</button>
+              <button className="Button Button--dark u-MarginRight">Dark</button>
               <button className="Button Button--light">Light</button>
             </div>
           </PreviewDisplay>
@@ -73,16 +73,16 @@ const Button = props => {
         </Preview>
       </section>
       <section id="pill" className="fr-DocsArticle-section">
-        <div className="heading">
-          <h4 className="title">Rounded</h4>
+        <div className="Heading">
+          <h4 className="Title">Rounded</h4>
         </div>
         <p>Prepend <code>{`.button-pill`}</code> modifier class to transform your button component to a pill-like shape.</p>
         <Preview>
           <PreviewDisplay>
             <div>
-              <button className="Button Button--pill mg-right">Rounded Button</button>
-              <button className="Button Button--pill Button--primary mg-right">Primary Button</button>
-              <button className="Button Button--pill Button--primary mg-right" disabled>Primary Button</button>
+              <button className="Button Button--pill u-MarginRight">Rounded Button</button>
+              <button className="Button Button--pill Button--primary u-MarginRight">Primary Button</button>
+              <button className="Button Button--pill Button--primary u-MarginRight" disabled>Primary Button</button>
             </div>
           </PreviewDisplay>
           <PreviewHighlight lang="html">
@@ -92,21 +92,21 @@ const Button = props => {
       </section>
 
       <section id="raised" className="fr-DocsArticle-section">
-        <div className="heading">
-          <h4 className="title">Raised</h4>
+        <div className="Heading">
+          <h4 className="Title">Raised</h4>
         </div>
         <p>Id eu Lorem exercitation ex occaecat quis enim cupidatat incididunt sunt nostrud minim. Esse nulla in Lorem elit commodo.</p>
         <Preview>
           <PreviewDisplay>
-            <div className="mg-bottom">
-              <button className="Button Button--primary Button--raised mg-right">Primary</button>
-              <button className="Button Button--secondary Button--raised mg-right">Secondary</button>
-              <button className="Button Button--success Button--raised mg-right">Success</button>
-              <button className="Button Button--danger Button--raised mg-right">Danger</button>
-              <button className="Button Button--warning Button--raised mg-right">Warning</button>
+            <div className="u-MarginBottom">
+              <button className="Button Button--primary Button--raised u-MarginRight">Primary</button>
+              <button className="Button Button--secondary Button--raised u-MarginRight">Secondary</button>
+              <button className="Button Button--success Button--raised u-MarginRight">Success</button>
+              <button className="Button Button--danger Button--raised u-MarginRight">Danger</button>
+              <button className="Button Button--warning Button--raised u-MarginRight">Warning</button>
             </div>
             <div>
-              <button className="Button Button--dark Button--raised mg-right">Dark</button>
+              <button className="Button Button--dark Button--raised u-MarginRight">Dark</button>
               <button className="Button Button--light Button--raised">Light</button>
             </div>
           </PreviewDisplay>
@@ -125,8 +125,8 @@ const Button = props => {
       </section>  
 
       <section id="sizes" className="fr-DocsArticle-section">
-        <div className="heading">
-          <h4 className="title">Sizes</h4>
+        <div className="Heading">
+          <h4 className="Title">Sizes</h4>
         </div>
         <p>
           Need your button bigger, or rather smaller? Append{" "}
@@ -145,10 +145,10 @@ const Button = props => {
         </p>
         <Preview>
           <PreviewDisplay>
-            <button className="Button Button--xsmall mg-right">Extra Small</button>
-            <button className="Button Button--small mg-right">Small</button>
-            <button className="Button mg-right">Base</button>
-            <button className="Button Button--large mg-right">Large</button>
+            <button className="Button Button--xsmall u-MarginRight">Extra Small</button>
+            <button className="Button Button--small u-MarginRight">Small</button>
+            <button className="Button u-MarginRight">Base</button>
+            <button className="Button Button--large u-MarginRight">Large</button>
             <button className="Button Button--xlarge">Extra Large</button>
           </PreviewDisplay>
           <PreviewHighlight lang="html">

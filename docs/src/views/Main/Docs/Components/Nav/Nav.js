@@ -12,8 +12,8 @@ const Nav = props => {
           </h5>
         </div>
         <div id="overview" className="fr-DocsArticle-section">
-          <div className="heading">
-            <h4 className="title">Overview</h4>
+          <div className="Heading">
+            <h4 className="Title">Overview</h4>
           </div>
           <p>Eu do qui officia ut ea duis cillum ullamco cillum ut.</p>
           <Preview>
