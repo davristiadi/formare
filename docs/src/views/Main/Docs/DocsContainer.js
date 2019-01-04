@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Docs from './Docs';
 import {
-	Start
+	Start,
+	Installation
 } from './Start';
 
 import {
@@ -34,6 +35,13 @@ class DocsContainer extends Component {
 					path: '/docs/start',
 					title: 'Getting Started',
 					component: Start,
+					hasChildren: [
+						{
+							path: '/docs/start/installation',
+							title: 'Installation',
+							component: Installation
+						}
+					]
 				},
 				{
 					path: '/docs/layouts',

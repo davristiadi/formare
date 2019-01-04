@@ -6,16 +6,15 @@ const Home = props => {
 
   return (
     <div id="homepage">
-      <section className="Hero Hero--primary Hero--large">
+      <section className="Hero Hero--primary Hero--xlarge">
         <div className="Hero-body Hero-body--centerized">
           <div className="Container" style={{
-						width: '640px',
+						width: '768px',
 						textAlign: 'center'
 					}}>
 						<div className="Heading u-MarginBottom-xlarge">
 							<h1 className="Title u-FontWeight-regular">
-								<span className="u-FontWeight-bold">Formare</span> is lightweight,<br />
-								fast and easy to get started with.
+								<strong>Formare</strong> is a modern component library that helps you build web interfaces hassle-free. 
 							</h1>
 						</div>
 						<div className="u-MarginBottom-xlarge" style={{
@@ -24,9 +23,9 @@ const Home = props => {
 						}}>
 							<Highlight lang="javascript" style={{width: '100%', textAlign: 'center'}}>
 								{`
-                npm install formare
+                $ npm install formare
                 // or
-                yarn add formare
+                $ yarn add formare
 								`}
 							</Highlight>
 						</div>

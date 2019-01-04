@@ -1,6 +1,5 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import { Article } from "components/Article";
 
 const Layouts = props => {
 	const { routes, path } = props;

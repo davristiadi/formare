@@ -1,15 +1,16 @@
 $link-color: theme-color(primary) !default;
 
 a {
-    color: $link-color;
+  color: $link-color;
+  cursor: pointer;
 }
 
 // Headings
 @each $heading, $size in $headings {
-    $index: index($headings, ($heading $size));
-    
-    #{$heading},
-    .heading-#{$index} {
-        font-size: $size;
-    }
+  $index: index($headings, ($heading $size));
+  
+  #{$heading},
+  .heading-#{$index} {
+    font-size: $size;
+  }
 }
