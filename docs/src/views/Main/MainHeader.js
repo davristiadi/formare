@@ -1,8 +1,27 @@
 import React, { Component } from 'react';
+import classNames from 'classnames';
 import { NavLink } from 'react-router-dom';
 
 class MainHeader extends Component {
+	constructor() {
+		super();
+		this.state = {
+			nav: [
+				{
+					name: 'Getting Started',
+					path: '/docs/start'
+				},
+				{
+					name: 'Github',
+					path: 'https://github.com/dkk94/formare'
+				}
+			]
+		}
+	}
+	
 	render() {
+		const { nav } = this.state;
+		
 		return (
 			<header className="MainHeader">
 				<div className="Navbar Navbar--primary">
@@ -15,12 +34,15 @@ class MainHeader extends Component {
 						<div id="master-nav" className="Navbar-block Navbar-block--expanded">
 							<nav className="Nav">
 								<ul className="Nav-list">
-									<li className="Nav-item">
-										<NavLink className="Nav-link" to="/docs">Documentation</NavLink>
-									</li>
-									<li className="Nav-item">
-										<NavLink className="Nav-link" to="/docs">Github</NavLink>
-									</li>
+									{
+										nav.map(item => {
+											return (
+												<li className={classNames('Nav-item', )}>
+													<NavLink className="Nav-link" to={item.path}>{item.name}</NavLink>
+												</li>
+											)
+										})
+									}
 								</ul>
 							</nav>
 						</div>

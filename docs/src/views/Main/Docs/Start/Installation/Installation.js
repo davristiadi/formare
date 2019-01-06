@@ -16,12 +16,13 @@ const Installation = props => {
             <h4 className="Title">Package Managers</h4>
           </div>
           <p>
-            Formare is available to download via some of the most popular package managers out there, namely <strong>NPM</strong>:
+            Formare is available to download from some of the most popular package managers out there.
           </p>
+          <p>You can use <strong>NPM</strong>:</p>
           <Highlight lang="vim">
             {`$ npm install formare`}
           </Highlight>
-          <p>or use <strong>Yarn</strong>:</p>
+          <p>or <strong>Yarn</strong>:</p>
           <Highlight lang="vim">
             {`$ yarn add formare`}
           </Highlight>

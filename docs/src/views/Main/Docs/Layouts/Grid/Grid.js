@@ -16,12 +16,9 @@ const Grid = props => {
         <div className="Heading">
           <h4 className="Title">Overview</h4>
         </div>
+        <p>Grid system makes it possible to build mobile-first, responsive website design in no time at all.</p>
         <p>
-          Formare's grid system makes it easier for developers to build
-          mobile-first, responsive website design in no time at all.
-        </p>
-        <p>
-          It's easy to implement and only requires you to use at the minimum{' '}
+          Formare's grid system is easy to implement and only requires you to use at minimum{' '}
           <strong>two classes</strong> to use respectively:
         </p>
         <ul>
