@@ -14,8 +14,8 @@
 		"build-css": "node-sass --output-style expanded --source-map true scss/formare.scss css/formare.css",
 		"build-clean": "cleancss -o css/formare.min.css css/formare.css",
 		"build-autoprefix": "postcss --use autoprefixer --output ./css/formare.css ./css/formare.css",
-		"publish:beta": "npm publish --tag beta",
-		"publish:next": "npm publish --tag next",
+		"publish:beta": "npm start && npm publish --tag beta",
+		"publish:next": "npm start && npm publish --tag next",
 		"start:docs": "cd docs && npm start",
 		"start": "npm run build"
 	},

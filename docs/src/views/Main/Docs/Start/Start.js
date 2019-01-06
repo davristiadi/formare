@@ -24,6 +24,9 @@ const GettingStarted = () => {
         </h5>
       </div>
       <section className="fr-DocsArticle-section">
+        <div className="Heading">
+          <h4 className="Title"></h4>
+        </div>
       </section>
     </article>
   );
