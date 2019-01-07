@@ -14,13 +14,13 @@ const Preview = props => {
   } = props;
 
   let childArray = Children.toArray(children);
-
-  if (!borderless) {
-    childArray.push(<div className="fr-Preview-tag">Preview</div>);
-  } else {
-    childArray.map(child => {
+  
+  if (!borderless) childArray.push(<div className="fr-Preview-tag">Preview</div>);
+  else {
+    return childArray.map(child => {
       if (child.type === PreviewDisplay) {
-        return (child = cloneElement(child, { borderless }));
+        console.log(child);
+        return child = cloneElement(child, { borderless });
       }
 
       return child;
@@ -29,7 +29,6 @@ const Preview = props => {
 
   attributes.className = classNames(
     `fr-Preview`,
-    horizontal ? `fr-Preview--horizontal` : null,
     className,
   );
 
@@ -38,7 +37,6 @@ const Preview = props => {
 
 Preview.propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  horizontal: PropTypes.bool,
   borderless: PropTypes.bool,
 };
 

@@ -1,16 +1,45 @@
 @import "~scss/vendor/abstracts";
 
 .fr-GridExample {
+	.Grids {
+		&:not(:last-child) {
+			margin-bottom: spacing(base);
+		}
+	}
+	
   .Grid {
+		position: relative;
 		display: flex;
-		align-items: center;
 		justify-content: center;
-		margin: 0 $grid-gap-width;
-		padding-top: spacing(base);
-		padding-bottom: spacing(base);
+		align-items: center;
 		font-weight: font-weight(semibold);
-		background-color: secondary-color(-20);
-		color: color-yiq(secondary-color(-20));
-		border-radius: border-radius(base);
-  }
+		background-color: secondary-color(-30);
+		color: color-yiq(secondary-color(-30));
+		padding: spacing(base);
+
+		> code {
+			background-color: secondary-color(-20);
+			color: color-yiq(secondary-color(-20));
+		}
+
+		&:nth-child(2n+1) {
+			background-color: secondary-color(-15);
+			color: color-yiq(secondary-color(-15));
+
+			> code {
+				background-color: secondary-color(-5);
+				color: color-yiq(secondary-color(-5));
+			}
+		}
+
+		&:first-of-type {
+			border-top-left-radius: border-radius(base);
+			border-bottom-left-radius: border-radius(base);
+		}
+
+		&:last-of-type {
+			border-top-right-radius: border-radius(base);
+			border-bottom-right-radius: border-radius(base);
+		}
+	}
 }

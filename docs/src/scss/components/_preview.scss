@@ -26,11 +26,6 @@
     border-top-right-radius: $border-radius;
     overflow: hidden;
 
-    &--gapless {
-      border: none;
-      padding: 0;
-    }
-
     &--borderless {
       border: 0;
       padding-left: 0;
