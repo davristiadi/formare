@@ -1,6 +1,23 @@
-import React from 'react';
+import React, { memo } from 'react';
 import './Grid.scss';
 import { Preview, PreviewDisplay, PreviewHighlight } from 'components/Preview';
+
+const GridSizes = memo(props => {
+  return [...Array(12)].map((x, i) => {
+    if(i > 0) {
+      return (
+        <div className="Grids">
+          <div className={`Grid Grid-${i}`}>
+            <span>{i}</span>
+          </div>
+          <div className="Grid">
+            <span></span>
+          </div>
+        </div>
+      )
+    }
+  })
+});
 
 const Grid = props => {
   return (
@@ -35,6 +52,7 @@ const Grid = props => {
             layout (notice the singular phrasing).
           </li>
         </ul>
+        <p>Here are the basic implementation of our grid layout:</p>
         <Preview>
           <PreviewDisplay>
             <div className="fr-GridExample">
@@ -60,62 +78,19 @@ const Grid = props => {
             `}
           </PreviewHighlight>
         </Preview>
+        <p>
+          As you can see above, if we want to build three grids in a row, we could just put three <code>.Grid</code>
+          classes. Each grid's width will automatically be adjusted equally.
+        </p>
       </section>
       <section className="fr-DocsArticle-section">
         <div className="Heading">
           <h4 className="Title">Grid Sizes</h4>
         </div>
-        <p>
-          You can make one or some grids larger or smaller depending on your needs. 
-          To do this, you only have to append <code>.Grid-#{}</code>
-        </p>
         <Preview>
           <PreviewDisplay>
-            <div className="fr-GridExample">
-              <div className="Grids">
-                <div className="Grid Grid-1"><code>.Grid-1</code></div>
-                <div className="Grid">Auto</div>
-              </div>
-              <div className="Grids">
-                <div className="Grid Grid-2"><code>.Grid-2</code></div>
-                <div className="Grid">Auto</div>
-              </div>
-              <div className="Grids">
-                <div className="Grid Grid-3"><code>.Grid-3</code></div>
-                <div className="Grid">Auto</div>
-              </div>
-              <div className="Grids">
-                <div className="Grid Grid-4"><code>.Grid-4</code></div>
-                <div className="Grid">Auto</div>
-              </div>
-              <div className="Grids">
-                <div className="Grid Grid-5"><code>.Grid-5</code></div>
-                <div className="Grid">Auto</div>
-              </div>
-              <div className="Grids">
-                <div className="Grid Grid-6"><code>.Grid-6</code></div>
-                <div className="Grid">Auto</div>
-              </div>
-              <div className="Grids">
-                <div className="Grid Grid-7"><code>.Grid-7</code></div>
-                <div className="Grid">Auto</div>
-              </div>
-              <div className="Grids">
-                <div className="Grid Grid-8"><code>.Grid-8</code></div>
-                <div className="Grid">Auto</div>
-              </div>
-              <div className="Grids">
-                <div className="Grid Grid-9"><code>.Grid-9</code></div>
-                <div className="Grid">Auto</div>
-              </div>
-              <div className="Grids">
-                <div className="Grid Grid-10"><code>.Grid-10</code></div>
-                <div className="Grid">Auto</div>
-              </div>
-              <div className="Grids">
-                <div className="Grid Grid-11"><code>.Grid-11</code></div>
-                <div className="Grid">Auto</div>
-              </div>
+            <div id="grid-sizes" className="fr-GridExample">
+              <GridSizes {...props} />
             </div>
           </PreviewDisplay>
           <PreviewHighlight lang="html">

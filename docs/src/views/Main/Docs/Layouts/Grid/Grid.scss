@@ -1,6 +1,15 @@
 @import "~scss/vendor/abstracts";
 
 .fr-GridExample {
+	&#grid-sizes {
+		.Grid:nth-child(2n+2) {
+			> span {
+				background-color: secondary-color(-80);
+				color: $gray;
+			}
+		}
+	}
+	
 	.Grids {
 		&:not(:last-child) {
 			margin-bottom: spacing(base);
@@ -8,28 +17,23 @@
 	}
 	
   .Grid {
-		position: relative;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-weight: font-weight(semibold);
-		background-color: secondary-color(-30);
-		color: color-yiq(secondary-color(-30));
-		padding: spacing(base);
+		> span {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+			font-weight: font-weight(semibold);
+			background-color: secondary-color(-30);
+			color: color-yiq(secondary-color(-30));
+			padding-top: spacing(base);
+			padding-bottom: spacing(base);
+			border-radius: border-radius(base);
+		}
 
 		> code {
 			background-color: secondary-color(-20);
 			color: color-yiq(secondary-color(-20));
-		}
-
-		&:nth-child(2n+1) {
-			background-color: secondary-color(-15);
-			color: color-yiq(secondary-color(-15));
-
-			> code {
-				background-color: secondary-color(-5);
-				color: color-yiq(secondary-color(-5));
-			}
 		}
 
 		&:first-of-type {

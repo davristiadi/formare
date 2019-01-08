@@ -140,10 +140,7 @@ const Alert = props => {
         <div className="Heading">
           <h5 className="Title">Dismissing an Alert</h5>
         </div>
-        <p>
-          It is always a good idea to make your alert dismissable as one of an alert's important traits is that it
-          should be non-intteruptible and does not interfere with user's action.
-        </p>
+        <p>It's always a good idea to make an alert dismissable by providing a close button.</p>
         <Preview>
           <PreviewDisplay>
             <div className="Alert Alert--warning">

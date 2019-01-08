@@ -10,7 +10,7 @@ class Structure extends PureComponent {
           <div className="fr-DocsArticle-heading">
             <h2 className="fr-DocsArticle-title">Structure</h2>
             <h5 className="fr-DocsArticle-subtitle">
-              Defines the main structure layout of your website easily.
+              Build the main structure or the building block of your website that is fully customizable.
             </h5>
           </div>
           <section id="overview" className="fr-DocsArticle-section">

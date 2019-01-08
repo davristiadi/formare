@@ -20,7 +20,7 @@ const GettingStarted = () => {
       <div className="fr-DocsArticle-heading">
         <h2 className="fr-DocsArticle-title">Getting Started</h2>
         <h5 className="fr-DocsArticle-subtitle">
-          Formare is lightweight, fast and super easy to get started with.
+          A quick start-up guide for setting up Formare in your project.
         </h5>
       </div>
       <section className="fr-DocsArticle-section">

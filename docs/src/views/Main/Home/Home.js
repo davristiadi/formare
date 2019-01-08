@@ -14,7 +14,7 @@ const Home = props => {
 					}}>
 						<div className="Heading u-MarginBottom-xlarge">
 							<h1 className="Title u-FontWeight-regular">
-								<strong>Formare</strong> is a simple and lightweight CSS framework for building web interfaces hassle-free. 
+								<strong>Formare</strong> is a simple and modular front-end library for building websites hassle-free. 
 							</h1>
 						</div>
 						<div className="u-MarginBottom-xlarge" style={{

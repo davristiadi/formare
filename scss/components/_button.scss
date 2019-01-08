@@ -98,8 +98,9 @@
 
 					&:active,
 					&.Button--active {
+						border-color: shade($color, 20%);
 						border-bottom-width: 1px;
-						border-bottom-color: shade($color, 20%);
+						// border-bottom-color: shade($color, 20%);
 						background-color: shade($color, 20%);
 						margin-top: 3px;
 						outline: none;
