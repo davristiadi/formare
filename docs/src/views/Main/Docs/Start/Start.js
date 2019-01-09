@@ -26,11 +26,18 @@ const GettingStarted = () => {
       <section className="fr-DocsArticle-section">
         <div className="Heading">
           <h4 className="Title">Quick Start</h4>
-        </div>
+        </div>        
         <p>
           The quickest and easiest way to use Formare in your website is by adding it via package managers, but there are also
-          other methods available. Head over to the <a>installation</a> page for more info.
+          other methods available. Go to the <a>installation</a> page for more info.
         </p>
+        <blockquote className="Blockquote">
+          <i className="fas fa-exclamation-triangle fa-lg u-MarginRight"></i>
+          <div>
+            To be noted that Formare isn't listed in CDNjs therefore you cannot fetch our project via CDN. Consider starring and contributing to our project
+            to make it available in CDN!
+          </div>
+        </blockquote>
       </section>
     </article>
   );

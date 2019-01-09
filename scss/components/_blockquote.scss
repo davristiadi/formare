@@ -1,3 +1,12 @@
-.blockquote {
-  
+.Blockquote {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: spacing(base);
+  margin: 0;
+  border: solid 1px theme-color-shade(primary, -90);
+  border-radius: border-radius(base);
+  border-left: solid 5px $primary-color;
+  overflow: hidden;
+  background-color: theme-color-shade(primary, -90);
 }

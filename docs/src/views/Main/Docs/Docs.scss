@@ -34,24 +34,18 @@
   position: relative;
   background-color: $white;
   width: 100%;
+  padding: 0;
+  padding-top: spacing(base);
   z-index: 500;
 
   @include media(md) {
-    padding-top: spacing(large);
-    padding-left: spacing(large);
+    padding-top: spacing(xxlarge);
+    padding-left: spacing(base);
+    padding-right: spacing(base);
   }
 }
 
 .fr-DocsArticle {
-  padding-top: spacing(large);
-  padding-left: spacing(base);
-  padding-right: spacing(base);
-  
-  @include media(md) {
-    padding-top: spacing(large);
-    padding-left: spacing(large);
-    padding-right: spacing(base);
-  }
   
   &-heading {
     margin-bottom: spacing(xlarge);
