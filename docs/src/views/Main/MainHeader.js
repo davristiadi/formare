@@ -12,6 +12,10 @@ class MainHeader extends Component {
 					path: '/docs/start'
 				},
 				{
+					name: 'Documentation',
+					path: '/docs/'
+				},
+				{
 					name: 'Github',
 					path: 'https://github.com/dkk94/formare'
 				}
@@ -25,7 +29,7 @@ class MainHeader extends Component {
 		return (
 			<header className="MainHeader">
 				<div className="Navbar Navbar--primary">
-					<div className="Container u-Flex u-JustifyContent-between">
+					<div className="Container Container--fullWidth u-Flex u-JustifyContent-between">
 						<div id="master-brand" className="Navbar-block">
 							<div className="u-PaddingLeft u-PaddingRight">
 								<NavLink to="/" className="u-Color-lighter u-FontWeight-semibold u-FontSize-xlarge">Formare</NavLink>
@@ -37,7 +41,7 @@ class MainHeader extends Component {
 									{
 										nav.map(item => {
 											return (
-												<li className={classNames('Nav-item', )}>
+												<li className={classNames('Nav-item', 'Nav-item--is-active')}>
 													<NavLink className="Nav-link" to={item.path}>{item.name}</NavLink>
 												</li>
 											)

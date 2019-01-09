@@ -72,6 +72,10 @@
 						color: rgba(color-yiq($color), 1);
 					}
 				}
+
+				&--is-active {
+					color: rgba(color-yiq($color), 1);
+				}
 			}
 		}
 	}

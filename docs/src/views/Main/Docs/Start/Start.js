@@ -25,8 +25,12 @@ const GettingStarted = () => {
       </div>
       <section className="fr-DocsArticle-section">
         <div className="Heading">
-          <h4 className="Title"></h4>
+          <h4 className="Title">Quick Start</h4>
         </div>
+        <p>
+          The quickest and easiest way to use Formare in your website is by adding it via package managers, but there are also
+          other methods available. Head over to the <a>installation</a> page for more info.
+        </p>
       </section>
     </article>
   );

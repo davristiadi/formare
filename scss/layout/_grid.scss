@@ -4,13 +4,13 @@
 	padding: 0 $grid-gap-width;
 	width: 100%;
 	
-	@each $breakpoint, $width in $container-max-widths {
+	@each $breakpoint, $width in $container-widths {
 		@include media($breakpoint) {
 			max-width: $width;
 		}
 	}
 
-	&--full-width {
+	&--fullWidth {
 		max-width: none;
 		width: 100%;
 	}

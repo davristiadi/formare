@@ -10,13 +10,14 @@ $breakpoints: map-merge(
   $breakpoints
 );
 
-$container-max-widths: () !default;
-$container-max-widths: map-merge(
+$container-widths: () !default;
+$container-widths: map-merge(
   (
-    sm: 100%,
-    md: 720px,
-    lg: 960px,
-    xl: 1140px
+    xs: 100%,
+    sm: get-breakpoints(sm),
+    md: get-breakpoints(md),
+    lg: get-breakpoints(lg),
+    xl: get-breakpoints(xl),
   ),
-  $container-max-widths
+  $container-widths
 );
