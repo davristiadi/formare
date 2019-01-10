@@ -3,15 +3,17 @@
 	display: flex;
 	justify-content: space-between;
 	min-height: $navbar-height;
+	height: $navbar-height;
 	transition: $navbar-transition;
 	background: $navbar-background;
 	
 	&-block {
+		position: relative;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		padding-top: spacing(base);
-		padding-bottom: spacing(base);
+		// padding-top: spacing(base);
+		// padding-bottom: spacing(base);
 		height: 100%;
 
 		&--expanded {
