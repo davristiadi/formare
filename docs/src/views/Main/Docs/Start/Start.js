@@ -1,5 +1,6 @@
 import React from "react";
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Link } from 'react-router-dom';
+import { Highlight } from 'components/Highlight';
 
 const Start = props => {
   const { path, routes } = props;
@@ -23,21 +24,29 @@ const GettingStarted = () => {
           A quick start-up guide for setting up Formare in your project.
         </h5>
       </div>
-      <section className="fr-DocsArticle-section">
+      <section id="quick-start" className="fr-DocsArticle-section">
         <div className="Heading">
           <h4 className="Title">Quick Start</h4>
-        </div>        
+        </div>
         <p>
-          The quickest and easiest way to use Formare in your website is by adding it via package managers, but there are also
-          other methods available. Go to the <a>installation</a> page for more info.
+          At the moment, the recommended and quickest way to integrate Formare into your project is by through{' '}
+          <a href="https://cdn.jsdelivr.net/npm/formare/css/formare.css">CDN</a> provided by <a href="https://www.jsdelivr.com/">jsDelivr</a>.
+          We have also provided several ways to install Formare other than CDN. For more information about this, head 
+          over to the <Link to="/docs/start/installation">installation</Link> page.
         </p>
-        <blockquote className="Blockquote">
-          <i className="fas fa-exclamation-triangle fa-lg u-MarginRight"></i>
-          <div>
-            To be noted that Formare isn't listed in CDNjs therefore you cannot fetch our project via CDN. Consider starring and contributing to our project
-            to make it available in CDN!
-          </div>
-        </blockquote>
+      </section>
+      <section id="usage" className="fr-DocsArticle-section">
+        <div className="Heading">
+          <h4 className="Title">Usage</h4>
+        </div>
+        <p>
+          After you've done the installation process, just put this <code>{`<link>`}</code> tag in your project's <code>{`<head>`}</code> 
+          and you instantly gain access to all of our classes. It's really that simple!
+        </p>
+        <Highlight lang="html">
+          {`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/formare/css/formare.css" />
+          `}
+        </Highlight>
       </section>
     </article>
   );

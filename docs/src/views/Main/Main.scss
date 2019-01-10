@@ -10,11 +10,17 @@
   
   #master-nav {
     display: none;
+
+    @include media(md) {
+      display: flex;
+    }
   }
 
-  @include media(md) {
-    #master-nav {
-      display: flex;
+  #master-menu {
+    display: flex;
+
+    @include media(md) {
+      display: none;
     }
   }
 }

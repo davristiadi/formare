@@ -29,13 +29,16 @@ class MainHeader extends Component {
 		return (
 			<header className="MainHeader">
 				<div className="Navbar Navbar--primary">
-					<div className="Container Container--fullWidth u-Flex u-JustifyContent-between">
+					<div className="Container Container--fullWidth u-Flex">
+						<div id="master-menu" className="Navbar-block">
+							<i className="fas fa-bars fa-lg u-PaddingLeft"></i>
+						</div>
 						<div id="master-brand" className="Navbar-block">
 							<div className="u-PaddingLeft u-PaddingRight">
 								<NavLink to="/" className="u-Color-lighter u-FontWeight-semibold u-FontSize-xlarge">Formare</NavLink>
 							</div>	
 						</div>
-						<div id="master-nav" className="Navbar-block Navbar-block--expanded">
+						<div id="master-nav" className="Navbar-block Navbar-block--expanded Navbar-block--start">
 							<nav className="Nav">
 								<ul className="Nav-list">
 									{
@@ -50,7 +53,7 @@ class MainHeader extends Component {
 								</ul>
 							</nav>
 						</div>
-						<div className="Navbar-block Navbar-block--end">
+						<div className="Navbar-block Navbar-block--expanded Navbar-block--end">
 							<nav className="Nav">
 								<ul className="Nav-list">
 									<li className="Nav-item">

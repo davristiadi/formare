@@ -18,7 +18,8 @@ class DocsMenu extends Component {
         else {
           return classNames(
             'fr-DocsMenu-item',
-            route.hasChildren ? 'fr-DocsMenu-item--hasSubmenu' : ''
+            route.hasChildren ? 'fr-DocsMenu-item--hasSubmenu' : '',
+            history.location.pathname === route.path ? 'fr-DocsMenu-item--isActive' : ''
           );
         }
       },

@@ -35,18 +35,17 @@
   background-color: $white;
   width: 100%;
   padding: 0;
-  padding-top: spacing(base);
+  padding-top: spacing(large);
   z-index: 500;
 
   @include media(md) {
     padding-top: spacing(xxlarge);
-    padding-left: spacing(base);
-    padding-right: spacing(base);
+    padding-left: spacing(xxlarge);
+    padding-right: spacing(xxlarge);
   }
 }
 
 .fr-DocsArticle {
-  
   &-heading {
     margin-bottom: spacing(xlarge);
   }
@@ -86,8 +85,14 @@
       display: block;
       color: inherit;
       font-weight: font-weight(bold);
-      padding: spacing(small) spacing(base);
+      padding: spacing(xsmall) spacing(base);
       transition: $transition;
+    }
+
+    &--isActive {
+      > #{$menu}-link {
+        color: theme-color(primary);
+      }
     }
 
     &--hasSubmenu {
@@ -95,6 +100,7 @@
         > #{$menu}-link {
           font-weight: font-weight(regular);
           color: $gray;
+          // margin-left: spacing(xsmall);
         }
 
         &--isActive {
