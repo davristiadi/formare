@@ -79,7 +79,6 @@ const Grid = props => {
           <h4 className="Title">Grid Sizes</h4>
         </div>
         <p>The grid system is composed of 12 columns, but this can be changed by altering the <code>$grid-columns</code> variable.</p>
-        <p></p>
         <Preview borderless>
           <PreviewDisplay>
             <div id="grid-sizes" className="fr-GridExample">
@@ -133,6 +132,94 @@ const Grid = props => {
             </div>
             `}
           </PreviewHighlight>
+        </Preview>
+        <div className="Heading">
+          <h5 className="Title">Resizing a Grid</h5>
+        </div>
+        <p>One of the main traits of the grid layout is that you can make one or more grids larger or smaller and its 
+          sibling grids will have their width adjusted automatically. Optionally, you can set some grids with fixed width according
+          to your needs.</p>
+        <Preview>
+          <PreviewDisplay>
+            <div className="fr-GridExample">
+              <div className="Grids">
+                <div className="Grid">
+                  <span><code>.Grid</code></span>
+                </div>
+                <div className="Grid Grid-8">
+                  <span><code>.Grid .Grid-8</code></span>
+                </div>
+                <div className="Grid">
+                  <span><code>.Grid</code></span>
+                </div>
+              </div>
+              <div className="Grids">
+                <div className="Grid">
+                  <span><code>.Grid</code></span>
+                </div>
+                <div className="Grid Grid-3">
+                  <span><code>.Grid Grid-3</code></span>
+                </div>
+                <div className="Grid">
+                  <span><code>.Grid</code></span>
+                </div>
+              </div>
+              <div className="Grids">
+                <div className="Grid Grid-2">
+                  <span><code>.Grid .Grid-2</code></span>
+                </div>
+                <div className="Grid Grid-4">
+                  <span><code>.Grid .Grid-4</code></span>
+                </div>
+                <div className="Grid Grid-6">
+                  <span><code>.Grid .Grid-6</code></span>
+                </div>
+              </div>
+            </div>
+          </PreviewDisplay>
+          <PreviewHighlight lang="html">
+            {`<div class="Grids">
+                <div class="Grid">.Grid</div>
+                <div class="Grid Grid-8">.Grid .Grid-8</div>
+                <div class="Grid">.Grid</div>
+              </div>
+
+              <div class="Grids">
+                <div class="Grid">.Grid</div>
+                <div class="Grid Grid-3">.Grid .Grid-3</div>
+                <div class="Grid">.Grid</div>
+              </div>
+            `}
+          </PreviewHighlight>
+        </Preview>
+      </section>
+      <section id="" className="fr-DocsArticle-section">
+        <div className="Heading">
+          <h4 className="Title">Responsive Grids</h4>
+        </div>
+        <p>Mollit labore sint eu quis quis elit occaecat est eiusmod cupidatat ut qui cillum labore.</p>
+        <p>Dolor nostrud sint proident proident esse laboris aliqua laboris amet nostrud ad eu non. Sit amet non eiusmod magna laborum incididunt aute ea id voluptate ad non non fugiat.</p>
+        <Preview>
+          <PreviewDisplay>
+            <div className="fr-GridExample">
+              <div className="Grids">
+                <div className="Grid Grid-xs-12 Grid-md-6">
+                  <span>.xs-12 .md-6</span>
+                </div>
+                <div className="Grid Grid-xs-12 Grid-md-6">
+                  <span>.xs-12 .md-6</span>
+                </div>
+              </div>
+              <div className="Grids">
+                <div className="Grid Grid-xs-12 Grid-md-4">
+                  <span>.xs-12 .md-4</span>
+                </div>
+                <div className="Grid Grid-xs-12 Grid-md-8">
+                  <span>.xs-12 .md-8</span>
+                </div>
+              </div>
+            </div>
+          </PreviewDisplay>
         </Preview>
       </section>
     </article>

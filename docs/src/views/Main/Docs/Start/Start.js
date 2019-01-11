@@ -40,8 +40,8 @@ const GettingStarted = () => {
           <h4 className="Title">Usage</h4>
         </div>
         <p>
-          After you've done the installation process, just put this <code>{`<link>`}</code> tag in your project's <code>{`<head>`}</code> 
-          and you instantly gain access to all of our classes. It's really that simple!
+          After you've done the installation process with CDN, you can just put this <code>{`<link>`}</code> tag in your project's <code>{`<head>`}</code> 
+          and instantly gain access to all of our classes. It's really that simple!
         </p>
         <Highlight lang="html">
           {`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/formare/css/formare.css" />

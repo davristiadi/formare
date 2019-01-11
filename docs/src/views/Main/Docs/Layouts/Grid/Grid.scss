@@ -29,11 +29,11 @@
 			padding-top: spacing(base);
 			padding-bottom: spacing(base);
 			border-radius: border-radius(base);
-		}
 
-		> code {
-			background-color: secondary-color(-20);
-			color: color-yiq(secondary-color(-20));
+			> code {
+				background-color: secondary-color(-15);
+				color: color-yiq(secondary-color(-15));
+			}
 		}
 
 		&:first-of-type {

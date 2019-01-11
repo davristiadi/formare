@@ -9,7 +9,7 @@ const Navbar = props => {
       <div className="fr-DocsArticle-heading">
         <h2 className="fr-DocsArticle-title">Navigation Bar</h2>
         <h5 className="fr-DocsArticle-subtitle">
-          Navbar is one of the most essential element in a website as it usually includes the website's branding and main navigation links.
+          Navbar is the a container component you could use to contain branding, main navigation and so on.
         </h5>
       </div>
       <section id="overview" className="fr-DocsArticle-section">
@@ -53,28 +53,28 @@ const Navbar = props => {
           </PreviewDisplay>
           <PreviewHighlight lang="html">
             {`<div className="Navbar">
-                <div className="Navbar__block">
+                <div className="Navbar-block">
                   <span>Logo</span>
                 </div>
-                <div className="Navbar__block Navbar__block--expanded">
-                  <nav className="nav">
-                    <ul className="nav__list">
-                      <li className="nav__item">
-                        <a className="nav__link">Home</a>
+                <div className="Navbar-block Navbar-block--expanded">
+                  <nav className="Nav">
+                    <ul className="Nav-list">
+                      <li className="Nav-item">
+                        <a className="Nav-link">Home</a>
                       </li>
-                      <li className="nav__item">
-                        <a className="nav__link">FAQ</a>
+                      <li className="Nav-item">
+                        <a className="Nav-link">FAQ</a>
                       </li>
-                      <li className="nav__item">
-                        <a className="nav__link">Contact Us</a>
+                      <li className="Nav-item">
+                        <a className="Nav-link">Contact Us</a>
                       </li>
                     </ul>
                   </nav>
                 </div>
-                <div className="navbar__block">
-                  <nav className="nav">
-                    <ul className="nav__list">
-                      <li className="nav__item">
+                <div className="Navbar-block">
+                  <nav className="Nav">
+                    <ul className="Nav-list">
+                      <li className="Nav-item">
                         <button className="Button Button--primary">Sign up</button>
                       </li>
                     </ul>
@@ -117,7 +117,7 @@ const Navbar = props => {
             <NavbarExample theme="darker" />
           </PreviewDisplay>
           <PreviewHighlight lang="html">
-            {`<div class="navbar navbar--primary">
+            {`<div class="Navbar Navbar--primary">
               <!-- navbar blocks here... -->
             </div>
             `}
@@ -128,7 +128,10 @@ const Navbar = props => {
         <div className="Heading">
           <h4 className="Title">Navbar Block</h4>
         </div>
-        <p>Navbar block is the d</p>
+        <p>
+          In Formare, a navbar layout is often accompanied with its block-level component called the <strong>navbar block.</strong>
+          
+        </p>
       </section>
 
     </article>
