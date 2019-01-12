@@ -37,6 +37,12 @@ const Card = props => {
                   </div>
                 </div>
               </div>
+              <div className="Grid Grid-12 Grid-xl-6">
+                <div className="Card">
+                  <div className="Card-header">
+                  </div>
+                </div>
+              </div>
             </div>
           </PreviewDisplay>
         </Preview>
