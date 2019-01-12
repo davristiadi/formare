@@ -1,17 +1,20 @@
 .Card {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	background-color: $card-background;
 
 	> * {
-		&:first-child {
-			border-top-left-radius: $border-radius;
-			border-top-right-radius: $border-radius;
-		}
-	
-		&:last-child {
-			border-bottom-left-radius: $border-radius;
-			border-bottom-right-radius: $border-radius;
+		&:not(:only-child) {
+			&:first-child {
+				border-top-left-radius: $border-radius;
+				border-top-right-radius: $border-radius;
+			}
+		
+			&:last-child {
+				border-bottom-left-radius: $border-radius;
+				border-bottom-right-radius: $border-radius;
+			}
 		}
 	}
 	
@@ -43,7 +46,6 @@
 	&-image {
 		position: relative;
 		height: 200px;
-		min-height: 200px;
 		overflow: hidden;
 
 		> img {
@@ -51,6 +53,41 @@
 			width: 100%;
 			object-fit: cover;
 			object-position: center;
+		}
+	}
+
+	@each $theme, $color in $theme-colors {
+		&--#{$theme} {
+			.Card-header,
+			.Card-body,
+			.Card-footer {	
+				background-color: $color;
+				border-color: theme-color-shade($theme, 15);
+				color: color-yiq($color);
+			}
+
+			&.Card--hasOverlay {
+				border-radius: $border-radius;
+				overflow: hidden;
+
+				.Card-header,
+				.Card-body,
+				.Card-footer {
+					position: relative;
+					background-color: rgba($color, 0.75);
+					border-radius: border-radius(base);
+					z-index: 150;
+				}
+					
+				.Card-image {
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 100%;
+					width: 100%;
+					z-index: 100;
+				}
+			}
 		}
 	}
 }

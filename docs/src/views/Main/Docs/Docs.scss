@@ -40,12 +40,15 @@
 
   @include media(md) {
     padding-top: spacing(xxlarge);
-    padding-left: spacing(xxlarge);
-    padding-right: spacing(xxlarge);
   }
 }
 
 .fr-DocsArticle {
+  @include media(md) {
+    padding-left: spacing(xxlarge);
+    padding-right: spacing(xxlarge);
+  }
+  
   &-heading {
     margin-bottom: spacing(xlarge);
   }

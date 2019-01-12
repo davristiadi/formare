@@ -11,7 +11,7 @@
   #master-nav {
     display: none;
 
-    @include media(md) {
+    @include media(lg) {
       display: flex;
     }
   }
@@ -19,7 +19,7 @@
   #master-menu {
     display: flex;
 
-    @include media(md) {
+    @include media(lg) {
       display: none;
     }
   }

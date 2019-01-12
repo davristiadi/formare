@@ -223,7 +223,7 @@ samp {
 }
 
 code {
-  background-color: gray(100);
+  background-color: $lighter;
   color: $primary-color;
   padding: 0.25em;
   font-size: font-size(small);
