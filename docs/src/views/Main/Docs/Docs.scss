@@ -74,8 +74,7 @@
   flex-direction: column;
   flex: 1 1 auto;
   z-index: 500;
-  
-  $menu: &;
+
   
   &-list {
     list-style: none;
@@ -84,30 +83,29 @@
   }
 
   &-item {
-    > #{$menu}-link { 
+    > .fr-DocsMenu-link { 
       display: block;
       color: inherit;
       font-weight: font-weight(bold);
-      padding: spacing(xsmall) spacing(base);
+      padding: spacing(small) spacing(base);
       transition: $transition;
     }
 
     &--isActive {
-      > #{$menu}-link {
+      > .fr-DocsMenu-link {
         color: theme-color(primary);
       }
     }
 
     &--hasSubmenu {
-      #{$menu}-item {  
-        > #{$menu}-link {
+      .fr-DocsMenu-item {  
+        > .fr-DocsMenu-link {
           font-weight: font-weight(regular);
           color: $gray;
-          // margin-left: spacing(xsmall);
         }
 
         &--isActive {
-          > #{$menu}-link {
+          > .fr-DocsMenu-link {
             background-color: theme-color-shade(primary, -80);
             color: theme-color(primary);
             font-weight: font-weight(semibold);

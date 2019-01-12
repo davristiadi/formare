@@ -9,10 +9,12 @@
 &-Flex,
 &-InlineFlex {
   &-row {
+    display: flex;
     flex-direction: row;
   }
   
   &-column {
+    display: inline-flex;
     flex-direction: column;
   }
 }

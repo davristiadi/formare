@@ -19,13 +19,13 @@ $font-size: 1rem !default;
 $font-sizes: () !default;
 $font-sizes: map-merge(
 	(
-		xx-small: 	($font-size / 1.75),
+		xxsmall: 	($font-size / 1.75),
 		xsmall: 		($font-size / 1.35),
 		small: 			($font-size / 1.15),
 		base: 			$font-size,
 		large: 			($font-size * 1.25),
 		xlarge: 		($font-size * 1.5),
-		xx-large: 	($font-size * 2)
+		xxlarge: 	($font-size * 2)
 	), 
 	$font-sizes
 );

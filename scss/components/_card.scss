@@ -55,10 +55,15 @@
 			object-position: center;
 		}
 	}
-
+	
 	@each $theme, $color in $theme-colors {
 		&--#{$theme} {
-			.Card-header,
+			.Card-header {
+				background-color: theme-color-shade($theme, 10);
+				color: color-yiq(theme-color-shade($theme, 10));
+				border-color: theme-color-shade($theme, 15);
+			}
+			
 			.Card-body,
 			.Card-footer {	
 				background-color: $color;
@@ -67,16 +72,15 @@
 			}
 
 			&.Card--hasOverlay {
-				border-radius: $border-radius;
+				border-radius: border-radius(base);
 				overflow: hidden;
 
 				.Card-header,
 				.Card-body,
 				.Card-footer {
-					position: relative;
+					flex-grow: 1;
 					background-color: rgba($color, 0.75);
-					border-radius: border-radius(base);
-					z-index: 150;
+					z-index: 100;
 				}
 					
 				.Card-image {
@@ -85,7 +89,7 @@
 					left: 0;
 					height: 100%;
 					width: 100%;
-					z-index: 100;
+					z-index: 50;
 				}
 			}
 		}

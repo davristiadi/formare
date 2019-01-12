@@ -1,7 +1,6 @@
 import React from "react";
 import './Card.scss';
 import { Preview, PreviewDisplay, PreviewHighlight } from "components/Preview";
-import { Highlight } from "components/Highlight";
 import { default as PhotoDummy } from "../../../../../assets/images/dummy-photo.jpeg";
 
 const Card = props => {
@@ -18,27 +17,30 @@ const Card = props => {
           <h4 className="Title">Overview</h4>
         </div>
         <p>Pariatur pariatur consectetur qui ullamco Lorem amet ut officia culpa.</p>
-        <Preview borderless>
+        <Preview>
           <PreviewDisplay>
-            <div className="Card" style={{maxWidth: '400px'}}>
-              <div className="Card-header">
-                <h5 className="Title">Card Title</h5>
-                <h6 className="subtitle color-gray">This is a subtitle</h6>
-              </div>
-              <div className="Card-body">
-                <p>Ut eiusmod magna laboris deserunt sunt duis et id adipisicing et elit. 
-                  Tempor ipsum consectetur enim nisi tempor culpa ex aliquip ad proident.
-                  Velit sint ad sit sint sint et aliqua consequat commodo est laboris enim consectetur.
-                </p>
-              </div>
-              <div className="Card-footer">
-                <button className="Button Button--primary">Submit</button>
+            <div className="Grids">
+              <div className="Grid Grid-12 Grid-xl-6">
+                <div className="Card">
+                  <div className="Card-header">
+                    <h5 className="Title">Card Title</h5>
+                    <h6 className="Subtitle u-Color-gray">This is a subtitle</h6>
+                  </div>
+                  <div className="Card-body">
+                    <p>Ut eiusmod magna laboris deserunt sunt duis et id adipisicing et elit. 
+                      Tempor ipsum consectetur enim nisi tempor culpa ex aliquip ad proident.
+                      Velit sint ad sit sint sint et aliqua consequat commodo est laboris enim consectetur.
+                    </p>
+                  </div>
+                  <div className="Card-footer">
+                    <button className="Button Button--primary">Submit</button>
+                  </div>
+                </div>
               </div>
             </div>
           </PreviewDisplay>
         </Preview>
       </section>
-
 
       <section id="themes" className="fr-DocsArticle-section">
         <div className="Heading">
@@ -50,7 +52,7 @@ const Card = props => {
           <PreviewDisplay>
             <div className="fr-CardExample">
               <div className="Grids">
-                <div className="Grid Grid-6 u-MarginBottom-base">
+                <div className="Grid Grid-12 Grid-xl-6 u-MarginBottom-base">
                   <div className="Card Card--primary">
                     <div className="Card-header">
                       <h5 className="Title">Primary Theme</h5>
@@ -68,7 +70,7 @@ const Card = props => {
                     </div>
                   </div>
                 </div>
-                <div className="Grid Grid-6 u-MarginBottom-base">
+                <div className="Grid Grid-12 Grid-xl-6 u-MarginBottom-base">
                   <div className="Card Card--dark">
                     <div className="Card-header">
                       <h5 className="Title">Secondary Theme</h5>
@@ -97,18 +99,17 @@ const Card = props => {
         <div className="Heading">
           <h4 className="Title">Images</h4>
         </div>
-        <p>Images can also be included inside of a card to support the piece of information you are trying to convey to your users.
-          There a few out-of-the-box options you can choose, including adding image thumbnail to a certain part of your
-          card, overlaying your image into your card.
+        <p>Support for images are also available and is highly recommended to be put inside of your card component
+          in hope to better emphasize the the information you are trying to provide to your users.
+          There are a few options you can choose, including adding an image thumbnail and overlaying your image choice as the
+          card content's background.
         </p>
 
         <div className="Heading">
           <h5 className="Title">Thumbnail</h5>
         </div>
-        <p>
-          Minim fugiat ad aliquip aute magna in aliquip cupidatat incididunt.
-          Voluptate Lorem incididunt velit do in do eu laboris consectetur nulla
-          ullamco.
+        <p>Simply add <code>.Card-image</code> element inside of the <code>.Card</code> component, including the preferred
+          <code>{`<img>`}</code> of your choice to add an image to your card.
         </p>
         <Preview>
           <PreviewDisplay>
@@ -167,7 +168,7 @@ const Card = props => {
                     <div className="Card-image">
                       <img src={PhotoDummy} />
                     </div>
-                    <div className="Card-body">
+                    <div className="Card-body u-Flex-column u-JustifyContent-end">
                       <h5 class="Title">Lorem ea non cillum.</h5>
                       <p>Excepteur veniam dolor adipisicing ex sit. Dolore est laborum aute commodo nisi aliquip pariatur eu non magna.
                         Mollit amet laboris officia velit officia et ea enim ea ut quis velit officia velit.
@@ -198,7 +199,5 @@ const Card = props => {
     </article>
   );
 };
-
-Card.propTypes = {};
 
 export default Card;
