@@ -31,13 +31,6 @@
   &-JustifyContent-#{$abbr} {
     justify-content: $type;
   }
-
-  @each $breakpoint in $breakpoints {
-    &-jc-#{breakpoint}-#{$abbr},
-    &-JustifyContent-#{$breakpoint}-#{$abbr} {
-      justify-content: $type;
-    }
-  }
 }
 
 @each $type, $abbr in (
@@ -50,12 +43,5 @@
   &-ai-#{$abbr},
   &-AlignItems-#{$abbr} {
     align-items: $type;
-  }
-
-  @each $breakpoint in $breakpoints {
-    &-ai-#{breakpoint}-#{$abbr},
-    &-AlignItems-#{$breakpoint}-#{$abbr} {
-      justify-content: $type;
-    }
   }
 }
