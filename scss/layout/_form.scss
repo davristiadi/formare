@@ -1,35 +1,35 @@
-$form-label-spacing: spacing(xsmall) !default;
-$font-label-font-weight: font-weight(medium) !default;
-
-$form-field-spacing: spacing(base) !default; 
-
-
-.form {
-  &__label {
+.Form {
+  &-label {
     display: flex;
-    font-weight: font-weight(medium);
-    margin-bottom: spacing(xsmall);
+    font-weight: font-weight(semibold);
+    margin-bottom: 0.25rem;
   }
 
-  &__field {
-    margin-bottom: $form-field-spacing;
+  &-control {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  &-field {
+    margin-bottom: spacing(base);
 
     @each $theme, $color in $theme-colors {
       &--#{$theme} {
-        &.form {
-          &__label {
-            color: $color;
-          }
-  
-          .input,
-          .select,
-          .textarea {
+        .Form-label {
+          color: $color;
+        }
+        
+        .Form-control {
+          .Input,
+          .Select,
+          .Textarea {
             border-color: $color;
-  
+
             &:hover {
               border-color: $color;
             }
-  
+
             &:focus {
               border-color: $color;
               box-shadow: 0 0 0.3em 0.2em rgba($color, 0.3);
@@ -39,36 +39,108 @@ $form-field-spacing: spacing(base) !default;
       }
     }
   }
-
-  &__control {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-
-    > *:hover{
-      z-index: 2;
-    }
-    
-    > *:not(:last-child) {
-      margin-right: -1px;
-    }
-
-    > *:first-child:not(:last-child),
-    > .select:first-child:not(:last-child) > select {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-    
-    > *:not(:first-child):not(:last-child),
-    > .select:not(:first-child):not(:last-child) > select {
-      border-radius: 0;
-    }
-    
-    > *:last-child:not(:first-child),
-    > .select:last-child:not(:first-child) > select {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-    }
-  }
 }
+
+
+//
+// &__control {
+//   position: relative;
+//   display: flex;
+//   flex-direction: row;
+//   width: 100%;
+
+//   > *:hover{
+//     z-index: 2;
+//   }
+  
+//   > *:not(:last-child) {
+//     margin-right: -1px;
+//   }
+
+//   > *:first-child:not(:last-child),
+//   > .select:first-child:not(:last-child) > select {
+//     border-top-right-radius: 0;
+//     border-bottom-right-radius: 0;
+//   }
+  
+//   > *:not(:first-child):not(:last-child),
+//   > .select:not(:first-child):not(:last-child) > select {
+//     border-radius: 0;
+//   }
+  
+//   > *:last-child:not(:first-child),
+//   > .select:last-child:not(:first-child) > select {
+//     border-top-left-radius: 0;
+//     border-bottom-left-radius: 0;
+//   }
+// }
+
+//
+// .form {
+//   &__label {
+//     display: flex;
+//     font-weight: font-weight(medium);
+//     margin-bottom: spacing(xsmall);
+//   }
+
+//   &__field {
+//     margin-bottom: spacing(base);
+
+//     @each $theme, $color in $theme-colors {
+//       &--#{$theme} {
+//         &.form {
+//           &__label {
+//             color: $color;
+//           }
+  
+//           .input,
+//           .select,
+//           .textarea {
+//             border-color: $color;
+  
+//             &:hover {
+//               border-color: $color;
+//             }
+  
+//             &:focus {
+//               border-color: $color;
+//               box-shadow: 0 0 0.3em 0.2em rgba($color, 0.3);
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   &__control {
+//     position: relative;
+//     display: flex;
+//     flex-direction: row;
+//     width: 100%;
+
+//     > *:hover{
+//       z-index: 2;
+//     }
+    
+//     > *:not(:last-child) {
+//       margin-right: -1px;
+//     }
+
+//     > *:first-child:not(:last-child),
+//     > .select:first-child:not(:last-child) > select {
+//       border-top-right-radius: 0;
+//       border-bottom-right-radius: 0;
+//     }
+    
+//     > *:not(:first-child):not(:last-child),
+//     > .select:not(:first-child):not(:last-child) > select {
+//       border-radius: 0;
+//     }
+    
+//     > *:last-child:not(:first-child),
+//     > .select:last-child:not(:first-child) > select {
+//       border-top-left-radius: 0;
+//       border-bottom-left-radius: 0;
+//     }
+//   }
+// }

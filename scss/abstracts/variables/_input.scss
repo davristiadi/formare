@@ -1,0 +1,28 @@
+$input-font-size: $font-size;
+$input-color: $dark;
+$input-border-style: solid;
+$input-border-width: 1px;
+$input-border-color: $light;
+$input-border-radius: border-radius(base);
+
+$input-hovered-color: primary-color(40);
+
+$input-focused-border-color: primary-color();
+$input-focused-box-shadow-blur: 0.3em !default;
+$input-focused-box-shadow-spread: 0.2em !default;
+$input-focused-box-shadow-color: rgba(tint($primary-color, 15%), 0.3) !default;
+$input-focused-box-shadow: 0 0 ($input-focused-box-shadow-blur) ($input-focused-box-shadow-spread) ($input-focused-box-shadow-color);
+
+$input-hovered-border-color: primary-color(-20);
+
+$input-spacing-y: spacing(small) !default;
+$input-spacing-x: spacing(base) !default;
+$input-spacing: $input-spacing-y $input-spacing-x;
+
+$input-background: $white;
+$input-transition: $transition;
+
+$input-disabled-background: $lighter;
+
+$input-set-border-color: $light !default;
+$input-set-border-radius: border-radius(base);

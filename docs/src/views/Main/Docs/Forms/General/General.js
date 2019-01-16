@@ -23,37 +23,37 @@ const General = props => {
         </p>
         <Preview>
           <PreviewDisplay>
-            <form className="form">
-              <div className="form__field">
-                <label className="form__label">Name</label>
-                <div className="form__input">
+            <form className="Form">
+              <div className="Form-field">
+                <label className="Form-label">Name</label>
+                <div className="Form-control">
                   <input
-                    type="text"
-                    className="input"
+                    type="input"
+                    className="Input"
                     placeholder="e.g John Doe"
                   />
                 </div>
               </div>
-              <div className="form__field">
-                <label className="form__label">Email</label>
-                <div className="form__input">
+              <div className="Form-field">
+                <label className="Form-label">Email</label>
+                <div className="Form-control">
                   <input
                     type="text"
-                    className="input"
+                    className="Input"
                     placeholder="e.g johndoe@email.com"
                   />
                 </div>
               </div>
-              <div className="form__field">
-                <label className="form__label">Password</label>
-                <div className="form__input">
+              <div className="Form-field">
+                <label className="Form-label">Password</label>
+                <div className="Form-control">
                   <input 
                     type="text" 
-                    className="input" 
+                    className="Input" 
                     placeholder="Insert your password here"
                   />
                 </div>
-                <div className="fs-small color-gray u-MarginTop-xx-small">Password should be at least 8 characters or more.</div>
+                <div className="u-FontSize-small u-Color-gray u-MarginTop-xxsmall">Password should be at least 8 characters or more.</div>
               </div>
             </form>
           </PreviewDisplay>
@@ -84,11 +84,13 @@ const General = props => {
                 <div className="form__input">
                   <input 
                     type="text" 
-                    className="input" 
+                    className="input"
                     placeholder="Insert your password here"
                   />
                 </div>
-                <div className="fs-small color-gray u-MarginTop-xx-small">Password should be at least 8 characters or more.</div>
+                <div className="fs-small color-gray">
+                  Password should be at least 8 characters or more.
+                </div>
               </div>
             </form>
             `}
