@@ -15,16 +15,19 @@ import {
     Table
 } from './Components';
 
-import {
-	Forms,
-	General
-} from './Forms';
 
 import { 
 	Layouts,
 	Grid,
 	Structure
 } from './Layouts';
+
+import {
+	Forms,
+	Overview,
+	Inputs,
+	InputSet
+} from './Forms';
 
 class DocsContainer extends Component {
 	constructor(props) {
@@ -97,16 +100,27 @@ class DocsContainer extends Component {
 						}
 					]
 				},
+				
 				{
 					path: '/docs/forms',
 					title: 'Forms',
 					component: Forms,
 					hasChildren: [
 						{
-							path: '/docs/forms/general',
-							title: 'General',
-							component: General
+							path: '/docs/forms/overview',
+							title: 'Overview',
+							component: Overview
 						},
+						{
+							path: '/docs/forms/inputs',
+							title: 'Inputs',
+							component: Inputs
+						},
+						{
+							path: '/docs/forms/input-set',
+							title: 'Input Set',
+							component: InputSet
+						}
 					]
 				},
 				

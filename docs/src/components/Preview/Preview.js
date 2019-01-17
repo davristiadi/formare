@@ -8,7 +8,7 @@ const Preview = props => {
     tag: Tag = 'div',
     className,
     children,
-    horizontal,
+    layout,
     borderless,
     ...attributes
   } = props;
@@ -29,6 +29,7 @@ const Preview = props => {
 
   attributes.className = classNames(
     `fr-Preview`,
+    layout ? `fr-Preview--${layout}` : '',
     className,
   );
 
@@ -38,6 +39,7 @@ const Preview = props => {
 Preview.propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   borderless: PropTypes.bool,
+  layout: PropTypes.string,
 };
 
 export default Preview;

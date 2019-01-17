@@ -1,7 +1,7 @@
 &-Preview {
+  position: relative;
   display: flex;
   flex-direction: column;
-  position: relative;
   margin-top: 3em;
 
   &-tag {
@@ -37,6 +37,28 @@
     > pre {
       border-top-left-radius: 0;
       border-top-right-radius: 0;
+    }
+  }
+
+  &--horizontal {
+    flex-direction: row;
+
+    .fr-Preview-display {
+      height: 100%;
+      width: 50%;
+      border-bottom-left-radius: $border-radius;
+    }
+
+    .fr-Preview-highlight {
+      position: relative;
+      min-width: 50%;
+      
+      > pre {
+        height: 100%;
+        border-radius: 0;
+        border-top-right-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+      }
     }
   }
 }

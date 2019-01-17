@@ -1,20 +1,18 @@
 import React, { PropTypes } from "react";
 import { Preview, PreviewDisplay, PreviewHighlight } from "components/Preview";
+import "./Overview.scss";
 
-const General = props => {
+const Overview = props => {
   return (
     <article className="fr-DocsArticle">
       <div className="fr-DocsArticle-heading">
-        <h2 className="Title">Form</h2>
-        <h5 className="subtitle color-gray">
-          Voluptate irure ex esse aliquip laborum voluptate est excepteur mollit
-          pariatur
-        </h5>
+        <h2 className="fr-DocsArticle-title">Overview</h2>
+        <h5 className="fr-DocsArticle-subtitle">Mollit sit et aute nisi sint deserunt in velit est eiusmod amet proident veniam.</h5>
       </div>
 
-      <section id="overview" className="fr-DocsArticle-section">
+      <section className="fr-DocsArticle-section">
         <div className="Heading">
-          <h4 className="Title">Overview</h4>
+          <h4 className="Title">Basic Usage</h4>
         </div>
         <p>
           Sunt minim eiusmod exercitation laborum mollit commodo quis pariatur
@@ -155,6 +153,6 @@ const General = props => {
   );
 };
 
-General.propTypes = {};
+Overview.propTypes = {};
 
-export default General;
+export default Overview;

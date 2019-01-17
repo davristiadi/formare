@@ -51,18 +51,19 @@
   
   &-heading {
     margin-bottom: spacing(xlarge);
+    
+    > .fr-DocsArticle-title {
+      @extend .Title;
+    }
+  
+    > .fr-DocsArticle-subtitle {
+      @extend .Subtitle;
+      color: $gray;
+    }
   }
 
-  &-title {
-    @extend .Title;
-  }
 
-  &-subtitle {
-    @extend .Subtitle;
-    color: $gray;
-  }
-
-  .Heading {
+  .Heading {		
     margin-top: spacing(xxlarge);
     margin-bottom: spacing(base);
   }
