@@ -1,5 +1,6 @@
 .Button {
 	position: relative;
+	display: inline-block;
 	font-weight: $button-font-weight;
 	font-family: $button-font-family;
 	padding: $button-padding;

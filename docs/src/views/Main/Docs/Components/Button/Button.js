@@ -152,7 +152,7 @@ const Button = props => {
         </div>
         <p>
           Need your button bigger, or rather smaller? Append{" "}
-          <code>{`.button--#{size}`}</code> modifier class to customize the size
+          <code>{`.Button--#{size}`}</code> modifier class to customize the size
           of a button component as needed.
         </p>
         <p>

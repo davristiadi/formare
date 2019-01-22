@@ -12,13 +12,13 @@
 
 :root {
   @each $theme, $color in $theme-colors {
-    --#{$theme}-color: #{$color};
+    --#{$theme}: #{$color};
   }
 
   --font-size: #{$font-size};
-  --font-family-text: #{font-family(primary)};
-  --font-family-title: #{font-family(secondary)};
-  --font-family-code: #{font-family(code)};
+  --font-family-primary: #{font-family(primary)};
+  --font-family-secondary: #{font-family(secondary)};
+  --font-family-monospaced: #{font-family(code)};
   --font-weight: #{font-weight(regular)};
   --text-color: #{$dark};
   --line-height: #{line-height(base)};
@@ -82,7 +82,7 @@ section {
 
 body {
   margin: 0;
-  font-family: var(--font-family-text);
+  font-family: var(--font-family-primary);
   font-size: var(--font-size);
   font-weight: var(--font-weight);
   line-height: var(--line-height);
