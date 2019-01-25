@@ -12,7 +12,8 @@ import {
     Navbar,
     Button,
     Card,
-    Table
+		Table,
+		ListGroup
 } from './Components';
 
 
@@ -97,10 +98,14 @@ class DocsContainer extends Component {
 							path: '/docs/components/table',
 							title: 'Table',
 							component: Table
+						},
+						{
+							path: '/docs/components/list-group',
+							title: 'List Group',
+							component: ListGroup
 						}
 					]
 				},
-				
 				{
 					path: '/docs/forms',
 					title: 'Forms',
@@ -126,6 +131,20 @@ class DocsContainer extends Component {
 				
 			]
 		}
+	}
+
+	componentWillMount = () => {
+		const { routes } = this.state;
+
+		return routes.map(route => {
+			if(route.hasChildren) {
+				return route.hasChildren.sort((a, b) => {
+					if(a.title < b.title) { return -1; }
+					if(a.title > b.title) { return 1; }
+					return 0;
+				})
+			}
+		})
 	}
 	
 	render() {

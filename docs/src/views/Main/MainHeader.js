@@ -8,16 +8,13 @@ class MainHeader extends Component {
 		this.state = {
 			nav: [
 				{
-					name: 'Getting Started',
-					path: '/docs/start'
-				},
-				{
 					name: 'Documentation',
 					path: '/docs/'
 				},
 				{
 					name: 'Github',
-					path: 'https://github.com/dkk94/formare'
+					path: 'https://github.com/dkk94/formare',
+					pathType: 'external'
 				}
 			]
 		}
@@ -29,14 +26,14 @@ class MainHeader extends Component {
 		return (
 			<header className="MainHeader">
 				<div className="Navbar Navbar--primary">
-					<div className="Container Container--fullWidth u-Flex">
+					<div className="Contsainer Container--fullWidth u-Flex">
 						<div id="master-menu" className="Navbar-block">
-							<i className="fas fa-bars fa-lg u-PaddingLeft"></i>
+							<div className="u-Padding-large">
+								<i className="fas fa-bars fa-lg"></i>
+							</div>
 						</div>
 						<div id="master-brand" className="Navbar-block">
-							<div className="u-PaddingLeft u-PaddingRight">
-								<NavLink to="/" className="u-Color-lighter u-FontWeight-semibold u-FontSize-xlarge">Formare</NavLink>
-							</div>	
+							<NavLink to="/" className="u-clr-lighter u-fw-semibold u-fs-xlarge u-pd-left-large u-pd-right-large">Formare</NavLink>
 						</div>
 						<div id="master-nav" className="Navbar-block Navbar-block--expanded Navbar-block--start">
 							<nav className="Nav">
@@ -45,7 +42,11 @@ class MainHeader extends Component {
 										nav.map(item => {
 											return (
 												<li className={classNames('Nav-item', 'Nav-item--is-active')}>
-													<NavLink className="Nav-link" to={item.path}>{item.name}</NavLink>
+													{ 
+														item.pathType !== 'external'
+														? <NavLink className="Nav-link" to={item.path}>{item.name}</NavLink>
+														: <a className="Nav-link" target="_blank" href={item.path}>{item.name}</a>
+													}
 												</li>
 											)
 										})

@@ -19,7 +19,6 @@ const Preview = props => {
   else {
     return childArray.map(child => {
       if (child.type === PreviewDisplay) {
-        console.log(child);
         return child = cloneElement(child, { borderless });
       }
 

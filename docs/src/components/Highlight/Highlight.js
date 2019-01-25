@@ -19,7 +19,7 @@ class Highlight extends Component {
       ...attributes
     } = this.props;
 
-    attributes.className = classNames(`highlight`, className);
+    attributes.className = classNames(`Highlight`, className);
 
     const codeBlock = dedent(children);
 

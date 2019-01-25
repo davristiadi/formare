@@ -9,7 +9,7 @@ class ComponentsContainer extends Component {
     }
   }
 
-  render() {
+  render() {    
     return (
       <Components
         {...this.state}

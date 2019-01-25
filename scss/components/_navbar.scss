@@ -12,20 +12,10 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		// padding-top: spacing(base);
-		// padding-bottom: spacing(base);
 		height: 100%;
 
 		&--expanded {
 			flex-grow: 1;
-		}
-		
-		&:not(:first-child):not(:only-child) {
-			padding-left: spacing(small);
-		}
-
-		&:not(:last-child):not(:only-child) {
-			padding-right: spacing(small);
 		}
 		
 		&--start { 
@@ -43,14 +33,10 @@
 
 	.Nav {
 		display: flex;
-		height: 100%;
 		
 		&-link {
 			display: flex;
-			height: 100%;
 			align-items: center;
-			padding-top: 0;
-			padding-bottom: 0;
 			color: $navbar-color;
 
 			&:hover {

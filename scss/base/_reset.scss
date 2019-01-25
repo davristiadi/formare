@@ -16,9 +16,9 @@
   }
 
   --font-size: #{$font-size};
-  --font-family-primary: #{font-family(primary)};
-  --font-family-secondary: #{font-family(secondary)};
-  --font-family-monospaced: #{font-family(code)};
+  --font-family-sans-serif: #{font-family(primary)};
+  --font-family-serif: #{font-family(secondary)};
+  --font-family-code: #{font-family(code)};
   --font-weight: #{font-weight(regular)};
   --text-color: #{$dark};
   --line-height: #{line-height(base)};

@@ -6,30 +6,6 @@
   flex-direction: row;
 }
 
-.fr-DocsSidebar {
-  display: none;
-  position: sticky;
-  height: calc(100vh - 5em);
-  top: 5em;
-  padding-top: spacing(large);
-  padding-right: spacing(large);
-
-  @include media(lg) {
-    display: flex;
-    flex: 0 0 300px;
-  }
-
-  &-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 50%;
-    background-color: primary-color(-95);
-    z-index: 250;
-  }
-}
-
 .fr-DocsContent {
   position: relative;
   background-color: $white;
@@ -66,6 +42,31 @@
   .Heading {		
     margin-top: spacing(xxlarge);
     margin-bottom: spacing(base);
+  }
+}
+
+
+.fr-DocsSidebar {
+  display: none;
+  position: sticky;
+  height: calc(100vh - 5em);
+  top: 5em;
+  padding-top: spacing(large);
+  padding-right: spacing(large);
+
+  @include media(lg) {
+    display: flex;
+    flex: 0 0 300px;
+  }
+
+  &-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background-color: primary-color(-93);
+    z-index: 250;
   }
 }
 

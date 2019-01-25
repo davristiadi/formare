@@ -18,11 +18,11 @@ const Navbar = props => {
         </div>
         <p>Voluptate Lorem fugiat in laborum ex occaecat sit. Qui aliquip aute sint proident.</p>
         <Preview>
-          <PreviewDisplay>
+          <PreviewDisplay gapless>
             <div className="fr-NavbarExample">
               <div className="Navbar">
                 <div className="Navbar-block">
-                  <span className="fr-NavbarExample__logo">Logo</span>
+                <span className="fr-NavbarExample__logo">Logo</span>
                 </div>
                 <div className="Navbar-block Navbar-block--expanded">
                   <nav className="Nav">

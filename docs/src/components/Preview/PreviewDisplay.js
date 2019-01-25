@@ -8,12 +8,14 @@ const PreviewDisplay = props => {
     className,
     children,
     borderless,
+    gapless,
     ...attributes
   } = props;
 
   attributes.className = classNames(
     `fr-Preview-display`,
     borderless ? `fr-Preview-display--borderless` : null,
+    gapless ? `fr-Preview-display--gapless` : null,
     className
   );
 
@@ -29,6 +31,7 @@ PreviewDisplay.propTypes = {
     PropTypes.func, PropTypes.string,
   ]),
   borderless: PropTypes.bool,
+  gapless: PropTypes.bool,
 }
 
 export default PreviewDisplay

@@ -1,5 +1,5 @@
 $highlight-border-radius: border-radius(base);
-$highlight-spacing: spacing(large);
+$highlight-spacing: spacing(base);
 
 /*
     Name: Duotone Dark
@@ -8,7 +8,7 @@ $highlight-spacing: spacing(large);
     Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
 */
 
-.highlight {
+.Highlight {
   > pre {
     padding: $highlight-spacing;
     border-radius: $highlight-border-radius;
