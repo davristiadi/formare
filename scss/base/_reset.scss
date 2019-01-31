@@ -16,8 +16,8 @@
   }
 
   --font-size: #{$font-size};
-  --font-family-sans-serif: #{font-family(primary)};
-  --font-family-serif: #{font-family(secondary)};
+  --font-family-primary: #{font-family(primary)};
+  --font-family-secondary: #{font-family(secondary)};
   --font-family-code: #{font-family(code)};
   --font-weight: #{font-weight(regular)};
   --text-color: #{$dark};
