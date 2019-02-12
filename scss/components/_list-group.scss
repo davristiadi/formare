@@ -6,9 +6,12 @@
   margin: 0;
   
   &-item {
-    padding: spacing(base) 0;
-    border-bottom-style: solid;
-    border-bottom-color: $light;
-    border-bottom-width: 1px;
+    padding: $list-group-item-spacing;
+
+    &:not(:last-child) {
+      border-bottom-style: $list-group-item-border-style;
+      border-bottom-color: $list-group-item-border-color;
+      border-bottom-width: $list-group-item-border-width;
+    }
   }
 }
