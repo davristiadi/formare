@@ -1,48 +1,110 @@
-.table {
-    border-radius: border-radius(base);
-    overflow: hidden;
-    
-    > table {
-        width: 100%;
-        text-align: left;
-    }
-    
-    &__head {
-        border-bottom-width: 3px;
-        border-bottom-style: solid;
-        border-bottom-color: gray(200);
+.Table {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
 
-        @each $theme, $color in $theme-colors {
-            &--#{$theme} {
-                background-color: $color;
-                color: color-yiq($color);
-                border-bottom-color: shade($color, 10%);
-            }
-        }
-        
-        > tr {
-            > th {
-                padding: spacing(base);
-            }
-        }
+  > table {
+    width: 100%;
+    text-align: left;
+  }
+
+  &-head {
+    th {
+      padding: $table-head-spacing;
+      background-color: $table-head-bg-color;
+      color: $table-head-fg-color;
+      border-bottom-style: $table-head-border-style;
+      border-bottom-width: $table-head-border-width;
+      border-bottom-color: $table-head-border-color;
     }
 
-    &__body {
-        > tr {
-            background-color: $white;
-            border-bottom: solid 1px gray(100);
-            
-            > td {
-                padding: spacing(base);
-            }
+    @each $theme, $color in $theme-colors {
+      &--#{$theme} {
+        th {
+          background-color: $color;
+          color: color-yiq($color);
+          border-bottom-color: shade($color, 10%);
         }
-
-        .table--striped & {
-            > tr {
-                &:nth-child(2n + 2) {
-                    background-color: gray(100);
-                }
-            }
-        }
+      }
     }
+  }
+
+  &-body {
+    tr {
+
+      &:not(:last-child) {
+        td {
+          border-bottom-style: $table-cell-border-style;
+          border-bottom-width: $table-cell-border-width;
+          border-bottom-color: $table-cell-border-color;
+        }
+      }
+
+      td {
+        background-color: $table-cell-bg-color;
+        color: $table-cell-fg-color;
+        padding: $table-cell-spacing;
+      }
+    }
+  }
+
+  &--striped & {
+    &-body {
+      tr:nth-child(2n+1) {
+        td {
+          background-color: $lighter;
+        }
+      }
+    }
+  }
 }
+
+
+// .table {
+//     border-radius: border-radius(base);
+//     overflow: hidden;
+    
+//     > table {
+//         width: 100%;
+//         text-align: left;
+//     }
+    
+//     &__head {
+//         border-bottom-width: 3px;
+//         border-bottom-style: solid;
+//         border-bottom-color: gray(200);
+
+//         @each $theme, $color in $theme-colors {
+//             &--#{$theme} {
+//                 background-color: $color;
+//                 color: color-yiq($color);
+//                 border-bottom-color: shade($color, 10%);
+//             }
+//         }
+        
+//         > tr {
+//             > th {
+//                 padding: spacing(base);
+//             }
+//         }
+//     }
+
+//     &__body {
+//         > tr {
+//             background-color: $white;
+//             border-bottom: solid 1px gray(100);
+            
+//             > td {
+//                 padding: spacing(base);
+//             }
+//         }
+
+//         .table--striped & {
+//             > tr {
+//                 &:nth-child(2n + 2) {
+//                     background-color: gray(100);
+//                 }
+//             }
+//         }
+//     }
+// }
