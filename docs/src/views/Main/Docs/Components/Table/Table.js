@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { Preview, PreviewDisplay, PreviewHighlight } from 'components/Preview';
+import TablePreview from './TablePreview';
 
 const Table = props => {
   return (
@@ -14,100 +14,24 @@ const Table = props => {
             <h4 className="Title">Overview</h4>
           </div>
           <p>Nostrud sint id velit ipsum nulla irure labore quis. Aliqua cillum non pariatur ad est non.</p>
-          <Preview>
-            <PreviewDisplay>
-              <div className="Table">
-                <table>
-                  <thead className="Table-head">
-                    <tr>
-                      <th>#</th>
-                      <th>Name</th>
-                      <th>Height</th>
-                      <th>Birth Year</th>
-                      <th>Gender</th>
-                    </tr>
-                  </thead>
-                  <tbody className="Table-body">
-                    <tr>
-                      <td>1</td>
-                      <td>Luke Skywalker</td>
-                      <td>172 cm</td>
-                      <td>19BBY</td>
-                      <td>Male</td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>C-3PO</td>
-                      <td>167 cm</td>
-                      <td>112BBY</td>
-                      <td>N/A</td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>R2-D2</td>
-                      <td>96 cm</td>
-                      <td>33BBY</td>
-                      <td>N/A</td>
-                    </tr>
-                    <tr>
-                      <td>4</td>
-                      <td>Darth Vader</td>
-                      <td>202 cm</td>
-                      <td>41.9BBY</td>
-                      <td>Male</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </PreviewDisplay>
-            <PreviewHighlight lang="html">
-              {`
-              <div className="Table table--striped">
-                <table>
-                  <thead className="Table-head">
-                    <tr>
-                      <th>#</th>
-                      <th>Name</th>
-                      <th>Height</th>
-                      <th>Birth Year</th>
-                      <th>Gender</th>
-                    </tr>
-                  </thead>
-                  <tbody className="Table-body">
-                    <tr>
-                      <td>1</td>
-                      <td>Luke Skywalker</td>
-                      <td>172 cm</td>
-                      <td>19BBY</td>
-                      <td>Male</td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>C-3PO</td>
-                      <td>167</td>
-                      <td>112BBY</td>
-                      <td>N/A</td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>R2-D2</td>
-                      <td>96</td>
-                      <td>33BBY</td>
-                      <td>N/A</td>
-                    </tr>
-                    <tr>
-                      <td>4</td>
-                      <td>Darth Vader</td>
-                      <td>202</td>
-                      <td>41.9BBY</td>
-                      <td>Male</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              `}
-            </PreviewHighlight>
-          </Preview>
+          <TablePreview />
+        </section>
+        <section className="fr-DocsArticle-section">
+          <div className="Heading">
+            <h4 className="Title">Themes</h4>
+          </div>
+          <p>Pariatur adipisicing consectetur minim sit ex est id proident consequat ullamco ea fugiat.</p>
+          <TablePreview theme="dark" />
+        </section>
+        <section className="fr-DocsArticle-section">
+          <div className="Heading">
+            <h4 className="Title">Modifiers</h4>
+          </div>
+          <div className="Heading">
+            <h5 className="Title">Striped Table</h5>
+          </div>
+          <p>Anim voluptate minim reprehenderit duis fugiat irure sit cupidatat excepteur est.</p>
+          <TablePreview striped />
         </section>
       </article>
     </div>
