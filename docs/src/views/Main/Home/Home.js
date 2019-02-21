@@ -34,10 +34,10 @@ const Home = props => {
 								<i className="Icon fas fa-download u-MarginRight-large" />
 								Download
 							</button>
-							<button className="Button Button--light Button--raised Button--large">
+							<a href="/docs/start" className="Button Button--light Button--raised Button--large">
 								<i className="Icon fas fa-rocket u-MarginRight-large" />
 								Getting Started
-							</button>
+							</a>
 						</div>
 					</div>
         </div>

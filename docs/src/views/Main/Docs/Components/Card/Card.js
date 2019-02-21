@@ -17,34 +17,42 @@ const Card = props => {
           <h4 className="Title">Overview</h4>
         </div>
         <p>Pariatur pariatur consectetur qui ullamco Lorem amet ut officia culpa.</p>
-        <Preview>
+        <Preview layout="horizontal">
           <PreviewDisplay>
-            <div className="Grids">
-              <div className="Grid Grid-12 Grid-xl-6">
-                <div className="Card">
-                  <div className="Card-header">
-                    <h5 className="Title">Card Title</h5>
-                    <h6 className="Subtitle u-Color-gray">This is a subtitle</h6>
-                  </div>
-                  <div className="Card-body">
-                    <p>Ut eiusmod magna laboris deserunt sunt duis et id adipisicing et elit. 
-                      Tempor ipsum consectetur enim nisi tempor culpa ex aliquip ad proident.
-                      Velit sint ad sit sint sint et aliqua consequat commodo est laboris enim consectetur.
-                    </p>
-                  </div>
-                  <div className="Card-footer">
-                    <button className="Button Button--primary">Submit</button>
-                  </div>
-                </div>
+            <div className="Card">
+              <div className="Card-header">
+                <h5 className="Title">Card Title</h5>
+                <h6 className="Subtitle u-Color-gray">This is a subtitle</h6>
               </div>
-              <div className="Grid Grid-12 Grid-xl-6">
-                <div className="Card">
-                  <div className="Card-header">
-                  </div>
+              <div className="Card-body">
+                <p className="u-mg-bottom-large">Ut eiusmod magna laboris deserunt sunt duis et id adipisicing et elit. 
+                  Tempor ipsum consectetur enim nisi tempor culpa ex aliquip ad proident.
+                  Velit sint ad sit sint sint et aliqua consequat commodo est laboris enim consectetur.
+                </p>
+                <div>
+                  <button className="Button Button--primary Button--fullWidth">Submit</button>
                 </div>
               </div>
             </div>
           </PreviewDisplay>
+          <PreviewHighlight lang="html">
+            {`<div className="Card">
+                <div className="Card-header">
+                  <h5 className="Title">Card Title</h5>
+                  <h6 className="Subtitle u-Color-gray">This is a subtitle</h6>
+                </div>
+                <div className="Card-body">
+                  <p>Ut eiusmod magna laboris deserunt sunt duis et id adipisicing et elit. 
+                    Tempor ipsum consectetur enim nisi tempor culpa ex aliquip ad proident.
+                    Velit sint ad sit sint sint et aliqua consequat commodo est laboris enim consectetur.
+                  </p>
+                </div>
+                <div className="Card-footer">
+                  <button className="Button Button--primary">Submit</button>
+                </div>
+              </div>
+            `}
+          </PreviewHighlight>
         </Preview>
       </section>
 

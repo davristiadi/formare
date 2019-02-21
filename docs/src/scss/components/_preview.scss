@@ -41,21 +41,25 @@
     > pre {
       border-top-left-radius: 0;
       border-top-right-radius: 0;
+      
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
   }
 
   &--horizontal {
+    display: flex;
     flex-direction: row;
+  }
 
-    .fr-Preview-display {
-      height: 100%;
-      width: 50%;
+  &--horizontal & {
+    &-display {
       border-bottom-left-radius: $border-radius;
     }
 
-    .fr-Preview-highlight {
-      position: relative;
-      min-width: 50%;
+    &-highlight {
+      width: 60%;
       
       > pre {
         height: 100%;
