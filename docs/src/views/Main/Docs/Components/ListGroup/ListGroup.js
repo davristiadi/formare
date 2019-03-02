@@ -10,7 +10,7 @@ const ListGroup = () => {
   return (
     <article id="list-group" className="fr-DocsArticle">
       <div className="fr-DocsArticle-heading">
-        <h3 className="fr-DocsArticle-title">List Group</h3>
+        <h2 className="fr-DocsArticle-title">List Group</h2>
         <h5 className="fr-DocsArticle-subtitle">Nulla eiusmod veniam excepteur do anim Lorem et dolore incididunt amet consequat cillum.</h5>
       </div>
       <section className="fr-DocsArticle-section">

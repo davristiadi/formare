@@ -124,6 +124,7 @@ const Button = props => {
         </Preview>
       </section>
 
+      {/* Outlined */}
       <section id="outlined" className="fr-DocsArticle-section">
         <div className="Heading">
           <h4 className="Title">Outlined Button</h4>
@@ -157,7 +158,7 @@ const Button = props => {
         </Preview>
       </section>
 
-
+      {/* Sizes */}
       <section id="sizes" className="fr-DocsArticle-section">
         <div className="Heading">
           <h4 className="Title">Sizes</h4>

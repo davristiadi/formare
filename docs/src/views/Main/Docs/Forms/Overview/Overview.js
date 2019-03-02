@@ -12,7 +12,7 @@ const Overview = props => {
 
       <section className="fr-DocsArticle-section">
         <div className="Heading">
-          <h4 className="Title">Basic Usage</h4>
+          <h4 className="Title">Example</h4>
         </div>
         <p>
           Sunt minim eiusmod exercitation laborum mollit commodo quis pariatur

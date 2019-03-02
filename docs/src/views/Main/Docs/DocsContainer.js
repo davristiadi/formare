@@ -113,7 +113,7 @@ class DocsContainer extends Component {
 					hasChildren: [
 						{
 							path: '/docs/forms/overview',
-							title: 'Overview',
+							title: 'Forms',
 							component: Overview
 						},
 						{
