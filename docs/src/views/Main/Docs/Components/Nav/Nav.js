@@ -16,7 +16,7 @@ const Nav = props => {
             <h4 className="Title">Overview</h4>
           </div>
           <p>Eu do qui officia ut ea duis cillum ullamco cillum ut.</p>
-          <Preview>
+          <Preview layout="horizontal">
             <PreviewDisplay>
               <nav className="Nav">
                 <ul className="Nav-list">

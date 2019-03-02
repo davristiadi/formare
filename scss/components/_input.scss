@@ -7,6 +7,7 @@
 .Input,
 .Select > select,
 .Textarea {
+	width: 100%;
 	position: relative;
 	padding: $input-spacing;
 	transition: $input-transition;
@@ -33,7 +34,7 @@
 	&:hover:not(:disabled) {
 		border-color: $input-hovered-border-color;
 	}
-
+	
 	@each $theme, $color in $theme-colors {
 		&--#{$theme} {
 			border-color: tint($color, 20%);
@@ -63,7 +64,7 @@
 	}
 }
 
-.select {
+.Select {
 	position: relative;
 
 	&--expanded {
@@ -94,7 +95,7 @@
 		top: 50%;
 		transform: translateY(-50%);
 		line-height: 0;
-		color: $gray;
+		color: $gray;	
 		z-index: 5;
 	}
 

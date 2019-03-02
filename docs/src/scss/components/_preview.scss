@@ -41,33 +41,39 @@
     > pre {
       border-top-left-radius: 0;
       border-top-right-radius: 0;
-      
-      &::-webkit-scrollbar {
-        display: none;
+
+      > code {
+        overflow-x: auto;
       }
     }
   }
 
   &--horizontal {
-    display: flex;
-    flex-direction: row;
+    @include media(lg) {
+      display: flex;
+      flex-direction: row;
+    }
   }
 
   &--horizontal & {
-    &-display {
-      border-radius: 0;
-      border-bottom-left-radius: $border-radius;
-    }
-
-    &-highlight {
-      width: 60%;
-      
-      > pre {
-        height: 100%;
+    @include media(lg) {
+      &-display {
+        width: 40%;
         border-radius: 0;
-        border-top-right-radius: $border-radius;
-        border-bottom-right-radius: $border-radius;
+        border-bottom-left-radius: $border-radius;
       }
+  
+      &-highlight {
+        width: 60%;
+  
+        > pre {
+          height: 100%;
+          border-radius: 0;
+          border-top-right-radius: $border-radius;
+          border-bottom-right-radius: $border-radius;
+        }
+      }
+  
     }
   }
 }
