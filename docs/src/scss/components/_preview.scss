@@ -58,13 +58,13 @@
   &--horizontal & {
     @include media(lg) {
       &-display {
-        width: 50%;
+        width: 40%;
         border-radius: 0;
         border-bottom-left-radius: $border-radius;
       }
   
       &-highlight {
-        width: 50%;
+        width: 60%;
   
         > pre {
           height: 100%;
