@@ -5,10 +5,10 @@ import './Main.scss';
 class Main extends Component {
   render() {
     return (
-      <Fragment>
+      <>
         <MainHeader />
         <MainContent />
-      </Fragment>
+      </>
     );
   }
 }

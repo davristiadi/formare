@@ -12,6 +12,7 @@ const Card = props => {
           Duis irure ullamco ullamco anim aute labore mollit.
         </h5>
       </div>
+
       <section id="overview" className="fr-DocsArticle-section">
         <div className="Heading">
           <h4 className="Title">Overview</h4>
@@ -37,20 +38,20 @@ const Card = props => {
           </PreviewDisplay>
           <PreviewHighlight lang="html">
             {`<div className="Card">
-                <div className="Card-header">
-                  <h5 className="Title">Card Title</h5>
-                  <h6 className="Subtitle u-Color-gray">This is a subtitle</h6>
-                </div>
-                <div className="Card-body">
-                  <p>Ut eiusmod magna laboris deserunt sunt duis et id adipisicing et elit. 
-                    Tempor ipsum consectetur enim nisi tempor culpa ex aliquip ad proident.
-                    Velit sint ad sit sint sint et aliqua consequat commodo est laboris enim consectetur.
-                  </p>
-                </div>
-                <div className="Card-footer">
-                  <button className="Button Button--primary">Submit</button>
+              <div className="Card-header">
+                <h5 className="Title">Card Title</h5>
+                <h6 className="Subtitle u-Color-gray">This is a subtitle</h6>
+              </div>
+              <div className="Card-body">
+                <p className="u-mg-bottom-large">Ut eiusmod magna laboris deserunt sunt duis et id adipisicing et elit. 
+                  Tempor ipsum consectetur enim nisi tempor culpa ex aliquip ad proident.
+                  Velit sint ad sit sint sint et aliqua consequat commodo est laboris enim consectetur.
+                </p>
+                <div>
+                  <button className="Button Button--primary Button--fullWidth">Submit</button>
                 </div>
               </div>
+            </div>
             `}
           </PreviewHighlight>
         </Preview>
@@ -60,52 +61,60 @@ const Card = props => {
         <div className="Heading">
           <h4 className="Title">Themes</h4>
         </div>
-        <p>Dolore est excepteur culpa voluptate culpa quis dolor 
-          ipsum et et exercitation.</p>
-        <Preview>
+        <p>Dolore est excepteur culpa voluptate culpa quis dolor ipsum et et exercitation.</p>
+        <ul>
+          <li><code>Primary</code></li>
+          <li><code>Secondary</code></li>
+          <li><code>Success</code></li>
+          <li><code>Warning</code></li>
+          <li><code>Danger</code></li>
+          <li><code>Dark</code></li>
+          <li><code>Light</code></li>
+        </ul>
+        <Preview layout="horizontal">
           <PreviewDisplay>
+            <div className="Select u-mg-bottom">
+              <select>
+                <option>Select theme</option>
+                <option>Primary</option>
+                <option>Success</option>
+                <option>Warning</option>
+                <option>Danger</option>
+                <option>Dark</option>
+                <option>Light</option>
+              </select>
+            </div>
             <div className="fr-CardExample">
-              <div className="Grids">
-                <div className="Grid Grid-12 Grid-xl-6 u-MarginBottom-base">
-                  <div className="Card Card--primary">
-                    <div className="Card-header">
-                      <h5 className="Title">Primary Theme</h5>
-                    </div>
-                    <div className="Card-body">
-                      <div>
-                        Cupidatat ut esse eiusmod pariatur. Voluptate culpa eu reprehenderit eu voluptate sit ad nisi. 
-                        Minim pariatur aliqua aliqua adipisicing mollit laborum Lorem. Quis ipsum velit et nulla Lorem enim 
-                        aliquip exercitation ad elit ad reprehenderit. Voluptate minim duis incididunt elit amet velit dolor. 
-                        Sunt occaecat dolore irure magna sit incididunt anim consequat consequat.
-                      </div>
-                    </div>
-                    <div className="Card-footer">
-                      <button className="Button Button--light Button--outlined">Submit</button>
-                    </div>
-                  </div>
+              <div className="Card Card--primary">
+                <div className="Card-header">
+                  <h5 className="Title">Primary Theme</h5>
                 </div>
-                <div className="Grid Grid-12 Grid-xl-6 u-MarginBottom-base">
-                  <div className="Card Card--dark">
-                    <div className="Card-header">
-                      <h5 className="Title">Secondary Theme</h5>
-                    </div>
-                    <div className="Card-body">
-                      <div>
-                        Cupidatat ut esse eiusmod pariatur. Voluptate culpa eu reprehenderit eu voluptate sit ad nisi. 
-                        Minim pariatur aliqua aliqua adipisicing mollit laborum Lorem. Quis ipsum velit et nulla Lorem enim 
-                        aliquip exercitation ad elit ad reprehenderit. Voluptate minim duis incididunt elit amet velit dolor. 
-                        Sunt occaecat dolore irure magna sit incididunt anim consequat consequat.
-                      </div>
-                    </div>
-                    <div className="Card-footer">
-                      <button className="Button Button--primary">Submit</button>
-                    </div>
-                  </div>
+                <div className="Card-body">
+                  <p>Laboris deserunt eiusmod veniam cupidatat. Laborum proident reprehenderit ut nisi id elit laborum voluptate ea commodo sit nostrud.</p>
+                  <p>Et commodo dolor est do est anim eiusmod occaecat fugiat non. Excepteur incididunt nulla consequat enim veniam dolor.</p>
                 </div>
-                
               </div>
             </div>
           </PreviewDisplay>
+          <PreviewHighlight lang="html">
+            {`<div className="Card Card--primary">
+              <div className="Card-header">
+                <h5 className="Title">Primary Theme</h5>
+              </div>
+              <div className="Card-body">
+                <div>
+                  Cupidatat ut esse eiusmod pariatur. Voluptate culpa eu reprehenderit eu voluptate sit ad nisi.
+                  Minim pariatur aliqua aliqua adipisicing mollit laborum Lorem. Quis ipsum velit et nulla Lorem enim
+                  aliquip exercitation ad elit ad reprehenderit. Voluptate minim duis incididunt elit amet velit dolor.
+                  Sunt occaecat dolore irure magna sit incididunt anim consequat consequat.
+                </div>
+              </div>
+              <div className="Card-footer">
+                <button className="Button Button--light Button--outlined">Submit</button>
+              </div>
+            </div>
+            `}
+          </PreviewHighlight>
         </Preview>
       </section>
 
@@ -125,48 +134,46 @@ const Card = props => {
         <p>Simply add <code>.Card-image</code> element inside of the <code>.Card</code> component, including the preferred
           <code>{`<img>`}</code> of your choice to add an image to your card.
         </p>
-        <Preview>
+        <Preview layout="horizontal">
           <PreviewDisplay>
-            <div className="Grids">
-              <div className="Grid Grid-6">
-                <div className="Card">
-                  <div className="Card-image">
-                    <img src={PhotoDummy} />
-                  </div>
-                  <div className="Card-body">
-                    <h5 className="Title">Card Title</h5>
-                    <h6 className="Subtitle u-Color-gray">This is a subtitle.</h6>
-                    <p>
-                      Anim aliquip esse dolore proident ut ut anim. Ut dolore proident tempor proident sunt irure.
-                      Est excepteur anim aute sint dolor irure occaecat cillum tempor eu anim Lorem ullamco.
-                      Tempor sit ad consequat nostrud sunt pariatur.
-                    </p>
-                  </div>
-                  <div className="Card-footer">
-                    <button className="Button Button--primary">Submit</button>
-                  </div>
-                </div>
+            <div className="Card">
+              <div className="Card-image">
+                <img src={PhotoDummy} />
               </div>
-              <div className="Grid Grid-6">
-                <div className="Card">
-                  <div className="Card-header">
-                    <h5 className="Title">Card Title</h5>
-                    <h6 className="Subtitle u-Color-gray">This is a subtitle. </h6>
-                  </div>
-                  <div className="Card-image">
-                    <img src={PhotoDummy} />  
-                  </div>
-                  <div className="Card-body">
-                  <p>Lorem excepteur qui anim sunt ex id voluptate amet. Sint eiusmod tempor eiusmod ea dolore dolor minim esse laborum do.</p>
-                  </div>
-                  <div className="Card-footer">
-                    <button className="Button Button--primary">Submit</button>
-                  </div>
-                </div>
+              <div className="Card-body">
+                <h5 className="Title">Card Title</h5>
+                <h6 className="Subtitle u-Color-gray">This is a subtitle.</h6>
+                <p>
+                  Anim aliquip esse dolore proident ut ut anim. Ut dolore proident tempor proident sunt irure.
+                  Est excepteur anim aute sint dolor irure occaecat cillum tempor eu anim Lorem ullamco.
+                  Tempor sit ad consequat nostrud sunt pariatur.
+                    </p>
+              </div>
+              <div className="Card-footer">
+                <button className="Button Button--primary">Submit</button>
               </div>
             </div>
           </PreviewDisplay>
-          
+          <PreviewHighlight lang="html">
+            {`<div className="Card">
+              <div className="Card-image">
+                <img src={PhotoDummy} />
+              </div>
+              <div className="Card-body">
+                <h5 className="Title">Card Title</h5>
+                <h6 className="Subtitle u-Color-gray">This is a subtitle.</h6>
+                <p>
+                  Anim aliquip esse dolore proident ut ut anim. Ut dolore proident tempor proident sunt irure.
+                  Est excepteur anim aute sint dolor irure occaecat cillum tempor eu anim Lorem ullamco.
+                  Tempor sit ad consequat nostrud sunt pariatur.
+                    </p>
+              </div>
+              <div className="Card-footer">
+                <button className="Button Button--primary">Submit</button>
+              </div>
+            </div>
+            `}
+          </PreviewHighlight>
         </Preview>
         
         <div className="Heading">

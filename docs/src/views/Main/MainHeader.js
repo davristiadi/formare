@@ -3,21 +3,18 @@ import classNames from 'classnames';
 import { NavLink } from 'react-router-dom';
 
 class MainHeader extends Component {
-	constructor() {
-		super();
-		this.state = {
-			nav: [
-				{
-					name: 'Documentation',
-					path: '/docs/'
-				},
-				{
-					name: 'Github',
-					path: 'https://github.com/dkk94/formare',
-					pathType: 'external'
-				}
-			]
-		}
+	state = {
+		nav: [
+			{
+				name: 'Documentation',
+				path: '/docs/'
+			},
+			{
+				name: 'Github',
+				path: 'https://github.com/dkk94/formare',
+				pathType: 'external'
+			}
+		]
 	}
 	
 	render() {
