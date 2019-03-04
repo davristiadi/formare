@@ -1,6 +1,6 @@
 	{
 	"name": "formare",
-	"version": "0.5.0-beta.13",
+	"version": "0.5.0-beta.14",
 	"author": "David Kurnia Kristiadi <davidkurniakristiadi@gmail.com>",
 	"description": "Formare is a hassle-free CSS framewowrk that helps in building web-interfaces easily.",
 	"main": "scss/formare.scss",
