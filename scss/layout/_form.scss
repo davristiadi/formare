@@ -1,5 +1,7 @@
 .Form {
   &-label {
+    display: flex;
+    flex-direction: column;
     font-weight: font-weight(semibold);
     margin-bottom: 0.25rem;
   }
