@@ -1571,61 +1571,61 @@ h6,
   flex-direction: row;
 }
 
-.section {
+.Section {
   position: relative;
 }
 
-.section--primary {
+.Section--primary {
   background-color: #4061C4;
   color: #f0f2f2;
 }
 
-.section--secondary {
+.Section--secondary {
   background-color: #E58139;
   color: #f0f2f2;
 }
 
-.section--success {
+.Section--success {
   background-color: #18B247;
   color: #f0f2f2;
 }
 
-.section--warning {
+.Section--warning {
   background-color: #E2ED49;
   color: #2c3132;
 }
 
-.section--danger {
+.Section--danger {
   background-color: #D86141;
   color: #f0f2f2;
 }
 
-.section--info {
+.Section--info {
   background-color: #1C415B;
   color: #f0f2f2;
 }
 
-.section--gray {
+.Section--gray {
   background-color: #6D7A7D;
   color: #f0f2f2;
 }
 
-.section--light {
+.Section--light {
   background-color: #e2e4e5;
   color: #2c3132;
 }
 
-.section--lighter {
+.Section--lighter {
   background-color: #f0f2f2;
   color: #2c3132;
 }
 
-.section--dark {
+.Section--dark {
   background-color: #2c3132;
   color: #f0f2f2;
 }
 
-.section--darker {
+.Section--darker {
   background-color: #161819;
   color: #f0f2f2;
 }
