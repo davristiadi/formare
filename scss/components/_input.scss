@@ -85,24 +85,26 @@
 	}
 
 	&:after {
-		content: "\f078";
-		transition: $input-transition;
-		font-family: "Font Awesome 5 Free";
-		font-weight: 900;
+		content: "";
+		transition: all 150ms ease-in-out;
 		position: absolute;
-		pointer-events: none;
 		right: spacing(base);
+		display: block;
+		height: .625em;
+		border: 3px solid transparent;
 		top: 50%;
-		transform: translateY(-50%);
-		line-height: 0;
-		color: $gray;	
-		z-index: 5;
+		border-color: $gray;
+		border-radius: 2px;
+		border-right: 0;
+		border-top: 0;
+		transform: translateY(-50%) rotate(-45deg);
+		width: .625em;
 	}
 
 	
 	&:focus-within {
 		&:after {
-			transform: rotate(180deg) translateY(-50%);
+			transform: translateY(-20%) rotate(135deg);
 			color: primary-color();
 		}
 	}
