@@ -16,7 +16,7 @@ const Inputs = () => {
         <Preview layout="horizontal">
           <PreviewDisplay>
             <input className="Input u-mg-bottom" type="text" placeholder="This is an input" />
-            <div className="Select">
+            <div className="Select Select--loading">
               <select>
                 <option>This is a select input</option>
                 <option>Option 1</option>

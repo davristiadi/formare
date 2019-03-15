@@ -67,16 +67,6 @@
 .Select {
 	position: relative;
 
-	&--expanded {
-		display: flex;
-		flex-grow: 1;
-		
-		> select { 
-			display: flex;
-			flex-grow: 1;
-		}
-	}
-	
 	> select {
 		-webkit-appearance: none;
 		-moz-appearance: none;
@@ -84,28 +74,44 @@
 		cursor: pointer;
 	}
 
-	&:after {
-		content: "";
-		transition: all 150ms ease-in-out;
-		position: absolute;
-		right: spacing(base);
-		display: block;
-		height: .625em;
-		border: 3px solid transparent;
-		top: 50%;
-		border-color: $gray;
-		border-radius: 2px;
-		border-right: 0;
-		border-top: 0;
-		transform: translateY(-50%) rotate(-45deg);
-		width: .625em;
+	&:not(&--loading) {
+		&:after {
+			content: "";
+			transition: all 150ms ease-in-out;
+			position: absolute;
+			top: $input-spacing-y * 1.5;
+			right: $input-spacing-x;
+			display: block;
+			height: .65em;
+			border: 2px solid transparent;
+			border-color: $gray;
+			border-right: 0;
+			border-top: 0;
+			transform: rotate(-45deg);
+			width: .65em;
+		}
+		
+		&:focus-within {
+			&:after {
+				transform: translateY(30%) rotate(135deg);
+				border-color: $primary-color;
+			}
+		}
 	}
 
-	
-	&:focus-within {
+	&--loading {
 		&:after {
-			transform: translateY(-20%) rotate(135deg);
-			color: primary-color();
+			content: "";
+			animation: spinAround 750ms linear infinite;
+			display: block;
+			width: 1em;
+			height: 1em;
+			position: absolute;
+			top: $input-spacing-y * 1.5;
+			right: $input-spacing-x;
+			border: 2px solid $gray;
+			border-top-color: transparent;
+			border-radius: 100%;
 		}
 	}
 }
