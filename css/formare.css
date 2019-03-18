@@ -5262,15 +5262,15 @@ h6,
   padding-bottom: 3rem !important;
 }
 
-.u-fixed {
+.u-Fixed {
   position: fixed !important;
 }
 
-.u-fixed-top {
+.u-Fixed-top {
   top: 0 !important;
 }
 
-.u-fixed-bottom {
+.u-Fixed-bottom {
   bottom: 0 !important;
 }
 
