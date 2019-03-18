@@ -1,23 +1,39 @@
 &-Flex { 
-  display: flex;
+  display: flex !important;
 }
 
 &-InlineFlex {
-  display: inline-flex;
+  display: inline-flex !important;
 }
 
 &-Flex,
 &-InlineFlex {
   &-row {
-    display: flex;
-    flex-direction: row;
+    display: flex !important;
+    flex-direction: row !important;
   }
   
   &-column {
-    display: inline-flex;
-    flex-direction: column;
+    display: inline-flex !important;
+    flex-direction: column !important;
   }
-}
+  
+  &-grow-1 {
+    flex-grow: 1 !important;
+  }
+
+  &-grow-0 {
+    flex-grow: 0 !important;
+  }
+
+  &-shrink-1 {
+    flex-shrink: 1 !important;
+  }
+
+  &-shrink-0 {
+    flex-shrink: 0 !important;
+  }
+ }
 
 @each $type, $abbr in (
   flex-start: start,
@@ -29,7 +45,7 @@
 ) {
 	&-jc-#{$abbr},
   &-JustifyContent-#{$abbr} {
-    justify-content: $type;
+    justify-content: $type !important;
   }
 }
 
@@ -42,6 +58,6 @@
 ) {
   &-ai-#{$abbr},
   &-AlignItems-#{$abbr} {
-    align-items: $type;
+    align-items: $type !important;
   }
 }
