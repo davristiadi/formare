@@ -1,4 +1,4 @@
-&-Flex { 
+&-Flex {
   display: flex !important;
 }
 
@@ -6,58 +6,60 @@
   display: inline-flex !important;
 }
 
-&-Flex,
-&-InlineFlex {
-  &-row {
+$flex-directions: (row, column);
+@each $direction in $flex-directions {
+  &-Flex-#{$direction} {
     display: flex !important;
-    flex-direction: row !important;
+    flex-direction: $direction !important;
   }
-  
-  &-column {
+
+  &-InlineFlex-#{$direction} {
     display: inline-flex !important;
-    flex-direction: column !important;
+    flex-direction: $direction !important;
   }
-  
-  &-grow-1 {
-    flex-grow: 1 !important;
+}
+
+@for $i from 0 through 1 {
+  &-Flex-#{$i} {
+    flex: $i !important;
   }
 
-  &-grow-0 {
-    flex-grow: 0 !important;
+  &-FlexGrow-#{$i} {
+    flex-grow: $i !important;
   }
 
-  &-shrink-1 {
-    flex-shrink: 1 !important;
+  &-FlexShrink-#{$i} {
+    flex-shrink: $i !important;
   }
+}
 
-  &-shrink-0 {
-    flex-shrink: 0 !important;
-  }
- }
-
-@each $type, $abbr in (
-  flex-start: start,
+$justify-contents: (
+  start: flex-start,
   center: center,
-  flex-end: end,
-  space-between: between,
-  space-around: around,
-  space-evenly: evenly
-) {
-	&-jc-#{$abbr},
-  &-JustifyContent-#{$abbr} {
+  end: flex-end,
+  between: space-between,
+  around: space-around,
+  evenly: space-evenly
+);
+
+@each $type, $value in $justify-contents {
+  &-jc-#{$type},
+  &-JustifyContent-#{$type} {
     justify-content: $type !important;
   }
 }
 
-@each $type, $abbr in (
-  flex-start: start,
+$align-items: (
+  start: flex-start,
   center: center,
-  flex-end: end,
+  end: flex-end,
   stretch: stretch,
   baseline: baseline
-) {
-  &-ai-#{$abbr},
-  &-AlignItems-#{$abbr} {
-    align-items: $type !important;
+);
+
+@each $type, $value in $align-items {
+  &-ai-#{$type},
+  &-AlignItems-#{$type} {
+    align-items: $value !important;
   }
 }
