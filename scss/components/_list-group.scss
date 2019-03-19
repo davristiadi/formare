@@ -4,7 +4,7 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
-  
+
   &-item {
     padding: $list-group-item-spacing;
 
@@ -12,6 +12,12 @@
       border-bottom-style: $list-group-item-border-style;
       border-bottom-color: $list-group-item-border-color;
       border-bottom-width: $list-group-item-border-width;
+    }
+  }
+
+  &--borderless & {
+    &-item {
+      border: none;
     }
   }
 }
