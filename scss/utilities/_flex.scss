@@ -45,7 +45,7 @@ $justify-contents: (
 @each $type, $value in $justify-contents {
   &-jc-#{$type},
   &-JustifyContent-#{$type} {
-    justify-content: $type !important;
+    justify-content: $value !important;
   }
 }
 
