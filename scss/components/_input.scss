@@ -1,117 +1,121 @@
 .Input,
 .Textarea,
 .Select {
-	width: 100%;
+  width: 100%;
 }
 
 .Input,
 .Select > select,
 .Textarea {
-	width: 100%;
-	position: relative;
-	padding: $input-spacing;
-	transition: $input-transition;
-	font-size: $input-font-size;
-	background-color: $input-background;
-	color: $input-color;
-	border-style: $input-border-style;
-	border-width: $input-border-width;
-	border-color: $input-border-color;
-	border-radius: $input-border-radius;
-	outline: none;
-	white-space: normal;
-	
-	&:focus {
-		border-color: $input-focused-border-color;
-		box-shadow: $input-focused-box-shadow;
-	}
+  width: 100%;
+  position: relative;
+  padding: $input-spacing;
+  transition: $input-transition;
+  font-size: $input-font-size;
+  background-color: $input-background;
+  color: $input-color;
+  border-style: $input-border-style;
+  border-width: $input-border-width;
+  border-color: $input-border-color;
+  border-radius: $input-border-radius;
+  outline: none;
+  white-space: normal;
 
-	&:disabled {
-		background-color: $input-disabled-background;
-		cursor: not-allowed;
-	}
+  &:focus {
+    border-color: $input-focused-border-color;
+    box-shadow: $input-focused-box-shadow;
+  }
 
-	&:hover:not(:disabled) {
-		border-color: $input-hovered-border-color;
-	}
-	
-	@each $theme, $color in $theme-colors {
-		&--#{$theme} {
-			border-color: tint($color, 20%);
+  &:disabled {
+    background-color: $input-disabled-background;
+    cursor: not-allowed;
+  }
 
-			&:not(:disabled) {
-				&:hover {
-					border-color: tint($color, 10%);
-				}
-			}
+  &:hover:not(:disabled) {
+    border-color: $input-hovered-border-color;
+  }
 
-			&:focus {
-				border-color: $color;
-				box-shadow: 0 0 $input-focused-box-shadow-blur $input-focused-box-shadow-spread rgba(tint($color, 15%), 0.3);
-			}
-		}
-	}
+  @each $theme, $color in $theme-colors {
+    &--#{$theme} {
+      border-color: tint($color, 20%);
 
-	@each $size, $value in $font-sizes {
-		&--#{$size} {
-			font-size: $value;
-			padding: spacing($size);
-		}
-	}
+      &:not(:disabled) {
+        &:hover {
+          border-color: tint($color, 10%);
+        }
+      }
 
-	&--pill {
-		border-radius: $border-radius-pill;
-	}
+      &:focus {
+        border-color: $color;
+        box-shadow: 0
+          0
+          $input-focused-box-shadow-blur
+          $input-focused-box-shadow-spread
+          rgba(tint($color, 15%), 0.3);
+      }
+    }
+  }
+
+  @each $size, $value in $font-sizes {
+    &--#{$size} {
+      font-size: $value;
+      padding: spacing($size);
+    }
+  }
+
+  &--pill {
+    border-radius: $border-radius-pill;
+  }
 }
 
 .Select {
-	position: relative;
+  position: relative;
 
-	> select {
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		padding-right: 3em;
-		cursor: pointer;
-	}
+  > select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 3em;
+    cursor: pointer;
+  }
 
-	&:not(&--loading) {
-		&:after {
-			content: "";
-			transition: all 150ms ease-in-out;
-			position: absolute;
-			top: $input-spacing-y * 1.5;
-			right: $input-spacing-x;
-			display: block;
-			height: .65em;
-			border: 2px solid transparent;
-			border-color: $gray;
-			border-right: 0;
-			border-top: 0;
-			transform: rotate(-45deg);
-			width: .65em;
-		}
-		
-		&:focus-within {
-			&:after {
-				transform: translateY(30%) rotate(135deg);
-				border-color: $primary-color;
-			}
-		}
-	}
+  &:not(&--loading) {
+    &:after {
+      content: "";
+      transition: all 150ms ease-in-out;
+      position: absolute;
+      top: $input-spacing-y * 1.5;
+      right: $input-spacing-x;
+      display: block;
+      height: 0.65em;
+      border: 2px solid transparent;
+      border-color: $gray;
+      border-right: 0;
+      border-top: 0;
+      transform: rotate(-45deg);
+      width: 0.65em;
+    }
 
-	&--loading {
-		&:after {
-			content: "";
-			animation: spinAround 750ms linear infinite;
-			display: block;
-			width: 1em;
-			height: 1em;
-			position: absolute;
-			top: $input-spacing-y * 1.5;
-			right: $input-spacing-x;
-			border: 2px solid $gray;
-			border-top-color: transparent;
-			border-radius: 100%;
-		}
-	}
+    &:focus-within {
+      &:after {
+        transform: translateY(30%) rotate(135deg);
+        border-color: $primary-color;
+      }
+    }
+  }
+
+  &--loading {
+    &:after {
+      content: "";
+      animation: spinAround 750ms linear infinite;
+      display: block;
+      width: 1em;
+      height: 1em;
+      position: absolute;
+      top: $input-spacing-y * 1.5;
+      right: $input-spacing-x;
+      border: 2px solid $gray;
+      border-top-color: transparent;
+      border-radius: 100%;
+    }
+  }
 }
