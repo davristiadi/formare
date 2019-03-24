@@ -174,7 +174,10 @@
   margin-bottom: spacing(base) / -1;
 
   > .Button {
-    margin-right: spacing(base);
     margin-bottom: spacing(base);
+
+    &:not(:last-child) {
+      margin-right: spacing(base);
+    }
   }
 }
