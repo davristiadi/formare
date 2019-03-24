@@ -1,172 +1,180 @@
 .Button {
-	position: relative;
-	display: inline-block;
-	font-weight: $button-font-weight;
-	font-family: $button-font-family;
-	padding: $button-padding;
-	color: $button-fg-color;
-	background-color: $button-bg-color;
-	border-style: $button-border-style;
-	border-width: $button-border-width;
-	border-color: $button-border-color;
-	border-radius: $border-radius;
-	transition: $button-transition;
-	text-align: center;
-	white-space: nowrap;
-	vertical-align: middle;
-	outline: none;
-	cursor: pointer;
+  position: relative;
+  display: inline-block;
+  font-weight: $button-font-weight;
+  font-family: $button-font-family;
+  padding: $button-padding;
+  color: $button-fg-color;
+  background-color: $button-bg-color;
+  border-style: $button-border-style;
+  border-width: $button-border-width;
+  border-color: $button-border-color;
+  border-radius: $border-radius;
+  transition: $button-transition;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: none;
+  cursor: pointer;
 
-	&:not(:disabled):not(.Button--clear) {
-		&:hover,
-		&.Button--hovered {
-			color: $button-hovered-color;
-			border-color: $button-hovered-border-color;
-			outline: none;
-		}
+  &:not(:disabled):not(.Button--clear) {
+    &:hover,
+    &.Button--hovered {
+      color: $button-hovered-color;
+      border-color: $button-hovered-border-color;
+      outline: none;
+    }
 
-		&:focus,
-		&.Button--focused {
-			color: $button-focused-color;
-			border-color: $button-focused-border-color;
-			box-shadow: 0 0 0.3em 0.2em rgba(tint($primary-color, 15%), 0.3);
-			outline: none;
-		}
+    &:focus,
+    &.Button--focused {
+      color: $button-focused-color;
+      border-color: $button-focused-border-color;
+      box-shadow: 0 0 0.3em 0.2em rgba(tint($primary-color, 15%), 0.3);
+      outline: none;
+    }
 
-		&:active, 
-		&.Button--active {
-			color: $button-active-color;
-			border-color: $button-active-border-color;
-			outline: none;
-		}
-	}
+    &:active,
+    &.Button--active {
+      color: $button-active-color;
+      border-color: $button-active-border-color;
+      outline: none;
+    }
+  }
 
-	&:disabled,
-	&--disabled {
-		opacity: $button-disabled-opacity;
-		cursor: not-allowed;
-	}
+  &:disabled,
+  &--disabled {
+    opacity: $button-disabled-opacity;
+    cursor: not-allowed;
+  }
 
-	@each $theme, $color in $theme-colors {
-		&--#{$theme} {
-			background-color: $color;
-			color: color-yiq($color);
-			border-color: $color;
+  @each $theme, $color in $theme-colors {
+    &--#{$theme} {
+      background-color: $color;
+      color: color-yiq($color);
+      border-color: $color;
 
-			&:not(:disabled):not(.Button--clear) {
-				&:hover,
-				&.Button--hovered {
-					color: color-yiq($color);
-					background-color: tint($color, 20%);
-					border-color: tint($color, 20%);
-				}
+      &:not(:disabled):not(.Button--clear) {
+        &:hover,
+        &.Button--hovered {
+          color: color-yiq($color);
+          background-color: tint($color, 20%);
+          border-color: tint($color, 20%);
+        }
 
-				&:focus,
-				&.Button--focused {
-					color: color-yiq($color);
-					background-color: tint($color, 20%);
-					border-color: tint($color, 20%);
-					box-shadow: 0 0 0.3em 0.2em rgba($color, 0.3);
-				}
+        &:focus,
+        &.Button--focused {
+          color: color-yiq($color);
+          background-color: tint($color, 20%);
+          border-color: tint($color, 20%);
+          box-shadow: 0 0 0.3em 0.2em rgba($color, 0.3);
+        }
 
-				&:active,
-				&.Button--active {
-					color: color-yiq($color);
-					background-color: shade($color, 20%);
-					border-color: shade($color, 20%);
-				}
-			}
+        &:active,
+        &.Button--active {
+          color: color-yiq($color);
+          background-color: shade($color, 20%);
+          border-color: shade($color, 20%);
+        }
+      }
 
-			&.Button--raised {
-				border-bottom-width: 4px;
-				border-bottom-color: shade($color, 10%);
-				
-				&:not(:disabled):not(.Button--clear) {
-					&:hover,
-					&.Button--hovered {
-						border-bottom-color: $color;
-					}
+      &.Button--raised {
+        border-bottom-width: 4px;
+        border-bottom-color: shade($color, 10%);
 
-					&:focus,
-					&.Button--focused {
-						border-color: tint($color, 10%);
-						border-bottom-width: 4px;
-						border-bottom-color: shade($color, 10%);
-						background-color: tint($color, 10%);
-						margin-top: 0px;
-						outline: none;
-					}
+        &:not(:disabled):not(.Button--clear) {
+          &:hover,
+          &.Button--hovered {
+            border-bottom-color: $color;
+          }
 
-					&:active,
-					&.Button--active {
-						border-color: shade($color, 20%);
-						border-bottom-width: 1px;
-						// border-bottom-color: shade($color, 20%);
-						background-color: shade($color, 20%);
-						margin-top: 3px;
-						outline: none;
-					}
-				}
-			}
+          &:focus,
+          &.Button--focused {
+            border-color: tint($color, 10%);
+            border-bottom-width: 4px;
+            border-bottom-color: shade($color, 10%);
+            background-color: tint($color, 10%);
+            margin-top: 0px;
+            outline: none;
+          }
 
-			&.Button--outlined {
-				color: $color;
-				border-color: $color;
-				background-color: transparent;
-				
-				&:not(:disabled):not(.Button--clear) {
-					&:hover,
-					&.Button--hovered {
-						color: color-yiq($color);
-						background-color: tint($color, 10%);
-						border-color: tint($color, 10%);
-					}
+          &:active,
+          &.Button--active {
+            border-color: shade($color, 20%);
+            border-bottom-width: 1px;
+            // border-bottom-color: shade($color, 20%);
+            background-color: shade($color, 20%);
+            margin-top: 3px;
+            outline: none;
+          }
+        }
+      }
 
-					
-					&:focus,
-					&.Button--focused {
-						color: color-yiq($color);
-						background-color: tint($color, 10%);
-						border-color: tint($color, 10%);
-						outline: none;
-					}
+      &.Button--outlined {
+        color: $color;
+        border-color: $color;
+        background-color: transparent;
 
-					&:active,
-					&.Button--active {
-						color: color-yiq($color);
-						background-color: shade($color, 20%);
-						border-color: shade($color, 20%);
-					}
-				}
-			}
-		}
-	}
+        &:not(:disabled):not(.Button--clear) {
+          &:hover,
+          &.Button--hovered {
+            color: color-yiq($color);
+            background-color: tint($color, 10%);
+            border-color: tint($color, 10%);
+          }
 
-	//	Size modifier classes
-	@each $size, $padding in $button-paddings {
-		&--#{$size} {
-			font-size: font-size($size);
-			padding: $padding;
-		}
-	}
+          &:focus,
+          &.Button--focused {
+            color: color-yiq($color);
+            background-color: tint($color, 10%);
+            border-color: tint($color, 10%);
+            outline: none;
+          }
 
-	//	Other modifiers
-	&--clear {
-		border: none;
-		background-color: transparent;
-		transition: $button-transition;
-		color: $button-clear-text-color;
+          &:active,
+          &.Button--active {
+            color: color-yiq($color);
+            background-color: shade($color, 20%);
+            border-color: shade($color, 20%);
+          }
+        }
+      }
+    }
+  }
 
-		&:hover:not(:disabled) {
-			color: $button-clear-hovered-text-color;
-		}
-	}
+  //	Size modifier classes
+  @each $size, $padding in $button-paddings {
+    &--#{$size} {
+      font-size: font-size($size);
+      padding: $padding;
+    }
+  }
 
-	&--pill {
-		border-radius: $border-radius-pill;
-	}
+  //	Other modifiers
+  &--clear {
+    border: none;
+    background-color: transparent;
+    transition: $button-transition;
+    color: $button-clear-text-color;
 
-	&--fullWidth {
-		width: 100%;
-	}
+    &:hover:not(:disabled) {
+      color: $button-clear-hovered-text-color;
+    }
+  }
+
+  &--pill {
+    border-radius: $border-radius-pill;
+  }
+
+  &--fullWidth {
+    width: 100%;
+  }
+}
+
+.Buttons {
+  margin-bottom: spacing(base) / -1;
+
+  > .Button {
+    margin-right: spacing(base);
+    margin-bottom: spacing(base);
+  }
 }
