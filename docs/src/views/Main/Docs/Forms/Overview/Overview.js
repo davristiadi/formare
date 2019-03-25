@@ -7,7 +7,10 @@ const Overview = props => {
     <article className="fr-DocsArticle">
       <div className="fr-DocsArticle-heading">
         <h2 className="fr-DocsArticle-title">Overview</h2>
-        <h5 className="fr-DocsArticle-subtitle">Mollit sit et aute nisi sint deserunt in velit est eiusmod amet proident veniam.</h5>
+        <h5 className="fr-DocsArticle-subtitle">
+          Mollit sit et aute nisi sint deserunt in velit est eiusmod amet
+          proident veniam.
+        </h5>
       </div>
 
       <section className="fr-DocsArticle-section">
@@ -45,15 +48,30 @@ const Overview = props => {
               <div className="Form-field">
                 <label className="Form-label">Password</label>
                 <div className="Form-control">
-                  <input 
-                    type="text" 
-                    className="Input" 
+                  <input
+                    type="text"
+                    className="Input"
                     placeholder="Insert your password here"
                   />
                 </div>
                 <div className="u-FontSize-small u-Color-gray u-MarginTop-xxsmall">
                   Password should be at least 8 characters or more.
                 </div>
+              </div>
+              <div className="Form-field">
+                <div className="Form-control">
+                  <div className="Checkbox">
+                    <input
+                      name="checkbox-preview"
+                      id="checkbox-preview"
+                      type="checkbox"
+                    />
+                    <label htmlFor="checkbox-preview">Please check this</label>
+                  </div>
+                </div>
+              </div>
+              <div className="Form-field u-mg-top-xlarge">
+                <div className="Button Button--primary">Submit</div>
               </div>
             </form>
           </PreviewDisplay>
