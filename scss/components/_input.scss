@@ -81,7 +81,7 @@
   &:not(&--loading) {
     &:after {
       content: "";
-      transition: all 150ms ease-in-out;
+      transition: all 150ms ease-out-out;
       position: absolute;
       top: $input-spacing-y * 1.5;
       right: $input-spacing-x;
@@ -149,13 +149,19 @@
     }
 
     &:after {
-      content: "✓";
-      transition: all 100ms ease-in;
+      content: "";
+      transition: all 200ms ease-out;
       position: absolute;
       top: 50%;
       left: 50%;
-      color: $white;
-      transform: translate(-50%, -50%);
+      border: solid 2px $white;
+      border-top: none;
+      border-left: none;
+      height: 12px;
+      width: 6px;
+      line-height: 0;
+      transform: translate(-50%, -60%) rotate(45deg) scale(0.8);
+      transform-origin: center center;
       opacity: 0;
       font-weight: bold;
     }
@@ -168,6 +174,7 @@
 
       &:after {
         color: $checkbox-checked-fg-color;
+        transform: translate(-50%, -60%) rotate(45deg) scale(1);
         opacity: 1;
       }
     }
