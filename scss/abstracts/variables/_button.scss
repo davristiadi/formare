@@ -24,20 +24,37 @@ $button-disabled-opacity: 0.5 !default;
 $button-clear-text-color: primary-color(0) !default;
 $button-clear-hovered-text-color: primary-color(40) !default;
 
-$button-padding-y: spacing(xsmall) !default;
+$button-padding-y: spacing(small) !default;
 $button-padding-x: spacing(base) !default;
 $button-padding: $button-padding-y $button-padding-x;
 $button-paddings: () !default;
 $button-paddings: map-merge(
-	(
-		xsmall: ($button-padding-y * .5) ($button-padding-x * .5),
-		small: ($button-padding-y * .75) ($button-padding-x * .75),
-		base: $button-padding,
-		large: ($button-padding-y * 1.25) ($button-padding-x * 1.25),
-		xlarge: ($button-padding-y * 1.5) ($button-padding-x * 1.5)
-	), 
-	$button-paddings
+  (
+    xsmall: (
+      $button-padding-y * 0.5
+    )
+    (
+      $button-padding-x * 0.5
+    ),
+    small: (
+      $button-padding-y * 0.75
+    )
+    (
+      $button-padding-x * 0.75
+    ),
+    base: $button-padding,
+    large: (
+      $button-padding-y * 1.25
+    )
+    (
+      $button-padding-x * 1.25
+    ),
+    xlarge: (
+      $button-padding-y * 1.5
+    )
+    (
+      $button-padding-x * 1.5
+    )
+  ),
+  $button-paddings
 );
-
-
-
