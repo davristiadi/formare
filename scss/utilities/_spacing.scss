@@ -8,14 +8,14 @@
   padding: spacing(base) !important;
 }
 
-&-pdx,
-&-Padding-x {
+&-pd-x,
+&-PaddingX {
   margin-left: spacing(base) !important;
   margin-right: spacing(base) !important;
 }
 
-&-pdy,
-&-Padding-y {
+&-pd-y,
+&-PaddingY {
   margin-top: spacing(base) !important;
   margin-bottom: spacing(base) !important;
 }
@@ -31,14 +31,14 @@
     padding: $value !important;
   }
 
-  &-mgx-#{$size},
-  &-Margin-x-#{$size} {
+  &-mg-x-#{$size},
+  &-MarginX-#{$size} {
     margin-left: $value !important;
     margin-right: $value !important;
   }
 
-  &-mgy-#{$size},
-  &-Margin-y-#{$size} {
+  &-mg-y-#{$size},
+  &-MarginY-#{$size} {
     margin-top: $value !important;
     margin-bottom: $value !important;
   }

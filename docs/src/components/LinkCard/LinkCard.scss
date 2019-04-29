@@ -1,25 +1,23 @@
-&-LinkCards {
+.LinkCards {
   @extend .Grids;
   display: flex;
   flex-direction: row;
   position: relative;
 }
 
-&-LinkCard {
-  @extend .Grid;
-  @extend .Grid-4;
+.LinkCard {
   display: flex;
   flex-direction: column;
   padding-bottom: spacing(xlarge);
   color: inherit;
-  
+
   &-content {
     flex-grow: 1;
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
     transition: all 100ms ease-in;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.05), 0 10px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05), 0 10px 10px rgba(0, 0, 0, 0.05);
     border: solid 1px gray(100);
     border-radius: border-radius(base);
     border-left: solid 6px theme-color(primary);
@@ -28,9 +26,10 @@
   }
 
   &:hover {
-    .fr-LinkCard-content {
+    .LinkCard-content {
       transform: translateY(-5px);
-      box-shadow: 0 20px 100px rgba(0,0,0,0.1), 0 15px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 20px 100px rgba(0, 0, 0, 0.1),
+        0 15px 20px rgba(0, 0, 0, 0.1);
       color: theme-color(primary);
     }
   }

@@ -1,6 +1,6 @@
 {
   "name": "formare",
-  "version": "0.5.0-beta.30",
+  "version": "0.5.0-beta.31",
   "author": "David Kurnia Kristiadi <davidkurniakristiadi@gmail.com>",
   "description": "Formare is a hassle-free CSS framewowrk that helps in building web-interfaces easily.",
   "main": "scss/formare.scss",
@@ -20,7 +20,9 @@
     "start": "npm run build"
   },
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "highlight.js": "^9.15.6"
+  },
   "devDependencies": {
     "autoprefixer": "^8.6.5",
     "clean-css": "^4.1.11",

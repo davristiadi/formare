@@ -3,15 +3,15 @@ import { Preview, PreviewDisplay, PreviewHighlight } from "components/Preview";
 
 const Nav = props => {
   return (
-    <div className="fr-nav-page">
-      <article className="fr-DocsArticle">
-        <div className="fr-DocsArticle-heading">
-          <h2 className="fr-DocsArticle-title">Navigation</h2>
-          <h5 className="fr-DocsArticle-subtitle">
+    <div className="nav-page">
+      <article className="DocsArticle">
+        <div className="DocsArticle-heading">
+          <h2 className="DocsArticle-title">Navigation</h2>
+          <h5 className="DocsArticle-subtitle">
             Sint elit sint non et quis sit sint veniam est pariatur.
           </h5>
         </div>
-        <div id="overview" className="fr-DocsArticle-section">
+        <div id="overview" className="DocsArticle-section">
           <div className="Heading">
             <h4 className="Title">Overview</h4>
           </div>

@@ -6,14 +6,14 @@ class Structure extends PureComponent {
   render() {
     return (
       <div id="structure">
-        <article className="fr-DocsArticle">
-          <div className="fr-DocsArticle-heading">
-            <h2 className="fr-DocsArticle-title">Structure</h2>
-            <h5 className="fr-DocsArticle-subtitle">
+        <article className="DocsArticle">
+          <div className="DocsArticle-heading">
+            <h2 className="DocsArticle-title">Structure</h2>
+            <h5 className="DocsArticle-subtitle">
               Highly customizable layout system for building your website's main layout semantically.
             </h5>
           </div>
-          <section id="overview" className="fr-DocsArticle-section">
+          <section id="overview" className="DocsArticle-section">
             <div className="Heading">
               <h4 className="Title">Overview</h4>
             </div>
@@ -41,7 +41,7 @@ class Structure extends PureComponent {
               </li>
             </ul>
           </section>
-          <section id="basic" className="fr-DocsArticle-section">
+          <section id="basic" className="DocsArticle-section">
             <div className="Heading">
               <h4 className="Title">Types</h4>
             </div>
@@ -50,7 +50,7 @@ class Structure extends PureComponent {
               consectetur et ea enim in. Irure magna laborum dolore ullamco
               culpa ipsum cillum ex dolor qui deserunt.
             </p>
-            <div className="fr-Structure-showcase">
+            <div className="Structure-showcase">
               <div className="Structure">
                 <header className="Header">
                   <span>Header</span>
@@ -63,7 +63,7 @@ class Structure extends PureComponent {
                 </footer>
               </div>
             </div>
-            <div className="fr-Structure-showcase">
+            <div className="Structure-showcase">
               <div className="Structure">
                 <header className="Header">
                   <span>Header</span>
@@ -75,7 +75,7 @@ class Structure extends PureComponent {
                 <footer className="Footer">Footer</footer>
               </div>
             </div>
-            <div className="fr-Structure-showcase">
+            <div className="Structure-showcase">
               <div className="Structure Structure--horizontal">
                 <aside className="Aside">
                   <span>Sidebar</span>
@@ -88,13 +88,13 @@ class Structure extends PureComponent {
               </div>
             </div>
           </section>
-          <section id="examples" className="fr-DocsArticle-section">
+          <section id="examples" className="DocsArticle-section">
             <div className="Heading">
               <h4 className="Title">Examples</h4>
             </div>
             <Preview>
               <PreviewDisplay>                
-                <div className="fr-Structure-example">
+                <div className="Structure-example">
                   <div className="Structure">
                     <header className="Header">
                       <div className="Navbar Navbar--primary">

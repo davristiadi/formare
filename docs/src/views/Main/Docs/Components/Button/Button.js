@@ -1,17 +1,17 @@
-import React from "react";
-import { Preview, PreviewHighlight, PreviewDisplay } from "components/Preview";
+import React from 'react';
+import { Preview, PreviewHighlight, PreviewDisplay } from 'components/Preview';
 import './Button.scss';
 
 const Button = props => {
   return (
-    <article id="button" className="fr-DocsArticle">
-      <div className="fr-DocsArticle-heading">
-        <h2 className="fr-DocsArticle-title">Buttons</h2>
-        <h5 className="fr-DocsArticle-subtitle">
+    <article id="button" className="DocsArticle">
+      <div className="DocsArticle-heading">
+        <h2 className="DocsArticle-title">Buttons</h2>
+        <h5 className="DocsArticle-subtitle">
           Mollit tempor Lorem veniam incididunt officia tempor.
         </h5>
       </div>
-      <section id="overview" className="fr-DocsArticle-section">
+      <section id="overview" className="DocsArticle-section">
         <header className="Heading">
           <h4 className="Title">Overview</h4>
         </header>
@@ -24,8 +24,12 @@ const Button = props => {
           <PreviewDisplay>
             <div className="Buttons">
               <button className="Button u-MarginRight">Default Button</button>
-              <button className="Button Button--primary u-MarginRight">Primary Button</button>
-              <button className="Button Button--primary u-MarginRight" disabled>Disabled Button</button>
+              <button className="Button Button--primary u-MarginRight">
+                Primary Button
+              </button>
+              <button className="Button Button--primary u-MarginRight" disabled>
+                Disabled Button
+              </button>
               <button className="Button Button--clear">Clear Button</button>
             </div>
           </PreviewDisplay>
@@ -40,7 +44,7 @@ const Button = props => {
       </section>
 
       {/* Themes */}
-      <section id="themes" className="fr-DocsArticle-section">
+      <section id="themes" className="DocsArticle-section">
         <div className="Heading">
           <h4 className="Title">Themes</h4>
         </div>
@@ -52,13 +56,27 @@ const Button = props => {
         <Preview layout="horizontal">
           <PreviewDisplay>
             <div className="u-MarginBottom">
-              <button className="Button Button--primary u-MarginRight u-MarginBottom">Primary</button>
-              <button className="Button Button--secondary u-MarginRight u-MarginBottom">Secondary</button>
-              <button className="Button Button--success u-MarginRight u-MarginBottom">Success</button>
-              <button className="Button Button--danger u-MarginRight u-MarginBottom">Danger</button>
-              <button className="Button Button--warning u-MarginRight u-MarginBottom">Warning</button>
-              <button className="Button Button--dark u-MarginRight u-MarginBottom">Dark</button>
-              <button className="Button Button--light u-MarginBottom">Light</button>
+              <button className="Button Button--primary u-MarginRight u-MarginBottom">
+                Primary
+              </button>
+              <button className="Button Button--secondary u-MarginRight u-MarginBottom">
+                Secondary
+              </button>
+              <button className="Button Button--success u-MarginRight u-MarginBottom">
+                Success
+              </button>
+              <button className="Button Button--danger u-MarginRight u-MarginBottom">
+                Danger
+              </button>
+              <button className="Button Button--warning u-MarginRight u-MarginBottom">
+                Warning
+              </button>
+              <button className="Button Button--dark u-MarginRight u-MarginBottom">
+                Dark
+              </button>
+              <button className="Button Button--light u-MarginBottom">
+                Light
+              </button>
             </div>
           </PreviewDisplay>
           <PreviewHighlight lang="html">
@@ -74,17 +92,28 @@ const Button = props => {
           </PreviewHighlight>
         </Preview>
       </section>
-      <section id="pill" className="fr-DocsArticle-section">
+      <section id="pill" className="DocsArticle-section">
         <div className="Heading">
           <h4 className="Title">Rounded</h4>
         </div>
-        <p>Prepend <code>{`.button-pill`}</code> modifier class to transform your button component to a pill-like shape.</p>
+        <p>
+          Prepend <code>{`.button-pill`}</code> modifier class to transform your
+          button component to a pill-like shape.
+        </p>
         <Preview layout="horizontal">
           <PreviewDisplay>
             <div>
-              <button className="Button Button--pill u-MarginRight u-MarginBottom">Rounded Button</button>
-              <button className="Button Button--pill Button--primary u-MarginRight u-MarginBottom">Primary Button</button>
-              <button className="Button Button--pill Button--primary u-MarginRight u-MarginBottom" disabled>Primary Button</button>
+              <button className="Button Button--pill u-MarginRight u-MarginBottom">
+                Rounded Button
+              </button>
+              <button className="Button Button--pill Button--primary u-MarginRight u-MarginBottom">
+                Primary Button
+              </button>
+              <button
+                className="Button Button--pill Button--primary u-MarginRight u-MarginBottom"
+                disabled>
+                Primary Button
+              </button>
             </div>
           </PreviewDisplay>
           <PreviewHighlight lang="html">
@@ -93,21 +122,38 @@ const Button = props => {
         </Preview>
       </section>
 
-      <section id="raised" className="fr-DocsArticle-section">
+      <section id="raised" className="DocsArticle-section">
         <div className="Heading">
           <h4 className="Title">Raised</h4>
         </div>
-        <p>Id eu Lorem exercitation ex occaecat quis enim cupidatat incididunt sunt nostrud minim. Esse nulla in Lorem elit commodo.</p>
+        <p>
+          Id eu Lorem exercitation ex occaecat quis enim cupidatat incididunt
+          sunt nostrud minim. Esse nulla in Lorem elit commodo.
+        </p>
         <Preview layout="horizontal">
           <PreviewDisplay>
             <div className="Buttons">
-              <button className="Button Button--primary Button--raised">Primary</button>
-              <button className="Button Button--secondary Button--raised">Secondary</button>
-              <button className="Button Button--success Button--raised">Success</button>
-              <button className="Button Button--danger Button--raised">Danger</button>
-              <button className="Button Button--warning Button--raised">Warning</button>
-              <button className="Button Button--dark Button--raised">Dark</button>
-              <button className="Button Button--light Button--raised">Light</button>
+              <button className="Button Button--primary Button--raised">
+                Primary
+              </button>
+              <button className="Button Button--secondary Button--raised">
+                Secondary
+              </button>
+              <button className="Button Button--success Button--raised">
+                Success
+              </button>
+              <button className="Button Button--danger Button--raised">
+                Danger
+              </button>
+              <button className="Button Button--warning Button--raised">
+                Warning
+              </button>
+              <button className="Button Button--dark Button--raised">
+                Dark
+              </button>
+              <button className="Button Button--light Button--raised">
+                Light
+              </button>
             </div>
           </PreviewDisplay>
           <PreviewHighlight lang="html">
@@ -125,24 +171,42 @@ const Button = props => {
       </section>
 
       {/* Outlined */}
-      <section id="outlined" className="fr-DocsArticle-section">
+      <section id="outlined" className="DocsArticle-section">
         <div className="Heading">
           <h4 className="Title">Outlined Button</h4>
         </div>
-        <p>Culpa labore nisi ut et magna proident deserunt non quis. Officia amet dolore qui consectetur dolore sint in ad ea Lorem aliquip aliquip enim esse.</p>
+        <p>
+          Culpa labore nisi ut et magna proident deserunt non quis. Officia amet
+          dolore qui consectetur dolore sint in ad ea Lorem aliquip aliquip enim
+          esse.
+        </p>
         <blockquote>
           Outlined buttons are usually used to less emphasize the user action.
         </blockquote>
         <Preview layout="horizontal">
           <PreviewDisplay>
             <div className="Buttons">
-              <button className="Button Button--primary Button--outlined u-MarginRight u-MarginBottom">Primary</button>
-              <button className="Button Button--secondary Button--outlined u-MarginRight u-MarginBottom">Secondary</button>
-              <button className="Button Button--success Button--outlined u-MarginRight u-MarginBottom">Success</button>
-              <button className="Button Button--warning Button--outlined u-MarginRight u-MarginBottom">Warning</button>
-              <button className="Button Button--danger Button--outlined u-MarginRight u-MarginBottom">Danger</button>
-              <button className="Button Button--light Button--outlined u-MarginRight u-MarginBottom">Light</button>
-              <button className="Button Button--dark Button--outlined u-MarginRight u-MarginBottom">Dark</button>
+              <button className="Button Button--primary Button--outlined u-MarginRight u-MarginBottom">
+                Primary
+              </button>
+              <button className="Button Button--secondary Button--outlined u-MarginRight u-MarginBottom">
+                Secondary
+              </button>
+              <button className="Button Button--success Button--outlined u-MarginRight u-MarginBottom">
+                Success
+              </button>
+              <button className="Button Button--warning Button--outlined u-MarginRight u-MarginBottom">
+                Warning
+              </button>
+              <button className="Button Button--danger Button--outlined u-MarginRight u-MarginBottom">
+                Danger
+              </button>
+              <button className="Button Button--light Button--outlined u-MarginRight u-MarginBottom">
+                Light
+              </button>
+              <button className="Button Button--dark Button--outlined u-MarginRight u-MarginBottom">
+                Dark
+              </button>
             </div>
           </PreviewDisplay>
           <PreviewHighlight lang="html">
@@ -159,12 +223,12 @@ const Button = props => {
       </section>
 
       {/* Sizes */}
-      <section id="sizes" className="fr-DocsArticle-section">
+      <section id="sizes" className="DocsArticle-section">
         <div className="Heading">
           <h4 className="Title">Sizes</h4>
         </div>
         <p>
-          Need your button bigger, or rather smaller? Append{" "}
+          Need your button bigger, or rather smaller? Append{' '}
           <code>{`.Button--#{size}`}</code> modifier class to customize the size
           of a button component as needed.
         </p>
@@ -172,18 +236,32 @@ const Button = props => {
           We've prepared several predefined sizes that you can use right
           out-of-the-box:
           <ul>
-            <li><code>{`.Button--xsmall`}</code></li>
-            <li><code>{`.Button--small`}</code></li>
-            <li><code>{`.Button--large`}</code></li>
-            <li><code>{`.Button--xlarge`}</code></li>
+            <li>
+              <code>{`.Button--xsmall`}</code>
+            </li>
+            <li>
+              <code>{`.Button--small`}</code>
+            </li>
+            <li>
+              <code>{`.Button--large`}</code>
+            </li>
+            <li>
+              <code>{`.Button--xlarge`}</code>
+            </li>
           </ul>
         </p>
         <Preview>
           <PreviewDisplay>
-            <button className="Button Button--xsmall u-MarginRight">Extra Small</button>
-            <button className="Button Button--small u-MarginRight">Small</button>
+            <button className="Button Button--xsmall u-MarginRight">
+              Extra Small
+            </button>
+            <button className="Button Button--small u-MarginRight">
+              Small
+            </button>
             <button className="Button u-MarginRight">Base</button>
-            <button className="Button Button--large u-MarginRight">Large</button>
+            <button className="Button Button--large u-MarginRight">
+              Large
+            </button>
             <button className="Button Button--xlarge">Extra Large</button>
           </PreviewDisplay>
           <PreviewHighlight lang="html">

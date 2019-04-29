@@ -1,160 +1,145 @@
-import React, { Component } from 'react';
-import Docs from './Docs';
-import {
-	Start,
-	Installation
-} from './Start';
+import React, { Component } from "react";
+import Docs from "./Docs";
+import { Start, Installation } from "./Start";
 
 import {
-	Components,
-    Alert,
-    Nav,
-    Navbar,
-    Button,
-    Card,
-		Table,
-		ListGroup
-} from './Components';
+  Components,
+  Alert,
+  Nav,
+  Navbar,
+  Button,
+  Card,
+  Table,
+  ListGroup
+} from "./Components";
 
+import { Layouts, Grid, Structure } from "./Layouts";
 
-import { 
-	Layouts,
-	Grid,
-	Structure
-} from './Layouts';
-
-import {
-	Forms,
-	Overview,
-	Inputs,
-	InputSet
-} from './Forms';
+import { Forms, Overview, Inputs, InputSet } from "./Forms";
 
 class DocsContainer extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			routes: [
-				{
-					path: '/docs/start',
-					title: 'Getting Started',
-					component: Start,
-					hasChildren: [
-						{
-							path: '/docs/start/installation',
-							title: 'Installation',
-							component: Installation
-						}
-					]
-				},
-				{
-					path: '/docs/layouts',
-					title: 'Layouts',
-					component: Layouts,
-					hasChildren: [
-						{
-							path: '/docs/layouts/grid-system',
-							title: 'Grid System',
-							component: Grid
-						},
-						{
-							path: '/docs/layouts/structure',
-							title: 'Structure',
-							component: Structure
-						}
-					]
-				},
-				{
-					path: '/docs/components',
-					title: 'Components',
-					component: Components,
-					hasChildren: [
-						{
-							path: '/docs/components/alert',
-							title: 'Alerts',
-							component: Alert,
-						},
-						{
-							path: '/docs/components/navbar',
-							title: 'Navbar',
-							component: Navbar
-						},
-						{
-							path: '/docs/components/nav',
-							title: 'Navigation',
-							component: Nav
-						},
-						{
-							path: '/docs/components/button',
-							title: 'Button',
-							component: Button
-						},
-						{
-							path: '/docs/components/card',
-							title: 'Card',
-							component: Card
-						},
-						{
-							path: '/docs/components/table',
-							title: 'Table',
-							component: Table
-						},
-						{
-							path: '/docs/components/list-group',
-							title: 'List Group',
-							component: ListGroup
-						}
-					]
-				},
-				{
-					path: '/docs/forms',
-					title: 'Forms',
-					component: Forms,
-					hasChildren: [
-						{
-							path: '/docs/forms/overview',
-							title: 'Forms',
-							component: Overview
-						},
-						{
-							path: '/docs/forms/inputs',
-							title: 'Inputs',
-							component: Inputs
-						},
-						{
-							path: '/docs/forms/input-set',
-							title: 'Input Set',
-							component: InputSet
-						}
-					]
-				},
-				
-			]
-		}
-	}
+  constructor(props) {
+    super(props);
+    this.state = {
+      routes: [
+        {
+          path: "/docs/start",
+          title: "Getting Started",
+          component: Start,
+          hasChildren: [
+            {
+              path: "/docs/start/installation",
+              title: "Installation",
+              component: Installation
+            }
+          ]
+        },
+        {
+          path: "/docs/layouts",
+          title: "Layouts",
+          component: Layouts,
+          hasChildren: [
+            {
+              path: "/docs/layouts/grid-system",
+              title: "Grid System",
+              component: Grid
+            },
+            {
+              path: "/docs/layouts/structure",
+              title: "Structure",
+              component: Structure
+            }
+          ]
+        },
+        {
+          path: "/docs/components",
+          title: "Components",
+          component: Components,
+          hasChildren: [
+            {
+              path: "/docs/components/alert",
+              title: "Alerts",
+              component: Alert
+            },
+            {
+              path: "/docs/components/navbar",
+              title: "Navbar",
+              component: Navbar
+            },
+            {
+              path: "/docs/components/nav",
+              title: "Navigation",
+              component: Nav
+            },
+            {
+              path: "/docs/components/button",
+              title: "Button",
+              component: Button
+            },
+            {
+              path: "/docs/components/card",
+              title: "Card",
+              component: Card
+            },
+            {
+              path: "/docs/components/table",
+              title: "Table",
+              component: Table
+            },
+            {
+              path: "/docs/components/list-group",
+              title: "List Group",
+              component: ListGroup
+            }
+          ]
+        },
+        {
+          path: "/docs/forms",
+          title: "Forms",
+          component: Forms,
+          hasChildren: [
+            {
+              path: "/docs/forms/overview",
+              title: "Forms",
+              component: Overview
+            },
+            {
+              path: "/docs/forms/inputs",
+              title: "Inputs",
+              component: Inputs
+            },
+            {
+              path: "/docs/forms/input-set",
+              title: "Input Set",
+              component: InputSet
+            }
+          ]
+        }
+      ]
+    };
+  }
 
-	componentWillMount = () => {
-		const { routes } = this.state;
+  componentWillMount = () => {
+    const { routes } = this.state;
 
-		return routes.map(route => {
-			if(route.hasChildren) {
-				return route.hasChildren.sort((a, b) => {
-					if(a.title < b.title) { return -1; }
-					if(a.title > b.title) { return 1; }
-					return 0;
-				})
-			}
-		})
-	}
-	
-	render() {
-		return (
-			<Docs
-				{...this.state}
-				{...this.props}
-			/>
-		);
-	}
+    return routes.map(route => {
+      if (route.hasChildren) {
+        return route.hasChildren.sort((a, b) => {
+          if (a.title < b.title) {
+            return -1;
+          }
+          if (a.title > b.title) {
+            return 1;
+          }
+          return 0;
+        });
+      }
+    });
+  };
+
+  render() {
+    return <Docs {...this.state} {...this.props} />;
+  }
 }
 
 export default DocsContainer;

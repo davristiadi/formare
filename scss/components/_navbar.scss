@@ -1,76 +1,76 @@
 .Navbar {
-	position: relative;
-	display: flex;
-	justify-content: space-between;
-	min-height: $navbar-height;
-	height: $navbar-height;
-	transition: $navbar-transition;
-	background: $navbar-background;
-	
-	&-block {
-		position: relative;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  min-height: $navbar-height;
+  height: $navbar-height;
+  transition: $navbar-transition;
+  background: $navbar-background;
 
-		&--expanded {
-			flex-grow: 1;
-		}
-		
-		&--start { 
-			justify-content: flex-start;
-		}
+  &-block {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
 
-		&--center {
-			justify-content: center;
-		}
+    &--expanded {
+      flex-grow: 1;
+    }
 
-		&--end {
-			justify-content: flex-end;
-		}
-	}
+    &--start {
+      justify-content: flex-start;
+    }
 
-	.Nav {
-		display: flex;
-		
-		&-link {
-			display: flex;
-			align-items: center;
-			color: $navbar-color;
+    &--center {
+      justify-content: center;
+    }
 
-			&:hover {
-				color: $navbar-hovered-color;
-			}
-		}
-	}
+    &--end {
+      justify-content: flex-end;
+    }
+  }
 
-	@each $theme, $color in $theme-colors {
-		&--#{$theme} {
-			background-color: $color;
-			color: color-yiq($color);
+  .Nav {
+    display: flex;
 
-			.Nav {
-				&-link {
-					transition: $transition;
-					color: rgba(color-yiq($color), 0.7);
+    &-link {
+      display: flex;
+      align-items: center;
+      color: $navbar-color;
 
-					&:hover {
-						color: rgba(color-yiq($color), 1);
-					}
-				}
+      &:hover {
+        color: $navbar-hovered-color;
+      }
+    }
+  }
 
-				&--is-active {
-					color: rgba(color-yiq($color), 1);
-				}
-			}
-		}
-	}
-	
-	@each $size, $value in $navbar-heights {
-		&--#{$size} {
-			// height: $value;
-			min-height: $value;
-		}
-	}
+  @each $theme, $color in $theme-colors {
+    &--#{$theme} {
+      background-color: $color;
+      color: color-yiq($color);
+
+      .Nav {
+        &-link {
+          transition: $transition;
+          color: rgba(color-yiq($color), 0.7);
+
+          &:hover {
+            color: rgba(color-yiq($color), 1);
+          }
+        }
+
+        &--is-active {
+          color: rgba(color-yiq($color), 1);
+        }
+      }
+    }
+  }
+
+  @each $size, $value in $navbar-heights {
+    &--#{$size} {
+      // height: $value;
+      min-height: $value;
+    }
+  }
 }

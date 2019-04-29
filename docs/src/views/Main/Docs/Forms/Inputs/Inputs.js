@@ -3,12 +3,12 @@ import { Preview, PreviewDisplay, PreviewHighlight } from 'components/Preview';
 
 const Inputs = () => {
   return (
-    <article id="docs-inputs" className="fr-DocsArticle">
-      <div className="fr-DocsArticle-heading">
-        <h2 className="fr-DocsArticle-title">Inputs</h2>
-        <h5 className="fr-DocsArticle-subtitle">Culpa magna cupidatat in tempor reprehenderit mollit.</h5>
+    <article id="docs-inputs" className="DocsArticle">
+      <div className="DocsArticle-heading">
+        <h2 className="DocsArticle-title">Inputs</h2>
+        <h5 className="DocsArticle-subtitle">Culpa magna cupidatat in tempor reprehenderit mollit.</h5>
       </div>
-      <section className="fr-DocsArticle-section">
+      <section className="DocsArticle-section">
         <div className="Heading">
           <h4 className="Title">Overview</h4>
         </div>
@@ -39,7 +39,7 @@ const Inputs = () => {
           </PreviewHighlight>
         </Preview>
       </section>
-      <section className="fr-DocsArticle-section">
+      <section className="DocsArticle-section">
       
       </section>
     </article>

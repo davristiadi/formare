@@ -1,9 +1,9 @@
-@import "src/scss/vendor/abstracts";
+@import 'src/scss/vendor/abstracts';
 
-.fr-card-demo {
+.card-demo {
   padding-top: spacing(base);
   padding-bottom: spacing(base);
-  
+
   .card {
     max-width: 400px;
   }

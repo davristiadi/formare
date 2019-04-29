@@ -764,11 +764,6 @@ form-data@~2.3.2:
     combined-stream "^1.0.6"
     mime-types "^2.1.12"
 
-formare@^0.5.0-beta.14:
-  version "0.5.0-beta.14"
-  resolved "https://registry.yarnpkg.com/formare/-/formare-0.5.0-beta.14.tgz#c0f6794a3546230bf184f301204b58a6ebc178be"
-  integrity sha512-Wgk0D0+5bwAWzfFgPSUI+3/wR+qzeDuLpeg7VhE+l0GNuPHcDYfXSgqX+6oiQ2pF4Eo8TukrGnRzbk++e4j87Q==
-
 fragment-cache@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/fragment-cache/-/fragment-cache-0.2.1.tgz#4290fad27f13e89be7f33799c6bc5a0abfff0d19"
@@ -983,6 +978,11 @@ has-values@^1.0.0:
   dependencies:
     is-number "^3.0.0"
     kind-of "^4.0.0"
+
+highlight.js@^9.15.6:
+  version "9.15.6"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.15.6.tgz#72d4d8d779ec066af9a17cb14360c3def0aa57c4"
+  integrity sha512-zozTAWM1D6sozHo8kqhfYgsac+B+q0PmsjXeyDrYIHHcBN0zTVT66+s2GW1GZv7DbyaROdLXKdabwS/WqPyIdQ==
 
 hosted-git-info@^2.1.4:
   version "2.7.1"

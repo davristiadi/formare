@@ -1,13 +1,5 @@
 // Import external dependencies
 @import url("https://use.fontawesome.com/releases/v5.0.10/css/all.css");
 
-// Import vendor files
-@import "vendor/overrides";
-
 // Import core CSS framework
 @import "../../../scss/formare.scss";
-
-//  Import local-based CSS files
-@import "abstracts/all";
-@import "base/all";
-@import "components/all";

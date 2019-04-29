@@ -1,29 +1,32 @@
-import React, { Component, Fragment } from "react";
-import { Link } from "react-router-dom";
-import classNames from "classnames";
+import React, { Component, Fragment } from 'react';
+import { Link } from 'react-router-dom';
+import classNames from 'classnames';
 
 class DocsMenu extends Component {
   render() {
     const { routes, history } = this.props;
 
     const classes = {
-      menuList: classNames("fr-DocsMenu-list"),
+      menuList: classNames('DocsMenu-list'),
       menuItem: (route, submenu) => {
-        if(submenu) {
+        if (submenu) {
           return classNames(
-            `fr-DocsMenu-item`,
-            history.location.pathname === route.path ? "fr-DocsMenu-item--isActive" : ''
+            `DocsMenu-item`,
+            history.location.pathname === route.path
+              ? 'DocsMenu-item--isActive'
+              : '',
           );
-        }
-        else {
+        } else {
           return classNames(
-            'fr-DocsMenu-item',
-            route.hasChildren ? 'fr-DocsMenu-item--hasSubmenu' : '',
-            history.location.pathname === route.path ? 'fr-DocsMenu-item--isActive' : ''
+            'DocsMenu-item',
+            route.hasChildren ? 'DocsMenu-item--hasSubmenu' : '',
+            history.location.pathname === route.path
+              ? 'DocsMenu-item--isActive'
+              : '',
           );
         }
       },
-      menuLink: classNames("fr-DocsMenu-link")
+      menuLink: classNames('DocsMenu-link'),
     };
 
     const renderSubmenuItem = route => {
@@ -31,7 +34,9 @@ class DocsMenu extends Component {
         return route.hasChildren.map(subroute => {
           return (
             <li className={classes.menuItem(subroute, true)}>
-              <Link className={classes.menuLink} to={subroute.path}>{subroute.title}</Link>
+              <Link className={classes.menuLink} to={subroute.path}>
+                {subroute.title}
+              </Link>
             </li>
           );
         });
@@ -41,25 +46,29 @@ class DocsMenu extends Component {
     };
 
     const renderSubmenu = route => {
-      return <ul className={classes.menuList}>{renderSubmenuItem(route)}</ul>
-    }
+      return <ul className={classes.menuList}>{renderSubmenuItem(route)}</ul>;
+    };
 
     const renderMenuItems = route => {
       return (
         <li className={classes.menuItem(route, false)}>
-          <Link className="fr-DocsMenu-link" to={route.path}>{route.title}</Link>
-          { route.hasChildren ? renderSubmenu(route) : null }
+          <Link className="DocsMenu-link" to={route.path}>
+            {route.title}
+          </Link>
+          {route.hasChildren ? renderSubmenu(route) : null}
         </li>
-      )
-    }
+      );
+    };
 
     return (
-      <div className="fr-DocsMenu">
-        <ul className="fr-DocsMenu-list">
-          { routes.map(route => <Fragment>{ renderMenuItems(route) }</Fragment>) }
+      <div className="DocsMenu">
+        <ul className="DocsMenu-list">
+          {routes.map(route => (
+            <Fragment>{renderMenuItems(route)}</Fragment>
+          ))}
         </ul>
       </div>
-    )
+    );
   }
 }
 

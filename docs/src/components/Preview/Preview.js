@@ -1,11 +1,12 @@
-import React, { Children, cloneElement } from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import PreviewDisplay from './PreviewDisplay';
+import React, { Children, cloneElement } from "react";
+import PropTypes from "prop-types";
+import classNames from "classnames";
+import PreviewDisplay from "./PreviewDisplay";
+import "./Preview.scss";
 
 const Preview = props => {
   const {
-    tag: Tag = 'div',
+    tag: Tag = "div",
     className,
     children,
     layout,
@@ -14,12 +15,12 @@ const Preview = props => {
   } = props;
 
   let childArray = Children.toArray(children);
-  
-  if (!borderless) childArray.push(<div className="fr-Preview-tag">Preview</div>);
+
+  if (!borderless) childArray.push(<div className="Preview-tag">Preview</div>);
   else {
     return childArray.map(child => {
       if (child.type === PreviewDisplay) {
-        return child = cloneElement(child, { borderless });
+        return (child = cloneElement(child, { borderless }));
       }
 
       return child;
@@ -27,9 +28,9 @@ const Preview = props => {
   }
 
   attributes.className = classNames(
-    `fr-Preview`,
-    layout ? `fr-Preview--${layout}` : '',
-    className,
+    `Preview`,
+    layout ? `Preview--${layout}` : "",
+    className
   );
 
   return <Tag {...attributes}>{childArray}</Tag>;
@@ -38,7 +39,7 @@ const Preview = props => {
 Preview.propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   borderless: PropTypes.bool,
-  layout: PropTypes.string,
+  layout: PropTypes.string
 };
 
 export default Preview;

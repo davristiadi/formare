@@ -2,10 +2,12 @@
   display: flex !important;
 }
 
-&-InlineFlex {
+&-Flex-inline {
   display: inline-flex !important;
 }
 
+//- Flex Direction
+//
 $flex-directions: (row, column);
 @each $direction in $flex-directions {
   &-Flex-#{$direction} {
@@ -19,7 +21,9 @@ $flex-directions: (row, column);
   }
 }
 
-@for $i from 0 through 1 {
+//- Flex Grow & Shrink
+//
+@for $i from 0 through 10 {
   &-Flex-#{$i} {
     flex: $i !important;
   }
@@ -33,7 +37,9 @@ $flex-directions: (row, column);
   }
 }
 
-$justify-contents: (
+//- Flex Alignments
+//
+$justify-content-values: (
   start: flex-start,
   center: center,
   end: flex-end,
@@ -42,14 +48,14 @@ $justify-contents: (
   evenly: space-evenly
 );
 
-@each $type, $value in $justify-contents {
+@each $type, $value in $justify-content-values {
   &-jc-#{$type},
   &-JustifyContent-#{$type} {
     justify-content: $value !important;
   }
 }
 
-$align-items: (
+$align-items-values: (
   start: flex-start,
   center: center,
   end: flex-end,
@@ -57,7 +63,7 @@ $align-items: (
   baseline: baseline
 );
 
-@each $type, $value in $align-items {
+@each $type, $value in $align-items-values {
   &-ai-#{$type},
   &-AlignItems-#{$type} {
     align-items: $value !important;

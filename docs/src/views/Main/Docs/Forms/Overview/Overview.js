@@ -4,16 +4,16 @@ import "./Overview.scss";
 
 const Overview = props => {
   return (
-    <article className="fr-DocsArticle">
-      <div className="fr-DocsArticle-heading">
-        <h2 className="fr-DocsArticle-title">Overview</h2>
-        <h5 className="fr-DocsArticle-subtitle">
+    <article className="DocsArticle">
+      <div className="DocsArticle-heading">
+        <h2 className="DocsArticle-title">Overview</h2>
+        <h5 className="DocsArticle-subtitle">
           Mollit sit et aute nisi sint deserunt in velit est eiusmod amet
           proident veniam.
         </h5>
       </div>
 
-      <section className="fr-DocsArticle-section">
+      <section className="DocsArticle-section">
         <div className="Heading">
           <h4 className="Title">Example</h4>
         </div>

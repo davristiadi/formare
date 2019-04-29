@@ -1,0 +1,24 @@
+@import 'src/scss/vendor/abstracts';
+
+.Docs {
+  display: flex;
+  flex-direction: row;
+}
+
+.DocsMenu {
+  position: static;
+  min-height: calc(100vh - 5em);
+  background-color: tint($lighter, 75%);
+  border-right: solid 1px $lighter;
+  padding: spacing(base);
+  flex-basis: 300px;
+
+  &-list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  &-item {
+    padding-top: spacing(base);
+  }
+}

@@ -1,51 +1,49 @@
 @function tint($color, $percentage) {
-	@return mix(white, $color, $percentage);
+  @return mix(white, $color, $percentage);
 }
 
 @function shade($color, $percentage) {
-	@return mix(black, $color, $percentage);
+  @return mix(black, $color, $percentage);
 }
 
 //
 @function theme-color($color-name: primary) {
-	@return map-get($theme-colors, $color-name);
+  @return map-get($theme-colors, $color-name);
 }
 
 @function theme-color-shade($color-name: primary, $color-shade-level: 0) {
-	$color: theme-color($color-name);
-	$color-shade-percentage: abs($color-shade-level) * 1%;
+  $color: theme-color($color-name);
+  $color-shade-percentage: abs($color-shade-level) * 1%;
 
-	@if $color-shade-level > 0 {
-		@return shade($color, $color-shade-percentage);
-	}
-
-	@else {
-		@return tint($color, $color-shade-percentage);
-	}
+  @if $color-shade-level > 0 {
+    @return shade($color, $color-shade-percentage);
+  } @else {
+    @return tint($color, $color-shade-percentage);
+  }
 }
 
 @function primary-color($color-shade-level: 0) {
-	@return theme-color-shade(primary, $color-shade-level);
+  @return theme-color-shade(primary, $color-shade-level);
 }
 
 @function secondary-color($color-shade-level: 0) {
-	@return theme-color-shade(secondary, $color-shade-level);
+  @return theme-color-shade(secondary, $color-shade-level);
 }
 
 @function gray($gray-shade-level: 1000) {
-	@return map-get($grays, $gray-shade-level);
+  @return map-get($grays, $gray-shade-level);
 }
 
 @function color-yiq($color) {
-	$r: red($color);
-	$g: green($color);
-	$b: blue($color);
-  
-	$yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
-  
-	@if ($yiq >= $yiq-contrasted-threshold) {
-		@return $yiq-text-dark;
-	} @else {
-		@return $yiq-text-light;
-	}
+  $r: red($color);
+  $g: green($color);
+  $b: blue($color);
+
+  $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+
+  @if ($yiq >= $yiq-contrasted-threshold) {
+    @return $yiq-text-dark;
+  } @else {
+    @return $yiq-text-light;
+  }
 }

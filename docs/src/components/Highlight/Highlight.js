@@ -1,40 +1,36 @@
-import React, { Component } from 'react';
-import Prism from 'prismjs';
-import dedent from 'dedent';
-import PropTypes from 'prop-types';
+import React from 'react';
 import classNames from 'classnames';
+import dedent from 'dedent';
 import './Highlight.scss';
+import 'highlight.js/styles/dracula.css';
+import useHighlight from './useHighlight';
 
-class Highlight extends Component {
-  componentDidMount = () => {
-    Prism.highlightAll();
+const Highlight = props => {
+  // prettier-ignore
+  const {
+    tag: Tag = 'div',
+    className,
+    children,
+    lang = 'css',
+    ...attributes
+  } = props;
+
+  useHighlight();
+
+  const classes = {
+    Highlight: classNames(`Highlight`, className),
+    HighlightCode: classNames(`hljs`, lang),
   };
 
-  render() {
-    const {
-      tag: Tag = 'div',
-      children,
-      lang,
-      className,
-      ...attributes
-    } = this.props;
+  const formatted = dedent(children);
 
-    attributes.className = classNames(`Highlight`, className);
-
-    const codeBlock = dedent(children);
-
-    return (
-      <Tag {...attributes}>
-        <pre>
-          <code className={`language-${lang}`}>{codeBlock}</code>
-        </pre>
-      </Tag>
-    );
-  }
-}
-
-Highlight.propTypes = {
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  return (
+    <Tag {...attributes} className={classes.Highlight}>
+      <pre>
+        <code className={classes.HighlightCode}>{formatted}</code>
+      </pre>
+    </Tag>
+  );
 };
 
 export default Highlight;

@@ -1,10 +1,10 @@
 @import '~scss/vendor/abstracts';
 
-.fr-NavbarExample {
+.NavbarExample {
   &:not(:last-child) {
     margin-bottom: spacing(base);
   }
-  
+
   &__logo {
     font-weight: font-weight(bold);
     font-size: font-size(large);
