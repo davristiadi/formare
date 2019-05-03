@@ -6,11 +6,11 @@
 }
 
 .DocsMenu {
-  position: static;
+  position: sticky;
   min-height: calc(100vh - 5em);
-  background-color: tint($lighter, 75%);
-  border-right: solid 1px $lighter;
-  padding: spacing(base);
+  background-color: theme-color-shade(lighter, -50);
+  padding-left: spacing(base);
+  padding-right: spacing(base);
   flex-basis: 300px;
 
   &-list {
@@ -18,7 +18,18 @@
     padding-left: 0;
   }
 
-  &-item {
-    padding-top: spacing(base);
+  &-item & {
+    &-link {
+      display: block;
+      font-weight: font-weight(semibold);
+      padding-top: spacing(small);
+      padding-bottom: spacing(small);
+      transition: all 250ms ease-in-out;
+      color: $dark;
+
+      &:hover {
+        color: theme-color(primary);
+      }
+    }
   }
 }
