@@ -33,7 +33,6 @@
   },
   "files": [
     "css",
-    "docs",
     "scss",
     "README.md"
   ]
