@@ -1,8 +1,8 @@
 {
   "name": "formare",
-  "version": "0.5.0-beta.31",
+  "version": "0.5.0-beta.32",
   "author": "David Kurnia Kristiadi <davidkurniakristiadi@gmail.com>",
-  "description": "Formare is a hassle-free CSS framewowrk that helps in building web-interfaces easily.",
+  "description": "Lightweight and modern CSS framework to build web-interfaces hassle-free",
   "main": "scss/formare.scss",
   "repository": {
     "type": "git",
@@ -30,5 +30,11 @@
     "node-sass": "^4.9.3",
     "path": "^0.12.7",
     "postcss-cli": "^6.0.0"
-  }
+  },
+  "files": [
+    "css",
+    "docs",
+    "scss",
+    "README.md"
+  ]
 }
