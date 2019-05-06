@@ -9,7 +9,6 @@ const MainNav = () => {
             Docs
           </a>
         </li>
-
         <li className="Nav-item">
           <a className="Nav-link">Github</a>
         </li>
