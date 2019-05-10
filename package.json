@@ -17,10 +17,13 @@
     "publish:beta": "npm start && npm publish --tag beta",
     "publish:next": "npm start && npm publish --tag next",
     "start:docs": "cd docs && npm start",
+    "start:docs-new": "cd docs-gatsby && npm start",
     "start": "npm run build"
   },
   "license": "ISC",
   "dependencies": {
+    "gatsby-source-filesystem": "^2.0.33",
+    "gatsby-transformer-remark": "^2.3.12",
     "highlight.js": "^9.15.6"
   },
   "devDependencies": {
