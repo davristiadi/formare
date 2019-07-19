@@ -1,62 +1,63 @@
 .Card {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	background-color: $card-background;
-	border-radius: $card-border-radius;
-	border-style: $card-border-style;
-	border-color: $card-border-color;
-	border-width: $card-border-width;
-	overflow: hidden;
-	
-	&-header,
-	&-body,
-	&-footer {
-		padding: $card-padding;
-	}
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: $card-fg-color;
+  background-color: $card-bg-color;
+  border-radius: $card-border-radius;
+  border-style: $card-border-style;
+  border-color: $card-border-color;
+  border-width: $card-border-width;
+  overflow: hidden;
 
-	> *:not(:last-child) {
-		border-bottom-style: $card-border-style;
-		border-bottom-width: $card-border-width;
-		border-bottom-color: $card-border-color;
-	}
+  &-header,
+  &-body,
+  &-footer {
+    padding: $card-padding;
+  }
 
-	@each $theme, $color in $theme-colors {
-		&--#{$theme} {
-			> *:not(:last-child) {
-				border-bottom-color: $color;
-			}
-		}
-		
-		&--#{$theme} & {
-			&-header {
-				background-color: theme-color-shade($theme, -10);
-				color: color-yiq(theme-color-shade($theme, -10));
-			}
+  > *:not(:last-child) {
+    border-bottom-style: $card-border-style;
+    border-bottom-width: $card-border-width;
+    border-bottom-color: $card-border-color;
+  }
 
-			&-body,
-			&-footer {
-				background-color: $color;
-				color: color-yiq($color);
-			}
-		}
-	}
+  @each $theme, $color in $theme-colors {
+    &--#{$theme} {
+      > *:not(:last-child) {
+        border-bottom-color: $color;
+      }
+    }
 
-	&-image {
-		position: relative;
-		height: 300px;
-		min-height: 300px;
-		
-		> img {
-			position: absolute;
-			top: 0;
-			left: 0;
-			height: 100%;
-			width: 100%;
-			object-fit: cover;
-			object-position: center;
-		}
-	}
+    &--#{$theme} & {
+      &-header {
+        background-color: theme-color-shade($theme, -10);
+        color: color-yiq(theme-color-shade($theme, -10));
+      }
+
+      &-body,
+      &-footer {
+        background-color: $color;
+        color: color-yiq($color);
+      }
+    }
+  }
+
+  &-image {
+    position: relative;
+    height: 300px;
+    min-height: 300px;
+
+    > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
 }
 // .Card {
 // 	position: relative;
@@ -69,13 +70,13 @@
 // 			border-top-left-radius: $border-radius;
 // 			border-top-right-radius: $border-radius;
 // 		}
-	
+
 // 		&:last-child {
 // 			border-bottom-left-radius: $border-radius;
 // 			border-bottom-right-radius: $border-radius;
 // 		}
 // 	}
-	
+
 // 	&-header,
 // 	&-body,
 // 	&-footer {
@@ -113,7 +114,7 @@
 // 			object-position: center;
 // 		}
 // 	}
-	
+
 // 	@each $theme, $color in $theme-colors {
 // 		&--#{$theme} {
 // 			.Card-header {
@@ -121,9 +122,9 @@
 // 				color: color-yiq(theme-color-shade($theme, 10));
 // 				border-color: theme-color-shade($theme, 15);
 // 			}
-			
+
 // 			.Card-body,
-// 			.Card-footer {	
+// 			.Card-footer {
 // 				background-color: $color;
 // 				border-color: theme-color-shade($theme, 15);
 // 				color: color-yiq($color);
@@ -140,7 +141,7 @@
 // 					background-color: rgba($color, 0.75);
 // 					z-index: 100;
 // 				}
-					
+
 // 				.Card-image {
 // 					position: absolute;
 // 					top: 0;

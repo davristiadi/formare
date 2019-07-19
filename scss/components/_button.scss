@@ -159,6 +159,7 @@
 
     &:hover:not(:disabled) {
       color: $button-clear-hovered-text-color;
+      background-color: $button-clear-hovered-bg-color;
     }
   }
 
@@ -168,17 +169,5 @@
 
   &--fullWidth {
     width: 100%;
-  }
-}
-
-.Buttons {
-  margin-bottom: spacing(base) / -1;
-
-  > .Button {
-    margin-bottom: spacing(base);
-
-    &:not(:last-child) {
-      margin-right: spacing(base);
-    }
   }
 }

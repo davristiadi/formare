@@ -1,36 +1,40 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import classNames from 'classnames';
 import dedent from 'dedent';
-import './Highlight.scss';
-import 'highlight.js/styles/dracula.css';
-import useHighlight from './useHighlight';
+import Prism from 'prismjs';
 
 const Highlight = props => {
   // prettier-ignore
   const {
-    tag: Tag = 'div',
+    tag: Tag,
     className,
     children,
-    lang = 'css',
+    lang,
     ...attributes
   } = props;
 
-  useHighlight();
-
+  const codePreview = dedent(children);
   const classes = {
-    Highlight: classNames(`Highlight`, className),
-    HighlightCode: classNames(`hljs`, lang),
+    Highlight: classNames(`Highlight`),
+    HighlightCode: classNames(`language-${lang}`, className),
   };
 
-  const formatted = dedent(children);
+  useEffect(() => {
+    Prism.highlightAll();
+  }, []);
 
   return (
     <Tag {...attributes} className={classes.Highlight}>
       <pre>
-        <code className={classes.HighlightCode}>{formatted}</code>
+        <code className={classes.HighlightCode}>{codePreview}</code>
       </pre>
     </Tag>
   );
+};
+
+Highlight.defaultProps = {
+  tag: 'div',
+  lang: 'html',
 };
 
 export default Highlight;

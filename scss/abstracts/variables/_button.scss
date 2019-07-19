@@ -21,8 +21,9 @@ $button-active-border-color: primary-color(40);
 
 $button-disabled-opacity: 0.5 !default;
 
-$button-clear-text-color: primary-color(0) !default;
-$button-clear-hovered-text-color: primary-color(40) !default;
+$button-clear-text-color: theme-color(primary) !default;
+$button-clear-hovered-text-color: theme-color(primary) !default;
+$button-clear-hovered-bg-color: theme-color-shade(primary, -90) !default;
 
 $button-padding-y: spacing(small) !default;
 $button-padding-x: spacing(base) !default;

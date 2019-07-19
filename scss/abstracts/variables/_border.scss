@@ -1,14 +1,15 @@
-$border-radius: 4px !default;
+$border-radius: 2px !default;
 $border-radiuses: () !default;
 $border-radiuses: map-merge(
   (
-    base:     $border-radius,
-    large:    ($border-radius * 1.5),
-    xlarge:  ($border-radius * 2),
-    xx-large: ($border-radius * 3)
-  ), 
+    none: 0,
+    base: $border-radius,
+    large: $border-radius * 1.5,
+    xlarge: $border-radius * 2,
+    2xlarge: $border-radius * 3
+  ),
   $border-radiuses
 );
 
-$border-radius-pill:    50px;
-$border-radius-circle:  100%;
+$border-radius-pill: 50px;
+$border-radius-circle: 100%;

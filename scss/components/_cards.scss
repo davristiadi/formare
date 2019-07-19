@@ -1,0 +1,8 @@
+.Cards {
+  display: flex;
+  flex-direction: row;
+
+  > * {
+    margin-bottom: spacing(base);
+  }
+}

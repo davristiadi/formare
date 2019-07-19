@@ -1,0 +1,98 @@
+@import 'src/scss/vendor/abstracts';
+
+.Docs {
+  display: flex;
+  flex-direction: row;
+}
+
+.DocsMenu {
+  position: sticky;
+  top: 5em;
+  height: calc(100vh - 5em);
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 350px;
+  background-color: theme-color-shade(primary, -95);
+
+  &-list {
+    padding: spacing(base);
+    padding-top: spacing(large);
+    margin: 0;
+    list-style: none;
+  }
+
+  &-item & {
+    &-link {
+      padding: spacing(small) spacing(base);
+      display: block;
+      transition: all 100ms ease-in-out;
+      color: theme-color(gray);
+      background-color: transparent;
+      font-weight: font-weight(regular);
+      border-radius: border-radius(base);
+
+      &--hasChildren {
+        font-weight: font-weight(semibold);
+      }
+
+      &:hover {
+        color: theme-color-shade(primary, -10);
+      }
+
+      &.is-active {
+        transition: all 150ms ease-out;
+        background-color: theme-color-shade(primary, -85);
+        color: theme-color(primary);
+        font-weight: font-weight(semibold);
+      }
+    }
+  }
+}
+
+.DocsContent {
+  position: relative;
+  flex-grow: 1;
+  min-height: calc(100vh - 5em);
+
+  > .Container {
+    transition: all 150ms ease-out;
+    padding: 1.5em;
+
+    @include media(lg) {
+      padding: 3em;
+      max-width: 50em;
+    }
+  }
+
+  &-heading {
+    margin-bottom: spacing(2xlarge);
+  }
+
+  &-heading & {
+    &-title {
+      font-weight: font-weight(bold);
+      margin-bottom: spacing(xsmall);
+    }
+
+    &-subtitle {
+      color: $gray;
+    }
+  }
+
+  &-content {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-top: spacing(xlarge);
+      font-weight: font-weight(semibold);
+
+      &:first-child {
+        margin-top: 0;
+        padding-top: 0;
+      }
+    }
+  }
+}

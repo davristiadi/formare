@@ -1,6 +1,6 @@
 {
   "name": "formare",
-  "version": "0.5.0-beta.34",
+  "version": "0.5.0",
   "author": "David Kurnia Kristiadi <davidkurniakristiadi@gmail.com>",
   "description": "Lightweight and modern CSS framework to build web-interfaces hassle-free",
   "main": "scss/formare.scss",
@@ -17,14 +17,18 @@
     "publish:beta": "npm start && npm publish --tag beta",
     "publish:next": "npm start && npm publish --tag next",
     "start:docs": "cd docs && npm start",
-    "start:docs-new": "cd docs-gatsby && npm start",
     "start": "npm run build"
   },
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.19",
+    "@fortawesome/free-solid-svg-icons": "^5.9.0",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "gatsby-remark-prismjs": "^3.2.9",
     "gatsby-source-filesystem": "^2.0.33",
     "gatsby-transformer-remark": "^2.3.12",
-    "highlight.js": "^9.15.6"
+    "highlight.js": "^9.15.6",
+    "prismjs": "^1.16.0"
   },
   "devDependencies": {
     "autoprefixer": "^8.6.5",

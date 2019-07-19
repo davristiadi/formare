@@ -12,9 +12,9 @@ $font-family-secondary: $font-family-serif !default;
 $font-families: () !default;
 $font-families: map-merge(
   (
-    primary: $font-family-primary,
-    secondary: $font-family-secondary,
-    code: $font-family-monospace
+    "primary": $font-family-primary,
+    "secondary": $font-family-secondary,
+    "code": $font-family-monospace
   ),
   $font-families
 );
@@ -35,11 +35,11 @@ $font-sizes: map-merge(
     base: $font-size,
     large: $font-size * 1.25,
     xlarge: $font-size * 1.5,
-    xxlarge: $font-size * 2,
-    xxxlarge: $font-size * 2.5,
     2xlarge: $font-size * 2,
     3xlarge: $font-size * 2.5,
-    4xlarge: $font-size * 3
+    4xlarge: $font-size * 3,
+    xxlarge: $font-size * 2,
+    xxxlarge: $font-size * 2.5
   ),
   $font-sizes
 );
@@ -94,21 +94,11 @@ $line-height: 1.5 !default;
 $line-heights: () !default;
 $line-heights: map-merge(
   (
-    xsmall: (
-      $line-height * 0.5
-    ),
-    small: (
-      $line-height * 0.75
-    ),
-    base: (
-      $line-height * 1
-    ),
-    large: (
-      $line-height * 1.25
-    ),
-    xlarge: (
-      $line-height * 1.5
-    )
+    xsmall: $line-height * 0.5,
+    small: $line-height * 0.75,
+    base: $line-height * 1,
+    large: $line-height * 1.25,
+    xlarge: $line-height * 1.5
   ),
   $line-heights
 );

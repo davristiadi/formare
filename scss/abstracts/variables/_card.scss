@@ -1,5 +1,8 @@
 $card-padding: spacing(base);
-$card-background: $white;
+
+$card-bg-color: $white;
+$card-fg-color: color-yiq($card-bg-color);
+
 $card-border-style: solid;
 $card-border-width: 1px;
 $card-border-color: $light;

@@ -163,7 +163,6 @@ nav ul {
 
 pre {
   font-family: var(--font-family-code); /* 1 */
-  font-size: font-size(small);
 }
 
 /* Text-level semantics (https://html.spec.whatwg.org/multipage/semantics.html#text-level-semantics)
@@ -226,7 +225,7 @@ code {
   background-color: $lighter;
   color: $primary-color;
   padding: 0.25em;
-  font-size: font-size(small);
+  font-size: 87.5%;
   border-radius: border-radius(base);
 }
 

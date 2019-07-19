@@ -3,5 +3,6 @@
 .Highlight {
   .hljs {
     padding: spacing(base);
+    overflow-x: scroll;
   }
 }

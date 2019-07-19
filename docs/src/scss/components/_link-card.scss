@@ -1,0 +1,19 @@
+$link-card-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05),
+  0 3px 6px rgba(0, 0, 0, 0.1);
+$link-card-hovered-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05),
+  0 3px 6px rgba(0, 0, 0, 0.1);
+
+.LinkCard {
+  @extend .Card;
+  box-shadow: $link-card-box-shadow;
+  transition: all 150ms ease-out;
+
+  &-body {
+    @extend .Card-body;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    border: solid 1px $primary-color;
+  }
+}
