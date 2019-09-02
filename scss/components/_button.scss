@@ -9,34 +9,41 @@
   border-style: $button-border-style;
   border-width: $button-border-width;
   border-color: $button-border-color;
-  border-radius: $border-radius;
+  border-radius: $button-border-radius;
   transition: $button-transition;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
   outline: none;
-  cursor: pointer;
+  -webkit-appearance: none;
 
-  &:not(:disabled):not(.Button--clear) {
+  &:not(:disabled),
+  &:not(.Button--disabled) {
+    cursor: pointer;
+  }
+
+  &:not(:disabled):not(.Button--text),
+  &:not(.Button--disabled):not(.Button--text) {
     &:hover,
     &.Button--hovered {
-      color: $button-hovered-color;
       border-color: $button-hovered-border-color;
       outline: none;
     }
 
     &:focus,
     &.Button--focused {
-      color: $button-focused-color;
+      color: $button-focused-fg-color;
       border-color: $button-focused-border-color;
-      box-shadow: 0 0 0.3em 0.2em rgba(tint($primary-color, 15%), 0.3);
+      background-color: $button-focused-bg-color;
+      box-shadow: $button-focused-box-shadow;
       outline: none;
     }
 
     &:active,
     &.Button--active {
-      color: $button-active-color;
+      color: $button-active-fg-color;
       border-color: $button-active-border-color;
+      background-color: $button-active-bg-color;
       outline: none;
     }
   }
@@ -44,30 +51,47 @@
   &:disabled,
   &--disabled {
     opacity: $button-disabled-opacity;
-    pointer-events: none;
     cursor: not-allowed;
+    pointer-events: none;
+
+    &:not(a) {
+      pointer-events: auto;
+    }
   }
 
-  @each $theme, $color in $theme-colors {
+  @each $theme, $color in $color-themes {
     &--#{$theme} {
-      background-color: $color;
       color: color-yiq($color);
+      background-color: $color;
       border-color: $color;
 
-      &:not(:disabled):not(.Button--clear) {
+      &:not(:disabled):not(.Button--text) {
         &:hover,
         &.Button--hovered {
           color: color-yiq($color);
-          background-color: tint($color, 20%);
-          border-color: tint($color, 20%);
+          background-color: theme-color-shade(
+            $theme,
+            $button-theme-hovered-bg-color-shade
+          );
+          border-color: theme-color-shade(
+            $theme,
+            $button-theme-hovered-bg-color-shade
+          );
         }
 
         &:focus,
         &.Button--focused {
           color: color-yiq($color);
-          background-color: tint($color, 20%);
-          border-color: tint($color, 20%);
-          box-shadow: 0 0 0.3em 0.2em rgba($color, 0.3);
+          background-color: theme-color-shade(
+            $theme,
+            $button-theme-focused-bg-color-shade
+          );
+          border-color: theme-color-shade(
+            $theme,
+            $button-theme-focused-bg-color-shade
+          );
+
+          box-shadow: 0 0 0.3em 0.1em rgba($color, 0.3);
         }
 
         &:active,
@@ -78,11 +102,39 @@
         }
       }
 
+      &.Button--text {
+        color: $color;
+
+        &:not(:disabled),
+        &:not(.Button--disabled) {
+          &:hover {
+            color: $color;
+            background-color: rgba(
+              $color,
+              $button-text-hovered-bg-color-opacity
+            );
+          }
+
+          &:focus {
+            background-color: rgba(
+              $color,
+              $button-text-focused-bg-color-opacity
+            );
+          }
+
+          &:active {
+            background-color: rgba(
+              $color,
+              $button-text-active-bg-color-opacity
+            );
+          }
+        }
+      }
+
       &.Button--raised {
-        border-bottom-width: 4px;
         border-bottom-color: shade($color, 10%);
 
-        &:not(:disabled):not(.Button--clear) {
+        &:not(:disabled):not(.Button--text) {
           &:hover,
           &.Button--hovered {
             border-bottom-color: $color;
@@ -91,7 +143,6 @@
           &:focus,
           &.Button--focused {
             border-color: tint($color, 10%);
-            border-bottom-width: 4px;
             border-bottom-color: shade($color, 10%);
             background-color: tint($color, 10%);
             margin-top: 0px;
@@ -101,8 +152,6 @@
           &:active,
           &.Button--active {
             border-color: shade($color, 20%);
-            border-bottom-width: 1px;
-            // border-bottom-color: shade($color, 20%);
             background-color: shade($color, 20%);
             margin-top: 3px;
             outline: none;
@@ -113,36 +162,36 @@
       &.Button--outlined {
         color: $color;
         border-color: $color;
-        background-color: transparent;
+        background-color: rgba($color, 0);
 
-        &:not(:disabled):not(.Button--clear) {
+        &:not(:disabled):not(.Button--text) {
           &:hover,
           &.Button--hovered {
-            color: color-yiq($color);
-            background-color: tint($color, 10%);
-            border-color: tint($color, 10%);
+            color: $color;
+            background-color: rgba($color, 0.1);
+            border-color: rgba($color, 1);
           }
 
           &:focus,
           &.Button--focused {
-            color: color-yiq($color);
-            background-color: tint($color, 10%);
-            border-color: tint($color, 10%);
+            color: $color;
+            background-color: rgba($color, 0.2);
+            border-color: rgba($color, 1);
             outline: none;
           }
 
           &:active,
           &.Button--active {
-            color: color-yiq($color);
-            background-color: shade($color, 20%);
-            border-color: shade($color, 20%);
+            color: $color;
+            background-color: rgba($color, 0.3);
+            border-color: rgba($color, 1);
           }
         }
       }
     }
   }
 
-  //	Size modifier classes
+  // Button sizes
   @each $size, $padding in $button-paddings {
     &--#{$size} {
       font-size: font-size($size);
@@ -150,23 +199,85 @@
     }
   }
 
-  //	Other modifiers
-  &--clear {
-    border: none;
-    background-color: transparent;
-    transition: $button-transition;
-    color: $button-clear-text-color;
+  // Raised button
+  &--raised {
+    border-bottom-width: 4px;
+    border-bottom-color: shade(theme-color(lighter), 10%);
 
-    &:hover:not(:disabled) {
-      color: $button-clear-hovered-text-color;
-      background-color: $button-clear-hovered-bg-color;
+    &:not(:disabled):not(.Button--text) {
+      &:hover,
+      &.Button--hovered {
+        border-bottom-color: $primary-color;
+      }
+
+      &:focus,
+      &.Button--focused {
+        border-color: tint($primary-color, 10%);
+        border-bottom-width: 4px;
+        border-bottom-color: shade($primary-color, 10%);
+        margin-top: 0px;
+        outline: none;
+      }
+
+      &:active,
+      &.Button--active {
+        border-color: shade($primary-color, 20%);
+        border-bottom-width: 1px;
+        margin-top: 3px;
+        outline: none;
+      }
     }
   }
 
-  &--pill {
-    border-radius: $border-radius-pill;
+  &--elevated {
+    box-shadow: 0 0.2em 0.2em 0em rgba($dark, 0.2);
+
+    &:not(:disabled),
+    &:not(.Button--disabled) {
+      &:hover {
+        box-shadow: 0 0.2em 0.4em 0em rgba($dark, 0.2);
+      }
+
+      &:focus {
+        box-shadow: 0 0.3em 0.4em 0em rgba($dark, 0.2) !important;
+      }
+
+      &:active {
+        box-shadow: 0 0.4em 0.4em 0em rgba($dark, 0.2) !important;
+      }
+    }
   }
 
+  // Text button modifier
+  &--text {
+    border: none;
+    color: $button-text-fg-color;
+    background-color: transparent;
+    transition: $button-transition;
+
+    &:not(:disabled),
+    &:not(.Button--disabled) {
+      &:hover {
+        background-color: $button-text-hovered-bg-color;
+        color: $button-text-hovered-fg-color;
+      }
+
+      &:focus {
+        background-color: $button-text-focused-bg-color;
+      }
+
+      &:active {
+        background-color: $button-text-active-bg-color;
+      }
+    }
+  }
+
+  // Rounded button modifier
+  &--rounded {
+    border-radius: $button-rounded-border-radius;
+  }
+
+  // Extend button to 100% width of its parent
   &--fullWidth {
     width: 100%;
   }

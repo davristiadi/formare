@@ -9,13 +9,13 @@
 }
 
 &-pd-x,
-&-PaddingX {
+&-PaddingHorizontal {
   margin-left: spacing(base) !important;
   margin-right: spacing(base) !important;
 }
 
 &-pd-y,
-&-PaddingY {
+&-PaddingVertical {
   margin-top: spacing(base) !important;
   margin-bottom: spacing(base) !important;
 }
@@ -32,13 +32,13 @@
   }
 
   &-mg-x-#{$size},
-  &-MarginX-#{$size} {
+  &-MarginHorizontal-#{$size} {
     margin-left: $value !important;
     margin-right: $value !important;
   }
 
   &-mg-y-#{$size},
-  &-MarginY-#{$size} {
+  &-MarginVertical-#{$size} {
     margin-top: $value !important;
     margin-bottom: $value !important;
   }
@@ -51,25 +51,25 @@ $spacing-directions: (
   bottom: Bottom
 );
 
-@each $direction, $caps in $spacing-directions {
+@each $direction, $dirCap in $spacing-directions {
   &-pd-#{$direction},
-  &-Padding#{$caps} {
+  &-Padding#{$dirCap} {
     padding-#{$direction}: spacing(base) !important;
   }
 
   &-mg-#{$direction},
-  &-Margin#{$caps} {
+  &-Margin#{$dirCap} {
     margin-#{$direction}: spacing(base) !important;
   }
 
   @each $size, $value in $spacings {
     &-mg-#{$direction}-#{$size},
-    &-Margin#{$caps}-#{$size} {
+    &-Margin#{$dirCap}-#{$size} {
       margin-#{$direction}: $value !important;
     }
 
     &-pd-#{$direction}-#{$size},
-    &-Padding#{$caps}-#{$size} {
+    &-Padding#{$dirCap}-#{$size} {
       padding-#{$direction}: $value !important;
     }
   }

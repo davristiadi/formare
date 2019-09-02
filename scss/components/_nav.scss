@@ -1,30 +1,25 @@
 .Nav {
-	position: relative;
+  &-list {
+    display: flex;
+    flex-direction: row;
+  }
 
-	&-list {
-		display: flex;
-		flex-direction: row;
-	}
+  &-item {
+    display: flex;
+    align-items: center;
+    transition: $transition;
+    font-weight: font-weight(medium);
+  }
 
-	&-item {
-		display: flex;
-		align-items: center;
-		transition: $transition;
-		font-weight: font-weight(medium);
-		padding-left: spacing(base);
-		padding-right: spacing(base);
-	}
+  &-link {
+    display: block;
+    transition: $transition;
+    padding: spacing(base);
+    border-radius: border-radius(base);
 
-	&-link {
-		display: block;
-		transition: $transition;
-		padding: spacing(base);
-		margin-left: spacing(base) / -1;
-		margin-right: spacing(base) / -1;
-
-		&:hover {
-			cursor: pointer;
-			color: theme-color(primary);
-		}
-	}
+    &:hover {
+      cursor: pointer;
+      color: theme-color(primary);
+    }
+  }
 }

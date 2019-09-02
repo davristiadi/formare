@@ -14,10 +14,10 @@ $container-widths: () !default;
 $container-widths: map-merge(
   (
     xs: 100%,
-    sm: get-breakpoints(sm),
-    md: get-breakpoints(md),
-    lg: get-breakpoints(lg),
-    xl: get-breakpoints(xl),
+    sm: breakpoints(sm),
+    md: breakpoints(md),
+    lg: breakpoints(lg),
+    xl: breakpoints(xl)
   ),
   $container-widths
 );

@@ -1,0 +1,44 @@
+---
+path: '/docs/elements/inputs'
+title: 'Inputs'
+description: 'An interactive element where users can enter and edit text.'
+---
+
+import { Preview, PreviewDisplay, PreviewCode } from 'components/preview';
+
+#### Overview
+
+Enim non consequat ea do qui commodo ullamco fugiat fugiat. Minim Lorem irure Lorem eiusmod et adipisicing.
+Duis reprehenderit quis aliqua laboris veniam amet adipisicing incididunt qui. Consequat laboris qui nisi
+elit culpa dolor exercitation duis ex enim reprehenderit proident nisi aliquip. Sunt ut mollit consectetur
+proident tempor. Irure nisi exercitation eiusmod nisi culpa quis.
+
+<Preview lang="html" layout="horizontal">
+  <PreviewDisplay style={{ width: '40%' }}>
+    <form className="Form">
+      <div className="Form-field">
+        <input type="text" className="Input" placeholder="An example input" />
+      </div>
+      <div className="Form-field">
+        <div className="Select">
+          <select>
+            <option>First option</option>
+            <option>Second option</option>
+          </select>
+        </div>
+      </div>
+      <div className="Form-field">
+        <div className="Checkbox">
+          <input id="test" type="checkbox" />
+          <label for="test">Example checkbox</label>
+        </div>
+      </div>
+    </form>
+  </PreviewDisplay>
+  <PreviewCode>
+    {`
+    <input type="text" class="Input" placeholder="An example input" />
+    `}
+
+  </PreviewCode>
+</Preview>

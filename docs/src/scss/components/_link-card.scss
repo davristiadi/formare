@@ -1,19 +1,16 @@
-$link-card-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05),
-  0 3px 6px rgba(0, 0, 0, 0.1);
-$link-card-hovered-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05),
-  0 3px 6px rgba(0, 0, 0, 0.1);
-
 .LinkCard {
   @extend .Card;
+  transition: $link-card-transition;
   box-shadow: $link-card-box-shadow;
-  transition: all 150ms ease-out;
 
   &-body {
     @extend .Card-body;
   }
 
   &:hover {
-    transform: translateY(-3px);
-    border: solid 1px $primary-color;
+    border-color: theme-color(primary);
+    color: theme-color(primary);
+    transform: $link-card-hovered-transform;
+    box-shadow: $link-card-hovered-box-shadow;
   }
 }

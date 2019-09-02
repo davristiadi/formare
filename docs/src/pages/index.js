@@ -1,134 +1,90 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import MainLayout from 'layouts/main-layout';
+import { MainLayout } from 'layouts/main';
 import SEO from 'components/seo';
-import { Highlight } from 'components/highlight';
 
 const Home = () => (
   <>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO
+      title="Home"
+      keywords={[`formare`, `css`, `framework`, `css-framework`]}
+    />
     <MainLayout>
-      <section className="Hero Hero--primary Hero--large">
+      <section className="Hero Hero--primary">
         <div className="Hero-body Hero-body--centerized">
-          <div className="Container">
-            <div
-              className="Heading u-MarginBottom-xlarge u-Align-center"
-              style={{
-                maxWidth: '600px',
-                margin: '0 auto',
-              }}
-            >
-              <h1 className="Title u-MarginBottom-xsmall">Formare</h1>
-              <h3 className="Subtitle u-Color-light">
+          <div
+            className="Container u-JustifyContent-center u-Align-center"
+            style={{
+              maxWidth: '840px',
+              margin: '0 auto',
+            }}
+          >
+            <div className="Heading u-MarginBottom-xlarge">
+              <h1 className="Title Heading-1 u-MarginBottom-small">Formare</h1>
+              <h3 className="Subtitle Heading-3 u-Color-light">
                 A modern and lightweight CSS framework for building web
                 interfaces hassle-free
               </h3>
             </div>
-            <div
-              className="u-Align-center"
-              style={{
-                maxWidth: '480px',
-                margin: '0 auto',
-              }}
-            >
-              <div className="u-MarginBottom-xlarge">
-                <Highlight
-                  lang="html"
-                  className="u-Flex u-jc-center u-ta-center"
-                >
-                  {`
-                  $ npm install formare
-                  $ yarn add formare
-                  `}
-                </Highlight>
-              </div>
-              <div className="u-Flex-row u-JustifyContent-center">
-                <Link
-                  href="/docs/start"
-                  className="Button Button--large Button--lighter Button--outlined"
-                >
-                  Get started!
-                </Link>
-              </div>
+            <div>
+              <Link
+                to="/docs/start"
+                className="Button Button--lighter Button--large Button--outlined"
+              >
+                Get started!
+              </Link>
             </div>
           </div>
         </div>
       </section>
       <section className="Section Section--2xlarge">
         <div className="Container">
-          <div className="Heading u-PaddingBottom-large">
-            <h2 className="Title">Quick Navigation</h2>
-            <h5 className="Subtitle u-clr-gray">
+          <div className="Heading u-PaddingBottom-xlarge">
+            <h3 className="Title u-FontWeight-semibold">Quick Navigation</h3>
+            <h6 className="Subtitle u-clr-gray">
               Eiusmod anim occaecat duis irure do sit ea anim ut do.
-            </h5>
+            </h6>
           </div>
           <div className="Cards Grids">
-            <div className="Grid Grid-4">
-              <Link to="/getting-started">
-                <div className="LinkCard">
-                  <div className="LinkCard-body">
-                    <div className="Heading">
-                      <h4 className="Title u-fw-medium">Getting Started</h4>
-                    </div>
-                    <p className="u-clr-gray">
-                      Proident aute cillum incididunt deserunt mollit in commodo
-                      reprehenderit aute anim.
-                    </p>
-                  </div>
-                </div>
-              </Link>
-            </div>
-            <div className="Grid Grid-4">
-              <Link to="/getting-started">
-                <div className="LinkCard">
-                  <div className="LinkCard-body">
-                    <div className="Heading">
-                      <h4 className="Title u-fw-medium">Components</h4>
-                    </div>
-                    <p className="u-clr-gray">
-                      Proident aute cillum incididunt deserunt mollit in commodo
-                      reprehenderit aute anim.
-                    </p>
-                  </div>
-                </div>
-              </Link>
-            </div>
-            <div className="Grid Grid-4">
-              <Link to="/getting-started">
-                <div className="LinkCard">
-                  <div className="LinkCard-body">
-                    <div className="Heading">
-                      <h4 className="Title u-fw-medium">Layouts</h4>
-                    </div>
-                    <p className="u-clr-gray">
-                      Proident aute cillum incididunt deserunt mollit in commodo
-                      reprehenderit aute anim.
-                    </p>
-                  </div>
-                </div>
-              </Link>
-            </div>
-
-            <div className="Grid Grid-4">
-              <Link to="/getting-started">
-                <div className="LinkCard">
-                  <div className="LinkCard-body">
-                    <div className="Heading">
-                      <h4 className="Title u-fw-medium">Layouts</h4>
-                    </div>
-                    <p className="u-clr-gray">
-                      Proident aute cillum incididunt deserunt mollit in commodo
-                      reprehenderit aute anim.
-                    </p>
-                  </div>
-                </div>
-              </Link>
-            </div>
+            <NavigationLinks />
           </div>
         </div>
       </section>
     </MainLayout>
   </>
 );
+
+const NavigationLinks = () => {
+  return (
+    <>
+      <div className="Grid Grid-12 Grid-sm-6 Grid-md-4">
+        <Link to="/docs/introduction/getting-started" className="LinkCard">
+          <div className="LinkCard-body u-pd-large">
+            <div className="Heading">
+              <h5 className="Title u-fw-medium">Introduction</h5>
+            </div>
+            <p>
+              Get strated with Formare, including how to install Formare,
+              requirements and our fundamentals.
+            </p>
+          </div>
+        </Link>
+      </div>
+      <div className="Grid Grid-12 Grid-sm-6 Grid-md-4">
+        <Link to="/docs/elements/buttons" className="LinkCard">
+          <div className="LinkCard-body u-pd-large">
+            <div className="Heading">
+              <h5 className="Title u-fw-medium">Elements</h5>
+            </div>
+            <p>
+              Find out about our elements that you can quickly implement;
+              including buttons, text inputs, and more.
+            </p>
+          </div>
+        </Link>
+      </div>
+    </>
+  );
+};
 
 export default Home;

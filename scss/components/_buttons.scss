@@ -8,4 +8,14 @@
       margin-right: spacing(base);
     }
   }
+
+  &--fullWidth {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    > .Button {
+      flex-grow: 1;
+    }
+  }
 }

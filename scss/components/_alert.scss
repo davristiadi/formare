@@ -4,8 +4,8 @@
   color: $alert-fg-color;
   background-color: $alert-bg-color;
   border-radius: $alert-border-radius;
-  
-  @each $theme, $color in $theme-colors {
+
+  @each $theme, $color in $color-themes {
     &--#{$theme} {
       background-color: theme-color-shade($theme, $alert-bg-color-shade-level);
       color: theme-color-shade($theme, $alert-fg-color-shade-level);
@@ -20,11 +20,10 @@
   }
 
   &-icon {
-  
-    &:first-child { 
+    &:first-child {
       padding-left: $alert-spacing-y;
     }
-    
+
     &:last-child {
       padding-right: $alert-spacing-x;
     }

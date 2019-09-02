@@ -1,7 +1,9 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import classNames from 'classnames';
 import dedent from 'dedent';
 import Prism from 'prismjs';
+import 'prismjs/components/prism-bash.js';
+import replaceAllString from 'utilities/replace-all-string';
 
 const Highlight = props => {
   // prettier-ignore
@@ -13,10 +15,19 @@ const Highlight = props => {
     ...attributes
   } = props;
 
-  const codePreview = dedent(children);
+  const replaceAllConfig = {
+    from: 'className',
+    to: 'class',
+  };
+
+  const codePreview = dedent(
+    replaceAllString(children.toString(), replaceAllConfig),
+  );
+
   const classes = {
     Highlight: classNames(`Highlight`),
-    HighlightCode: classNames(`language-${lang}`, className),
+    HighlightPre: classNames(`gatsby-highlight`, `language-${lang}`, className),
+    HighlightCode: classNames(`language-${lang}`),
   };
 
   useEffect(() => {
@@ -24,8 +35,8 @@ const Highlight = props => {
   }, []);
 
   return (
-    <Tag {...attributes} className={classes.Highlight}>
-      <pre>
+    <Tag className={classes.Highlight}>
+      <pre {...attributes} className={classes.HighlightPre}>
         <code className={classes.HighlightCode}>{codePreview}</code>
       </pre>
     </Tag>

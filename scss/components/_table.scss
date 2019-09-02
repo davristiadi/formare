@@ -1,10 +1,12 @@
 .Table {
   position: relative;
-  overflow: hidden;
-  width: 100%;
+  max-width: 100%;
+  overflow: auto;
+  border-radius: border-radius(base);
 
   > table {
     width: 100%;
+    max-width: 100%;
     text-align: left;
   }
 
@@ -18,7 +20,7 @@
       border-bottom-color: $table-head-border-color;
     }
 
-    @each $theme, $color in $theme-colors {
+    @each $theme, $color in $color-themes {
       &--#{$theme} {
         th {
           background-color: $color;
@@ -31,7 +33,6 @@
 
   &-body {
     tr {
-
       &:not(:last-child) {
         td {
           border-bottom-style: $table-cell-border-style;
@@ -50,38 +51,40 @@
 
   &--striped & {
     &-body {
-      tr:nth-child(2n+1) {
+      tr:nth-child(2n + 1) {
         td {
-          background-color: $lighter;
+          background-color: theme-color(lighter);
         }
       }
     }
   }
-}
 
+  &--elevated {
+  }
+}
 
 // .table {
 //     border-radius: border-radius(base);
 //     overflow: hidden;
-    
+
 //     > table {
 //         width: 100%;
 //         text-align: left;
 //     }
-    
+
 //     &__head {
 //         border-bottom-width: 3px;
 //         border-bottom-style: solid;
 //         border-bottom-color: gray(200);
 
-//         @each $theme, $color in $theme-colors {
+//         @each $theme, $color in $color-themes {
 //             &--#{$theme} {
 //                 background-color: $color;
 //                 color: color-yiq($color);
 //                 border-bottom-color: shade($color, 10%);
 //             }
 //         }
-        
+
 //         > tr {
 //             > th {
 //                 padding: spacing(base);
@@ -93,7 +96,7 @@
 //         > tr {
 //             background-color: $white;
 //             border-bottom: solid 1px gray(100);
-            
+
 //             > td {
 //                 padding: spacing(base);
 //             }

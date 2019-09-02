@@ -4,10 +4,23 @@ $navbar-color: color-yiq($navbar-background) !default;
 $navbar-hovered-color: $primary-color;
 $navbar-height: 5em;
 $navbar-heights: () !default;
-$navbar-heights: map-merge((
-	xsmall: ($navbar-height * .5),
-	small: ($navbar-height * .75),
-	base: ($navbar-height * 1),
-	large: ($navbar-height * 1.5),
-	xlarge: ($navbar-height * 2)
-), $navbar-heights);
+$navbar-heights: map-merge(
+  (
+    xsmall: (
+      $navbar-height * 0.5
+    ),
+    small: (
+      $navbar-height * 0.75
+    ),
+    base: (
+      $navbar-height * 1
+    ),
+    large: (
+      $navbar-height * 1.5
+    ),
+    xlarge: (
+      $navbar-height * 2
+    )
+  ),
+  $navbar-heights
+);

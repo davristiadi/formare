@@ -22,7 +22,7 @@
     border-bottom-color: $card-border-color;
   }
 
-  @each $theme, $color in $theme-colors {
+  @each $theme, $color in $color-themes {
     &--#{$theme} {
       > *:not(:last-child) {
         border-bottom-color: $color;
@@ -43,7 +43,7 @@
     }
   }
 
-  &-image {
+  &-media {
     position: relative;
     height: 300px;
     min-height: 300px;
@@ -58,99 +58,13 @@
       object-position: center;
     }
   }
+
+  &--borderless {
+    border: none !important;
+  }
+
+  &--elevated {
+    box-shadow: $card-elevated-box-shadow;
+    border: none;
+  }
 }
-// .Card {
-// 	position: relative;
-// 	display: flex;
-// 	flex-direction: column;
-// 	background-color: $card-background;
-
-// 	> * {
-// 		&:first-child {
-// 			border-top-left-radius: $border-radius;
-// 			border-top-right-radius: $border-radius;
-// 		}
-
-// 		&:last-child {
-// 			border-bottom-left-radius: $border-radius;
-// 			border-bottom-right-radius: $border-radius;
-// 		}
-// 	}
-
-// 	&-header,
-// 	&-body,
-// 	&-footer {
-// 		padding: $card-padding;
-// 		border: $card-border;
-
-// 		@each $theme, $color in $theme-colors {
-// 			&--#{$theme} {
-// 				background-color: $color;
-// 				border: solid 1px $color;
-// 				color: color-yiq($color);
-// 			}
-// 		}
-// 	}
-
-// 	&-body {
-// 		&:not(:first-child) {
-// 			border-top: none;
-// 		}
-
-// 		&:not(:last-child) {
-// 			border-bottom: none;
-// 		}
-// 	}
-
-// 	&-image {
-// 		position: relative;
-// 		height: 200px;
-// 		overflow: hidden;
-
-// 		> img {
-// 			height: 100%;
-// 			width: 100%;
-// 			object-fit: cover;
-// 			object-position: center;
-// 		}
-// 	}
-
-// 	@each $theme, $color in $theme-colors {
-// 		&--#{$theme} {
-// 			.Card-header {
-// 				background-color: theme-color-shade($theme, 10);
-// 				color: color-yiq(theme-color-shade($theme, 10));
-// 				border-color: theme-color-shade($theme, 15);
-// 			}
-
-// 			.Card-body,
-// 			.Card-footer {
-// 				background-color: $color;
-// 				border-color: theme-color-shade($theme, 15);
-// 				color: color-yiq($color);
-// 			}
-
-// 			&.Card--hasOverlay {
-// 				border-radius: border-radius(base);
-// 				overflow: hidden;
-
-// 				.Card-header,
-// 				.Card-body,
-// 				.Card-footer {
-// 					flex-grow: 1;
-// 					background-color: rgba($color, 0.75);
-// 					z-index: 100;
-// 				}
-
-// 				.Card-image {
-// 					position: absolute;
-// 					top: 0;
-// 					left: 0;
-// 					height: 100%;
-// 					width: 100%;
-// 					z-index: 50;
-// 				}
-// 			}
-// 		}
-// 	}
-// }

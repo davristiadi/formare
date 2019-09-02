@@ -1,9 +1,19 @@
+$table-sizes: () !default;
+$table-sizes: map-merge(
+  (
+    base: spacing(base),
+    small: spacing(small),
+    large: spacing(large)
+  ),
+  $table-sizes
+);
+
 $table-head-spacing: spacing(base);
 $table-head-bg-color: $white;
 $table-head-fg-color: color-yiq($white);
 $table-head-border-style: solid;
-$table-head-border-width: 2px;
-$table-head-border-color: $light;
+$table-head-border-width: 3px;
+$table-head-border-color: theme-color-shade(gray, -70);
 
 $table-cell-spacing: spacing(base);
 $table-cell-bg-color: $white;

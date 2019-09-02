@@ -8,7 +8,6 @@
   background: $navbar-background;
 
   &-block {
-    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -17,20 +16,9 @@
     &--expanded {
       flex-grow: 1;
     }
-
-    &--start {
-      justify-content: flex-start;
-    }
-
-    &--center {
-      justify-content: center;
-    }
-
-    &--end {
-      justify-content: flex-end;
-    }
   }
 
+  // Nav exclusive styles inside Navbar
   .Nav {
     display: flex;
 
@@ -45,7 +33,7 @@
     }
   }
 
-  @each $theme, $color in $theme-colors {
+  @each $theme, $color in $color-themes {
     &--#{$theme} {
       background-color: $color;
       color: color-yiq($color);
@@ -58,10 +46,10 @@
           &:hover {
             color: rgba(color-yiq($color), 1);
           }
-        }
 
-        &--is-active {
-          color: rgba(color-yiq($color), 1);
+          &.is-active {
+            color: rgba(color-yiq($color), 1);
+          }
         }
       }
     }
@@ -69,7 +57,7 @@
 
   @each $size, $value in $navbar-heights {
     &--#{$size} {
-      // height: $value;
+      height: $value;
       min-height: $value;
     }
   }

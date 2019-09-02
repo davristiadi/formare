@@ -1,15 +1,23 @@
+const path = require('path');
+
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `Formare`,
     description: `A modern, lightweight and simple CSS Framework for building web interfaces hassle-free.`,
     author: `David Kurnia Kristiadi @dkk94`,
   },
+  pathPrefix: '/formare',
   plugins: [
+    `gatsby-plugin-root-import`,
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-mdx`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        defaultLayouts: require.resolve('./src/templates/docs-template.js'),
+        defaultLayouts: require.resolve('./src/layouts/docs/docs-article.js'),
         extensions: ['.mdx', '.md'],
         gatsbyRemarkPlugins: [
           {
@@ -27,6 +35,13 @@ module.exports = {
       options: {
         path: `${__dirname}/src/docs`,
         name: 'docs',
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: path.join(__dirname, `src`, `images`),
+        name: 'images',
       },
     },
     `gatsby-transformer-sharp`,

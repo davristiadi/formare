@@ -9,14 +9,13 @@ const path = require('path');
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
 
-  const docsTemplate = path.resolve(`src/templates/docs-template.js`);
+  const docsTemplate = path.resolve(`src/layouts/docs/docs-article.js`);
   const allMdxQuery = `
     {
       allMdx {
         edges {
           node {
             excerpt(pruneLength: 250)
-            html
             id
             frontmatter {
               path

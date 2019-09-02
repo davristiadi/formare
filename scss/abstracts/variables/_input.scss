@@ -10,10 +10,11 @@ $input-hovered-color: primary-color(40);
 $input-focused-border-color: primary-color(0);
 $input-focused-box-shadow-blur: 0.2em !default;
 $input-focused-box-shadow-spread: 0.1em !default;
-$input-focused-box-shadow-color: rgba(tint($primary-color, 15%), 0.3) !default;
+$input-focused-box-shadow-color: theme-color-shade(primary, -80);
 $input-focused-box-shadow: 0 0 ($input-focused-box-shadow-blur)
   ($input-focused-box-shadow-spread) ($input-focused-box-shadow-color) !default;
 
+$input-hovered-border-color-shade: -20;
 $input-hovered-border-color: primary-color(-20);
 
 $input-spacing-y: spacing(small) !default;

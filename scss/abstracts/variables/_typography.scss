@@ -25,21 +25,22 @@ $font-size: 1rem !default;
 $font-sizes: () !default;
 $font-sizes: map-merge(
   (
-    4xsmall: $font-size / 3,
-    3xsmall: $font-size / 2.5,
-    2xsmall: $font-size / 2,
-    xxxsmall: $font-size / 2.5,
-    xxsmall: $font-size / 2,
-    xsmall: $font-size / 1.5,
-    small: $font-size / 1.25,
+    xxxsmall: $font-size * 0.41,
+    xxsmall: $font-size * 0.512,
+    4xsmall: $font-size * 0.328,
+    3xsmall: $font-size * 0.41,
+    2xsmall: $font-size * 0.512,
+    xsmall: $font-size * 0.64,
+    small: $font-size * 0.875,
     base: $font-size,
     large: $font-size * 1.25,
-    xlarge: $font-size * 1.5,
-    2xlarge: $font-size * 2,
-    3xlarge: $font-size * 2.5,
-    4xlarge: $font-size * 3,
-    xxlarge: $font-size * 2,
-    xxxlarge: $font-size * 2.5
+    xlarge: $font-size * 1.563,
+    2xlarge: $font-size * 1.953,
+    3xlarge: $font-size * 2.441,
+    4xlarge: $font-size * 3.052,
+    5xlarge: $font-size * 3.815,
+    xxlarge: $font-size * 1.953,
+    xxxlarge: $font-size * 2.441
   ),
   $font-sizes
 );
@@ -49,12 +50,12 @@ $font-sizes: map-merge(
 $headings: () !default;
 $headings: map-merge(
   (
-    h1: font-size(4xlarge),
-    h2: font-size(3xlarge),
-    h3: font-size(2xlarge),
-    h4: font-size(xlarge),
-    h5: font-size(large),
-    h6: font-size(base)
+    h1: font-size(5xlarge),
+    h2: font-size(4xlarge),
+    h3: font-size(3xlarge),
+    h4: font-size(2xlarge),
+    h5: font-size(xlarge),
+    h6: font-size(large)
   ),
   $headings
 );
@@ -90,7 +91,7 @@ $font-weights: map-merge(
 
 //- Line height
 //
-$line-height: 1.5 !default;
+$line-height: 1.6 !default;
 $line-heights: () !default;
 $line-heights: map-merge(
   (

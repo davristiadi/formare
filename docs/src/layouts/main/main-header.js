@@ -6,7 +6,7 @@ const MainHeader = ({ siteTitle }) => {
   return (
     <header className="MainHeader">
       <div className="Navbar Navbar--primary">
-        <div className="Container Container--fullWidth u-Flex u-Flex-row">
+        <div className="Container Container--fullWidth u-Flex">
           <NavbarBrand />
           <NavbarMenu />
         </div>
@@ -16,7 +16,7 @@ const MainHeader = ({ siteTitle }) => {
 };
 
 const NavbarBrand = () => (
-  <div className="Navbar-block u-PaddingLeft u-PaddingRight-large">
+  <div className="MainHeader-brand Navbar-block">
     <Link
       to="/"
       className="u-FontSize-xlarge u-FontWeight-semibold u-Color-light"
@@ -28,26 +28,28 @@ const NavbarBrand = () => (
 
 const NavbarMenu = () => {
   return (
-    <div className="Navbar-block ">
+    <div className="MainHeader-menu Navbar-block Navbar-block--expanded u-Flex u-jc-between">
       <nav className="Nav">
         <ul className="Nav-list">
           <li className="Nav-item">
             <Link
               className="Nav-link"
-              to="/docs/getting-started"
+              to="/docs/introduction/getting-started"
               activeClassName="is-active"
+              partiallyActive={true}
             >
               Documentation
             </Link>
           </li>
+        </ul>
+      </nav>
+      <nav className="Nav">
+        <ul className="Nav-list">
           <li className="Nav-item">
-            <Link
-              className="Nav-link"
-              to="/docs/getting-started"
-              activeClassName="is-active"
-            >
-              Github
-            </Link>
+            <Link className="Nav-link">Github</Link>
+          </li>
+          <li className="Nav-item">
+            <Link className="Nav-link">Donate us</Link>
           </li>
         </ul>
       </nav>

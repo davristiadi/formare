@@ -8,10 +8,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import MainHeader from './main-header';
-import MainFooter from './main-footer';
 import MainProvider from './main-provider';
-import '../scss/formare-docs.scss';
+import 'scss/formare-docs.scss';
 import './main.scss';
+import { registerIcons } from 'utilities/fa-library';
+
+registerIcons();
 
 const MainLayout = props => {
   const { children } = props;

@@ -1,0 +1,105 @@
+---
+path: '/docs/components/form'
+title: 'Form'
+description: 'Ullamco pariatur amet elit in est officia.'
+---
+
+import { Highlight } from 'components/highlight';
+import { Preview, PreviewDisplay, PreviewCode } from 'components/preview';
+
+#### Overview
+
+Exercitation nulla Lorem officia enim sint pariatur anim incididunt ex.
+Irure anim culpa eiusmod culpa. Exercitation officia nisi et irure ex ut sit veniam excepteur. Anim culpa mollit laborum dolor quis ut sunt.
+
+> Ex ea id dolore pariatur non dolore aliquip (see [Inputs](../introduction/requirements))
+
+<Preview lang="html" layout="horizontal">
+  <PreviewDisplay style={{ width: '40%' }}>
+    <div className="Form">
+      <div className="Form-field">
+        <label className="Form-label">Full Name</label>
+        <div className="Form-control">
+          <input type="text" className="Input" />
+        </div>
+      </div>
+      <div className="Form-field">
+        <label className="Form-label">Username</label>
+        <div className="Form-control">
+          <input type="text" className="Input" placeholder="An example input" />
+        </div>
+        <small className="Text u-Color-danger">
+          This username is available
+        </small>
+      </div>
+      <div className="Form-field">
+        <label className="Form-label">Occupation</label>
+        <div className="Form-control">
+          <div className="Select">
+            <select>
+              <option selected disabled>
+                Choose your occupation
+              </option>
+              <option>Software Development</option>
+              <option>Accounting</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div className="Form-field">
+        <div className="Checkbox">
+          <input id="exampleCheckbox" type="checkbox" />
+          <label for="exampleCheckbox">
+            I agree to Terms and Condition that apply.
+          </label>
+        </div>
+      </div>
+      <div className="Form-field">
+        <button
+          type="submit"
+          className="Button Button--primary Button--fullWidth"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+  </PreviewDisplay>
+  <PreviewCode>
+    {`<form className="Form">
+      <div className="Form-field">
+        <label className="Form-label">Some input</label>
+        <div className="Form-control">
+          <input
+            type="text"
+            className="Input"
+            placeholder="An example input"
+          />
+        </div>
+      </div>
+      <div className="Form-field">
+        <label className="Form-label">Some dropdown</label>
+        <div className="Form-control">
+          <div className="Select">
+            <select>
+              <option selected disabled>
+                Choose an option
+              </option>
+              <option>Option 1</option>
+              <option>Option 2</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div className="Form-field">
+        <div className="Checkbox">
+          <input id="exampleCheckbox" type="checkbox" />
+          <label for="exampleCheckbox">An example checkbox</label>
+        </div>
+      </div>
+      <div className="Form-field">
+        <button type="submit" className="Button Button--primary Button--fullWidth">Submit</button>
+      </div>
+    </form>
+  `}
+  </PreviewCode>
+</Preview>

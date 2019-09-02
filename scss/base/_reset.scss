@@ -11,7 +11,7 @@
 */
 
 :root {
-  @each $theme, $color in $theme-colors {
+  @each $theme, $color in $color-themes {
     --#{$theme}: #{$color};
   }
 
@@ -218,14 +218,14 @@ code,
 kbd,
 samp {
   font-family: var(--font-family-code); /* 1 */
-  font-size: font-size(small); /* 2 */
+  font-size: 87.5%;
+  // font-size: font-size(small); /* 2 */
 }
 
 code {
-  background-color: $lighter;
-  color: $primary-color;
-  padding: 0.25em;
-  font-size: 87.5%;
+  background-color: theme-color-shade(primary, -90);
+  color: theme-color(primary);
+  padding: 0.15em 0.3em;
   border-radius: border-radius(base);
 }
 

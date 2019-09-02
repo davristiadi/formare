@@ -10,6 +10,7 @@ $included-languages: html css js;
 
 .gatsby-highlight {
   position: relative;
+  overflow: auto;
 
   @each $lang in $included-languages {
     &[data-language='#{$lang}'] {
@@ -18,13 +19,12 @@ $included-languages: html css js;
         font-family: font-family(primary);
         letter-spacing: 1px;
         text-transform: uppercase;
-        font-size: font-size(xsmall);
         color: white;
         position: absolute;
         top: spacing(xsmall);
         right: spacing(xsmall);
-        padding: spacing(2xsmall) spacing(xsmall);
         font-size: font-size(2xsmall);
+        padding: spacing(2xsmall) spacing(xsmall);
         font-weight: font-weight(bold);
         border-radius: border-radius(base);
         background-color: shade(#2a2734, 30%);
@@ -34,39 +34,11 @@ $included-languages: html css js;
   }
 }
 
-// pre {
-//   @each $lang in $included-languages {
-//     &[class='language-#{$lang}'] {
-//       padding-top: spacing(large) !important;
-
-//       &::before {
-//         content: '#{$lang}';
-//         font-family: font-family(primary);
-//         letter-spacing: 1px;
-//         text-transform: uppercase;
-//         font-size: font-size(xsmall);
-//         color: white;
-//         position: absolute;
-//         top: spacing(xsmall);
-//         right: spacing(xsmall);
-//         padding: spacing(2xsmall) spacing(xsmall);
-//         font-size: font-size(2xsmall);
-//         font-weight: font-weight(bold);
-//         border-radius: border-radius(base);
-//         background-color: shade(#2a2734, 30%);
-//       }
-//     }
-//   }
-// }
-
 pre[class*='language-'],
 pre[class*='language-'] > code[class*='language-'] {
-  direction: ltr;
+  // direction: ltr;
   text-align: left;
-  // white-space: pre-wrap;
-  word-spacing: normal;
-  word-break: normal;
-  overflow: auto;
+  word-wrap: normal;
 
   -moz-tab-size: 4;
   -o-tab-size: 4;
@@ -78,7 +50,10 @@ pre[class*='language-'] > code[class*='language-'] {
   hyphens: none;
   background: #2a2734;
   color: #9a86fd;
-  border-radius: border-radius('xlarge');
+  border-radius: border-radius(large);
+
+  display: block;
+  min-width: 100%;
 }
 
 pre[class*='language-']::-moz-selection,
@@ -100,15 +75,16 @@ code[class*='language-'] ::selection {
 /* Code blocks */
 pre[class*='language-'] {
   position: relative;
-  padding: 1em;
-  margin: 0.5em 0;
+  margin: 0 !important;
   overflow: auto;
 }
 
-/* Inline code */
-:not(pre) > code[class*='language-'] {
-  padding: 0.1em;
-  border-radius: 0.3em;
+pre[class*='language-'] {
+  > code {
+    display: block;
+    min-width: 100%;
+    padding: spacing(large);
+  }
 }
 
 .token.comment,
@@ -235,8 +211,8 @@ pre > code.highlight {
 .gatsby-highlight-code-line {
   background-color: tint(#2a2734, 10%);
   display: block;
-  margin-right: -1em;
-  margin-left: -1em;
-  padding-right: 1em;
-  padding-left: 1em;
+  margin-right: spacing(large) / -1;
+  margin-left: spacing(large) / -1;
+  padding-right: spacing(large);
+  padding-left: spacing(large);
 }

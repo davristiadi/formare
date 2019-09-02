@@ -2,7 +2,6 @@
 @import '../../../scss/formare.scss';
 
 // Import vendor's dependencies
-@import 'vendor/prism';
-
-// Import local dependencies
+@import 'abstracts/all';
+@import 'vendor/all';
 @import 'components/all';

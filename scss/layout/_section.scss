@@ -2,7 +2,7 @@
   position: relative;
   padding: 0 0 $spacing;
 
-  @each $theme, $color in $theme-colors {
+  @each $theme, $color in $color-themes {
     &--#{$theme} {
       background-color: $color;
       color: color-yiq($color);

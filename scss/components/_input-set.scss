@@ -28,7 +28,7 @@
     }
   }
 
-  @each $theme, $color in $theme-colors {
+  @each $theme, $color in $color-themes {
     &--#{$theme} {
       border-color: $color;
 

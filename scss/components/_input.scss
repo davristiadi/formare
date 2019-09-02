@@ -34,7 +34,7 @@
     border-color: $input-hovered-border-color;
   }
 
-  @each $theme, $color in $theme-colors {
+  @each $theme, $color in $color-themes {
     &--#{$theme} {
       border-color: tint($color, 20%);
 
@@ -62,8 +62,8 @@
     }
   }
 
-  &--pill {
-    border-radius: $border-radius-pill;
+  &--rounded {
+    border-radius: $border-radius-rounded;
   }
 }
 
@@ -120,6 +120,7 @@
 }
 
 .Checkbox {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -177,9 +178,23 @@
         opacity: 1;
       }
     }
+
+    &:focus {
+      &:before {
+        box-shadow: $input-focused-box-shadow;
+      }
+    }
   }
 
-  @each $theme, $color in $theme-colors {
+  &:hover {
+    > [type="checkbox"] {
+      &:before {
+        border-color: $primary-color;
+      }
+    }
+  }
+
+  @each $theme, $color in $color-themes {
     &--#{$theme} {
       > [type="checkbox"] {
         &:before {

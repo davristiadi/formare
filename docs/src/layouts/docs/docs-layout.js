@@ -1,6 +1,7 @@
 import React from 'react';
-import MainLayout from '../main-layout';
+import { MainLayout } from 'layouts/main';
 import DocsMenu from './docs-menu';
+import DocsContent from './docs-content';
 import './docs.scss';
 
 const DocsLayout = ({ children }) => {
@@ -8,7 +9,7 @@ const DocsLayout = ({ children }) => {
     <MainLayout>
       <div className="Docs">
         <DocsMenu />
-        <article className="DocsContent">{children}</article>
+        <DocsContent>{children}</DocsContent>
       </div>
     </MainLayout>
   );
