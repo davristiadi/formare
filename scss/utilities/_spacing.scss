@@ -1,37 +1,76 @@
-@each $size, $value in $spacings {
-	.margin, .mg { 
-		margin: spacing(base) !important;
-	} 
-
-	.padding, .pd {
-		padding: spacing(base) !important;
-	}
-	
-	.margin-#{$size}, .mg-#{$size} {
-		margin: $value !important;
-	}
-
-	.padding-#{$size}, .pd-#{$size} {
-		padding: $value !important;
-	}
+&-mg,
+&-Margin {
+  margin: spacing(base) !important;
 }
 
-@each $direction in (top left bottom right) {
-	.pd-#{$direction}, .padding-#{$direction} {
-		padding-#{$direction}: spacing(base) !important;
-	}
+&-pd,
+&-Padding {
+  padding: spacing(base) !important;
+}
 
-	.mg-#{$direction}, .margin-#{$direction} {
-		margin-#{$direction}: spacing(base) !important;
-	}
-	
-	@each $size, $value in $spacings {
-		.mg-#{$direction}-#{$size}, .margin-#{$direction}-#{$size} {
-			margin-#{$direction}: $value !important;
-		}
+&-pd-x,
+&-PaddingHorizontal {
+  margin-left: spacing(base) !important;
+  margin-right: spacing(base) !important;
+}
 
-		.pd-#{$direction}-#{$size}, .padding-#{$direction}-#{$size} {
-			padding-#{$direction}: $value !important;
-		}
-	}
+&-pd-y,
+&-PaddingVertical {
+  margin-top: spacing(base) !important;
+  margin-bottom: spacing(base) !important;
+}
+
+@each $size, $value in $spacings {
+  &-mg-#{$size},
+  &-Margin-#{$size} {
+    margin: $value !important;
+  }
+
+  &-pd-#{$size},
+  &-Padding-#{$size} {
+    padding: $value !important;
+  }
+
+  &-mg-x-#{$size},
+  &-MarginHorizontal-#{$size} {
+    margin-left: $value !important;
+    margin-right: $value !important;
+  }
+
+  &-mg-y-#{$size},
+  &-MarginVertical-#{$size} {
+    margin-top: $value !important;
+    margin-bottom: $value !important;
+  }
+}
+
+$spacing-directions: (
+  top: Top,
+  left: Left,
+  right: Right,
+  bottom: Bottom
+);
+
+@each $direction, $dirCap in $spacing-directions {
+  &-pd-#{$direction},
+  &-Padding#{$dirCap} {
+    padding-#{$direction}: spacing(base) !important;
+  }
+
+  &-mg-#{$direction},
+  &-Margin#{$dirCap} {
+    margin-#{$direction}: spacing(base) !important;
+  }
+
+  @each $size, $value in $spacings {
+    &-mg-#{$direction}-#{$size},
+    &-Margin#{$dirCap}-#{$size} {
+      margin-#{$direction}: $value !important;
+    }
+
+    &-pd-#{$direction}-#{$size},
+    &-Padding#{$dirCap}-#{$size} {
+      padding-#{$direction}: $value !important;
+    }
+  }
 }

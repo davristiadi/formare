@@ -1,30 +1,146 @@
-$form-themes: $theme-colors !default;
+.Form {
+  &-label {
+    display: flex;
+    flex-direction: column;
+    font-weight: font-weight(semibold);
+    margin-bottom: 0.25rem;
+  }
 
-.form {
-    .form__label {
-        display: block;
-        font-weight: font-weight(medium);
-        margin-bottom: spacing(x-small);
-    }
+  &-control {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
 
-    .form__field {
-        margin-bottom: spacing(base);
-        
-        @each $theme, $color in $form-themes {
-            &--#{$theme} {
-                .form__label {
-                    color: $color;
-                }
+  &-field {
+    margin-bottom: spacing(base);
 
-                .input-set {
-                    border-color: $color;
-                }
-
-                .input,
-                .select {
-                    border-color: $color;
-                }
-            }
+    @each $theme, $color in $color-themes {
+      &--#{$theme} {
+        .Form-label {
+          color: $color;
         }
-	}
+
+        .Form-control {
+          .Input,
+          .Select > select,
+          .Textarea {
+            border-color: $color;
+
+            &:hover {
+              border-color: $color;
+            }
+
+            &:focus {
+              border-color: $color;
+              box-shadow: 0 0 0.3em 0.2em rgba($color, 0.3);
+            }
+          }
+        }
+      }
+    }
+  }
 }
+
+//
+// &__control {
+//   position: relative;
+//   display: flex;
+//   flex-direction: row;
+//   width: 100%;
+
+//   > *:hover{
+//     z-index: 2;
+//   }
+
+//   > *:not(:last-child) {
+//     margin-right: -1px;
+//   }
+
+//   > *:first-child:not(:last-child),
+//   > .select:first-child:not(:last-child) > select {
+//     border-top-right-radius: 0;
+//     border-bottom-right-radius: 0;
+//   }
+
+//   > *:not(:first-child):not(:last-child),
+//   > .select:not(:first-child):not(:last-child) > select {
+//     border-radius: 0;
+//   }
+
+//   > *:last-child:not(:first-child),
+//   > .select:last-child:not(:first-child) > select {
+//     border-top-left-radius: 0;
+//     border-bottom-left-radius: 0;
+//   }
+// }
+
+//
+// .form {
+//   &__label {
+//     display: flex;
+//     font-weight: font-weight(medium);
+//     margin-bottom: spacing(xsmall);
+//   }
+
+//   &__field {
+//     margin-bottom: spacing(base);
+
+//     @each $theme, $color in $color-themes {
+//       &--#{$theme} {
+//         &.form {
+//           &__label {
+//             color: $color;
+//           }
+
+//           .input,
+//           .select,
+//           .textarea {
+//             border-color: $color;
+
+//             &:hover {
+//               border-color: $color;
+//             }
+
+//             &:focus {
+//               border-color: $color;
+//               box-shadow: 0 0 0.3em 0.2em rgba($color, 0.3);
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   &__control {
+//     position: relative;
+//     display: flex;
+//     flex-direction: row;
+//     width: 100%;
+
+//     > *:hover{
+//       z-index: 2;
+//     }
+
+//     > *:not(:last-child) {
+//       margin-right: -1px;
+//     }
+
+//     > *:first-child:not(:last-child),
+//     > .select:first-child:not(:last-child) > select {
+//       border-top-right-radius: 0;
+//       border-bottom-right-radius: 0;
+//     }
+
+//     > *:not(:first-child):not(:last-child),
+//     > .select:not(:first-child):not(:last-child) > select {
+//       border-radius: 0;
+//     }
+
+//     > *:last-child:not(:first-child),
+//     > .select:last-child:not(:first-child) > select {
+//       border-top-left-radius: 0;
+//       border-bottom-left-radius: 0;
+//     }
+//   }
+// }

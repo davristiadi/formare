@@ -1,78 +1,67 @@
-$hero-themes: $theme-colors;
-$hero-height: 25em;
-$hero-heights: () !default;
-$hero-heights: map-merge((
-	x-small: ($hero-height * 0.5),
-	small: ($hero-height * 0.75),
-	normal: ($hero-height * 1),
-	large: ($hero-height * 1.5),
-	x-large: ($hero-height * 2)
-), $hero-heights);
+.Hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: $hero-height;
 
-.hero {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	min-height: $hero-height;
+  &-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 250;
+    background-position: center;
+    background-size: cover;
+  }
 
-	&__bg {
-		position: absolute;
-		top: 0;
-		left: 0;
-		height: 100%;
-		width: 100%;
-		z-index: 250;
-		background-position: center;
-		background-size: cover;
-	}
+  &-body {
+    flex: 1;
+    height: 100%;
+    padding-top: spacing(xlarge);
+    padding-bottom: spacing(xlarge);
 
-	&__body {
-		flex: 1;
-		height: 100%;
-		padding-top: spacing(x-large);
-		padding-bottom: spacing(x-large);
-		
-		&--centerized {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-	}
-	
-	> *:not(.hero__bg),
-	&__body {
-		position: relative;
-		z-index: 500;
-	}
-	
-	@each $size, $height in $hero-heights {
-		&--#{$size} {
-			min-height: $height;
-		}
-	}
-	
-	@each $theme, $color in $hero-themes {
-		&--#{$theme} {
-			background-color: $color;
-			color: color-yiq($color);
+    &--centerized {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 
-			.hero__bg {
-				&:before {
-					content: "";
-					position: absolute;
-					top: 0;
-					left: 0;
-					height: 100%;
-					width: 100%;
-					background-color: $color;
-					opacity: 0.7;
-				}
-			}
-		}
-	}
-	
-	&--full-height {
-		height: 100vh;
-		min-height: 100vh;
-	}
+  > *:not(.Hero-bg),
+  &-body {
+    position: relative;
+    z-index: 500;
+  }
+
+  @each $size, $height in $hero-heights {
+    &--#{$size} {
+      min-height: $height;
+    }
+  }
+
+  @each $theme, $color in $color-themes {
+    &--#{$theme} {
+      background-color: $color;
+      color: color-yiq($color);
+
+      .Hero-bg {
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background-color: $color;
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  &--fullHeight {
+    height: 100vh;
+    min-height: 100vh;
+  }
 }

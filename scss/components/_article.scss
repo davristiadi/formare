@@ -1,17 +1,6 @@
-.title {
-	font-weight: font-weight(bold);
-}
-
-.subtitle {
-	font-weight: font-weight(regular);
-}
-
-.article {
-	.heading {
+.Article {
+	.Heading {
 		margin-bottom: spacing(base);
-	}
-	
-	p {
-		margin-bottom: spacing(large);
+		margin-top: spacing(large);
 	}
 }

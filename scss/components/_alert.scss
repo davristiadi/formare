@@ -1,36 +1,31 @@
-$alert-themes: $theme-colors;
-$alert-border-radius: $border-radius;
+.Alert {
+  display: flex;
+  align-items: center;
+  color: $alert-fg-color;
+  background-color: $alert-bg-color;
+  border-radius: $alert-border-radius;
 
-.alert {
-    position: relative;
-    border-radius: $alert-border-radius;
+  @each $theme, $color in $color-themes {
+    &--#{$theme} {
+      background-color: theme-color-shade($theme, $alert-bg-color-shade-level);
+      color: theme-color-shade($theme, $alert-fg-color-shade-level);
+    }
+  }
 
-    @each $theme, $color in $alert-themes {
-        &--#{$theme} {
-            background-color: tint($color, 80%);
-            color: shade($color, 25%);
-        }
+  &-text {
+    display: flex;
+    flex-grow: 1;
+    line-height: $line-height;
+    padding: $alert-spacing;
+  }
+
+  &-icon {
+    &:first-child {
+      padding-left: $alert-spacing-y;
     }
 
-    &__message {
-        padding-left: $spacing;
-        padding-right: $spacing;
+    &:last-child {
+      padding-right: $alert-spacing-x;
     }
-
-    &--has-extra {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-
-        .alert__message { flex: 1 1 auto; }
-        .alert__extra {
-            &:first-child { padding-left: $spacing; }
-            &:last-child { padding-right: $spacing; }
-        }
-    }
-
-    > * {
-        padding-top: $spacing;
-        padding-bottom: $spacing;
-    }
+  }
 }

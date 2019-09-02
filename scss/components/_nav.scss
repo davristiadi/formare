@@ -1,105 +1,25 @@
-$nav-themes: $theme-colors;
-$nav-item-padding-y: spacing(base);
-$nav-item-padding-x: spacing(large);
-$nav-item-padding: $nav-item-padding-y $nav-item-padding-x;
-$nav-item-weight: font-weight(medium);
-$nav-item-opacity-active: 1;
-$nav-item-opacity-inactive: 0.3;
-$nav-item-icon-size: 48px;
+.Nav {
+  &-list {
+    display: flex;
+    flex-direction: row;
+  }
 
-.nav {
-	position: relative;
+  &-item {
+    display: flex;
+    align-items: center;
+    transition: $transition;
+    font-weight: font-weight(medium);
+  }
 
-	.nav__list {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		transition: all 100ms ease-out;
+  &-link {
+    display: block;
+    transition: $transition;
+    padding: spacing(base);
+    border-radius: border-radius(base);
 
-		&--active {
-			.nav__item:not(.nav__item--active) {
-				opacity: $nav-item-opacity-inactive;
-			}
-		}
-
-		&:hover {
-			.nav__item {
-				opacity: $nav-item-opacity-inactive;
-			}
-		}
-		
-		.nav__item {
-			display: flex;
-			flex: 1 0 auto;
-			transition: all 100ms ease-out;
-			text-align: center;
-
-			&--active {
-				opacity: $nav-item-opacity-active;
-			}
-
-			&--has-icon {
-				.icon {
-					font-size: $nav-item-icon-size;
-				}
-			}
-
-			&:hover {
-				opacity: $nav-item-opacity-active;
-			}
-		}
-
-		.nav__link {
-			display: flex;
-			flex: 1 0 auto;
-			flex-direction: column;
-			font-weight: $nav-item-weight;
-			padding: $nav-item-padding;
-			text-decoration: none;
-			color: inherit;
-			cursor: pointer;
-		}
-	}
-	
-	@each $theme, $color in $nav-themes {
-		&--#{$theme} {
-			&.nav--tabs {
-				.nav__list {
-					.nav__item {
-						&:hover {
-							color: $color;
-							border-bottom: solid 1px $color;
-						}
-						
-						&--active {
-							color: $color;
-							border-bottom: solid 1px $color;
-						}
-					}
-				}
-			}
-		}
-	}
-
-	&--tabs {
-		.nav__list {
-			border-bottom: solid 1px $lighter;
-
-			.nav__item {
-				margin-bottom: -1px;
-				border-bottom-style: solid;
-				border-bottom-width: 1px;
-				border-bottom-color: transparent;
-				transition: $transition;
-				
-				&:hover {
-					border-bottom: solid 1px $dark;
-				}
-				
-				&--active {
-					border-bottom: solid 1px $darker;
-				}
-			}
-		}
-	}
+    &:hover {
+      cursor: pointer;
+      color: theme-color(primary);
+    }
+  }
 }

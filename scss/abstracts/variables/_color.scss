@@ -1,197 +1,88 @@
-//- Color palletes
-$violet-blue: #4061C4 !default;
-$sea-green: #38915A !default;
-$tangerine: #E68903 !default;
-$malachite: #48A900 !default;
-$corn: #EBC500 !default;
-$spartan-crimson: #931B13 !default;
-$cello: #1C415B !default;
-$deep-cerulean: #007EA7 !default;
-$pelorous: #45A1BF !default;
-$sirocco: #6D7A7D !default;
+// 🎨 Formare's default color palletes
+//
 
-//- Theme Colors
-$primary-color: $violet-blue !default;
-$secondary-color: $sea-green !default;
-$tertiary-color: $tangerine !default;
-$success-color: $malachite !default;
-$warning-color: $corn !default;
-$danger-color: $spartan-crimson !default;
-$info-color: $cello !default;
+$violet-blue: #4061c4 !default;
+// $ocean-blue: #5143c4 !default;
+$jaffa: #e58139 !default;
+$trinidad: #e54206 !default;
+$mountain-meadow: #18b247 !default;
+$maximum-green-yellow: #e2ed49 !default;
+$medium-vermillion: #d86141 !default;
+$cello: #1c415b !default;
+$deep-cerulean: #007ea7 !default;
+$pelorous: #45a1bf !default;
+$sirocco: #6d7a7d !default;
 
-//-	Grays
+// Shades of gray
 $gray: $sirocco !default;
 $grays: () !default;
-$grays: map-merge((
-	100: tint($gray, 90%),
-	200: tint($gray, 80%),
-	300: tint($gray, 70%),
-	400: tint($gray, 60%),
-	500: tint($gray, 50%),
-	600: tint($gray, 40%),
-	700: tint($gray, 30%),
-	800: tint($gray, 20%),
-	900: tint($gray, 10%),
-	1000: $gray,
-	1100: shade($gray, 10%),
-	1200: shade($gray, 20%),
-	1300: shade($gray, 30%),
-	1400: shade($gray, 40%),
-	1500: shade($gray, 50%),
-	1600: shade($gray, 60%),
-	1700: shade($gray, 70%),
-	1800: shade($gray, 80%),
-	1900: shade($gray, 90%)
-), $grays);
+$grays: map-merge(
+  (
+    100: tint($gray, 90%),
+    200: tint($gray, 80%),
+    300: tint($gray, 70%),
+    400: tint($gray, 60%),
+    500: tint($gray, 50%),
+    600: tint($gray, 40%),
+    700: tint($gray, 30%),
+    800: tint($gray, 20%),
+    900: tint($gray, 10%),
+    1000: $gray,
+    1100: shade($gray, 10%),
+    1200: shade($gray, 20%),
+    1300: shade($gray, 30%),
+    1400: shade($gray, 40%),
+    1500: shade($gray, 50%),
+    1600: shade($gray, 60%),
+    1700: shade($gray, 70%),
+    1800: shade($gray, 80%),
+    1900: shade($gray, 90%)
+  ),
+  $grays
+);
 
-$white: #FFFFFF;
+// Neutral or base color declaration
+// -> Derived from the grays for accessibility.
+//
+$white: #ffffff;
 $black: #000000;
 $light: gray(200);
 $lighter: gray(100);
-$dark: gray(1700);
-$darker: gray(1900);
+$dark: gray(1600);
+$darker: gray(1800);
 
-$theme-colors: () !default;
-$theme-colors: map-merge((
-	primary: $primary-color,
-	secondary: $secondary-color,
-	success: $success-color,
-	warning: $warning-color,
-	danger: $danger-color,
-	info: $info-color,
-	gray: $gray,
-	light: $light,
-	lighter: $lighter,
-	dark: $dark,
-	darker: $darker
-), $theme-colors);
+// 🌄 Color themes
+$primary-color: $violet-blue !default;
+$secondary-color: $jaffa !default;
+$tertiary-color: $trinidad !default;
+$success-color: $mountain-meadow !default;
+$warning-color: $maximum-green-yellow !default;
+$danger-color: $medium-vermillion !default;
+$info-color: $cello !default;
 
-$yiq-contrasted-threshold: 150 !default;
+// Color themes, fully mapped.
+$color-themes: () !default;
+$color-themes: map-merge(
+  (
+    primary: $primary-color,
+    secondary: $secondary-color,
+    success: $success-color,
+    warning: $warning-color,
+    danger: $danger-color,
+    info: $info-color,
+    gray: $gray,
+    light: $light,
+    lighter: $lighter,
+    dark: $dark,
+    darker: $darker
+  ),
+  $color-themes
+);
+
+$color-contrast-threshold: 300;
+$color-contrast-dark-text: $darker;
+$color-contrast-light-text: $lighter;
+
+$yiq-contrasted-threshold: 200 !default;
 $yiq-text-dark: $dark !default;
 $yiq-text-light: $lighter !default;
-
-
-
-// Legacy
-//
-// $color-shades: () !default;
-// $color-shades: map-merge((
-// 	primary: (
-// 		100: tint($primary-color, 40%),
-// 		200: tint($primary-color, 32%),
-// 		300: tint($primary-color, 24%),
-// 		400: tint($primary-color, 16%),
-// 		500: tint($primary-color, 8%),
-// 		600: $primary-color,
-// 		700: shade($primary-color, 8%),
-// 		800: shade($primary-color, 16%),
-// 		900: shade($primary-color, 24%),
-// 		1000: shade($primary-color, 32%),
-// 		1100: shade($primary-color, 40%)
-// 	),
-// 	secondary: (
-// 		100: tint($secondary-color, 40%),
-// 		200: tint($secondary-color, 32%),
-// 		300: tint($secondary-color, 24%),
-// 		400: tint($secondary-color, 16%),
-// 		500: tint($secondary-color, 8%),
-// 		600: $secondary-color,
-// 		700: shade($secondary-color, 8%),
-// 		800: shade($secondary-color, 16%),
-// 		900: shade($secondary-color, 24%),
-// 		1000: shade($secondary-color, 32%),
-// 		1100: shade($secondary-color, 40%)
-// 	),
-// 	success: (
-// 		100: tint($success-color, 40%),
-// 		200: tint($success-color, 32%),
-// 		300: tint($success-color, 24%),
-// 		400: tint($success-color, 16%),
-// 		500: tint($success-color, 8%),
-// 		600: $success-color,
-// 		700: shade($success-color, 8%),
-// 		800: shade($success-color, 16%),
-// 		900: shade($success-color, 24%),
-// 		1000: shade($success-color, 32%),
-// 		1100: shade($success-color, 40%)
-// 	),
-// 	warning: (
-// 		100: tint($warning-color, 40%),
-// 		200: tint($warning-color, 32%),
-// 		300: tint($warning-color, 24%),
-// 		400: tint($warning-color, 16%),
-// 		500: tint($warning-color, 8%),
-// 		600: $warning-color,
-// 		700: shade($warning-color, 8%),
-// 		800: shade($warning-color, 16%),
-// 		900: shade($warning-color, 24%),
-// 		1000: shade($warning-color, 32%),
-// 		1100: shade($warning-color, 40%)
-// 	),
-// 	danger: (
-// 		100: tint($danger-color, 40%),
-// 		200: tint($danger-color, 32%),
-// 		300: tint($danger-color, 24%),
-// 		400: tint($danger-color, 16%),
-// 		500: tint($danger-color, 8%),
-// 		600: $danger-color,
-// 		700: shade($danger-color, 8%),
-// 		800: shade($danger-color, 16%),
-// 		900: shade($danger-color, 24%),
-// 		1000: shade($danger-color, 32%),
-// 		1100: shade($danger-color, 40%)
-// 	),
-// 	grays: (
-// 		0: tint($gray, 100%),
-// 		100: tint($gray, 90%),
-// 		200: tint($gray, 80%),
-// 		300: tint($gray, 70%),
-// 		400: tint($gray, 60%),
-// 		500: tint($gray, 50%),
-// 		600: tint($gray, 40%),
-// 		700: tint($gray, 30%),
-// 		800: tint($gray, 20%),
-// 		900: tint($gray, 10%),
-// 		1000: $gray,
-// 		1100: shade($gray, 10%),
-// 		1200: shade($gray, 20%),
-// 		1300: shade($gray, 30%),
-// 		1400: shade($gray, 40%),
-// 		1500: shade($gray, 50%),
-// 		1600: shade($gray, 60%),
-// 		1700: shade($gray, 70%),
-// 		1800: shade($gray, 80%),
-// 		1900: shade($gray, 90%),
-// 		2000: shade($gray, 100%),
-// 	)
-// ), $color-shades);
-
-// $white: #FFFFFF;
-// $lightest: gray(100);
-// $lighter: gray(200);
-// $light: gray(300);
-// $dark: gray(1700);
-// $darker: gray(1800);
-// $darkest: gray(1900);
-// $black: #000000;
-
-// $text-color: $dark !default;
-// $background-color: $white !default;
-
-// $theme-colors: () !default;
-// $theme-colors: map-merge((
-// 	primary: $primary-color,
-// 	secondary: $secondary-color,
-// 	success: $success-color,
-// 	warning: $warning-color,
-// 	danger: $danger-color,
-// 	white: $white,
-// 	black: $black,
-// 	gray: $gray,
-// 	light: $light,
-// 	lighter: $lighter,
-// 	lightest: $lightest,
-// 	dark: $dark,
-// 	darker: $darker,
-// 	darkest: $darkest
-// ), $theme-colors);

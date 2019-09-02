@@ -1,0 +1,153 @@
+---
+path: '/docs/components/card'
+title: 'Cards'
+description: 'A component that consist of content and actions about a specific context.'
+---
+
+import { Highlight } from 'components/highlight';
+import { Preview, PreviewDisplay, PreviewCode } from 'components/preview';
+import { default as Image } from 'images/default-image.jpeg';
+
+#### Overview
+
+Cards are components that usually contain some content and typically actions about a context.
+
+Normally, a `Card` consists of:
+
+1. `Card-header`: Usually contains a title to describe the **subject** of a card. Semantically, it should be located at the **very top** of the card. Can be used interchangably with `.Card-media`.
+2. `Card-media`: Displays the **thumbnail** of the card; be it video or image, that describes the content. Usually located at the top of a card **after** `.Card-header`.
+3. `Card-body`: Contains the **text** or **paragraph** that describes the content of a card.
+4. `Card-footer`: Usually contains **actions** (e.g button or links) where users can interact with.
+
+<Preview lang="html" layout="horizontal">
+  <PreviewDisplay theme="lighter" style={{ width: '45%' }}>
+    <div className="Card">
+      <div className="Card-header">
+        <h5 className="Title">Card Title</h5>
+        <h6 className="Subtitle u-Color-gray">Veniam labore cillum nulla</h6>
+      </div>
+      <div className="Card-media">
+        <img src={Image} />
+      </div>
+      <div className="Card-body">
+        <p>
+          Ut et esse excepteur laboris ipsum anim nulla excepteur esse. Irure
+          exercitation dolore sunt nisi enim occaecat. Enim duis sint ullamco
+          Lorem sunt. Magna aute dolor magna pariatur reprehenderit ut
+          exercitation sint eu officia exercitation deserunt.
+        </p>
+      </div>
+      <div className="Card-footer u-Flex u-jc-end">
+        <div className="Buttons">
+          <button className="Button Button--danger Button--text">Cancel</button>
+          <button className="Button Button--primary Button--elevated">
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+  </PreviewDisplay>
+  <PreviewCode>
+    {`<div className="Card">
+      <div className="Card-media">
+        <img src="path/to/image" />
+      </div>
+      <div className="Card-body">
+        <p>...</p>
+      </div>
+      <div className="Card-footer u-Flex u-jc-end">
+        <div className="Buttons">
+          <button className="Button Button--text Button--danger">Cancel</button>
+          <button className="Button Button--primary">Submit</button>
+        </div>
+      </div>
+    </div>
+		`}
+  </PreviewCode>
+</Preview>
+
+#### Elevated
+
+Aliquip ad cupidatat `.Card--elevated` mollit excepteur. Esse Lorem ullamco laboris ea aliquip pariatur aute velit ipsum. Aute
+deserunt minim deserunt ex laborum non dolor cillum ad amet cupidatat sit id ex.
+
+<Preview lang="html" layout="horizontal">
+  <PreviewDisplay theme="lighter" style={{ width: '45%' }}>
+    <div className="Card Card--elevated">
+      <div className="Card-media">
+        <img src={Image} />
+      </div>
+      <div className="Card-body">
+        <p>
+          Ut et esse excepteur laboris ipsum anim nulla excepteur esse. Irure
+          exercitation dolore sunt nisi enim occaecat. Enim duis sint ullamco
+          Lorem sunt. Magna aute dolor magna pariatur reprehenderit ut
+          exercitation sint eu officia exercitation deserunt.
+        </p>
+      </div>
+      <div className="Card-footer u-Flex u-jc-end">
+        <div className="Buttons">
+          <button className="Button Button--text Button--danger">Cancel</button>
+          <button className="Button Button--primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </PreviewDisplay>
+  <PreviewCode>
+    {`<div className="Card Card--elevated">
+      <div className="Card-media">
+        <img src="path/to/image" />
+      </div>
+      <div className="Card-body">
+        <p>...</p>
+      </div>
+      <div className="Card-footer u-Flex u-jc-end">
+        <div className="Buttons">
+          <button className="Button Button--text Button--danger">Cancel</button>
+          <button className="Button Button--primary">Submit</button>
+        </div>
+      </div>
+    </div>
+		`}
+  </PreviewCode>
+</Preview>
+
+#### Link Card
+
+Nulla eiusmod ullamco cillum cupidatat enim exercitation laboris incididunt commodo ipsum sint nisi ex. Et culpa in
+duis quis consectetur sunt dolor.
+
+<Preview lang="html" layout="horizontal">
+  <PreviewDisplay theme="lighter" style={{ width: '45%' }}>
+    <a href="#" className="Card">
+      <div className="Card-media">
+        <img src={Image} />
+      </div>
+      <div className="Card-body">
+        <p>
+          Ut et esse excepteur laboris ipsum anim nulla excepteur esse. Irure
+          exercitation dolore sunt nisi enim occaecat. Enim duis sint ullamco
+          Lorem sunt. Magna aute dolor magna pariatur reprehenderit ut
+          exercitation sint eu officia exercitation deserunt.
+        </p>
+      </div>
+    </a>
+  </PreviewDisplay>
+  <PreviewCode>
+    {`<div className="Card Card--elevated">
+      <div className="Card-media">
+        <img src="path/to/image" />
+      </div>
+      <div className="Card-body">
+        <p>...</p>
+      </div>
+      <div className="Card-footer u-Flex u-jc-end">
+        <div className="Buttons">
+          <button className="Button Button--text Button--danger">Cancel</button>
+          <button className="Button Button--primary">Submit</button>
+        </div>
+      </div>
+    </div>
+		`}
+  </PreviewCode>
+</Preview>

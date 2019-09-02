@@ -1,10 +1,18 @@
-.section {
-	position: relative;
+.Section {
+  position: relative;
+  padding: 0 0 $spacing;
 
-	@each $theme, $color in $theme-colors {
-		&--#{$theme} {
-			background-color: $color;
-			color: color-yiq($color);
-		}
-	}
+  @each $theme, $color in $color-themes {
+    &--#{$theme} {
+      background-color: $color;
+      color: color-yiq($color);
+    }
+  }
+
+  @each $spacing, $size in $spacings {
+    &--#{$spacing} {
+      padding-top: $size;
+      padding-bottom: $size;
+    }
+  }
 }

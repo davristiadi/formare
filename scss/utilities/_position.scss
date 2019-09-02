@@ -1,0 +1,11 @@
+&-Fixed {
+  position: fixed !important;
+  
+  &-top {
+    top: 0 !important;
+  }
+
+  &-bottom {
+    bottom: 0 !important;
+  }
+}

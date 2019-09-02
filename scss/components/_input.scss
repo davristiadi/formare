@@ -1,198 +1,213 @@
-$input-themes: $theme-colors;
-$input-font-size: $font-size;
-$input-font-sizes: $font-sizes;
-$input-color: $dark;
-$input-border: solid 1px gray(200);
-$input-border-radius: border-radius(base);
-$input-focused-color: primary-color(40);
-$input-focused-border: solid 1px primary-color();
-$input-padding-y: spacing(small) !default;
-$input-padding-x: spacing(base) !default;
-$input-padding: $input-padding-y $input-padding-x;
-$input-background: $white;
-$input-disabled-background: $lighter;
-$input-transition: $transition;
-
-$input-group-extra-color: color-yiq($lighter);
-$input-group-extra-background: $lighter;
-$input-group-extra-border: solid 1px $lighter;
-$input-group-extra-border-radius: $border-radius;
-$input-group-extra-focused-background: $primary-color;
-$input-group-extra-focused-color: color-yiq($primary-color);
-$input-group-extra-focused-border: solid 1px $primary-color;
-
-.input,
-.select > select {
-	transition: $input-transition;
-	font-size: $input-font-size;
-	background-color: $input-background;
-	color: $input-color;
-	border: $input-border;
-	border-radius: $input-border-radius;
-	padding: $input-padding;
-	outline: none;
-	white-space: normal;
-	width: 100%;
-
-	&:focus {
-		border: $input-focused-border;
-	}
-
-	&:disabled {
-		background-color: $input-disabled-background;
-	}
-
-	@each $theme, $color in $input-themes {
-		&--#{$theme} {
-			border-color: tint($color, 20%);
-
-			&:hover {
-				border-color: tint($color, 10%);
-			}
-
-			&:focus {
-				border: solid 1px $color;
-			}
-		}
-	}
-
-	@each $size, $value in $input-font-sizes {
-		&--#{$size} {
-			font-size: $value;
-			padding: spacing($size);
-		}
-	}
-
-	&--pill {
-		border-radius: $border-radius-pill;
-	}
+.Input,
+.Textarea,
+.Select {
+  width: 100%;
 }
 
-.select {
-	position: relative;
-	
-	> select {
-		-webkit-appearance: none;
-		-moz-appearance: none;
-	}
+.Input,
+.Select > select,
+.Textarea {
+  width: 100%;
+  position: relative;
+  padding: $input-spacing;
+  transition: $input-transition;
+  font-size: $input-font-size;
+  background-color: $input-background;
+  border-style: $input-border-style;
+  border-width: $input-border-width;
+  border-color: $input-border-color;
+  border-radius: $input-border-radius;
+  outline: none;
+  white-space: normal;
 
-	&:after {
-		transition: $input-transition;
-		content: "\f078";
-		font-family: "Font Awesome 5 Free";
-		font-weight: 900;
-		position: absolute;
-		right: spacing(base);
-		top: 50%;
-		transform: translateY(-50%);
-		line-height: 0;
-		color: gray(600);
-	}
+  &:focus {
+    border-color: $input-focused-border-color;
+    box-shadow: $input-focused-box-shadow;
+  }
 
-	&:focus-within {
-		&:after {
-			top: 50%;
-			transform: rotate(180deg) translateY(-50%);
-			color: primary-color();
-		}
-	}
+  &:disabled {
+    background-color: $input-disabled-background;
+    cursor: not-allowed;
+  }
+
+  &:hover:not(:disabled) {
+    border-color: $input-hovered-border-color;
+  }
+
+  @each $theme, $color in $color-themes {
+    &--#{$theme} {
+      border-color: tint($color, 20%);
+
+      &:not(:disabled) {
+        &:hover {
+          border-color: tint($color, 10%);
+        }
+      }
+
+      &:focus {
+        border-color: $color;
+        box-shadow: 0
+          0
+          $input-focused-box-shadow-blur
+          $input-focused-box-shadow-spread
+          rgba(tint($color, 15%), 0.3);
+      }
+    }
+  }
+
+  @each $size, $value in $font-sizes {
+    &--#{$size} {
+      font-size: $value;
+      padding: spacing($size);
+    }
+  }
+
+  &--rounded {
+    border-radius: $border-radius-rounded;
+  }
 }
 
-.input-set {
-	display: flex;
-	transition: $input-transition;
-	border: $input-border;
-	border-radius: $input-border-radius;
-	background-color: $input-background;
-	overflow: hidden;
-	width: 100%;
-	
-	@each $theme, $color in $input-themes {
-		&--#{$theme} {
-			border-color: tint($color, 20%);
+.Select {
+  position: relative;
 
-			&:hover {
-				border-color: tint($color, 10%);
-			}
+  > select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 3em;
+    cursor: pointer;
+  }
 
-			&:focus {
-				border: solid 1px $color;
-			}
-		}
-	}
+  &:not(&--loading) {
+    &:after {
+      content: "";
+      transition: all 150ms ease-out-out;
+      position: absolute;
+      top: $input-spacing-y * 1.5;
+      right: $input-spacing-x;
+      display: block;
+      height: 0.65em;
+      border: 2px solid transparent;
+      border-color: $gray;
+      border-right: 0;
+      border-top: 0;
+      transform: rotate(-45deg);
+      width: 0.65em;
+    }
 
-	&__extra {
-		display: flex;
-		align-items: center;
-		transition: $input-transition;
-		padding-top: $input-padding-y;
-		padding-bottom: $input-padding-y;
+    &:focus-within {
+      &:after {
+        transform: translateY(30%) rotate(135deg);
+        border-color: $primary-color;
+      }
+    }
+  }
 
-		> .icon {
-			transition: $input-transition;
-			color: gray(600);
-		}
-
-		&:first-child { padding-left: $input-padding-x; }
-		&:last-child { padding-right: $input-padding-x; }
-	}
-
-	&:focus-within {
-		border: $input-focused-border;
-
-		.input-set__extra {
-			> .icon {
-				color: primary-color();
-			}
-		}
-	}
-
-	&--pill {
-		border-radius: $border-radius-pill;
-	}
-
-	&--disabled {
-		position: relative;
-		background-color: $input-disabled-background;
-
-		> * {
-			cursor: not-allowed;
-		}
-	}
-
-	> .input,
-	> .select {
-		border: 0;
-	}
+  &--loading {
+    &:after {
+      content: "";
+      animation: spinAround 750ms linear infinite;
+      display: block;
+      width: 1em;
+      height: 1em;
+      position: absolute;
+      top: $input-spacing-y * 1.5;
+      right: $input-spacing-x;
+      border: 2px solid $gray;
+      border-top-color: transparent;
+      border-radius: 100%;
+    }
+  }
 }
 
-.input-group {
-	display: flex;
+.Checkbox {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
-	&__extra {
-		transition: $input-transition;
-		padding: $input-padding;
-		background-color: $input-group-extra-background;
-		color: $input-group-extra-color;
-		border: $input-group-extra-border;
-		border-radius: $input-group-extra-border-radius;
-	}
+  > *:first-child {
+    margin-right: spacing(small);
+  }
 
-	&:focus-within {
-		.input-group__extra {
-			background-color: $input-group-extra-focused-background;
-			color: $input-group-extra-focused-color;
-			border: $input-group-extra-focused-border;
-		}
-	}
-	
-	> *:first-child {
-		border-top-right-radius: 0;
-		border-bottom-right-radius: 0;
-	}
-	
-	> *:last-child {
-		border-top-left-radius: 0;
-		border-bottom-left-radius: 0;
-	}
+  > [type="checkbox"] {
+    position: relative;
+    appearance: none;
+    outline: none;
+    height: $checkbox-height;
+    width: $checkbox-width;
+
+    &:before {
+      content: "";
+      transition: $checkbox-transition;
+      display: inline-block;
+      border-style: $checkbox-border-style;
+      border-width: $checkbox-border-width;
+      border-color: $checkbox-border-color;
+      height: $checkbox-height;
+      width: $checkbox-width;
+      border-radius: $checkbox-border-radius;
+    }
+
+    &:after {
+      content: "";
+      transition: all 200ms ease-out;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border: solid 2px $white;
+      border-top: none;
+      border-left: none;
+      height: 12px;
+      width: 6px;
+      line-height: 0;
+      transform: translate(-50%, -60%) rotate(45deg) scale(0.8);
+      transform-origin: center center;
+      opacity: 0;
+      font-weight: bold;
+    }
+
+    &:checked {
+      &:before {
+        border-color: $checkbox-checked-border-color;
+        background-color: $checkbox-checked-bg-color;
+      }
+
+      &:after {
+        color: $checkbox-checked-fg-color;
+        transform: translate(-50%, -60%) rotate(45deg) scale(1);
+        opacity: 1;
+      }
+    }
+
+    &:focus {
+      &:before {
+        box-shadow: $input-focused-box-shadow;
+      }
+    }
+  }
+
+  &:hover {
+    > [type="checkbox"] {
+      &:before {
+        border-color: $primary-color;
+      }
+    }
+  }
+
+  @each $theme, $color in $color-themes {
+    &--#{$theme} {
+      > [type="checkbox"] {
+        &:before {
+          border-color: $color;
+        }
+
+        &:checked {
+          &:before {
+            background-color: $color;
+            border-color: $color;
+          }
+        }
+      }
+    }
+  }
 }

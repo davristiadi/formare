@@ -1,0 +1,11 @@
+$hero-height: 25em !default;
+$hero-heights: () !default;
+$hero-heights: map-merge(
+  (
+    xsmall: ($hero-height * 0.5),
+    small: ($hero-height * 0.75),
+    normal: ($hero-height * 1),
+    large: ($hero-height * 1.5),
+    xlarge: ($hero-height * 2)
+  ), 
+$hero-heights);

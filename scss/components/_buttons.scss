@@ -1,0 +1,21 @@
+.Buttons {
+  margin-bottom: spacing(base) / -1;
+
+  > .Button {
+    margin-bottom: spacing(base);
+
+    &:not(:last-child) {
+      margin-right: spacing(base);
+    }
+  }
+
+  &--fullWidth {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    > .Button {
+      flex-grow: 1;
+    }
+  }
+}
