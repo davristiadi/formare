@@ -1,15 +1,15 @@
 @function font-family($key, $map: $font-families) {
-    @return map-get($map, $key);
+  @return map-get($map, $key);
 }
 
 @function font-size($key, $map: $font-sizes) {
-    @return map-get($map, $key);
+  @return map-get($map, $key);
 }
 
 @function font-weight($key, $map: $font-weights) {
-    @return map-get($map, $key);
+  @return map-get($map, $key);
 }
 
 @function line-height($key, $map: $line-heights) {
-    @return map-get($map, $key);
-} 
+  @return map-get($map, $key);
+}

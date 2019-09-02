@@ -1,0 +1,70 @@
+@import 'src/scss/vendor/abstracts';
+@import '../../../../scss/base/typography';
+@import '../../../../scss/layout/grid';
+
+.DocsContent {
+  position: relative;
+  min-height: calc(100vh - 5em);
+
+  @include media(md) {
+    padding-left: 20em;
+  }
+}
+
+.DocsArticle {
+  // Extends the .Container class inside .DocsArticle to responsive `max-width` property.
+  @extend .Container;
+  padding: spacing(base);
+
+  @include media(md) {
+    padding: spacing(xlarge);
+  }
+
+  // The headline section of DocsArticle
+  &-headline {
+    margin: 0;
+    margin-bottom: spacing(xlarge);
+  }
+
+  &-headline & {
+    &-title {
+      @extend .Heading-2;
+      font-weight: font-weight(bold);
+    }
+
+    &-subtitle {
+      @extend .Heading-5;
+      margin: 0 !important;
+      padding: 0 !important;
+      color: gray(1000);
+    }
+  }
+
+  // Occurs to all descendants inside DocsArticle's content.
+  &-content {
+    @for $i from 1 through 6 {
+      > h#{$i} {
+        margin-top: spacing(xlarge);
+
+        &:first-child {
+          margin-top: 0;
+          padding-top: 0;
+        }
+      }
+    }
+
+    // Set `font-weight: bold` for h1 -> h4
+    @for $i from 1 through 4 {
+      > h#{$i} {
+        font-weight: font-weight(bold);
+      }
+    }
+
+    // Set `font-weight: semibold` for h5 & h6
+    @for $i from 5 through 6 {
+      > h#{$i} {
+        font-weight: font-weight(semibold);
+      }
+    }
+  }
+}

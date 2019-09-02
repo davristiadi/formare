@@ -1,0 +1,47 @@
+$input-font-size: $font-size;
+$input-color: $dark;
+$input-border-style: solid;
+$input-border-width: 1px;
+$input-border-color: $light;
+$input-border-radius: border-radius(base);
+
+$input-hovered-color: primary-color(40);
+
+$input-focused-border-color: primary-color(0);
+$input-focused-box-shadow-blur: 0.2em !default;
+$input-focused-box-shadow-spread: 0.1em !default;
+$input-focused-box-shadow-color: theme-color-shade(primary, -80);
+$input-focused-box-shadow: 0 0 ($input-focused-box-shadow-blur)
+  ($input-focused-box-shadow-spread) ($input-focused-box-shadow-color) !default;
+
+$input-hovered-border-color-shade: -20;
+$input-hovered-border-color: primary-color(-20);
+
+$input-spacing-y: spacing(small) !default;
+$input-spacing-x: spacing(base) !default;
+$input-spacing: $input-spacing-y $input-spacing-x;
+
+$input-background: $white;
+$input-transition: $transition;
+
+$input-disabled-background: $lighter;
+
+$input-set-border-color: $input-border-color !default;
+$input-set-border-radius: $input-border-radius !default;
+
+//
+$checkbox-transition: $transition !default;
+$checkbox-height: 20px !default;
+$checkbox-width: 20px !default;
+
+$checkbox-bg-color: $primary-color !default;
+$checkbox-fg-color: color-yiq($checkbox-bg-color) !default;
+
+$checkbox-border-radius: border-radius(base) !default;
+$checkbox-border-style: solid !default;
+$checkbox-border-width: 1px !default;
+$checkbox-border-color: $light !default;
+
+$checkbox-checked-bg-color: $checkbox-bg-color !default;
+$checkbox-checked-fg-color: $checkbox-fg-color !default;
+$checkbox-checked-border-color: $primary-color !default;

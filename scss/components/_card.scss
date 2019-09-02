@@ -1,113 +1,70 @@
-$card-themes: $theme-colors;
-$card-padding: spacing(base);
-$card-background: $white;
-$card-border: solid 1px $light;
-$card-border-radius: $border-radius;
-$card-inner-border: solid 1px $lighter;
+.Card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: $card-fg-color;
+  background-color: $card-bg-color;
+  border-radius: $card-border-radius;
+  border-style: $card-border-style;
+  border-color: $card-border-color;
+  border-width: $card-border-width;
+  overflow: hidden;
 
-.card {
-	display: flex;
-	flex-direction: column;
-	position: relative;
-	background-color: $card-background;
-	border-radius: $card-border-radius;
-	border: $card-border;
-	word-wrap: break-word;
-	overflow: hidden;
+  &-header,
+  &-body,
+  &-footer {
+    padding: $card-padding;
+  }
 
-	.card__header,
-	.card__body,
-	.card__footer {
-		padding: $card-padding;
-	}
+  > *:not(:last-child) {
+    border-bottom-style: $card-border-style;
+    border-bottom-width: $card-border-width;
+    border-bottom-color: $card-border-color;
+  }
 
-	.card__header {
-		@each $theme, $value in $card-themes {
-			&--#{$theme} {
-				background-color: $value;
-				color: color-yiq($value);
-			}
-		}
-	}
+  @each $theme, $color in $color-themes {
+    &--#{$theme} {
+      > *:not(:last-child) {
+        border-bottom-color: $color;
+      }
+    }
 
-	.card__image {
-		position: relative;
-		height: 200px;
-		min-height: 200px;
-		overflow: hidden;
+    &--#{$theme} & {
+      &-header {
+        background-color: theme-color-shade($theme, -10);
+        color: color-yiq(theme-color-shade($theme, -10));
+      }
 
-		> img {
-			height: 100%;
-			width: 100%;
-			object-fit: cover;
-			object-position: center;
-		}
-	}
+      &-body,
+      &-footer {
+        background-color: $color;
+        color: color-yiq($color);
+      }
+    }
+  }
 
-	@each $theme, $color in $card-themes {
-		&--#{$theme} {
-			transition: $transition;
-			background-color: $color;
-			color: color-yiq($color);
-			border: solid 1px shade($color, 10%);
-			overflow: hidden;
+  &-media {
+    position: relative;
+    height: 300px;
+    min-height: 300px;
 
-			&.card--has-overlay {
-				@include flexbox;
-				@include flex-direction(column);
-				@include justify-content(flex-end);
-				min-height: 15em;
-				border: 0;
-		
-				&:after {
-					content: "";
-					position: absolute;
-					top: 0;
-					left: 0;
-					height: 100%;
-					width: 100%;
-					background-color: $color;
-					color: color-yiq($color);
-					opacity: 0.7;
-					z-index: 10;
-				}
-		
-				.card__image {
-					position: absolute;
-					top: 0;
-					left: 0;
-					height: 100%;
-					width: 100%;
-					z-index: 5;
-				}
-		
-				.card__header,
-				.card__body,
-				.card__footer {
-					z-index: 15;
-				}
-			}
-		}
+    > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
 
-	}
+  &--borderless {
+    border: none !important;
+  }
 
-	&--pill {
-		border-radius: border-radius(pill);
-	}
-
-	&--transparent {
-		border: 0;
-		background: transparent;
-
-		.card__header,
-		.card__body,
-		.card__footer {
-			padding-left: 0;
-			padding-right: 0;
-		}
-
-		.card__image {
-			border-radius: $card-border-radius;
-		}
-	}
+  &--elevated {
+    box-shadow: $card-elevated-box-shadow;
+    border: none;
+  }
 }

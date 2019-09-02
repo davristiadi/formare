@@ -1,24 +1,56 @@
 {
   "name": "formare-docs",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "author": "David Kurnia Kristiadi <davidkurniakristiadi@gmail.com>",
   "private": true,
+  "homepage": "https://dkk94.github.io/formare",
   "dependencies": {
-    "node-sass": "^4.9.0",
-    "prismjs": "^1.14.0",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.4"
+    "@mdx-js/mdx": "^1.0.18",
+    "@mdx-js/react": "^1.0.16",
+    "@mdx-js/tag": "^0.20.3",
+    "classnames": "^2.2.6",
+    "dedent": "^0.7.0",
+    "gatsby": "^2.4.2",
+    "gatsby-image": "^2.2.9",
+    "gatsby-plugin-manifest": "^2.1.1",
+    "gatsby-plugin-mdx": "^1.0.17",
+    "gatsby-plugin-offline": "^2.1.0",
+    "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-sass": "^2.0.11",
+    "gatsby-plugin-sharp": "^2.2.12",
+    "gatsby-remark-component": "^1.1.3",
+    "gatsby-source-filesystem": "^2.0.33",
+    "gatsby-transformer-remark": "^2.3.12",
+    "gatsby-transformer-sharp": "^2.1.19",
+    "highlight.js": "^9.15.6",
+    "node-sass": "^4.12.0",
+    "pretty": "^2.0.0",
+    "prismjs": "^1.16.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1"
   },
+  "devDependencies": {
+    "gh-pages": "^2.1.1",
+    "prettier": "^1.18.2"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
   "scripts": {
-    "css:watch": "npm run css:build -- --watch",
-    "css:build": "node-sass --output-style expanded ./src/scss/formare-docs.scss ./src/css/formare-docs.css",
-    "js:watch": "react-scripts start",
-    "js:build": "react-scripts build",
-    "start": "npm run css:watch | npm run js:watch",
-    "build": "npm run js:build && npm run css:build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "deploy": "gh-pages -d public",
+    "build:deploy": "gatsby build --prefix-paths",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dkk94/formare"
   }
 }

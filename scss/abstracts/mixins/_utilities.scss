@@ -1,3 +1,6 @@
+// The `vendorize` mixin can be used if you want to handle vendor prefixing on certain stylerules
+// if you deactivate the autoprefixer function.
+
 @mixin vendorize($declarations, $prefixes: (), $non-prefix: true) {
 	@each $property, $value in $declarations {
 		@each $prefix in $prefixes {

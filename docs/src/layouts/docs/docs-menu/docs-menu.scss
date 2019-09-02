@@ -1,0 +1,67 @@
+@import 'src/scss/vendor/abstracts';
+
+.DocsMenu {
+  position: relative;
+  display: none;
+
+  @include media(md) {
+    position: fixed;
+    top: 5em;
+    left: 0;
+    width: 20em;
+    height: calc(100vh - 5em);
+    background-color: theme-color-shade(primary, -95);
+    z-index: 1;
+    overflow: auto;
+    display: block;
+  }
+
+  // Applied to every DocsMenu-list class
+  &-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  // Applied only for the DocsMenu-list of DocsMenu's direct child
+  & > &-list {
+    padding: spacing(large) 0 spacing(large) spacing(base);
+  }
+
+  &-item & {
+    &-link {
+      display: block;
+      transition: $transition;
+      padding: spacing(small) spacing(base);
+      transition: all 150ms ease-in-out;
+      color: theme-color(gray);
+      background-color: transparent;
+      font-weight: font-weight(regular);
+
+      &:hover {
+        color: theme-color-shade(primary, -10);
+      }
+
+      &.is-active {
+        background-color: theme-color-shade(primary, -90);
+        color: theme-color(primary);
+        border-right: solid 4px theme-color-shade(primary, 0);
+      }
+    }
+  }
+
+  &-item {
+    &--hasChildren {
+      > .DocsMenu-link {
+        font-weight: font-weight(semibold);
+        font-size: font-size(small);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      &:not(:first-of-type) {
+        padding-top: spacing(base);
+      }
+    }
+  }
+}

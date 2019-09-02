@@ -1,0 +1,16 @@
+.LinkCard {
+  @extend .Card;
+  transition: $link-card-transition;
+  box-shadow: $link-card-box-shadow;
+
+  &-body {
+    @extend .Card-body;
+  }
+
+  &:hover {
+    border-color: theme-color(primary);
+    color: theme-color(primary);
+    transform: $link-card-hovered-transform;
+    box-shadow: $link-card-hovered-box-shadow;
+  }
+}

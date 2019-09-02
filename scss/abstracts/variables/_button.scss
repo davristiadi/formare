@@ -1,0 +1,157 @@
+// Default button base variables
+$button-font-weight: font-weight(medium) !default;
+$button-font-family: font-family(primary) !default;
+
+$button-fg-color: $dark !default;
+$button-bg-color: transparent !default;
+
+$button-border-radius: border-radius(base) !default;
+$button-border-style: solid !default;
+$button-border-width: 1px !default;
+$button-border-color: gray(300) !default;
+
+$button-transition: $transition;
+
+$button-padding-y: spacing(small) !default;
+$button-padding-x: spacing(base) !default;
+$button-padding: $button-padding-y $button-padding-x;
+$button-paddings: () !default;
+
+/* prettier-ignore */
+$button-paddings: map-merge(
+  (
+    "xsmall": ($button-padding-y * 0.5) ($button-padding-x * 0.5),
+    "small": ($button-padding-y * 0.75) ($button-padding-x * 0.75),
+    "base": $button-padding,
+    "large": ($button-padding-y * 1.25) ($button-padding-x * 1.25),
+    "xlarge": ($button-padding-y * 1.5) ($button-padding-x * 1.5)
+  ),
+  $button-paddings
+);
+
+//- Default button :hovered state variables
+//
+$button-hovered-fg-color-theme: primary !default;
+$button-hovered-fg-color-shade: 0 !default;
+$button-hovered-fg-color: theme-color-shade(
+  $button-hovered-fg-color-theme,
+  $button-hovered-fg-color-shade
+) !default;
+$button-theme-hovered-fg-color-shade: 0 !default;
+
+$button-hovered-bg-color-theme: primary !default;
+$button-hovered-bg-color-shade: -100 !default;
+$button-hovered-bg-color: theme-color-shade(
+  $button-hovered-bg-color-theme,
+  $button-hovered-bg-color-shade
+) !default;
+$button-theme-hovered-bg-color-shade: -25 !default;
+
+$button-hovered-border-color-theme: primary !default;
+$button-hovered-border-color-shade: -20 !default;
+$button-hovered-border-color: theme-color-shade(
+  $button-hovered-border-color-theme,
+  $button-hovered-border-color-shade
+) !default;
+$button-theme-hovered-border-color-shade: -100 !default;
+
+// Button :focused state variables
+//
+$button-focused-fg-color-theme: primary !default;
+$button-focused-fg-color-shade: 0 !default;
+$button-focused-fg-color: theme-color-shade(
+  $button-focused-fg-color-theme,
+  $button-focused-fg-color-shade
+) !default;
+
+$button-focused-bg-color-theme: primary !default;
+$button-focused-bg-color-shade: -100 !default;
+$button-focused-bg-color: theme-color-shade(
+  $button-focused-bg-color-theme,
+  $button-focused-bg-color-shade
+);
+$button-theme-focused-bg-color-shade: -25 !default;
+
+$button-focused-border-color-shade: -20 !default;
+$button-focused-border-color-theme: primary !default;
+$button-focused-border-color: theme-color-shade(
+  primary,
+  $button-focused-border-color-shade
+) !default;
+
+$button-focused-box-shadow-blur: 0.3em;
+$button-focused-box-shadow-spread: 0.1em;
+$button-focused-box-shadow-color-shade: -80 !default;
+$button-focused-box-shadow-color-theme: primary !default;
+$button-focused-box-shadow-color: theme-color-shade(
+  $button-focused-box-shadow-color-theme,
+  $button-focused-box-shadow-color-shade
+);
+$button-focused-box-shadow: 0 0 $button-focused-box-shadow-blur
+  $button-focused-box-shadow-spread $button-focused-box-shadow-color;
+
+//- Button :active state variables
+//
+$button-active-fg-color-shade: 0;
+$button-active-fg-color-theme: primary;
+$button-active-fg-color: theme-color-shade(
+  $button-active-fg-color-theme,
+  $button-active-fg-color-shade
+);
+
+$button-active-bg-color-shade: -80;
+$button-active-bg-color-theme: primary;
+$button-active-bg-color: theme-color-shade(
+  $button-active-bg-color-theme,
+  $button-active-bg-color-shade
+) !default;
+
+$button-active-border-color: primary-color(40);
+
+// Button :disabled state variables
+//
+$button-disabled-opacity: 0.5 !default;
+
+/**
+ *  Text Button Modifier
+ */
+$button-text-fg-color-shade: 0 !default;
+$button-text-fg-color-theme: primary !default;
+$button-text-fg-color: theme-color-shade(
+  $button-text-fg-color-theme,
+  $button-text-fg-color-shade
+) !default;
+
+// Text button :hovered variables
+$button-text-hovered-fg-color-theme: primary !default;
+$button-text-hovered-fg-color-shade: 0 !default;
+$button-text-hovered-fg-color: theme-color-shade(
+  $button-text-hovered-fg-color-theme,
+  $button-text-hovered-fg-color-shade
+) !default;
+
+$button-text-hovered-bg-color-opacity: 0.1 !default;
+$button-text-hovered-bg-color-theme: primary !default;
+$button-text-hovered-bg-color: rgba(
+  theme-color($button-text-hovered-bg-color-theme),
+  $button-text-hovered-bg-color-opacity
+);
+
+// Text button :focused variables
+$button-text-focused-bg-color-opacity: 0.2 !default;
+$button-text-focused-bg-color-theme: primary !default;
+$button-text-focused-bg-color: rgba(
+  theme-color($button-text-focused-bg-color-theme),
+  $button-text-focused-bg-color-opacity
+) !default;
+
+// Text button :active variables
+$button-text-active-bg-color-opacity: 0.3 !default;
+$button-text-active-bg-color-theme: primary !default;
+$button-text-active-bg-color: rgba(
+  theme-color($button-text-active-bg-color-theme),
+  $button-text-active-bg-color-opacity
+) !default;
+
+// Rounded button variables
+$button-rounded-border-radius: border-radius(rounded) !default;

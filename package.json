@@ -1,28 +1,52 @@
 {
-	"name": "formare",
-	"version": "0.4.0-beta.4",
-	"author": "David Kurnia Kristiadi <davidkurniakristiadi@gmail.com>",
-	"description": "Formare is a modern, component-based CSS framework that helps you build web interfaces hassle-free.",
-	"main": "scss/formare.scss",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/dkk94/formare"
-	},
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "npm run build:clean && npm run build:sass",
-		"build:sass": "node-sass --output-style expanded --source-map true scss/formare.scss css/formare.css",
-		"build:clean": "cleancss -o css/formare.min.css css/formare.css",
-		"publish:beta": "npm publish --tag beta",
-		"publish:next": "npm publish --tag next",
-		"start": "npm run build:sass && npm run build:clean"
-	},
-	"license": "ISC",
-	"dependencies": {
-		"autoprefixer": "^8.3.0",
-		"clean-css": "^4.1.11",
-		"clean-css-cli": "^4.1.11",
-		"node-sass": "^4.9.3",
-		"path": "^0.12.7"
-	}
+  "name": "formare",
+  "version": "0.5.1",
+  "author": "David Kurnia Kristiadi <davidkurniakristiadi@gmail.com>",
+  "description": "Lightweight and modern CSS framework to build web-interfaces hassle-free",
+  "main": "scss/formare.scss",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dkk94/formare"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build-css && npm run build-autoprefix && npm run build-clean",
+    "build-css": "node-sass --output-style expanded --source-map true scss/formare.scss css/formare.css",
+    "build-clean": "cleancss -o css/formare.min.css css/formare.css",
+    "build-autoprefix": "postcss --use autoprefixer --output ./css/formare.css ./css/formare.css",
+    "publish:beta": "npm start && npm publish --tag beta",
+    "publish:next": "npm start && npm publish --tag next",
+    "start:docs": "cd docs && yarn start",
+    "start:docs-dev": "code . && yarn start:docs",
+    "start": "npm run build"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.19",
+    "@fortawesome/free-brands-svg-icons": "^5.9.0",
+    "@fortawesome/free-solid-svg-icons": "^5.9.0",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "dotenv": "^8.0.0",
+    "gatsby-plugin-root-import": "^2.0.5",
+    "gatsby-remark-prismjs": "^3.2.9",
+    "gatsby-source-filesystem": "^2.0.33",
+    "gatsby-transformer-remark": "^2.3.12",
+    "highlight.js": "^9.15.6",
+    "js-beautify": "^1.10.2",
+    "prismjs": "^1.16.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.6.5",
+    "clean-css": "^4.1.11",
+    "clean-css-cli": "^4.1.11",
+    "gh-pages": "^2.1.1",
+    "node-sass": "^4.9.3",
+    "path": "^0.12.7",
+    "postcss-cli": "^6.0.0"
+  },
+  "files": [
+    "css",
+    "scss",
+    "README.md"
+  ]
 }

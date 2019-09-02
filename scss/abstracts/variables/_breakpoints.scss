@@ -1,16 +1,23 @@
 $breakpoints: () !default;
-$breakpoints: map-merge((
+$breakpoints: map-merge(
+  (
     xs: 0,
     sm: 576px,
     md: 768px,
     lg: 992px,
-    xl: 1200px,
-), $breakpoints);
+    xl: 1200px
+  ),
+  $breakpoints
+);
 
-$container-max-widths: () !default;
-$container-max-widths: map-merge((
-    sm: 540px,
-    md: 720px,
-    lg: 960px,
-    xl: 1140px
-), $container-max-widths);
+$container-widths: () !default;
+$container-widths: map-merge(
+  (
+    xs: 100%,
+    sm: breakpoints(sm),
+    md: breakpoints(md),
+    lg: breakpoints(lg),
+    xl: breakpoints(xl)
+  ),
+  $container-widths
+);

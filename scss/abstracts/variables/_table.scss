@@ -1,0 +1,23 @@
+$table-sizes: () !default;
+$table-sizes: map-merge(
+  (
+    base: spacing(base),
+    small: spacing(small),
+    large: spacing(large)
+  ),
+  $table-sizes
+);
+
+$table-head-spacing: spacing(base);
+$table-head-bg-color: $white;
+$table-head-fg-color: color-yiq($white);
+$table-head-border-style: solid;
+$table-head-border-width: 3px;
+$table-head-border-color: theme-color-shade(gray, -70);
+
+$table-cell-spacing: spacing(base);
+$table-cell-bg-color: $white;
+$table-cell-fg-color: color-yiq($white);
+$table-cell-border-style: solid;
+$table-cell-border-width: 1px;
+$table-cell-border-color: $light;

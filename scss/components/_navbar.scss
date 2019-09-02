@@ -1,74 +1,64 @@
-$navbar-themes: $theme-colors !default;
-$navbar-transition: $transition !default;
-$navbar-background: gray(100) !default;
-$navbar-color: color-yiq($navbar-background);
-$navbar-height: 4em;
-$navbar-heights: () !default;
-$navbar-heights: map-merge((
-	x-small: ($navbar-height * .5),
-	small: ($navbar-height * .75),
-	base: ($navbar-height * 1),
-	large: ($navbar-height * 1.5),
-	x-large: ($navbar-height * 2)
-), $navbar-heights);
+.Navbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  min-height: $navbar-height;
+  height: $navbar-height;
+  transition: $navbar-transition;
+  background: $navbar-background;
 
-.navbar {
-	position: relative;
-	height: $navbar-height;
-	min-height: $navbar-height;
-	transition: $navbar-transition;
-	background: $navbar-background;
+  &-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
 
-	@each $theme, $color in $navbar-themes {
-		&--#{$theme} {
-			background-color: $color;
-			color: color-yiq($color);
-		}
-	}
-	
-	@each $size, $value in $navbar-heights {
-		&--#{$size} {
-			height: $value;
-			min-height: $value;
-		}
-	}
+    &--expanded {
+      flex-grow: 1;
+    }
+  }
 
-	.navbar__container {
-		@extend .container;
-		display: flex;
-		justify-content: space-between;
-		height: 100%;
+  // Nav exclusive styles inside Navbar
+  .Nav {
+    display: flex;
 
-		&--full-width {
-			@extend .container--full-width;
-		}
-	}
-	
-	.navbar__block {
-		position: relative;
-		display: flex;
-		flex: 1 1 auto;
-		align-items: center;
-		height: 100%;
-		
-		&--start { justify-content: flex-start; }
-		&--center { justify-content: center; }
-		&--end { justify-content: flex-end; }
-	}
-	
-	.nav {
-		display: flex;
-		flex-direction: column;
+    &-link {
+      display: flex;
+      align-items: center;
+      color: $navbar-color;
 
-		.nav__item {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-		}
+      &:hover {
+        color: $navbar-hovered-color;
+      }
+    }
+  }
 
-		.nav__link {
-			display: flex;
-			justify-content: center;
-		}
-	}
+  @each $theme, $color in $color-themes {
+    &--#{$theme} {
+      background-color: $color;
+      color: color-yiq($color);
+
+      .Nav {
+        &-link {
+          transition: $transition;
+          color: rgba(color-yiq($color), 0.7);
+
+          &:hover {
+            color: rgba(color-yiq($color), 1);
+          }
+
+          &.is-active {
+            color: rgba(color-yiq($color), 1);
+          }
+        }
+      }
+    }
+  }
+
+  @each $size, $value in $navbar-heights {
+    &--#{$size} {
+      height: $value;
+      min-height: $value;
+    }
+  }
 }

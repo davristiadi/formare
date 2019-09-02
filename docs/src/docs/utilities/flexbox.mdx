@@ -1,0 +1,101 @@
+---
+path: '/docs/utilities/flexbox'
+title: 'Flexbox'
+description: 'Aliquip pariatur elit ipsum nisi eiusmod.'
+---
+
+import { Preview, PreviewDisplay, PreviewCode } from 'components/preview';
+import FlexboxExamples from 'examples/flexbox';
+
+#### Basic Usage
+
+Exercitation qui laboris consequat sit. Ex magna do nostrud cupidatat nostrud dolore excepteur consequat.
+Velit enim ut culpa nisi eu adipisicing. Enim mollit pariatur minim mollit excepteur cupidatat ut incididunt.
+Dolor reprehenderit minim consectetur aliquip incididunt non et nisi quis quis tempor ipsum fugiat.
+
+Use `.u-Flex` class to apply `display: flex` to transform an element into a flexbox container and turn its direct
+children into flex items. Use `.u-InlineFlex` to apply `inline-flex` instead of the standard `flex`.
+
+<Preview lang="html">
+  <PreviewDisplay>
+    <div className="DummyBlock u-Flex u-MarginBottom">Flexbox Container</div>
+    <div className="DummyBlock u-InlineFlex">Inline Flexbox Container</div>
+  </PreviewDisplay>
+  <PreviewCode>
+    {`
+    <div className="u-Flex">Flexbox Container</div>
+    <div className="u-InlineFlex">Inline Flexbox Container</div>
+    `}
+  </PreviewCode>
+</Preview>
+
+#### Flex Direction
+
+There are two types of flex direction utility classes that you can use:
+
+1. `.u-Flex-row`
+2. `.u-Flex-column`
+
+Use `.u-Flex-row` instead to create a flex container with `flex-direction: row` property to **horizontally** align flex items.
+
+<Preview lang="html" layout="horizontal">
+  <PreviewDisplay>
+    <div className="u-Flex u-Flex-row">
+      <div className="DummyBlock u-MarginRight">Flex Item</div>
+      <div className="DummyBlock u-MarginRight">Flex Item</div>
+      <div className="DummyBlock">Flex Item</div>
+    </div>
+  </PreviewDisplay>
+  <PreviewCode>
+    {`
+    <div className="u-Flex u-Flex-row">
+      <div className="DummyBlock">Flex Item</div>
+      <div className="DummyBlock">Flex Item</div>
+      <div className="DummyBlock">Flex Item</div>
+    </div>
+    `}
+  </PreviewCode>
+</Preview>
+
+Use `.u-Flex-column` instead to create a flex container with `flex-direction: column` property to **vertically** align flex items.
+
+<Preview lang="html" layout="horizontal">
+  <PreviewDisplay>
+    <div className="u-Flex u-Flex-column">
+      <div className="DummyBlock u-MarginBottom">Flex Item </div>
+      <div className="DummyBlock u-MarginBottom">Flex Item </div>
+      <div className="DummyBlock">Flex Item</div>
+    </div>
+  </PreviewDisplay>
+  <PreviewCode>
+    {`<div className="u-Flex u-Flex-column">
+      <div className="DummyBlock">Flex Item</div>
+      <div className="DummyBlock">Flex Item</div>
+      <div className="DummyBlock">Flex Item</div>
+    </div>
+    `}
+  </PreviewCode>
+</Preview>
+
+#### Flex Alignments
+
+Lorem nisi duis irure sint dolore minim ullamco quis mollit dolor tempor dolor irure consectetur.
+
+1. Align items, as denoted with `.u-AlignItems-{type}`
+2. Justify content, as denoted with `.u-JustifyContent-{type}`
+
+###### Align items
+
+Commodo reprehenderit `.u-AlignItems-{type}` fugiat deserunt culpa aliqua exercitation.
+
+<FlexboxExamples.AlignItems />
+
+###### Justify Content
+
+Mollit veniam in ea adipisicing ad adipisicing nulla anim occaecat excepteur commodo duis officia.
+
+<FlexboxExamples.JustifyContent />
+
+#### Responsive flexbox
+
+Responsive breakpoints are fully supported for Flexbox utility. To apply responsive flexbox, append

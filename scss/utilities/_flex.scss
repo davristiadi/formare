@@ -1,0 +1,85 @@
+&-Flex {
+  display: flex !important;
+}
+
+&-InlineFlex {
+  display: inline-flex !important;
+}
+
+//- Flex Direction
+//
+$flex-directions: (row, column);
+@each $direction in $flex-directions {
+  &-Flex-#{$direction} {
+    display: flex !important;
+    flex-direction: $direction !important;
+  }
+
+  &-InlineFlex-#{$direction} {
+    display: inline-flex !important;
+    flex-direction: $direction !important;
+  }
+
+  @each $bp-size, $bp-value in $breakpoints {
+    @include media($bp-size) {
+      &-Flex-#{$direction}-#{$bp-size} {
+        display: flex;
+        flex-direction: $direction;
+      }
+
+      &-InlineFlex-#{$direction}-#{$bp-size} {
+        display: inline-flex;
+        flex-direction: $direction;
+      }
+    }
+  }
+}
+
+//- Flex Grow & Shrink
+//
+@for $i from 0 through 10 {
+  &-Flex-#{$i} {
+    flex: $i !important;
+  }
+
+  &-FlexGrow-#{$i} {
+    flex-grow: $i !important;
+  }
+
+  &-FlexShrink-#{$i} {
+    flex-shrink: $i !important;
+  }
+}
+
+//- Flex Alignments
+//
+$justify-contents: (
+  start: flex-start,
+  center: center,
+  end: flex-end,
+  between: space-between,
+  around: space-around,
+  evenly: space-evenly
+);
+
+@each $type, $value in $justify-contents {
+  &-jc-#{$type},
+  &-JustifyContent-#{$type} {
+    justify-content: $value !important;
+  }
+}
+
+$align-items: (
+  start: flex-start,
+  center: center,
+  end: flex-end,
+  stretch: stretch,
+  baseline: baseline
+);
+
+@each $type, $value in $align-items {
+  &-ai-#{$type},
+  &-AlignItems-#{$type} {
+    align-items: $value !important;
+  }
+}
