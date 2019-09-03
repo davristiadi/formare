@@ -1,6 +1,6 @@
 {
   "name": "formare",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "author": "David Kurnia Kristiadi <davidkurniakristiadi@gmail.com>",
   "description": "Lightweight and modern CSS framework to build web-interfaces hassle-free",
   "main": "scss/formare.scss",
