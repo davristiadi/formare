@@ -7,7 +7,11 @@ a {
 @each $heading, $size in $headings {
   $index: index($headings, ($heading $size));
 
-  #{$heading},
+  h#{$index} {
+    font-size: $size;
+  }
+
+  .#{$heading},
   .Heading-#{$index} {
     font-size: $size !important;
   }
