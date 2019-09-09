@@ -8,4 +8,7 @@ $card-border-width: 1px;
 $card-border-color: $light;
 $card-border-radius: border-radius(base);
 
-$card-elevated-box-shadow: 0 0.1em 0.5em 0.1em rgba($dark, 0.1);
+$card-elevated-box-shadow-blur: 0 !default;
+$card-elevated-box-shadow-spread: 0.1em !default;
+$card-elevated-box-shadow: 0 0 $card-elevated-box-shadow-blur
+  $card-elevated-box-shadow-spread rgba($dark, 0.1);
