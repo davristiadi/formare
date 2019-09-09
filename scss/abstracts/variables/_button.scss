@@ -1,4 +1,7 @@
-// Default button base variables
+//
+// Button core property variables
+//
+//
 $button-font-weight: font-weight(medium) !default;
 $button-font-family: font-family(primary) !default;
 
@@ -29,60 +32,46 @@ $button-paddings: map-merge(
   $button-paddings
 );
 
-//- Default button :hovered state variables
 //
-$button-hovered-fg-color-theme: primary !default;
+// Button hovered state variables
+//
+//
+$button-hovered-fg-color: dark !default;
 $button-hovered-fg-color-shade: 0 !default;
 $button-hovered-fg-color: theme-color-shade(
   $button-hovered-fg-color-theme,
   $button-hovered-fg-color-shade
 ) !default;
-$button-theme-hovered-fg-color-shade: 0 !default;
 
-$button-hovered-bg-color-theme: primary !default;
-$button-hovered-bg-color-shade: -100 !default;
-$button-hovered-bg-color: theme-color-shade(
-  $button-hovered-bg-color-theme,
-  $button-hovered-bg-color-shade
-) !default;
-$button-theme-hovered-bg-color-shade: -25 !default;
-
-$button-hovered-border-color-theme: primary !default;
+$button-hovered-border-color-theme: gray !default;
 $button-hovered-border-color-shade: -20 !default;
 $button-hovered-border-color: theme-color-shade(
   $button-hovered-border-color-theme,
   $button-hovered-border-color-shade
 ) !default;
-$button-theme-hovered-border-color-shade: -100 !default;
+$button-theme-hovered-border-color-shade: -15 !default;
 
-// Button :focused state variables
+$button-theme-hovered-fg-color-shade: 0 !default;
+$button-theme-hovered-bg-color-shade: -15 !default;
+
 //
-$button-focused-fg-color-theme: primary !default;
-$button-focused-fg-color-shade: 0 !default;
-$button-focused-fg-color: theme-color-shade(
-  $button-focused-fg-color-theme,
-  $button-focused-fg-color-shade
-) !default;
+// Button focused state variables
+//
+//
+$button-focused-fg-color: $dark !default;
+$button-focused-bg-color: transparent !default;
 
-$button-focused-bg-color-theme: primary !default;
-$button-focused-bg-color-shade: -100 !default;
-$button-focused-bg-color: theme-color-shade(
-  $button-focused-bg-color-theme,
-  $button-focused-bg-color-shade
-);
-$button-theme-focused-bg-color-shade: -25 !default;
-
-$button-focused-border-color-shade: -20 !default;
-$button-focused-border-color-theme: primary !default;
+$button-focused-border-color-shade: 0 !default;
+$button-focused-border-color-theme: gray !default;
 $button-focused-border-color: theme-color-shade(
-  primary,
+  $button-focused-border-color-theme,
   $button-focused-border-color-shade
 ) !default;
 
-$button-focused-box-shadow-blur: 0.3em;
-$button-focused-box-shadow-spread: 0.1em;
-$button-focused-box-shadow-color-shade: -80 !default;
-$button-focused-box-shadow-color-theme: primary !default;
+$button-focused-box-shadow-blur: 0.2em !default;
+$button-focused-box-shadow-spread: 0.1em !default;
+$button-focused-box-shadow-color-theme: gray !default;
+$button-focused-box-shadow-color-shade: -75 !default;
 $button-focused-box-shadow-color: theme-color-shade(
   $button-focused-box-shadow-color-theme,
   $button-focused-box-shadow-color-shade
@@ -90,31 +79,37 @@ $button-focused-box-shadow-color: theme-color-shade(
 $button-focused-box-shadow: 0 0 $button-focused-box-shadow-blur
   $button-focused-box-shadow-spread $button-focused-box-shadow-color;
 
-//- Button :active state variables
+$button-theme-focused-bg-color-shade: -25 !default;
+$button-theme-focused-border-color-shade: -25 !default;
+
+//
+// Button active state variables
+//
 //
 $button-active-fg-color-shade: 0;
-$button-active-fg-color-theme: primary;
+$button-active-fg-color-theme: dark;
 $button-active-fg-color: theme-color-shade(
   $button-active-fg-color-theme,
   $button-active-fg-color-shade
 );
 
-$button-active-bg-color-shade: -80;
-$button-active-bg-color-theme: primary;
+$button-active-bg-color-shade: -70 !default;
+$button-active-bg-color-theme: gray !default;
 $button-active-bg-color: theme-color-shade(
   $button-active-bg-color-theme,
   $button-active-bg-color-shade
 ) !default;
 
-$button-active-border-color: primary-color(40);
+$button-active-border-color: primary-color(50);
 
-// Button :disabled state variables
+$button-theme-active-bg-color-shade: 25 !default;
+$button-theme-active-border-color-shade: 25 !default;
+
+//
+// Button disabled state variables
 //
 $button-disabled-opacity: 0.5 !default;
 
-/**
- *  Text Button Modifier
- */
 $button-text-fg-color-shade: 0 !default;
 $button-text-fg-color-theme: primary !default;
 $button-text-fg-color: theme-color-shade(

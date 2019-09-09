@@ -27,6 +27,7 @@
     &:hover,
     &.Button--hovered {
       border-color: $button-hovered-border-color;
+      color: $button-hovered-fg-color;
       outline: none;
     }
 
@@ -65,7 +66,8 @@
       background-color: $color;
       border-color: $color;
 
-      &:not(:disabled):not(.Button--text) {
+      &:not(:disabled):not(.Button--text),
+      &:not(.Button--disabled):not(.Button--text) {
         &:hover,
         &.Button--hovered {
           color: color-yiq($color);
@@ -75,7 +77,7 @@
           );
           border-color: theme-color-shade(
             $theme,
-            $button-theme-hovered-bg-color-shade
+            $button-theme-hovered-border-color-shade
           );
         }
 
@@ -88,17 +90,27 @@
           );
           border-color: theme-color-shade(
             $theme,
-            $button-theme-focused-bg-color-shade
+            $button-theme-focused-border-color-shade
           );
 
-          box-shadow: 0 0 0.3em 0.1em rgba($color, 0.3);
+          box-shadow: 0
+            0
+            $button-focused-box-shadow-blur
+            $button-focused-box-shadow-spread
+            theme-color-shade($theme, $button-focused-box-shadow-color-shade);
         }
 
         &:active,
         &.Button--active {
           color: color-yiq($color);
-          background-color: shade($color, 20%);
-          border-color: shade($color, 20%);
+          background-color: theme-color-shade(
+            $theme,
+            $button-theme-active-bg-color-shade
+          );
+          border-color: theme-color-shade(
+            $theme,
+            $button-theme-active-bg-color-shade
+          );
         }
       }
 
@@ -132,9 +144,11 @@
       }
 
       &.Button--raised {
-        border-bottom-color: shade($color, 10%);
+        border-bottom-color: theme-color-shade($theme, 10%);
+        border-bottom-width: 4px;
 
-        &:not(:disabled):not(.Button--text) {
+        &:not(:disabled):not(.Button--text),
+        &:not(.Button--disabled):not(.Button--text) {
           &:hover,
           &.Button--hovered {
             border-bottom-color: $color;
@@ -153,6 +167,7 @@
           &.Button--active {
             border-color: shade($color, 20%);
             background-color: shade($color, 20%);
+            border-bottom-width: 1px;
             margin-top: 3px;
             outline: none;
           }
@@ -164,7 +179,8 @@
         border-color: $color;
         background-color: rgba($color, 0);
 
-        &:not(:disabled):not(.Button--text) {
+        &:not(:disabled):not(.Button--text),
+        &:not(.Button--disabled):not(.Button--text) {
           &:hover,
           &.Button--hovered {
             color: $color;
@@ -188,6 +204,25 @@
           }
         }
       }
+
+      &.Button--elevated {
+        box-shadow: 0 0.2em 0.2em 0em rgba($dark, 0.2);
+
+        &:not(:disabled):not(.Button--text),
+        &:not(.Button--disabled):not(.Button--text) {
+          &:hover {
+            box-shadow: 0 0.3em 0.3em 0 rgba($dark, 0.2);
+          }
+
+          &:focus {
+            box-shadow: 0 0.3em 0.3em 0em rgba($dark, 0.2);
+          }
+
+          &:active {
+            box-shadow: 0 0.45em 0.45em 0.1em rgba($dark, 0.2);
+          }
+        }
+      }
     }
   }
 
@@ -196,55 +231,6 @@
     &--#{$size} {
       font-size: font-size($size);
       padding: $padding;
-    }
-  }
-
-  // Raised button
-  &--raised {
-    border-bottom-width: 4px;
-    border-bottom-color: shade(theme-color(lighter), 10%);
-
-    &:not(:disabled):not(.Button--text) {
-      &:hover,
-      &.Button--hovered {
-        border-bottom-color: $primary-color;
-      }
-
-      &:focus,
-      &.Button--focused {
-        border-color: tint($primary-color, 10%);
-        border-bottom-width: 4px;
-        border-bottom-color: shade($primary-color, 10%);
-        margin-top: 0px;
-        outline: none;
-      }
-
-      &:active,
-      &.Button--active {
-        border-color: shade($primary-color, 20%);
-        border-bottom-width: 1px;
-        margin-top: 3px;
-        outline: none;
-      }
-    }
-  }
-
-  &--elevated {
-    box-shadow: 0 0.2em 0.2em 0em rgba($dark, 0.2);
-
-    &:not(:disabled),
-    &:not(.Button--disabled) {
-      &:hover {
-        box-shadow: 0 0.2em 0.4em 0em rgba($dark, 0.2);
-      }
-
-      &:focus {
-        box-shadow: 0 0.3em 0.4em 0em rgba($dark, 0.2) !important;
-      }
-
-      &:active {
-        box-shadow: 0 0.4em 0.4em 0em rgba($dark, 0.2) !important;
-      }
     }
   }
 
@@ -257,16 +243,19 @@
 
     &:not(:disabled),
     &:not(.Button--disabled) {
-      &:hover {
+      &:hover,
+      &.Button--hovered {
         background-color: $button-text-hovered-bg-color;
         color: $button-text-hovered-fg-color;
       }
 
-      &:focus {
+      &:focus,
+      &.is-focused {
         background-color: $button-text-focused-bg-color;
       }
 
-      &:active {
+      &:active,
+      &.Button--active {
         background-color: $button-text-active-bg-color;
       }
     }
