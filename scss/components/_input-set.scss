@@ -1,4 +1,4 @@
-.input-set {
+.InputSet {
   display: flex;
   flex-direction: row;
   transition: $input-transition;
@@ -18,11 +18,11 @@
     box-shadow: $input-focused-box-shadow;
     border-color: $input-focused-border-color;
 
-    .input-set__icon > .icon {
+    .InputSet-icon > .icon {
       color: primary-color();
     }
 
-    .input-set__extra {
+    .InputSet-extra {
       background-color: primary-color();
       color: get-color-contrast(primary-color());
     }
@@ -32,11 +32,11 @@
     &--#{$theme} {
       border-color: $color;
 
-      .input-set__icon > .icon {
+      .InputSet-icon > .icon {
         color: $color;
       }
 
-      .input-set__extra {
+      .InputSet-extra {
         background-color: $color;
         color: get-color-contrast($color);
       }
@@ -53,11 +53,11 @@
           $input-focused-box-shadow-spread
           rgba(tint($color, 15%), 0.3);
 
-        .input-set__icon > .icon {
+        .InputSet-icon > .icon {
           color: $color;
         }
 
-        .input-set__extra {
+        .InputSet-extra {
           background-color: $color;
           color: get-color-contrast($color);
         }
@@ -65,7 +65,7 @@
     }
   }
 
-  &__extra {
+  &-extra {
     display: flex;
     align-items: center;
     transition: $input-transition;
@@ -74,7 +74,7 @@
     background-color: $light;
   }
 
-  &__icon {
+  &-icon {
     display: flex;
     align-items: center;
     transition: $input-transition;
@@ -92,8 +92,8 @@
     }
   }
 
-  > .input,
-  > .select {
+  > .Input,
+  > .Select {
     border: none;
     box-shadow: none;
   }
