@@ -41,7 +41,7 @@
   @return map-get($grays, $gray-shade-level);
 }
 
-// (!!!) This is Bootstrap's color-yiq function, not our own.
+// (!!!) This is Bootstrap's color-yiq's function, not our own.
 // TO-DO: Make our own color contrastor function.
 @function get-color-contrast($color) {
   $r: red($color);
