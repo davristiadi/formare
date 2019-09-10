@@ -1,7 +1,4 @@
-//
-// Button core property variables
-//
-//
+/* Button base variables */
 $button-font-weight: font-weight(medium) !default;
 $button-font-family: font-family(primary) !default;
 
@@ -20,7 +17,7 @@ $button-padding-x: spacing(base) !default;
 $button-padding: $button-padding-y $button-padding-x;
 $button-paddings: () !default;
 
-/* prettier-ignore */
+// prettier-ignore
 $button-paddings: map-merge(
   (
     "xsmall": ($button-padding-y * 0.5) ($button-padding-x * 0.5),
@@ -32,10 +29,7 @@ $button-paddings: map-merge(
   $button-paddings
 );
 
-//
-// Button hovered state variables
-//
-//
+/* Button hovered variables */
 $button-hovered-fg-color: dark !default;
 $button-hovered-fg-color-shade: 0 !default;
 $button-hovered-fg-color: theme-color-shade(
@@ -49,15 +43,12 @@ $button-hovered-border-color: theme-color-shade(
   $button-hovered-border-color-theme,
   $button-hovered-border-color-shade
 ) !default;
-$button-theme-hovered-border-color-shade: -15 !default;
 
 $button-theme-hovered-fg-color-shade: 0 !default;
 $button-theme-hovered-bg-color-shade: -15 !default;
+$button-theme-hovered-border-color-shade: -15 !default;
 
-//
-// Button focused state variables
-//
-//
+/* Button focused variables */
 $button-focused-fg-color: $dark !default;
 $button-focused-bg-color: transparent !default;
 
@@ -68,13 +59,15 @@ $button-focused-border-color: theme-color-shade(
   $button-focused-border-color-shade
 ) !default;
 
+$button-focused-box-shadow-offset-x: 0 !default;
+$button-focused-box-shadow-offset-y: 0 !default;
 $button-focused-box-shadow-blur: 0.2em !default;
 $button-focused-box-shadow-spread: 0.1em !default;
-$button-focused-box-shadow-color-theme: gray !default;
-$button-focused-box-shadow-color-shade: -75 !default;
-$button-focused-box-shadow-color: theme-color-shade(
+$button-focused-box-shadow-color-theme: $dark !default;
+$button-focused-box-shadow-color-opacity: 0.25 !default;
+$button-focused-box-shadow-color: rgba(
   $button-focused-box-shadow-color-theme,
-  $button-focused-box-shadow-color-shade
+  $button-focused-box-shadow-color-opacity
 );
 $button-focused-box-shadow: 0 0 $button-focused-box-shadow-blur
   $button-focused-box-shadow-spread $button-focused-box-shadow-color;
@@ -82,10 +75,7 @@ $button-focused-box-shadow: 0 0 $button-focused-box-shadow-blur
 $button-theme-focused-bg-color-shade: -25 !default;
 $button-theme-focused-border-color-shade: -25 !default;
 
-//
-// Button active state variables
-//
-//
+/* Button active variables */
 $button-active-fg-color-shade: 0;
 $button-active-fg-color-theme: dark;
 $button-active-fg-color: theme-color-shade(
@@ -105,11 +95,10 @@ $button-active-border-color: primary-color(50);
 $button-theme-active-bg-color-shade: 25 !default;
 $button-theme-active-border-color-shade: 25 !default;
 
-//
-// Button disabled state variables
-//
-$button-disabled-opacity: 0.5 !default;
+/* Disabled button variables */
+$button-disabled-color-opacity: 0.5 !default;
 
+/* Text button variables */
 $button-text-fg-color-shade: 0 !default;
 $button-text-fg-color-theme: primary !default;
 $button-text-fg-color: theme-color-shade(
@@ -117,7 +106,7 @@ $button-text-fg-color: theme-color-shade(
   $button-text-fg-color-shade
 ) !default;
 
-// Text button :hovered variables
+/* Text button hovered variables */
 $button-text-hovered-fg-color-theme: primary !default;
 $button-text-hovered-fg-color-shade: 0 !default;
 $button-text-hovered-fg-color: theme-color-shade(
@@ -132,7 +121,7 @@ $button-text-hovered-bg-color: rgba(
   $button-text-hovered-bg-color-opacity
 );
 
-// Text button :focused variables
+/* Text button focused variables */
 $button-text-focused-bg-color-opacity: 0.2 !default;
 $button-text-focused-bg-color-theme: primary !default;
 $button-text-focused-bg-color: rgba(
@@ -140,7 +129,7 @@ $button-text-focused-bg-color: rgba(
   $button-text-focused-bg-color-opacity
 ) !default;
 
-// Text button :active variables
+/* Text button active variables */
 $button-text-active-bg-color-opacity: 0.3 !default;
 $button-text-active-bg-color-theme: primary !default;
 $button-text-active-bg-color: rgba(
@@ -148,5 +137,5 @@ $button-text-active-bg-color: rgba(
   $button-text-active-bg-color-opacity
 ) !default;
 
-// Rounded button variables
+/* Rounded button variables */
 $button-rounded-border-radius: border-radius(rounded) !default;

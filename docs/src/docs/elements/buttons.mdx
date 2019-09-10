@@ -14,16 +14,20 @@ that fits into multiple contexts and UIs; such as **forms**, **cards**, **modals
 
 To apply Formare's standard button styling, just add `.Button` class to `<button>`, `<a>` or `<input>`.
 
-<button className="Button">Button</button>
-
 <Preview lang="html">
   <PreviewDisplay>
     <div className="Buttons">
-      <button className="Button Button--primary">Themed</button>
-      <button className="Button Button--primary Button--outlined">
-        Outlined
+      <button className="Button">Basic Button</button>
+      <button className="Button Button--primary">Filled Button</button>
+      <button className="Button Button--primary Button--elevated">
+        Elevated Button
       </button>
-      <button className="Button Button--primary Button--text">Text</button>
+      <button className="Button Button--primary Button--outlined">
+        Outlined Button
+      </button>
+      <button className="Button Button--primary Button--text">
+        Text Button
+      </button>
     </div>
   </PreviewDisplay>
   <PreviewCode>
@@ -144,12 +148,13 @@ Ex minim do sit elit irure veniam sunt irure qui magna esse. Et cillum duis enim
 Append `Button--raised` property to make your button appear raised. If you prefer to have your button appear raised with shadow instead,
 see **Elevated** section.
 
+> `.Button--raised` modifier class can only be applied to themed buttons. A basic button cannot extend this modifier.
+
 <Preview lang="html">
   <PreviewDisplay>
     <div className="Buttons">
+      <button className="Button Button--primary Button--raised">Primary</button>
       <button className="Button Button--secondary Button--raised">Secondary</button>
-      <button className="Button Button--outlined Button--raised">Outlined</button>
-      <button className="Button Button--outlined">Outlined</button>
     </div>
 
   </PreviewDisplay>

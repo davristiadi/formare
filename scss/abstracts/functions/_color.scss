@@ -13,7 +13,11 @@
 
 // Get different shade level of a theme color.
 @function theme-color-shade($theme-color: primary, $color-shade-level: 0) {
-  $theme-color: theme-color($theme-color);
+  @if (variable-defined(theme-color($theme-color))) {
+    $theme-color: theme-color($theme-color);
+  }
+
+  // $theme-color: theme-color($theme-color);
   $color-shade-percentage: abs($color-shade-level) * 1%;
 
   @if $color-shade-level > 0 {
@@ -39,7 +43,7 @@
 
 // (!!!) This is Bootstrap's color-yiq function, not our own.
 // TO-DO: Make our own color contrastor function.
-@function color-yiq($color) {
+@function get-color-contrast($color) {
   $r: red($color);
   $g: green($color);
   $b: blue($color);

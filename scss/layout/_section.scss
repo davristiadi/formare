@@ -5,7 +5,7 @@
   @each $theme, $color in $color-themes {
     &--#{$theme} {
       background-color: $color;
-      color: color-yiq($color);
+      color: get-color-contrast($color);
     }
   }
 

@@ -1,6 +1,6 @@
 $navbar-transition: $transition !default;
 $navbar-background: $white !default;
-$navbar-color: color-yiq($navbar-background) !default;
+$navbar-color: get-color-contrast($navbar-background) !default;
 $navbar-hovered-color: $primary-color;
 $navbar-height: 5em;
 $navbar-heights: () !default;

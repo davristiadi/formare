@@ -1,0 +1,8 @@
+$box-shadow-offset-x: 0 !default;
+$box-shadow-offset-y: 0.1em !default;
+$box-shadow-blur: 0.2rem !default;
+$box-shadow-spread: 0.1em !default;
+$box-shadow-color: $dark !default;
+
+$box-shadow: $box-shadow-offset-x $box-shadow-offset-y $box-shadow-blur
+  $box-shadow-spread $box-shadow-color !default;

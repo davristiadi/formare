@@ -36,19 +36,19 @@
   @each $theme, $color in $color-themes {
     &--#{$theme} {
       background-color: $color;
-      color: color-yiq($color);
+      color: get-color-contrast($color);
 
       .Nav {
         &-link {
           transition: $transition;
-          color: rgba(color-yiq($color), 0.7);
+          color: rgba(get-color-contrast($color), 0.7);
 
           &:hover {
-            color: rgba(color-yiq($color), 1);
+            color: rgba(get-color-contrast($color), 1);
           }
 
           &.is-active {
-            color: rgba(color-yiq($color), 1);
+            color: rgba(get-color-contrast($color), 1);
           }
         }
       }

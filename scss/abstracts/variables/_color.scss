@@ -74,7 +74,9 @@ $color-themes: map-merge(
     light: $light,
     lighter: $lighter,
     dark: $dark,
-    darker: $darker
+    darker: $darker,
+    black: $black,
+    white: $white
   ),
   $color-themes
 );

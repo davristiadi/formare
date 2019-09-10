@@ -32,13 +32,13 @@
     &--#{$theme} & {
       &-header {
         background-color: theme-color-shade($theme, -10);
-        color: color-yiq(theme-color-shade($theme, -10));
+        color: get-color-contrast(theme-color-shade($theme, -10));
       }
 
       &-body,
       &-footer {
         background-color: $color;
-        color: color-yiq($color);
+        color: get-color-contrast($color);
       }
     }
   }

@@ -35,7 +35,7 @@ $checkbox-height: 20px !default;
 $checkbox-width: 20px !default;
 
 $checkbox-bg-color: $primary-color !default;
-$checkbox-fg-color: color-yiq($checkbox-bg-color) !default;
+$checkbox-fg-color: get-color-contrast($checkbox-bg-color) !default;
 
 $checkbox-border-radius: border-radius(base) !default;
 $checkbox-border-style: solid !default;

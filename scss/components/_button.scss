@@ -17,11 +17,13 @@
   outline: none;
   -webkit-appearance: none;
 
+  /* Apply pointer cursor on non-disabled buttons */
   &:not(:disabled),
   &:not(.Button--disabled) {
     cursor: pointer;
   }
 
+  /* Apply base styles for non-disabled and non-text buttons */
   &:not(:disabled):not(.Button--text),
   &:not(.Button--disabled):not(.Button--text) {
     &:hover,
@@ -62,7 +64,7 @@
 
   @each $theme, $color in $color-themes {
     &--#{$theme} {
-      color: color-yiq($color);
+      color: get-color-contrast($color);
       background-color: $color;
       border-color: $color;
 
@@ -70,7 +72,7 @@
       &:not(.Button--disabled):not(.Button--text) {
         &:hover,
         &.Button--hovered {
-          color: color-yiq($color);
+          color: get-color-contrast($color);
           background-color: theme-color-shade(
             $theme,
             $button-theme-hovered-bg-color-shade
@@ -83,7 +85,7 @@
 
         &:focus,
         &.Button--focused {
-          color: color-yiq($color);
+          color: get-color-contrast($color);
           background-color: theme-color-shade(
             $theme,
             $button-theme-focused-bg-color-shade
@@ -97,12 +99,12 @@
             0
             $button-focused-box-shadow-blur
             $button-focused-box-shadow-spread
-            theme-color-shade($theme, $button-focused-box-shadow-color-shade);
+            rgba($color, $button-focused-box-shadow-color-opacity);
         }
 
         &:active,
         &.Button--active {
-          color: color-yiq($color);
+          color: get-color-contrast($color);
           background-color: theme-color-shade(
             $theme,
             $button-theme-active-bg-color-shade

@@ -24,7 +24,7 @@
 
     .input-set__extra {
       background-color: primary-color();
-      color: color-yiq(primary-color());
+      color: get-color-contrast(primary-color());
     }
   }
 
@@ -38,7 +38,7 @@
 
       .input-set__extra {
         background-color: $color;
-        color: color-yiq($color);
+        color: get-color-contrast($color);
       }
 
       &:hover {
@@ -59,7 +59,7 @@
 
         .input-set__extra {
           background-color: $color;
-          color: color-yiq($color);
+          color: get-color-contrast($color);
         }
       }
     }

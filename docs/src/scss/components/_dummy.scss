@@ -1,7 +1,7 @@
 .DummyBlock {
   position: relative;
   background-color: rgba(theme-color(primary), 0.7);
-  color: color-yiq(rgba(theme-color(primary), 0.7));
+  color: get-color-contrast(rgba(theme-color(primary), 0.7));
   padding: spacing(small);
   border-radius: border-radius(base);
 }

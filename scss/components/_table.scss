@@ -24,7 +24,7 @@
       &--#{$theme} {
         th {
           background-color: $color;
-          color: color-yiq($color);
+          color: get-color-contrast($color);
           border-bottom-color: shade($color, 10%);
         }
       }
@@ -80,7 +80,7 @@
 //         @each $theme, $color in $color-themes {
 //             &--#{$theme} {
 //                 background-color: $color;
-//                 color: color-yiq($color);
+//                 color: get-color-contrast($color);
 //                 border-bottom-color: shade($color, 10%);
 //             }
 //         }
