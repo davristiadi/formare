@@ -10,15 +10,14 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run build-css && npm run build-autoprefix && npm run build-clean",
-    "build-css": "node-sass --output-style expanded --source-map true scss/formare.scss css/formare.css",
-    "build-clean": "cleancss -o css/formare.min.css css/formare.css",
-    "build-autoprefix": "postcss --use autoprefixer --output ./css/formare.css ./css/formare.css",
-    "publish:beta": "npm start && npm publish --tag beta",
-    "publish:next": "npm start && npm publish --tag next",
+    "start": "npm run build",
     "start:docs": "cd docs && yarn start",
-    "start:docs-dev": "code . && yarn start:docs",
-    "start": "npm run build"
+    "build": "npm run build:css && npm run build:autoprefix && npm run build:clean",
+    "build:css": "node-sass --output-style expanded --source-map true scss/formare.scss css/formare.css",
+    "build:clean": "cleancss -o css/formare.min.css css/formare.css",
+    "build:autoprefix": "postcss --use autoprefixer --output ./css/formare.css ./css/formare.css",
+    "publish:beta": "npm start && npm publish --tag beta",
+    "publish:next": "npm start && npm publish --tag next"
   },
   "license": "ISC",
   "dependencies": {
