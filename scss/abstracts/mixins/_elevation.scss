@@ -1,0 +1,13 @@
+@mixin fr-elevation($level, $opacity: $fr-elevation-shadow-opacity) {
+  $color: $fr-elevation-shadow-color;
+  $multiplier: $fr-elevation-shadow-multiplier;
+
+  // Convert level into offset-y value in em unit.
+  $offset-y: $level * 0.1em;
+  $blur: $offset-y * $multiplier;
+
+  $shadow-value: 0 $offset-y $blur 0;
+  $shadow-color: rgba($color, $opacity);
+
+  box-shadow: $shadow-value $shadow-color;
+}

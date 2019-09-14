@@ -1,0 +1,11 @@
+$fr-elevation-shadow-offset-x: 0 !default;
+$fr-elevation-shadow-offset-y: 0.1em !default;
+$fr-elevation-shadow-blur: 0.15em !default;
+$fr-elevation-shadow-spread: 0 !default;
+
+// Determine the multiplier used in the calculation of offset-y to blur to get
+// the correct complete elevation value.
+$fr-elevation-shadow-multiplier: 1.5 !default;
+
+$fr-elevation-shadow-color: fr-color-theme(dark) !default;
+$fr-elevation-shadow-opacity: 0.1 !default;
