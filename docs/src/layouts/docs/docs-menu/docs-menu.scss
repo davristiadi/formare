@@ -3,6 +3,11 @@
 .DocsMenu {
   position: relative;
   display: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   @include media(md) {
     position: fixed;
@@ -10,7 +15,7 @@
     left: 0;
     width: 20em;
     height: calc(100vh - 5em);
-    background-color: theme-color-shade(primary, -95);
+    background-color: fr-color-theme-shade(primary, -95);
     z-index: 1;
     overflow: auto;
     display: block;
@@ -25,7 +30,7 @@
 
   // Applied only for the DocsMenu-list of DocsMenu's direct child
   & > &-list {
-    padding: spacing(large) 0 spacing(large) spacing(base);
+    padding: spacing(base);
   }
 
   &-item & {
@@ -34,18 +39,20 @@
       transition: $transition;
       padding: spacing(small) spacing(base);
       transition: all 150ms ease-in-out;
-      color: theme-color(gray);
+      color: fr-color-theme(gray);
+      border-radius: fr-border-radius(base);
       background-color: transparent;
       font-weight: font-weight(regular);
 
       &:hover {
-        color: theme-color-shade(primary, -10);
+        color: fr-color-theme(primary);
       }
 
       &.is-active {
-        background-color: theme-color-shade(primary, -90);
-        color: theme-color(primary);
-        border-right: solid 4px theme-color-shade(primary, 0);
+        color: fr-color-theme(primary);
+        background-color: fr-color-theme-shade(primary, -85);
+        border-radius: 4px;
+        // border-right: solid 4px fr-color-theme-shade(primary, 0);
       }
     }
   }
