@@ -1,0 +1,17 @@
+@mixin fr-typography() {
+  @include fr-typography-headings;
+}
+
+@mixin fr-typography-headings() {
+  @each $key, $value in $fr-headings {
+    $i: index($fr-headings, ($key $value));
+
+    h#{$i} {
+      font-size: $value;
+    }
+
+    .Heading-#{$i} {
+      font-size: $value !important;
+    }
+  }
+}
