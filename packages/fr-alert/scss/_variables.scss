@@ -1,0 +1,12 @@
+@import "@formare/spacing/scss/functions";
+@import "@formare/color/scss/functions";
+@import "@formare/shape/scss/functions";
+
+$fr-alert-border-radius: border-radius(base);
+
+$fr-alert-spacing-y: fr-spacing(small) !default;
+$fr-alert-spacing-x: fr-spacing(base) !default;
+$fr-alert-spacing: $fr-alert-spacing-y $fr-alert-spacing-x !default;
+
+$fr-alert-bg-color: fr-color-theme-shade(primary, -50) !default;
+$fr-alert-fg-color: fr-color-theme-shade(primary, 25) !default;

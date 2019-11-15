@@ -1,0 +1,10 @@
+{
+  "name": "@formare/alert",
+  "version": "0.6.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@formare/color": "^0.6.0",
+    "@formare/spacing": "^0.6.0"
+  }
+}
