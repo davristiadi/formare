@@ -1,0 +1,36 @@
+@import "@formare/typography/variables";
+@import "@formare/color/variables";
+
+$fr-button-font-weight: fr-font-weight(medium) !default;
+$fr-button-font-family: font-family(primary) !default;
+
+$fr-button-fg-color: $dark !default;
+$fr-button-bg-color: transparent !default;
+
+$fr-button-border-radius: border-radius(base) !default;
+$fr-button-border-style: solid !default;
+$fr-button-border-width: 1px !default;
+$fr-button-border-color: fr-color-theme-shade(gray, -70) !default;
+
+$fr-button-min-width: 6em !default;
+
+$fr-button-transition: $transition;
+
+$fr-button-spacing-y: fr-spacing(small) !default;
+$fr-button-spacing-x: fr-spacing(base) !default;
+$fr-button-spacing: $fr-button-spacing-y $fr-button-spacing-x;
+
+$fr-button-sizes: () !default;
+// prettier-ignore
+$fr-button-sizes: map-merge(
+  (
+    "xsmall": ($fr-button-spacing-y * 0.5) ($fr-button-spacing-x * 0.5),
+    "small": ($fr-button-spacing-y * 0.75) ($fr-button-spacing-x * 0.75),
+    "base": $fr-button-spacing,
+    "large": ($fr-button-spacing-y * 1.25) ($fr-button-spacing-x * 1.25),
+    "xlarge": ($fr-button-spacing-y * 1.5) ($fr-button-spacing-x * 1.5)
+  ),
+  $fr-button-sizes
+);
+
+$fr-button-box-shadow-values: 0 0 0.2em 0.1em !default;

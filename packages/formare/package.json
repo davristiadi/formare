@@ -1,0 +1,14 @@
+{
+  "name": "formare",
+  "author": "David Kurnia Kristiadi <davidkurniakristiadi@gmail.com>",
+  "description": "Lightweight and modern CSS framework to build web-interfaces hassle-free",
+  "version": "0.6.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@formare/button": "^0.6.0",
+    "@formare/color": "^0.6.0",
+    "@formare/elevation": "^0.6.0",
+    "@formare/spacing": "^0.6.0"
+  }
+}
