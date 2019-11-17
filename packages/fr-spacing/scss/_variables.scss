@@ -1,0 +1,33 @@
+$fr-spacing: 1rem !default;
+$fr-spacings: () !default;
+$fr-spacings: map-merge(
+  (
+    "auto": auto,
+    "3xsmall": $fr-spacing / 6,
+    "xxsmall": $fr-spacing / 4.5,
+    "2xsmall": $fr-spacing / 4.5,
+    "xsmall": $fr-spacing / 3,
+    "small": $fr-spacing / 1.5,
+    "base": $fr-spacing,
+    "large": $fr-spacing * 1.5,
+    "xlarge": $fr-spacing * 3,
+    "2xlarge": $fr-spacing * 4.5,
+    "xxlarge": $fr-spacing * 4.5,
+    "3xlarge": $fr-spacing * 6
+  ),
+  $fr-spacings
+);
+
+// prettier-ignore
+$fr-spacing-type-map: (
+  "margin": "mg",
+  "padding": "pd"
+);
+
+$fr-spacing-direction-map: ("top", "left", "right", "bottom");
+
+// prettier-ignore
+$fr-spacing-axis-map: (
+  "x": ("left", "right"),
+  "y": ("top", "bottom")
+);
