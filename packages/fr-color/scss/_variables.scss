@@ -1,0 +1,76 @@
+/**
+ *  🎨 Formare's default color palletes
+ */
+
+@import "./color-palletes";
+@import "./functions";
+
+// Shades of gray
+$gray: $sirocco !default;
+$grays: () !default;
+$grays: map-merge(
+  (
+    100: tint($gray, 90%),
+    200: tint($gray, 80%),
+    300: tint($gray, 70%),
+    400: tint($gray, 60%),
+    500: tint($gray, 50%),
+    600: tint($gray, 40%),
+    700: tint($gray, 30%),
+    800: tint($gray, 20%),
+    900: tint($gray, 10%),
+    1000: $gray,
+    1100: shade($gray, 10%),
+    1200: shade($gray, 20%),
+    1300: shade($gray, 30%),
+    1400: shade($gray, 40%),
+    1500: shade($gray, 50%),
+    1600: shade($gray, 60%),
+    1700: shade($gray, 70%),
+    1800: shade($gray, 80%),
+    1900: shade($gray, 90%)
+  ),
+  $grays
+);
+
+// Neutral color declaration
+$white: #ffffff;
+$black: #000000;
+$light: tint($gray, 85%);
+$lighter: tint($gray, 95%);
+$dark: shade($gray, 80%);
+$darker: shade($gray, 90%);
+
+// Color themes
+$primary-color: $violet-blue !default;
+$secondary-color: $jaffa !default;
+$tertiary-color: $trinidad !default;
+$success-color: $mountain-meadow !default;
+$warning-color: $maximum-green-yellow !default;
+$danger-color: $medium-vermillion !default;
+$info-color: $cello !default;
+
+/** 
+ * 🌈 Default Formare's color themes.
+ * Fully mapped and configurable.
+ */
+
+$color-themes: () !default;
+$color-themes: map-merge(
+  (
+    primary: $primary-color,
+    secondary: $secondary-color,
+    success: $success-color,
+    warning: $warning-color,
+    danger: $danger-color,
+    info: $info-color,
+    gray: $gray,
+    light: $light,
+    lighter: $lighter,
+    dark: $dark,
+    darker: $darker,
+    black: $black,
+    white: $white
+  ),
+  $color-themes
+);

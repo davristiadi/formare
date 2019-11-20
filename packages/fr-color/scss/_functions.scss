@@ -1,0 +1,93 @@
+@import "./variables";
+
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+/**
+ * Returns the color value of the given theme name.
+ * e.g: fr-color-theme("primary") or fr-color-theme(primary)
+ */
+@function fr-color-theme($theme) {
+  @if not map-has-key($color-themes, $theme) {
+    @error "The theme '#{$theme}' is not found in '$color-themes' variable map!";
+  }
+
+  @return map-get($color-themes, $theme);
+}
+
+/**
+ * Returns a different shade variant of the given $color.
+ * e.g: fr-color-shade(#abc123, 100)
+ */
+@function fr-color-shade($color, $shade-level: 0) {
+  // returns the absolute value of $shade-level and round it to the nearest multiple of 10.
+  $shade-pct: abs($shade-level) * 1%;
+  // $shade-pct: round($shade-pct * 500) * 500;
+
+  @if $shade-level > 100 or $shade-level < -100 {
+    @error "$shade-level value cannot exceed 100 or less than -100!";
+  }
+
+  @if $shade-level > 0 {
+    @return shade($color, $shade-pct);
+  } @else {
+    @return tint($color, $shade-pct);
+  }
+}
+
+/**
+ * Similar to fr-color-shade function, returns a different shade variant, but from a specific theme 
+ * name. Theme should be available in $color-themes variable map, else it will return an error.
+ *
+ * e.g: fr-color-theme-shade("primary", 50)
+ */
+@function fr-color-theme-shade($theme, $shade-level: 0) {
+  $color: fr-color-theme($theme);
+  @return fr-color-shade($color, $shade-level);
+}
+
+/**
+ * A shorthand function to get a specific opacity level of the selected color theme.
+ *
+ * e.g: fr-color-theme-opacity("primary", 0.9)
+ */
+@function fr-color-theme-opacity($color-theme, $opacity-level: 0) {
+  $color: fr-color-theme($color-theme);
+  @return rgba($color, $opacity-level);
+}
+
+/**
+ * Returns an accessible contrasting color against the given $color.
+ */
+@function fr-color-contrast($color) {
+  $color-contrast-threshold: 200;
+  $color-contrast-dark-text: $darker;
+  $color-contrast-light-text: $lighter;
+
+  $r: red($color);
+  $g: green($color);
+  $b: blue($color);
+
+  $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+
+  @return if($yiq >= $color-contrast-threshold, $darker, $lighter);
+}
+
+// Specific theme color getter
+@function primary-color($color-shade-level: 0) {
+  @return fr-color-theme-shade(primary, $color-shade-level);
+}
+
+@function secondary-color($color-shade-level: 0) {
+  @return fr-color-theme-shade(secondary, $color-shade-level);
+}
+
+// Shades of gray
+@function gray($gray-shade-level: 1000) {
+  @return map-get($grays, $gray-shade-level);
+}
