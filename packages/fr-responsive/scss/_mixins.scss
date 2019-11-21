@@ -1,0 +1,20 @@
+@import "./variables";
+@import "./functions";
+
+// TO-DO: Create responsive utility classes.
+
+@mixin fr-responsive-media($breakpoint-name, $width-type: "min") {
+  @if map-has-key($fr-responsive-breakpoints, $breakpoint) {
+    $breakpoint-width: fr-breakpoint-width($breakpoint);
+
+    @if $width-type == "max" {
+      $width: $width - 1px;
+    }
+
+    @media (#{$type}-width: $breakpoint-width) {
+      @content;
+    }
+  } @else {
+    @error "Device breakpoint is not found in $fr-responsive-breakpoints variable!";
+  }
+}
