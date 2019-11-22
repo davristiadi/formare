@@ -1,5 +1,5 @@
 @import "./variables";
 
-@function fr-get-breakpoint-width($breakpoint-name) {
+@function fr-breakpoint-width($breakpoint-name) {
   @return map-get($fr-responsive-breakpoints, $breakpoint-name);
 }
