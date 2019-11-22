@@ -3,6 +3,9 @@
 
 // TO-DO: Create responsive utility classes.
 
+/**
+ * Applies breakpoint min/max width
+ */
 @mixin fr-responsive-media($breakpoint-name, $width-type: "min") {
   @if map-has-key($fr-responsive-breakpoints, $breakpoint) {
     $breakpoint-width: fr-breakpoint-width($breakpoint);
@@ -11,7 +14,7 @@
       $width: $width - 1px;
     }
 
-    @media (#{$type}-width: $breakpoint-width) {
+    @media (#{$width-type}-width: $breakpoint-width) {
       @content;
     }
   } @else {
