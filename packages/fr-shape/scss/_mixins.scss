@@ -27,24 +27,26 @@
 }
 
 @mixin fr-border-sides-props() {
-  // expected results
-  &Top {
-    @include fr-create-border-width-values($border-side: "top");
-  }
-
-  &Right {
-    @include fr-create-border-width-values($border-side: "right");
-  }
-
-  &Bottom {
-    @include fr-create-border-width-values($border-side: "bottom");
-  }
-
-  &Left {
-    @include fr-create-border-width-values($border-side: "left");
-  }
-
+  // -----
+  // should create these classes
   //
+  // &Top {
+  //   @include fr-create-border-width-values($border-side: "top");
+  // }
+
+  // &Right {
+  //   @include fr-create-border-width-values($border-side: "right");
+  // }
+
+  // &Bottom {
+  //   @include fr-create-border-width-values($border-side: "bottom");
+  // }
+
+  // &Left {
+  //   @include fr-create-border-width-values($border-side: "left");
+  // }
+
+  //---
 
   $border-sides: ("top", "right", "bottom", "right");
 
@@ -62,19 +64,23 @@
  * From range 1 to $fr-border-width-max, generate border width.
  */
 @mixin fr-create-border-width-values($border-side: "around") {
-  &-1 {
-    border-width: 1px;
-  }
+  // ----
+  // should create these classes
+  //
+  // &-1 {
+  //   border-width: 1px;
+  // }
 
-  &-2 {
-    border-width: 2px;
-  }
+  // &-2 {
+  //   border-width: 2px;
+  // }
 
   // up until...
 
-  &-10 {
-    border-width: 10px;
-  }
+  // &-10 {
+  //   border-width: 10px;
+  // }
+  // ----
 
   @for $border-width-value from 1 through $fr-border-width-max-value {
     $border-width-selector: $border-width-px;
