@@ -1,0 +1,104 @@
+@import "@formare/color/scss/variables";
+@import "./variables";
+
+/**
+ * Variant examples:
+ *
+ * <div class="Border-10 Border--primary"></div>
+ * <div class="BorderTop-3 Border--primary></div>
+ * <div class="BorderVertical Border--danger"></div>
+ *
+ */
+
+@mixin fr-create-shape-classes() {
+  @include fr-create-border-classes();
+  @include fr-create-border-radius-classes();
+}
+
+@mixin fr-create-border-classes() {
+  .Border {
+    @include fr-border-width-values($border-side: "around");
+    @include fr-border-sides-props();
+    @include fr-border-color-theme-modifier-variants();
+
+    border-style: solid;
+    border-color: fr-color-gray-shade(100);
+  }
+}
+
+@mixin fr-border-sides-props() {
+  // expected results
+  &Top {
+    @include fr-create-border-width-values($border-side: "top");
+  }
+
+  &Right {
+    @include fr-create-border-width-values($border-side: "right");
+  }
+
+  &Bottom {
+    @include fr-create-border-width-values($border-side: "bottom");
+  }
+
+  &Left {
+    @include fr-create-border-width-values($border-side: "left");
+  }
+
+  //
+
+  $border-sides: ("top", "right", "bottom", "right");
+
+  @each $border-side in $border-sides {
+    $capitalized-border-side: capitalize($border-side);
+    $border-side-selector: $capitalized-border-side;
+
+    &#{$border-side-selector} {
+      @include fr-create-border-width-values($border-side: $border-side);
+    }
+  }
+}
+
+/**
+ * From range 1 to $fr-border-width-max, generate border width.
+ */
+@mixin fr-create-border-width-values($border-side: "around") {
+  &-1 {
+    border-width: 1px;
+  }
+
+  &-2 {
+    border-width: 2px;
+  }
+
+  // up until...
+
+  &-10 {
+    border-width: 10px;
+  }
+
+  @for $border-width-value from 1 through $fr-border-width-max-value {
+    $border-width-selector: $border-width-px;
+
+    // change border width default selector according to $border-side that is passed.
+    // defaults to "around" which generates border-width around an element.
+    $border-width-property: border-width !default;
+    @if $position != "around" {
+      $border-width-property: border-#{$border-side}-width;
+    }
+
+    &-#{$border-width-px} {
+      #{$border-width-property}: $border-width-px + px;
+    }
+  }
+}
+
+/**
+ * Creates different color variants
+ */
+@mixin fr-create-border-color-theme-variants() {
+  @each $color-theme, $color-hex-value in $fr-color-themes {
+    &--#{$color-theme} {
+      border-color: $color-hex-value !important;
+    }
+  }
+}
