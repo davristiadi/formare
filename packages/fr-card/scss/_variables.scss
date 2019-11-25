@@ -1,0 +1,13 @@
+@import "@formare/spacing/scss/functions";
+
+$fr-card-padding: fr-spacing("base");
+
+$fr-card-bg-color: $white;
+$fr-card-fg-color: fr-color-contrast($fr-card-bg-color);
+
+$fr-card-border-style: solid;
+$fr-card-border-width: 1px;
+$fr-card-border-color: $light;
+$fr-card-border-radius: fr-border-radius(base);
+
+$fr-card-elevation-level: 4 !default;
