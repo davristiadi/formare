@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "formare.css",
+	"sources": [
+		"../formare.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,MAAM,CAAC;EACL,gBAAgB,EAAE,GAAG;CAKtB;;AAHE,AAAD,YAAO,CAAC;EACN,OAAO,EAAE,IAAI;CACd"
+}
