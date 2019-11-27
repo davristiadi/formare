@@ -1,38 +1,24 @@
 {
   "name": "formare",
-  "author": "David Kurnia Kristiadi <davidkurniakristiadi@gmail.com>",
-  "description": "Lightweight and modern CSS framework to build web-interfaces hassle-free",
   "version": "0.6.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "yarn build",
-    "start:docs": "cd docs && yarn start",
     "build": "yarn build:css && yarn build:autoprefix && yarn build:clean",
-    "build:css": "node-sass --output-style expanded --source-map true formare.scss ./css/formare.css",
+    "build:css": "node-sass --output-style expanded --source-map true ./formare.scss ./css/formare.css",
     "build:clean": "cleancss -o ./css/formare.min.css ./css/formare.css",
     "build:autoprefix": "postcss --use autoprefixer --output ./css/formare.css ./css/formare.css",
     "publish:beta": "npm start && npm publish --tag beta",
-    "publish:next": "npm start && npm publish --tag next"
+    "publish:next": "npm start && npm publish --tag next",
+    "start:docs": "cd docs && yarn start",
+    "start:docs-dev": "code . && yarn start:docs"
   },
   "dependencies": {
-    "@formare/alert": "^0.6.0",
-    "@formare/block": "^0.6.0",
     "@formare/button": "^0.6.0",
-    "@formare/card": "^0.6.0",
-    "@formare/color": "^0.6.0",
-    "@formare/elevation": "^0.6.0",
-    "@formare/layout": "^0.6.0",
-    "@formare/navbar": "^0.6.0",
-    "@formare/responsive": "^0.6.0",
-    "@formare/select": "^0.6.0",
-    "@formare/shape": "^0.6.0",
-    "@formare/spacing": "^0.6.0",
-    "@formare/typography": "^0.6.0",
-    "autoprefixer": "^9.7.2",
     "clean-css": "^4.2.1",
     "clean-css-cli": "^4.3.0",
-    "node-sass": "^4.13.0"
+    "node-sass": "^4.13.0",
+    "postcss-loader": "^3.0.0"
   }
 }
