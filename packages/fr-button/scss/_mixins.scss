@@ -2,20 +2,17 @@
 @import "@formare/spacing/scss/variables";
 @import "./variables";
 
-@mixin fr-button() {
+@mixin fr-create-button-classes() {
   .Button {
-    @include fr-button-core();
+    @include fr-button-base-styles();
+    @include fr-button-states();
+    @include fr-button-color-theme-variants();
+    @include fr-button-size-variants();
+    @include fr-button-shape-variants();
   }
 }
 
-@mixin fr-button-core() {
-  @include fr-button-base();
-  @include fr-button-themes();
-  @include fr-button-sizes();
-  @include fr-button-shapes();
-}
-
-@mixin fr-button-base() {
+@mixin fr-button-base-styles() {
   position: relative;
   display: inline-flex;
   justify-content: center;
@@ -37,15 +34,12 @@
   -webkit-appearance: none;
 
   /* Apply pointer cursor on non-disabled buttons */
-  &:not(:disabled),
-  &:not(.is-disabled) {
-    cursor: pointer;
+  @include fr-button-is-not-disabled() {
+    cursor: pointer !important;
   }
-
-  @include fr-button-base-states();
 }
 
-@mixin fr-button-base-states() {
+@mixin fr-button-states() {
   &:disabled,
   &.is-disabled {
     opacity: 0.5;
@@ -59,22 +53,22 @@
   }
 
   /* Apply base styles for non-disabled and non-text buttons */
-  &:not(:disabled):not(.is-disabled) {
+  @include fr-button-is-not-disabled() {
     &:hover,
     &.is-hovered {
-      $bg-color: fr-color-theme-shade(gray, -90);
-      $border-color: fr-color-theme-shade(gray, -50);
+      $bg-color: fr-color-theme-shade("gray", -90);
+      $border-color: fr-color-theme-shade("gray", -50);
 
       border-color: $border-color;
       background-color: $bg-color;
-      outline: none; /* Reset outline to remove collision with our border styling */
+      outline: none; /* Reset outline to remove collision with border styling */
     }
 
     &:focus,
     &.is-focused {
-      $bg-color: fr-color-theme-shade(gray, -80);
-      $border-color: fr-color-theme-shade(gray, -50);
-      $box-shadow-color: fr-color-theme-shade(gray, -80);
+      $bg-color: fr-color-theme-shade("gray", -80);
+      $border-color: fr-color-theme-shade("gray", -50);
+      $box-shadow-color: fr-color-theme-shade("gray", -80);
       $box-shadow-values: $fr-button-box-shadow-values;
 
       border-color: $border-color;
@@ -85,8 +79,8 @@
 
     &:active,
     &.is-active {
-      $bg-color: fr-color-theme-shade(gray, -70);
-      $border-color: fr-color-theme-shade(gray, -50);
+      $bg-color: fr-color-theme-shade("gray", -70);
+      $border-color: fr-color-theme-shade("gray", -50);
 
       background-color: $bg-color;
       border-color: $border-color;
@@ -97,12 +91,13 @@
 }
 
 /**
- * Mixin to generate multiple variants of a button.
+ * Generate multiple variants of a button.
+ * 
  * By default, when --{theme} is applied, runs the `fr-button-filled` mixin to generate filled 
  * button with preferred color theme.
  */
-@mixin fr-button-themes() {
-  @each $theme, $color in $color-themes {
+@mixin fr-button-color-theme-variants() {
+  @each $theme, $color in $fr-color-themes {
     &--#{$theme} {
       @include fr-button-filled($theme);
       @include fr-button-types($theme);
@@ -121,7 +116,7 @@
   color: $fg-color;
   border-color: $border-color;
 
-  &:not(:disabled):not(.is-disabled) {
+  @include fr-button-is-not-disabled() {
     $box-shadow-values: $fr-button-box-shadow-values;
 
     &:hover,
@@ -164,25 +159,16 @@
   }
 }
 
-@mixin fr-button-sizes() {
-  @each $size, $padding in $fr-button-sizes {
-    &--#{$size} {
-      font-size: font-size($size);
-      padding: $padding;
-    }
-  }
-}
-
 @mixin fr-button-types($theme) {
   $color: fr-color-theme($theme);
 
-  &:not(:disabled):not(.is-disabled) {
-    &.Button--text {
-      color: $color;
-      background-color: rgba($color, 0);
-      border: 0;
-      box-shadow: none;
+  &.Button--text {
+    color: $color;
+    background-color: rgba($color, 0);
+    border: 0;
+    box-shadow: none;
 
+    @include fr-button-is-not-disabled() {
       &:hover,
       &.is-hovered {
         background-color: rgba($color, 0.15);
@@ -198,12 +184,14 @@
         background-color: rgba($color, 0.25);
       }
     }
+  }
 
-    &.Button--outlined {
-      color: $color;
-      border-color: $color;
-      background-color: rgba($color, 0);
+  &.Button--outlined {
+    color: $color;
+    border-color: $color;
+    background-color: rgba($color, 0);
 
+    @include fr-button-is-not-disabled() {
       &:hover,
       &.is-hovered {
         color: $color;
@@ -226,12 +214,14 @@
         border-color: rgba($color, 1);
       }
     }
+  }
 
-    // 🧪 Experimental
-    &.Button--raised {
-      border-bottom-color: fr-color-shade($color, 15);
-      border-bottom-width: 4px;
+  // 🧪 Experimental
+  &.Button--raised {
+    border-bottom-color: fr-color-shade($color, 15);
+    border-bottom-width: 4px;
 
+    @include fr-button-is-not-disabled() {
       &:hover,
       &.is-hovered {
         border-bottom-color: fr-color-shade($color, 10);
@@ -250,14 +240,23 @@
         outline: none;
       }
     }
+  }
 
-    &.Button--elevated {
-      @include fr-button-elevated();
+  &.Button--elevated {
+    @include fr-button-elevated();
+  }
+}
+
+@mixin fr-button-size-variants() {
+  @each $size, $padding in $fr-button-sizes {
+    &--#{$size} {
+      font-size: fr-font-size($size);
+      padding: $padding;
     }
   }
 }
 
-@mixin fr-button-shapes() {
+@mixin fr-button-shape-variants() {
   &--rounded {
     border-radius: border-radius(rounded);
   }
@@ -269,16 +268,26 @@
 }
 
 @mixin fr-button-elevated($elevation-opacity: 0.3) {
-  @include fr-elevation(2, $elevation-opacity);
+  @include fr-create-elevation(2, $elevation-opacity);
 
   &:not(:disabled):not(.is-disabled) {
     &:hover,
-    &:focus {
-      @include fr-elevation(3, $elevation-opacity);
+    &:focus,
+    &.is-hovered,
+    &.is-focused {
+      @include fr-create-elevation(3, $elevation-opacity);
     }
 
-    &:active {
-      @include fr-elevation(2, $elevation-opacity);
+    &:active,
+    &.is-active {
+      @include fr-create-elevation(2, $elevation-opacity);
     }
+  }
+}
+
+@mixin fr-button-is-not-disabled() {
+  &:not(:disabled),
+  &:not(.is-disabled) {
+    @content;
   }
 }

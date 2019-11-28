@@ -1,7 +1,11 @@
 {
   "name": "formare",
   "version": "0.5.2",
+  "private": true,
   "author": "David Kurnia Kristiadi <davidkurniakristiadi@gmail.com>",
+  "workspaces": [
+    "packages/*"
+  ],
   "description": "Lightweight and modern CSS framework to build web-interfaces hassle-free",
   "main": "scss/formare.scss",
   "repository": {
@@ -9,13 +13,12 @@
     "url": "git+https://github.com/dkk94/formare"
   },
   "scripts": {
+    "build": "yarn build:dev",
+    "build:dev": "webpack --mode=development --env.NODE_ENV=development",
+    "build:prod": "webpack --mode=production --env.NODE_ENV=production",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run build",
     "start:docs": "cd docs && yarn start",
-    "build": "npm run build:css && npm run build:autoprefix && npm run build:clean",
-    "build:css": "node-sass --output-style expanded --source-map true scss/formare.scss css/formare.css",
-    "build:clean": "cleancss -o css/formare.min.css css/formare.css",
-    "build:autoprefix": "postcss --use autoprefixer --output ./css/formare.css ./css/formare.css",
     "publish:beta": "npm start && npm publish --tag beta",
     "publish:next": "npm start && npm publish --tag next"
   },
@@ -35,13 +38,20 @@
     "prismjs": "^1.16.0"
   },
   "devDependencies": {
-    "autoprefixer": "^8.6.5",
+    "autoprefixer": "^9.7.2",
     "clean-css": "^4.1.11",
     "clean-css-cli": "^4.1.11",
+    "css-loader": "^3.2.0",
     "gh-pages": "^2.1.1",
+    "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.9.3",
     "path": "^0.12.7",
-    "postcss-cli": "^6.0.0"
+    "postcss-cli": "^6.0.0",
+    "postcss-loader": "^3.0.0",
+    "prettier": "^1.19.1",
+    "prettier-webpack-plugin": "^1.2.0",
+    "sass-loader": "^8.0.0",
+    "webpack-cli": "^3.3.10"
   },
   "files": [
     "css",
