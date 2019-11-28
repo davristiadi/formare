@@ -1,8 +1,9 @@
-@import "@formare/typography/variables";
-@import "@formare/color/variables";
+@import "@formare/typography/scss/variables";
+@import "@formare/spacing/scss/variables";
+@import "@formare/color/scss/variables";
 
-$fr-button-font-weight: fr-font-weight(medium) !default;
-$fr-button-font-family: font-family(primary) !default;
+$fr-button-font-weight: fr-font-weight("medium") !default;
+$fr-button-font-family: fr-font-family("primary") !default;
 
 $fr-button-fg-color: $dark !default;
 $fr-button-bg-color: transparent !default;
@@ -10,14 +11,14 @@ $fr-button-bg-color: transparent !default;
 $fr-button-border-radius: border-radius(base) !default;
 $fr-button-border-style: solid !default;
 $fr-button-border-width: 1px !default;
-$fr-button-border-color: fr-color-theme-shade(gray, -70) !default;
+$fr-button-border-color: fr-color-theme-shade("gray", -70) !default;
 
 $fr-button-min-width: 6em !default;
 
-$fr-button-transition: $transition;
+$fr-button-transition: all 250ms ease-in-out !default;
 
-$fr-button-spacing-y: fr-spacing(small) !default;
-$fr-button-spacing-x: fr-spacing(base) !default;
+$fr-button-spacing-y: fr-spacing("small") !default;
+$fr-button-spacing-x: fr-spacing("base") !default;
 $fr-button-spacing: $fr-button-spacing-y $fr-button-spacing-x;
 
 $fr-button-sizes: () !default;
