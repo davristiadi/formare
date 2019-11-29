@@ -1,5 +1,6 @@
 @import "@formare/elevation/scss/mixins";
 @import "@formare/spacing/scss/variables";
+@import "@formare/color/scss/variables";
 @import "./variables";
 
 @mixin fr-create-button-classes() {
@@ -52,7 +53,6 @@
     }
   }
 
-  /* Apply base styles for non-disabled and non-text buttons */
   @include fr-button-is-not-disabled() {
     &:hover,
     &.is-hovered {
@@ -61,7 +61,9 @@
 
       border-color: $border-color;
       background-color: $bg-color;
-      outline: none; /* Reset outline to remove collision with border styling */
+
+      /* Reset outline to remove collision with border styling */
+      outline: none;
     }
 
     &:focus,
@@ -97,20 +99,20 @@
  * button with preferred color theme.
  */
 @mixin fr-button-color-theme-variants() {
-  @each $theme, $color in $fr-color-themes {
-    &--#{$theme} {
-      @include fr-button-filled($theme);
-      @include fr-button-types($theme);
+  @each $color-theme, $color-value in $fr-color-themes {
+    &--#{$color-theme} {
+      @include fr-button-filled($color-theme);
+      @include fr-button-types($color-theme);
     }
   }
 }
 
 /**
  */
-@mixin fr-button-filled($theme) {
-  $bg-color: fr-color-theme($theme);
+@mixin fr-button-filled($color-theme) {
+  $bg-color: fr-color-theme($color-theme);
   $fg-color: fr-color-contrast($bg-color);
-  $border-color: fr-color-theme($theme);
+  $border-color: fr-color-theme($color-theme);
 
   background-color: $bg-color;
   color: $fg-color;
@@ -121,46 +123,46 @@
 
     &:hover,
     &.is-hovered {
-      $bg-color--hovered: fr-color-theme-shade($theme, -15);
-      $fg-color--hovered: fr-color-contrast($bg-color--hovered);
-      $border-color--hovered: $bg-color--hovered;
+      $bg-color-hovered: fr-color-theme-shade($color-theme, -15);
+      $fg-color-hovered: fr-color-contrast($bg-color-hovered);
+      $border-color-hovered: $bg-color-hovered;
 
-      color: $fg-color--hovered;
-      background-color: $bg-color--hovered;
-      border-color: $border-color--hovered;
+      color: $fg-color-hovered;
+      background-color: $bg-color-hovered;
+      border-color: $border-color-hovered;
       box-shadow: none;
     }
 
     &:focus,
     &.is-focused {
-      $bg-color--focused: fr-color-theme-shade($theme, -30);
-      $fg-color--focused: fr-color-contrast($bg-color--focused);
-      $border-color--focused: $bg-color--focused;
-      $box-shadow-color--focused: fr-color-theme-shade($theme, -70);
-      $box-shadow--focused: $box-shadow-values $box-shadow-color--focused;
+      $bg-color-focused: fr-color-theme-shade($color-theme, -30);
+      $fg-color-focused: fr-color-contrast($bg-color-focused);
+      $border-color-focused: $bg-color-focused;
+      $box-shadow-color-focused: fr-color-theme-shade($color-theme, -70);
+      $box-shadow-focused: $box-shadow-values $box-shadow-color-focused;
 
-      color: $fg-color--focused;
-      background-color: $bg-color--focused;
-      border-color: $border-color--focused;
-      box-shadow: $box-shadow--focused;
+      color: $fg-color-focused;
+      background-color: $bg-color-focused;
+      border-color: $border-color-focused;
+      box-shadow: $box-shadow-focused;
     }
 
     &:active,
     &.is-active {
-      $bg-color--active: fr-color-theme-shade($theme, -45);
-      $fg-color--active: fr-color-contrast($bg-color--active);
-      $border-color--active: $bg-color--active;
+      $bg-color-active: fr-color-theme-shade($color-theme, -45);
+      $fg-color-active: fr-color-contrast($bg-color-active);
+      $border-color-active: $bg-color-active;
 
-      color: $fg-color--active;
-      background-color: $bg-color--active;
-      border-color: $border-color--active;
+      color: $fg-color-active;
+      background-color: $bg-color-active;
+      border-color: $border-color-active;
       box-shadow: none;
     }
   }
 }
 
-@mixin fr-button-types($theme) {
-  $color: fr-color-theme($theme);
+@mixin fr-button-types($color-theme) {
+  $color: fr-color-theme($color-theme);
 
   &.Button--text {
     color: $color;
