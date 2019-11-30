@@ -17,21 +17,26 @@
   position: relative;
   display: inline-flex;
   justify-content: center;
+  vertical-align: middle;
+
   font-size: $fr-button-font-size;
   font-weight: $fr-button-font-weight;
   font-family: $fr-button-font-family;
+  text-align: center;
+
   padding: $fr-button-spacing;
+  min-width: $fr-button-min-width;
+
   color: $fr-button-fg-color;
   background-color: $fr-button-bg-color;
+
   border-style: $fr-button-border-style;
   border-width: $fr-button-border-width;
   border-color: $fr-button-border-color;
   border-radius: $fr-button-border-radius;
+
   transition: $fr-button-transition;
-  min-width: $fr-button-min-width;
-  text-align: center;
   white-space: nowrap;
-  vertical-align: middle;
   outline: none;
   -webkit-appearance: none;
 
@@ -41,55 +46,65 @@
   }
 }
 
+/**
+ * Generates pseudo-classes to determine states of a button.
+ */
 @mixin fr-button-states() {
+  @include fr-button-disabled-state();
+  @include fr-button-is-not-disabled() {
+    @include fr-button-hovered-state();
+    @include fr-button-focused-state();
+    @include fr-button-active-state();
+  }
+}
+
+@mixin fr-button-disabled-state() {
   &:disabled,
   &.is-disabled {
     opacity: 0.5;
     cursor: not-allowed;
     pointer-events: none;
 
-    /* Retains pointer-events: auto stylerule to elements aside from link tag */
+    /* Retains 'pointer-events: auto' stylerule to elements aside from link tag */
     &:not(a) {
       pointer-events: auto;
     }
   }
+}
 
-  @include fr-button-is-not-disabled() {
-    &:hover,
-    &.is-hovered {
-      $bg-color: fr-color-theme-shade("gray", -90);
-      $border-color: fr-color-theme-shade("gray", -50);
+@mixin fr-button-hovered-state() {
+  &:hover,
+  &.is-hovered {
+    border-color: fr-color-theme-shade($fr-button-color-theme, -15);
+    background-color: fr-color-theme-shade($fr-button-color-theme, -15);
 
-      border-color: $border-color;
-      background-color: $bg-color;
+    /* Reset outline to remove collision with border styling */
+    outline: none;
+  }
+}
 
-      /* Reset outline to remove collision with border styling */
-      outline: none;
-    }
+@mixin fr-button-focused-state() {
+  &:focus,
+  &.is-focused {
+    $bg-color: fr-color-theme-shade("gray", -80);
+    $border-color: fr-color-theme-shade("gray", -50);
+    $box-shadow-color: fr-color-theme-shade("gray", -80);
+    $box-shadow-values: $fr-button-box-shadow-values;
 
-    &:focus,
-    &.is-focused {
-      $bg-color: fr-color-theme-shade("gray", -80);
-      $border-color: fr-color-theme-shade("gray", -50);
-      $box-shadow-color: fr-color-theme-shade("gray", -80);
-      $box-shadow-values: $fr-button-box-shadow-values;
+    border-color: fr-color-theme-shade($fr-button-color-theme, -30);
+    background-color: fr-color-theme-shade($fr-button-color-theme, -30);
+    box-shadow: $box-shadow-values $box-shadow-color;
+    outline: none;
+  }
+}
 
-      border-color: $border-color;
-      background-color: $bg-color;
-      box-shadow: $box-shadow-values $box-shadow-color;
-      outline: none;
-    }
-
-    &:active,
-    &.is-active {
-      $bg-color: fr-color-theme-shade("gray", -70);
-      $border-color: fr-color-theme-shade("gray", -50);
-
-      background-color: $bg-color;
-      border-color: $border-color;
-      box-shadow: none;
-      outline: none;
-    }
+@mixin fr-button-active-state() {
+  &:active,
+  &.is-active {
+    border-color: fr-color-theme-shade($fr-button-color-theme, -45);
+    background-color: fr-color-theme-shade($fr-button-color-theme, -45);
+    box-shadow: none;
+    outline: none;
   }
 }
 
