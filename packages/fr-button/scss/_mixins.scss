@@ -17,6 +17,7 @@
   position: relative;
   display: inline-flex;
   justify-content: center;
+  font-size: $fr-button-font-size;
   font-weight: $fr-button-font-weight;
   font-family: $fr-button-font-family;
   padding: $fr-button-spacing;
@@ -260,7 +261,7 @@
 
 @mixin fr-button-shape-variants() {
   &--rounded {
-    border-radius: border-radius(rounded);
+    border-radius: fr-border-radius(rounded);
   }
 
   // Extend button to 100% width of its parent
