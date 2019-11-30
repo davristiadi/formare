@@ -1,14 +1,16 @@
 @import "@formare/typography/scss/variables";
 @import "@formare/spacing/scss/variables";
 @import "@formare/color/scss/variables";
+@import "@formare/shape/scss/variables";
 
+$fr-button-font-size: fr-font-size("regular") !default;
 $fr-button-font-weight: fr-font-weight("medium") !default;
 $fr-button-font-family: fr-font-family("primary") !default;
 
 $fr-button-fg-color: $dark !default;
 $fr-button-bg-color: transparent !default;
 
-$fr-button-border-radius: border-radius(base) !default;
+$fr-button-border-radius: fr-border-radius("base") !default;
 $fr-button-border-style: solid !default;
 $fr-button-border-width: 1px !default;
 $fr-button-border-color: fr-color-theme-shade("gray", -70) !default;
@@ -34,4 +36,4 @@ $fr-button-sizes: map-merge(
   $fr-button-sizes
 );
 
-$fr-button-box-shadow-values: 0 0 0.2em 0.1em !default;
+$fr-button-box-shadow-values: 0 0 0.2em 0.2em !default;
