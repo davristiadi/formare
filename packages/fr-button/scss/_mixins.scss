@@ -6,7 +6,8 @@
 @mixin fr-create-button-classes() {
   .Button {
     @include fr-button-base-styles();
-    @include fr-button-states();
+    @include fr-button-base-states();
+
     @include fr-button-color-theme-variants();
     @include fr-button-size-variants();
     @include fr-button-shape-variants();
@@ -47,20 +48,10 @@
 }
 
 /**
- * Generates pseudo-classes to determine states of a button.
+ * Generates various supportive classes of a standard button.
  */
-@mixin fr-button-states() {
-  @include fr-button-disabled-state();
-  @include fr-button-is-not-disabled() {
-    @include fr-button-hovered-state();
-    @include fr-button-focused-state();
-    @include fr-button-active-state();
-  }
-}
-
-@mixin fr-button-disabled-state() {
-  &:disabled,
-  &.is-disabled {
+@mixin fr-button-base-states() {
+  @include fr-button-is-disabled() {
     opacity: 0.5;
     cursor: not-allowed;
     pointer-events: none;
@@ -70,41 +61,34 @@
       pointer-events: auto;
     }
   }
-}
 
-@mixin fr-button-hovered-state() {
-  &:hover,
-  &.is-hovered {
-    border-color: fr-color-theme-shade($fr-button-color-theme, -15);
-    background-color: fr-color-theme-shade($fr-button-color-theme, -15);
+  @include fr-button-is-not-disabled() {
+    @include fr-button-is-hovered() {
+      border-color: fr-color-theme-shade($fr-button-color-theme, -15);
+      background-color: fr-color-theme-shade($fr-button-color-theme, -15);
 
-    /* Reset outline to remove collision with border styling */
-    outline: none;
-  }
-}
+      /* Reset outline to remove collision with border styling */
+      outline: none;
+    }
 
-@mixin fr-button-focused-state() {
-  &:focus,
-  &.is-focused {
-    $bg-color: fr-color-theme-shade("gray", -80);
-    $border-color: fr-color-theme-shade("gray", -50);
-    $box-shadow-color: fr-color-theme-shade("gray", -80);
-    $box-shadow-values: $fr-button-box-shadow-values;
+    @include fr-button-is-focused() {
+      $bg-color: fr-color-theme-shade("gray", -80);
+      $border-color: fr-color-theme-shade("gray", -50);
+      $box-shadow-color: fr-color-theme-shade("gray", -80);
+      $box-shadow-values: $fr-button-box-shadow-values;
 
-    border-color: fr-color-theme-shade($fr-button-color-theme, -30);
-    background-color: fr-color-theme-shade($fr-button-color-theme, -30);
-    box-shadow: $box-shadow-values $box-shadow-color;
-    outline: none;
-  }
-}
+      border-color: fr-color-theme-shade($fr-button-color-theme, -30);
+      background-color: fr-color-theme-shade($fr-button-color-theme, -30);
+      box-shadow: $box-shadow-values $box-shadow-color;
+      outline: none;
+    }
 
-@mixin fr-button-active-state() {
-  &:active,
-  &.is-active {
-    border-color: fr-color-theme-shade($fr-button-color-theme, -45);
-    background-color: fr-color-theme-shade($fr-button-color-theme, -45);
-    box-shadow: none;
-    outline: none;
+    @include fr-button-is-active() {
+      border-color: fr-color-theme-shade($fr-button-color-theme, -45);
+      background-color: fr-color-theme-shade($fr-button-color-theme, -45);
+      box-shadow: none;
+      outline: none;
+    }
   }
 }
 
@@ -137,8 +121,7 @@
   @include fr-button-is-not-disabled() {
     $box-shadow-values: $fr-button-box-shadow-values;
 
-    &:hover,
-    &.is-hovered {
+    @include fr-button-is-hovered() {
       $bg-color-hovered: fr-color-theme-shade($color-theme, -15);
       $fg-color-hovered: fr-color-contrast($bg-color-hovered);
       $border-color-hovered: $bg-color-hovered;
@@ -149,8 +132,7 @@
       box-shadow: none;
     }
 
-    &:focus,
-    &.is-focused {
+    @include fr-button-is-focused() {
       $bg-color-focused: fr-color-theme-shade($color-theme, -30);
       $fg-color-focused: fr-color-contrast($bg-color-focused);
       $border-color-focused: $bg-color-focused;
@@ -163,8 +145,7 @@
       box-shadow: $box-shadow-focused;
     }
 
-    &:active,
-    &.is-active {
+    @include fr-button-is-active() {
       $bg-color-active: fr-color-theme-shade($color-theme, -45);
       $fg-color-active: fr-color-contrast($bg-color-active);
       $border-color-active: $bg-color-active;
@@ -187,19 +168,19 @@
     box-shadow: none;
 
     @include fr-button-is-not-disabled() {
-      &:hover,
-      &.is-hovered {
+      @include fr-button-is-hovered() {
         background-color: rgba($color, 0.15);
+        color: $color;
       }
 
-      &:focus,
-      &.is-focused {
+      @include fr-button-is-focused() {
         background-color: rgba($color, 0.2);
+        color: $color;
       }
 
-      &:active,
-      &.is-active {
+      @include fr-button-is-active() {
         background-color: rgba($color, 0.25);
+        color: $color;
       }
     }
   }
@@ -210,23 +191,20 @@
     background-color: rgba($color, 0);
 
     @include fr-button-is-not-disabled() {
-      &:hover,
-      &.is-hovered {
+      @include fr-button-is-hovered() {
         color: $color;
         border-color: rgba($color, 1);
         background-color: rgba($color, 0.1);
       }
 
-      &:focus,
-      &.is-focused {
+      @include fr-button-is-focused() {
         color: $color;
         background-color: rgba($color, 0.2);
         border-color: rgba($color, 1);
         outline: none;
       }
 
-      &:active,
-      &.is-active {
+      @include fr-button-is-active() {
         color: $color;
         background-color: rgba($color, 0.3);
         border-color: rgba($color, 1);
@@ -240,19 +218,16 @@
     border-bottom-width: 4px;
 
     @include fr-button-is-not-disabled() {
-      &:hover,
-      &.is-hovered {
+      @include fr-button-is-hovered() {
         border-bottom-color: fr-color-shade($color, 10);
       }
 
-      &:focus,
-      &.is-focused {
+      @include fr-button-is-focused() {
         margin-top: 0px;
         outline: none;
       }
 
-      &:active,
-      &.is-active {
+      @include fr-button-is-active() {
         border-bottom-width: 1px;
         margin-top: 3px;
         outline: none;
@@ -303,9 +278,47 @@
   }
 }
 
+/**
+ * 🛠 Utility-based mixins
+ */
 @mixin fr-button-is-not-disabled() {
   &:not(:disabled),
   &:not(.is-disabled) {
+    @content;
+  }
+}
+
+@mixin fr-button-is-disabled() {
+  &:disabled,
+  &.is-disabled {
+    @content;
+  }
+}
+
+@mixin fr-button-is-hovered() {
+  &:hover,
+  &.is-hovered {
+    @content;
+  }
+}
+
+@mixin fr-button-is-focused() {
+  &:focus,
+  &.is-focused {
+    @content;
+  }
+}
+
+@mixin fr-button-is-active() {
+  &:active,
+  &.is-active {
+    @content;
+  }
+}
+
+// Shorthand version of the specific state functions.
+@mixin fr-button-is-state($state: "disabled") {
+  @include fr-button-is-#{$state} {
     @content;
   }
 }
