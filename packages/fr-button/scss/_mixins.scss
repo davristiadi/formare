@@ -110,14 +110,6 @@
 /**
  */
 @mixin fr-button-filled($color-theme) {
-  $bg-color: fr-color-theme($color-theme);
-  $fg-color: fr-color-contrast($bg-color);
-  $border-color: fr-color-theme($color-theme);
-
-  background-color: $bg-color;
-  color: $fg-color;
-  border-color: $border-color;
-
   @include fr-button-is-not-disabled() {
     $box-shadow-values: $fr-button-box-shadow-values;
 
@@ -156,41 +148,42 @@
       box-shadow: none;
     }
   }
+
+  background-color: fr-color-theme($color-theme);
+  color: fr-color-theme-contrast($color-theme);
+  border-color: fr-color-theme($color-theme);
 }
 
 @mixin fr-button-types($color-theme) {
   $color: fr-color-theme($color-theme);
 
   &.Button--text {
-    color: $color;
-    background-color: rgba($color, 0);
-    border: 0;
-    box-shadow: none;
-
     @include fr-button-is-not-disabled() {
+      color: $color;
+      border-color: rgba($color, 0);
+      box-shadow: none;
+      background-color: transparent;
+
       @include fr-button-is-hovered() {
         background-color: rgba($color, 0.15);
-        color: $color;
       }
 
       @include fr-button-is-focused() {
-        background-color: rgba($color, 0.2);
-        color: $color;
+        background-color: rgba($color, 0.25);
       }
 
       @include fr-button-is-active() {
-        background-color: rgba($color, 0.25);
-        color: $color;
+        background-color: rgba($color, 0.35);
       }
     }
   }
 
   &.Button--outlined {
-    color: $color;
-    border-color: $color;
-    background-color: rgba($color, 0);
-
     @include fr-button-is-not-disabled() {
+      color: $color;
+      border-color: $color;
+      background-color: rgba($color, 0);
+
       @include fr-button-is-hovered() {
         color: $color;
         border-color: rgba($color, 1);
@@ -214,10 +207,10 @@
 
   // 🧪 Experimental
   &.Button--raised {
-    border-bottom-color: fr-color-shade($color, 15);
-    border-bottom-width: 4px;
-
     @include fr-button-is-not-disabled() {
+      border-bottom-color: fr-color-shade($color, 15);
+      border-bottom-width: 4px;
+
       @include fr-button-is-hovered() {
         border-bottom-color: fr-color-shade($color, 10);
       }
@@ -260,19 +253,24 @@
   }
 }
 
+/**
+ * Applies material style elevation property to a button.
+ *
+ * {$elevation-opacity} | 0 to 1
+ */
 @mixin fr-button-elevated($elevation-opacity: 0.3) {
   @include fr-create-elevation(2, $elevation-opacity);
 
-  &:not(:disabled):not(.is-disabled) {
-    &:hover,
-    &:focus,
-    &.is-hovered,
-    &.is-focused {
+  @include fr-button-is-not-disabled() {
+    @include fr-button-is-hovered() {
       @include fr-create-elevation(3, $elevation-opacity);
     }
 
-    &:active,
-    &.is-active {
+    @include fr-button-is-focused() {
+      @include fr-create-elevation(3, $elevation-opacity);
+    }
+
+    @include fr-button-is-active() {
       @include fr-create-elevation(2, $elevation-opacity);
     }
   }
