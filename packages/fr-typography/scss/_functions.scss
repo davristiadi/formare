@@ -1,0 +1,11 @@
+@function fr-font-family($key, $map: $fr-font-families) {
+  @return map-get($map, $key);
+}
+
+@function fr-font-size($key) {
+  @return map-get($fr-font-sizes, $key);
+}
+
+@function fr-font-weight($key, $map: $fr-font-weights) {
+  @return map-get($map, $key);
+}
