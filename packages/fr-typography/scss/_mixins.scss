@@ -1,0 +1,24 @@
+@import "./variables";
+
+@mixin fr-create-typography-classes() {
+  @include fr-create-font-size-classes();
+}
+
+/**
+* Create font size classes.
+*
+* Example:
+* - .FontSize or .FontSize-base -> Applies base font size
+* - .FontSize-2xsmall or .FontSize-3xlarge -> Applies different size font classes
+*/
+@mixin fr-create-font-size-classes() {
+  .FontSize {
+    @each $font-size, $font-size-value in $fr-font-sizes {
+      &-#{$font-size} {
+        font-size: $font-size-value !important;
+      }
+    }
+
+    font-size: $fr-font-size !important;
+  }
+}
