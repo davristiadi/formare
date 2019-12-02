@@ -1,0 +1,115 @@
+@import "./functions";
+
+$fr-font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont,
+  "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$fr-font-family-serif: Georgia, "Times New Roman", serif !default;
+$fr-font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+  "Roboto Mono", "Liberation Mono", "Courier New", monospace !default;
+
+$fr-font-family-primary: $fr-font-family-sans-serif !default;
+$fr-font-family-secondary: $fr-font-family-serif !default;
+
+$fr-font-families: () !default;
+$fr-font-families: map-merge(
+  (
+    "primary": $fr-font-family-primary,
+    "secondary": $fr-font-family-secondary,
+    "code": $fr-font-family-monospace
+  ),
+  $fr-font-families
+);
+
+// Font size map
+$fr-font-size: 1rem !default;
+$fr-font-sizes: () !default;
+$fr-font-sizes: map-merge(
+  (
+    "4xsmall": $fr-font-size * 0.402,
+    "xxxsmall": $fr-font-size * 0.482,
+    "3xsmall": $fr-font-size * 0.482,
+    "xxsmall": $fr-font-size * 0.579,
+    "2xsmall": $fr-font-size * 0.579,
+    "xsmall": $fr-font-size * 0.694,
+    "small": $fr-font-size * 0.833,
+    "base": $fr-font-size,
+    "large": $fr-font-size * 1.2,
+    "xlarge": $fr-font-size * 1.44,
+    "2xlarge": $fr-font-size * 1.728,
+    "xxlarge": $fr-font-size * 1.728,
+    "3xlarge": $fr-font-size * 2.074,
+    "xxxlarge": $fr-font-size * 2.074,
+    "4xlarge": $fr-font-size * 2.488,
+    "5xlarge": $fr-font-size * 2.986
+  ),
+  $fr-font-sizes
+);
+
+$fr-headings: () !default;
+$fr-headings: map-merge(
+  (
+    "h1": font-size("5xlarge"),
+    "h2": font-size("4xlarge"),
+    "h3": font-size("3xlarge"),
+    "h4": font-size("2xlarge"),
+    "h5": font-size("xlarge"),
+    "h6": font-size("large")
+  ),
+  $fr-headings
+);
+
+$fr-font-weight: 400 !default;
+$fr-font-weights: () !default;
+$fr-font-weights: map-merge(
+  (
+    "thin": 100,
+    "extra-light": 200,
+    "ultra-light": 200,
+    "light": 300,
+    "normal": 400,
+    "book": 400,
+    "regular": 400,
+    "medium": 500,
+    "semi-bold": 600,
+    "semibold": 600,
+    "demi-bold": 600,
+    "bold": 700,
+    "extra-bold": 800,
+    "ultra-bold": 900,
+    "heavy": 900,
+    "black": 900,
+    "ultra": 900,
+    "ultra-black": 900,
+    "extra-ultra": 900
+  ),
+  $fr-font-weights
+);
+
+//- Line height
+//
+$fr-line-height: 1.6 !default;
+$fr-line-heights: () !default;
+$fr-line-heights: map-merge(
+  (
+    "xsmall": $fr-line-height * 0.5,
+    "small": $fr-line-height * 0.75,
+    "base": $fr-line-height * 1,
+    "large": $fr-line-height * 1.25,
+    "xlarge": $fr-line-height * 1.5
+  ),
+  $fr-line-heights
+);
+
+//- Letter-spacing
+//
+$fr-letter-spacing: 0 !default;
+$fr-letter-spacings: () !default;
+$fr-letter-spacings: map-merge(
+  (
+    "xtight": $fr-letter-spacing - 1.5,
+    "tight": $fr-letter-spacing - 0.5,
+    "base": $fr-letter-spacing,
+    "loose": $fr-letter-spacing + 2,
+    "xloose": $fr-letter-spacing + 4.5
+  ),
+  $fr-letter-spacings
+);
