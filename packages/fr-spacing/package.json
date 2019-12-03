@@ -4,6 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "@formare/color": "^0.6.0"
+    "@formare/button": "^0.6.0",
+    "@formare/color": "^0.6.0",
+    "@formare/elevation": "^0.6.0"
   }
 }
