@@ -1,14 +1,4 @@
-@import "./functions";
 @import "./variables";
-
-/**
- * Core spacing mixin to generate spacing CSS classes.
- */
-@mixin fr-spacing {
-  // creates two spacing variants with and without abbreviation.
-  @include fr-create-spacing-classes($is-abbreviated: false);
-  @include fr-create-spacing-classes($is-abbreviated: true);
-}
 
 /**
  *
@@ -33,9 +23,9 @@
     $spacing-type-stylerule: "" !default;
     @if $is-abbreviated {
       // creates either "mg" or "pd" stylerule;
-      $spacing-stylerule: $spacing-type-abbreviation;
+      $spacing-type-stylerule: $spacing-type-abbreviation;
     } @else {
-      $spacing-stylerule: $spacing-type-capitalized;
+      $spacing-type-stylerule: $spacing-type-capitalized;
     }
 
     // Generates .Margin/.mg and .Padding/.pd classes.
@@ -57,10 +47,10 @@
     $spacing-direction-stylerule: "" !default;
     @if ($is-abbreviated) {
       // e.g: "mg-left", "mg-top"
-      $direction-stylerule: "-#{$spacing-direction-lowercased}";
+      $spacing-direction-stylerule: "-#{$spacing-direction-lowercased}";
     } @else {
       // e.g: PaddingLeft, MarginTop
-      $direction-stylerule: $spacing-direction-capitalized;
+      $spacing-direction-stylerule: $spacing-direction-capitalized;
     }
 
     // Generates .Margin(Left|Top|Right|Bottom) classes with base spacing value.
@@ -70,14 +60,6 @@
       // prettier-ignore
       @include fr-create-spacing-values($is-abbreviated, $spacing-type, $spacing-direction);
     }
-  }
-
-  // TO-DO
-  @each $spacing-axis, $spacing-axis-directions in $fr-spacing-axis-map {
-    // $spacing-axis: "x", "y",
-    // $spacing-axis-directions: if "x" -> "left" & "right"
-
-    
   }
 }
 
@@ -100,14 +82,11 @@
   $spacing-type,
   $spacing-direction: "all"
 ) {
-  @each $spacing-size in $fr-spacings {
-    $spacing-size: unquote($spacing-size);
-    $spacing-type: unquote($spacing-type);
-
-    &\:#{$spacing-size} {
+  @each $spacing-size, $spacing-value in $fr-spacings {
+    &-#{$spacing-size} {
       @if $spacing-direction == "all" {
         #{$spacing-type}: fr-spacing($spacing-size);
-      } @else if $spacing-direction == "x" or $spacing-direction "y" {
+      } @else if $spacing-direction == "x" or $spacing-direction == "y" {
         @each $direction in map-get($fr-spacing-axes, $spacing-direction) {
           #{$spacing-type}-#{$direction}: fr-spacing($spacing-size);
         }
