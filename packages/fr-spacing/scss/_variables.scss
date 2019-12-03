@@ -1,3 +1,5 @@
+@import "./functions";
+
 $fr-spacing: 1rem !default;
 $fr-spacings: () !default;
 $fr-spacings: map-merge(
@@ -27,7 +29,7 @@ $fr-spacing-type-map: (
 $fr-spacing-direction-map: ("top", "left", "right", "bottom");
 
 // prettier-ignore
-$fr-spacing-axis-map: (
+$fr-spacing-axes: (
   "x": ("left", "right"),
   "y": ("top", "bottom")
 );
