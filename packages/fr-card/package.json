@@ -2,5 +2,9 @@
   "name": "@formare/card",
   "version": "0.6.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@formare/button": "^0.6.0",
+    "@formare/elevation": "^0.6.0"
+  }
 }
