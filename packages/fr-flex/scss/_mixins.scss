@@ -1,0 +1,83 @@
+@import "./variables";
+
+@mixin fr-create-flex-classes() {
+  .Flex {
+    @include fr-flex-directions();
+    @include fr-flex-presets();
+    @include fr-flex-grows();
+    // @include fr-create-flex-shrink();
+    // @include fr-create-flex-flow();
+
+    display: flex !important;
+  }
+
+  .InlineFlex {
+    display: inline-flex !important;
+  }
+
+  @include fr-create-flex-alignment($alignment-type: "items");
+  @include fr-create-flex-alignment($alignment-type: "content");
+}
+
+@mixin fr-create-flex-alignment($alignment-type) {
+  @each $alignment-axis in $fr-alignment-axis-map {
+    $capitalized-alignment-type: capitalize($alignment-type);
+    $alignment-type-stylerule: "" !default;
+
+    @each $alignment-type in $fr-alignment-type-map {
+      @if $alignment-type == "items" {
+        // e.g .AlignItems or .JustifyItems
+        $alignment-type-stylerule: "#{$capitalized-alignment-type}Items";
+      } @else if $alignment-type == "content" {
+        // e.g .AlignContent or .JustifyContent
+        $alignment-type-stylerule: "#{$capitalized-alignment-type}Content";
+      }
+    }
+
+    // .#{$alignment-type-stylerule} {
+    //   @include fr-create-flex-alignment-variants($alignment-axis);
+    // }
+  }
+}
+
+@mixin fr-flex-presets() {
+  &-initial {
+    flex: 0 1 auto !important;
+  }
+
+  &-1 {
+    flex: 1 1 0% !important;
+  }
+
+  &-auto {
+    flex: 1 1 auto !important;
+  }
+
+  &-none {
+    flex: none !important;
+  }
+}
+
+@mixin fr-flex-directions() {
+  @each $direction in $fr-flex-directions {
+    &-#{$direction} {
+      flex-direction: $direction !important;
+    }
+  }
+}
+
+//- Flex Grow & Shrink
+//
+@mixin fr-flex-grows() {
+  @for $i from 0 through 10 {
+    &Grow-#{$i} {
+      flex-grow: $i !important;
+    }
+
+    &Shrink-#{$i} {
+      flex-shrink: $i !important;
+    }
+  }
+}
+
+//

@@ -1,0 +1,34 @@
+$fr-flex-directions: ("row", "column");
+
+$fr-alignment-axis-map: ("align", "justify");
+$fr-alignment-type-map: ("items", "content");
+
+$fr-alignment-content-map: () !default;
+$fr-alignment-content-map: map-merge(
+  (
+    "start": flex-start,
+    "center": center,
+    "end": flex-end,
+    "baseline": baseline,
+    "between": space-between,
+    "around": space-around,
+    "evenly": space-evenly,
+    "stretch": stretch
+  ),
+  $fr-alignment-content-map
+);
+
+//
+$fr-alignment-item-map: () !default;
+$fr-alignment-item-map: map-merge(
+  (
+    "start": flex-start,
+    "center": center,
+    "end": flex-end,
+    "stretch": stretch,
+    "baseline": baseline,
+    "left": left,
+    "right": right
+  ),
+  $fr-alignment-item-map
+);
