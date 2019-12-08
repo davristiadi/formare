@@ -1,42 +1,16 @@
 @import "./variables";
 
-@mixin fr-create-flex-classes() {
+@mixin fr-create-flex-base-classes() {
   .Flex {
     @include fr-flex-directions();
     @include fr-flex-presets();
     @include fr-flex-grows();
-    // @include fr-create-flex-shrink();
-    // @include fr-create-flex-flow();
 
     display: flex !important;
   }
 
   .InlineFlex {
     display: inline-flex !important;
-  }
-
-  @include fr-create-flex-alignment($alignment-type: "items");
-  @include fr-create-flex-alignment($alignment-type: "content");
-}
-
-@mixin fr-create-flex-alignment($alignment-type) {
-  @each $alignment-axis in $fr-alignment-axis-map {
-    $capitalized-alignment-type: capitalize($alignment-type);
-    $alignment-type-stylerule: "" !default;
-
-    @each $alignment-type in $fr-alignment-type-map {
-      @if $alignment-type == "items" {
-        // e.g .AlignItems or .JustifyItems
-        $alignment-type-stylerule: "#{$capitalized-alignment-type}Items";
-      } @else if $alignment-type == "content" {
-        // e.g .AlignContent or .JustifyContent
-        $alignment-type-stylerule: "#{$capitalized-alignment-type}Content";
-      }
-    }
-
-    // .#{$alignment-type-stylerule} {
-    //   @include fr-create-flex-alignment-variants($alignment-axis);
-    // }
   }
 }
 
@@ -81,3 +55,41 @@
 }
 
 //
+
+@mixin fr-create-flex-alignment-classes() {
+  @each $alignment-axis in $fr-alignment-axes {
+    $capitalized-alignment-axis: capitalize($alignment-axis);
+    $alignment-stylerule: "" !default;
+    $alignment-property: "" !default;
+
+    @debug "Alignment axis: #{$alignment-axis}";
+
+    @each $alignment-type, $alignment-type-map in $fr-alignment-types {
+      @if $alignment-type == "items" {
+        // e.g .AlignItems or .JustifyItems
+        $alignment-stylerule: "#{$capitalized-alignment-axis}Items";
+        $alignment-property: "#{$alignment-axis}-items";
+      } @else if $alignment-type == "content" {
+        // e.g .AlignContent or .JustifyContent
+        $alignment-stylerule: "#{$capitalized-alignment-axis}Content";
+        $alignment-property: "#{$alignment-axis}-content";
+      }
+
+      .#{$alignment-stylerule} {
+        @include fr-flex-alignment-variants(
+          $alignment-type-map,
+          $alignment-property
+        );
+      }
+    }
+  }
+}
+
+@mixin fr-flex-alignment-variants($alignment-type-map, $alignment-property) {
+  @each $alignment-type-shorthand, $alignment-type-value in $alignment-type-map
+  {
+    &-#{$alignment-type-shorthand} {
+      #{$alignment-property}: $alignment-type-value !important;
+    }
+  }
+}
