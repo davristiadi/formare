@@ -1,0 +1,113 @@
+@import "@formare/shape/scss/variables";
+@import "@formare/color/scss/variables";
+@import "@formare/spacing/scss/functions";
+@import "./variables";
+
+@mixin fr-create-input-classes() {
+  .Input,
+  .Textarea {
+    @include fr-input-base-styles();
+    @include fr-input-states();
+    @include fr-input-color-theme-variants();
+    @include fr-input-size-variants();
+    @include fr-input-shape-variants();
+  }
+}
+
+@mixin fr-input-base-styles() {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  width: 100%;
+  font-family: $fr-input-font-family;
+  padding: $fr-input-spacing;
+  transition: $fr-input-transition;
+  font-size: $fr-input-font-size;
+  background-color: $fr-input-bg-color;
+  border-style: solid;
+  border-width: 1px;
+  border-color: $fr-input-border-color;
+  border-radius: $fr-input-border-radius;
+  outline: none;
+  white-space: normal;
+}
+
+@mixin fr-input-states($color-theme: "base") {
+  @include fr-input-focused-state($color-theme);
+  @include fr-input-hovered-state();
+  @include fr-input-disabled-state();
+}
+
+@mixin fr-input-focused-state($color-theme) {
+  $focused-border-color: "" !default;
+  $focused-box-shadow: "" !default;
+
+  @if $color-theme == "base" {
+    $focused-border-color: $fr-input-focused-border-color;
+    $focused-box-shadow: $fr-input-focused-box-shadow;
+  } @else {
+    $focused-border-color: fr-theme-color($color-theme);
+    $focused-box-shadow-color: fr-theme-color($color-theme);
+    $focused-box-shadow-values: $fr-input-focused-box-shadow-values;
+    $focused-box-shadow: $focused-box-shadow-values $focused-box-shadow-color;
+  }
+
+  @include fr-input-is-not-disabled() {
+    &:focus,
+    &.is-focused {
+      border-color: $focused-border-color;
+      box-shadow: $focused-box-shadow;
+    }
+  }
+}
+
+@mixin fr-input-hovered-state() {
+  @include fr-input-is-not-disabled() {
+    &:hover,
+    &.is-hovered {
+      border-color: $fr-input-hovered-border-color;
+    }
+  }
+}
+
+@mixin fr-input-disabled-state() {
+  &:disabled,
+  &.is-disabled {
+    background-color: $fr-input-disabled-background;
+    cursor: not-allowed;
+  }
+}
+
+@mixin fr-input-color-theme-variants() {
+  @each $color-theme, $color-hex-value in $fr-color-themes {
+    &--#{$color-theme} {
+      @include fr-input-states($color-theme);
+    }
+  }
+}
+
+@mixin fr-input-size-variants() {
+  @each $size-name, $size-value in $fr-font-sizes {
+    &--#{$size-name} {
+      font-size: fr-font-size($size-name);
+      padding: fr-spacing($size-name);
+    }
+  }
+}
+
+@mixin fr-input-shape-variants() {
+  &--rounded {
+    border-radius: $fr-input-rounded-border-radius;
+  }
+}
+
+/**
+ * Helper mixin to style input only when it's enabled
+ * Approach taken from MDC.
+ */
+@mixin fr-input-is-not-disabled() {
+  &:not(:disabled),
+  &:not(.is-disabled) {
+    @content;
+  }
+}

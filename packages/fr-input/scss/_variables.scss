@@ -1,0 +1,41 @@
+@import "@formare/shape/scss/variables";
+@import "@formare/typography/scss/variables";
+
+$fr-input-font-size: $fr-font-size !default;
+$fr-input-font-family: $fr-font-family-primary !default;
+
+$fr-input-bg-color: $white !default;
+$fr-input-fg-color: fr-color-contrast($fr-input-bg-color) !default;
+$fr-input-border-style: solid !default;
+$fr-input-border-width: 1px !default;
+$fr-input-border-color: $light !default;
+$fr-input-border-radius: fr-border-radius(base) !default;
+
+$fr-input-spacing-y: fr-spacing(small) !default;
+$fr-input-spacing-x: fr-spacing(base) !default;
+$fr-input-spacing: $fr-input-spacing-y $fr-input-spacing-x;
+
+$fr-input-transition: all 250ms ease-in-out;
+
+$fr-input-hovered-border-color: fr-color-theme-shade(primary, -20);
+
+$fr-input-focused-border-color: fr-color-theme-shade(primary, 0);
+
+$fr-input-focused-box-shadow-offset-y: 0 !default;
+$fr-input-focused-box-shadow-offset-x: 0 !default;
+$fr-input-focused-box-shadow-offsets: $fr-input-focused-box-shadow-offset-y
+  $fr-input-focused-box-shadow-offset-x !default;
+
+$fr-input-focused-box-shadow-blur: 0.2em !default;
+$fr-input-focused-box-shadow-spread: 0.1em !default;
+$fr-input-focused-box-shadow-color: fr-color-theme-opacity(primary, 0.2);
+$fr-input-focused-box-shadow-values: $fr-input-focused-box-shadow-offsets
+  ($fr-input-focused-box-shadow-blur) ($fr-input-focused-box-shadow-spread)
+  ($fr-input-focused-box-shadow-color) !default;
+
+$fr-input-focused-box-shadow: $fr-input-focused-box-shadow-values
+  ($fr-input-focused-box-shadow-color) !default;
+
+$fr-input-disabled-background: fr-color-theme("lighter");
+
+$fr-input-rounded-border-radius: fr-border-radius("base");
