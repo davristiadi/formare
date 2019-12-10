@@ -55,22 +55,22 @@ $info-color: $cello !default;
  * Fully mapped and configurable.
  */
 
-$color-themes: () !default;
-$color-themes: map-merge(
+$fr-color-themes: () !default;
+$fr-color-themes: map-merge(
   (
-    primary: $primary-color,
-    secondary: $secondary-color,
-    success: $success-color,
-    warning: $warning-color,
-    danger: $danger-color,
-    info: $info-color,
-    gray: $gray,
-    light: $light,
-    lighter: $lighter,
-    dark: $dark,
-    darker: $darker,
-    black: $black,
-    white: $white
+    "primary": $primary-color,
+    "secondary": $secondary-color,
+    "success": $success-color,
+    "warning": $warning-color,
+    "danger": $danger-color,
+    "info": $info-color,
+    "gray": $gray,
+    "light": $light,
+    "lighter": $lighter,
+    "dark": $dark,
+    "darker": $darker,
+    "black": $black,
+    "white": $white
   ),
-  $color-themes
+  $fr-color-themes
 );

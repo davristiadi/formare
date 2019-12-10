@@ -1,0 +1,29 @@
+@import "./variables";
+
+@mixin fr-create-color-classes() {
+  .Color,
+  .clr {
+    @include fr-color-theme-variants();
+  }
+
+  .BgColor,
+  .bg {
+    @include fr-bg-color-theme-variants();
+  }
+}
+
+@mixin fr-color-theme-variants() {
+  @each $theme, $color in $fr-color-themes {
+    &-#{$theme} {
+      color: $color !important;
+    }
+  }
+}
+
+@mixin fr-bg-color-theme-variants() {
+  @each $theme, $color in $fr-color-themes {
+    &-#{$theme} {
+      background-color: $color !important;
+    }
+  }
+}

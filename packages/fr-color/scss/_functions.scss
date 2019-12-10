@@ -1,5 +1,3 @@
-@import "./variables";
-
 @function tint($color, $percentage) {
   @return mix(white, $color, $percentage);
 }
@@ -9,60 +7,77 @@
 }
 
 /**
- * Returns the color value of the given theme name.
+ * Returns the color value of the given color theme.
  * e.g: fr-color-theme("primary") or fr-color-theme(primary)
+ *
+ * @param {$color-theme} | e.g "primary", "secondary"
  */
-@function fr-color-theme($theme) {
-  @if not map-has-key($color-themes, $theme) {
-    @error "The theme '#{$theme}' is not found in '$color-themes' variable map!";
+@function fr-color-theme($color-theme) {
+  // returns an error if $color-theme isn't found inside $fr-color-themes map.
+  @if not map-has-key($fr-color-themes, $color-theme) {
+    @error "The theme '#{$color-theme}' is not found in '$fr-color-themes' variable map!";
   }
 
-  @return map-get($color-themes, $theme);
+  @return map-get($fr-color-themes, $color-theme);
 }
 
 /**
- * Returns a different shade variant of the given $color.
- * e.g: fr-color-shade(#abc123, 100)
+ * Returns a different shade variant from the given color value.
+ * e.g: fr-color-shade(#abc123, 50)
+ *
+ * @param {$color-value} | e.g #ffffff, #ff0000
  */
-@function fr-color-shade($color, $shade-level: 0) {
+@function fr-color-shade($color-value, $shade-level: 0) {
   // returns the absolute value of $shade-level and round it to the nearest multiple of 10.
-  $shade-pct: abs($shade-level) * 1%;
-  // $shade-pct: round($shade-pct * 500) * 500;
+  $shade-percentage: abs($shade-level) * 1%;
+  // $shade-percentage: round($shade-percentage * 500) * 500;
 
   @if $shade-level > 100 or $shade-level < -100 {
     @error "$shade-level value cannot exceed 100 or less than -100!";
   }
 
   @if $shade-level > 0 {
-    @return shade($color, $shade-pct);
+    @return shade($color-value, $shade-percentage);
   } @else {
-    @return tint($color, $shade-pct);
+    @return tint($color-value, $shade-percentage);
   }
 }
 
 /**
- * Similar to fr-color-shade function, returns a different shade variant, but from a specific theme 
- * name. Theme should be available in $color-themes variable map, else it will return an error.
+ * The shorthand version of fr-color-theme and fr-color-shade functions.
+ *
+ * Gets the color value from the given color theme (e.g primary) and returns a different shade variant
+ * of the color value using the tinter shader method from the specified shade level.
+ *
+ * Color theme should be available in $fr-color-themes variable map, otherwise it will return an error.
  *
  * e.g: fr-color-theme-shade("primary", 50)
+ *
+ * @param {$color-theme} | "primary", "danger"
+ * @param {$shade-level} | range -100 to 100
  */
-@function fr-color-theme-shade($theme, $shade-level: 0) {
-  $color: fr-color-theme($theme);
-  @return fr-color-shade($color, $shade-level);
+@function fr-color-theme-shade($color-theme, $shade-level: 0) {
+  $color-value: fr-color-theme($color-theme);
+  @return fr-color-shade($color-value, $shade-level);
 }
 
 /**
  * A shorthand function to get a specific opacity level of the selected color theme.
- *
  * e.g: fr-color-theme-opacity("primary", 0.9)
+ *
+ * @param {$color-theme} | "primary", "danger"
+ * @param {$opacity-level} | range 0 to 1
  */
-@function fr-color-theme-opacity($color-theme, $opacity-level: 0) {
-  $color: fr-color-theme($color-theme);
-  @return rgba($color, $opacity-level);
+@function fr-color-theme-opacity($color-theme, $opacity-level: 1) {
+  $color-value: fr-color-theme($color-theme);
+  @return rgba($color-value, $opacity-level);
 }
 
 /**
- * Returns an accessible contrasting color against the given $color.
+ * Returns an accessible contrasting color against the given color value.
+ *
+ * TO-DO: Since this function is literally taken from Bootstrap, create a custom function
+ * for this.
  */
 @function fr-color-contrast($color) {
   $color-contrast-threshold: 200;
@@ -78,7 +93,17 @@
   @return if($yiq >= $color-contrast-threshold, $darker, $lighter);
 }
 
+@function fr-color-theme-contrast($color-theme) {
+  @if not map-has-key($fr-color-themes, $color-theme) {
+    @error "The theme '#{$color-theme}' is not found in '$fr-color-themes' variable map!";
+  }
+
+  $color-value: fr-color-theme($color-theme);
+  @return fr-color-contrast($color-value);
+}
+
 // Specific theme color getter
+// TO-DO: Stillm need
 @function primary-color($color-shade-level: 0) {
   @return fr-color-theme-shade(primary, $color-shade-level);
 }
