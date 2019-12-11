@@ -1,3 +1,21 @@
+@import "./functions";
+
+$fr-border-radius: 4px !default;
+$fr-border-radius-rounded: 50px;
+$fr-border-radius-circle: 100%;
+$fr-border-radius-sizes: () !default;
+$fr-border-radius-sizes: map-merge(
+  (
+    "base": $fr-border-radius,
+    "large": $fr-border-radius * 1.5,
+    "xlarge": $fr-border-radius * 2,
+    "2xlarge": $fr-border-radius * 3,
+    "rounded": $fr-border-radius-rounded,
+    "circle": $fr-border-radius-circle
+  ),
+  $fr-border-radius-sizes
+);
+
 $fr-border-position-map: ();
 
 // Change this variable value if you'd like to generate border-width values more than 10.

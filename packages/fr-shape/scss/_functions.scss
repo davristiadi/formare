@@ -1,0 +1,7 @@
+@function fr-border-radius($border-radius-size) {
+  @if not map-has-key($fr-border-radius-sizes, $border-radius-size) {
+    @error "Variable '#{$border-radius}' is not found in '$fr-border-radius-sizes' variable map!";
+  }
+
+  @return map-get($fr-border-radius-sizes, $border-radius-size);
+}
