@@ -1,0 +1,37 @@
+---
+path: '/docs/introduction/requirements'
+title: 'Requirements'
+description: 'Minimal requirements to get Formare to work properly in your project'
+---
+
+## Introduction
+
+Formare is a **modern** CSS framework which is highly suited for modern web development with HTML5; the
+latest standard for web development. To make sure everything works correctly, we highly recommend that
+you do these checklists below after adding Formare:
+
+#### Declare `<!DOCTYPE html>`
+
+`<!DOCTYPE html>` is required to make sure your browser runs in HTML5 mode which will enable modern HTML
+tags like `<header>`, `<footer>`, or `<section>` and to make sure they work nicely without any noticeable setbacks.
+
+<!-- prettier-ignore -->
+```html
+<!DOCTYPE html> 
+<html>
+  <head>
+  ...
+```
+
+#### Set Responsive Meta Tag
+
+Formare is made for _mobile-first_ web development. We highly recommend you to put this tag inside your project
+so Formare can scale properly on mobile devices.
+
+<!-- prettier-ignore -->
+```html
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  ...
+</head>
+```

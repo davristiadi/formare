@@ -1,0 +1,96 @@
+---
+path: '/docs/components/card'
+title: 'Cards'
+description: 'A container component that displays content usually within a specific context.'
+---
+
+## Overview
+
+Nisi aute tempor aliquip pariatur duis Lorem consectetur ex elit est ex consectetur quis.
+Non adipisicing veniam adipisicing laborum fugiat occaecat Lorem. Quis eu ullamco nulla dolore
+aliqua duis minim consectetur adipisicing dolore adipisicing aute enim.
+
+```html preview=true layout=horizontal
+<div class="Grid Grid-12 Grid-sm-6">
+  <div class="Card">
+    <div class="Card-title">
+      <h5 class="Title">Card Title</h5>
+      <p class="Subtitle u-Color-gray">Card subtitle</p>
+    </div>
+    <div class="Card-media">
+      <img alt="example-image" src="https://bit.ly/2oLjf6w" />
+    </div>
+    <div class="Card-body">
+      <p>
+        Voluptate eiusmod fugiat amet id culpa sunt commodo consectetur. Id sunt
+        veniam est aliquip cupidatat tempor Lorem do est do. Dolor reprehenderit
+        mollit cillum.
+      </p>
+    </div>
+    <div class="Card-footer">
+      <button class="Button Button--primary">Learn more</button>
+    </div>
+  </div>
+</div>
+```
+
+## Parts
+
+A card component consists of numerous parts that you can mix and match according to your needs:
+
+1. `Card-title`: Usually contains a title text to describe the card's content. Semantically,
+   it should be located at the **very top** of the card, but it can be placed anywhere you want.
+2. `Card-media`: Displays the **thumbnail** of the card; be it video or image, that describes the
+   content. Usually located at the top of a card **after** `.Card-title`.
+3. `Card-body`: Contains the **text** or **paragraph** that describes the content of a card.
+4. `Card-footer`: Usually contains **actions** (e.g button or links) where users can interact with.
+
+We have also provided the `.Card-block` class if you wish to remove any semantic meaning of parts
+of a card component.
+
+## Elevated
+
+Simply append the `.Card--elevated` modifier class to apply elevation behavior.
+
+```html preview=true
+<div class="Grid Grid-12 Grid-sm-6">
+  <div class="Card Card--elevated">
+    <div class="Card-title">
+      <h5 class="Title">Card Title</h5>
+      <p class="Text Subtitle u-Color-gray">Card subtitle</p>
+    </div>
+    <div class="Card-media">
+      <img alt="example-image" src="https://bit.ly/2oLjf6w" />
+    </div>
+    <div class="Card-body">
+      <p>
+        Voluptate eiusmod fugiat amet id culpa sunt commodo consectetur. Id sunt
+        veniam est aliquip cupidatat tempor Lorem do est do. Dolor reprehenderit
+        mollit cillum.
+      </p>
+    </div>
+    <div class="Card-footer">
+      <button class="Button Button--primary">Learn more</button>
+    </div>
+  </div>
+</div>
+```
+
+## Card with List Items
+
+```html preview=true
+<div class="Card">
+  <div class="Card-body">
+    <div class="ListGroup">
+      <div class="ListGroup-item">
+        Ullamco sint irure esse nisi ipsum ea ad consequat nulla laborum.
+      </div>
+      <div class="ListGroup-item">Sit ipsum amet et et elit.</div>
+      <div class="ListGroup-item">
+        In officia consequat voluptate aute nulla labore dolor dolor esse
+        laboris excepteur enim labore id.
+      </div>
+    </div>
+  </div>
+</div>
+```

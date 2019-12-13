@@ -1,0 +1,58 @@
+@import 'src/scss/vendor/abstracts';
+
+$fd-included-languages: html css js;
+
+.CodeBlock {
+  position: relative;
+  font-size: 87.5%;
+  padding: fr-spacing(large);
+  border-radius: border-radius(base);
+  overflow: auto;
+  margin: 0;
+
+  @each $lang in $fd-included-languages {
+    &[data-language='#{$lang}'] {
+      &:before {
+        content: '#{$lang}';
+        font-family: font-family(primary);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: white;
+        position: absolute;
+        top: fr-spacing(xsmall);
+        right: fr-spacing(xsmall);
+        font-size: font-size(2xsmall);
+        padding: fr-spacing(2xsmall) spacing(xsmall);
+        font-weight: fr-font-weight(bold);
+        border-radius: border-radius(base);
+        background-color: shade(#2a2734, 30%);
+        z-index: 1;
+      }
+    }
+  }
+}
+
+.CodePreview {
+  > * {
+    border-radius: 0;
+
+    &:first-child {
+      border-top-left-radius: border-radius(base);
+      border-top-right-radius: border-radius(base);
+    }
+
+    &:last-child {
+      border-bottom-left-radius: border-radius(base);
+      border-bottom-right-radius: border-radius(base);
+    }
+  }
+
+  &-display {
+    padding: fr-spacing(large);
+    border: solid 1px fr-color-theme(light);
+  }
+
+  &-codeBlock {
+    margin: 0;
+  }
+}

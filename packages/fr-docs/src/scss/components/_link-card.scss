@@ -1,0 +1,15 @@
+.LinkCard {
+  @include fr-card();
+  @include fr-card-parts();
+  @include fr-card-shapes();
+  @include fr-elevation(4, $opacity: 0.1);
+
+  transition: $frd-link-card-transition;
+
+  &:hover {
+    @include fr-elevation(12);
+    border-color: fr-color-theme(primary);
+    color: fr-color-theme(primary);
+    transform: $frd-link-card-hovered-transform;
+  }
+}

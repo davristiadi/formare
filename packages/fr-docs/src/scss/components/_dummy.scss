@@ -1,0 +1,10 @@
+$fd-dummy-block-color-theme: primary;
+$fd-dummy-block-color: fr-color-theme-opacity($fd-dummy-block-color-theme, 0.8);
+
+.DummyBlock {
+  position: relative;
+  background-color: $fd-dummy-block-color;
+  color: fr-color-contrast($fd-dummy-block-color);
+  padding: fr-spacing(small);
+  border-radius: border-radius(base);
+}

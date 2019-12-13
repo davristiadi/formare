@@ -1,0 +1,30 @@
+@import 'src/scss/vendor/abstracts';
+
+.MainHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5em;
+  z-index: 100;
+
+  > .Navbar {
+    position: relative;
+  }
+
+  &-brand {
+    padding-right: fr-spacing(base);
+  }
+
+  @include media(md) {
+    &-brand {
+      padding-left: fr-spacing(base);
+    }
+  }
+}
+
+.MainBody {
+  position: relative;
+  margin-top: 5em;
+  z-index: 1;
+}

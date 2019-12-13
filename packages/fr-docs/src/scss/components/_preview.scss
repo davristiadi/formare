@@ -1,0 +1,67 @@
+.Preview {
+  position: relative;
+  display: flex;
+  margin: fr-spacing(large) 0;
+  flex-direction: column;
+
+  &-display {
+    padding: fr-spacing(large);
+    border: solid 1px fr-color-theme(light);
+    border-top-left-radius: border-radius(large);
+    border-top-right-radius: border-radius(large);
+
+    @each $theme, $value in $color-themes {
+      &--#{$theme} {
+        background-color: $value;
+      }
+    }
+  }
+
+  &-code {
+    .Highlight {
+      > pre {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+    }
+  }
+
+  @include media(md) {
+    &--horizontal {
+      flex-direction: row;
+    }
+
+    &--horizontal & {
+      &-display,
+      &-code {
+        width: 50%;
+      }
+
+      &-display {
+        border-radius: 0;
+        border-top-left-radius: border-radius(large);
+        border-bottom-left-radius: border-radius(large);
+      }
+
+      &-code {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
+        .Highlight {
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
+
+          > pre {
+            border-radius: 0;
+            flex-grow: 1;
+            height: 100%;
+            border-top-right-radius: border-radius(large);
+            border-bottom-right-radius: border-radius(large);
+          }
+        }
+      }
+    }
+  }
+}

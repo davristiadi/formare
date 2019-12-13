@@ -1,0 +1,148 @@
+---
+path: '/docs/utilities/flexbox'
+title: 'Flexbox'
+description: 'Various flexbox utility classes to create flexbox layout easily.'
+---
+
+At the most basic level, apply the `.u-Flex` class to transform an element into a flex container.
+All direct children inside this container will also be converted into flex items.
+
+The `.u-Flex` class will apply `display: flex` property. Use `.u-InlineFlex` class instead to apply
+`display: inline-flex`.
+
+```html preview=true
+<div class="DummyBlock u-Flex u-MarginBottom">
+  <div class="DummyBlock u-MarginRight">Flex Item</div>
+  <div class="DummyBlock u-MarginRight">Flex Item</div>
+  <div class="DummyBlock">Flex Item</div>
+</div>
+
+<div class="DummyBlock u-InlineFlex DummyBlock">
+  <div class="DummyBlock u-MarginRight">Flex Item</div>
+  <div class="DummyBlock">Flex Item</div>
+</div>
+```
+
+<!--
+<Preview lang="html">
+  <PreviewDisplay>
+    <div className="DummyBlock u-Flex u-MarginBottom">Flexbox Container</div>
+    <div className="DummyBlock u-InlineFlex">Inline Flexbox Container</div>
+  </PreviewDisplay>
+  <PreviewCode>
+    {`
+    <div className="u-Flex">Flexbox Container</div>
+    <div className="u-InlineFlex">Inline Flexbox Container</div>
+    `}
+  </PreviewCode>
+</Preview> -->
+
+## Flex Direction
+
+There are two types of flex direction utility classes that you can use:
+
+1. `.u-Flex-row`
+2. `.u-Flex-column`
+
+Use `.u-Flex-row` instead to create a flex container with `flex-direction: row` property to **horizontally** align flex items.
+
+```html preview=true
+<div class="DummyBlock u-Flex u-Flex-row">
+  <div class="DummyBlock u-MarginRight">Flex Item</div>
+  <div class="DummyBlock u-MarginRight">Flex Item</div>
+  <div class="DummyBlock u-MarginRight">Flex Item</div>
+</div>
+```
+
+Use `.u-Flex-column` instead to create a flex container with `flex-direction: column` property to **vertically** align flex items.
+
+```html preview=true
+<div class="DummyBlock u-Flex u-Flex-column u-Flex:">
+  <div class="DummyBlock u-MarginBottom">Flex Item</div>
+  <div class="DummyBlock u-MarginBottom">Flex Item</div>
+  <div class="DummyBlock">Flex Item</div>
+</div>
+```
+
+## Flex Alignments
+
+Lorem nisi duis irure sint dolore minim ullamco quis mollit dolor tempor dolor irure consectetur.
+
+1. Align items, as denoted with `.u-AlignItems-{type}`
+2. Justify content, as denoted with `.u-JustifyContent-{type}`
+
+### Justify Content
+
+Commodo reprehenderit `.u-JustifyContent-{type}` fugiat deserunt culpa aliqua exercitation.
+
+```html preview=true
+<div class="DummyBlock u-Flex u-JustifyContent-start u-MarginBottom">
+  <div class="DummyBlock u-MarginRight">Flex Item</div>
+  <div class="DummyBlock u-MarginRight">Flex Item</div>
+  <div class="DummyBlock">Flex Item</div>
+</div>
+<div class="DummyBlock u-Flex u-JustifyContent-center u-MarginBottom">
+  <div class="DummyBlock u-MarginRight">Flex Item</div>
+  <div class="DummyBlock u-MarginRight">Flex Item</div>
+  <div class="DummyBlock">Flex Item</div>
+</div>
+<div class="DummyBlock u-Flex u-JustifyContent-end u-MarginBottom">
+  <div class="DummyBlock u-MarginRight">Flex Item</div>
+  <div class="DummyBlock u-MarginRight">Flex Item</div>
+  <div class="DummyBlock">Flex Item</div>
+</div>
+<div class="DummyBlock u-Flex u-JustifyContent-baseline u-MarginBottom">
+  <div class="DummyBlock u-MarginRight">Flex Item</div>
+  <div class="DummyBlock u-MarginRight">Flex Item</div>
+  <div class="DummyBlock">Flex Item</div>
+</div>
+<div class="DummyBlock u-Flex u-JustifyContent-stretch">
+  <div class="DummyBlock u-MarginRight">Flex Item</div>
+  <div class="DummyBlock u-MarginRight">Flex Item</div>
+  <div class="DummyBlock">Flex Item</div>
+</div>
+```
+
+### Align Items
+
+Non adipisicing commodo eiusmod `u-AlignItems-{type}` laborum qui deserunt eu.
+
+```html preview=true
+<div class="Grids">
+  <div class="Grid Grid-6">
+    <div class="DummyBlock u-Flex u-AlignItems-stretch" style="height: 10em">
+      <div class="DummyBlock u-MarginRight">Flex Item</div>
+      <div class="DummyBlock u-MarginRight">Flex Item</div>
+      <div class="DummyBlock">Flex Item</div>
+    </div>
+  </div>
+  <div class="Grid Grid-6">
+    <div class="DummyBlock u-Flex u-AlignItems-start" style="height: 10em">
+      <div class="DummyBlock u-MarginRight">Flex Item</div>
+      <div class="DummyBlock u-MarginRight">Flex Item</div>
+      <div class="DummyBlock">Flex Item</div>
+    </div>
+  </div>
+  <div class="Grid Grid-6">
+    <div class="DummyBlock u-Flex u-AlignItems-center" style="height: 10em">
+      <div class="DummyBlock u-MarginRight">Flex Item</div>
+      <div class="DummyBlock u-MarginRight">Flex Item</div>
+      <div class="DummyBlock">Flex Item</div>
+    </div>
+  </div>
+  <div class="Grid Grid-6">
+    <div class="DummyBlock u-Flex u-AlignItems-end" style="height: 10em">
+      <div class="DummyBlock u-MarginRight">Flex Item</div>
+      <div class="DummyBlock u-MarginRight">Flex Item</div>
+      <div class="DummyBlock">Flex Item</div>
+    </div>
+  </div>
+  <div class="Grid Grid-6">
+    <div class="DummyBlock u-Flex u-AlignItems-baseline" style="height: 10em">
+      <div class="DummyBlock u-MarginRight">Flex Item</div>
+      <div class="DummyBlock u-MarginRight u-FontSize-2xlarge">Flex Item</div>
+      <div class="DummyBlock">Flex Item</div>
+    </div>
+  </div>
+</div>
+```

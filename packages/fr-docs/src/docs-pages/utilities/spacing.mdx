@@ -1,0 +1,77 @@
+---
+path: '/docs/utilities/spacing'
+title: 'Spacing'
+description: 'Apply margin or padding to add gaps between elements or components.'
+---
+
+## Basic Usage
+
+Elit sunt laborum sit aliqua exercitation dolor est.
+
+`u-{Property}{Direction}-{Size}`
+
+### Property
+
+| Property  | Class Output  | Description              |
+| --------- | ------------- | ------------------------ |
+| `Margin`  | `u-Margin-*`  | Applies `margin` value.  |
+| `Padding` | `u-Padding-*` | Applies `padding` value. |
+
+### Direction
+
+| Direction | Class Output           | Description                                           |
+| --------- | ---------------------- | ----------------------------------------------------- |
+| `Top`     | `u-{Property}Top-*`    | Applies spacing on the **top** of the element.        |
+| `Right`   | `u-{Property}Right-*`  | Applies spacing to the **right** side of the element. |
+| `Bottom`  | `u-{Property}Bottom-*` | Applies spacing to the **bottom** of the element.     |
+| `Left`    | `u-{Property}Left-*`   | Applies spacing to the **left** side of the element.  |
+
+## Variables
+
+Here's the default variables of spacing utility in which you can [customize]() to your liking.
+
+```scss
+$fr-spacing: 1rem !default;
+$fr-spacings: () !default;
+$fr-spacings: (
+  (
+    2xsmall: $spacing / 4.5,
+    xsmall: $spacing / 3,
+    small: $spacing / 1.5,
+    base: $spacing,
+    large: $spacing * 1.5,
+    xlarge: $spacing * 3,
+    2xlarge: $spacing * 4.5,
+  )
+);
+```
+
+## Functions
+
+Formare provides some spacing-based utility functions for applying spacing consistently
+throughout your project.
+
+### `fr-spacing()`
+
+Use `fr-spacing($key)` function to easily apply spacing to either `margin` or `padding` property.
+
+```scss
+.SomeComponent {
+  padding: fr-spacing('xlarge'); // Applies extra large padding.
+  margin: fr-spacing('2xlarge'); // Applies double extra large margin.
+}
+```
+
+## API
+
+Assuming the value of `$fr-spacing: 1rem` which is Formare's default spacing:
+
+| Size             | Function              | Calculation         | Value       |
+| ---------------- | --------------------- | ------------------- | ----------- |
+| `2x Extra Small` | `fr-spacing(2xsmall)` | `$fr-spacing / 4.5` | `~0.222rem` |
+| `Extra Small`    | `fr-spacing(xsmall)`  | `$fr-spacing / 3`   | `~0.333rem` |
+| `Small`          | `fr-spacing(small)`   | `$fr-spacing / 1.5` | `0.5rem`    |
+| `Base`           | `fr-spacing(base)`    | `$fr-spacing`       | `1rem`      |
+| `Large`          | `fr-spacing(large)`   | `$fr-spacing * 1.5` | `1.5rem`    |
+| `Extra Large`    | `fr-spacing(xlarge)`  | `$fr-spacing * 3`   | `3rem`      |
+| `2x Extra Large` | `fr-spacing(2xlarge)` | `$fr-spacing * 4.5` | `4.5rem`    |

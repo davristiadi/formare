@@ -1,0 +1,58 @@
+@import 'src/scss/vendor/abstracts';
+
+// @error $fr-font-sizes;
+
+.DocsContent {
+  position: relative;
+  min-height: calc(100vh - 5em);
+
+  @include media(md) {
+    padding-left: 20em;
+  }
+}
+
+.DocsArticle {
+  @include fr-container();
+  max-width: 56em !important;
+  padding: fr-spacing(base);
+
+  @include media(md) {
+    padding: fr-spacing(xlarge);
+  }
+
+  &-headline & {
+    &-title {
+      font-weight: fr-font-weight(bold);
+      font-size: font-size(5xlarge);
+    }
+
+    &-subtitle {
+      color: fr-color-theme(gray);
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+  }
+
+  &-content {
+    > *:first-child {
+      margin-top: fr-spacing(2xlarge);
+    }
+
+    @for $index from 1 through 6 {
+      > h#{$index} {
+        @if $index <= 3 {
+          margin-top: fr-spacing(3xlarge);
+        } @else {
+          margin-top: fr-spacing(xlarge);
+        }
+
+        font-weight: fr-font-weight(medium);
+
+        // &:first-child {
+        //   margin-top: 0;
+        //   padding-top: 0;
+        // }
+      }
+    }
+  }
+}

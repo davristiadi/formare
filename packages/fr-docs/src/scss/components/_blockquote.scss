@@ -1,0 +1,13 @@
+blockquote {
+  padding: fr-spacing(base);
+  margin: 0;
+  background-color: rgba(fr-color-theme(primary), 0.1);
+  color: fr-color-theme-shade(primary, 30);
+  border-radius: border-radius(base);
+  border-left: solid 4px fr-color-theme(primary);
+  margin: fr-spacing(base) 0;
+
+  > p {
+    margin: 0;
+  }
+}
