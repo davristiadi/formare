@@ -1,0 +1,31 @@
+@import "@formare/typography/scss/variables";
+@import "@formare/color/scss/functions";
+@import "@formare/color/scss/variables";
+@import "@formare/spacing/scss/functions";
+@import "@formare/animation/scss/variables";
+
+$fr-select-font-size: fr-font-size("base") !default;
+
+$fr-select-bg-color: $white !default;
+$fr-select-fg-color: fr-color-theme-contrast($fr-select-bg-color) !default;
+$fr-select-border-style: solid !default;
+$fr-select-border-width: 1px !default;
+$fr-select-border-color: fr-color-theme("light") !default;
+$fr-select-border-radius: fr-border-radius("bases") !default;
+
+$fr-select-spacing-y: fr-spacing("small") !default;
+$fr-select-spacing-x: fr-spacing("base") !default;
+$fr-select-spacing: $fr-select-spacing-y $fr-select-spacing-x;
+
+$fr-select-transition: all 250ms ease-in-out;
+
+$fr-select-hovered-border-color: fr-color-theme-shade(primary, -20);
+
+$fr-select-focused-border-color: fr-color-theme-shade(primary, 0);
+$fr-select-focused-box-shadow-blur: 0.2em !default;
+$fr-select-focused-box-shadow-spread: 0.1em !default;
+$fr-select-focused-box-shadow-color: fr-color-theme-opacity(primary, 0.2);
+$fr-select-focused-box-shadow-unified: 0 0 ($fr-select-focused-box-shadow-blur)
+  ($fr-select-focused-box-shadow-spread) ($fr-select-focused-box-shadow-color) !default;
+
+$fr-select-disabled-background: fr-color-theme("lighter");
