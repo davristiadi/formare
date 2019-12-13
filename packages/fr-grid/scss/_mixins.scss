@@ -1,0 +1,96 @@
+@import "./variables";
+
+@mixin fr-grid() {
+  @include fr-create-grid();
+}
+
+@mixin fr-create-grid() {
+  .Grids,
+  .Row {
+    @include fr-grid-row-base();
+    @include fr-grid-row-modifiers();
+  }
+
+  .Grid,
+  .Column {
+    @include fr-grid-column-base();
+    @include fr-grid-columns();
+  }
+}
+
+@mixin fr-grid-row-base() {
+  display: flex;
+  flex-wrap: wrap;
+  margin: ($grid-gap-gutter-width / -1);
+
+  // Applies gutter width to add whitespace between grid columns.
+  //
+  > .Grid,
+  > .Column,
+  > [class*="Grid-"],
+  > [class*="Column-"] {
+    padding: $grid-gap-gutter-width;
+  }
+}
+
+@mixin fr-grid-row-modifiers() {
+  &--gapless {
+    padding: 0 !important;
+
+    > .Grid,
+    > .Column,
+    > [class*="Column-"],
+    > [class*="Grid-"] {
+      padding: 0;
+    }
+  }
+}
+
+@mixin fr-grid-column-base() {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+@mixin fr-grid-columns() {
+  @for $index from 1 through $grid-columns {
+    $width: $index / $grid-columns;
+
+    &-#{$index},
+    &-#{$index} {
+      flex-grow: 1;
+      flex-shrink: 0;
+      flex-basis: percentage($width);
+      max-width: percentage($width);
+    }
+  }
+
+  @each $breakpoint, $width in $breakpoints {
+    @include media($breakpoint) {
+      &-#{$breakpoint},
+      &-#{$breakpoint} {
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: 0;
+        max-width: 100%;
+      }
+    }
+  }
+
+  @each $breakpoint, $width in $breakpoints {
+    @for $index from 1 through $fr-grid-columns {
+      @include media($breakpoint) {
+        $width: $index / $grid-columns;
+
+        &-#{$breakpoint}-#{$index},
+        &-#{$breakpoint}-#{$index} {
+          flex-grow: 1;
+          flex-shrink: 0;
+          flex-basis: percentage($width);
+          max-width: percentage($width);
+        }
+      }
+    }
+  }
+}
