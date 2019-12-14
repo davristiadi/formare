@@ -1,10 +1,8 @@
+@import "@formare/responsive/scss/variables";
+@import "@formare/responsive/scss/mixins";
 @import "./variables";
 
-@mixin fr-grid() {
-  @include fr-create-grid();
-}
-
-@mixin fr-create-grid() {
+@mixin fr-create-grid-classes() {
   .Grids,
   .Row {
     @include fr-grid-row-base();
@@ -21,7 +19,7 @@
 @mixin fr-grid-row-base() {
   display: flex;
   flex-wrap: wrap;
-  margin: ($grid-gap-gutter-width / -1);
+  margin: ($fr-grid-gap-gutter / -1);
 
   // Applies gutter width to add whitespace between grid columns.
   //
@@ -29,7 +27,7 @@
   > .Column,
   > [class*="Grid-"],
   > [class*="Column-"] {
-    padding: $grid-gap-gutter-width;
+    padding: $fr-grid-gap-gutter;
   }
 }
 
@@ -54,8 +52,8 @@
 }
 
 @mixin fr-grid-columns() {
-  @for $index from 1 through $grid-columns {
-    $width: $index / $grid-columns;
+  @for $index from 1 through $fr-grid-columns {
+    $width: $index / $fr-grid-columns;
 
     &-#{$index},
     &-#{$index} {
@@ -66,22 +64,18 @@
     }
   }
 
-  @each $breakpoint, $width in $breakpoints {
-    @include media($breakpoint) {
-      &-#{$breakpoint},
-      &-#{$breakpoint} {
-        flex-grow: 1;
-        flex-shrink: 0;
-        flex-basis: 0;
-        max-width: 100%;
-      }
-    }
+  // Creates
+  @include fr-append-responsive-media-classes() {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 0;
+    max-width: 100%;
   }
 
-  @each $breakpoint, $width in $breakpoints {
+  @each $breakpoint, $width in $fr-responsive-breakpoints {
     @for $index from 1 through $fr-grid-columns {
-      @include media($breakpoint) {
-        $width: $index / $grid-columns;
+      @include fr-responsive-media($breakpoint) {
+        $width: $index / $fr-grid-columns;
 
         &-#{$breakpoint}-#{$index},
         &-#{$breakpoint}-#{$index} {
