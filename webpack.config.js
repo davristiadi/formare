@@ -3,12 +3,14 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const autoprefixer = require("autoprefixer");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const PrettierPlugin = require("prettier-webpack-plugin");
+const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = env => {
   const isDev = env.NODE_ENV === "development";
   const isProd = env.NODE_ENV === "production";
-
-  console.log(env);
 
   return {
     name: "formare",
@@ -19,7 +21,7 @@ module.exports = env => {
       path: path.join(__dirname, "./dist"),
       filename: `${isProd ? "[name].min.css.js" : "[name].css.js"}`
     },
-    devtool: "source-map",
+    devtool: isDev ? "cheap-module-eval-source-map" : false,
     module: {
       rules: [
         {
@@ -46,12 +48,12 @@ module.exports = env => {
               options: {
                 sourceMap: true,
                 sassOptions: {
+                  minimize: false,
                   includePaths: [
-                    path.resolve(path.join(__dirname, "./node_modules"))
+                    path.resolve(path.join(__dirname, "/node_modules"))
                   ],
                   implementation: require("node-sass"),
-                  outputStyle: isDev && "expanded",
-                  minimize: isProd
+                  outputStyle: isProd ? "compressed" : "expanded"
                 }
               }
             }
@@ -60,12 +62,28 @@ module.exports = env => {
       ]
     },
     optimization: {
-      minimize: false
+      minimize: false,
+      minimizer: [
+        new UglifyJsPlugin({
+          uglifyOptions: {
+            output: {
+              comments: false
+            }
+          }
+        })
+      ]
     },
     plugins: [
       new MiniCssExtractPlugin({
         filename: `${isProd ? "[name].min.css" : "[name].css"}`
-      })
+      }),
+      new PrettierPlugin(),
+      new CompressionPlugin()
+      // new OptimizeCssAssetsPlugin({
+      //   cssProcessorPluginOptions: {
+      //     preset: ["default", { discardComments: { removeAll: true } }]
+      //   }
+      // })
     ]
   };
 };
