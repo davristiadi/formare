@@ -1,2 +1,4 @@
 @import "./scss/mixins";
-@include fr-color;
+
+@include fr-create-color-classes($type: "text");
+@include fr-create-color-classes($type: "background");
