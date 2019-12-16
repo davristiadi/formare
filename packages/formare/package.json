@@ -5,6 +5,11 @@
   "license": "MIT",
   "dependencies": {
     "@formare/button": "^0.6.0",
-    "@formare/elevation": "^0.6.0"
+    "@formare/color": "^0.6.0",
+    "@formare/elevation": "^0.6.0",
+    "@formare/layout": "^0.6.0",
+    "normalize.css": "^8.0.1",
+    "normalize.scss": "^0.1.0",
+    "sanitize.css": "^11.0.0"
   }
 }

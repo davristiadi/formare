@@ -1,3 +1,9 @@
-@import "./scss/reset";
-
+@import "~sanitize.css";
 @import "@formare/button/fr-button.scss";
+@import "@formare/typography/fr-typography.scss";
+@import "@formare/spacing/fr-spacing.scss";
+@import "@formare/layout/fr-layout.scss";
+@import "@formare/grid/fr-grid.scss";
+@import "@formare/color/fr-color.scss";
+@import "@formare/flex/fr-flex.scss";
+@import "@formare/input/fr-input.scss";
