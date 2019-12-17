@@ -25,9 +25,7 @@ $fr-font-sizes: () !default;
 $fr-font-sizes: map-merge(
   (
     "4xsmall": $fr-font-size * 0.402,
-    "xxxsmall": $fr-font-size * 0.482,
     "3xsmall": $fr-font-size * 0.482,
-    "xxsmall": $fr-font-size * 0.579,
     "2xsmall": $fr-font-size * 0.579,
     "xsmall": $fr-font-size * 0.694,
     "small": $fr-font-size * 0.833,
@@ -35,9 +33,7 @@ $fr-font-sizes: map-merge(
     "large": $fr-font-size * 1.2,
     "xlarge": $fr-font-size * 1.44,
     "2xlarge": $fr-font-size * 1.728,
-    "xxlarge": $fr-font-size * 1.728,
     "3xlarge": $fr-font-size * 2.074,
-    "xxxlarge": $fr-font-size * 2.074,
     "4xlarge": $fr-font-size * 2.488,
     "5xlarge": $fr-font-size * 2.986
   ),
@@ -47,12 +43,12 @@ $fr-font-sizes: map-merge(
 $fr-headings: () !default;
 $fr-headings: map-merge(
   (
-    "h1": font-size("5xlarge"),
-    "h2": font-size("4xlarge"),
-    "h3": font-size("3xlarge"),
-    "h4": font-size("2xlarge"),
-    "h5": font-size("xlarge"),
-    "h6": font-size("large")
+    "h1": fr-font-size("5xlarge"),
+    "h2": fr-font-size("4xlarge"),
+    "h3": fr-font-size("3xlarge"),
+    "h4": fr-font-size("2xlarge"),
+    "h5": fr-font-size("xlarge"),
+    "h6": fr-font-size("large")
   ),
   $fr-headings
 );
@@ -86,7 +82,7 @@ $fr-font-weights: map-merge(
 
 //- Line height
 //
-$fr-line-height: 1.6 !default;
+$fr-line-height: 1.5 !default;
 $fr-line-heights: () !default;
 $fr-line-heights: map-merge(
   (

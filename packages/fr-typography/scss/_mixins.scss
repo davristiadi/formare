@@ -2,15 +2,17 @@
 
 @mixin fr-create-typography-classes() {
   @include fr-create-font-size-classes();
+  @include fr-create-font-weight-classes();
+  @include fr-create-heading-classes();
 }
 
 /**
-* Create font size classes.
-*
-* Example:
-* - .FontSize or .FontSize-base -> Applies base font size
-* - .FontSize-2xsmall or .FontSize-3xlarge -> Applies different size font classes
-*/
+ * Create font size classes.
+ *
+ * Example:
+ * - .FontSize or .FontSize-base -> Applies base font size
+ * - .FontSize-2xsmall or .FontSize-3xlarge -> Applies different size font classes
+ */
 @mixin fr-create-font-size-classes() {
   .FontSize {
     @each $font-size, $font-size-value in $fr-font-sizes {
@@ -20,5 +22,26 @@
     }
 
     font-size: $fr-font-size !important;
+  }
+}
+
+@mixin fr-create-heading-classes() {
+  @each $heading, $heading-size in $fr-headings {
+    $heading-index: index($fr-headings, ($heading $heading-size));
+
+    h#{$heading-index},
+    .Heading-#{$heading-index} {
+      font-size: $heading-size !important;
+    }
+  }
+}
+
+@mixin fr-create-font-weight-classes() {
+  .FontWeight {
+    @each $font-weight, $font-weight-value in $fr-font-weights {
+      &-#{$font-weight} {
+        font-weight: $font-weight-value !important;
+      }
+    }
   }
 }
