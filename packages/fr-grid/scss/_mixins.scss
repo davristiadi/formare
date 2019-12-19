@@ -19,10 +19,8 @@
 @mixin fr-grid-row-base() {
   display: flex;
   flex-wrap: wrap;
-  margin: ($fr-grid-gap-gutter / -1);
+  margin: 0 ($fr-grid-gap-gutter / -1);
 
-  // Applies gutter width to add whitespace between grid columns.
-  //
   > .Grid,
   > .Column,
   > [class*="Grid-"],
@@ -55,7 +53,6 @@
   @for $index from 1 through $fr-grid-columns {
     $width: $index / $fr-grid-columns;
 
-    &-#{$index},
     &-#{$index} {
       flex-grow: 1;
       flex-shrink: 0;
@@ -64,7 +61,6 @@
     }
   }
 
-  // Creates
   @include fr-append-responsive-media-classes() {
     flex-grow: 1;
     flex-shrink: 0;
@@ -77,7 +73,6 @@
       @include fr-responsive-media($breakpoint) {
         $width: $index / $fr-grid-columns;
 
-        &-#{$breakpoint}-#{$index},
         &-#{$breakpoint}-#{$index} {
           flex-grow: 1;
           flex-shrink: 0;
