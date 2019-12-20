@@ -7,10 +7,10 @@
   .Input,
   .Textarea {
     @include fr-input-base-styles();
-    @include fr-input-states();
-    @include fr-input-color-theme-variants();
-    @include fr-input-size-variants();
-    @include fr-input-shape-variants();
+    @include fr-append-input-state-variants();
+    @include fr-append-input-color-theme-variants();
+    @include fr-append-input-size-variants();
+    @include fr-append-input-shape-variants();
   }
 }
 
@@ -32,7 +32,7 @@
   white-space: normal;
 }
 
-@mixin fr-input-states($color-theme: "base") {
+@mixin fr-append-input-state-variants($color-theme: "base") {
   @include fr-input-focused-state($color-theme);
   @include fr-input-hovered-state();
   @include fr-input-disabled-state();
@@ -78,15 +78,20 @@
   }
 }
 
-@mixin fr-input-color-theme-variants() {
-  @each $color-theme, $color-hex-value in $fr-color-themes {
+/**
+ * Append color theme variant classes.
+ */
+@mixin fr-append-input-color-theme-variants() {
+  @each $color-theme, $color-theme-value in $fr-color-themes {
     &--#{$color-theme} {
-      @include fr-input-states($color-theme);
+      @include fr-append-input-state-variants($color-theme);
+
+      border-color: $color-theme-value;
     }
   }
 }
 
-@mixin fr-input-size-variants() {
+@mixin fr-append-input-size-variants() {
   @each $size-name, $size-value in $fr-font-sizes {
     &--#{$size-name} {
       font-size: fr-font-size($size-name);
@@ -95,7 +100,7 @@
   }
 }
 
-@mixin fr-input-shape-variants() {
+@mixin fr-append-input-shape-variants() {
   &--rounded {
     border-radius: $fr-input-rounded-border-radius;
   }
@@ -106,8 +111,7 @@
  * Approach taken from MDC.
  */
 @mixin fr-input-is-not-disabled() {
-  &:not(:disabled),
-  &:not(.is-disabled) {
+  &:not(:disabled):not(.is-disabled) {
     @content;
   }
 }
