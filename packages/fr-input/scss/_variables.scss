@@ -30,8 +30,7 @@ $fr-input-focused-box-shadow-blur: 0.2em !default;
 $fr-input-focused-box-shadow-spread: 0.1em !default;
 $fr-input-focused-box-shadow-color: fr-color-theme-opacity(primary, 0.2);
 $fr-input-focused-box-shadow-values: $fr-input-focused-box-shadow-offsets
-  ($fr-input-focused-box-shadow-blur) ($fr-input-focused-box-shadow-spread)
-  ($fr-input-focused-box-shadow-color) !default;
+  ($fr-input-focused-box-shadow-blur) ($fr-input-focused-box-shadow-spread) !default;
 
 $fr-input-focused-box-shadow: $fr-input-focused-box-shadow-values
   ($fr-input-focused-box-shadow-color) !default;
