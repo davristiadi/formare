@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "@formare/button": "^0.6.0",
-    "@formare/elevation": "^0.6.0"
+    "@formare/elevation": "^0.6.0",
+    "formare": "^0.6.0"
   }
 }
