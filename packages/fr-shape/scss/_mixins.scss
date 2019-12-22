@@ -12,21 +12,61 @@
 
 @mixin fr-create-shape-classes() {
   @include fr-create-border-classes();
-  @include fr-create-border-radius-classes();
 }
 
 @mixin fr-create-border-classes() {
   .Border {
-    @include fr-border-width-values($border-side: "around");
-    @include fr-border-sides-props();
-    @include fr-border-color-theme-modifier-variants();
-
-    border-style: solid;
-    border-color: fr-color-gray-shade(100);
+    @include fr-border-base-styles();
+    @include fr-append-border-width-values($border-side: "around");
+    @include fr-append-border-side-properties();
+    @include fr-append-border-color-theme-values();
   }
 }
 
-@mixin fr-border-sides-props() {
+@mixin fr-border-base-styles() {
+  border-style: solid;
+  border-color: fr-color-gray-shade(100);
+}
+
+/**
+ * From range 1 to $fr-border-width-max, generate border width.
+ */
+@mixin fr-append-border-width-values($border-side: "around") {
+  // ----
+  // should create these classes
+  //
+  // &-1 {
+  //   border-width: 1px;
+  // }
+
+  // &-2 {
+  //   border-width: 2px;
+  // }
+
+  // up until...
+
+  // &-10 {
+  //   border-width: 10px;
+  // }
+  // ----
+
+  @for $border-width-value from 1 through $fr-border-width-max-value {
+    $border-width-selector: $border-width-value;
+
+    // change border width default selector according to $border-side that is passed.
+    // defaults to "around" which generates border-width around an element.
+    $border-width-property: border-width !default;
+    @if $border-side != "around" {
+      $border-width-property: border-#{$border-side}-width;
+    }
+
+    &-#{$border-width-selector} {
+      #{$border-width-property}: $border-width-value + px;
+    }
+  }
+}
+
+@mixin fr-append-border-side-properties() {
   // -----
   // should create these classes
   //
@@ -55,45 +95,7 @@
     $border-side-selector: $capitalized-border-side;
 
     &#{$border-side-selector} {
-      @include fr-create-border-width-values($border-side: $border-side);
-    }
-  }
-}
-
-/**
- * From range 1 to $fr-border-width-max, generate border width.
- */
-@mixin fr-create-border-width-values($border-side: "around") {
-  // ----
-  // should create these classes
-  //
-  // &-1 {
-  //   border-width: 1px;
-  // }
-
-  // &-2 {
-  //   border-width: 2px;
-  // }
-
-  // up until...
-
-  // &-10 {
-  //   border-width: 10px;
-  // }
-  // ----
-
-  @for $border-width-value from 1 through $fr-border-width-max-value {
-    $border-width-selector: $border-width-px;
-
-    // change border width default selector according to $border-side that is passed.
-    // defaults to "around" which generates border-width around an element.
-    $border-width-property: border-width !default;
-    @if $position != "around" {
-      $border-width-property: border-#{$border-side}-width;
-    }
-
-    &-#{$border-width-px} {
-      #{$border-width-property}: $border-width-px + px;
+      @include fr-append-border-width-values($border-side: $border-side);
     }
   }
 }
@@ -101,9 +103,9 @@
 /**
  * Creates different color variants
  */
-@mixin fr-create-border-color-theme-variants() {
+@mixin fr-append-border-color-theme-values() {
   @each $color-theme, $color-hex-value in $fr-color-themes {
-    &--#{$color-theme} {
+    &-#{$color-theme} {
       border-color: $color-hex-value !important;
     }
   }
