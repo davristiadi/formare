@@ -88,7 +88,7 @@ $fr-line-heights: map-merge(
   $fr-line-heights
 );
 
-$fr-letter-spacing: 0 !default;
+$fr-letter-spacing: 0px !default;
 $fr-letter-spacings: () !default;
 $fr-letter-spacings: map-merge(
   (
@@ -99,4 +99,15 @@ $fr-letter-spacings: map-merge(
     "xloose": $fr-letter-spacing + 4.5
   ),
   $fr-letter-spacings
+);
+
+$fr-text-transforms: () !default;
+$fr-text-transforms: map-merge(
+  (
+    "none": none,
+    "uppercase": uppercase,
+    "lowercase": lowercase,
+    "capitalize": capitalize
+  ),
+  $fr-text-transforms
 );

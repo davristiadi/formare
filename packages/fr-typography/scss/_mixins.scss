@@ -6,6 +6,36 @@
   @include fr-create-heading-classes();
 }
 
+@mixin fr-create-text-classes() {
+  @include fr-create-text-transform-classes();
+  @include fr-create-line-height-classes();
+  @include fr-create-letter-spacing-classes();
+}
+
+@mixin fr-create-text-transform-classes() {
+  @each $text-transform, $text-transform-value in $fr-text-transforms {
+    .Text-#{$text-transform} {
+      text-transform: $text-transform-value !important;
+    }
+  }
+}
+
+@mixin fr-create-letter-spacing-classes() {
+  @each $letter-spacing, $letter-spacing-value in $fr-letter-spacings {
+    .Tracking-#{$letter-spacing} {
+      letter-spacing: $letter-spacing-value !important;
+    }
+  }
+}
+
+@mixin fr-create-line-height-classes() {
+  @each $line-height, $line-height-value in $fr-line-heights {
+    .Leading-#{$line-height} {
+      line-height: $line-height-value !important;
+    }
+  }
+}
+
 /**
  * Create font size classes.
  *
