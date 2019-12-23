@@ -33,12 +33,12 @@
 }
 
 @mixin fr-append-input-state-variants($color-theme: "base") {
-  @include fr-input-focused-state($color-theme);
-  @include fr-input-hovered-state();
-  @include fr-input-disabled-state();
+  @include fr-append-input-focused-state($color-theme);
+  @include fr-append-input-hovered-state($color-theme);
+  @include fr-append-input-disabled-state();
 }
 
-@mixin fr-input-focused-state($color-theme) {
+@mixin fr-append-input-focused-state($color-theme) {
   $focused-border-color: "" !default;
   $focused-box-shadow: "" !default;
 
@@ -61,7 +61,7 @@
   }
 }
 
-@mixin fr-input-hovered-state() {
+@mixin fr-append-input-hovered-state($color-theme) {
   @include fr-input-is-not-disabled() {
     &:hover,
     &.is-hovered {
@@ -70,7 +70,7 @@
   }
 }
 
-@mixin fr-input-disabled-state() {
+@mixin fr-append-input-disabled-state() {
   &:disabled,
   &.is-disabled {
     background-color: $fr-input-disabled-background;
@@ -113,5 +113,61 @@
 @mixin fr-input-is-not-disabled() {
   &:not(:disabled):not(.is-disabled) {
     @content;
+  }
+}
+
+/**
+ * Generates InputGroup classes.
+ */
+@mixin fr-create-input-group-classes() {
+  .InputGroup {
+    @include fr-input-group-base-styles();
+    @include fr-append-input-group-parts();
+  }
+}
+
+@mixin fr-input-group-base-styles() {
+  display: flex;
+  flex-direction: row;
+
+  > * {
+    border-radius: 0;
+  }
+
+  > *:first-child {
+    border-top-left-radius: fr-border-radius("base");
+    border-bottom-left-radius: fr-border-radius("base");
+  }
+
+  > *:last-child {
+    border-top-right-radius: fr-border-radius("base");
+    border-bottom-right-radius: fr-border-radius("base");
+  }
+}
+
+@mixin fr-append-input-group-parts() {
+  @include fr-append-input-group-addon();
+}
+
+@mixin fr-append-input-group-addon() {
+  &-addon {
+    @include fr-input-group-addon-base-styles();
+    @include fr-append-input-group-color-theme-variants();
+  }
+}
+
+@mixin fr-input-group-addon-base-styles() {
+  display: flex;
+  align-items: center;
+  padding: 0 fr-spacing("base");
+  background-color: fr-color-theme("light");
+}
+
+@mixin fr-append-input-group-color-theme-variants() {
+  @each $color-theme, $color-theme-value in $fr-color-themes {
+    &--#{$color-theme} {
+      background-color: $color-theme-value !important;
+      color: fr-color-contrast($color-theme-value) !important;
+    }
   }
 }
