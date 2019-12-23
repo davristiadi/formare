@@ -2,17 +2,17 @@
 @import "@formare/typography/scss/variables";
 
 $fr-input-font-size: $fr-font-size !default;
-$fr-input-font-family: $fr-font-family-primary !default;
+$fr-input-font-family: fr-font-family("sans-serif") !default;
 
 $fr-input-bg-color: $white !default;
 $fr-input-fg-color: fr-color-contrast($fr-input-bg-color) !default;
 $fr-input-border-style: solid !default;
 $fr-input-border-width: 1px !default;
 $fr-input-border-color: $light !default;
-$fr-input-border-radius: fr-border-radius(base) !default;
+$fr-input-border-radius: fr-border-radius("base") !default;
 
-$fr-input-spacing-y: fr-spacing(small) !default;
-$fr-input-spacing-x: fr-spacing(base) !default;
+$fr-input-spacing-y: fr-spacing("small") !default;
+$fr-input-spacing-x: fr-spacing("base") !default;
 $fr-input-spacing: $fr-input-spacing-y $fr-input-spacing-x;
 
 $fr-input-transition: all 250ms ease-in-out;
