@@ -55,7 +55,7 @@
 
     // Generates .Margin(Left|Top|Right|Bottom) classes with base spacing value.
     &#{$spacing-direction-stylerule} {
-      #{$spacing-type}-#{$spacing-direction}: fr-spacing(base);
+      #{$spacing-type}-#{$spacing-direction}: fr-spacing(base) !important;
 
       // prettier-ignore
       @include fr-create-spacing-values($is-abbreviated, $spacing-type, $spacing-direction);
@@ -85,13 +85,15 @@
   @each $spacing-size, $spacing-value in $fr-spacings {
     &-#{$spacing-size} {
       @if $spacing-direction == "all" {
-        #{$spacing-type}: fr-spacing($spacing-size);
+        #{$spacing-type}: fr-spacing($spacing-size) !important;
       } @else if $spacing-direction == "x" or $spacing-direction == "y" {
         @each $direction in map-get($fr-spacing-axes, $spacing-direction) {
-          #{$spacing-type}-#{$direction}: fr-spacing($spacing-size);
+          #{$spacing-type}-#{$direction}: fr-spacing($spacing-size) !important;
         }
       } @else {
-        #{$spacing-type}-#{$spacing-direction}: fr-spacing($spacing-size);
+        #{$spacing-type}-#{$spacing-direction}: fr-spacing(
+          $spacing-size
+        ) !important;
       }
     }
   }

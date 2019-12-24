@@ -1,7 +1,3 @@
 @function fr-spacing($value, $map: $fr-spacings) {
   @return map-get($map, $value);
 }
-
-@function capitalize($string) {
-  @return to-upper-case(str-slice($string, 1, 1)) + str-slice($string, 2);
-}
