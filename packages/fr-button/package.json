@@ -8,6 +8,7 @@
   "dependencies": {
     "@formare/color": "^0.6.0",
     "@formare/elevation": "^0.6.0",
-    "@formare/spacing": "^0.6.0"
+    "@formare/spacing": "^0.6.0",
+    "formare": "^0.6.0"
   }
 }

@@ -4,23 +4,23 @@
 @import "@formare/shape/scss/variables";
 
 $fr-button-font-size: fr-font-size("regular") !default;
-$fr-button-font-weight: fr-font-weight("medium") !default;
+$fr-button-font-weight: fr-font-weight("semibold") !default;
 $fr-button-font-family: fr-font-family("primary") !default;
+$fr-button-line-height: $fr-line-height !default;
 
-$fr-button-color-theme: "light" !default;
-$fr-button-bg-color: fr-color-theme($fr-button-color-theme) !default;
+$fr-button-bg-color: fr-color-theme-opacity("light", 0) !default;
 $fr-button-fg-color: fr-color-contrast($fr-button-bg-color) !default;
 
 $fr-button-border-style: solid !default;
 $fr-button-border-width: 1px !default;
-$fr-button-border-color: fr-color-theme($fr-button-color-theme) !default;
+$fr-button-border-color: fr-color-theme-shade("gray", -50) !default;
 $fr-button-border-radius: fr-border-radius("base") !default;
 
 $fr-button-min-width: 6em !default;
 
 $fr-button-transition: all 150ms ease-in-out !default;
 
-$fr-button-spacing-y: fr-spacing("small") !default;
+$fr-button-spacing-y: fr-spacing("xsmall") !default;
 $fr-button-spacing-x: fr-spacing("base") !default;
 $fr-button-spacing: $fr-button-spacing-y $fr-button-spacing-x;
 

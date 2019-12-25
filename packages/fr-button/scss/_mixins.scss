@@ -6,11 +6,12 @@
 @mixin fr-create-button-classes() {
   .Button {
     @include fr-button-base-styles();
-    @include fr-button-base-states();
+    @include fr-create-button-state-classes();
 
-    @include fr-button-color-theme-variants();
-    @include fr-button-size-variants();
-    @include fr-button-shape-variants();
+    @include fr-create-button-color-theme-classes();
+    @include fr-create-button-size-classes();
+    @include fr-create-button-shape-classes();
+    @include fr-create-button-elevated-class();
   }
 }
 
@@ -23,6 +24,7 @@
   font-size: $fr-button-font-size;
   font-weight: $fr-button-font-weight;
   font-family: $fr-button-font-family;
+  line-height: $fr-button-line-height;
   text-align: center;
 
   padding: $fr-button-spacing;
@@ -47,10 +49,7 @@
   }
 }
 
-/**
- * Generates various supportive classes of a standard button.
- */
-@mixin fr-button-base-states() {
+@mixin fr-create-button-state-classes() {
   @include fr-button-is-disabled() {
     opacity: 0.5;
     cursor: not-allowed;
@@ -64,28 +63,24 @@
 
   @include fr-button-is-not-disabled() {
     @include fr-button-is-hovered() {
-      border-color: fr-color-theme-shade($fr-button-color-theme, -15);
-      background-color: fr-color-theme-shade($fr-button-color-theme, -15);
+      border-color: fr-color-theme-shade("gray", 0);
 
       /* Reset outline to remove collision with border styling */
       outline: none;
     }
 
     @include fr-button-is-focused() {
-      $bg-color: fr-color-theme-shade("gray", -80);
-      $border-color: fr-color-theme-shade("gray", -50);
-      $box-shadow-color: fr-color-theme-shade("gray", -80);
-      $box-shadow-values: $fr-button-box-shadow-values;
+      $border-color: fr-color-theme-shade("gray", 0);
+      $box-shadow-color: fr-color-theme-opacity("primary", 0.25);
 
-      border-color: fr-color-theme-shade($fr-button-color-theme, -30);
-      background-color: fr-color-theme-shade($fr-button-color-theme, -30);
-      box-shadow: $box-shadow-values $box-shadow-color;
+      border-color: $border-color;
+      box-shadow: $fr-button-box-shadow-values $box-shadow-color;
       outline: none;
     }
 
     @include fr-button-is-active() {
-      border-color: fr-color-theme-shade($fr-button-color-theme, -45);
-      background-color: fr-color-theme-shade($fr-button-color-theme, -45);
+      // border-color: fr-color-theme-shade($fr-button-color-theme, -45);
+      // background-color: fr-color-theme-shade($fr-button-color-theme, -45);
       box-shadow: none;
       outline: none;
     }
@@ -93,23 +88,19 @@
 }
 
 /**
- * Generate multiple variants of a button.
- * 
- * By default, when --{theme} is applied, runs the `fr-button-filled` mixin to generate filled 
- * button with preferred color theme.
+ * Generate different color theme variants of a button component.
  */
-@mixin fr-button-color-theme-variants() {
-  @each $color-theme, $color-value in $fr-color-themes {
+@mixin fr-create-button-color-theme-classes() {
+  @each $color-theme, $color-theme-value in $fr-color-themes {
     &--#{$color-theme} {
-      @include fr-button-filled($color-theme);
-      @include fr-button-types($color-theme);
+      @include fr-add-button-filled-styles($color-theme);
+      @include fr-create-button-text-class($color-theme);
+      @include fr-create-button-outlined-class($color-theme);
     }
   }
 }
 
-/**
- */
-@mixin fr-button-filled($color-theme) {
+@mixin fr-add-button-filled-styles($color-theme) {
   @include fr-button-is-not-disabled() {
     $box-shadow-values: $fr-button-box-shadow-values;
 
@@ -154,65 +145,104 @@
   border-color: fr-color-theme($color-theme);
 }
 
-@mixin fr-button-types($color-theme) {
-  $color: fr-color-theme($color-theme);
-
-  &.Button--text {
-    @include fr-button-is-not-disabled() {
-      color: $color;
-      border-color: rgba($color, 0);
-      box-shadow: none;
-      background-color: transparent;
-
-      @include fr-button-is-hovered() {
-        background-color: rgba($color, 0.15);
-      }
-
-      @include fr-button-is-focused() {
-        background-color: rgba($color, 0.25);
-      }
-
-      @include fr-button-is-active() {
-        background-color: rgba($color, 0.35);
-      }
-    }
-  }
-
+/**
+ * Generates outlined button classes reduce its emphasis compared to a standard button.
+ * This will remove the background color (fill) of a button component.
+ */
+@mixin fr-create-button-outlined-class($color-theme) {
   &.Button--outlined {
     @include fr-button-is-not-disabled() {
-      color: $color;
-      border-color: $color;
-      background-color: rgba($color, 0);
+      color: fr-color-theme($color-theme);
+      border-color: fr-color-theme($color-theme);
+      background-color: fr-color-theme-opacity($color-theme, 0);
 
       @include fr-button-is-hovered() {
-        color: $color;
-        border-color: rgba($color, 1);
-        background-color: rgba($color, 0.1);
+        color: fr-color-theme($color-theme);
+        border-color: fr-color-theme-opacity($color-theme, 1);
+        background-color: fr-color-theme-opacity($color-theme, 0.1);
       }
 
       @include fr-button-is-focused() {
-        color: $color;
-        background-color: rgba($color, 0.2);
-        border-color: rgba($color, 1);
+        color: fr-color-theme($color-theme);
+        background-color: fr-color-theme-opacity($color-theme, 0.2);
+        border-color: fr-color-theme-opacity($color-theme, 1);
         outline: none;
       }
 
       @include fr-button-is-active() {
-        color: $color;
-        background-color: rgba($color, 0.3);
-        border-color: rgba($color, 1);
+        color: fr-color-theme($color-theme);
+        background-color: fr-color-theme-opacity($color-theme, 0.3);
+        border-color: fr-color-theme-opacity($color-theme, 1);
       }
     }
   }
+}
 
-  // 🧪 Experimental
+/**
+ * Generates text button classes further reduce its emphasis to the lowest.
+ * This will remove the border and background color of a button. leaving only an interactible text.
+ */
+@mixin fr-create-button-text-class($color-theme) {
+  &.Button--text {
+    @include fr-button-is-not-disabled() {
+      color: fr-color-theme($color-theme);
+      border-color: fr-color-theme-opacity($color-theme, 0);
+      box-shadow: none;
+      background-color: transparent;
+
+      @include fr-button-is-hovered() {
+        background-color: fr-color-theme-opacity($color-theme, 0.15);
+      }
+
+      @include fr-button-is-focused() {
+        background-color: fr-color-theme-opacity($color-theme, 0.25);
+      }
+
+      @include fr-button-is-active() {
+        background-color: fr-color-theme-opacity($color-theme, 0.35);
+      }
+    }
+  }
+}
+
+/**
+ * Append elevated variant class to a standard button component.
+ *
+ * {$elevation-opacity} | 0 to 1
+ */
+@mixin fr-create-button-elevated-class($elevation-opacity: 0.3) {
+  &--elevated {
+    @include fr-create-elevation(2, $elevation-opacity);
+
+    @include fr-button-is-not-disabled() {
+      @include fr-button-is-hovered() {
+        @include fr-create-elevation(3, $elevation-opacity);
+      }
+
+      @include fr-button-is-focused() {
+        @include fr-create-elevation(3, $elevation-opacity);
+      }
+
+      @include fr-button-is-active() {
+        @include fr-create-elevation(2, $elevation-opacity);
+      }
+    }
+  }
+}
+
+/** 
+ * Appends a modifier class to generate a raised button components.
+ *
+ * NOTE: This is still an experimental API. 
+ */
+@mixin fr-create-button-raised-class($color-theme) {
   &.Button--raised {
     @include fr-button-is-not-disabled() {
-      border-bottom-color: fr-color-shade($color, 15);
+      border-bottom-color: fr-color-shade($color-theme, 15);
       border-bottom-width: 4px;
 
       @include fr-button-is-hovered() {
-        border-bottom-color: fr-color-shade($color, 10);
+        border-bottom-color: fr-color-shade($color-theme, 10);
       }
 
       @include fr-button-is-focused() {
@@ -227,13 +257,12 @@
       }
     }
   }
-
-  &.Button--elevated {
-    @include fr-button-elevated();
-  }
 }
 
-@mixin fr-button-size-variants() {
+/**
+ *
+ */
+@mixin fr-create-button-size-classes() {
   @each $size, $padding in $fr-button-sizes {
     &--#{$size} {
       font-size: fr-font-size($size);
@@ -242,7 +271,10 @@
   }
 }
 
-@mixin fr-button-shape-variants() {
+/**
+ *
+ */
+@mixin fr-create-button-shape-classes() {
   &--rounded {
     border-radius: fr-border-radius(rounded);
   }
@@ -254,30 +286,43 @@
 }
 
 /**
- * Applies material style elevation property to a button.
+ * Create button group wrapper class.
  *
- * {$elevation-opacity} | 0 to 1
+ * The ButtonGroup class can be used to encase multiple button components together to form
+ * a single, unified control-like component.
  */
-@mixin fr-button-elevated($elevation-opacity: 0.3) {
-  @include fr-create-elevation(2, $elevation-opacity);
+@mixin fr-create-button-group-classes() {
+  .ButtonGroup {
+    @include fr-button-group-base-styles();
+  }
+}
 
-  @include fr-button-is-not-disabled() {
-    @include fr-button-is-hovered() {
-      @include fr-create-elevation(3, $elevation-opacity);
-    }
+@mixin fr-button-group-base-styles() {
+  display: flex;
+  flex-direction: row;
 
-    @include fr-button-is-focused() {
-      @include fr-create-elevation(3, $elevation-opacity);
-    }
+  > .Button:not(:last-child) {
+    margin-right: -1px;
+  }
 
-    @include fr-button-is-active() {
-      @include fr-create-elevation(2, $elevation-opacity);
-    }
+  > .Button:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  > .Button:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  > .Button:not(:first-child):not(:last-child) {
+    border-radius: 0;
   }
 }
 
 /**
- * 🛠 Utility-based mixins
+ * These are helper mixins used in fr-button to reduce abstractions and adhere 
+ * to reusability.
  */
 @mixin fr-button-is-not-disabled() {
   &:not(:disabled),
@@ -314,6 +359,7 @@
   }
 }
 
+// TO-DO: Deprecate this helper mixin since it's not used anymore.
 // Shorthand version of the specific state functions.
 @mixin fr-button-is-state($state: "disabled") {
   @include fr-button-is-#{$state} {
