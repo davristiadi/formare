@@ -1,0 +1,20 @@
+@import "@formare/color/scss/variables";
+
+// Determine the max level of which the creation of elevation utility classes
+// will be generated. Defaults to 20. Change to whatever number you like. Lesser number will
+// generate lesser elevation classes which would decrease file size.
+$fr-elevation-max-level: 20 !default;
+
+$fr-elevation-level: 1 !default;
+
+// Determine the multiplier for calculating offset-y to achieve a computed
+// blur value.
+$fr-elevation-shadow-multiplier: 1.5 !default;
+$fr-elevation-shadow-opacity: 0.25 !default;
+
+// Elevation default box-shadow variables.
+$fr-elevation-shadow-color: fr-color-theme("dark") !default;
+$fr-elevation-shadow-color-opacity: 0.1 !default;
+$fr-elevation-shadow-offset-x: 0 !default;
+$fr-elevation-shadow-offset-y: 0.15em !default;
+$fr-elevation-shadow-spread: 0 !default;

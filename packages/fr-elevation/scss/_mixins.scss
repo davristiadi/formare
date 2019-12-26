@@ -1,0 +1,41 @@
+@import "./variables";
+
+@mixin fr-elevation() {
+  @include fr-create-elevation-classes();
+}
+
+@mixin fr-create-elevation-classes() {
+  @for $i from 1 through $fr-elevation-max-level {
+    $elevation-level: $i;
+
+    .Elevation\:#{$i} {
+      @include fr-create-elevation($elevation-level);
+    }
+  }
+}
+
+/**
+ *
+ * @param {Number} $elevation-level
+ * @param {Number} $opacity
+ */
+@mixin fr-create-elevation(
+  $elevation-level: $fr-elevation-level,
+  $opacity: $fr-elevation-shadow-opacity
+) {
+  $shadow-multiplier: $fr-elevation-shadow-multiplier;
+  $shadow-color: $fr-elevation-shadow-color;
+  $shadow-color-opacity: $opacity;
+
+  // Convert level into offset-y value in `em` unit.
+  $shadow-offset-x: $fr-elevation-shadow-offset-x;
+  $shadow-offset-y: $elevation-level * 0.1em;
+  $shadow-blur: $shadow-offset-y * $shadow-multiplier;
+  $shadow-spread: $fr-elevation-shadow-spread;
+
+  $shadow-set: $shadow-offset-x $shadow-offset-y $shadow-blur $shadow-spread;
+  $computed-shadow-color: rgba($shadow-color, $shadow-color-opacity);
+
+  // Generate the correct box-shadow value based on the calculation above
+  box-shadow: $shadow-set $computed-shadow-color;
+}
