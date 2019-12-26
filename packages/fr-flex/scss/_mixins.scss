@@ -33,9 +33,9 @@
 }
 
 @mixin fr-flex-directions() {
-  @each $direction in $fr-flex-directions {
+  @each $direction, $direction-value in $fr-flex-directions {
     &-#{$direction} {
-      flex-direction: $direction !important;
+      flex-direction: $direction-value !important;
     }
   }
 }

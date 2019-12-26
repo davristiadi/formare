@@ -1,6 +1,9 @@
 @import "formare/scss/utils";
 
-$fr-flex-directions: ("row", "column");
+$fr-flex-directions: (
+  "row": row,
+  "column": column
+);
 
 $fr-alignment-axes: ("align", "justify");
 $fr-alignment-types: (
