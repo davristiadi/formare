@@ -96,6 +96,7 @@
       @include fr-add-button-filled-styles($color-theme);
       @include fr-create-button-text-class($color-theme);
       @include fr-create-button-outlined-class($color-theme);
+      @include fr-create-button-raised-class($color-theme);
     }
   }
 }
@@ -238,11 +239,12 @@
 @mixin fr-create-button-raised-class($color-theme) {
   &.Button--raised {
     @include fr-button-is-not-disabled() {
-      border-bottom-color: fr-color-shade($color-theme, 15);
-      border-bottom-width: 4px;
+      border-bottom-color: fr-color-theme-shade($color-theme, 15);
+      // border-bottom-width: 4px;
+      border-bottom-width: $fr-button-raised-border-bottom-width;
 
       @include fr-button-is-hovered() {
-        border-bottom-color: fr-color-shade($color-theme, 10);
+        border-bottom-color: fr-color-theme-shade($color-theme, 10);
       }
 
       @include fr-button-is-focused() {
@@ -252,7 +254,7 @@
 
       @include fr-button-is-active() {
         border-bottom-width: 1px;
-        margin-top: 3px;
+        margin-top: $fr-button-raised-border-bottom-width - 1;
         outline: none;
       }
     }
