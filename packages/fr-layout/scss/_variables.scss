@@ -1,0 +1,16 @@
+@import "@formare/responsive/scss/functions";
+@import "@formare/spacing/scss/variables";
+
+$fr-grid-gutter-width: fr-spacing("base");
+
+$fr-container-widths: () !default;
+$fr-container-widths: map-merge(
+  (
+    "xs": 100%,
+    "sm": fr-breakpoint-width("sm"),
+    "md": fr-breakpoint-width("md"),
+    "lg": fr-breakpoint-width("lg"),
+    "xl": fr-breakpoint-width("xl")
+  ),
+  $fr-container-widths
+);

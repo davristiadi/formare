@@ -1,0 +1,37 @@
+@import "@formare/responsive/scss/mixins";
+@import "./variables";
+
+@mixin fr-create-container-classes() {
+  .Container {
+    @include fr-container();
+  }
+}
+
+@mixin fr-container() {
+  @include fr-container-base-styles();
+  @include fr-container-modifiers();
+  @include fr-container-responsive();
+}
+
+@mixin fr-container-base-styles() {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 $fr-grid-gutter-width;
+  width: 100%;
+  transition: all 100ms ease-in-out;
+}
+
+@mixin fr-container-modifiers() {
+  &--fullWidth {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+@mixin fr-container-responsive() {
+  @each $breakpoint-name, $breakpoint-width in $fr-container-widths {
+    @include fr-responsive-media($breakpoint-name) {
+      max-width: $breakpoint-width;
+    }
+  }
+}
