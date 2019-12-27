@@ -1,6 +1,6 @@
 {
   "name": "formare",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "private": true,
   "author": "David Kurnia Kristiadi <davidkurniakristiadi@gmail.com>",
   "workspaces": [
@@ -20,7 +20,8 @@
     "start": "npm run build",
     "start:docs": "cd docs && yarn start",
     "publish:beta": "npm start && npm publish --tag beta",
-    "publish:next": "npm start && npm publish --tag next"
+    "publish:next": "npm start && npm publish --tag next",
+    "start:playground": "lerna exec --scope=@formare/playground yarn start"
   },
   "license": "ISC",
   "dependencies": {
@@ -35,22 +36,26 @@
     "gatsby-transformer-remark": "^2.3.12",
     "highlight.js": "^9.15.6",
     "js-beautify": "^1.10.2",
-    "prismjs": "^1.16.0"
+    "prismjs": "^1.16.0",
+    "sanitize.css": "^11.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.2",
     "clean-css": "^4.1.11",
     "clean-css-cli": "^4.1.11",
+    "compression-webpack-plugin": "^3.0.1",
     "css-loader": "^3.2.0",
     "gh-pages": "^2.1.1",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.9.3",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
     "path": "^0.12.7",
     "postcss-cli": "^6.0.0",
     "postcss-loader": "^3.0.0",
     "prettier": "^1.19.1",
     "prettier-webpack-plugin": "^1.2.0",
     "sass-loader": "^8.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack-cli": "^3.3.10"
   },
   "files": [
