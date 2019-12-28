@@ -19,3 +19,14 @@
     @error "Device breakpoint is not found in $fr-responsive-breakpoints variable!";
   }
 }
+
+@mixin fr-append-responsive-media-classes() {
+  @each $breakpoint, $width in $fr-responsive-breakpoints {
+    @include fr-responsive-media($breakpoint) {
+      &-#{$breakpoint},
+      &-#{$breakpoint} {
+        @content;
+      }
+    }
+  }
+}
