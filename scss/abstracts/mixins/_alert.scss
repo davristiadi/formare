@@ -1,0 +1,41 @@
+@mixin fr-alert() {
+  display: flex;
+  align-items: center;
+  color: $fr-alert-fg-color;
+  background-color: $fr-alert-bg-color;
+  border-radius: $fr-alert-border-radius;
+
+  @include fr-alert-themes();
+  @include fr-alert-parts();
+}
+
+@mixin fr-alert-themes() {
+  @each $theme, $color in $color-themes {
+    &--#{$theme} {
+      $bg-color: fr-color-theme-shade($theme, -50);
+      $fg-color: fr-color-theme-shade($theme, 25);
+
+      color: $fg-color;
+      background-color: $bg-color;
+    }
+  }
+}
+
+@mixin fr-alert-parts() {
+  &-text {
+    display: flex;
+    flex-grow: 1;
+    line-height: $line-height;
+    padding: $fr-alert-spacing;
+  }
+
+  &-icon {
+    &:first-child {
+      padding-left: $fr-alert-spacing-y;
+    }
+
+    &:last-child {
+      padding-right: $fr-alert-spacing-x;
+    }
+  }
+}

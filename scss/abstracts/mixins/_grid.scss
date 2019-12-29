@@ -1,0 +1,27 @@
+@mixin fr-container() {
+  @include fr-container-base();
+  @include fr-container-responsive();
+  @include fr-container-modifiers();
+}
+
+@mixin fr-container-base() {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 $grid-gap-width;
+  width: 100%;
+}
+
+@mixin fr-container-modifiers() {
+  &--fullWidth {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+@mixin fr-container-responsive() {
+  @each $breakpoint, $width in $container-widths {
+    @include media($breakpoint) {
+      max-width: $width;
+    }
+  }
+}

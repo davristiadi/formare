@@ -1,0 +1,67 @@
+@mixin fr-input() {
+  .Input,
+  .Textarea {
+    @include fr-input-base-styles();
+    @include fr-create-input-states();
+    @include fr-create-input-size-variants();
+    @include fr-create-input-theme-variants();
+    @include fr-create-input-shape-variants();
+  }
+}
+
+@mixin fr-input-base-styles() {
+  position: relative;
+  width: 100%;
+  padding: $fr-input-spacing;
+  transition: $fr-input-transition;
+  font-size: $fr-input-font-size;
+  background-color: $fr-input-bg-color;
+  border-style: solid;
+  border-width: 1px;
+  border-color: $light;
+  border-radius: border-radius(base);
+  outline: none;
+  white-space: normal;
+}
+
+@mixin fr-create-input-states($color-theme: "") {
+  &:focus {
+    border-color: $fr-input-focused-border-color;
+    box-shadow: $fr-input-focused-box-shadow;
+  }
+
+  &:disabled {
+    background-color: $fr-input-disabled-background;
+    cursor: not-allowed;
+  }
+
+  &:hover:not(:disabled) {
+    border-color: $fr-input-hovered-border-color;
+  }
+}
+
+@mixin fr-create-input-theme-variants() {
+  @each $color-name, $color-hex-value in $color-themes {
+    &--#{$color-theme} {
+      @include fr-input-states($color-theme: $color-hex-value);
+    }
+  }
+}
+
+@mixin fr-create-input-size-variants() {
+  @each $key, $value in $fr-font-sizes {
+    $size-name: $key;
+    $size-value: $value;
+
+    &--#{$size-name} {
+      font-size: $size-value;
+      padding: fr-spacing($size-name);
+    }
+  }
+}
+
+@mixin fr-create-input-shape-variants() {
+  &--rounded {
+    border-radius: border-radius(rounded);
+  }
+}

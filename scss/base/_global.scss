@@ -1,0 +1,14 @@
+:root {
+  @each $theme, $color in $color-themes {
+    --#{$theme}: #{$color};
+  }
+
+  --font-size: #{$fr-font-size};
+  --font-family-primary: #{font-family(primary)};
+  --font-family-secondary: #{font-family(secondary)};
+  --font-family-code: #{font-family(code)};
+  --font-weight: #{font-weight(regular)};
+  --text-color: #{$darker};
+  --line-height: #{line-height(base)};
+  --background-color: #{$white};
+}

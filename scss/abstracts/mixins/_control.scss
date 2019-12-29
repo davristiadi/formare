@@ -1,0 +1,46 @@
+@mixin fr-control-base() {
+  display: flex;
+  flex: 1 1 auto;
+
+  & > select {
+    position: relative;
+    width: 100%;
+    padding: $fr-input-spacing;
+    transition: $fr-input-transition;
+    font-size: $fr-input-font-size;
+    background-color: $fr-input-bg-color;
+    border-style: solid;
+    border-width: 1px;
+    border-color: $light;
+    border-radius: border-radius(base);
+    outline: none;
+    white-space: normal;
+  }
+}
+
+@mixin fr-control-states($color-theme: "") {
+  &:focus {
+    border-color: $_focus-border-color;
+    box-shadow: $_focus-box-shadow-color;
+  }
+
+  &:disabled {
+    background-color: $fr-input-disabled-background;
+    cursor: not-allowed;
+  }
+
+  &:hover:not(:disabled) {
+    border-color: $fr-input-hovered-border-color;
+  }
+}
+
+@mixin fr-control-color-themes() {
+  @each $key, $value in $color-themes {
+    $color-theme: $key;
+    $color-hex: $value;
+
+    &--#{$color-theme} {
+      @include fr-control-states($color-theme);
+    }
+  }
+}

@@ -1,0 +1,146 @@
+$fr-spacing-map: (
+  margin: mg,
+  padding: pd
+);
+
+@mixin fr-spacing-base($abbr: false) {
+  @each $fr-spacing, $fr-spacing-abbr in $fr-spacing-map {
+    $fr-spacing-cap: capitalize($fr-spacing);
+    $fr-spacing-cap: quote($fr-spacing-cap);
+    $stylerule: if($abbr, $fr-spacing-abbr, $fr-spacing-cap);
+
+    &-#{$stylerule} {
+      #{$fr-spacing}: fr-spacing(base) !important;
+
+      @include fr-spacing-dirs($abbr, $fr-spacing);
+    }
+  }
+}
+
+@mixin fr-spacing-dirs($abbr, $fr-spacing) {
+  @each $direction in $fr-spacing-directions {
+    $direction-cap: capitalize($direction);
+    $direction-cap: quote($direction-cap);
+    $stylerule: if($abbr, "-" + $direction, $direction-cap);
+
+    &#{$stylerule} {
+      #{$fr-spacing}-#{$direction}: fr-spacing(base) !important;
+
+      @include fr-spacing-dir-sizes($abbr, $fr-spacing, $direction);
+    }
+  }
+
+  @each $axis, $directions in $fr-spacing-axes {
+    // u-mg-x
+    // u-MarginHorizontal
+
+    @if $axis == "x" {
+      $axis-cap: if($axis == "x", "Horizontal", "Vertical");
+      $stylerule: if($abbr, "-" + $axis, "Horizontal");
+
+      &#{$stylerule} {
+        @each $dir in $directions {
+          #{$fr-spacing}-#{$dir}: fr-spacing(base) !important;
+        }
+
+        @include fr-spacing-dir-sizes($abbr, $fr-spacing, $directions);
+      }
+    } @else if $axis == "y" {
+      $stylerule: if($abbr, "-" + $axis, "Vertical");
+
+      &#{$stylerule} {
+        @each $dir in $directions {
+          #{$fr-spacing}-#{$dir}: fr-spacing(base) !important;
+        }
+
+        @include fr-spacing-dir-sizes($abbr, $fr-spacing, $directions);
+      }
+    }
+  }
+}
+
+@mixin fr-spacing-dir-sizes($abbr, $fr-spacing, $direction) {
+  @each $size, $value in $fr-spacings {
+    &-#{$size} {
+      @if type-of($direction) == "list" {
+        $direction-map: $direction;
+
+        @each $dir in $direction-map {
+          #{$fr-spacing}-#{$dir}: fr-spacing($size);
+        }
+      } @else {
+        #{$fr-spacing}-#{$direction}: fr-spacing($size);
+      }
+    }
+  }
+}
+
+// @mixin fr-spacing-sizes() {
+//   @each $size, $value in $fr-spacings {
+//     &-mg-#{$size},
+//     &-Margin-#{$size} {
+//       margin: $value !important;
+//     }
+
+//     &-pd-#{$size},
+//     &-Padding-#{$size} {
+//       padding: $value !important;
+//     }
+
+//     &-mg-x-#{$size},
+//     &-MarginHorizontal-#{$size} {
+//       margin-left: $value !important;
+//       margin-right: $value !important;
+//     }
+
+//     &-mg-y-#{$size},
+//     &-MarginVertical-#{$size} {
+//       margin-top: $value !important;
+//       margin-bottom: $value !important;
+//     }
+
+//     &-pd-x-#{$size},
+//     &-PaddingHorizontal-#{$size} {
+//       padding-top: $value !important;
+//       padding-bottom: $value !important;
+//     }
+
+//     &-pd-y-#{$size},
+//     &-PaddingVertical-#{$size} {
+//       padding-top: $value !important;
+//       padding-bottom: $value !important;
+//     }
+//   }
+
+//   @include fr-spacing-directions();
+// }
+
+// @mixin fr-spacing-directions() {
+//   $fr-spacing-directions: (top left right bottom);
+
+//   @each $dir in $directions {
+//     $cap-dir: capitalize($dir);
+
+//     &-pd-#{$dir},
+//     &-Padding#{$cap-dir} {
+//       padding-#{$dir}: fr-spacing(base) !important;
+//     }
+
+//     &-mg-#{$dir},
+//     &-Margin#{$cap-dir} {
+//       margin-#{$dir}: fr-spacing(base) !important;
+//     }
+
+//     @each $size, $value in $fr-spacings {
+//       &-mg-#{$dir}-#{$size},
+//       &-Margin#{$cap-dir}-#{$size} {
+//         margin-#{$dir}: $value !important;
+//       }
+
+//       &-pd-#{$dir}-#{$size},
+//       &-Padding#{$cap-dir}-#{$size} {
+//         padding-#{$dir}: $value !important;
+//       }
+//     }
+//   }
+// }

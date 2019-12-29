@@ -1,0 +1,15 @@
+$checkbox-transition: $transition !default;
+$checkbox-height: 20px !default;
+$checkbox-width: 20px !default;
+
+$checkbox-bg-color: fr-color-theme(primary) !default;
+$checkbox-fg-color: fr-color-contrast($checkbox-bg-color) !default;
+
+$checkbox-border-radius: border-radius(base) !default;
+$checkbox-border-style: solid !default;
+$checkbox-border-width: 1px !default;
+$checkbox-border-color: $light !default;
+
+$checkbox-checked-bg-color: $checkbox-bg-color !default;
+$checkbox-checked-fg-color: $checkbox-fg-color !default;
+$checkbox-checked-border-color: $primary-color !default;

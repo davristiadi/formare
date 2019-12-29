@@ -1,0 +1,49 @@
+.Select {
+  > select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 3em;
+    cursor: pointer;
+  }
+
+  &:not(&--loading) {
+    &:after {
+      content: "";
+      transition: all 150ms ease-out-out;
+      position: absolute;
+      top: $fr-input-spacing-y * 1.5;
+      right: $fr-input-spacing-x;
+      display: block;
+      height: 0.65em;
+      border: 2px solid transparent;
+      border-color: $gray;
+      border-right: 0;
+      border-top: 0;
+      transform: rotate(-45deg);
+      width: 0.65em;
+    }
+
+    &:focus-within {
+      &:after {
+        transform: translateY(30%) rotate(135deg);
+        border-color: $primary-color;
+      }
+    }
+  }
+
+  &--loading {
+    &:after {
+      content: "";
+      animation: spinAround 750ms linear infinite;
+      display: block;
+      width: 1em;
+      height: 1em;
+      position: absolute;
+      top: $fr-input-spacing-y * 1.5;
+      right: $fr-input-spacing-x;
+      border: solid 2px $light;
+      border-top-color: transparent;
+      border-radius: 100%;
+    }
+  }
+}

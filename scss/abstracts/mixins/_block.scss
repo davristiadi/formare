@@ -1,0 +1,13 @@
+@mixin fr-block($display: "flex") {
+  @if $display = "flex" {
+    display: flex;
+    flex-direction: row;
+  }
+
+  position: relative;
+  align-items: center;
+
+  &--expanded {
+    flex-grow: 1;
+  }
+}

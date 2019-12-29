@@ -1,0 +1,274 @@
+@mixin fr-button() {
+  @include fr-button-base();
+  @include fr-button-themes();
+  @include fr-button-sizes();
+  @include fr-button-shapes();
+}
+
+@mixin fr-button-base() {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  font-weight: $fr-button-font-weight;
+  font-family: $fr-button-font-family;
+  padding: $fr-button-spacing; // changeable: --{size}
+  color: $fr-button-fg-color; // changeable: --{theme}
+  background-color: $fr-button-bg-color; // changeable: --{theme}.
+  border-style: $fr-button-border-style;
+  border-width: $fr-button-border-width;
+  border-color: $fr-button-border-color; // changeable: --{theme}.
+  border-radius: $fr-button-border-radius; // changeable: --rounded.
+  transition: $fr-button-transition;
+  min-width: $fr-button-min-width;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: none;
+  -webkit-appearance: none;
+
+  /* Apply pointer cursor on non-disabled buttons */
+  &:not(:disabled),
+  &:not(.is-disabled) {
+    cursor: pointer;
+  }
+
+  @include fr-button-base-states();
+}
+
+@mixin fr-button-base-states() {
+  &:disabled,
+  &.is-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+
+    /* Retains pointer-events: auto stylerule to elements aside from link tag */
+    &:not(a) {
+      pointer-events: auto;
+    }
+  }
+
+  /* Apply base styles for non-disabled and non-text buttons */
+  &:not(:disabled):not(.is-disabled) {
+    &:hover,
+    &.is-hovered {
+      $bg-color: fr-color-theme-shade(gray, -90);
+      $border-color: fr-color-theme-shade(gray, -50);
+
+      border-color: $border-color;
+      background-color: $bg-color;
+      outline: none; /* Reset outline to remove collision with our border styling */
+    }
+
+    &:focus,
+    &.is-focused {
+      $bg-color: fr-color-theme-shade(gray, -80);
+      $border-color: fr-color-theme-shade(gray, -50);
+      $box-shadow-color: fr-color-theme-shade(gray, -80);
+      $box-shadow-values: $fr-button-box-shadow-values;
+
+      border-color: $border-color;
+      background-color: $bg-color;
+      box-shadow: $box-shadow-values $box-shadow-color;
+      outline: none;
+    }
+
+    &:active,
+    &.is-active {
+      $bg-color: fr-color-theme-shade(gray, -70);
+      $border-color: fr-color-theme-shade(gray, -50);
+
+      background-color: $bg-color;
+      border-color: $border-color;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+}
+
+/**
+ * Mixin to generate multiple variants of a button.
+ * By default, when --{theme} is applied, runs the `fr-button-filled` mixin to generate filled 
+ * button with preferred color theme.
+ */
+@mixin fr-button-themes() {
+  @each $theme, $color in $color-themes {
+    &--#{$theme} {
+      @include fr-button-filled($theme);
+      @include fr-button-types($theme);
+    }
+  }
+}
+
+/**
+ */
+@mixin fr-button-filled($theme) {
+  $bg-color: fr-color-theme($theme);
+  $fg-color: fr-color-contrast($bg-color);
+  $border-color: fr-color-theme($theme);
+
+  background-color: $bg-color;
+  color: $fg-color;
+  border-color: $border-color;
+
+  &:not(:disabled):not(.is-disabled) {
+    $box-shadow-values: $fr-button-box-shadow-values;
+
+    &:hover,
+    &.is-hovered {
+      $bg-color--hovered: fr-color-theme-shade($theme, -15);
+      $fg-color--hovered: fr-color-contrast($bg-color--hovered);
+      $border-color--hovered: $bg-color--hovered;
+
+      color: $fg-color--hovered;
+      background-color: $bg-color--hovered;
+      border-color: $border-color--hovered;
+      box-shadow: none;
+    }
+
+    &:focus,
+    &.is-focused {
+      $bg-color--focused: fr-color-theme-shade($theme, -30);
+      $fg-color--focused: fr-color-contrast($bg-color--focused);
+      $border-color--focused: $bg-color--focused;
+      $box-shadow-color--focused: fr-color-theme-shade($theme, -70);
+      $box-shadow--focused: $box-shadow-values $box-shadow-color--focused;
+
+      color: $fg-color--focused;
+      background-color: $bg-color--focused;
+      border-color: $border-color--focused;
+      box-shadow: $box-shadow--focused;
+    }
+
+    &:active,
+    &.is-active {
+      $bg-color--active: fr-color-theme-shade($theme, -45);
+      $fg-color--active: fr-color-contrast($bg-color--active);
+      $border-color--active: $bg-color--active;
+
+      color: $fg-color--active;
+      background-color: $bg-color--active;
+      border-color: $border-color--active;
+      box-shadow: none;
+    }
+  }
+}
+
+@mixin fr-button-sizes() {
+  @each $size, $padding in $fr-button-sizes {
+    &--#{$size} {
+      font-size: font-size($size);
+      padding: $padding;
+    }
+  }
+}
+
+@mixin fr-button-types($theme) {
+  $color: fr-color-theme($theme);
+
+  &:not(:disabled):not(.is-disabled) {
+    &.Button--text {
+      color: $color;
+      background-color: rgba($color, 0);
+      border: 0;
+      box-shadow: none;
+
+      &:hover,
+      &.is-hovered {
+        background-color: rgba($color, 0.15);
+      }
+
+      &:focus,
+      &.is-focused {
+        background-color: rgba($color, 0.2);
+      }
+
+      &:active,
+      &.is-active {
+        background-color: rgba($color, 0.25);
+      }
+    }
+
+    &.Button--outlined {
+      color: $color;
+      border-color: $color;
+      background-color: rgba($color, 0);
+
+      &:hover,
+      &.is-hovered {
+        color: $color;
+        border-color: rgba($color, 1);
+        background-color: rgba($color, 0.1);
+      }
+
+      &:focus,
+      &.is-focused {
+        color: $color;
+        background-color: rgba($color, 0.2);
+        border-color: rgba($color, 1);
+        outline: none;
+      }
+
+      &:active,
+      &.is-active {
+        color: $color;
+        background-color: rgba($color, 0.3);
+        border-color: rgba($color, 1);
+      }
+    }
+
+    // 🧪 Experimental
+    &.Button--raised {
+      border-bottom-color: fr-color-shade($color, 15);
+      border-bottom-width: 4px;
+
+      &:hover,
+      &.is-hovered {
+        border-bottom-color: fr-color-shade($color, 10);
+      }
+
+      &:focus,
+      &.is-focused {
+        margin-top: 0px;
+        outline: none;
+      }
+
+      &:active,
+      &.is-active {
+        border-bottom-width: 1px;
+        margin-top: 3px;
+        outline: none;
+      }
+    }
+
+    &.Button--elevated {
+      @include fr-button-elevated();
+    }
+  }
+}
+
+@mixin fr-button-shapes() {
+  &--rounded {
+    border-radius: border-radius(rounded);
+  }
+
+  // Extend button to 100% width of its parent
+  &--fullWidth {
+    width: 100%;
+  }
+}
+
+@mixin fr-button-elevated($elevation-opacity: 0.3) {
+  @include fr-elevation(2, $elevation-opacity);
+
+  &:not(:disabled):not(.is-disabled) {
+    &:hover,
+    &:focus {
+      @include fr-elevation(3, $elevation-opacity);
+    }
+
+    &:active {
+      @include fr-elevation(2, $elevation-opacity);
+    }
+  }
+}

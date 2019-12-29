@@ -1,0 +1,72 @@
+@mixin fr-card() {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: $fr-card-fg-color;
+  background-color: $fr-card-bg-color;
+  border-radius: $fr-card-border-radius;
+  border-style: $fr-card-border-style;
+  border-color: $fr-card-border-color;
+  border-width: $fr-card-border-width;
+
+  @include fr-card-parts();
+  @include fr-card-shapes();
+
+  @each $theme, $color in $color-themes {
+    &--#{$theme} {
+      > *:not(:last-child) {
+        border-bottom-color: $color;
+      }
+    }
+
+    &--#{$theme} & {
+      &-title {
+        background-color: fr-color-theme-shade($theme, -10);
+        color: fr-color-contrast(fr-color-theme-shade($theme, -10));
+      }
+
+      &-body,
+      &-footer {
+        background-color: $color;
+        color: fr-color-contrast($color);
+      }
+    }
+  }
+}
+
+@mixin fr-card-parts() {
+  &-title,
+  &-body,
+  &-footer {
+    padding: $fr-card-padding;
+  }
+
+  // > *:not(:last-child) {
+  //   border-bottom-style: $fr-card-border-style;
+  //   border-bottom-width: $fr-card-border-width;
+  //   border-bottom-color: $fr-card-border-color;
+  // }
+
+  &-media {
+    position: relative;
+    height: $fr-card-media-height;
+    min-height: $fr-card-media-height;
+
+    > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+
+@mixin fr-card-shapes($elevation-level: $fr-card-elevation-level) {
+  &--elevated {
+    @include fr-elevation($elevation-level);
+  }
+}
