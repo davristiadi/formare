@@ -92,4 +92,3 @@
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=formare.min.css.js.map
