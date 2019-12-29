@@ -1,6 +1,6 @@
 {
   "name": "@formare/button",
-  "version": "0.1.0",
+  "version": "0.6.0",
   "description": "Button component of Formare",
   "main": "index.js",
   "author": "David Kurnia Kristiadi",
