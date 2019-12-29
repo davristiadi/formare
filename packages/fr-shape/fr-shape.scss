@@ -1,3 +1,4 @@
-@import "./scss/mixins";
+@import './scss/mixins';
 
-@include fr-create-shape-classes();
+@include fr-create-border-classes();
+@include fr-create-border-side-classes();
