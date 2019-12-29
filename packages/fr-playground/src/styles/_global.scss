@@ -1,0 +1,9 @@
+html,
+body,
+#___gatsby {
+  height: 100%;
+}
+
+div[role="group"][tabindex] {
+  min-height: 100%;
+}
