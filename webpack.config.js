@@ -1,65 +1,63 @@
-"use strict";
+'use strict';
 
-const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const autoprefixer = require("autoprefixer");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
-const PrettierPlugin = require("prettier-webpack-plugin");
-const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const CompressionPlugin = require("compression-webpack-plugin");
+const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const autoprefixer = require('autoprefixer');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const PrettierPlugin = require('prettier-webpack-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = env => {
-  const isDev = env.NODE_ENV === "development";
-  const isProd = env.NODE_ENV === "production";
+  const isDev = env.NODE_ENV === 'development';
+  const isProd = env.NODE_ENV === 'production';
 
   return {
-    name: "formare",
+    name: 'formare',
     entry: {
-      formare: path.join(__dirname, "/packages/formare/formare.scss")
+      formare: path.join(__dirname, '/packages/fr-core/formare.scss'),
     },
     output: {
-      path: path.join(__dirname, "./dist"),
-      filename: `${isProd ? "[name].min.css.js" : "[name].css.js"}`
+      path: path.join(__dirname, './dist'),
+      filename: `${isProd ? '[name].min.css.js' : '[name].css.js'}`,
     },
-    devtool: isDev ? "cheap-module-eval-source-map" : false,
+    devtool: isDev ? 'cheap-module-eval-source-map' : false,
     module: {
       rules: [
         {
           test: /\.scss$/,
           use: [
             {
-              loader: MiniCssExtractPlugin.loader
+              loader: MiniCssExtractPlugin.loader,
             },
             {
-              loader: "css-loader",
-              options: {
-                sourceMap: true
-              }
-            },
-            {
-              loader: "postcss-loader",
+              loader: 'css-loader',
               options: {
                 sourceMap: true,
-                plugins: () => [new autoprefixer()]
-              }
+              },
             },
             {
-              loader: "sass-loader",
+              loader: 'postcss-loader',
+              options: {
+                sourceMap: true,
+                plugins: () => [new autoprefixer()],
+              },
+            },
+            {
+              loader: 'sass-loader',
               options: {
                 sourceMap: true,
                 sassOptions: {
                   minimize: false,
-                  includePaths: [
-                    path.resolve(path.join(__dirname, "/node_modules"))
-                  ],
-                  implementation: require("node-sass"),
-                  outputStyle: isProd ? "compressed" : "expanded"
-                }
-              }
-            }
-          ]
-        }
-      ]
+                  includePaths: [path.resolve(path.join(__dirname, '/node_modules'))],
+                  implementation: require('node-sass'),
+                  outputStyle: isProd ? 'compressed' : 'expanded',
+                },
+              },
+            },
+          ],
+        },
+      ],
     },
     optimization: {
       minimize: false,
@@ -67,23 +65,23 @@ module.exports = env => {
         new UglifyJsPlugin({
           uglifyOptions: {
             output: {
-              comments: false
-            }
-          }
-        })
-      ]
+              comments: false,
+            },
+          },
+        }),
+      ],
     },
     plugins: [
       new MiniCssExtractPlugin({
-        filename: `${isProd ? "[name].min.css" : "[name].css"}`
+        filename: `${isProd ? '[name].min.css' : '[name].css'}`,
       }),
       new PrettierPlugin(),
-      new CompressionPlugin()
+      new CompressionPlugin(),
       // new OptimizeCssAssetsPlugin({
       //   cssProcessorPluginOptions: {
       //     preset: ["default", { discardComments: { removeAll: true } }]
       //   }
       // })
-    ]
+    ],
   };
 };
