@@ -1,21 +1,21 @@
-@import "formare/scss/utils";
-@import "./functions";
+@import '@formare/core/scss/utils';
+@import './functions';
 
 $fr-spacing: 1rem !default;
 $fr-spacings: () !default;
 $fr-spacings: map-merge(
   (
-    "auto": auto,
-    "3xsmall": $fr-spacing / 3,
-    "2xsmall": $fr-spacing / 2,
-    "xsmall": $fr-spacing / 1.5,
-    "small": $fr-spacing / 1.25,
-    "base": $fr-spacing,
-    "large": $fr-spacing * 1.25,
-    "xlarge": $fr-spacing * 1.5,
-    "2xlarge": $fr-spacing * 2,
-    "3xlarge": $fr-spacing * 3,
-    "4xlarge": $fr-spacing * 4
+    'auto': auto,
+    '3xsmall': $fr-spacing / 3,
+    '2xsmall': $fr-spacing / 2,
+    'xsmall': $fr-spacing / 1.5,
+    'small': $fr-spacing / 1.25,
+    'base': $fr-spacing,
+    'large': $fr-spacing * 1.25,
+    'xlarge': $fr-spacing * 1.5,
+    '2xlarge': $fr-spacing * 2,
+    '3xlarge': $fr-spacing * 3,
+    '4xlarge': $fr-spacing * 4,
   ),
   $fr-spacings
 );
@@ -26,7 +26,7 @@ $fr-spacing-type-map: (
   "padding": "pd"
 );
 
-$fr-spacing-direction-map: ("top", "left", "right", "bottom");
+$fr-spacing-direction-map: ('top', 'left', 'right', 'bottom');
 
 // prettier-ignore
 $fr-spacing-axes: (

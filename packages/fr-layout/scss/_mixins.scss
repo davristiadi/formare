@@ -1,5 +1,5 @@
-@import "@formare/responsive/scss/mixins";
-@import "./variables";
+@import '@formare/responsive/scss/mixins';
+@import './variables';
 
 @mixin fr-create-container-classes() {
   .Container {
@@ -18,7 +18,7 @@
   margin: 0 auto;
   padding: 0 $fr-grid-gutter-width;
   width: 100%;
-  transition: all 100ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }
 
 @mixin fr-container-modifiers() {

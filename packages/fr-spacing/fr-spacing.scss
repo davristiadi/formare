@@ -1,4 +1,4 @@
-@import "./scss/mixins";
+@import './scss/mixins';
 
 @include fr-create-spacing-classes($is-abbreviated: false);
 @include fr-create-spacing-classes($is-abbreviated: true);

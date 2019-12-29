@@ -2,8 +2,8 @@
  *  🎨 Formare's default color palletes
  */
 
-@import "./color-palletes";
-@import "./functions";
+@import './color-palletes';
+@import './functions';
 
 // Color themes
 $primary-color: $violet-blue !default;
@@ -18,8 +18,8 @@ $gray-color: $sirocco !default;
 // Neutral color declaration
 $black: black;
 $white: white;
-$light: tint($gray-color, 85%);
-$lighter: tint($gray-color, 95%);
+$light: tint($gray-color, 80%);
+$lighter: tint($gray-color, 90%);
 $dark: shade($gray-color, 80%);
 $darker: shade($gray-color, 90%);
 
@@ -31,19 +31,19 @@ $darker: shade($gray-color, 90%);
 $fr-color-themes: () !default;
 $fr-color-themes: map-merge(
   (
-    "primary": $primary-color,
-    "secondary": $secondary-color,
-    "success": $success-color,
-    "warning": $warning-color,
-    "danger": $danger-color,
-    "info": $info-color,
-    "gray": $gray-color,
-    "light": $light,
-    "lighter": $lighter,
-    "dark": $dark,
-    "darker": $darker,
-    "black": $black,
-    "white": $white
+    'primary': $primary-color,
+    'secondary': $secondary-color,
+    'success': $success-color,
+    'warning': $warning-color,
+    'danger': $danger-color,
+    'info': $info-color,
+    'gray': $gray-color,
+    'light': $light,
+    'lighter': $lighter,
+    'dark': $dark,
+    'darker': $darker,
+    'black': $black,
+    'white': $white,
   ),
   $fr-color-themes
 );

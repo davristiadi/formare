@@ -1,5 +1,5 @@
 {
-  "name": "@formare/typography",
+  "name": "@formare/navbar",
   "version": "0.6.0",
   "main": "index.js",
   "license": "MIT",
@@ -12,11 +12,11 @@
     "@formare/elevation": "^0.6.0",
     "@formare/flex": "^0.6.0",
     "@formare/layout": "^0.6.0",
-    "@formare/navbar": "^0.6.0",
     "@formare/responsive": "^0.6.0",
     "@formare/select": "^0.6.0",
     "@formare/shape": "^0.6.0",
     "@formare/spacing": "^0.6.0",
+    "@formare/typography": "^0.6.0",
     "node-sass": "^4.13.0",
     "postcss-loader": "^3.0.0"
   }

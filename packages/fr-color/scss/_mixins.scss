@@ -1,14 +1,14 @@
-@import "./variables";
+@import './variables';
 
 @mixin fr-create-color-classes($type) {
   $color-theme-stylerules: () !default;
-  $color-type-property: "" !default;
-  @if $type == "text" {
-    $color-theme-stylerules: ("Color");
-    $color-type-property: "color";
-  } @else if $type == "background" {
-    $color-theme-stylerules: ("BgColor");
-    $color-type-property: "background-color";
+  $color-type-property: '' !default;
+  @if $type == 'text' {
+    $color-theme-stylerules: ('Color');
+    $color-type-property: 'color';
+  } @else if $type == 'background' {
+    $color-theme-stylerules: ('BgColor');
+    $color-type-property: 'background-color';
   }
 
   @each $color-theme-stylerule in $color-theme-stylerules {
@@ -22,31 +22,24 @@
 @mixin fr-append-color-theme-variants($type, $color-type-property) {
   @each $color-theme, $color-theme-value in $fr-color-themes {
     &-#{$color-theme} {
-      @include fr-append-color-theme-shades(
-        $type,
-        $color-theme-value,
-        $color-type-property
-      );
+      @include fr-append-color-theme-shades($type, $color-theme-value, $color-type-property);
 
       #{$color-type-property}: $color-theme-value !important;
     }
   }
 }
 
-@mixin fr-append-color-theme-shades(
-  $type,
-  $color-theme-value,
-  $color-type-property
-) {
+@mixin fr-append-color-theme-shades($type, $color-theme-value, $color-type-property) {
   @for $shade-index from 1 through 100 {
     // we're using the modulus operator to get $shade-index on every multiplication 10
     // up until 100.
     @if $shade-index % 10 == 0 {
       &-#{$shade-index} {
-        #{$color-type-property}: fr-color-shade(
-          $color-theme-value,
-          $shade-index
-        ) !important;
+        #{$color-type-property}: fr-color-shade($color-theme-value, $shade-index) !important;
+      }
+
+      &-m#{$shade-index} {
+        #{$color-type-property}: fr-color-shade($color-theme-value, -$shade-index) !important;
       }
     }
   }

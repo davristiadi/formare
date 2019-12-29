@@ -34,7 +34,7 @@ npm manifest:
       "@formare/shape": "^0.6.0",
       "@formare/spacing": "^0.6.0",
       "autoprefixer": "^9.7.2",
-      "formare": "^0.6.0"
+     
     }
   }
 

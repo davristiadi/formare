@@ -1,6 +1,6 @@
-@import "@formare/spacing/scss/variables";
+@import '@formare/spacing/scss/variables';
 
-$fr-card-padding: fr-spacing("base");
+$fr-card-padding: fr-spacing('base');
 
 $fr-card-bg-color: $white;
 $fr-card-fg-color: fr-color-contrast($fr-card-bg-color);

@@ -1,35 +1,31 @@
-@import "@formare/typography/scss/variables";
-@import "@formare/color/scss/variables";
-@import "@formare/color/scss/variables";
-@import "@formare/spacing/scss/variables";
+@import '@formare/typography/scss/variables';
+@import '@formare/color/scss/variables';
+@import '@formare/color/scss/variables';
+@import '@formare/spacing/scss/variables';
 
-$fr-select-font-size: fr-font-size("base") !default;
-$fr-select-font-family: fr-font-family("sans-serif") !default;
+$fr-select-font-size: fr-font-size('base') !default;
+$fr-select-font-family: fr-font-family('sans-serif') !default;
 
 $fr-select-bg-color: $white !default;
 $fr-select-fg-color: fr-color-contrast($fr-select-bg-color) !default;
 
 $fr-select-border-style: solid !default;
 $fr-select-border-width: 1px !default;
-$fr-select-border-color: fr-color-theme("light") !default;
-$fr-select-border-radius: fr-border-radius("base") !default;
+$fr-select-border-color: fr-color-theme('light') !default;
+$fr-select-border-radius: fr-border-radius('base') !default;
 
-$fr-select-spacing-y: fr-spacing("small") !default;
-$fr-select-spacing-x: fr-spacing("base") !default;
+$fr-select-spacing-y: fr-spacing('small') !default;
+$fr-select-spacing-x: fr-spacing('base') !default;
 $fr-select-spacing: $fr-select-spacing-y $fr-select-spacing-x;
 
 $fr-select-transition: all 250ms ease-in-out;
 
-$fr-select-border-color--on-hover: fr-color-theme-shade("primary", -20);
-$fr-select-border-color--on-focus: fr-color-theme-shade("primary", 0);
+$fr-select-border-color--is-hovered: fr-color-theme-shade('primary', -20) !default;
+$fr-select-border-color--is-focused: fr-color-theme-shade('primary', 0) !default;
+$fr-select-bg-color--is-disabled: fr-color-theme('lighter') !default;
+$fr-select-fg-color--is-focused: fr-color-theme('primary') !default;
 
-// $fr-select-hovered-border-color: fr-color-theme-shade(primary, -20);
-
-// $fr-select-focused-border-color: fr-color-theme-shade(primary, 0);
-// $fr-select-focused-box-shadow-blur: 0.2em !default;
-// $fr-select-focused-box-shadow-spread: 0.1em !default;
-// $fr-select-focused-box-shadow-color: fr-color-theme-opacity(primary, 0.2);
-// $fr-select-focused-box-shadow-unified: 0 0 ($fr-select-focused-box-shadow-blur)
-//   ($fr-select-focused-box-shadow-spread) ($fr-select-focused-box-shadow-color) !default;
-
-// $fr-select-disabled-background: fr-color-theme("lighter");
+$fr-select-box-shadow-values--is-focused: 0 0 0.2rem 0.1rem !default;
+$fr-select-box-shadow-color--is-focused: fr-color-theme-opacity('primary', 0.2) !default;
+$fr-select-box-shadow--is-focused: $fr-select-box-shadow-values--is-focused
+  $fr-select-box-shadow-color--is-focused !default;

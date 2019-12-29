@@ -1,0 +1,10 @@
+$fr-text-transforms: () !default;
+$fr-text-transforms: map-merge(
+  (
+    "none": none,
+    "uppercase": uppercase,
+    "lowercase": lowercase,
+    "capitalize": capitalize
+  ),
+  $fr-text-transforms
+);

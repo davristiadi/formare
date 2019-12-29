@@ -2,7 +2,7 @@ Arguments:
   /usr/local/lib/node_modules/node/bin/node /usr/local/bin/yarn remove autoprefixer
 
 PATH: 
-  /Users/davidkurniakristiadi/Documents/Development/formare/packages/fr-card/node_modules/.bin:/Users/davidkurniakristiadi/Documents/Development/formare/packages/node_modules/.bin:/Users/davidkurniakristiadi/Documents/Development/formare/node_modules/.bin:/Users/davidkurniakristiadi/Documents/Development/node_modules/.bin:/Users/davidkurniakristiadi/Documents/node_modules/.bin:/Users/davidkurniakristiadi/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/usr/local/lib/node_modules/node/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+  /Users/davidkurniakristiadi/Documents/Development/formare/packages/fr-navbar/node_modules/.bin:/Users/davidkurniakristiadi/Documents/Development/formare/packages/node_modules/.bin:/Users/davidkurniakristiadi/Documents/Development/formare/node_modules/.bin:/Users/davidkurniakristiadi/Documents/Development/node_modules/.bin:/Users/davidkurniakristiadi/Documents/node_modules/.bin:/Users/davidkurniakristiadi/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/usr/local/lib/node_modules/node/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 Yarn version: 
   1.13.0
@@ -14,11 +14,11 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: ENOENT: no such file or directory, copyfile '/Users/davidkurniakristiadi/Library/Caches/Yarn/v4/npm-autoprefixer-9.7.2-26cf729fbb709323b40171a874304884dcceffed/node_modules/autoprefixer/lib/brackets.js' -> '/Users/davidkurniakristiadi/Documents/Development/formare/packages/formare/node_modules/autoprefixer/lib/brackets.js'
+  Error: ENOENT: no such file or directory, copyfile '/Users/davidkurniakristiadi/Library/Caches/Yarn/v4/npm-autoprefixer-9.7.2-26cf729fbb709323b40171a874304884dcceffed/node_modules/autoprefixer/lib/autoprefixer.js' -> '/Users/davidkurniakristiadi/Documents/Development/formare/packages/formare/node_modules/autoprefixer/lib/autoprefixer.js'
 
 npm manifest: 
   {
-    "name": "@formare/card",
+    "name": "@formare/navbar",
     "version": "0.6.0",
     "main": "index.js",
     "license": "MIT",
@@ -26,8 +26,8 @@ npm manifest:
       "@formare/alert": "^0.6.0",
       "@formare/block": "^0.6.0",
       "@formare/button": "^0.6.0",
+      "@formare/card": "^0.6.0",
       "@formare/layout": "^0.6.0",
-      "@formare/navbar": "^0.6.0",
       "@formare/responsive": "^0.6.0",
       "@formare/select": "^0.6.0",
       "@formare/shape": "^0.6.0",

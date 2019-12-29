@@ -1,14 +1,14 @@
-@import "./breakpoints";
-@import "./functions";
+@import './breakpoints';
+@import './functions';
 
 $fr-responsive-breakpoints: () !default;
 $fr-responsive-breakpoints: map-merge(
   (
-    "xs": 0,
-    "sm": $fr-breakpoint-small,
-    "md": $fr-breakpoint-medium,
-    "lg": $fr-breakpoint-large,
-    "xl": $fr-breakpoint-xlarge
+    'xs': 0,
+    'sm': $fr-breakpoint-small,
+    'md': $fr-breakpoint-medium,
+    'lg': $fr-breakpoint-large,
+    'xl': $fr-breakpoint-xlarge,
   ),
   $fr-responsive-breakpoints
 );

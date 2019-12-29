@@ -1,4 +1,4 @@
-@import "./variables";
+@import './variables';
 
 /**
  *
@@ -20,7 +20,7 @@
   @each $spacing-type, $spacing-type-abbreviation in $fr-spacing-type-map {
     $spacing-type-capitalized: capitalize($spacing-type);
 
-    $spacing-type-stylerule: "" !default;
+    $spacing-type-stylerule: '' !default;
     @if $is-abbreviated {
       // creates either "mg" or "pd" stylerule;
       $spacing-type-stylerule: $spacing-type-abbreviation;
@@ -44,10 +44,10 @@
     $spacing-direction-lowercased: $spacing-direction;
     $spacing-direction-capitalized: capitalize($spacing-direction);
 
-    $spacing-direction-stylerule: "" !default;
+    $spacing-direction-stylerule: '' !default;
     @if ($is-abbreviated) {
       // e.g: "mg-left", "mg-top"
-      $spacing-direction-stylerule: "-#{$spacing-direction-lowercased}";
+      $spacing-direction-stylerule: '-#{$spacing-direction-lowercased}';
     } @else {
       // e.g: PaddingLeft, MarginTop
       $spacing-direction-stylerule: $spacing-direction-capitalized;
@@ -77,23 +77,17 @@
  * - .MarginLeft-large
  * - .Padding-large
  */
-@mixin fr-create-spacing-values(
-  $is-abbreviated,
-  $spacing-type,
-  $spacing-direction: "all"
-) {
+@mixin fr-create-spacing-values($is-abbreviated, $spacing-type, $spacing-direction: 'all') {
   @each $spacing-size, $spacing-value in $fr-spacings {
     &-#{$spacing-size} {
-      @if $spacing-direction == "all" {
+      @if $spacing-direction == 'all' {
         #{$spacing-type}: fr-spacing($spacing-size) !important;
-      } @else if $spacing-direction == "x" or $spacing-direction == "y" {
+      } @else if $spacing-direction == 'x' or $spacing-direction == 'y' {
         @each $direction in map-get($fr-spacing-axes, $spacing-direction) {
           #{$spacing-type}-#{$direction}: fr-spacing($spacing-size) !important;
         }
       } @else {
-        #{$spacing-type}-#{$spacing-direction}: fr-spacing(
-          $spacing-size
-        ) !important;
+        #{$spacing-type}-#{$spacing-direction}: fr-spacing($spacing-size) !important;
       }
     }
   }

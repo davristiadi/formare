@@ -1,0 +1,29 @@
+@import "@formare/color/scss/functions";
+
+$fr-navbar-transition: all 250ms ease-in-out !default;
+$fr-navbar-bg-color: $white !default;
+$fr-navbar-fg-color: fr-color-contrast($fr-navbar-bg-color) !default;
+$fr-navbar-hovered-color: fr-color-theme("primary") !default;
+$fr-navbar-height: 5em;
+
+$fr-navbar-heights: () !default;
+$fr-navbar-heights: map-merge(
+  (
+    xsmall: (
+      $fr-navbar-height * 0.5
+    ),
+    small: (
+      $fr-navbar-height * 0.75
+    ),
+    base: (
+      $fr-navbar-height * 1
+    ),
+    large: (
+      $fr-navbar-height * 1.5
+    ),
+    xlarge: (
+      $fr-navbar-height * 2
+    )
+  ),
+  $fr-navbar-heights
+);

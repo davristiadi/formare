@@ -1,34 +1,101 @@
-@import "./variables";
+@import './variables';
 
 @mixin fr-create-select-classes() {
   .Select {
-    > select {
-      @include fr-select-base-styles();
-    }
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+    @include fr-reset-select-styles();
+    @include fr-select-base-styles();
+
+    @include fr-create-select-state-classes();
+    @include fr-create-select-arrow-class();
+  }
+}
+
+@mixin fr-reset-select-styles() {
+  > select {
+    outline: none;
+    white-space: normal;
+    appearance: none;
+    cursor: pointer;
   }
 }
 
 @mixin fr-select-base-styles() {
-  position: relative;
-  display: flex;
-  flex: 1 1 auto;
-  width: 100%;
+  > select {
+    position: relative;
+    display: flex;
+    flex: 1 1 auto;
+    width: 100%;
 
-  font-family: $fr-select-font-family;
-  font-size: $fr-select-font-size;
+    font-family: $fr-select-font-family;
+    font-size: $fr-select-font-size;
 
-  background-color: $fr-select-bg-color;
-  color: $fr-select-fg-color;
+    background-color: $fr-select-bg-color;
+    color: $fr-select-fg-color;
 
-  padding: $fr-select-spacing;
+    padding: $fr-select-spacing;
 
-  border-style: $fr-select-border-style;
-  border-width: $fr-select-border-width;
-  border-color: $fr-select-border-color;
+    border-style: $fr-select-border-style;
+    border-width: $fr-select-border-width;
+    border-color: $fr-select-border-color;
 
-  transition: $fr-select-transition;
+    transition: $fr-select-transition;
 
-  outline: none;
-  white-space: normal;
-  appearance: none;
+    outline: none;
+    white-space: normal;
+    appearance: none;
+  }
+}
+
+@mixin fr-create-select-arrow-class() {
+  &-arrow {
+    display: flex;
+    transition: all 150ms ease-in-out;
+
+    position: absolute;
+    top: $fr-select-spacing-y * 1.5;
+    right: $fr-select-spacing-x;
+
+    height: 0.65em;
+
+    border: 2px solid transparent;
+    border-color: fr-color-theme('gray');
+    border-right: 0;
+    border-top: 0;
+
+    width: 0.65em;
+
+    transform: rotate(-45deg);
+  }
+
+  &:focus-within & {
+    &-arrow {
+      border-color: fr-color-theme('primary');
+      transform: translateY(30%) rotate(135deg);
+    }
+  }
+}
+
+@mixin fr-create-select-state-classes() {
+  > select {
+    &:hover,
+    .is-hovered {
+      border-color: $fr-select-border-color--is-hovered;
+    }
+
+    &:focus,
+    .is-focused {
+      border-color: $fr-select-border-color--is-focused;
+      box-shadow: $fr-select-box-shadow--is-focused;
+    }
+
+    &:disabled,
+    .is-disabled {
+      background-color: $fr-select-bg-color--is-disabled;
+      cursor: not-allowed;
+    }
+  }
 }

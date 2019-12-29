@@ -1,5 +1,5 @@
-@import "./functions";
-@import "./typefaces";
+@import './functions';
+@import './typefaces';
 
 $fr-font-family-sans-serif: $fr-typeface-system-stack !default;
 $fr-font-family-serif: $fr-typeface-georgia-stack !default;
@@ -8,9 +8,9 @@ $fr-font-family-monospace: $fr-typeface-sf-mono-stack !default;
 $fr-font-families: () !default;
 $fr-font-families: map-merge(
   (
-    "sans-serif": $fr-font-family-sans-serif,
-    "serif": $fr-font-family-serif,
-    "monospace": $fr-font-family-monospace
+    'sans-serif': $fr-font-family-sans-serif,
+    'serif': $fr-font-family-serif,
+    'monospace': $fr-font-family-monospace,
   ),
   $fr-font-families
 );
@@ -19,18 +19,18 @@ $fr-font-size: 1rem !default;
 $fr-font-sizes: () !default;
 $fr-font-sizes: map-merge(
   (
-    "4xsmall": $fr-font-size * 0.402,
-    "3xsmall": $fr-font-size * 0.482,
-    "2xsmall": $fr-font-size * 0.579,
-    "xsmall": $fr-font-size * 0.694,
-    "small": $fr-font-size * 0.833,
-    "base": $fr-font-size,
-    "large": $fr-font-size * 1.2,
-    "xlarge": $fr-font-size * 1.44,
-    "2xlarge": $fr-font-size * 1.728,
-    "3xlarge": $fr-font-size * 2.074,
-    "4xlarge": $fr-font-size * 2.488,
-    "5xlarge": $fr-font-size * 2.986
+    '4xsmall': $fr-font-size * 0.402,
+    '3xsmall': $fr-font-size * 0.482,
+    '2xsmall': $fr-font-size * 0.579,
+    'xsmall': $fr-font-size * 0.694,
+    'small': $fr-font-size * 0.833,
+    'base': $fr-font-size,
+    'large': $fr-font-size * 1.2,
+    'xlarge': $fr-font-size * 1.44,
+    '2xlarge': $fr-font-size * 1.728,
+    '3xlarge': $fr-font-size * 2.074,
+    '4xlarge': $fr-font-size * 2.488,
+    '5xlarge': $fr-font-size * 2.986,
   ),
   $fr-font-sizes
 );
@@ -38,12 +38,12 @@ $fr-font-sizes: map-merge(
 $fr-headings: () !default;
 $fr-headings: map-merge(
   (
-    "h1": fr-font-size("5xlarge"),
-    "h2": fr-font-size("4xlarge"),
-    "h3": fr-font-size("3xlarge"),
-    "h4": fr-font-size("2xlarge"),
-    "h5": fr-font-size("xlarge"),
-    "h6": fr-font-size("large")
+    'h1': fr-font-size('5xlarge'),
+    'h2': fr-font-size('4xlarge'),
+    'h3': fr-font-size('3xlarge'),
+    'h4': fr-font-size('2xlarge'),
+    'h5': fr-font-size('xlarge'),
+    'h6': fr-font-size('large'),
   ),
   $fr-headings
 );
@@ -52,25 +52,25 @@ $fr-font-weight: 400 !default;
 $fr-font-weights: () !default;
 $fr-font-weights: map-merge(
   (
-    "thin": 100,
-    "extra-light": 200,
-    "ultra-light": 200,
-    "light": 300,
-    "normal": 400,
-    "book": 400,
-    "regular": 400,
-    "medium": 500,
-    "semi-bold": 600,
-    "semibold": 600,
-    "demi-bold": 600,
-    "bold": 700,
-    "extra-bold": 800,
-    "ultra-bold": 900,
-    "heavy": 900,
-    "black": 900,
-    "ultra": 900,
-    "ultra-black": 900,
-    "extra-ultra": 900
+    'thin': 100,
+    'extra-light': 200,
+    'ultra-light': 200,
+    'light': 300,
+    'normal': 400,
+    'book': 400,
+    'regular': 400,
+    'medium': 500,
+    'semi-bold': 600,
+    'semibold': 600,
+    'demi-bold': 600,
+    'bold': 700,
+    'extra-bold': 800,
+    'ultra-bold': 900,
+    'heavy': 900,
+    'black': 900,
+    'ultra': 900,
+    'ultra-black': 900,
+    'extra-ultra': 900,
   ),
   $fr-font-weights
 );
@@ -79,11 +79,11 @@ $fr-line-height: 1.5 !default;
 $fr-line-heights: () !default;
 $fr-line-heights: map-merge(
   (
-    "xsmall": $fr-line-height * 0.5,
-    "small": $fr-line-height * 0.75,
-    "base": $fr-line-height * 1,
-    "large": $fr-line-height * 1.25,
-    "xlarge": $fr-line-height * 1.5
+    'xsmall': $fr-line-height * 0.5,
+    'small': $fr-line-height * 0.75,
+    'base': $fr-line-height * 1,
+    'large': $fr-line-height * 1.25,
+    'xlarge': $fr-line-height * 1.5,
   ),
   $fr-line-heights
 );
@@ -92,11 +92,11 @@ $fr-letter-spacing: 0px !default;
 $fr-letter-spacings: () !default;
 $fr-letter-spacings: map-merge(
   (
-    "xtight": $fr-letter-spacing - 1.5,
-    "tight": $fr-letter-spacing - 0.5,
-    "base": $fr-letter-spacing,
-    "loose": $fr-letter-spacing + 2,
-    "xloose": $fr-letter-spacing + 4.5
+    'xtight': $fr-letter-spacing - 1.5,
+    'tight': $fr-letter-spacing - 0.5,
+    'base': $fr-letter-spacing,
+    'loose': $fr-letter-spacing + 2,
+    'xloose': $fr-letter-spacing + 4.5,
   ),
   $fr-letter-spacings
 );
@@ -104,10 +104,10 @@ $fr-letter-spacings: map-merge(
 $fr-text-transforms: () !default;
 $fr-text-transforms: map-merge(
   (
-    "none": none,
-    "uppercase": uppercase,
-    "lowercase": lowercase,
-    "capitalize": capitalize
+    'none': none,
+    'uppercase': uppercase,
+    'lowercase': lowercase,
+    'capitalize': capitalize,
   ),
   $fr-text-transforms
 );

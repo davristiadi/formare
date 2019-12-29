@@ -1,29 +1,29 @@
-@import "formare/scss/utils";
+@import '@formare/core/scss/utils';
 
 $fr-flex-directions: (
-  "row": row,
-  "column": column
+  'row': row,
+  'column': column,
 );
 
-$fr-alignment-axes: ("align", "justify");
+$fr-alignment-axes: ('align', 'justify');
 $fr-alignment-types: (
-  "items": (
-    "start": flex-start,
-    "center": center,
-    "end": flex-end,
-    "stretch": stretch,
-    "baseline": baseline,
-    "left": left,
-    "right": right
+  'items': (
+    'start': flex-start,
+    'center': center,
+    'end': flex-end,
+    'stretch': stretch,
+    'baseline': baseline,
+    'left': left,
+    'right': right,
   ),
-  "content": (
-    "start": flex-start,
-    "center": center,
-    "end": flex-end,
-    "baseline": baseline,
-    "between": space-between,
-    "around": space-around,
-    "evenly": space-evenly,
-    "stretch": stretch
-  )
+  'content': (
+    'start': flex-start,
+    'center': center,
+    'end': flex-end,
+    'baseline': baseline,
+    'between': space-between,
+    'around': space-around,
+    'evenly': space-evenly,
+    'stretch': stretch,
+  ),
 );

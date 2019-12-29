@@ -1,7 +1,7 @@
-@import "@formare/shape/scss/variables";
-@import "@formare/color/scss/variables";
-@import "@formare/spacing/scss/functions";
-@import "./variables";
+@import '@formare/shape/scss/variables';
+@import '@formare/color/scss/variables';
+@import '@formare/spacing/scss/functions';
+@import './variables';
 
 @mixin fr-create-input-classes() {
   .Input,
@@ -20,9 +20,9 @@
   flex: 1 1 auto;
   width: 100%;
   font-family: $fr-input-font-family;
+  font-size: $fr-input-font-size;
   padding: $fr-input-spacing;
   transition: $fr-input-transition;
-  font-size: $fr-input-font-size;
   background-color: $fr-input-bg-color;
   border-style: solid;
   border-width: 1px;
@@ -32,17 +32,17 @@
   white-space: normal;
 }
 
-@mixin fr-append-input-state-variants($color-theme: "base") {
+@mixin fr-append-input-state-variants($color-theme: 'base') {
   @include fr-append-input-focused-state($color-theme);
   @include fr-append-input-hovered-state($color-theme);
   @include fr-append-input-disabled-state();
 }
 
 @mixin fr-append-input-focused-state($color-theme) {
-  $focused-border-color: "" !default;
-  $focused-box-shadow: "" !default;
+  $focused-border-color: '' !default;
+  $focused-box-shadow: '' !default;
 
-  @if $color-theme == "base" {
+  @if $color-theme == 'base' {
     $focused-border-color: $fr-input-focused-border-color;
     $focused-box-shadow: $fr-input-focused-box-shadow;
   } @else {
@@ -135,13 +135,13 @@
   }
 
   > *:first-child {
-    border-top-left-radius: fr-border-radius("base");
-    border-bottom-left-radius: fr-border-radius("base");
+    border-top-left-radius: fr-border-radius('base');
+    border-bottom-left-radius: fr-border-radius('base');
   }
 
   > *:last-child {
-    border-top-right-radius: fr-border-radius("base");
-    border-bottom-right-radius: fr-border-radius("base");
+    border-top-right-radius: fr-border-radius('base');
+    border-bottom-right-radius: fr-border-radius('base');
   }
 }
 
@@ -159,8 +159,8 @@
 @mixin fr-input-group-addon-base-styles() {
   display: flex;
   align-items: center;
-  padding: 0 fr-spacing("base");
-  background-color: fr-color-theme("light");
+  padding: 0 fr-spacing('base');
+  background-color: fr-color-theme('light');
 }
 
 @mixin fr-append-input-group-color-theme-variants() {

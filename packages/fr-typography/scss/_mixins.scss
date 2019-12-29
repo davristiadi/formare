@@ -1,4 +1,4 @@
-@import "./variables";
+@import './variables';
 
 @mixin fr-create-typography-classes() {
   @include fr-create-font-size-classes();

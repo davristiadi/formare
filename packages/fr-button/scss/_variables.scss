@@ -1,27 +1,40 @@
-@import "@formare/typography/scss/variables";
-@import "@formare/spacing/scss/variables";
-@import "@formare/color/scss/variables";
-@import "@formare/shape/scss/variables";
+@import '@formare/typography/scss/variables';
+@import '@formare/spacing/scss/variables';
+@import '@formare/color/scss/variables';
+@import '@formare/shape/scss/variables';
 
-$fr-button-font-size: fr-font-size("regular") !default;
-$fr-button-font-weight: fr-font-weight("semibold") !default;
-$fr-button-font-family: fr-font-family("primary") !default;
+$fr-button-font-size: fr-font-size('regular') !default;
+$fr-button-font-weight: fr-font-weight('semibold') !default;
+$fr-button-font-family: fr-font-family('primary') !default;
 $fr-button-line-height: $fr-line-height !default;
 
-$fr-button-bg-color: fr-color-theme-opacity("light", 0) !default;
-$fr-button-fg-color: fr-color-contrast($fr-button-bg-color) !default;
+$fr-button-bg-color: transparent !default;
+$fr-button-fg-color: $dark !default;
 
+$fr-button-fg-color--is-hovered: fr-color-theme('primary') !default;
+$fr-button-fg-color--is-focused: fr-color-theme('primary') !default;
+
+$fr-button-border-color: fr-color-theme('light') !default;
 $fr-button-border-style: solid !default;
 $fr-button-border-width: 1px !default;
-$fr-button-border-color: fr-color-theme-shade("gray", -50) !default;
-$fr-button-border-radius: fr-border-radius("base") !default;
+
+$fr-button-border-color--is-hovered: fr-color-theme('primary') !default;
+$fr-button-border-color--is-focused: fr-color-theme('primary') !default;
+
+$fr-button-border-radius: fr-border-radius('base') !default;
+
+$fr-button-box-shadow-values--is-focused: 0 0 0.2rem 0.1rem !default;
+// prettier-ignore
+$fr-button-box-shadow-color--is-focused: fr-color-theme-opacity("primary", 0.3) !default;
+$fr-button-box-shadow--is-focused: $fr-button-box-shadow-values--is-focused
+  $fr-button-box-shadow-color--is-focused;
 
 $fr-button-min-width: 6em !default;
 
 $fr-button-transition: all 150ms ease-in-out !default;
 
-$fr-button-spacing-y: fr-spacing("xsmall") !default;
-$fr-button-spacing-x: fr-spacing("base") !default;
+$fr-button-spacing-y: fr-spacing('xsmall') !default;
+$fr-button-spacing-x: fr-spacing('base') !default;
 $fr-button-spacing: $fr-button-spacing-y $fr-button-spacing-x;
 
 $fr-button-sizes: () !default;

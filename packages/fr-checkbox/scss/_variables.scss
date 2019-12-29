@@ -1,0 +1,18 @@
+@import "@formare/color/scss/functions";
+@import "@formare/shape/scss/functions";
+
+$fr-checkbox-transition: $transition !default;
+$fr-checkbox-height: 20px !default;
+$fr-checkbox-width: 20px !default;
+
+$fr-checkbox-bg-color: fr-color-theme(primary) !default;
+$fr-checkbox-fg-color: fr-color-contrast($fr-checkbox-bg-color) !default;
+
+$fr-checkbox-border-radius: border-radius(base) !default;
+$fr-checkbox-border-style: solid !default;
+$fr-checkbox-border-width: 1px !default;
+$fr-checkbox-border-color: $light !default;
+
+$fr-checkbox-checked-bg-color: $fr-checkbox-bg-color !default;
+$fr-checkbox-checked-fg-color: $fr-checkbox-fg-color !default;
+$fr-checkbox-checked-border-color: $primary-color !default;

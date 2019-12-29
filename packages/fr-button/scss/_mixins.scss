@@ -1,21 +1,21 @@
-@import "@formare/elevation/scss/mixins";
-@import "@formare/spacing/scss/variables";
-@import "@formare/color/scss/variables";
-@import "./variables";
+@import '@formare/elevation/scss/mixins';
+@import '@formare/spacing/scss/variables';
+@import '@formare/color/scss/variables';
+@import './variables';
 
 @mixin fr-create-button-classes() {
   .Button {
-    @include fr-button-base-styles();
-    @include fr-create-button-state-classes();
+    @include fr-add-button-base-styles();
+    @include fr-add-button-base-state-classes();
 
-    @include fr-create-button-color-theme-classes();
+    @include fr-create-button-variant-classes();
     @include fr-create-button-size-classes();
     @include fr-create-button-shape-classes();
     @include fr-create-button-elevated-class();
   }
 }
 
-@mixin fr-button-base-styles() {
+@mixin fr-add-button-base-styles() {
   position: relative;
   display: inline-flex;
   justify-content: center;
@@ -36,6 +36,7 @@
   border-style: $fr-button-border-style;
   border-width: $fr-button-border-width;
   border-color: $fr-button-border-color;
+  // border-color: $fr-button-border-color;
   border-radius: $fr-button-border-radius;
 
   transition: $fr-button-transition;
@@ -49,7 +50,7 @@
   }
 }
 
-@mixin fr-create-button-state-classes() {
+@mixin fr-add-button-base-state-classes() {
   @include fr-button-is-disabled() {
     opacity: 0.5;
     cursor: not-allowed;
@@ -62,35 +63,30 @@
   }
 
   @include fr-button-is-not-disabled() {
+    /* Reset outline on every state classes to remove collision with border styling */
     @include fr-button-is-hovered() {
-      border-color: fr-color-theme-shade("gray", 0);
-
-      /* Reset outline to remove collision with border styling */
+      border-color: $fr-button-border-color--is-hovered;
+      color: $fr-button-fg-color--is-hovered;
       outline: none;
     }
 
     @include fr-button-is-focused() {
-      $border-color: fr-color-theme-shade("gray", 0);
-      $box-shadow-color: fr-color-theme-opacity("primary", 0.25);
-
-      border-color: $border-color;
-      box-shadow: $fr-button-box-shadow-values $box-shadow-color;
+      box-shadow: $fr-button-box-shadow--is-focused;
+      border-color: $fr-button-border-color--is-focused;
+      color: $fr-button-fg-color--is-focused;
       outline: none;
     }
 
     @include fr-button-is-active() {
-      // border-color: fr-color-theme-shade($fr-button-color-theme, -45);
-      // background-color: fr-color-theme-shade($fr-button-color-theme, -45);
-      box-shadow: none;
       outline: none;
     }
   }
 }
 
 /**
- * Generate different color theme variants of a button component.
+ * Generate different button variants that depend on color themes.
  */
-@mixin fr-create-button-color-theme-classes() {
+@mixin fr-create-button-variant-classes() {
   @each $color-theme, $color-theme-value in $fr-color-themes {
     &--#{$color-theme} {
       @include fr-add-button-filled-styles($color-theme);
@@ -113,14 +109,14 @@
       color: $fg-color-hovered;
       background-color: $bg-color-hovered;
       border-color: $border-color-hovered;
-      box-shadow: none;
+      // box-shadow: none;
     }
 
     @include fr-button-is-focused() {
       $bg-color-focused: fr-color-theme-shade($color-theme, -30);
       $fg-color-focused: fr-color-contrast($bg-color-focused);
       $border-color-focused: $bg-color-focused;
-      $box-shadow-color-focused: fr-color-theme-shade($color-theme, -70);
+      $box-shadow-color-focused: fr-color-theme-opacity($color-theme, 0.3);
       $box-shadow-focused: $box-shadow-values $box-shadow-color-focused;
 
       color: $fg-color-focused;
@@ -137,7 +133,8 @@
       color: $fg-color-active;
       background-color: $bg-color-active;
       border-color: $border-color-active;
-      box-shadow: none;
+
+      // box-shadow: none;
     }
   }
 
@@ -303,6 +300,16 @@
   display: flex;
   flex-direction: row;
 
+  > .Button {
+    @include fr-button-is-hovered() {
+      z-index: 1;
+    }
+
+    @include fr-button-is-focused() {
+      z-index: 1;
+    }
+  }
+
   > .Button:not(:last-child) {
     margin-right: -1px;
   }
@@ -363,7 +370,7 @@
 
 // TO-DO: Deprecate this helper mixin since it's not used anymore.
 // Shorthand version of the specific state functions.
-@mixin fr-button-is-state($state: "disabled") {
+@mixin fr-button-is-state($state: 'disabled') {
   @include fr-button-is-#{$state} {
     @content;
   }

@@ -1,6 +1,6 @@
-@import "@formare/responsive/scss/variables";
-@import "@formare/responsive/scss/mixins";
-@import "./variables";
+@import '@formare/responsive/scss/variables';
+@import '@formare/responsive/scss/mixins';
+@import './variables';
 
 @mixin fr-create-grid-classes() {
   .Grids,
@@ -23,8 +23,8 @@
 
   > .Grid,
   > .Column,
-  > [class*="Grid-"],
-  > [class*="Column-"] {
+  > [class*='Grid-'],
+  > [class*='Column-'] {
     padding: $fr-grid-gap-gutter;
   }
 }
@@ -35,8 +35,8 @@
 
     > .Grid,
     > .Column,
-    > [class*="Column-"],
-    > [class*="Grid-"] {
+    > [class*='Column-'],
+    > [class*='Grid-'] {
       padding: 0;
     }
   }
