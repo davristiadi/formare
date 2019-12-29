@@ -1,0 +1,34 @@
+@import "./variables";
+
+@mixin fr-create-select-classes() {
+  .Select {
+    > select {
+      @include fr-select-base-styles();
+    }
+  }
+}
+
+@mixin fr-select-base-styles() {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  width: 100%;
+
+  font-family: $fr-select-font-family;
+  font-size: $fr-select-font-size;
+
+  background-color: $fr-select-bg-color;
+  color: $fr-select-fg-color;
+
+  padding: $fr-select-spacing;
+
+  border-style: $fr-select-border-style;
+  border-width: $fr-select-border-width;
+  border-color: $fr-select-border-color;
+
+  transition: $fr-select-transition;
+
+  outline: none;
+  white-space: normal;
+  appearance: none;
+}
