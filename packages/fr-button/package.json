@@ -1,14 +1,14 @@
 {
   "name": "@formare/button",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Button component of Formare",
   "main": "index.js",
   "author": "David Kurnia Kristiadi",
   "license": "MIT",
   "dependencies": {
-    "@formare/color": "^0.6.0",
-    "@formare/core": "^0.6.0",
-    "@formare/elevation": "^0.6.0",
-    "@formare/spacing": "^0.6.0"
+    "@formare/color": "^0.6.1",
+    "@formare/core": "^0.6.1",
+    "@formare/elevation": "^0.6.1",
+    "@formare/spacing": "^0.6.1"
   }
 }
