@@ -1,5 +1,8 @@
-### Dependences ###
+### Dependencies ###
 .prettierrc
+
+### Project ###
+dist/
 
 ### Node ###
 # Logs
