@@ -8,7 +8,6 @@
   },
   "dependencies": {
     "@formare/alert": "^0.6.1",
-    "@formare/block": "^0.6.0",
     "@formare/button": "^0.6.1",
     "@formare/card": "^0.6.1",
     "@formare/color": "^0.6.1",
