@@ -3,6 +3,9 @@
   "version": "0.6.1",
   "main": "index.js",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@formare/button": "^0.6.1",
     "@formare/core": "^0.6.1",

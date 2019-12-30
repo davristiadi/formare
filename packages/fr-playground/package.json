@@ -28,6 +28,9 @@
     "gatsby"
   ],
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",

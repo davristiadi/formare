@@ -39,6 +39,9 @@
     "gatsby"
   ],
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "deploy": "gh-pages -d public",
     "build:deploy": "gatsby build --prefix-paths",

@@ -3,6 +3,9 @@
   "version": "0.6.1",
   "main": "index.js",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@formare/alert": "^0.6.1",
     "@formare/block": "^0.6.0",
