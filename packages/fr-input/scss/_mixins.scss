@@ -19,6 +19,7 @@
   display: flex;
   flex: 1 1 auto;
   width: 100%;
+  line-height: $fr-input-line-height;
   font-family: $fr-input-font-family;
   font-size: $fr-input-font-size;
   padding: $fr-input-spacing;

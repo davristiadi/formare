@@ -12,9 +12,11 @@ $fr-input-border-width: 1px !default;
 $fr-input-border-color: $light !default;
 $fr-input-border-radius: fr-border-radius('base') !default;
 
-$fr-input-spacing-y: fr-spacing('small') !default;
+$fr-input-spacing-y: fr-spacing('xsmall') !default;
 $fr-input-spacing-x: fr-spacing('base') !default;
 $fr-input-spacing: $fr-input-spacing-y $fr-input-spacing-x;
+
+$fr-input-line-height: $fr-line-height !default;
 
 $fr-input-transition: all 250ms ease-in-out;
 
