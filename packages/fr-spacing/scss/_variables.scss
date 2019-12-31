@@ -6,16 +6,15 @@ $fr-spacings: () !default;
 $fr-spacings: map-merge(
   (
     'auto': auto,
-    '3xsmall': $fr-spacing / 3,
-    '2xsmall': $fr-spacing / 2,
-    'xsmall': $fr-spacing / 1.5,
-    'small': $fr-spacing / 1.25,
+    '3xsmall': $fr-spacing * 0.5,
+    '2xsmall': $fr-spacing * 0.625,
+    'xsmall': $fr-spacing * 0.75,
+    'small': $fr-spacing * 0.875,
     'base': $fr-spacing,
     'large': $fr-spacing * 1.25,
     'xlarge': $fr-spacing * 1.5,
     '2xlarge': $fr-spacing * 2,
     '3xlarge': $fr-spacing * 3,
-    '4xlarge': $fr-spacing * 4,
   ),
   $fr-spacings
 );
