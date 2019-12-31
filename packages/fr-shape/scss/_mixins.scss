@@ -32,11 +32,11 @@
 
     $border-color-property: 'border-color' !default;
     @if $border-side {
-      $border-color-property: 'border-#{$border-side}-color' !default;
+      $border-color-property: 'border-#{$border-side}-color';
     }
 
     &-#{$border-color-selector} {
-      #{border-color-property}: $color-hex-value !important;
+      #{$border-color-property}: $color-hex-value !important;
     }
   }
 }
