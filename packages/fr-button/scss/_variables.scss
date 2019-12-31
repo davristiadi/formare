@@ -7,6 +7,7 @@ $fr-button-font-size: fr-font-size('regular') !default;
 $fr-button-font-weight: fr-font-weight('semibold') !default;
 $fr-button-font-family: fr-font-family('primary') !default;
 $fr-button-line-height: $fr-line-height !default;
+$fr-button-letter-spacing: 0 !default;
 
 $fr-button-bg-color: transparent !default;
 $fr-button-fg-color: $dark !default;
@@ -41,8 +42,8 @@ $fr-button-sizes: () !default;
 // prettier-ignore
 $fr-button-sizes: map-merge(
   (
-    "xsmall": ($fr-button-spacing-y * 0.5) ($fr-button-spacing-x * 0.5),
-    "small": ($fr-button-spacing-y * 0.75) ($fr-button-spacing-x * 0.75),
+    "xsmall": ($fr-button-spacing-y * 0.75) ($fr-button-spacing-x * 0.75),
+    "small": ($fr-button-spacing-y * 0.875) ($fr-button-spacing-x * 0.875),
     "base": $fr-button-spacing,
     "large": ($fr-button-spacing-y * 1.25) ($fr-button-spacing-x * 1.25),
     "xlarge": ($fr-button-spacing-y * 1.5) ($fr-button-spacing-x * 1.5)
