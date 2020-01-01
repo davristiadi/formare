@@ -11,7 +11,7 @@
     $border-base-selector: 'Border#{$capitalized-border-side}';
   }
 
-  #{$border-base-selector} {
+  .#{$border-base-selector} {
     @include fr-border-base-styles();
     @include fr-create-border-width-classes($border-side);
     @include fr-create-border-color-theme-classes($border-side);
@@ -26,12 +26,12 @@
   border-color: fr-color-gray-shade(100);
 }
 
-@mixin fr-create-border-color-theme-classes($border-side: '') {
+@mixin fr-create-border-color-theme-classes($border-side) {
   @each $color-theme, $color-hex-value in $fr-color-themes {
     $border-color-selector: $color-theme;
 
     $border-color-property: 'border-color' !default;
-    @if $border-side {
+    @if $border-side != '' {
       $border-color-property: 'border-#{$border-side}-color';
     }
 
@@ -54,7 +54,7 @@
     // Changes the border width default selector according to $border-side that is passed.
     // If $border-side is not passed, generates a standard border-width instead.
     $border-width-property: 'border-width' !default;
-    @if $border-side {
+    @if $border-side != '' {
       $border-width-property: 'border-#{$border-side}-width';
     }
 
