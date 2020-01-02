@@ -2,7 +2,7 @@
 
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const autoprefixer = require('autoprefixer');
+const Autoprefixer = require('autoprefixer');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const PrettierPlugin = require('prettier-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -40,7 +40,7 @@ module.exports = env => {
               loader: 'postcss-loader',
               options: {
                 sourceMap: true,
-                plugins: () => [new autoprefixer()],
+                plugins: () => [new Autoprefixer()],
               },
             },
             {
