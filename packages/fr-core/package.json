@@ -1,23 +1,23 @@
 {
   "name": "@formare/core",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
-    "@formare/button": "^0.6.1",
-    "@formare/card": "^0.6.1",
-    "@formare/color": "^0.6.1",
-    "@formare/elevation": "^0.6.1",
-    "@formare/flex": "^0.6.1",
-    "@formare/grid": "^0.6.1",
-    "@formare/input": "^0.6.1",
-    "@formare/layout": "^0.6.1",
-    "@formare/shape": "^0.6.1",
-    "@formare/spacing": "^0.6.1",
-    "@formare/typography": "^0.6.1",
+    "@formare/button": "^0.6.2",
+    "@formare/card": "^0.6.2",
+    "@formare/color": "^0.6.2",
+    "@formare/elevation": "^0.6.2",
+    "@formare/flex": "^0.6.2",
+    "@formare/grid": "^0.6.2",
+    "@formare/input": "^0.6.2",
+    "@formare/layout": "^0.6.2",
+    "@formare/shape": "^0.6.2",
+    "@formare/spacing": "^0.6.2",
+    "@formare/typography": "^0.6.2",
     "sanitize.css": "^11.0.0"
   }
 }

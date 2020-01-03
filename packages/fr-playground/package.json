@@ -2,10 +2,10 @@
   "name": "@formare/playground",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "author": "David Kurnia Kristiadi <davidkurniakristiadi@gmail.com>",
   "dependencies": {
-    "@formare/core": "^0.6.1",
+    "@formare/core": "^0.6.2",
     "gatsby": "^2.18.4",
     "gatsby-image": "^2.2.34",
     "gatsby-plugin-manifest": "^2.2.30",
