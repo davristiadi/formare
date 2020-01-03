@@ -1,0 +1,72 @@
+@import '@formare/layout/scss/variables';
+@import './variables';
+
+@mixin fr-create-modal-classes() {
+  .Modal {
+    @include fr-add-modal-base-styles();
+    @include fr-create-modal-backdrop-class();
+    @include fr-create-modal-content-class();
+    @include fr-create-modal-block-class();
+  }
+}
+
+/**
+ * Add base styles to a `.Modal` class.
+ */
+@mixin fr-add-modal-base-styles() {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin fr-create-modal-backdrop-class() {
+  &-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $fr-modal-backdrop-bg-color;
+    z-index: 1001;
+  }
+}
+
+@mixin fr-create-modal-content-class() {
+  &-content {
+    display: flex;
+    flex-direction: column;
+    border-radius: $fr-modal-content-border-radius;
+
+    height: 30em;
+    max-height: 40em;
+
+    background-color: $fr-modal-content-bg-color;
+    border: $fr-modal-content-border;
+
+    overflow: auto;
+
+    z-index: 1002;
+
+    @include fr-create-elevation(6, $opacity: 0.1);
+
+    @each $content-breakpoint, $content-width in $fr-modal-content-widths {
+      @include fr-responsive-media($content-breakpoint) {
+        transition: all 150ms ease-in-out;
+        margin: 0 fr-spacing('base');
+        width: $content-width;
+        max-width: $content-width;
+      }
+    }
+  }
+}
+
+@mixin fr-create-modal-block-class() {
+  &-block {
+    padding: $fr-modal-block-spacing;
+  }
+}

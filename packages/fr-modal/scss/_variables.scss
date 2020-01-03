@@ -1,0 +1,23 @@
+@import '@formare/color/scss/variables';
+@import '@formare/spacing/scss/variables';
+@import '@formare/shape/scss/variables';
+
+$fr-modal-backdrop-bg-color: fr-color-theme-opacity('dark', 0.2) !default;
+
+$fr-modal-content-bg-color: white !default;
+$fr-modal-content-border-color: fr-color-theme('light') !default;
+$fr-modal-content-border: solid 1px $fr-modal-content-border-color !default;
+$fr-modal-content-border-radius: fr-border-radius('base');
+
+$fr-modal-block-spacing: fr-spacing('base') !default;
+
+$fr-modal-content-widths: () !default;
+$fr-modal-content-widths: map-merge(
+  (
+    'xs': 100%,
+    'sm': 300px,
+    'md': 500px,
+    'lg': 800px,
+  ),
+  $fr-modal-content-widths
+);

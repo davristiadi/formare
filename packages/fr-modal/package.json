@@ -1,0 +1,13 @@
+{
+  "name": "@formare/modal",
+  "version": "0.6.1",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@formare/color": "^0.6.1",
+    "@formare/layout": "^0.6.1",
+    "@formare/responsive": "^0.6.1",
+    "@formare/shape": "^0.6.1",
+    "@formare/spacing": "^0.6.1"
+  }
+}
