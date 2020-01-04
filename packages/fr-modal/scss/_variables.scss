@@ -2,7 +2,7 @@
 @import '@formare/spacing/scss/variables';
 @import '@formare/shape/scss/variables';
 
-$fr-modal-backdrop-bg-color: fr-color-theme-opacity('dark', 0.2) !default;
+$fr-modal-backdrop-bg-color: fr-color-theme-opacity('dark', 0.5) !default;
 
 $fr-modal-content-bg-color: white !default;
 $fr-modal-content-border-color: fr-color-theme('light') !default;
