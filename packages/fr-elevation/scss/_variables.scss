@@ -7,14 +7,11 @@ $fr-elevation-max-level: 20 !default;
 
 $fr-elevation-level: 1 !default;
 
-// Determine the multiplier for calculating offset-y to achieve a computed
-// blur value.
-$fr-elevation-shadow-multiplier: 1.5 !default;
-$fr-elevation-shadow-opacity: 0.25 !default;
+// Default configuration to generate elevation effect and classes.
+$fr-elevation-box-shadow-offset-x: 0 !default;
+$fr-elevation-box-shadow-offset-y: 0.1em !default;
+$fr-elevation-box-shadow-blur: 0.15em !default;
+$fr-elevation-box-shadow-spread: 0 !default;
 
-// Elevation default box-shadow variables.
-$fr-elevation-shadow-color-theme: 'dark' !default;
-$fr-elevation-shadow-color-opacity: 0.1 !default;
-$fr-elevation-shadow-offset-x: 0 !default;
-$fr-elevation-shadow-offset-y: 0.15em !default;
-$fr-elevation-shadow-spread: 0 !default;
+$fr-elevation-box-shadow-color-value: black !default;
+$fr-elevation-box-shadow-color-opacity: 0.3 !default;
