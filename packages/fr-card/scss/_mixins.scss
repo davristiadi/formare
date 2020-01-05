@@ -54,7 +54,7 @@
 @mixin fr-append-card-elevated-variant() {
   &--elevated {
     @include fr-create-elevation(
-      $elevation-level: $fr-card-elevation-level,
+      $level: $fr-card-elevation-level,
       $opacity: $fr-card-elevation-opacity
     );
   }

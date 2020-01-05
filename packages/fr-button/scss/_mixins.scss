@@ -208,21 +208,21 @@
  *
  * {$elevation-opacity} | 0 to 1
  */
-@mixin fr-create-button-elevated-class($elevation-opacity: 0.3) {
+@mixin fr-create-button-elevated-class() {
   &--elevated {
-    @include fr-create-elevation(2, $elevation-opacity);
+    @include fr-create-elevation(2);
 
     @include fr-button-is-not-disabled() {
       @include fr-button-is-hovered() {
-        @include fr-create-elevation(3, $elevation-opacity);
+        @include fr-create-elevation(3);
       }
 
       @include fr-button-is-focused() {
-        @include fr-create-elevation(3, $elevation-opacity);
+        @include fr-create-elevation(3);
       }
 
       @include fr-button-is-active() {
-        @include fr-create-elevation(2, $elevation-opacity);
+        @include fr-create-elevation(2);
       }
     }
   }
