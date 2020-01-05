@@ -16,23 +16,29 @@
  * @param {Number} $opacity
  */
 @mixin fr-create-elevation(
-  $elevation-level: $fr-elevation-level,
-  $opacity: $fr-elevation-shadow-opacity,
-  $color-theme: $fr-elevation-shadow-color-theme
+  $level: $fr-elevation-level,
+  $opacity: $fr-elevation-box-shadow-color-opacity,
+  $color: $fr-elevation-box-shadow-color-value
 ) {
-  $shadow-multiplier: $fr-elevation-shadow-multiplier;
-  $shadow-color-opacity: $opacity;
-  $shadow-color-value: fr-color-theme($color-theme);
+  $elevation-color: $color;
+  $elevation-level: $level;
+  $elevation-opacity: $opacity;
 
-  // Convert level into offset-y value in `em` unit.
-  $shadow-offset-x: $fr-elevation-shadow-offset-x;
-  $shadow-offset-y: $elevation-level * 0.1em;
-  $shadow-blur: $shadow-offset-y * $shadow-multiplier;
-  $shadow-spread: $fr-elevation-shadow-spread;
+  $elevation-offset-x: $fr-elevation-box-shadow-offset-x;
+  $elevation-offset-y: $fr-elevation-box-shadow-offset-y;
+  $elevation-spread: $fr-elevation-box-shadow-spread;
+  $elevation-blur: $fr-elevation-box-shadow-blur;
 
-  $shadow-set: $shadow-offset-x $shadow-offset-y $shadow-blur $shadow-spread;
-  $computed-shadow-color: rgba($shadow-color-value, $shadow-color-opacity);
+  $elevation-values-list: $elevation-offset-x $elevation-offset-y $elevation-blur $elevation-spread;
 
+  $updated-elevation-values: () !default;
+  @each $var in $elevation-values-list {
+    $var: $var * $elevation-level;
+    $updated-elevation-values: append($updated-elevation-values, $var);
+  }
+
+  $elevation-box-shadow-color: rgba(black, $elevation-opacity);
+  $elevation-box-shadow: append($updated-elevation-values, $elevation-box-shadow-color) !default;
   // Generate the correct box-shadow value based on the calculation above
-  box-shadow: $shadow-set $computed-shadow-color;
+  box-shadow: $elevation-box-shadow;
 }
