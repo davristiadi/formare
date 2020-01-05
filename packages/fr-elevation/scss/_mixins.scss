@@ -4,7 +4,7 @@
   @for $i from 1 through $fr-elevation-max-level {
     $elevation-level: $i;
 
-    .Elevation\:#{$i} {
+    .Elevation-#{$i} {
       @include fr-create-elevation($elevation-level);
     }
   }
