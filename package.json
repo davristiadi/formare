@@ -62,5 +62,10 @@
     "css",
     "scss",
     "README.md"
-  ]
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
