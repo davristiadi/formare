@@ -24,9 +24,9 @@ const Modal = () => {
               Sint sunt esse enim est exercitation Lorem culpa et reprehenderit.
             </p>
           </div>
-          <div className="Modal-block Flex JustifyContent-between">
-            <button className="Button Button--danger Button--elevated">Decline</button>
-            <button className="Button Button--primary Button--elevated">Accept</button>
+          <div className="Modal-block Flex JustifyContent-end">
+            <button className="Button Button--light MarginRight">Decline</button>
+            <button className="Button Button--primary">Accept</button>
           </div>
         </div>
         <div className="Modal-backdrop"></div>

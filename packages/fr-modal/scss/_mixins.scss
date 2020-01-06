@@ -42,8 +42,8 @@
     flex-direction: column;
     border-radius: $fr-modal-content-border-radius;
 
-    height: 30em;
-    max-height: 40em;
+    min-height: $fr-modal-content-min-height;
+    max-height: $fr-modal-content-max-height;
 
     background-color: $fr-modal-content-bg-color;
     border: $fr-modal-content-border;
@@ -53,10 +53,11 @@
 
     @include fr-create-elevation($level: 6, $opacity: 0.1);
 
+    transition: all 150ms ease-in-out;
+    margin: 0 fr-spacing('base');
+
     @each $content-breakpoint, $content-width in $fr-modal-content-widths {
       @include fr-responsive-media($content-breakpoint) {
-        transition: all 150ms ease-in-out;
-        margin: 0 fr-spacing('base');
         width: $content-width;
         max-width: $content-width;
       }
