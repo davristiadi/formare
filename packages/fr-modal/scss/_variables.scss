@@ -8,14 +8,15 @@ $fr-modal-content-bg-color: white !default;
 $fr-modal-content-border-color: fr-color-theme('light') !default;
 $fr-modal-content-border: solid 1px $fr-modal-content-border-color !default;
 $fr-modal-content-border-radius: fr-border-radius('base');
+$fr-modal-content-min-height: 30em !default;
+$fr-modal-content-max-height: 40em !default;
 
 $fr-modal-block-spacing: fr-spacing('base') !default;
 
 $fr-modal-content-widths: () !default;
 $fr-modal-content-widths: map-merge(
   (
-    'xs': 100%,
-    'sm': 300px,
+    'sm': 100%,
     'md': 500px,
     'lg': 800px,
   ),
