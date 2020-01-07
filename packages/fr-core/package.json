@@ -17,7 +17,6 @@
     "@formare/layout": "^0.6.2",
     "@formare/shape": "^0.6.2",
     "@formare/spacing": "^0.6.2",
-    "@formare/typography": "^0.6.2",
-    "sanitize.css": "^11.0.0"
+    "@formare/typography": "^0.6.2"
   }
 }
