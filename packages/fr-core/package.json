@@ -1,19 +1,19 @@
 {
   "name": "@formare/core",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
-    "@formare/button": "^0.6.2",
-    "@formare/card": "^0.6.2",
+    "@formare/button": "^0.6.3",
+    "@formare/card": "^0.6.3",
     "@formare/color": "^0.6.2",
-    "@formare/elevation": "^0.6.2",
+    "@formare/elevation": "^0.6.3",
     "@formare/flex": "^0.6.2",
     "@formare/grid": "^0.6.2",
-    "@formare/input": "^0.6.2",
+    "@formare/input": "^0.6.3",
     "@formare/layout": "^0.6.2",
     "@formare/shape": "^0.6.2",
     "@formare/spacing": "^0.6.2",

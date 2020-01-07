@@ -1,6 +1,6 @@
 {
   "name": "@formare/input",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@formare/color": "^0.6.2",
-    "@formare/core": "^0.6.2",
+    "@formare/core": "^0.6.3",
     "@formare/shape": "^0.6.2",
     "@formare/spacing": "^0.6.2"
   }

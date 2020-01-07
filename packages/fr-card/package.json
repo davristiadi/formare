@@ -1,14 +1,14 @@
 {
   "name": "@formare/card",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
-    "@formare/button": "^0.6.2",
-    "@formare/core": "^0.6.2",
-    "@formare/elevation": "^0.6.2"
+    "@formare/button": "^0.6.3",
+    "@formare/core": "^0.6.3",
+    "@formare/elevation": "^0.6.3"
   }
 }

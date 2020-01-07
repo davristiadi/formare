@@ -1,6 +1,6 @@
 {
   "name": "@formare/docs",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "author": "David Kurnia Kristiadi <davidkurniakristiadi@gmail.com>",
   "private": true,
   "homepage": "https://dkk94.github.io/formare",
@@ -15,12 +15,12 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
-    "@formare/alert": "^0.6.2",
-    "@formare/button": "^0.6.2",
-    "@formare/card": "^0.6.2",
+    "@formare/alert": "^0.6.3",
+    "@formare/button": "^0.6.3",
+    "@formare/card": "^0.6.3",
     "@formare/color": "^0.6.2",
-    "@formare/core": "^0.6.2",
-    "@formare/elevation": "^0.6.2",
+    "@formare/core": "^0.6.3",
+    "@formare/elevation": "^0.6.3",
     "@formare/flex": "^0.6.2",
     "@formare/layout": "^0.6.2",
     "@formare/navbar": "^0.6.2",
