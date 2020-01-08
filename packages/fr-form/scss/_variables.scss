@@ -1,0 +1,6 @@
+@import '@formare/typography/scss/variables';
+@import '@formare/spacing/scss/variables';
+
+$fr-form-field-parts-spacing: fr-spacing('3xsmall');
+$fr-form-field-label-font-weight: fr-font-weight('semibold');
+$fr-form-field-helper-font-size: fr-font-size('small');

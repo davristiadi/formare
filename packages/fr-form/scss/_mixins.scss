@@ -1,0 +1,26 @@
+@import './variables';
+
+@mixin fr-create-form-field-classes() {
+  .FormField {
+    @include fr-append-form-field-label-class();
+    @include fr-append-form-field-helper-class();
+
+    > *:not(:last-child) {
+      margin-bottom: $fr-form-field-parts-spacing;
+    }
+  }
+}
+
+@mixin fr-append-form-field-label-class() {
+  &-label {
+    display: flex;
+    flex-direction: column;
+    font-weight: $fr-form-field-label-font-weight;
+  }
+}
+
+@mixin fr-append-form-field-helper-class() {
+  &-helper {
+    font-size: $fr-form-field-helper-font-size;
+  }
+}
