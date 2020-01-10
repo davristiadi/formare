@@ -15,7 +15,7 @@ module.exports = env => {
   return {
     name: 'formare',
     entry: {
-      formare: path.join(__dirname, '/packages/fr-core/formare.scss'),
+      formare: path.join(__dirname, '/packages/formare-core/formare.scss'),
     },
     output: {
       path: path.join(__dirname, './dist'),
