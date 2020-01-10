@@ -81,19 +81,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./packages/fr-core/formare.scss");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./packages/formare-core/formare.scss");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./packages/fr-core/formare.scss":
-/*!***************************************!*\
-  !*** ./packages/fr-core/formare.scss ***!
-  \***************************************/
+/***/ "./packages/formare-core/formare.scss":
+/*!********************************************!*\
+  !*** ./packages/formare-core/formare.scss ***!
+  \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wYWNrYWdlcy9mci1jb3JlL2Zvcm1hcmUuc2Nzcy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3BhY2thZ2VzL2ZyLWNvcmUvZm9ybWFyZS5zY3NzP2MzMTEiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luIl0sIm1hcHBpbmdzIjoiQUFBQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./packages/fr-core/formare.scss\n");
+eval("// extracted by mini-css-extract-plugin//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wYWNrYWdlcy9mb3JtYXJlLWNvcmUvZm9ybWFyZS5zY3NzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vcGFja2FnZXMvZm9ybWFyZS1jb3JlL2Zvcm1hcmUuc2Nzcz80MjRmIl0sInNvdXJjZXNDb250ZW50IjpbIi8vIGV4dHJhY3RlZCBieSBtaW5pLWNzcy1leHRyYWN0LXBsdWdpbiJdLCJtYXBwaW5ncyI6IkFBQUEiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./packages/formare-core/formare.scss\n");
 
 /***/ })
 

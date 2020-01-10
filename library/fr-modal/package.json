@@ -3,6 +3,9 @@
   "version": "0.6.3",
   "main": "index.js",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@formare/color": "^0.6.2",
     "@formare/layout": "^0.6.2",

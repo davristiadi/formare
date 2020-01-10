@@ -6,8 +6,8 @@ $fr-spacings: () !default;
 $fr-spacings: map-merge(
   (
     'auto': auto,
-    '3xsmall': $fr-spacing * 0.5,
-    '2xsmall': $fr-spacing * 0.625,
+    '3xsmall': $fr-spacing * 0.25,
+    '2xsmall': $fr-spacing * 0.5,
     'xsmall': $fr-spacing * 0.75,
     'small': $fr-spacing * 0.875,
     'base': $fr-spacing,

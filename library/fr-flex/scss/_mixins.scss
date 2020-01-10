@@ -62,8 +62,6 @@
     $alignment-stylerule: '' !default;
     $alignment-property: '' !default;
 
-    @debug 'Alignment axis: #{$alignment-axis}';
-
     @each $alignment-type, $alignment-type-map in $fr-alignment-types {
       @if $alignment-type == 'items' {
         // e.g .AlignItems or .JustifyItems

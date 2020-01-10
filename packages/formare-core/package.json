@@ -12,6 +12,7 @@
     "@formare/color": "^0.6.2",
     "@formare/elevation": "^0.6.3",
     "@formare/flex": "^0.6.2",
+    "@formare/form": "^0.6.3",
     "@formare/grid": "^0.6.2",
     "@formare/input": "^0.6.3",
     "@formare/layout": "^0.6.2",

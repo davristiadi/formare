@@ -2,28 +2,39 @@
   "name": "formare",
   "version": "0.6.0",
   "private": true,
-  "author": "David Kurnia Kristiadi <davidkurniakristiadi@gmail.com>",
-  "workspaces": [
-    "packages/*"
-  ],
   "description": "Lightweight and modern CSS framework to build web-interfaces hassle-free",
-  "main": "scss/formare.scss",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dkk94/formare"
   },
+  "license": "ISC",
+  "author": "David Kurnia Kristiadi <davidkurniakristiadi@gmail.com>",
+  "files": [
+    "css",
+    "scss",
+    "README.md"
+  ],
+  "main": "scss/formare.scss",
+  "workspaces": [
+    "packages/*",
+    "library/*"
+  ],
   "scripts": {
     "build": "yarn build:dev",
     "build:dev": "webpack --mode=development --env.NODE_ENV=development",
     "build:prod": "webpack --mode=production --env.NODE_ENV=production",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run build",
-    "start:docs": "cd docs && yarn start",
     "publish:beta": "npm start && npm publish --tag beta",
     "publish:next": "npm start && npm publish --tag next",
-    "start:playground": "lerna exec --scope=@formare/playground yarn start"
+    "start": "npm run build",
+    "start:docs": "cd docs && yarn start",
+    "start:playground": "lerna exec --scope=@formare/playground yarn start",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "license": "ISC",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-brands-svg-icons": "^5.9.0",
@@ -45,6 +56,7 @@
     "clean-css-cli": "^4.1.11",
     "compression-webpack-plugin": "^3.0.1",
     "css-loader": "^3.2.0",
+    "cz-conventional-changelog": "^3.0.2",
     "gh-pages": "^2.1.1",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.9.3",
@@ -57,15 +69,5 @@
     "sass-loader": "^8.0.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack-cli": "^3.3.10"
-  },
-  "files": [
-    "css",
-    "scss",
-    "README.md"
-  ],
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   }
 }
