@@ -1,45 +1,26 @@
-const path = require('path');
-const dotenv = require('dotenv');
-
-// configure dotenv.
-dotenv.config({
-  path: `.env.${process.env.NODE_ENV}`,
-});
-
 module.exports = {
   siteMetadata: {
-    title: `Formare`,
-    description: `A modern, lightweight and simple CSS Framework for building web interfaces hassle-free.`,
-    author: `David Kurnia Kristiadi @dkk94`,
+    title: `Formare Documentation`,
+    description: `Proident amet non velit in reprehenderit dolore dolor deserunt nostrud minim.`,
+    author: `@gatsbyjs`,
   },
-  pathPrefix: '/formare',
   plugins: [
-    `gatsby-plugin-root-import`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        includePaths: ['../../node_modules'],
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        defaultLayouts: require.resolve('./src/layouts/docs/docs-article.js'),
-        extensions: ['.mdx', '.md'],
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/docs-pages`,
-        name: 'docs-pages',
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/assets`,
-        name: 'images',
+        name: `images`,
+        path: `${__dirname}/src/images`,
       },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -49,7 +30,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/assets/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

@@ -1,5 +1,8 @@
-@import 'src/scss/vendor/abstracts';
+@import '@formare/spacing/scss/variables';
+@import '@formare/color/scss/variables';
+@import '@formare/typography/scss/variables';
 
+// Declarations
 .DocsMenu {
   position: relative;
   display: none;
@@ -37,7 +40,7 @@
     &-link {
       display: block;
       transition: $transition;
-      padding: fr-spacing(small) fr-spacing(base);
+      padding: fr-spacing('small') fr-spacing('base');
       transition: all 150ms ease-in-out;
       color: fr-color-theme(gray);
       border-radius: fr-border-radius(base);

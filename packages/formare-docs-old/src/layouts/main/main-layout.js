@@ -22,7 +22,6 @@ const MainLayout = props => {
     <MainProvider>
       <MainHeader />
       <main className="MainBody">{children}</main>
-      {/* <MainFooter /> */}
     </MainProvider>
   );
 };
