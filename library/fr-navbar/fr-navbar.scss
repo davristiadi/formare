@@ -1,2 +1,3 @@
-@import "./scss/mixins";
-@include fr-navbar;
+@import './scss/mixins';
+
+@include fr-create-navbar-classes();
