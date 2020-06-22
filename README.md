@@ -1,19 +1,14 @@
-# Formare
+<h1 align="center">Formare</h1>
 
-Formare is a **modern**, **component based CSS framework** that helps you build web interfaces hassle-free.
+Formare is a modern, fast, no hassle UI library written in Sass (with SCSS syntax).
 
-## Installation
+Formare aims to be unopiniated and fully customizable from the ground up for your convenience.
 
-### NPM
+# Installation
 
-Install the latest version of Formare using NPM
+Installing Formare is a breeze, really. Install them via package managers to save the trouble.
 
-```
-npm install formare
-```
-
-### Yarn
-
-```
-yarn install formare
+```bash
+$ yarn add @formare/core
+$ npm i @formare/core
 ```
