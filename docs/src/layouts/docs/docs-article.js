@@ -25,9 +25,7 @@ const DocsArticle = ({ data }) => {
               <div className="LinkCard">
                 <div className="LinkCard-body">
                   <div className="u-Color-gray">Previous</div>
-                  <div className="u-FontSize-large u-FontWeight-semibold">
-                    Nostrud aliquip
-                  </div>
+                  <div className="u-FontSize-large u-FontWeight-semibold">Nostrud aliquip</div>
                 </div>
               </div>
             </div>
@@ -35,9 +33,7 @@ const DocsArticle = ({ data }) => {
               <div className="LinkCard">
                 <div className="LinkCard-body u-Align-right">
                   <div className="u-Color-gray">Next up</div>
-                  <div className="u-FontSize-large u-FontWeight-semibold">
-                    Cillum
-                  </div>
+                  <div className="u-FontSize-large u-FontWeight-semibold">Cillum</div>
                 </div>
               </div>
             </div>
