@@ -38,6 +38,8 @@
 
 @mixin fr-create-modal-content-class() {
   &-content {
+    @include fr-create-elevation($level: 6, $opacity: 0.1);
+
     display: flex;
     flex-direction: column;
     border-radius: $fr-modal-content-border-radius;
@@ -50,8 +52,6 @@
 
     overflow: auto;
     z-index: 1002;
-
-    @include fr-create-elevation($level: 6, $opacity: 0.1);
 
     transition: all 150ms ease-in-out;
     margin: 0 fr-spacing('base');
