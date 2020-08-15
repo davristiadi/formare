@@ -6,7 +6,6 @@
 $fr-select-font-size: fr-font-size('base') !default;
 $fr-select-font-family: fr-font-family('sans-serif') !default;
 
-$fr-select-bg-color: $white !default;
 $fr-select-fg-color: fr-color-contrast($fr-select-bg-color) !default;
 
 $fr-select-border-style: solid !default;
@@ -20,12 +19,21 @@ $fr-select-spacing: $fr-select-spacing-y $fr-select-spacing-x;
 
 $fr-select-transition: all 250ms ease-in-out;
 
-$fr-select-border-color--is-hovered: fr-color-theme-shade('primary', -20) !default;
-$fr-select-border-color--is-focused: fr-color-theme-shade('primary', 0) !default;
+$fr-select-border-color--is-hovered: fr-color-theme-shade(
+  'primary',
+  -20
+) !default;
+$fr-select-border-color--is-focused: fr-color-theme-shade(
+  'primary',
+  0
+) !default;
 $fr-select-bg-color--is-disabled: fr-color-theme('lighter') !default;
 $fr-select-fg-color--is-focused: fr-color-theme('primary') !default;
 
 $fr-select-box-shadow-values--is-focused: 0 0 0.2rem 0.1rem !default;
-$fr-select-box-shadow-color--is-focused: fr-color-theme-opacity('primary', 0.2) !default;
+$fr-select-box-shadow-color--is-focused: fr-color-theme-opacity(
+  'primary',
+  0.2
+) !default;
 $fr-select-box-shadow--is-focused: $fr-select-box-shadow-values--is-focused
   $fr-select-box-shadow-color--is-focused !default;
