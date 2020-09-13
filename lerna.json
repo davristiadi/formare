@@ -1,12 +1,16 @@
 {
   "packages": ["packages/*", "library/*"],
-  "version": "independent",
+  "version": "7.0.0",
   "npmClient": "yarn",
   "useWorkspaces": true,
   "command": {
     "publish": {
       "conventionalCommits": true,
       "yes": true
+    },
+    "version": {
+      "noChangelog": true,
+      "noGitTagVersion": true
     }
   }
 }
