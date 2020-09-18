@@ -1,8 +1,6 @@
 <h1 align="center">Formare</h1>
 
-Formare is a CSS component and utility library to help you build web-apps lightning fast and hassle-free.
-
-Formare provides a one-fit-all solution with a hope to cater multiple needs and project configuration.
+Formare is a utility-first CSS framework and UI library written entirely in Sass (SCSS).
 
 ## Installation
 
