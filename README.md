@@ -1,10 +1,10 @@
 <h1 align="center">Formare</h1>
 
-Formare is a utility-first CSS framework and UI library written entirely in Sass (SCSS).
+Formare is a utility-first CSS framework written entirely in Sass (SCSS syntax).
 
-## Installation
+## Quick start
 
-Installing Formare is a breeze; simply install them via package managers and you should be good to go.
+You can install `@formare/core` with this command:
 
 ```bash
 $ yarn add @formare/core
