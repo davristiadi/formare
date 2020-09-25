@@ -8,7 +8,7 @@
     margin-right: fr-spacing(small);
   }
 
-  > [type="checkbox"] {
+  > [type='checkbox'] {
     position: relative;
     appearance: none;
     outline: none;
@@ -16,7 +16,7 @@
     width: $checkbox-width;
 
     &:before {
-      content: "";
+      content: '';
       transition: $checkbox-transition;
       display: inline-block;
       border-style: $checkbox-border-style;
@@ -28,7 +28,7 @@
     }
 
     &:after {
-      content: "";
+      content: '';
       transition: all 200ms ease-out;
       position: absolute;
       top: 50%;
@@ -66,7 +66,7 @@
   }
 
   &:hover {
-    > [type="checkbox"] {
+    > [type='checkbox'] {
       &:before {
         border-color: $primary-color;
       }
@@ -75,7 +75,7 @@
 
   @each $theme, $color in $color-themes {
     &--#{$theme} {
-      > [type="checkbox"] {
+      > [type='checkbox'] {
         &:before {
           border-color: $color;
         }

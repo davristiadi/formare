@@ -8,7 +8,7 @@
 
   &:not(&--loading) {
     &:after {
-      content: "";
+      content: '';
       transition: all 150ms ease-out-out;
       position: absolute;
       top: $fr-input-spacing-y * 1.5;
@@ -33,7 +33,7 @@
 
   &--loading {
     &:after {
-      content: "";
+      content: '';
       animation: spinAround 750ms linear infinite;
       display: block;
       width: 1em;

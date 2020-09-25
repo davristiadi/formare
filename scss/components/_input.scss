@@ -79,7 +79,7 @@
 
   &:not(&--loading) {
     &:after {
-      content: "";
+      content: '';
       transition: all 150ms ease-out-out;
       position: absolute;
       top: $input-spacing-y * 1.5;
@@ -104,7 +104,7 @@
 
   &--loading {
     &:after {
-      content: "";
+      content: '';
       animation: spinAround 750ms linear infinite;
       display: block;
       width: 1em;
@@ -129,7 +129,7 @@
     margin-right: spacing(small);
   }
 
-  > [type="checkbox"] {
+  > [type='checkbox'] {
     position: relative;
     appearance: none;
     outline: none;
@@ -137,7 +137,7 @@
     width: $checkbox-width;
 
     &:before {
-      content: "";
+      content: '';
       transition: $checkbox-transition;
       display: inline-block;
       border-style: $checkbox-border-style;
@@ -149,7 +149,7 @@
     }
 
     &:after {
-      content: "";
+      content: '';
       transition: all 200ms ease-out;
       position: absolute;
       top: 50%;
@@ -187,7 +187,7 @@
   }
 
   &:hover {
-    > [type="checkbox"] {
+    > [type='checkbox'] {
       &:before {
         border-color: $primary-color;
       }
@@ -196,7 +196,7 @@
 
   @each $theme, $color in $color-themes {
     &--#{$theme} {
-      > [type="checkbox"] {
+      > [type='checkbox'] {
         &:before {
           border-color: $color;
         }

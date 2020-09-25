@@ -1,13 +1,13 @@
-@import "@formare/grid/scss/mixins";
-@import "./variables";
+@import '@formare/grid/scss/mixins';
+@import './variables';
 
 @mixin fr-create-navbar-classes() {
   .Navbar {
-    @include fr-navbar-base-styles();
-    @include fr-navbar-container-classes();
-    @include fr-navbar-parts();
-    @include fr-navbar-themes();
-    @include fr-navbar-sizes();
+    @include fr-add-navbar-base-styles();
+    @include fr-append-navbar-container();
+    @include fr-append-navbar-block();
+    @include fr-append-navbar-color-theme();
+    @include fr-append-navbar-sizes();
   }
 }
 @mixin fr-navbar-base() {
@@ -26,10 +26,10 @@
   }
 }
 
-@mixin fr-navbar-parts() {
-  // extends fr-block() module
+@mixin fr-append-navbar-parts() {
   &-block {
-    @include fr-block();
+    display: flex;
+    flex-direction: row;
   }
 
   .Nav {
@@ -48,14 +48,11 @@
   }
 }
 
-@mixin fr-navbar-themes() {
-  @each $theme, $color in $color-themes {
-    $bg-color: $color;
-    $fg-color: fr-color-contrast($color);
-
+@mixin fr-append-navbar-color-themes() {
+  @each $color-theme, $color-value in $fr-color-themes {
     &--#{$theme} {
-      background-color: $bg-color;
-      color: $fg-color;
+      background-color: $color-value;
+      color: fr-color-contrast($color-value);
 
       .Nav {
         &-link {
@@ -75,7 +72,7 @@
   }
 }
 
-@mixin fr-navbar-sizes() {
+@mixin fr-append-navbar-sizes() {
   @each $size, $value in $fr-navbar-heights {
     &--#{$size} {
       height: $value;

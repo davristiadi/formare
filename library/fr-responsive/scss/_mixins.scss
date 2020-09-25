@@ -1,14 +1,14 @@
-@import "./variables";
+@import './variables';
 
 // TO-DO: Create responsive utility classes.
 
 /**
  * Applies breakpoint min/max width
  */
-@mixin fr-responsive-media($breakpoint-name, $width-type: "min") {
+@mixin fr-responsive-media($breakpoint-name, $width-type: 'min') {
   @if map-has-key($fr-responsive-breakpoints, $breakpoint-name) {
     $breakpoint-width: fr-breakpoint-width($breakpoint-name);
-    @if $width-type == "max" {
+    @if $width-type == 'max' {
       $width: $width - 1px;
     }
 

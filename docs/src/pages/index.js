@@ -17,8 +17,7 @@ const Home = () => (
             style={{
               maxWidth: '840px',
               margin: '0 auto',
-            }}
-          >
+            }}>
             <div className="Heading u-MarginBottom-xlarge">
               <h1 className="Title Heading-1 u-MarginBottom-small">Formare</h1>
               <h3 className="Subtitle Heading-3 u-Color-light">
@@ -29,8 +28,7 @@ const Home = () => (
             <div>
               <Link
                 to="/docs/start"
-                className="Button Button--lighter Button--large Button--outlined"
-              >
+                className="Button Button--lighter Button--large Button--outlined">
                 Get started!
               </Link>
             </div>

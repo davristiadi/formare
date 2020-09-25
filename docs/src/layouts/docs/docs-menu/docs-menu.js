@@ -34,8 +34,7 @@ const DocsMenu = () => {
                 className={classes.MenuLink}
                 activeClassName="is-active"
                 partiallyActive={true}
-                to={path}
-              >
+                to={path}>
                 {title}
               </Link>
             </li>
@@ -59,11 +58,7 @@ const DocsMenu = () => {
 
           return (
             <li key={i} className={classes.MenuItem}>
-              <Link
-                className={classes.MenuLink}
-                activeClassName="is-active"
-                to={path}
-              >
+              <Link className={classes.MenuLink} activeClassName="is-active" to={path}>
                 {title}
               </Link>
               {hasChildren ? (
