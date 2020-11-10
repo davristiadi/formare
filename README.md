@@ -4,7 +4,7 @@ Formare is a utility-first CSS framework written entirely in Sass (SCSS syntax).
 
 ## Quick start
 
-You can install `@formare/core` with this command:
+**Formare** is available through package managers:
 
 ```bash
 $ yarn add @formare/core
