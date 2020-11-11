@@ -2,7 +2,7 @@
 
 Formare is a utility-first CSS framework written entirely in Sass (SCSS syntax).
 
-## Quick start
+## Installation
 
 **Formare** is available through package managers:
 
