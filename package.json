@@ -44,7 +44,7 @@
     "gatsby-plugin-root-import": "^2.0.5",
     "gatsby-remark-prismjs": "^3.2.9",
     "gatsby-source-filesystem": "^2.0.33",
-    "gatsby-transformer-remark": "^2.3.12",
+    "gatsby-transformer-remark": "^5.25.1",
     "highlight.js": "^9.15.6",
     "js-beautify": "^1.10.2",
     "prismjs": "^1.16.0",
